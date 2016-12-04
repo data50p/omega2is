@@ -2,3 +2,5 @@ build
 invoke
 .gradle/**/*
 .idea
+.DS_Store
+logs
