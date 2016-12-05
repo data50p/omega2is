@@ -416,7 +416,7 @@ public class AnimCanvas extends omega.graphic.render.Canvas {
 		    if (pa_prop == null)
 			pa_prop = new PathProperties(owner);
 		    pa_prop.setObject(pa);
-		    pa_prop.show();
+		    pa_prop.setVisible(true);
 		}
 	    }
 	});

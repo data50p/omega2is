@@ -39,7 +39,7 @@ public class HelpSystem {
 	    else
 		html_fr.goTo(url_s);
 	    html_fr.setSize(w, h);
-	    html_fr.show();
+	    html_fr.setVisible(true);
 	}
     }
 

@@ -17,7 +17,7 @@ public class Files {
 	File fi = new File(".");
 	String cdu = null;
 	try {
-	    cdu = fi.toURL().toString();
+	    cdu = fi.toURI().toURL().toString();
 	} catch (MalformedURLException ex) {
 	    return null;
 	}
@@ -41,7 +41,7 @@ public class Files {
 	    File fi = new File(".");
 	    String cdu = null;
 	    try {
-		cdu = fi.toURL().toString();
+		cdu = fi.toURI().toURL().toString();
 	    } catch (MalformedURLException ex) {
 		return null;
 	    }
@@ -66,7 +66,7 @@ public class Files {
 	File fi = new File(".");
 	String cdu = null;
 	try {
-	    cdu = fi.toURL().toString();
+	    cdu = fi.toURI().toURL().toString();
 	} catch (MalformedURLException ex) {
 	    return null;
 	}
@@ -87,7 +87,7 @@ public class Files {
 	File fi = new File(".");
 	String cdu = null;
 	try {
-	    cdu = fi.toURL().toString();
+	    cdu = fi.toURI().toURL().toString();
 	} catch (MalformedURLException ex) {
 	    return null;
 	}
@@ -110,7 +110,7 @@ public class Files {
 	String url_s = null;
 //log	omega.Context.sout_log.getLogger().info("ERR: " + "got file " + file);
 	try {
-	    URL url = file.toURL();
+	    URL url = file.toURI().toURL();
 //log	    omega.Context.sout_log.getLogger().info("ERR: " + "got url " + url);
 	    url_s = url.toString();
 	} catch (Exception ex) {

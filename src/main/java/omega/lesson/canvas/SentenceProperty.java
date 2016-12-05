@@ -50,7 +50,7 @@ public class SentenceProperty extends Property_B {
 	this.l_ctxt = l_ctxt;
 	build(getContentPane());
 	pack();
-	show();
+	setVisible(true);
     }
 
     void destroy() {
@@ -188,7 +188,7 @@ public class SentenceProperty extends Property_B {
 		}
 	    }
 	    if (s.equals("close")) {
-		hide();
+		setVisible(false);
 	    }
 	}
     }
@@ -243,7 +243,7 @@ public class SentenceProperty extends Property_B {
 	}
 
 	public void actionPerformed(ActionEvent ev) {
-	    hide();
+	    setVisible(false);
 	}
     }
 

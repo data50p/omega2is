@@ -23,7 +23,7 @@ public class TestProperty extends Property_B {
 	this.l_ctxt = l_ctxt;
 	build(getContentPane());
 	pack();
-	show();
+	setVisible(true);
     }
 
     public void refresh() {

@@ -235,7 +235,7 @@ public class ResultDialogTableDetail extends JDialog
 	    export();
 	}
 	if ("close".equals(cmd)) {
-	    hide();
+	    setVisible(false);
 	}
     }
 

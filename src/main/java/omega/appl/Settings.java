@@ -116,7 +116,7 @@ public class Settings {
 
 	}
 	f.pack();
-	f.show();
+	f.setVisible(true);
     }
 
     public HashMap getSettingsHashMap() {

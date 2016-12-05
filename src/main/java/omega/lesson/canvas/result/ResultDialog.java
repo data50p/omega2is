@@ -119,7 +119,7 @@ public class ResultDialog extends JDialog
 	if ("export".equals(cmd)) {
 	}
 	if ("close".equals(cmd)) {
-	    hide();
+	    setVisible(false);
 	}
     }
 

@@ -216,8 +216,8 @@ public class WingsPanel extends JPanel {
 	    JFrame owner = (JFrame) getTopLevelAncestor();
 	    prop = new WingsProperties(owner, this);
 	}
-	prop.show();
-//	prop_pa.show();
+	prop.setVisible(true);
+//	prop_pa.setVisible(true);
 	setPropTarget(ix);
     }
 

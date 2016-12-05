@@ -14,16 +14,12 @@ public class Splash extends JWindow {
 	setSize(ww, hh);
 	if (im == null)
 	    im = omega.graphic.util.LoadImage.loadAndWaitFromFile(this, "media/default/omega_splash.gif");
-	show();
+	setVisible(true);
     }
 
     public void paint(Graphics g) {
 	g.drawImage(im, 0, 0, null);
 	g.setColor(Color.yellow);
 	g.drawString(omega.Version.getVersion(), 5, 12);
-    }
-
-    public void hide() {
-	super.hide();
     }
 }

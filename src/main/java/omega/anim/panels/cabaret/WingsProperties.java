@@ -308,12 +308,8 @@ public class WingsProperties extends OmegaProperties implements ActionListener {
 	}
     }
 
-    public void show() {
-	super.show();
-    }
-
-    public void hide() {
-	super.hide();
+    public void setVisible(boolean b) {
+	super.setVisible(b);
     }
 
     void enableDelete(boolean b) {

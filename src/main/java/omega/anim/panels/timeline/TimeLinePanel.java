@@ -237,7 +237,7 @@ public class TimeLinePanel extends JPanel {
 	    TimeMarker tm = tl.getNearestTimeMarker(0);
 
 	    tmp.setObject(tm);
-	    tmp.show();
+	    tmp.setVisible(true);
 	} catch (NullPointerException ex) {
 	}
     }
@@ -282,7 +282,7 @@ public class TimeLinePanel extends JPanel {
 				tmp = new TimeMarkerProperties(mtl.a_ctxt, owner);
 			    TimeMarker tm = tl.getNearestTimeMarker((e.getX() - TLOFF) * scale);
 			    setSelectedTM(tm);
-			    tmp.show();
+			    tmp.setVisible(true);
 			}
 			break;
 
@@ -335,7 +335,7 @@ public class TimeLinePanel extends JPanel {
 				if (tmp == null)
 				    tmp = new TimeMarkerProperties(mtl.a_ctxt, owner);
 				tmp.setObject(tm);
-				tmp.show();
+				tmp.setVisible(true);
 			    }
 			    break;
 

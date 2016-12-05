@@ -778,7 +778,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	if (rv == JFileChooser.APPROVE_OPTION) {
 	    File file = choose_if.getSelectedFile();
 	    try {
-		URL url = file.toURL();
+		URL url = file.toURI().toURL();
 		url_s = url.toString();
 		return url_s;
 	    } catch (Exception ex) {
@@ -795,7 +795,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	if (rv == JFileChooser.APPROVE_OPTION) {
 	    File file = choose_mf.getSelectedFile();
 	    try {
-		URL url = file.toURL();
+		URL url = file.toURI().toURL();
 		url_s = url.toString();
 		return url_s;
 	    } catch (Exception ex) {
@@ -812,7 +812,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	if (rv == JFileChooser.APPROVE_OPTION) {
 	    File file = choose_md.getSelectedFile();
 	    try {
-		URL url = file.toURL();
+		URL url = file.toURI().toURL();
 		url_s = url.toString();
 		return url_s;
 	    } catch (Exception ex) {
@@ -829,7 +829,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	if (rv == JFileChooser.APPROVE_OPTION) {
 	    File file = choose_sf.getSelectedFile();
 	    try {
-		URL url = file.toURL();
+		URL url = file.toURI().toURL();
 		url_s = url.toString();
 		return url_s;
 	    } catch (Exception ex) {

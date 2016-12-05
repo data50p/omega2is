@@ -81,10 +81,10 @@ public class SettingsDialog extends JDialog implements ActionListener {
 //log	omega.Context.sout_log.getLogger().info("ERR: " + "" + cmd);
 	if ("OK".equals(cmd)) {
 	    save();
-	    hide();
+	    setVisible(false);
 	}
 	if ("cancel".equals(cmd)) {
-	    hide();
+	    setVisible(false);
 	}
     }
 }

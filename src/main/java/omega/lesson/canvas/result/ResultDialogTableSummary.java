@@ -230,7 +230,7 @@ public class ResultDialogTableSummary extends JDialog
 		    tmod.mode,
 		    register);
 	    omega.Context.HELP_STACK.push("result_detail");
-	    rdt.show();
+	    rdt.setVisible(true);
 	    omega.Context.HELP_STACK.pop("result_detail");
 	}
 
@@ -240,7 +240,7 @@ public class ResultDialogTableSummary extends JDialog
 	}
 
 	if ("close".equals(cmd)) {
-	    hide();
+	    setVisible(false);
 	}
     }
 

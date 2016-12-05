@@ -209,7 +209,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
 			loc.createPupilName(pn);
 			PupilSettingsDialog pupil_settings_dialog = new PupilSettingsDialog(omega.lesson.Lesson.static_lesson);
 			pupil_settings_dialog.setPupil(new Pupil(pn));
-			pupil_settings_dialog.show();
+			pupil_settings_dialog.setVisible(true);
 			omega.Context.def_log.getLogger().info("hidden +++++++++++++?");
 			pupil_settings_dialog = null;
 			mkList(pn);

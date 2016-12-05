@@ -22,7 +22,7 @@ public class LoginAppl {
 	    c.add(l.getJComponent(), BorderLayout.CENTER);
 
 	    f.pack();
-	    f.show();
+	    f.setVisible(true);
 
 	    l.waitDone();
 

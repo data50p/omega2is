@@ -16,7 +16,7 @@ public class OmegaAppl {
     public static void closeSplash() {
 	if (splash == null)
 	    return;
-	splash.hide();
+	splash.setVisible(false);
 	splash = null;
     }
 

@@ -420,17 +420,17 @@ public class Lesson implements LessonCanvasListener {
 	    int x = scr.width / 2;
 	    int y = scr.height / 2;
 	    f.setLocation(x - 100, y);
-	    f.show();
+	    f.setVisible(true);
 	}
 
 	void show() {
 	    progressBar.setValue(0);
 	    progressBar.setIndeterminate(true);
-	    f.show();
+	    f.setVisible(true);
 	}
 
 	void dismiss() {
-	    f.hide();
+	    f.setVisible(false);
 	    progressBar.setIndeterminate(false);
 	}
     }
@@ -809,7 +809,7 @@ public class Lesson implements LessonCanvasListener {
     public static OmegaSettingsDialog omega_settings_dialog = new OmegaSettingsDialog();
 
     static {
-	omega_settings_dialog.hide();
+	omega_settings_dialog.setVisible(false);
     }
 
     PupilSettingsDialog pupil_settings_dialog = new PupilSettingsDialog(this);
@@ -1108,7 +1108,7 @@ public class Lesson implements LessonCanvasListener {
 	    //			String fn = "default.omega_colors";
 	    //			fn = getCurrentPupil().getString("theme", fn);
 	    //			omega_settings_dialog.setSelectedColorFile(fn);
-	    omega_settings_dialog.show();
+	    omega_settings_dialog.setVisible(true);
 	    global_skipF(false);
 	}
 
@@ -1137,7 +1137,7 @@ public class Lesson implements LessonCanvasListener {
 	    //			omega.Context.sout_log.getLogger().info("ERR: " + "---------- pupil " + pn);
 	    pupil_settings_dialog.setPupil(getCurrentPupil());
 	    global_skipF(true);
-	    pupil_settings_dialog.show();
+	    pupil_settings_dialog.setVisible(true);
 	    global_skipF(false);
 	    if (pupil_settings_dialog.was_deleted) {
 		pupil_settings_dialog.was_deleted = false;
@@ -1187,7 +1187,7 @@ public class Lesson implements LessonCanvasListener {
 		rdlg.set(register);
 		global_skipF(true);
 		omega.Context.HELP_STACK.push("result_summary");
-		rdlg.show();
+		rdlg.setVisible(true);
 		global_skipF(false);
 	    } catch (Exception ex) {
 		ex.printStackTrace();
@@ -1990,7 +1990,7 @@ public class Lesson implements LessonCanvasListener {
 	}
 
 	action = null;
-	//	window.show();
+	//	window.setVisible(true);
 	le_canvas.populateGUI();
 	omega.appl.OmegaAppl.closeSplash();
 
@@ -3772,7 +3772,7 @@ public class Lesson implements LessonCanvasListener {
 			    SwingUtilities.invokeLater(new Runnable() {
 				public void run() {
 				    global_skipF(true);
-				    omega_settings_dialog.show();
+				    omega_settings_dialog.setVisible(true);
 				    global_skipF(false);
 				}
 			    });
@@ -3904,7 +3904,7 @@ public class Lesson implements LessonCanvasListener {
 	pan.add(pupil_canvas, "pupil");
 	pan.add(sentence_canvas, "sent");
 
-	window.show();
+	window.setVisible(true);
 
 	Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 	if (smaller) {
@@ -3947,7 +3947,7 @@ public class Lesson implements LessonCanvasListener {
 	    if (l != null) {
 		global_skipF(true);
 		ColorDisplay cd = new ColorDisplay(l.colors, name);
-		cd.show();
+		cd.setVisible(true);
 		if (cd.select) {
 		    l.colors = cd.colors;
 		    l.updateDisp();

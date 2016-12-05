@@ -208,7 +208,7 @@ public class LessonEditorPanel extends JPanel {
 			File file = choose_af.getSelectedFile();
 			String fname_s = file.getName();
 //log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fname_s);
-			fname_s = file.toURL().toString(); // getCanonicalPath();
+			fname_s = file.toURI().toURL().toString(); // getCanonicalPath();
 //log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fname_s);
 			String fn = omega.util.Files.rmHead(fname_s);
 //log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fn);
@@ -331,17 +331,17 @@ public class LessonEditorPanel extends JPanel {
 	if (snt_prop != null) {
 	    snt_prop.destroy();
 	    snt_prop.removeAll();
-	    snt_prop.hide();
+	    snt_prop.setVisible(false);
 	    snt_prop = null;
 	}
 	if (tg_prop != null) {
 	    tg_prop.removeAll();
-	    tg_prop.hide();
+	    tg_prop.setVisible(false);
 	    tg_prop = null;
 	}
 	if (i_prop != null) {
 	    i_prop.removeAll();
-	    i_prop.hide();
+	    i_prop.setVisible(false);
 	    i_prop = null;
 	}
     }
@@ -353,11 +353,11 @@ public class LessonEditorPanel extends JPanel {
 	} else {
 	    snt_prop.destroy();
 	    snt_prop.removeAll();
-	    snt_prop.hide();
+	    snt_prop.setVisible(false);
 	    snt_prop = new SentenceProperty(omega.lesson.appl.LessonEditor.TOP_JFRAME, le_canvas.l_ctxt);
 	    snt_prop.addValuesListener(mvl_tg);
 	}
-	snt_prop.show();
+	snt_prop.setVisible(true);
     }
 
     public void popupTargetProp() {
@@ -365,7 +365,7 @@ public class LessonEditorPanel extends JPanel {
 	    tg_prop = new TargetProperty(omega.lesson.appl.LessonEditor.TOP_JFRAME);
 	    tg_prop.addValuesListener(mvl_tg);
 	}
-	tg_prop.show();
+	tg_prop.setVisible(true);
     }
 
     public void popupItemProp() {
@@ -373,7 +373,7 @@ public class LessonEditorPanel extends JPanel {
 	    i_prop = new ItemProperty(omega.lesson.appl.LessonEditor.TOP_JFRAME);
 	    i_prop.addValuesListener(mvl_it);
 	}
-	i_prop.show();
+	i_prop.setVisible(true);
     }
 
     public void setTarget(Values vs) {

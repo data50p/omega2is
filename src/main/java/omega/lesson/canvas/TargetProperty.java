@@ -19,7 +19,7 @@ public class TargetProperty extends Property_B {
 	super(owner, T.t("Omega - Target Property"));
 	build(getContentPane());
 	pack();
-	show();
+	setVisible(true);
     }
 
     public void refresh() {

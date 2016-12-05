@@ -30,7 +30,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 	super(owner, T.t("Omega - Item property"));
 	build(getContentPane());
 	pack();
-	show();
+	setVisible(true);
     }
 
     ChooseActionFile2 choose_af = new ChooseActionFile2();
@@ -38,7 +38,7 @@ public class ItemProperty extends Property_B implements ActionListener {
     String toURL(File file) {
 	String url_s = null;
 	try {
-	    URL url = file.toURL();
+	    URL url = file.toURI().toURL();
 //log	    omega.Context.sout_log.getLogger().info("ERR: " + "got url " + url);
 	    url_s = url.toString();
 	} catch (Exception ex) {

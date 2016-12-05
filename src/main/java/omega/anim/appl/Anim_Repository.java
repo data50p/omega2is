@@ -42,7 +42,7 @@ public class Anim_Repository extends XML_Repository {
 	String url_s = null;
 //log	omega.Context.sout_log.getLogger().info("ERR: " + "got file " + file);
 	try {
-	    URL url = file.toURL();
+	    URL url = file.toURI().toURL();
 //log	    omega.Context.sout_log.getLogger().info("ERR: " + "got url " + url);
 	    url_s = url.toString();
 	} catch (Exception ex) {
@@ -212,7 +212,7 @@ public class Anim_Repository extends XML_Repository {
 	    File file = choose_if.getSelectedFile();
 //log	    omega.Context.sout_log.getLogger().info("ERR: " + "got file " + file);
 	    try {
-		URL url = file.toURL();
+		URL url = file.toURI().toURL();
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "got url " + url);
 		url_s = url.toString();
 		return url_s;

@@ -190,8 +190,8 @@ public class CabaretPanel extends JPanel {
 	    prop = new CabaretProperties(owner, this);
 //	    prop_pa = new CabaretPathProperties(owner, this);
 	}
-	prop.show();
-//	prop_pa.show();
+	prop.setVisible(true);
+//	prop_pa.setVisible(true);
 	setPropTarget(ix);
     }
 
