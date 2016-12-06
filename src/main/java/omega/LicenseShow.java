@@ -22,6 +22,7 @@ public class LicenseShow {
     }
 
     boolean showAndAccept() {
+
 	LicenseFrame lf = new LicenseFrame();
 	lf.setVisible(true);
 	for (; ; ) {
@@ -39,12 +40,21 @@ public class LicenseShow {
 
 	if (yes.equals(answer))
 	    return true;
+	ShowLicense dialog = new ShowLicense();
+	dialog.pack();
+	dialog.setVisible(true);
 
-	LicenseShow ls = new LicenseShow();
-	if (ls.showAndAccept()) {
-	    pu.save(licShow, yes);
-	    return true;
-	}
-	return false;
+	while (dialog.accepted == null)
+	    try {
+		Thread.sleep(200);
+	    } catch (InterruptedException e) {
+		e.printStackTrace();
+	    }
+
+	if ( ! dialog.accepted )
+	    System.exit(1);
+
+	pu.save(licShow, yes);
+	return true;
     }
 }
