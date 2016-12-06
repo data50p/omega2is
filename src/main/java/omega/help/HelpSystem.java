@@ -33,7 +33,7 @@ public class HelpSystem {
 	    return;
 
 	String url_s = omega.Context.URL_BASE + "webroot/" + doc;
-	if (omega.util.InvokeExternBrowser.show_if(url_s) == false) {
+	if (true || omega.util.InvokeExternBrowser.show_if(url_s) == false) {
 	    if (html_fr == null)
 		html_fr = new HtmlFrame(url_s);
 	    else
