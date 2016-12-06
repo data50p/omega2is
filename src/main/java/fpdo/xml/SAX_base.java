@@ -2,6 +2,7 @@ package fpdo.xml;
 
 import fpdo.sundry.S;
 import org.xml.sax.*;
+import org.xml.sax.helpers.DefaultHandler;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -11,12 +12,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Stack;
 
-public class SAX_base extends HandlerBase {
+public class SAX_base extends DefaultHandler {
     int depth;
     HashMap flag;
     HashMap allAttr = new HashMap();
 
-    static class MyErrorHandler extends HandlerBase {
+    static class MyErrorHandler extends DefaultHandler {
 	// treat validation errors as fatal
 	public void error(SAXParseException e)
 		throws SAXParseException {
@@ -49,7 +50,10 @@ public class SAX_base extends HandlerBase {
     private Stack pcdataS = new Stack();
     private Stack elemS = new Stack();
 
-    public void startElement(String name, AttributeList attrs)
+    public void startElement(String namespaceURI,
+		 String localName,
+		 String qName,
+		 Attributes attrs)
 	    throws SAXException {
 	while (pcdataS.size() <= depth)
 	    pcdataS.push(new StringBuffer());
@@ -61,13 +65,13 @@ public class SAX_base extends HandlerBase {
 	    boolean b = false;
 	    attr = new HashMap();
 	    for (int i = 0; i < attrs.getLength(); i++) {
-		String n = attrs.getName(i);
+		String n = attrs.getLocalName(i);
 		String v = attrs.getValue(i);
 		attr.put(n, v);
 	    }
-	    allAttr.put(name, attr);
+	    allAttr.put(localName, attr);
 	}
-	startElementHook(name, attr, allAttr);
+	startElementHook(localName, attr, allAttr);
 
 	depth++;
     }
@@ -147,11 +151,17 @@ public class SAX_base extends HandlerBase {
 	    if (validating)
 		spf.setValidating(true);
 
+	    spf.setNamespaceAware(true);
+
 	    SAXParser sp = spf.newSAXParser();
-	    Parser parser = sp.getParser();
-	    parser.setDocumentHandler(sb);
-	    parser.setErrorHandler(new MyErrorHandler());
-	    parser.parse(uri);
+	    XMLReader xmlr = sp.getXMLReader();
+//	    Parser parser = sp.getParser();
+	    xmlr.setContentHandler(sb);
+	    xmlr.setErrorHandler(new MyErrorHandler());
+	    xmlr.parse(uri);
+//	    parser.setDocumentHandler(sb);
+//	    parser.setErrorHandler(new MyErrorHandler());
+//	    parser.parse(uri);
 	} catch (SAXParseException err) {
 	    omega.Context.sout_log.getLogger().info("** Parsing error"
 		    + ", line " + err.getLineNumber()
