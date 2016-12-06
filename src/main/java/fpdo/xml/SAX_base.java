@@ -65,30 +65,30 @@ public class SAX_base extends DefaultHandler {
 	    boolean b = false;
 	    attr = new HashMap();
 	    for (int i = 0; i < attrs.getLength(); i++) {
-		String n = attrs.getLocalName(i);
+		String n = attrs.getQName(i);
 		String v = attrs.getValue(i);
 		attr.put(n, v);
 	    }
-	    allAttr.put(localName, attr);
+	    allAttr.put(qName, attr);
 	}
-	startElementHook(localName, attr, allAttr);
+	startElementHook(qName, attr, allAttr);
 
 	depth++;
     }
 
-    public void endElement(String name)
+    public void endElement(String uri, String localName, String qName)
 	    throws SAXException {
 	depth--;
 
 	StringBuffer sb = (StringBuffer) pcdataS.get(depth);
 	HashMap ht = (HashMap) elemS.get(depth);
-	ht.put(name, sb.toString());
+	ht.put(qName, sb.toString());
 	pcdataS.set(depth, new StringBuffer());
 
 
 	HashMap ht1 = (HashMap) elemS.get(depth + 1);
 	ht.putAll(ht1);
-	endElementHook(name, ht);
+	endElementHook(qName, ht);
 
 	elemS.set(depth + 1, new HashMap());
     }

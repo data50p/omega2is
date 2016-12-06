@@ -3,6 +3,7 @@ package fpdo.xml;
 
 import fpdo.sundry.S;
 import org.xml.sax.*;
+import org.xml.sax.helpers.DefaultHandler;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -13,8 +14,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 
-public class SAX_node extends HandlerBase {
-    static class MyErrorHandler extends HandlerBase {
+public class SAX_node extends DefaultHandler {
+    static class MyErrorHandler extends DefaultHandler {
 	// treat validation errors as fatal
 	public void error(SAXParseException e)
 		throws SAXParseException {
@@ -47,14 +48,17 @@ public class SAX_node extends HandlerBase {
     static Element el;
     Stack stack = new Stack();
 
-    public void startElement(String name, AttributeList attrs)
+    public void startElement(String namespaceURI,
+			     String localName,
+			     String qName,
+			     Attributes attrs)
 	    throws SAXException {
 
-	Element el1 = new Element(name);
+	Element el1 = new Element(qName);
 
 	if (attrs != null) {
 	    for (int i = 0; i < attrs.getLength(); i++) {
-		String n = attrs.getName(i);
+		String n = attrs.getQName(i);
 		String v = attrs.getValue(i);
 		el1.addAttr(n, v);
 	    }
@@ -62,7 +66,7 @@ public class SAX_node extends HandlerBase {
 	stack.push(el1);
     }
 
-    public void endElement(String name)
+    public void endElement(String uri, String localName, String qName)
 	    throws SAXException {
 	Element e = (Element) stack.pop();
 	if (!stack.isEmpty()) {
@@ -117,11 +121,24 @@ public class SAX_node extends HandlerBase {
 	    if (validating)
 		spf.setValidating(true);
 
+	    spf.setNamespaceAware(!true);
+
 	    SAXParser sp = spf.newSAXParser();
-	    Parser parser = sp.getParser();
-	    parser.setDocumentHandler(sn);
-	    parser.setErrorHandler(new MyErrorHandler());
-	    parser.parse(uri);
+	    XMLReader xmlr = sp.getXMLReader();
+//	    Parser parser = sp.getParser();
+	    xmlr.setContentHandler(sn);
+	    xmlr.setErrorHandler(new MyErrorHandler());
+	    xmlr.parse(uri);
+
+//	    SAXParserFactory spf = SAXParserFactory.newInstance();
+//	    if (validating)
+//		spf.setValidating(true);
+
+//	    SAXParser sp = spf.newSAXParser();
+//	    Parser parser = sp.getParser();
+//	    parser.setDocumentHandler(sn);
+//	    parser.setErrorHandler(new MyErrorHandler());
+//	    parser.parse(uri);
 
 	    return el;
 
