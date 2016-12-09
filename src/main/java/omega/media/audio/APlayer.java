@@ -156,7 +156,7 @@ public class APlayer {
 	    String url_name = "file:" + ffname;
 
 	    try {
-		if (!omega.appl.Settings.getSettings().getBoolean("audio-jmf")) {
+		if (true || !omega.appl.Settings.getSettings().getBoolean("audio-jmf")) {
 		    apl = new APlayer(nname, id);
 		    apl.jplayer = new JPlayer(ffname);
 		    // omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer created: " + nname + ' ' + apl.jplayer.realy_name);

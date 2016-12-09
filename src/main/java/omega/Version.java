@@ -14,6 +14,22 @@ public class Version {
 	else
 	    return ver;
     }
+
+    public static String getCWD() {
+        return System.getProperty("user.dir");
+    }
+
+    public static String getYYY() {
+	return System.getProperty("java.home");
+    }
+
+    public static String getXXX() {
+	return System.getProperty("java.vendor");
+    }
+
+    public static String getJavaVersion() {
+        return System.getProperty("java.version");
+    }
 }
 
 // DO NO CHANGE HERE

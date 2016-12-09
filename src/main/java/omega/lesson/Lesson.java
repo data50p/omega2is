@@ -1992,6 +1992,7 @@ public class Lesson implements LessonCanvasListener {
 	action = null;
 	//	window.setVisible(true);
 	le_canvas.populateGUI();
+
 	omega.appl.OmegaAppl.closeSplash();
 
 	if (fn != null) {
