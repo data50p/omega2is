@@ -2,6 +2,7 @@ package omega.lesson.repository;
 
 import fpdo.xml.Element;
 import fpdo.xml.SAX_node;
+import omega.Context;
 
 public class Restore {
     public static Element restore(String fname) {

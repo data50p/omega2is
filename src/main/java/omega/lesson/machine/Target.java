@@ -4,6 +4,7 @@ package omega.lesson.machine;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
+import omega.Context;
 import omega.lesson.managers.movie.LiuMovieManager;
 import omega.value.Values;
 
@@ -1606,7 +1607,7 @@ public class Target {
 	String s = story_next;
 	if (s == null)
 	    return null;
-	s = s.replaceAll("lesson-[a-zA-Z]*/active", "lesson-" + omega.Context.getLessonLang() + "/active");   // LESSON-DIR-A
+	s = s.replaceAll("lesson-[a-zA-Z]*/active", Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active"));   // LESSON-DIR-A
 	return s;
     }
 

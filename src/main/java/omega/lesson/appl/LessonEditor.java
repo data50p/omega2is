@@ -1,5 +1,6 @@
 package omega.lesson.appl;
 
+import omega.Context;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.ToolBar_LessonEditor;
@@ -24,7 +25,7 @@ public class LessonEditor extends ApplLesson {
 	ApplContext.top_frame = this;
 
 	if (fn == null)
-	    fn = "lesson-" + omega.Context.getLessonLang() + "/new.omega_lesson";  // LESSON-DIR
+	    fn = Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/new.omega_lesson");  // LESSON-DIR
 
 	addWindowListener(new WindowAdapter() {
 	    public void windowClosing(WindowEvent ev) {

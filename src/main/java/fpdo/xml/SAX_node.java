@@ -163,6 +163,7 @@ public class SAX_node extends DefaultHandler {
     public static Element parse(String file, boolean validating) {
 	try {
 	    SAX_node sn = new SAX_node();
+	    System.err.println("Loading xml: " + file);
 	    Element el = element(file, sn, validating);
 	    return el;
 	} catch (IOException ex) {

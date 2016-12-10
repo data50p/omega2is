@@ -1,5 +1,6 @@
 package omega.lesson.canvas;
 
+import omega.Context;
 import omega.i18n.T;
 
 import javax.swing.*;
@@ -255,7 +256,7 @@ public class ColorDisplay extends JDialog implements ActionListener {
     }
 
     private void fillColorFiles() {
-	File dir = new File(".");
+	File dir = new File(Context.omegaAssets("."));
 	String[] sa = dir.list(fnf);
 	for (int i = 0; i < sa.length; i++)
 	    color_file.addItem(sa[i]);

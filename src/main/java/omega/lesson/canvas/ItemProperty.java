@@ -177,7 +177,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 	cb.addItem(T.t("(Select in list)"));
 	cb.addItem(T.t("<Select file...>"));
 	Locator loc = new Locator();
-	String[] sa = loc.getAllActiveFiles("lesson-" + omega.Context.getLessonLang() + "/active", "omega_anim"); // LESSON-DIR-A
+	String[] sa = loc.getAllActiveFiles(Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active"), "omega_anim"); // LESSON-DIR-A
 	for (int i = 0; i < sa.length; i++)
 	    cb.addItem(sa[i]);
 	cb.addItemListener(myiteml);

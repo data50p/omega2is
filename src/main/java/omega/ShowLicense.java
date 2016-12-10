@@ -36,37 +36,41 @@ public class ShowLicense extends JDialog {
     Boolean accepted = null;
 
     public ShowLicense() {
-	setContentPane(contentPane);
-	setModal(true);
-	getRootPane().setDefaultButton(buttonOK);
+        try {
+	    setContentPane(contentPane);
+	    setModal(true);
+	    getRootPane().setDefaultButton(buttonOK);
 
-	textArea1.append(s);
-	buttonOK.addActionListener(new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-		onOK();
-	    }
-	});
+	    textArea1.append(s);
+	    buttonOK.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		    onOK();
+		}
+	    });
 
-	buttonCancel.addActionListener(new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-		onCancel();
-	    }
-	});
+	    buttonCancel.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		    onCancel();
+		}
+	    });
 
-	// call onCancel() when cross is clicked
-	setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-	addWindowListener(new WindowAdapter() {
-	    public void windowClosing(WindowEvent e) {
-		onCancel();
-	    }
-	});
+	    // call onCancel() when cross is clicked
+	    setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+	    addWindowListener(new WindowAdapter() {
+		public void windowClosing(WindowEvent e) {
+		    onCancel();
+		}
+	    });
 
-	// call onCancel() on ESCAPE
-	contentPane.registerKeyboardAction(new ActionListener() {
-	    public void actionPerformed(ActionEvent e) {
-		onCancel();
-	    }
-	}, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+	    // call onCancel() on ESCAPE
+	    contentPane.registerKeyboardAction(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		    onCancel();
+		}
+	    }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+	} catch (Exception ex) {
+
+	}
     }
 
     private void onOK() {

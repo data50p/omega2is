@@ -393,7 +393,7 @@ public class AnimRuntime {
     }
 
     Element open(String fn) {
-	Element el = anim_repository.open(a_ctxt, fn);
+	Element el = anim_repository.open(a_ctxt, Context.omegaAssets(fn));
 	return el;
 //	httpd.getHashMap().put("lesson:loaded resource ", anim_repository.getName());
 //fix	anim_canvas.getToolExecute().execute("fit");

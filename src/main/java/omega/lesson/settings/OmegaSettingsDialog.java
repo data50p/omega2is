@@ -5,6 +5,7 @@ import fpdo.xml.Element;
 import fpdo.xml.SAX_node;
 import fpdo.xml.XML_PW;
 import omega.Config;
+import omega.Context;
 import omega.i18n.T;
 import org.hs.jfc.FormPanel;
 
@@ -220,7 +221,7 @@ public class OmegaSettingsDialog extends SettingsDialog {
 
     Element loadElement() {
 	try {
-	    Element el = SAX_node.parse(fname, false);
+	    Element el = SAX_node.parse(Context.omegaAssets(fname), false);
 	    return el;
 	} catch (Exception ex) {
 	    omega.Context.sout_log.getLogger().info("ERR: " + "Exception! omega.lesson.repository.Restore.restore(): " + ex);

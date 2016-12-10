@@ -1,5 +1,6 @@
 package omega.lesson.canvas;
 
+import omega.Context;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
@@ -117,9 +118,9 @@ public class LessonMainCanvas extends BaseCanvas {
 	String lb = getLessonBase();
 	File file;
 	if (lb == null)
-	    file = new File(/*Locator.fbase + */ "lesson-" + omega.Context.getLessonLang() + "/active/" + "story");      // LESSON-DIR-A
+	    file = new File(/*Locator.fbase + */ Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active/" + "story"));      // LESSON-DIR-A
 	else
-	    file = new File(/*Locator.fbase + */ "lesson-" + omega.Context.getLessonLang() + "/active/" + lb + "/story"); // LESSON-DIR-A
+	    file = new File(/*Locator.fbase + */ Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active/" + lb + "/story")); // LESSON-DIR-A
 	return file.exists();
     }
 

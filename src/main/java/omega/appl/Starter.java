@@ -27,6 +27,9 @@ public class Starter extends OmegaAppl {
 	    case 3:
 		omega.appl.animator.Editor.main(argv);
 		break;
+	    case 4:
+		omega.ShowLicense.main(argv);
+		break;
 	}
     }
 }

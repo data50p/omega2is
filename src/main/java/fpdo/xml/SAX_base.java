@@ -12,6 +12,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Stack;
 
+
+@Deprecated
 public class SAX_base extends DefaultHandler {
     int depth;
     HashMap flag;

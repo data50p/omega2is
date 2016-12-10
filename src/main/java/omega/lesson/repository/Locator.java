@@ -1,5 +1,7 @@
 package omega.lesson.repository;
 
+import omega.Context;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.Arrays;
@@ -10,9 +12,9 @@ public class Locator {
 
     static String getLessonBase() {
 	if (omega.Context.DEMO)
-	    return "lesson-" + omega.Context.getLessonLang() + "/demo";    // LESSON-DIR-A
+	    return Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/demo");    // LESSON-DIR-A
 	else
-	    return "lesson-" + omega.Context.getLessonLang() + "/active";    // LESSON-DIR-A
+	    return Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active");    // LESSON-DIR-A
     }
 
     static FilenameFilter fnf_dir = new FilenameFilter() {

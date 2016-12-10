@@ -5,6 +5,7 @@ package omega.lesson;
 import fpdo.sundry.S;
 import fpdo.xml.Element;
 import omega.Config;
+import omega.Context;
 import omega.adm.register.data.*;
 import omega.i18n.T;
 import omega.lesson.actions.ActionI;
@@ -1277,7 +1278,7 @@ public class Lesson implements LessonCanvasListener {
     }
 
     public void mact_New() {
-	File file = new File("lesson-" + omega.Context.getLessonLang() + "/new.omega_lesson"); // LESSON-DIR
+	File file = new File(Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/new.omega_lesson")); // LESSON-DIR
 	String url_s = omega.util.Files.toURL(file);
 	String tfn = omega.util.Files.rmHead(url_s);
 	loadFN(tfn);
@@ -1428,7 +1429,7 @@ public class Lesson implements LessonCanvasListener {
     public void restoreSettings() {
 	String fn = "default.omega_colors";
 	fn = getCurrentPupil().getString("theme", fn);
-	Element el = Restore.restore(fn);
+	Element el = Restore.restore(Context.omegaAssets(fn));
 	if (el == null) {
 	    return;
 	}
@@ -2329,9 +2330,9 @@ public class Lesson implements LessonCanvasListener {
 
 	    String lang = getCurrentPupil().getStringNo0("languageSuffix", null);
 	    if (!edit && lang != null) {
-		String fn_lang = fn.replaceAll("lesson-[a-zA-Z]*/active", "lesson-" + lang + "/active"); // LESSON-DIR-A
-		String fn_lang_demo = fn.replaceAll("lesson-[a-zA-Z]*/active", "lesson-" + lang + "/demo"); // LESSON-DIR-A
-		String fn_lang_demo2 = fn.replaceAll("lesson-[a-zA-Z]*/active", "lesson/demo"); // LESSON-DIR-A
+		String fn_lang = fn.replaceAll("lesson-[a-zA-Z]*/active", Context.omegaAssets("lesson-" + lang + "/active")); // LESSON-DIR-A
+		String fn_lang_demo = fn.replaceAll("lesson-[a-zA-Z]*/active", Context.omegaAssets("lesson-" + lang + "/demo")); // LESSON-DIR-A
+		String fn_lang_demo2 = fn.replaceAll("lesson-[a-zA-Z]*/active", Context.omegaAssets("lesson/demo")); // LESSON-DIR-A
 		omega.Context.sout_log.getLogger().info("ERR: " + "LANG repl " + fn + ' ' + fn_lang);
 		Element el1 = Restore.restore(fn_lang);
 		if (el1 == null) {

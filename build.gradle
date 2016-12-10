@@ -4,23 +4,51 @@ version '1.0.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'maven-publish'
+apply plugin: 'application'
+
+mainClassName = 'omega.appl.Starter'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+configurations {
+    antTask
+    javac2
+}
+
 repositories {
+    flatDir dirs: "${rootDir}/lib"
+    flatDir dirs: "lib"
     mavenCentral()
 }
+
+task runApp(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'omega.appl.Starter'
+
+}
+task customrun << {
+    javaexec {omega.appl.Starter}
+}
+
+//ant.importBuild 'build.xml'
+//task compileJava(overwrite: true, dependsOn: customcompile) {
+//}
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile fileTree(dir: 'jar', include: '*.jar')
+    compile 'com.intellij:forms_rt:7.0.3'
+    antTask name: 'javac2'//, version: '12.1.0'
+    antTask name: 'forms_rt'//, version: '12.1.0'
+    antTask name: 'asm-all'//, version: '12.1.0-idea'
+    antTask group: 'org.jdom', name: 'jdom', version: '1.1'
 }
 
 sourceSets {
     main {
         resources {
-            srcDirs = ["src/main/resource"]
+            srcDirs = ["src/main/resources"]
         }
     }
 }
@@ -51,3 +79,15 @@ publishing {
     }
 }
 
+task compileJava(overwrite: true, dependsOn: configurations.compile.getTaskDependencyFromProjectDependency(true, 'jar')) {
+    doLast {
+        project.sourceSets.main.output.classesDir.mkdirs()
+        ant.taskdef name: 'javac2', classname: 'com.intellij.ant.Javac2', classpath: configurations.antTask.asPath
+        ant.javac2 srcdir: project.sourceSets.main.java.srcDirs.join(':'),
+                classpath: project.sourceSets.main.compileClasspath.asPath,
+                destdir: project.sourceSets.main.output.classesDir,
+                source: sourceCompatibility,
+                target: targetCompatibility,
+                includeAntRuntime: false
+    }
+}

@@ -926,9 +926,9 @@ public class PupilSettingsDialog extends SettingsDialog {
 
     String getPupilDir(Pupil pup) {
 	if (pupil == null) {
-	    return "register/Guest.p";
+	    return Context.omegaAssets("register/Guest.p");
 	}
-	return "register/" + pup.getName() + ".p";
+	return Context.omegaAssets("register/" + pup.getName() + ".p");
     }
 
     void loadDefault() {
@@ -1029,17 +1029,17 @@ public class PupilSettingsDialog extends SettingsDialog {
 //	secure_jb.cb.setEnabled(! "Guest".equals(pupil.getName()));
 	load();
 	pupil_name.setText(pnameL);
-	String val = "register/" + pname + ".p/id.png";
+	String val = Context.omegaAssets("register/" + pname + ".p/id.png");
 	ImageIcon imc2 = createImageIcon(val, 80, 60);
 	pupim_jl.setIcon(imc2);
 	pack();
     }
 
     private void deletePupil() {
-	File file = new File("register/" + pupil.getName() + ".p");
-	File file2 = new File("register/" + pupil.getName() + ".deleted");
+	File file = new File(Context.omegaAssets("register/" + pupil.getName() + ".p"));
+	File file2 = new File(Context.omegaAssets("register/" + pupil.getName() + ".deleted"));
 	if (file2.exists()) {
-	    File file3 = new File("register/" + pupil.getName() + ".deleted_" + S.ct());
+	    File file3 = new File(Context.omegaAssets("register/" + pupil.getName() + ".deleted_" + S.ct()));
 	    file2.renameTo(file3);
 	}
 	file.renameTo(file2);
