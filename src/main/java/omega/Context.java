@@ -10,11 +10,12 @@ import java.util.Stack;
 
 
 public class Context {
+    public static String omegaAssets = "omega-assets";
     static Object lock = new Object();
     static HashMap subsystems = new HashMap();
     public static String URL_BASE = "http://localhost:8089/";
-    public static String URL_BASE_AS_FILE = "media/";
-    public static String FILE_BASE = "media/";  // null
+    public static String URL_BASE_AS_FILE = omegaAssets + "/" + "media/";
+    public static String FILE_BASE = omegaAssets + "/" + "media/";  // null
 
     public static boolean logon = !false;
 
@@ -41,6 +42,10 @@ public class Context {
 
     public static boolean DEMO = false;
     public static String omega_lang = null;
+
+    public static String omegaAssets(String path) {
+        return omegaAssets + '/' + path;
+    }
 
     public static class HelpStack {
 	Stack stack = new Stack();

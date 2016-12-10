@@ -13,6 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import omega.Context;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,9 +26,8 @@ public class VideoTest extends Application {
     static Group root;
     static JFrame frame;
 
-    private static final String MEDIA1_URL = "file:/Users/lars/project/omega/omega2_dev/github/omega2is/invoke/MOV01445.mp4";
-    private static final String MEDIA2_URL = "file:MOV01445.mp4";
-    private static final String MEDIA0_URL = "MOV01445.mp4";
+    private static final String MEDIA2_URL = "file:omega-assets/MOV01445.mp4";
+    private static final String MEDIA0_URL = Context.omegaAssets("MOV01445.mp4");
     private static final String MEDIA_URL = MEDIA2_URL;
 
     private JFXPanel initAndShowGUI() {

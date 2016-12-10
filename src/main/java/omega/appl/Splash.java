@@ -1,5 +1,7 @@
 package omega.appl;
 
+import omega.Context;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -13,7 +15,7 @@ public class Splash extends JWindow {
 	setLocation((d.width - ww) / 2, (d.height - hh) / 2);
 	setSize(ww, hh);
 	if (im == null)
-	    im = omega.graphic.util.LoadImage.loadAndWaitFromFile(this, "media/default/omega_splash.gif");
+	    im = omega.graphic.util.LoadImage.loadAndWaitFromFile(this, Context.omegaAssets("media/default/omega_splash.gif"));
 	setBackground(Color.black);
 	setVisible(true);
     }

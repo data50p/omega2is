@@ -25,7 +25,7 @@ public class LicenseShow {
 	PreferenceUtil pu = new PreferenceUtil(LicenseShow.class);
 	String answer = (String) pu.getObject(licShow, no);
 
-	if (false && yes.equals(answer))
+	if (yes.equals(answer))
 	    return true;
 
 	ShowLicense dialog = new ShowLicense();

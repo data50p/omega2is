@@ -4,3 +4,4 @@ invoke
 .idea
 .DS_Store
 logs
+out
