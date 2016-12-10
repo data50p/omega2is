@@ -21,25 +21,13 @@ public class LicenseShow {
     LicenseShow() {
     }
 
-    boolean showAndAccept() {
-
-	LicenseFrame lf = new LicenseFrame();
-	lf.setVisible(true);
-	for (; ; ) {
-	    if (lf.isVisible())
-		S.m_sleep(500);
-	    else
-		break;
-	}
-	return lf.result;
-    }
-
     public static boolean showAndAccepted() {
 	PreferenceUtil pu = new PreferenceUtil(LicenseShow.class);
 	String answer = (String) pu.getObject(licShow, no);
 
-	if (yes.equals(answer))
+	if (false && yes.equals(answer))
 	    return true;
+
 	ShowLicense dialog = new ShowLicense();
 	dialog.pack();
 	dialog.setVisible(true);
