@@ -47,7 +47,7 @@ public class Files {
 	    }
 	    cdu = cdu.substring(0, cdu.length() - 2);
 //	cdu += "media/";
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "rmHead\n" + fn + '\n' + cdu);
+	    omega.Context.sout_log.getLogger().info("ERR: " + "rmHead " + fn + " -> " + cdu);
 	    int len_cd = cdu.length();
 
 	    String[] sa = new String[2];

@@ -620,7 +620,7 @@ public class AnimEditor extends JFrame {
 
 	if (fn == null)
 	    fn = "";
-	String tit = "Omega - " + T.t("Animator editor: ") + fn;
+	String tit = "Omega - " + T.t("Animator editor: ") + Context.antiOmegaAssets(fn);
 	if (is_dirty)
 	    tit += T.t(" (not saved)");
 	setTitle(tit);

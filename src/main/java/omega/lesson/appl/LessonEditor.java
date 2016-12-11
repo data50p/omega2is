@@ -25,7 +25,7 @@ public class LessonEditor extends ApplLesson {
 	ApplContext.top_frame = this;
 
 	if (fn == null)
-	    fn = Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/new.omega_lesson");  // LESSON-DIR
+	    fn = "lesson-" + omega.Context.getLessonLang() + "/new.omega_lesson";  // LESSON-DIR
 
 	addWindowListener(new WindowAdapter() {
 	    public void windowClosing(WindowEvent ev) {

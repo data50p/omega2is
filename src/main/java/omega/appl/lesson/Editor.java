@@ -1,6 +1,7 @@
 package omega.appl.lesson;
 
 import fpdo.sundry.S;
+import omega.Context;
 import omega.LicenseShow;
 import omega.appl.OmegaAppl;
 import omega.lesson.appl.LessonEditor;
@@ -13,7 +14,7 @@ public class Editor extends OmegaAppl {
 
     public Editor(String fn) {
 	super("Lesson editor");
-	le = new LessonEditor("Omega - Lesson Editor:", fn);
+	le = new LessonEditor("Omega - Lesson Editor:", Context.antiOmegaAssets(fn));
     }
 
     public static void main(String[] argv) {

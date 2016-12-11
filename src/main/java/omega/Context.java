@@ -47,6 +47,18 @@ public class Context {
         return omegaAssets + '/' + path;
     }
 
+    public static String antiOmegaAssets(String afn) {
+        if ( afn == null || afn.length() == 0 )
+            return afn;
+	if ( afn.startsWith(omegaAssets("") ) ) {
+	    return afn.substring(omegaAssets("").length());
+	}
+	if ( afn.startsWith("./" + omegaAssets("") ) ) {
+	    return afn.substring(("./" + omegaAssets("")).length());
+	}
+	return afn;
+    }
+
     public static class HelpStack {
 	Stack stack = new Stack();
 

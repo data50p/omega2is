@@ -1281,6 +1281,7 @@ public class Lesson implements LessonCanvasListener {
 	File file = new File(Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/new.omega_lesson")); // LESSON-DIR
 	String url_s = omega.util.Files.toURL(file);
 	String tfn = omega.util.Files.rmHead(url_s);
+	tfn = Context.antiOmegaAssets(tfn);
 	loadFN(tfn);
 	saved_name = null;
     }
@@ -1315,7 +1316,7 @@ public class Lesson implements LessonCanvasListener {
 		saved_name = tfn;
 
 		if (window instanceof JFrame) {
-		    ((JFrame) window).setTitle("Omega - Lesson Editor: " + tfn);
+		    ((JFrame) window).setTitle("Omega - Lesson Editor: " + Context.antiOmegaAssets(tfn));
 		}
 	    }
 	} finally {
@@ -1326,17 +1327,19 @@ public class Lesson implements LessonCanvasListener {
     public void mact_Open() {
 	String url_s = null;
 	try {
+	    omega.Context.sout_log.getLogger().info("mact_Open " + "null");
 	    global_skipF(true);
 	    int rv = choose_f.showDialog(null, T.t("Open"));
 	    if (rv == JFileChooser.APPROVE_OPTION) {
 		File file = choose_f.getSelectedFile();
+		omega.Context.sout_log.getLogger().info("mact_Open file: " + file);
 		url_s = omega.util.Files.toURL(file);
 		if (!url_s.endsWith("." + ChooseLessonFile.ext)) {
 		    url_s = url_s + "." + ChooseLessonFile.ext;
 		}
 
-		String tfn = omega.util.Files.rmHead(url_s);
-
+		String atfn = omega.util.Files.rmHead(url_s);
+		String tfn = Context.antiOmegaAssets(atfn);
 		loadFN(tfn);
 		saved_name = tfn;
 	    }
@@ -1429,7 +1432,7 @@ public class Lesson implements LessonCanvasListener {
     public void restoreSettings() {
 	String fn = "default.omega_colors";
 	fn = getCurrentPupil().getString("theme", fn);
-	Element el = Restore.restore(Context.omegaAssets(fn));
+	Element el = Restore.restore(fn);
 	if (el == null) {
 	    return;
 	}
@@ -1720,7 +1723,7 @@ public class Lesson implements LessonCanvasListener {
     }
 
     private void sendMsg(String msg, Object o, String id) {
-	//	omega.Context.sout_log.getLogger().info("ERR: " + "!!!!!!!! sendMsg " + msg + ' ' + S.ct() + ' ' + o + ' ' + id);
+        omega.Context.sout_log.getLogger().info("ERR: " + "!!!!!!!! sendMsg " + msg + ' ' + S.ct() + ' ' + o + ' ' + id);
 	synchronized (msg_list) {
 	    msg_list.add(new Object[]{msg, o, new Long(S.ct()), id});
 	    //log 	    omega.Context.sout_log.getLogger().info("ERR: " + "%%%%% inserted sendMsg >>> " + msg + ' ' + o);
@@ -2330,10 +2333,10 @@ public class Lesson implements LessonCanvasListener {
 
 	    String lang = getCurrentPupil().getStringNo0("languageSuffix", null);
 	    if (!edit && lang != null) {
-		String fn_lang = fn.replaceAll("lesson-[a-zA-Z]*/active", Context.omegaAssets("lesson-" + lang + "/active")); // LESSON-DIR-A
-		String fn_lang_demo = fn.replaceAll("lesson-[a-zA-Z]*/active", Context.omegaAssets("lesson-" + lang + "/demo")); // LESSON-DIR-A
-		String fn_lang_demo2 = fn.replaceAll("lesson-[a-zA-Z]*/active", Context.omegaAssets("lesson/demo")); // LESSON-DIR-A
-		omega.Context.sout_log.getLogger().info("ERR: " + "LANG repl " + fn + ' ' + fn_lang);
+		String fn_lang = fn.replaceAll("lesson-[a-zA-Z]*/active", "lesson-" + lang + "/active"); // LESSON-DIR-A
+		String fn_lang_demo = fn.replaceAll("lesson-[a-zA-Z]*/active", "lesson-" + lang + "/demo"); // LESSON-DIR-A
+		String fn_lang_demo2 = fn.replaceAll("lesson-[a-zA-Z]*/active", "lesson/demo"); // LESSON-DIR-A
+		omega.Context.sout_log.getLogger().info("ERR: " + "LANG repl (~A)" + fn + ' ' + fn_lang);
 		Element el1 = Restore.restore(fn_lang);
 		if (el1 == null) {
 		    el1 = Restore.restore(fn);
@@ -2426,7 +2429,7 @@ public class Lesson implements LessonCanvasListener {
 		le_canvas.render(true, true);
 		loaded_fname = fn;
 		if (window instanceof JFrame) {
-		    ((JFrame) window).setTitle("Omega - Lesson Editor: " + fn);
+		    ((JFrame) window).setTitle("Omega - Lesson Editor: " + Context.antiOmegaAssets(fn));
 		}
 	    } else {
 		global_skipF(true);
