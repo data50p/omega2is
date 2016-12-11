@@ -6,3 +6,4 @@ invoke
 logs
 out
 runtime/logs
+runtime/omega2*.jar
