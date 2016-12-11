@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2016-dec-11_23_33_22" pupil="Guest" type="create">
+<entries session_length="96395">
+<entry extra="create:build" l_id="sv" ord="0" type="select" when="3930" word="Biet"/>
+<entry duration="3930" l_id_list="sv" ord="1" sentence="Biet" type="create"/>
+<entry extra="create:build" l_id="sv" ord="2" type="select" when="21232" word="Svanen"/>
+<entry duration="21232" l_id_list="sv" ord="3" sentence="Svanen" type="create"/>
+</entries>
+</result>
