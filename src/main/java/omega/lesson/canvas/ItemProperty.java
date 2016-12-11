@@ -55,7 +55,10 @@ public class ItemProperty extends Property_B implements ActionListener {
 	    if (rv == JFileChooser.APPROVE_OPTION) {
 		File file = choose_af.getSelectedFile();
 		url_s = toURL(file);
-		return omega.util.Files.mkRelFname(url_s);
+		String aFname =  omega.util.Files.mkRelFname(url_s);
+		String fname = Context.antiOmegaAssets(aFname);
+		Context.sout_log.getLogger().info("getFName: (~A) " + fname);
+		return fname;
 	    }
 	} catch (Exception ex) {
 	    Context.exc_log.getLogger().throwing(ItemProperty.class.getName(), "getFName", ex);
@@ -178,6 +181,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 	cb.addItem(T.t("<Select file...>"));
 	Locator loc = new Locator();
 	String[] sa = loc.getAllActiveFiles(Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active"), "omega_anim"); // LESSON-DIR-A
+	sa = Context.antiOmegaAssets(sa);
 	for (int i = 0; i < sa.length; i++)
 	    cb.addItem(sa[i]);
 	cb.addItemListener(myiteml);

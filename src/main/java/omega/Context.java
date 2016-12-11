@@ -10,7 +10,10 @@ import java.util.Stack;
 
 
 public class Context {
-    public static String omegaAssets = "omega-assets";
+    public static final String OMEGA_ASSETS_SUFFIX = ".omega_assets";
+    public static final String defaultOmegaAssets = "default" + OMEGA_ASSETS_SUFFIX;
+
+    public static String omegaAssets = defaultOmegaAssets;
     static Object lock = new Object();
     static HashMap subsystems = new HashMap();
     public static String URL_BASE = "http://localhost:8089/";
@@ -48,8 +51,8 @@ public class Context {
     }
 
     public static String antiOmegaAssets(String afn) {
-        if ( afn == null || afn.length() == 0 )
-            return afn;
+	if ( afn == null || afn.length() == 0 )
+	    return afn;
 	if ( afn.startsWith(omegaAssets("") ) ) {
 	    return afn.substring(omegaAssets("").length());
 	}
@@ -57,6 +60,29 @@ public class Context {
 	    return afn.substring(("./" + omegaAssets("")).length());
 	}
 	return afn;
+    }
+
+    public static String[] antiOmegaAssets(String[] afns) {
+	if ( afns == null || afns.length == 0 )
+	    return afns;
+
+	String[] asa = new String[afns.length];
+	int ix = 0;
+	for(String s : afns) {
+	    asa[ix++] = antiOmegaAssets(s);
+	}
+	return asa;
+    }
+
+    public static void setOmegaAssets(String oa) {
+        if ( oa == null || oa.length() == 0 ) {
+	    omegaAssets = defaultOmegaAssets;
+	} else {
+	    if (oa.endsWith(OMEGA_ASSETS_SUFFIX))
+		oa = oa.replaceAll(OMEGA_ASSETS_SUFFIX, "");
+	    Context.sout_log.getLogger().info("setOmegaAssets: " + omegaAssets + " -> " + oa);
+	    omegaAssets = oa;
+	}
     }
 
     public static class HelpStack {

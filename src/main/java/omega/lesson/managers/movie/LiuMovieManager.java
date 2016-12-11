@@ -37,7 +37,7 @@ public class LiuMovieManager extends Manager {
 	if (!Config.LIU_Mode)
 	    return false;
 
-	omega.Context.sout_log.getLogger().info("prepare play movie: " + prefix + ' ' + movieNameBase + ' ' + init);
+	omega.Context.sout_log.getLogger().info("prepare play movie: (~A) " + prefix + ' ' + movieNameBase + ' ' + init);
 
 	if (init)
 	    return prepare(prefix + movieNameBase);

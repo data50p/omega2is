@@ -21,6 +21,18 @@ public class Editor extends OmegaAppl {
 	HashMap flag = S.flagAsMap(argv);
 	java.util.List argl = S.argAsList(argv);
 
+	if ( flag.get("help") != null ) {
+	    System.err.println("-help");
+	    System.err.println("-omega_assets=<assets name>");
+	    System.err.println("-omega_lang=<lang>");
+	    System.err.println("-T=<step>");
+	    System.err.println("-");
+	    System.err.println("-");
+	    System.exit(1);
+	}
+
+	String Context_omegaAssets = (String) flag.get("omega_assets");
+	Context.setOmegaAssets(Context_omegaAssets);
 	omega.Context.omega_lang = (String) flag.get("omega_lang");
 	omega.Context.sout_log.getLogger().info("ERR: " + "param omega_lang is " + omega.Context.omega_lang);
 
