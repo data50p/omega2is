@@ -1,5 +1,7 @@
 package omega.graphic.util;
 
+import omega.Context;
+
 import java.awt.*;
 import java.io.File;
 
@@ -11,7 +13,7 @@ public class LoadImage {
 	try {
 	    String fn = omega.Context.FILE_BASE + im_name;
 	    if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "loading file name " + fn);
-	    File file = new File(fn);
+	    File file = new File(Context.omegaAssets(fn));
 	    if (file != null && file.canRead())
 		im = tk.createImage(fn);
 	    else
@@ -35,7 +37,7 @@ public class LoadImage {
 	try {
 	    String fn = omega.Context.FILE_BASE + im_name;
 	    if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "loading file name " + fn);
-	    File file = new File(fn);
+	    File file = new File(Context.omegaAssets(fn));
 	    if (file != null && file.canRead())
 		im = tk.createImage(fn);
 	    else
@@ -59,7 +61,9 @@ public class LoadImage {
 	Toolkit tk = Toolkit.getDefaultToolkit();
 	Image im = null;
 	try {
-	    im = tk.createImage(im_name);
+	    String aImname = Context.omegaAssets(im_name);
+	    Context.sout_log.getLogger().info("load image: (A) " + aImname);
+	    im = tk.createImage(aImname);
 	} catch (Exception ex) {
 	    return null;
 	}

@@ -2674,7 +2674,7 @@ public class Lesson implements LessonCanvasListener {
 				if (itm.isAction) {
 				    try {
 					String action_s = tg.getActionFileName(0);
-					//log 				    omega.Context.sout_log.getLogger().info("ERR: " + "Action fn " + action_s);
+					omega.Context.sout_log.getLogger().info("ERR: " + "Action fn " + action_s);
 					if (action_s != null && action_s.length() > 0) {
 					    if (false && action == null) { //--
 						action = new AnimAction();

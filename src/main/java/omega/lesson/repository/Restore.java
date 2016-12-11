@@ -7,9 +7,13 @@ import omega.Context;
 public class Restore {
     public static Element restore(String fname) {
 	try {
-	    if ( fname.startsWith(Context.omegaAssets("")))
-		System.err.println("Extra assets: " + fname);
-	    String aName = Context.omegaAssets(fname);
+	    String aName;
+	    if ( fname.startsWith(Context.omegaAssets(""))) {
+		System.err.println("Already assets: " + fname);
+		aName = fname;
+	    } else {
+		aName = Context.omegaAssets(fname);
+	    }
 	    omega.Context.sout_log.getLogger().info("ERR: " + "Restore from (~A) " + fname + " -> (A) " + aName);
 	    Element el = SAX_node.parse(aName, false);
 	    return el;

@@ -47,6 +47,10 @@ public class Context {
     public static String omega_lang = null;
 
     public static String omegaAssets(String path) {
+	if (path != null && path.startsWith(omegaAssets)) {
+	    sout_log.getLogger().warning("omegaAssets(): Already omega_assets: " + path);
+	    return path;
+	}
         return omegaAssets + '/' + path;
     }
 

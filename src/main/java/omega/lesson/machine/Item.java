@@ -523,7 +523,7 @@ public class Item {
 		ss += ',';
 	    ss += sa[i] + '.' + action_type;
 	}
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "return getActionText " + ss);
+	omega.Context.sout_log.getLogger().info("ERR: " + "return getActionText " + ss);
 	return ss;
     }
 

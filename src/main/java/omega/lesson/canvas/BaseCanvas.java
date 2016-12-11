@@ -2,6 +2,7 @@ package omega.lesson.canvas;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
+import omega.Context;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
@@ -491,7 +492,7 @@ public class BaseCanvas extends JPanel {
     }
 
     Image getImage(String fn) {
-	Image image = Toolkit.getDefaultToolkit().getImage(fn);
+	Image image = Toolkit.getDefaultToolkit().getImage(Context.omegaAssets(fn));
 	return image;
     }
 

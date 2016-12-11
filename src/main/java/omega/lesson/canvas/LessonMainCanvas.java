@@ -188,7 +188,7 @@ public class LessonMainCanvas extends BaseCanvas {
 	int w = getCaW() / 2;
 	int h = getCaH() / 5;
 	ImageIcon imic = omega.swing.ScaledImageIcon.createImageIcon(this,
-		"toolbarButtonGraphics/omega/omega_title.png",
+		"../toolbarButtonGraphics/omega/omega_title.png",
 		w,
 		h);
 	if (imic == null)

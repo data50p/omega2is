@@ -91,22 +91,22 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
 
 	PupilItem(Component component, String name) {
 	    this.name = name;
-	    this.im_name = null; // "register/" + name + ".p/" + "id.jpg";
+	    this.im_name = Context.omegaAssets("register/" + name + ".p/" + "id.jpg");
 	    int w = 52;
 	    w = getCaH() / 7;
 	    int h = (int) (w * 1.3);
 
-// 	    im_ic = omega.swing.ScaledImageIcon.createImageIcon(component,
-// 								im_name,
-// 								w,
-// 								h);
-// 	    if ( im_ic == null ) {
-// 		this.im_name = "register/" + "Guest" + ".p/" + "id.jpg";
-// 		im_ic = omega.swing.ScaledImageIcon.createImageIcon(component,
-// 								    im_name,
-// 								    w,
-// 								    h);
-//	    }
+ 	    im_ic = omega.swing.ScaledImageIcon.createImageIcon(component,
+		    						im_name,
+ 								w,
+ 								h);
+ 	    if ( im_ic == null ) {
+ 		this.im_name = Context.omegaAssets("register/" + "Guest" + ".p/" + "id.jpg");
+ 		im_ic = omega.swing.ScaledImageIcon.createImageIcon(component,
+ 								    im_name,
+ 								    w,
+ 								    h);
+	    }
 	}
 
 	public String toString() {
@@ -362,16 +362,16 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
 	ImageIcon imic = null;
 	try {
 	    imic = omega.swing.ScaledImageIcon.createImageIcon(this,
-		    "register/" +
+		    Context.omegaAssets("register/" +
 			    name +
 			    ".p/" +
-			    "id.jpg",
+			    "id.jpg"),
 		    w,
 		    h,
 		    false);
 	    if (imic == null)
 		imic = omega.swing.ScaledImageIcon.createImageIcon(this,
-			"media/default/pupil.jpg",
+			Context.omegaAssets("media/default/pupil.jpg"),
 			w,
 			h,
 			false);
@@ -441,7 +441,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
 
 	if (greeting_ic == null) {
 	    greeting_ic = omega.swing.ScaledImageIcon.createImageIcon(this,
-		    Context.omegaAssets("media/default/pupil_greeting.png"),
+		    "media/default/pupil_greeting.png",
 		    (int) gX(0.8),
 		    (int) gY(0.1));
 	}

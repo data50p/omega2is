@@ -4,7 +4,7 @@ public class Config {
     static public int TIMELINES_N = 4;
     static public int CABARET_ACTOR_N = 12;
     static public int WINGS_N = 10;
-    static public boolean T = false;
+    static public boolean T = !false;
     static public boolean RUN_MODE = false;
     static public int t_step = 10;
 

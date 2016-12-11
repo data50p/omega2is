@@ -165,6 +165,7 @@ public class SAX_node extends DefaultHandler {
 	    SAX_node sn = new SAX_node();
 	    System.err.println("Loading xml: (A) " + file);
 	    Element el = element(file, sn, validating);
+	    System.err.println("           : " + el);
 	    return el;
 	} catch (IOException ex) {
 	}
