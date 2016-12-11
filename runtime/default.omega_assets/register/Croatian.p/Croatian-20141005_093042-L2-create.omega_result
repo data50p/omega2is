@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE result >
-
-<result created_date="2014-okt-05_09_30_42" pupil="Croatian" type="create">
-<entries session_length="255366">
-<entry extra="create:build" l_id="s" ord="0" type="select" when="1337" word="Plavokosa djevojčica"/>
-</entries>
-</result>

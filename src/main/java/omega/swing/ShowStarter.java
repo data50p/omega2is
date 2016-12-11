@@ -3,6 +3,7 @@ package omega.swing;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
+import omega.ShowLicense;
 import omega.appl.lesson.Editor;
 import omega.appl.lesson.Runtime;
 
@@ -21,6 +22,9 @@ public class ShowStarter extends JDialog {
     private JButton lessonRuntimeButton;
     private JCheckBox rememberSelectionCheckBox;
 
+    String[] args;
+    private static Integer selection = null;
+
     public ShowStarter() {
 	setContentPane(contentPane);
 	setModal(true);
@@ -30,35 +34,56 @@ public class ShowStarter extends JDialog {
 	    @Override
 	    public void actionPerformed(ActionEvent e) {
 		setVisible(false);
-		Editor.main(new String[]{});
+		selection = 1;
 	    }
 	});
 	lessonRuntimeButton.addActionListener(new ActionListener() {
 	    @Override
 	    public void actionPerformed(ActionEvent e) {
 		setVisible(false);
-		Runtime.main(new String[]{});
+		selection = 2;
 	    }
 	});
 	animEditorButton.addActionListener(new ActionListener() {
 	    @Override
 	    public void actionPerformed(ActionEvent e) {
 		setVisible(false);
-		omega.appl.animator.Editor.main(new String[]{});
+		selection = 3;
 	    }
 	});
 	settingsButton.addActionListener(new ActionListener() {
 	    @Override
 	    public void actionPerformed(ActionEvent e) {
-
+		selection = 4;
 	    }
 	});
     }
 
     public static void main(String[] args) {
 	ShowStarter ss = new ShowStarter();
+	ss.args = args;
 	ss.pack();
 	ss.setVisible(true);
+	while (selection == null) {
+	    try {
+		Thread.sleep(200);
+	    } catch (InterruptedException e) {
+	    }
+	}
+	switch (selection) {
+	    case 1:
+		Editor.main(args);
+		break;
+	    case 2:
+		Runtime.main(args);
+		break;
+	    case 3:
+		omega.appl.animator.Editor.main(args);
+		break;
+	    case 4:
+		ShowLicense.main(args);
+		break;
+	}
 	System.exit(0);
     }
 

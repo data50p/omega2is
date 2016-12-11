@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE result >
-
-<result created_date="2012-maj-25_15_46_37" pupil="test" type="create">
-<entries session_length="81265">
-<entry extra="create:build" l_id="s" ord="0" type="select" when="9484" word="moroten"/>
-<entry extra="create:build" l_id="v" ord="1" type="select" when="2969" word="jagar"/>
-</entries>
-</result>

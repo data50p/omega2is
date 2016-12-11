@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!DOCTYPE result >
-
-<result created_date="2013-okt-08_12_36_13" pupil="Guest" type="create">
-<entries session_length="8267789">
-<entry extra="create:build" l_id="s" ord="0" type="select" when="-2963070" word="Dante"/>
-<entry extra="create:build" l_id="v" ord="1" type="select" when="1578" word="jagar"/>
-</entries>
-</result>

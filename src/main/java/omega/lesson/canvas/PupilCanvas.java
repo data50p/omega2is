@@ -2,6 +2,7 @@ package omega.lesson.canvas;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
+import omega.Context;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
@@ -440,12 +441,17 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
 
 	if (greeting_ic == null) {
 	    greeting_ic = omega.swing.ScaledImageIcon.createImageIcon(this,
-		    "media/default/pupil_greeting.png",
+		    Context.omegaAssets("media/default/pupil_greeting.png"),
 		    (int) gX(0.8),
 		    (int) gY(0.1));
 	}
-	if (true || greeting_ic != null)
-	    g2.drawImage(greeting_ic.getImage(), (int) gX(0.05), (int) gY(0.02), null);
+	if (greeting_ic != null) {
+	    try {
+		g2.drawImage(greeting_ic.getImage(), (int) gX(0.05), (int) gY(0.02), null);
+	    } catch (NullPointerException ex) {
+		ex.printStackTrace();
+	    }
+	}
 
 	g.setColor(Color.black);
 	Font fo = g.getFont();
