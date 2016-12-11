@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="B" Tid="o" ord="2" type="passive"/>
+<t-item Lid="C" Tid="av" ord="3" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="octopus" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-en/octopus.wav" text="The octopus" var-1="" var-2="" var-3=""/>
+<item Lid="RedhBoy" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/TheRedheadedBoy.wav" text="The redhaired boy" var-1="" var-2="" var-3=""/>
+<item Lid="BlondGirl" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-en/TheBlondGirl.wav" text="The blonde girl" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/Kick{++1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/kicks.wav" text="kicks" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Head{++1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/heads.wav" text="heads" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="2" type="passive">
+<item Lid="balloons" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/balloons.wav" text="the balloons" var-1="Balloons" var-2="" var-3=""/>
+<item Lid="ball" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/SockerBall.wav" text="the football" var-1="Ball" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="3" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/IntoTheHouse.wav" dummytext="into the house" ord="0" sound="audio/words-en/IntoTheGoal.wav" text="into the goal" var-1="IntoGoal" var-2="" var-3=""/>
+<item Lid="BlondGirl2" action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/TheDarkGirl.wav" dummytext="to the dark girl" ord="1" sound="audio/words-en/ToTheBlondGirl.wav" text="to the blonde girl" var-1="ToPerson" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="audio/words-en/dummy/OverTheGoalAndIntoTheTractor.wav" dummytext="ove the goal and into the tractor" ord="2" sound="audio/words-en/OverTheGoalAndInToTheHelicopter.wav" text="over the goal and into the helicopter" var-1="OverGoalHeli" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="The octopus{s} heads{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="1" text="The redhaired boy{s} kicks{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="2" text="The blonde girl{s} kicks{v} the football{o} into the goal{av}"/>
+<sentence ord="3" text="The blonde girl{s} heads{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="4" text="The blonde girl{s} kicks{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="5" text="The redhaired boy{s} heads{v} the football{o} into the goal{av}"/>
+<sentence ord="6" text="The redhaired boy{s} kicks{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="7" text="The octopus{s} kicks{v} the balloons{o} into the goal{av}"/>
+<sentence ord="8" text="The octopus{s} kicks{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="9" text="The redhaired boy{s} kicks{v} the balloons{o} into the goal{av}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="The blonde girl{s} heads{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="1" text="The blonde girl{s} kicks{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="2" text="The redhaired boy{s} heads{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="3" text="The octopus{s} heads{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="4" text="The redhaired boy{s} heads{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="5" text="The blonde girl{s} heads{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="6" text="The octopus{s} kicks{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="7" text="The octopus{s} heads{v} the balloons{o} into the goal{av}"/>
+<sentence ord="8" text="The redhaired boy{s} kicks{v} the football{o} into the goal{av}"/>
+<sentence ord="9" text="The redhaired boy{s} heads{v} the balloons{o} to the blonde girl{av}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="The blonde girl{s} heads{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="1" text="The octopus{s} kicks{v} the balloons{o} into the goal{av}"/>
+<sentence ord="2" text="The redhaired boy{s} kicks{v} the balloons{o} into the goal{av}"/>
+<sentence ord="3" text="The blonde girl{s} heads{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="4" text="The redhaired boy{s} heads{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="5" text="The octopus{s} kicks{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="6" text="The redhaired boy{s} heads{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="7" text="The octopus{s} heads{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="8" text="The redhaired boy{s} heads{v} the balloons{o} into the goal{av}"/>
+<sentence ord="9" text="The redhaired boy{s} kicks{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="10" text="The blonde girl{s} heads{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="11" text="The octopus{s} kicks{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="12" text="The redhaired boy{s} kicks{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="13" text="The blonde girl{s} heads{v} the balloons{o} into the goal{av}"/>
+<sentence ord="14" text="The redhaired boy{s} heads{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="15" text="The octopus{s} kicks{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="16" text="The blonde girl{s} kicks{v} the balloons{o} into the goal{av}"/>
+<sentence ord="17" text="The octopus{s} heads{v} the football{o} into the goal{av}"/>
+<sentence ord="18" text="The redhaired boy{s} kicks{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="19" text="The blonde girl{s} kicks{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="20" text="The blonde girl{s} heads{v} the football{o} into the goal{av}"/>
+<sentence ord="21" text="The octopus{s} kicks{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="22" text="The redhaired boy{s} kicks{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="23" text="The blonde girl{s} kicks{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="24" text="The redhaired boy{s} heads{v} the football{o} into the goal{av}"/>
+<sentence ord="25" text="The octopus{s} heads{v} the balloons{o} into the goal{av}"/>
+<sentence ord="26" text="The blonde girl{s} kicks{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="27" text="The octopus{s} heads{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="28" text="The octopus{s} heads{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="29" text="The blonde girl{s} kicks{v} the football{o} into the goal{av}"/>
+<sentence ord="30" text="The blonde girl{s} heads{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="31" text="The octopus{s} kicks{v} the football{o} into the goal{av}"/>
+<sentence ord="32" text="The redhaired boy{s} kicks{v} the football{o} into the goal{av}"/>
+<sentence ord="33" text="The blonde girl{s} kicks{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="34" text="The redhaired boy{s} heads{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="35" text="The octopus{s} heads{v} the balloons{o} to the blonde girl{av}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="The redhaired boy{s} kicks{v} the football{o} into the goal{av}"/>
+<sentence ord="1" text="The blonde girl{s} kicks{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="2" text="The octopus{s} heads{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="3" text="The blonde girl{s} heads{v} the football{o} into the goal{av}"/>
+<sentence ord="4" text="The octopus{s} kicks{v} the balloons{o} into the goal{av}"/>
+<sentence ord="5" text="The blonde girl{s} kicks{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="6" text="The octopus{s} kicks{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="7" text="The blonde girl{s} kicks{v} the balloons{o} into the goal{av}"/>
+<sentence ord="8" text="The octopus{s} heads{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="9" text="The redhaired boy{s} heads{v} the football{o} into the goal{av}"/>
+<sentence ord="10" text="The redhaired boy{s} kicks{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="11" text="The blonde girl{s} heads{v} the balloons{o} into the goal{av}"/>
+<sentence ord="12" text="The octopus{s} heads{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="13" text="The blonde girl{s} heads{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="14" text="The octopus{s} kicks{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="15" text="The blonde girl{s} kicks{v} the football{o} into the goal{av}"/>
+<sentence ord="16" text="The octopus{s} kicks{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="17" text="The redhaired boy{s} heads{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="18" text="The octopus{s} heads{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="19" text="The redhaired boy{s} heads{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="20" text="The redhaired boy{s} kicks{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="21" text="The blonde girl{s} heads{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="22" text="The redhaired boy{s} kicks{v} the balloons{o} into the goal{av}"/>
+<sentence ord="23" text="The blonde girl{s} heads{v} the football{o} over the goal and into the helicopter{av}"/>
+<sentence ord="24" text="The octopus{s} kicks{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="25" text="The blonde girl{s} kicks{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="26" text="The octopus{s} heads{v} the balloons{o} into the goal{av}"/>
+<sentence ord="27" text="The redhaired boy{s} heads{v} the football{o} to the blonde girl{av}"/>
+<sentence ord="28" text="The octopus{s} heads{v} the football{o} into the goal{av}"/>
+<sentence ord="30" text="The redhaired boy{s} heads{v} the balloons{o} into the goal{av}"/>
+<sentence ord="31" text="The blonde girl{s} heads{v} the balloons{o} over the goal and into the helicopter{av}"/>
+<sentence ord="32" text="The redhaired boy{s} kicks{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="33" text="The redhaired boy{s} heads{v} the balloons{o} to the blonde girl{av}"/>
+<sentence ord="34" text="The octopus{s} kicks{v} the football{o} into the goal{av}"/>
+<sentence ord="35" text="The blonde girl{s} kicks{v} the balloons{o} to the blonde girl{av}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

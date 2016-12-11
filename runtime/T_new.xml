@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_112" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>Norsk-bokmål</string>
+   <string>Norsk-bokmål</string>
+  </void>
+  <void method="put">
+   <string>Sign Word Movie Scale</string>
+   <string>Sign Word Movie Scale</string>
+  </void>
+  <void method="put">
+   <string>Show Sign after each word</string>
+   <string>Show Sign after each word</string>
+  </void>
+  <void method="put">
+   <string>Sign Word Transparence</string>
+   <string>Sign Word Transparence</string>
+  </void>
+  <void method="put">
+   <string>Norsk-bm-Bergen</string>
+   <string>Norsk-bm-Bergen</string>
+  </void>
+  <void method="put">
+   <string>Sound after each word</string>
+   <string>Sound after each word</string>
+  </void>
+  <void method="put">
+   <string>Lesson Lang</string>
+   <string>Lesson Lang</string>
+  </void>
+  <void method="put">
+   <string>Sign Sentence Movie Scale</string>
+   <string>Sign Sentence Movie Scale</string>
+  </void>
+  <void method="put">
+   <string>Sign Sentence Transparence</string>
+   <string>Sign Sentence Transparence</string>
+  </void>
+  <void method="put">
+   <string>Item: Sign Movies, positive </string>
+   <string>Item: Sign Movies, positive </string>
+  </void>
+  <void method="put">
+   <string>Croatian</string>
+   <string>Croatian</string>
+  </void>
+  <void method="put">
+   <string>Sign Sentence Background</string>
+   <string>Sign Sentence Background</string>
+  </void>
+  <void method="put">
+   <string>Tomas</string>
+   <string>Tomas</string>
+  </void>
+  <void method="put">
+   <string>Svenska</string>
+   <string>Svenska</string>
+  </void>
+  <void method="put">
+   <string>LessonsInEnglish</string>
+   <string>LessonsInEnglish</string>
+  </void>
+  <void method="put">
+   <string>Error while loading lesson: &quot;</string>
+   <string>Error while loading lesson: &quot;</string>
+  </void>
+  <void method="put">
+   <string>Select Directory</string>
+   <string>Select Directory</string>
+  </void>
+  <void method="put">
+   <string>Show Sign after sentence</string>
+   <string>Show Sign after sentence</string>
+  </void>
+  <void method="put">
+   <string>Can&apos;t find test test </string>
+   <string>Can&apos;t find test test </string>
+  </void>
+  <void method="put">
+   <string>&lt;Ny Elev&gt;</string>
+   <string>&lt;Ny Elev&gt;</string>
+  </void>
+  <void method="put">
+   <string>Nynorsk</string>
+   <string>Nynorsk</string>
+  </void>
+  <void method="put">
+   <string>Sign Word Background</string>
+   <string>Sign Word Background</string>
+  </void>
+  <void method="put">
+   <string>Tomas Croatia</string>
+   <string>Tomas Croatia</string>
+  </void>
+  <void method="put">
+   <string>Play Sign Moview</string>
+   <string>Play Sign Moview</string>
+  </void>
+ </object>
+</java>

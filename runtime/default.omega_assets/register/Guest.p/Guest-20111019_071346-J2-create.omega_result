@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2011-okt-19_07_13_46" pupil="Guest" type="create">
+<entries session_length="120281">
+<entry extra="create:build" l_id="a" ord="0" type="select" when="5110" word="Den snabba"/>
+<entry extra="create:build" l_id="s" ord="1" type="select" when="2828" word="leoparden"/>
+<entry extra="create:build" l_id="v" ord="2" type="select" when="1687" word="bär"/>
+<entry extra="create:build" l_id="a1" ord="3" type="select" when="3031" word="den rädda"/>
+<entry extra="create:build" l_id="o" ord="4" type="select" when="2610" word="kaninen"/>
+<entry extra="create:build" l_id="av" ord="5" type="select" when="1359" word="i skogen"/>
+<entry duration="16625" l_id_list="a;s;v;a1;o;av" ord="6" sentence="Den snabba leoparden bär den rädda kaninen i skogen" type="create"/>
+</entries>
+</result>

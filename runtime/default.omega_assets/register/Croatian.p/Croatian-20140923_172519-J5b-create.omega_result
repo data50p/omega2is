@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2014-sep-23_17_25_19" pupil="Croatian" type="create">
+<entries session_length="407556">
+<entry extra="create:build" l_id="a" ord="0" type="select" when="4175" word="Uplakani"/>
+<entry extra="create:build" l_id="s" ord="1" type="select" when="984" word="zmaj"/>
+<entry extra="create:build" l_id="v" ord="2" type="select" when="2547" word="trči preko mosta"/>
+<entry extra="create:build" l_id="v2" ord="3" type="select" when="1391" word="i pomaže"/>
+<entry extra="create:build" l_id="o" ord="4" type="select" when="969" word="mački"/>
+<entry duration="10066" l_id_list="a;s;v;v2;o" ord="5" sentence="Uplakani zmaj trči preko mosta i pomaže mački" type="create"/>
+</entries>
+</result>

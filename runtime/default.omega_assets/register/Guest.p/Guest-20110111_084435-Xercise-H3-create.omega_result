@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2011-jan-11_08_44_35" pupil="Guest" type="create">
+<entries session_length="1088047">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="9999" word="Dinosaurien"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="2078" word="tittar in genom"/>
+<entry extra="create:build" l_id="av" ord="2" type="select" when="1532" word="fönstret"/>
+<entry duration="13609" l_id_list="s;v;av" ord="3" sentence="Dinosaurien tittar in genom fönstret" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="2125" word="Dinosaurien"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="1375" word="tittar ut från"/>
+<entry extra="create:build" l_id="av" ord="6" type="select" when="1671" word="grottan"/>
+<entry duration="5171" l_id_list="s;v;av" ord="7" sentence="Dinosaurien tittar ut från grottan" type="create"/>
+<entry extra="create:build" l_id="s" ord="8" type="select" when="2733" word="Dinosaurien"/>
+<entry extra="create:build" l_id="v" ord="9" type="select" when="1500" word="tittar ut från"/>
+<entry extra="create:build" l_id="av" ord="10" type="select" when="1422" word="fönstret"/>
+<entry duration="5655" l_id_list="s;v;av" ord="11" sentence="Dinosaurien tittar ut från fönstret" type="create"/>
+</entries>
+</result>

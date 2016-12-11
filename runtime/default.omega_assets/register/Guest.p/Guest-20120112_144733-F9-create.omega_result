@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-jan-12_14_47_33" pupil="Guest" type="create">
+<entries session_length="211219">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="2500" word="astronauten"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="4593" word="matar"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="1516" word="astronauten"/>
+<entry duration="8609" l_id_list="s;v;o" ord="3" sentence="Astronauten matar astronauten" type="create"/>
+</entries>
+</result>

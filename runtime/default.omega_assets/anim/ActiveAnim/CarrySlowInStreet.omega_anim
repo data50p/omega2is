@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega >
+
+<omega class="Animation" version="0.0">
+<AnimCanvas>
+<Canvas>
+<background height="600" name="background/CityDay2.jpg" width="800"/>
+</Canvas>
+<AllPath>
+<TPath nid="0">
+<q ord="0" p1="-155.75453186035156,522.4345703125" p2="1084.5,525.5" pc="438.5,511.5"/>
+</TPath>
+<TPath nid="1">
+<q ord="0" p1="-159.82046508789062,476.56097412109375" p2="-46.26499938964844,469.9049987792969" pc="-82.92500305175781,464.2650146484375"/>
+<q ord="1" p1="-46.26499938964844,469.9049987792969" p2="69.3550033569336,469.9049987792969" pc="25.645000457763672,454.3949890136719"/>
+<q ord="2" p1="69.3550033569336,469.9049987792969" p2="203.30499267578125,468.4949951171875" pc="162.4149932861328,450.1650085449219"/>
+<q ord="3" p1="203.30499267578125,468.4949951171875" p2="376.5,468.5" pc="340.07501220703125,447.3450012207031"/>
+<q ord="4" p1="376.5,468.5" p2="537.5,468.5" pc="495.1750183105469,457.91998291015625"/>
+<q ord="5" p1="537.5,468.5" p2="692.5,474.5" pc="644.635009765625,457.2149963378906"/>
+<q ord="6" p1="692.5,474.5" p2="840.625,474.135009765625" pc="798.3250122070312,454.3949890136719"/>
+<q ord="7" p1="840.625,474.135009765625" p2="946.375,472.7250061035156" pc="884.3350219726562,461.44500732421875"/>
+<q ord="8" p1="946.375,472.7250061035156" p2="1081.7349853515625,476.9549865722656" pc="994.1747436523438,460.1573791503906"/>
+</TPath>
+</AllPath>
+<lesson verb="jagar"/>
+<AllActors>
+<Actor hotspot_begin="0.5853456221198157 0.65" hotspot_end="0.5773271889400922 0.65" hotspot_rotate="0.5 0.5" lesson_id="lemur" name="actor/ChaseRun/lemur.png" nid="0" prim_mirror="0" prim_scale="0.6" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.38873239436619716 0.6" hotspot_end="0.38873239436619716 0.61" hotspot_rotate="0.5 0.5" lesson_id="leopard" name="actor/ChaseRun/leopard.png" nid="1" prim_mirror="0" prim_scale="0.6" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.6521739130434784 0.58" hotspot_end="0.6521739130434784 0.58" hotspot_rotate="0.5 0.5" lesson_id="tiger" name="actor/Feelings/Tiger.png" nid="2" prim_mirror="0" prim_scale="0.6" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.027241379310344826 0.8" hotspot_end="0.027241379310344826 0.94" hotspot_rotate="0.5 0.5" lesson_id="cat:glad" name="actor/Feelings/tommy_cat_glad.png" nid="3" prim_mirror="0" prim_scale="0.4" var1="Happy" var2="" var3=""/>
+<Actor hotspot_begin="0.0136 0.79" hotspot_end="0.0136 0.95" hotspot_rotate="0.5 0.5" lesson_id="cat:scared" name="actor/Feelings/tommy_cat_scared.png" nid="4" prim_mirror="0" prim_scale="0.4" var1="Scared" var2="" var3=""/>
+<Actor hotspot_begin="0.015238095238095238 0.82" hotspot_end="0.015238095238095238 0.96" hotspot_rotate="0.5 0.5" lesson_id="rabbit:scared" name="actor/Feelings/tommy_rabbit_scared.png" nid="5" prim_mirror="0" prim_scale="0.4" var1="Scared" var2="" var3=""/>
+<Actor hotspot_begin="0.013666666666666667 0.81" hotspot_end="0.027333333333333334 0.96" hotspot_rotate="0.5 0.5" lesson_id="rabbit:glad" name="actor/Feelings/tommy_rabbit_glad.png" nid="6" prim_mirror="0" prim_scale="0.4" var1="Happy" var2="" var3=""/>
+<Actor hotspot_begin="0.012666666666666666 0.78" hotspot_end="0.025333333333333333 0.94" hotspot_rotate="0.5 0.5" lesson_id="mouse:glad" name="actor/Feelings/tommy_mouse_glad.png" nid="7" prim_mirror="0" prim_scale="0.4" var1="Happy" var2="" var3=""/>
+<Actor hotspot_begin="0.0 0.78" hotspot_end="0.0 0.93" hotspot_rotate="0.5 0.5" lesson_id="mouse:scared" name="actor/Feelings/tommy_mouse_scared.png" nid="8" prim_mirror="0" prim_scale="0.4" var1="Scared" var2="" var3=""/>
+<Actor hotspot_begin="0.2017241379310345 0.6300000000000001" hotspot_end="0.2017241379310345 0.8200000000000001" hotspot_rotate="0.5 0.5" lesson_id="lion:glad" name="actor/Feelings/tommy_lion_glad.png" nid="9" prim_mirror="0" prim_scale="0.4" var1="Happy" var2="" var3=""/>
+<Actor hotspot_begin="0.22666666666666666 0.66" hotspot_end="0.24083333333333332 0.81" hotspot_rotate="0.5 0.5" lesson_id="lion:scared" name="actor/Feelings/tommy_lion_scared.png" nid="10" prim_mirror="0" prim_scale="0.4" var1="Scared" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_11.gif" nid="11" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+</AllActors>
+<AllWings/>
+</AnimCanvas>
+<MTL>
+<TimeLine duration="11930" lesson_id="A" nid="0" offset="61">
+<TimeMarker duration="0" type="{" when="-60">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="[" when="0">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.2 1.5" cmd="Scale" isOn="true"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="true"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="]" when="11930">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="}" when="11999">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+</TimeLine>
+<TimeLine duration="11950" lesson_id="B" nid="1" offset="41">
+<TimeMarker duration="0" type="{" when="-40">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="[" when="0">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.2 1.5" cmd="Scale" isOn="true"/>
+<TriggerEvent arg="sitting" cmd="ImageAttrib" isOn="true"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.3" cmd="SetAnimSpeed" isOn="true"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="1399">
+<T_Event>
+<TriggerEvent arg="audio/${B:1}Slow.wav" cmd="PlaySound" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="]" when="11950">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="}" when="12019">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+</TimeLine>
+</MTL>
+</omega>

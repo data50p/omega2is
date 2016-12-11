@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2011-jan-11_08_28_43" pupil="Guest" type="create">
+<entries session_length="182656">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="7125" word="koppen"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="2625" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="1969" word="handen"/>
+<entry duration="11719" l_id_list="s;v;o" ord="3" sentence="Koppen hoppar över handen" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="9312" word="handen"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="1516" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="6" type="select" when="4828" word="handen"/>
+<entry duration="15656" l_id_list="s;v;o" ord="7" sentence="Handen hoppar över handen" type="create"/>
+<entry extra="create:build" l_id="s" ord="8" type="select" when="10813" word="koppen"/>
+<entry extra="create:build" l_id="v" ord="9" type="select" when="1515" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="10" type="select" when="2297" word="koppen"/>
+<entry duration="14625" l_id_list="s;v;o" ord="11" sentence="Koppen hoppar över koppen" type="create"/>
+<entry extra="create:build" l_id="s" ord="12" type="select" when="1687" word="handen"/>
+<entry extra="create:build" l_id="v" ord="13" type="select" when="8266" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="14" type="select" when="2797" word="handen"/>
+<entry duration="12750" l_id_list="s;v;o" ord="15" sentence="Handen hoppar över handen" type="create"/>
+<entry extra="create:build" l_id="s" ord="16" type="select" when="1734" word="koppen"/>
+<entry extra="create:build" l_id="v" ord="17" type="select" when="1438" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="18" type="select" when="1906" word="handen"/>
+<entry duration="5078" l_id_list="s;v;o" ord="19" sentence="Koppen hoppar över handen" type="create"/>
+</entries>
+</result>

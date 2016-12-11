@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-mar-16_12_13_17" pupil="test" type="create">
+<entries session_length="2336515">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="1859" word="fågeln"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="9750" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="6469" word="fågeln"/>
+<entry duration="18078" l_id_list="s;v;o" ord="3" sentence="Fågeln jagar fågeln" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="67750" word="svanen"/>
+<entry extra="create:build" l_id="o" ord="5" type="select" when="9500" word="lejonet"/>
+<entry extra="create:build" l_id="v" ord="6" type="select" when="7265" word="jagar"/>
+<entry duration="84515" l_id_list="s;v;o" ord="7" sentence="Svanen jagar lejonet" type="create"/>
+<entry extra="create:build" l_id="s" ord="8" type="select" when="18000" word="svanen"/>
+<entry extra="create:build" l_id="v" ord="9" type="select" when="9797" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="10" type="select" when="13469" word="moroten"/>
+<entry duration="41266" l_id_list="s;v;o" ord="11" sentence="Svanen jagar moroten" type="create"/>
+<entry extra="create:build" l_id="s" ord="12" type="select" when="2063" word="moroten"/>
+<entry extra="create:build" l_id="v" ord="13" type="select" when="6828" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="14" type="select" when="5391" word="moroten"/>
+<entry duration="14282" l_id_list="s;v;o" ord="15" sentence="Moroten jagar moroten" type="create"/>
+</entries>
+</result>

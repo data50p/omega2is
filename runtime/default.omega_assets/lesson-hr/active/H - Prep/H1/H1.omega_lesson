@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="passive"/>
+<t-item Lid="B" Tid="o" ord="2" type="passive"/>
+<t-item Lid="" Tid="p" ord="3" type="action"/>
+<t-item Lid="C" Tid="av" ord="4" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="dog" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/dog.wav" text="Pas" var-1="" var-2="" var-3=""/>
+<item Lid="mouse" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/mouse.wav" text="Mi{353}" var-1="" var-2="" var-3=""/>
+<item Lid="gorilla" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/gorilla2.wav" text="Gorila" var-1="" var-2="" var-3=""/>
+<item Lid="panda" action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/Words-hr/panda2.wav" text="Panda" var-1="" var-2="" var-3=""/>
+<item Lid="whale" action-fname="" action-type="null" dummysound="" dummytext="" ord="4" sound="audio/Words-hr/whale2.wav" text="Kit" var-1="" var-2="" var-3=""/>
+<item Lid="cat" action-fname="" action-type="null" dummysound="" dummytext="" ord="5" sound="audio/Words-hr/cat3.wav" text="Ma{269}ka" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/puts2.wav" text="stavlja" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="1" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="2" type="actor">
+<item Lid="pizza" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/pizzu.wav" text="pizzu" var-1="" var-2="" var-3=""/>
+<item Lid="banana" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/bananu.wav" text="bananu" var-1="" var-2="" var-3=""/>
+<item Lid="hat" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/hat2.wav" text="{353}e{353}ir" var-1="" var-2="" var-3=""/>
+<item Lid="carrot" action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/Words-hr/Objects/H1/carrotob.wav" text="mrkvu" var-1="" var-2="" var-3=""/>
+<item Lid="butterfly" action-fname="" action-type="null" dummysound="" dummytext="" ord="4" sound="audio/Words-hr/Objects/H1/butterflyob.wav" text="leptira" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="p" ord="3" type="action">
+<item action-fname="anim/ActiveAnim/PutOnTableRoomCW" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/H1/in2.wav" dummytext="u" ord="0" sound="audio/Words-hr/on2.wav" text="na" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="4" type="actor">
+<item Lid="panda" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/pandin stol.WAV" text="pandin stol" var-1="" var-2="" var-3=""/>
+<item Lid="gorilla" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/gorilin stol.WAV" text="gorilin stol" var-1="" var-2="" var-3=""/>
+<item Lid="whale" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/kitovstol.WAV" text="kitov stol" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Pas{s} stavlja{v} pizzu{o} na{p} pandin stol{av}"/>
+<sentence ord="1" text="Pas{s} stavlja{v} šešir{o} na{p} gorilin stol{av}"/>
+<sentence ord="2" text="Miš{s} stavlja{v} pizzu{o} na{p} pandin stol{av}"/>
+<sentence ord="3" text="Miš{s} stavlja{v} mrkvu{o} na{p} pandin stol{av}"/>
+<sentence ord="4" text="Gorila{s} stavlja{v} pizzu{o} na{p} pandin stol{av}"/>
+<sentence ord="5" text="Gorila{s} stavlja{v} bananu{o} na{p} gorilin stol{av}"/>
+<sentence ord="6" text="Panda{s} stavlja{v} bananu{o} na{p} gorilin stol{av}"/>
+<sentence ord="7" text="Kit{s} stavlja{v} pizzu{o} na{p} kitov stol{av}"/>
+<sentence ord="8" text="Panda{s} stavlja{v} leptira{o} na{p} gorilin stol{av}"/>
+<sentence ord="9" text="Kit{s} stavlja{v} šešir{o} na{p} gorilin stol{av}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Kit{s} stavlja{v} leptira{o} na{p} gorilin stol{av}"/>
+<sentence ord="1" text="Panda{s} stavlja{v} leptira{o} na{p} gorilin stol{av}"/>
+<sentence ord="2" text="Kit{s} stavlja{v} bananu{o} na{p} kitov stol{av}"/>
+<sentence ord="3" text="Panda{s} stavlja{v} šešir{o} na{p} pandin stol{av}"/>
+<sentence ord="4" text="Gorila{s} stavlja{v} leptira{o} na{p} pandin stol{av}"/>
+<sentence ord="5" text="Miš{s} stavlja{v} leptira{o} na{p} gorilin stol{av}"/>
+<sentence ord="6" text="Gorila{s} stavlja{v} bananu{o} na{p} pandin stol{av}"/>
+<sentence ord="7" text="Pas{s} stavlja{v} leptira{o} na{p} kitov stol{av}"/>
+<sentence ord="8" text="Miš{s} stavlja{v} pizzu{o} na{p} gorilin stol{av}"/>
+<sentence ord="9" text="Pas{s} stavlja{v} bananu{o} na{p} pandin stol{av}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Pas{s} stavlja{v} pizzu{o} na{p} pandin stol{av}"/>
+<sentence ord="1" text="Pas{s} stavlja{v} pizzu{o} na{p} kitov stol{av}"/>
+<sentence ord="2" text="Miš{s} stavlja{v} pizzu{o} na{p} kitov stol{av}"/>
+<sentence ord="3" text="Miš{s} stavlja{v} šešir{o} na{p} gorilin stol{av}"/>
+<sentence ord="4" text="Gorila{s} stavlja{v} pizzu{o} na{p} gorilin stol{av}"/>
+<sentence ord="5" text="Gorila{s} stavlja{v} šešir{o} na{p} pandin stol{av}"/>
+<sentence ord="6" text="Panda{s} stavlja{v} pizzu{o} na{p} pandin stol{av}"/>
+<sentence ord="7" text="Panda{s} stavlja{v} bananu{o} na{p} kitov stol{av}"/>
+<sentence ord="8" text="Kit{s} stavlja{v} pizzu{o} na{p} pandin stol{av}"/>
+<sentence ord="9" text="Kit{s} stavlja{v} šešir{o} na{p} pandin stol{av}"/>
+<sentence ord="10" text="Mačka{s} stavlja{v} pizzu{o} na{p} pandin stol{av}"/>
+<sentence ord="11" text="Mačka{s} stavlja{v} bananu{o} na{p} gorilin stol{av}"/>
+<sentence ord="12" text="Kit{s} stavlja{v} leptira{o} na{p} kitov stol{av}"/>
+<sentence ord="13" text="Panda{s} stavlja{v} šešir{o} na{p} gorilin stol{av}"/>
+<sentence ord="14" text="Mačka{s} stavlja{v} mrkvu{o} na{p} gorilin stol{av}"/>
+<sentence ord="15" text="Panda{s} stavlja{v} pizzu{o} na{p} kitov stol{av}"/>
+<sentence ord="16" text="Miš{s} stavlja{v} bananu{o} na{p} pandin stol{av}"/>
+<sentence ord="17" text="Pas{s} stavlja{v} mrkvu{o} na{p} pandin stol{av}"/>
+<sentence ord="18" text="Pas{s} stavlja{v} pizzu{o} na{p} gorilin stol{av}"/>
+<sentence ord="19" text="Pas{s} stavlja{v} šešir{o} na{p} pandin stol{av}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Pas{s} stavlja{v} bananu{o} na{p} gorilin stol{av}"/>
+<sentence ord="1" text="Pas{s} stavlja{v} bananu{o} na{p} kitov stol{av}"/>
+<sentence ord="2" text="Miš{s} stavlja{v} bananu{o} na{p} gorilin stol{av}"/>
+<sentence ord="3" text="Miš{s} stavlja{v} šešir{o} na{p} pandin stol{av}"/>
+<sentence ord="4" text="Gorila{s} stavlja{v} pizzu{o} na{p} kitov stol{av}"/>
+<sentence ord="5" text="Gorila{s} stavlja{v} bananu{o} na{p} kitov stol{av}"/>
+<sentence ord="6" text="Panda{s} stavlja{v} pizzu{o} na{p} gorilin stol{av}"/>
+<sentence ord="7" text="Panda{s} stavlja{v} bananu{o} na{p} pandin stol{av}"/>
+<sentence ord="8" text="Kit{s} stavlja{v} bananu{o} na{p} pandin stol{av}"/>
+<sentence ord="9" text="Kit{s} stavlja{v} bananu{o} na{p} gorilin stol{av}"/>
+<sentence ord="10" text="Mačka{s} stavlja{v} pizzu{o} na{p} gorilin stol{av}"/>
+<sentence ord="11" text="Mačka{s} stavlja{v} šešir{o} na{p} pandin stol{av}"/>
+<sentence ord="12" text="Kit{s} stavlja{v} šešir{o} na{p} kitov stol{av}"/>
+<sentence ord="13" text="Kit{s} stavlja{v} mrkvu{o} na{p} kitov stol{av}"/>
+<sentence ord="14" text="Gorila{s} stavlja{v} leptira{o} na{p} gorilin stol{av}"/>
+<sentence ord="15" text="Miš{s} stavlja{v} leptira{o} na{p} kitov stol{av}"/>
+<sentence ord="16" text="Gorila{s} stavlja{v} šešir{o} na{p} kitov stol{av}"/>
+<sentence ord="17" text="Pas{s} stavlja{v} šešir{o} na{p} kitov stol{av}"/>
+<sentence ord="18" text="Miš{s} stavlja{v} bananu{o} na{p} kitov stol{av}"/>
+<sentence ord="19" text="Panda{s} stavlja{v} leptira{o} na{p} gorilin stol{av}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

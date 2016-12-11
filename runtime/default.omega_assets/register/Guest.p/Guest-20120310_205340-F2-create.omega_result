@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-mar-10_20_53_40" pupil="Guest" type="create">
+<entries session_length="204640">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="3422" word="lejonet"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="6437" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="6500" word="svanen"/>
+<entry duration="16359" l_id_list="s;v;o" ord="3" sentence="Lejonet jagar svanen" type="create"/>
+</entries>
+</result>

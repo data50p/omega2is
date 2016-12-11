@@ -1,0 +1,39 @@
+//AD  <- Needed to identify//
+//--automatically built--
+//--Project: C:\Program\Omega-IS\media\sign\jagar
+
+var app = new Avidemux();
+
+//** Video **
+// 01 videos source 
+app.load("C:/Program/Omega-IS/media/sign/lejonet jagar svanen.mpg");
+//03 segments
+app.clearSegments();
+app.addSegment(0,0,8);
+app.addSegment(0,43,26);
+app.addSegment(0,158,9);
+app.markerA=0;
+app.markerB=42;
+
+//** Postproc **
+app.video.setPostProc(3,3,0);
+
+app.video.fps1000 = 25000;
+
+//** Filters **
+
+//** Video Codec conf **
+app.video.codec("Copy", "CQ=0", "0 ");
+
+//** Audio **
+app.audio.reset();
+app.audio.codec("copy",2277824,0,"");
+app.audio.normalizeMode=0;
+app.audio.normalizeValue=0;
+app.audio.delay=0;
+app.audio.mixer="NONE";
+app.setContainer("AVI");
+setSuccess(1);
+//app.Exit();
+
+//End of script

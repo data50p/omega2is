@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#0" color_bt_hi="#fce27a" color_bt_hs="#fff0b4" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#f0dc8c" color_sn_fr="#0" color_sn_hi="#fce27a" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="actor"/>
+<t-item Lid="" Tid="v" ord="1" type="passive"/>
+<t-item Lid="B" Tid="o" ord="2" type="actor"/>
+<t-item Lid="" Tid="p" ord="3" type="action"/>
+<t-item Lid="C" Tid="av" ord="4" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="dog" ord="0" sound="audio/words1/dog.wav" text="The dog" var-1="n" var-2="" var-3=""/>
+<item Lid="mouse" ord="1" sound="audio/words1/mouse.wav" text="The mouse" var-1="n" var-2="" var-3="null"/>
+<item Lid="gorilla" ord="2" sound="audio/words1/gorilla.wav" text="The gorilla" var-1="n" var-2="" var-3="null"/>
+<item Lid="panda" ord="3" sound="audio/words1/panda.wav" text="The panda" var-1="n" var-2="" var-3="null"/>
+<item Lid="whale" ord="4" sound="audio/words1/whale.wav" text="The whale" var-1="n" var-2="" var-3="null"/>
+<item Lid="cat" ord="5" sound="audio/words1/cat.wav" text="The cat" var-1="n" var-2="" var-3="null"/>
+<item ord="6" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="7" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="passive">
+<item ord="0" sound="audio/words1/puts.wav" text="puts" var-1="null" var-2="null" var-3="null"/>
+<item ord="1" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="2" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="3" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="4" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="5" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="6" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="7" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+</item-entry>
+<item-entry Tid="o" ord="2" type="actor">
+<item Lid="pizza" ord="0" sound="audio/words1/pizza.wav" text="the pizza" var-1="null" var-2="" var-3="null"/>
+<item Lid="banana" ord="1" sound="audio/words1/banana.wav" text="the banana" var-1="null" var-2="" var-3="null"/>
+<item Lid="hat" ord="2" sound="audio/words1/hat.wav" text="the hat" var-1="null" var-2="" var-3="null"/>
+<item Lid="carrot" ord="3" sound="audio/words1/carrot.wav" text="the carrot" var-1="null" var-2="" var-3="null"/>
+<item Lid="butterfly" ord="4" sound="audio/words1/butterfly.wav" text="the butterfly" var-1="null" var-2="" var-3="null"/>
+<item ord="5" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="6" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="7" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+</item-entry>
+<item-entry Tid="p" ord="3" type="action">
+<item action-fname="anim/ActiveAnim/PutOnTableRoomCW" action-type="omega_anim" ord="0" sound="audio/words1/on.wav" text="on" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/ActiveAnim/PutUnderTableRoomCW" action-type="omega_anim" ord="1" sound="audio/words1/under.wav" text="under" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/ActiveAnim/PutBesideTableRoomCW" action-type="omega_anim" ord="2" sound="audio/words1/beside.wav" text="beside" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" ord="3" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" ord="4" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" ord="5" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" ord="6" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" ord="7" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+</item-entry>
+<item-entry Tid="av" ord="4" type="actor">
+<item Lid="panda" ord="0" sound="audio/words1/pandatable.wav" text="the panda's table" var-1="null" var-2="" var-3="null"/>
+<item Lid="gorilla" ord="1" sound="audio/words1/gorillatable.wav" text="the gorilla's table " var-1="null" var-2="" var-3="null"/>
+<item Lid="whale" ord="2" sound="audio/words1/whalestable.wav" text="the whale's table" var-1="null" var-2="null" var-3="null"/>
+<item ord="3" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="4" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="5" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="6" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+<item ord="7" sound="" text="" var-1="null" var-2="null" var-3="null"/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries/>
+</omega_lesson>

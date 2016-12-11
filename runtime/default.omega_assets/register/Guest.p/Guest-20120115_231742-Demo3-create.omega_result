@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-jan-15_23_17_42" pupil="Guest" type="create">
+<entries session_length="266078">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="1704" word="koppen"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="1375" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="2546" word="handen"/>
+<entry duration="5625" l_id_list="s;v;o" ord="3" sentence="Koppen hoppar över handen" type="create"/>
+</entries>
+</result>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2014-okt-24_12_32_46" pupil="Croatian" type="test">
+<entries session_length="103811">
+<entry extra="test:build:OK" l_id="v" ord="0" type="select" when="1828" word="pas"/>
+<entry answer="Pas" cnt_correct_words="s 1;w +1 -0" duration="1828" extra="" l_id_list="v" ord="1" sentence="Pas" type="test"/>
+<entry extra="test:build:wrong" l_id="v" ord="2" type="select" when="2850" word="pčela"/>
+<entry answer="Pčela" cnt_correct_words="s 0;w +0 -1" duration="2850" extra="" l_id_list="v" ord="3" sentence="Djevojčica" type="test"/>
+<entry extra="test:build:OK" l_id="v" ord="4" type="select" when="3947" word="pčela"/>
+<entry answer="Pčela" cnt_correct_words="s 1;w +1 -0" duration="3947" extra="" l_id_list="v" ord="5" sentence="Pčela" type="test"/>
+<entry extra="test:build:OK" l_id="v" ord="6" type="select" when="2672" word="dječak"/>
+<entry answer="Dječak" cnt_correct_words="s 1;w +1 -0" duration="2672" extra="" l_id_list="v" ord="7" sentence="Dječak" type="test"/>
+</entries>
+</result>

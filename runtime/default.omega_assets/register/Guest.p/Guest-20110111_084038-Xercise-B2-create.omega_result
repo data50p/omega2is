@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2011-jan-11_08_40_38" pupil="Guest" type="create">
+<entries session_length="835641">
+<entry extra="create:build" l_id="v" ord="0" type="select" when="3765" word="Pojken"/>
+<entry duration="3765" l_id_list="v" ord="1" sentence="Pojken" type="create"/>
+<entry extra="create:build" l_id="v" ord="2" type="select" when="1078" word="Påsen"/>
+<entry duration="1078" l_id_list="v" ord="3" sentence="Påsen" type="create"/>
+<entry extra="create:build" l_id="v" ord="4" type="select" when="1062" word="Potatisen"/>
+<entry duration="1062" l_id_list="v" ord="5" sentence="Potatisen" type="create"/>
+<entry extra="create:build" l_id="v" ord="6" type="select" when="12562" word="Fisken"/>
+<entry duration="12562" l_id_list="v" ord="7" sentence="Fisken" type="create"/>
+<entry extra="create:build" l_id="v" ord="8" type="select" when="1390" word="Hunden"/>
+<entry duration="1390" l_id_list="v" ord="9" sentence="Hunden" type="create"/>
+<entry extra="create:build" l_id="v" ord="10" type="select" when="6046" word="Hunden"/>
+<entry duration="6046" l_id_list="v" ord="11" sentence="Hunden" type="create"/>
+</entries>
+</result>

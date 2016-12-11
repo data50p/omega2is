@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-mar-16_14_05_47" pupil="test" type="create">
+<entries session_length="243578">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="2297" word="lejonet"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="7484" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="6766" word="svanen"/>
+<entry duration="16547" l_id_list="s;v;o" ord="3" sentence="Lejonet jagar svanen" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="1828" word="svanen"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="8016" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="6" type="select" when="8797" word="fågeln"/>
+<entry duration="18641" l_id_list="s;v;o" ord="7" sentence="Svanen jagar fågeln" type="create"/>
+</entries>
+</result>

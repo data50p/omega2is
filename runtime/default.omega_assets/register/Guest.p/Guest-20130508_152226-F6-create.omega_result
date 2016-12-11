@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-maj-08_15_22_26" pupil="Guest" type="create">
+<entries session_length="185157">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="51047" word="biet"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="25594" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="6093" word="fågeln"/>
+<entry duration="82734" l_id_list="s;v;o" ord="3" sentence="Biet jagar fågeln" type="create"/>
+</entries>
+</result>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#0" color_bt_hi="#fce27a" color_bt_hs="#fff0b4" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#f0dc8c" color_sn_fr="#0" color_sn_hi="#fce27a" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="v" ord="0" type="action"/>
+</target>
+<items>
+<item-entry Tid="v" ord="0" type="action">
+<item Lid="girl" action-fname="anim/ActiveAnim/B1Girl" action-type="omega_anim" ord="0" sound="audio/words1/girl.wav" text="Djevoj{269}ica" var-1="" var-2="" var-3=""/>
+<item Lid="boy" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" ord="1" sound="audio/words1/boy.wav" text="Dje{269}ak" var-1="" var-2="" var-3=""/>
+<item Lid="dog" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" ord="2" sound="audio/words1/dog.wav" text="Pas" var-1="" var-2="" var-3=""/>
+<item Lid="bee" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" ord="3" sound="audio/words1/bee.wav" text="P{269}ela" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Flicka"/>
+<sentence ord="1" text="Pojke"/>
+<sentence ord="2" text="Hund"/>
+<sentence ord="3" text="Bi"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="1" text="Hund"/>
+<sentence ord="2" text="Pojke"/>
+<sentence ord="3" text="Flicka"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

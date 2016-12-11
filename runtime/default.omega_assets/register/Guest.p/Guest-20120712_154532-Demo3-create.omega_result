@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-jul-12_15_45_32" pupil="Guest" type="create">
+<entries session_length="779703">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="5250" word="koppen"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="2140" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="1204" word="handen"/>
+<entry duration="8594" l_id_list="s;v;o" ord="3" sentence="Koppen hoppar över handen" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="11000" word="handen"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="1937" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="6" type="select" when="1125" word="koppen"/>
+<entry duration="14062" l_id_list="s;v;o" ord="7" sentence="Handen hoppar över koppen" type="create"/>
+<entry extra="create:build" l_id="s" ord="8" type="select" when="38766" word="koppen"/>
+<entry extra="create:build" l_id="v" ord="9" type="select" when="1906" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="10" type="select" when="1672" word="koppen"/>
+<entry duration="42344" l_id_list="s;v;o" ord="11" sentence="Koppen hoppar över koppen" type="create"/>
+</entries>
+</result>

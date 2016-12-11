@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="B" Tid="o" ord="2" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s,o" ord="0" type="actor">
+<item Lid="astronaut" action-fname="" action-type="omega_anim" dummysound="audio/words-sv/dummy/astronomer.wav" dummytext="astronomen" ord="0" sound="audio/words-sv/astronaut.wav" text="astronauten" var-1="" var-2="" var-3=""/>
+<item Lid="buzzard" action-fname="" action-type="null" dummysound="audio/words-sv/dummy/flie.wav" dummytext="flugan" ord="1" sound="audio/words-sv/bird.wav" text="fågeln" var-1="" var-2="" var-3=""/>
+<item Lid="penguin" action-fname="" action-type="null" dummysound="audio/words-sv/dummy/porcupine.wav" dummytext="piggsvinet" ord="2" sound="audio/words-sv/penguin.wav" text="pingvinen" var-1="" var-2="" var-3=""/>
+<item Lid="swan" action-fname="" action-type="omega_anim" dummysound="audio/words-sv/dummy/tail.wav" dummytext="svansen" ord="3" sound="audio/words-sv/swan.wav" text="svanen" var-1="" var-2="" var-3=""/>
+<item Lid="ghost" action-fname="" action-type="null" dummysound="audio/words-sv/dummy/rod.wav" dummytext="spöet" ord="4" sound="audio/words-sv/ghost.wav" text="spöket" var-1="" var-2="" var-3=""/>
+<item Lid="lion" action-fname="" action-type="null" dummysound="audio/words-sv/lemur.wav" dummytext="lemuren" ord="5" sound="audio/words-sv/lion.wav" text="lejonet" var-1="" var-2="" var-3=""/>
+<item Lid="tiger" action-fname="" action-type="null" dummysound="audio/words-sv/dummy/train.wav" dummytext="tåget" ord="6" sound="audio/words-sv/tiger.wav" text="tigern" var-1="" var-2="" var-3=""/>
+<item Lid="dino" action-fname="" action-type="null" dummysound="audio/words-sv/dummy/dromedary.wav" dummytext="dromedaren" ord="7" sound="audio/words-sv/dino.wav" text="dinosaurien" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/ChaseChased2" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-sv/chases.wav" text="jagar" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/FeedCarrotPolar" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-sv/feeds.wav" text="matar" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/WashBath" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-sv/washes.wav" text="tvättar" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Astronauten{s} jagar{v} spöket{o}"/>
+<sentence ord="1" text="Astronauten{s} matar{v} fågeln{o}"/>
+<sentence ord="2" text="Astronauten{s} tvättar{v} astronauten{o}"/>
+<sentence ord="3" text="Astronauten{s} tvättar{v} dinosaurien{o}"/>
+<sentence ord="4" text="Fågeln{s} jagar{v} spöket{o}"/>
+<sentence ord="5" text="Fågeln{s} tvättar{v} fågeln{o}"/>
+<sentence ord="6" text="Fågeln{s} tvättar{v} spöket{o}"/>
+<sentence ord="7" text="Pingvinen{s} matar{v} astronauten{o}"/>
+<sentence ord="8" text="Spöket{s} jagar{v} astronauten{o}"/>
+<sentence ord="9" text="Tigern{s} jagar{v} lejonet{o}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Spöket{s} jagar{v} pingvinen{o}"/>
+<sentence ord="1" text="Tigern{s} matar{v} dinosaurien{o}"/>
+<sentence ord="2" text="Dinosaurien{s} tvättar{v} lejonet{o}"/>
+<sentence ord="3" text="Fågeln{s} matar{v} pingvinen{o}"/>
+<sentence ord="4" text="Astronauten{s} jagar{v} fågeln{o}"/>
+<sentence ord="5" text="Astronauten{s} matar{v} spöket{o}"/>
+<sentence ord="6" text="Fågeln{s} jagar{v} astronauten{o}"/>
+<sentence ord="7" text="Fågeln{s} tvättar{v} fågeln{o}"/>
+<sentence ord="8" text="Fågeln{s} tvättar{v} dinosaurien{o}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Astronauten{s} jagar{v} astronauten{o}"/>
+<sentence ord="1" text="Astronauten{s} matar{v} tigern{o}"/>
+<sentence ord="3" text="Dinosaurien{s} tvättar{v} dinosaurien{o}"/>
+<sentence ord="4" text="Svanen{s} matar{v} fågeln{o}"/>
+<sentence ord="5" text="Tigern{s} tvättar{v} fågeln{o}"/>
+<sentence ord="6" text="Svanen{s} matar{v} tigern{o}"/>
+<sentence ord="7" text="Tigern{s} matar{v} lejonet{o}"/>
+<sentence ord="8" text="Svanen{s} tvättar{v} astronauten{o}"/>
+<sentence ord="9" text="Tigern{s} tvättar{v} astronauten{o}"/>
+<sentence ord="10" text="Astronauten{s} jagar{v} tigern{o}"/>
+<sentence ord="11" text="Fågeln{s} jagar{v} tigern{o}"/>
+<sentence ord="13" text="Dinosaurien{s} jagar{v} dinosaurien{o}"/>
+<sentence ord="14" text="Spöket{s} tvättar{v} svanen{o}"/>
+<sentence ord="15" text="Lejonet{s} tvättar{v} lejonet{o}"/>
+<sentence ord="16" text="Spöket{s} jagar{v} tigern{o}"/>
+<sentence ord="17" text="Lejonet{s} tvättar{v} pingvinen{o}"/>
+<sentence ord="18" text="Spöket{s} matar{v} fågeln{o}"/>
+<sentence ord="19" text="Tigern{s} jagar{v} tigern{o}"/>
+<sentence ord="20" text="Svanen{s} tvättar{v} spöket{o}"/>
+<sentence ord="21" text="Fågeln{s} tvättar{v} tigern{o}"/>
+<sentence ord="23" text="Tigern{s} jagar{v} svanen{o}"/>
+<sentence ord="24" text="Lejonet{s} tvättar{v} astronauten{o}"/>
+<sentence ord="25" text="Lejonet{s} jagar{v} pingvinen{o}"/>
+<sentence ord="26" text="Spöket{s} tvättar{v} dinosaurien{o}"/>
+<sentence ord="27" text="Lejonet{s} matar{v} astronauten{o}"/>
+<sentence ord="28" text="Lejonet{s} jagar{v} tigern{o}"/>
+<sentence ord="29" text="Lejonet{s} jagar{v} spöket{o}"/>
+<sentence ord="30" text="Lejonet{s} matar{v} spöket{o}"/>
+<sentence ord="31" text="Spöket{s} jagar{v} astronauten{o}"/>
+<sentence ord="33" text="Spöket{s} matar{v} dinosaurien{o}"/>
+<sentence ord="34" text="Tigern{s} jagar{v} pingvinen{o}"/>
+<sentence ord="35" text="Spöket{s} jagar{v} fågeln{o}"/>
+<sentence ord="36" text="Tigern{s} jagar{v} astronauten{o}"/>
+<sentence ord="37" text="Spöket{s} matar{v} spöket{o}"/>
+<sentence ord="38" text="Tigern{s} matar{v} pingvinen{o}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Dinosaurien{s} tvättar{v} tigern{o}"/>
+<sentence ord="3" text="Astronauten{s} jagar{v} pingvinen{o}"/>
+<sentence ord="4" text="Pingvinen{s} matar{v} svanen{o}"/>
+<sentence ord="5" text="Tigern{s} matar{v} lejonet{o}"/>
+<sentence ord="6" text="Pingvinen{s} tvättar{v} astronauten{o}"/>
+<sentence ord="7" text="Lejonet{s} matar{v} svanen{o}"/>
+<sentence ord="8" text="Dinosaurien{s} matar{v} tigern{o}"/>
+<sentence ord="9" text="Svanen{s} tvättar{v} spöket{o}"/>
+<sentence ord="10" text="Dinosaurien{s} tvättar{v} svanen{o}"/>
+<sentence ord="13" text="Astronauten{s} matar{v} tigern{o}"/>
+<sentence ord="14" text="Svanen{s} matar{v} spöket{o}"/>
+<sentence ord="15" text="Lejonet{s} tvättar{v} tigern{o}"/>
+<sentence ord="16" text="Svanen{s} matar{v} fågeln{o}"/>
+<sentence ord="17" text="Tigern{s} matar{v} spöket{o}"/>
+<sentence ord="18" text="Tigern{s} matar{v} tigern{o}"/>
+<sentence ord="19" text="Spöket{s} jagar{v} astronauten{o}"/>
+<sentence ord="22" text="Dinosaurien{s} jagar{v} fågeln{o}"/>
+<sentence ord="23" text="Fågeln{s} jagar{v} astronauten{o}"/>
+<sentence ord="24" text="Spöket{s} jagar{v} spöket{o}"/>
+<sentence ord="25" text="Lejonet{s} jagar{v} pingvinen{o}"/>
+<sentence ord="26" text="Spöket{s} matar{v} pingvinen{o}"/>
+<sentence ord="27" text="Dinosaurien{s} jagar{v} tigern{o}"/>
+<sentence ord="28" text="Tigern{s} jagar{v} lejonet{o}"/>
+<sentence ord="29" text="Spöket{s} tvättar{v} astronauten{o}"/>
+<sentence ord="32" text="Tigern{s} jagar{v} astronauten{o}"/>
+<sentence ord="33" text="Fågeln{s} tvättar{v} spöket{o}"/>
+<sentence ord="34" text="Lejonet{s} matar{v} tigern{o}"/>
+<sentence ord="35" text="Svanen{s} tvättar{v} astronauten{o}"/>
+<sentence ord="36" text="Spöket{s} tvättar{v} spöket{o}"/>
+<sentence ord="37" text="Tigern{s} tvättar{v} svanen{o}"/>
+<sentence ord="38" text="Lejonet{s} jagar{v} tigern{o}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

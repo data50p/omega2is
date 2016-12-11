@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-maj-08_09_12_54" pupil="LessonsInEnglish" type="create">
+<entries session_length="622625">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="6203" word="The ghost"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="2313" word="jumps out of"/>
+<entry extra="create:build" l_id="av" ord="2" type="select" when="2328" word="the long curtain"/>
+<entry duration="10844" l_id_list="s;v;av" ord="3" sentence="The ghost jumps out of the long curtain" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="1251" word="The girl"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="1140" word="jumps out of"/>
+<entry extra="create:build" l_id="av" ord="6" type="select" when="1344" word="the long curtain"/>
+<entry duration="3735" l_id_list="s;v;av" ord="7" sentence="The girl jumps out of the long curtain" type="create"/>
+<entry extra="create:build" l_id="s" ord="8" type="select" when="3250" word="The gorilla"/>
+<entry extra="create:build" l_id="v" ord="9" type="select" when="2782" word="jumps out of"/>
+<entry extra="create:build" l_id="av" ord="10" type="select" when="1437" word="the long curtain"/>
+<entry duration="7469" l_id_list="s;v;av" ord="11" sentence="The gorilla jumps out of the long curtain" type="create"/>
+<entry extra="create:build" l_id="s" ord="12" type="select" when="2422" word="The ghost"/>
+<entry extra="create:build" l_id="v" ord="13" type="select" when="1453" word="looks out of"/>
+<entry extra="create:build" l_id="av" ord="14" type="select" when="6625" word="the huge bush"/>
+<entry duration="10500" l_id_list="s;v;av" ord="15" sentence="The ghost looks out of the huge bush" type="create"/>
+<entry extra="create:build" l_id="s" ord="16" type="select" when="1406" word="The ghost"/>
+<entry extra="create:build" l_id="v" ord="17" type="select" when="2828" word="looks out of"/>
+<entry extra="create:build" l_id="av" ord="18" type="select" when="2625" word="the high grass"/>
+<entry duration="6859" l_id_list="s;v;av" ord="19" sentence="The ghost looks out of the high grass" type="create"/>
+<entry extra="create:build" l_id="s" ord="20" type="select" when="2892" word="The ghost"/>
+<entry extra="create:build" l_id="v" ord="21" type="select" when="1390" word="jumps out of"/>
+<entry extra="create:build" l_id="av" ord="22" type="select" when="2344" word="the red barn"/>
+<entry duration="6626" l_id_list="s;v;av" ord="23" sentence="The ghost jumps out of the red barn" type="create"/>
+</entries>
+</result>

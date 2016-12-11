@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2011-jan-11_08_32_35" pupil="Guest" type="create">
+<entries session_length="740672">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="2141" word="lemuren"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="3547" word="jagar"/>
+<entry extra="create:build" l_id="k" ord="2" type="select" when="1797" word="och"/>
+<entry extra="create:build" l_id="v2" ord="3" type="select" when="1297" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="4" type="select" when="3015" word="glassen"/>
+<entry duration="11797" l_id_list="s;v;k;v2;o" ord="5" sentence="Lemuren jagar och hoppar över glassen" type="create"/>
+<entry extra="create:build" l_id="s" ord="6" type="select" when="2188" word="fågeln"/>
+<entry extra="create:build" l_id="v" ord="7" type="select" when="2781" word="hoppar över"/>
+<entry extra="create:build" l_id="k" ord="8" type="select" when="2078" word="och"/>
+<entry extra="create:build" l_id="v2" ord="9" type="select" when="1984" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="10" type="select" when="1688" word="blomman"/>
+<entry duration="10719" l_id_list="s;v;k;v2;o" ord="11" sentence="Fågeln hoppar över och jagar blomman" type="create"/>
+</entries>
+</result>

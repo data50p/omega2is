@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="" Tid="a" ord="0" type="passive"/>
+<t-item Lid="A" Tid="s" ord="1" type="passive"/>
+<t-item Lid="" Tid="v" ord="2" type="action"/>
+<t-item Lid="" Tid="v2" ord="3" type="passive"/>
+<t-item Lid="B" Tid="o" ord="4" type="passive"/>
+</target>
+<items>
+<item-entry Tid="a" ord="0" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/J5/blooming.wav" dummytext="Rascvjetani" ord="0" sound="audio/Words-hr/raspjevanisinging.wav" text="Raspjevani" var-1="singing" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/J5/uprljanidirty.wav" dummytext="Uprljani" ord="1" sound="audio/Words-hr/cryingmale.wav" text="Uplakani" var-1="crying" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="s" ord="1" type="actor">
+<item Lid="dragon:{-1}" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/dragon2.wav" text="zmaj" var-1="" var-2="" var-3=""/>
+<item Lid="penguin:{-1}" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/penguin3.wav" text="pingvin" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="2" type="action">
+<item action-fname="anim/ActiveAnim/Bridge{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/runsoverbridge2.wav" text="tr{269}i preko mosta" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Lake{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/sailsacrosslake2.wav" text="plovi preko jezera" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v2" ord="3" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/J4/iguraandpushes.wav" dummytext="i gura" ord="0" sound="audio/Words-hr/andhugs2.wav" text="i grli" var-1="Hug" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/J4/irazmazujeandpuzzlesat.wav" dummytext="i razmazuje" ord="1" sound="audio/Words-hr/andpointsat2.wav" text="i pokazuje" var-1="PointAt" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="4" type="passive">
+<item Lid="bear" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/bearmedvjeda.wav" text="medvjeda" var-1="" var-2="" var-3=""/>
+<item Lid="cat" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/catmacku.wav" text="ma{269}ku" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Raspjevani{a} zmaj{s} trči preko mosta{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="1" text="Raspjevani{a} zmaj{s} plovi preko jezera{v} i grli{v2} mačku{o}"/>
+<sentence ord="2" text="Uplakani{a} zmaj{s} trči preko mosta{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="3" text="Uplakani{a} pingvin{s} trči preko mosta{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="4" text="Uplakani{a} pingvin{s} plovi preko jezera{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="5" text="Raspjevani{a} pingvin{s} plovi preko jezera{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="6" text="Raspjevani{a} zmaj{s} trči preko mosta{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="7" text="Raspjevani{a} zmaj{s} plovi preko jezera{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="8" text="Raspjevani{a} pingvin{s} trči preko mosta{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="9" text="Raspjevani{a} pingvin{s} plovi preko jezera{v} i pokazuje{v2} mačku{o}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Uplakani{a} pingvin{s} plovi preko jezera{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="1" text="Uplakani{a} pingvin{s} trči preko mosta{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="2" text="Uplakani{a} zmaj{s} trči preko mosta{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="3" text="Uplakani{a} pingvin{s} plovi preko jezera{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="4" text="Raspjevani{a} pingvin{s} plovi preko jezera{v} i grli{v2} mačku{o}"/>
+<sentence ord="5" text="Raspjevani{a} zmaj{s} trči preko mosta{v} i grli{v2} mačku{o}"/>
+<sentence ord="6" text="Raspjevani{a} pingvin{s} trči preko mosta{v} i grli{v2} mačku{o}"/>
+<sentence ord="7" text="Uplakani{a} zmaj{s} trči preko mosta{v} i grli{v2} mačku{o}"/>
+<sentence ord="8" text="Raspjevani{a} pingvin{s} trči preko mosta{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="9" text="Raspjevani{a} zmaj{s} plovi preko jezera{v} i grli{v2} medvjeda{o}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Uplakani{a} pingvin{s} plovi preko jezera{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="1" text="Raspjevani{a} zmaj{s} plovi preko jezera{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="2" text="Uplakani{a} pingvin{s} plovi preko jezera{v} i grli{v2} mačku{o}"/>
+<sentence ord="3" text="Uplakani{a} zmaj{s} plovi preko jezera{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="4" text="Uplakani{a} pingvin{s} trči preko mosta{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="5" text="Raspjevani{a} zmaj{s} trči preko mosta{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="6" text="Uplakani{a} pingvin{s} trči preko mosta{v} i grli{v2} mačku{o}"/>
+<sentence ord="7" text="Raspjevani{a} pingvin{s} plovi preko jezera{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="8" text="Uplakani{a} zmaj{s} plovi preko jezera{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="9" text="Raspjevani{a} zmaj{s} trči preko mosta{v} i grli{v2} mačku{o}"/>
+<sentence ord="10" text="Uplakani{a} zmaj{s} plovi preko jezera{v} i grli{v2} mačku{o}"/>
+<sentence ord="11" text="Raspjevani{a} pingvin{s} trči preko mosta{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="12" text="Uplakani{a} zmaj{s} trči preko mosta{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="13" text="Raspjevani{a} pingvin{s} trči preko mosta{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="14" text="Raspjevani{a} zmaj{s} plovi preko jezera{v} i grli{v2} mačku{o}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Raspjevani{a} pingvin{s} trči preko mosta{v} i grli{v2} mačku{o}"/>
+<sentence ord="1" text="Raspjevani{a} zmaj{s} trči preko mosta{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="2" text="Raspjevani{a} zmaj{s} trči preko mosta{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="3" text="Raspjevani{a} pingvin{s} trči preko mosta{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="4" text="Uplakani{a} zmaj{s} trči preko mosta{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="5" text="Uplakani{a} pingvin{s} plovi preko jezera{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="6" text="Raspjevani{a} pingvin{s} plovi preko jezera{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="7" text="Raspjevani{a} zmaj{s} plovi preko jezera{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="8" text="Uplakani{a} pingvin{s} trči preko mosta{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="9" text="Uplakani{a} pingvin{s} plovi preko jezera{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="10" text="Uplakani{a} zmaj{s} plovi preko jezera{v} i pokazuje{v2} medvjeda{o}"/>
+<sentence ord="11" text="Uplakani{a} zmaj{s} trči preko mosta{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="12" text="Raspjevani{a} zmaj{s} plovi preko jezera{v} i pokazuje{v2} mačku{o}"/>
+<sentence ord="13" text="Raspjevani{a} pingvin{s} plovi preko jezera{v} i grli{v2} medvjeda{o}"/>
+<sentence ord="14" text="Uplakani{a} pingvin{s} trči preko mosta{v} i pokazuje{v2} medvjeda{o}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

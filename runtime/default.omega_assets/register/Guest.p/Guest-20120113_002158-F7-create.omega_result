@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-jan-13_00_21_58" pupil="Guest" type="create">
+<entries session_length="157719">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="2406" word="pojken"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="6109" word="flyger över"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="12781" word="blomman"/>
+<entry duration="21296" l_id_list="s;v;o" ord="3" sentence="Pojken flyger över blomman" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="5172" word="pojken"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="6328" word="hoppar över"/>
+<entry extra="create:build" l_id="o" ord="6" type="select" when="12797" word="glassen"/>
+<entry duration="24297" l_id_list="s;v;o" ord="7" sentence="Pojken hoppar över glassen" type="create"/>
+</entries>
+</result>

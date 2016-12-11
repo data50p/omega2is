@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE pupil_settings >
+
+<pupil_settings>
+<values>
+<value key="text" val=""/>
+<value key="image_on" val="false"/>
+<value key="speed" val="1"/>
+<value key="theme" val="option3.omega_colors"/>
+<value key="image_wrong_on" val="false"/>
+<value key="languageSuffix" val="nb"/>
+<value key="movie" val=""/>
+<value key="image" val="media/default/feedback.png"/>
+<value key="pingSentence" val="true"/>
+<value key="pingAnim" val="false"/>
+<value key="showSentence" val="true"/>
+<value key="speech_on" val="false"/>
+<value key="speech" val=""/>
+<value key="text_on" val="true"/>
+<value key="space_key" val="next"/>
+<value key="repeatanim" val="false"/>
+<value key="movie_on" val="false"/>
+<value key="frequence" val="3"/>
+<value key="image_wrong" val="media/default/feedbackwrong.png"/>
+</values>
+</pupil_settings>

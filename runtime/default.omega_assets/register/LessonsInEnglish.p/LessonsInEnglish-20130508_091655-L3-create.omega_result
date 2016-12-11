@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-maj-08_09_16_55" pupil="LessonsInEnglish" type="create">
+<entries session_length="1056375">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="1876" word="The boy"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="1500" word="sits in his room and is a bit sad."/>
+<entry duration="3376" l_id_list="s;v" ord="2" sentence="The boy sits in his room and is a bit sad." type="create"/>
+<entry extra="create:build" l_id="sv" ord="3" type="select" when="3015" word="the boy is longing for his"/>
+<entry extra="create:build" l_id="o" ord="4" type="select" when="4219" word="cat."/>
+<entry duration="7234" l_id_list="sv;o" ord="5" sentence="The boy is longing for his cat." type="create"/>
+<entry extra="create:build" l_id="sv" ord="6" type="select" when="2188" word="the boy decides to walk out and search for his cat"/>
+<entry duration="2188" l_id_list="sv" ord="7" sentence="The boy decides to walk out and search for his cat" type="create"/>
+<entry extra="create:build" l_id="s" ord="8" type="select" when="2110" word="the boy"/>
+<entry extra="create:build" l_id="v" ord="9" type="select" when="2468" word="cycles"/>
+<entry extra="create:build" l_id="o" ord="10" type="select" when="2141" word="first to"/>
+<entry extra="create:build" l_id="av" ord="11" type="select" when="11391" word="the town."/>
+<entry duration="18110" l_id_list="s;v;o;av" ord="12" sentence="The boy cycles first to the town." type="create"/>
+<entry extra="create:build" l_id="sv" ord="13" type="select" when="1875" word="There he meets"/>
+<entry extra="create:build" l_id="os" ord="14" type="select" when="2422" word="a magician"/>
+<entry extra="create:build" l_id="vo" ord="15" type="select" when="1828" word="who says: 'I can see that you're sad!'"/>
+<entry duration="6125" l_id_list="sv;os;vo" ord="16" sentence="There he meets a magician who says: 'I can see that you're sad!'" type="create"/>
+<entry extra="create:build" l_id="v" ord="17" type="select" when="1547" word="'Walk to"/>
+<entry extra="create:build" l_id="av" ord="18" type="select" when="5562" word="the meadow"/>
+<entry extra="create:build" l_id="o" ord="19" type="select" when="1500" word="and then you might find what you're looking for.'"/>
+<entry duration="8609" l_id_list="v;av;o" ord="20" sentence="'Walk to the meadow and then you might find what you're looking for.'" type="create"/>
+<entry extra="create:build" l_id="v" ord="21" type="select" when="2328" word="the boy rides, full of hope, to the meadow."/>
+<entry duration="2328" l_id_list="v" ord="22" sentence="The boy rides, full of hope, to the meadow." type="create"/>
+<entry extra="create:build" l_id="v" ord="23" type="select" when="2281" word="he looks under the stone and there, there is the cat."/>
+<entry duration="2281" l_id_list="v" ord="24" sentence="He looks under the stone and there, there is the cat." type="create"/>
+</entries>
+</result>

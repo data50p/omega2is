@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-mar-10_00_09_14" pupil="Guest" type="create">
+<entries session_length="134816">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="6113" word="Ekorren"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="15156" word="dansar"/>
+<entry duration="21269" l_id_list="s;v" ord="2" sentence="Ekorren dansar" type="create"/>
+<entry extra="create:build" l_id="s" ord="3" type="select" when="1891" word="Grodan"/>
+<entry extra="create:build" l_id="v" ord="4" type="select" when="3531" word="hoppar"/>
+<entry duration="5422" l_id_list="s;v" ord="5" sentence="Grodan hoppar" type="create"/>
+<entry extra="create:build" l_id="s" ord="6" type="select" when="6141" word="Ekorren"/>
+<entry extra="create:build" l_id="v" ord="7" type="select" when="11844" word="gömmer sig"/>
+<entry duration="17985" l_id_list="s;v" ord="8" sentence="Ekorren gömmer sig" type="create"/>
+</entries>
+</result>

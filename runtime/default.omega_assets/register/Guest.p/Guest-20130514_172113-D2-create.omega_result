@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-maj-14_17_21_13" pupil="Guest" type="create">
+<entries session_length="348078">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="8124" word="Grodan"/>
+<entry extra=":again" l_id="s" ord="1" type="select" when="844" word="Grodan"/>
+<entry extra="create:build" l_id="v" ord="2" type="select" when="9031" word="gungar"/>
+<entry duration="17999" l_id_list="s;v" ord="3" sentence="Grodan gungar" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="9938" word="Katten"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="12312" word="dansar"/>
+<entry duration="22250" l_id_list="s;v" ord="6" sentence="Katten dansar" type="create"/>
+<entry extra="create:build" l_id="s" ord="7" type="select" when="14094" word="Katten"/>
+<entry extra="create:build" l_id="v" ord="8" type="select" when="28187" word="gungar"/>
+<entry duration="42281" l_id_list="s;v" ord="9" sentence="Katten gungar" type="create"/>
+<entry extra="create:build" l_id="s" ord="10" type="select" when="8500" word="Flickan"/>
+<entry extra="create:build" l_id="v" ord="11" type="select" when="15234" word="dyker"/>
+<entry duration="23734" l_id_list="s;v" ord="12" sentence="Flickan dyker" type="create"/>
+<entry extra="create:build" l_id="s" ord="13" type="select" when="23359" word="Katten"/>
+<entry extra="create:build" l_id="v" ord="14" type="select" when="21079" word="dyker"/>
+<entry duration="44438" l_id_list="s;v" ord="15" sentence="Katten dyker" type="create"/>
+<entry extra="create:build" l_id="s" ord="16" type="select" when="390" word="Pojken"/>
+<entry extra=":again" l_id="s" ord="17" type="select" when="813" word="Pojken"/>
+<entry extra=":again" l_id="s" ord="18" type="select" when="1156" word="Pojken"/>
+<entry extra=":again" l_id="s" ord="19" type="select" when="813" word="Pojken"/>
+<entry extra="create:build" l_id="v" ord="20" type="select" when="33375" word="gungar"/>
+<entry duration="36547" l_id_list="s;v" ord="21" sentence="Pojken gungar" type="create"/>
+<entry extra=":again" l_id="v" ord="22" type="select" when="921" word="gungar"/>
+</entries>
+</result>

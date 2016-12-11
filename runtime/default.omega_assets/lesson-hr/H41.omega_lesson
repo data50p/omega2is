@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#0" color_bt_hi="#fce27a" color_bt_hs="#fff0b4" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#f0dc8c" color_sn_fr="#0" color_sn_hi="#fce27a" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="actor"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="" Tid="av" ord="2" type="actor"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="boy" ord="0" sound="audio/words1/boy.wav" text="Dje{269}ak" var-1="n" var-2="" var-3=""/>
+<item Lid="girl" ord="1" sound="audio/words1/girl.wav" text="Djevoj{269}ica" var-1="n" var-2="" var-3=""/>
+<item Lid="ghost" ord="2" sound="audio/words1/ghost.wav" text="Duh" var-1="t" var-2="" var-3=""/>
+<item Lid="gorilla" ord="3" sound="audio/words1/gorilla.wav" text="Gorila" var-1="n" var-2="" var-3=""/>
+<item ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/OutOf{+1}" action-type="omega_anim" ord="0" sound="audio/words1/jumpsoutof.wav" text="iska{269}e iz" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/OutBehind{+1}" action-type="omega_anim" ord="1" sound="audio/words1/looksoutfrombehind.wav" text="gleda iza" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="2" type="passive">
+<item ord="0" sound="audio/words1/thehighgrass.wav" text="visoke trave" var-1="Grass" var-2="null" var-3="null"/>
+<item ord="1" sound="audio/words1/thelongcurtain.wav" text="duga{269}ke zavjese" var-1="Curtain" var-2="null" var-3="null"/>
+<item ord="2" sound="audio/words1/theredbarn.wav" text="crvene staje" var-1="Barn" var-2="null" var-3="null"/>
+<item ord="3" sound="audio/words1/thebigbush.wav" text="velikog grma" var-1="Bush" var-2="null" var-3="null"/>
+<item ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries/>
+</omega_lesson>

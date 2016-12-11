@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-maj-30_14_52_37" pupil="Guest" type="create">
+<entries session_length="638734">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="7141" word="Musen"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="1656" word="lägger"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="2328" word="hatten"/>
+<entry extra="create:build" l_id="p" ord="3" type="select" when="2250" word="under"/>
+<entry extra="create:build" l_id="av" ord="4" type="select" when="1969" word="gorillans bord"/>
+<entry duration="15344" l_id_list="s;v;o;p;av" ord="5" sentence="Musen lägger hatten under gorillans bord" type="create"/>
+</entries>
+</result>

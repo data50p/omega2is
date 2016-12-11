@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2011-jan-11_08_42_17" pupil="Guest" type="create">
+<entries session_length="878375">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="2671" word="lemuren"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="1297" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="1172" word="blomman"/>
+<entry duration="5140" l_id_list="s;v;o" ord="3" sentence="Lemuren jagar blomman" type="create"/>
+</entries>
+</result>

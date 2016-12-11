@@ -1,3 +1,2 @@
 gradle clean build jar
-cp build/libs/omega2-is-1.0.0-SNAPSHOT.jar ../../Omega-IS/
-cp build/libs/omega2-is-1.0.0-SNAPSHOT.jar invoke
+cp build/libs/omega2-is-1.0.0-SNAPSHOT.jar runtime

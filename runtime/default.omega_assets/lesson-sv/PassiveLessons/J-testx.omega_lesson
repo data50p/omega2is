@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="" Tid="a" ord="0" type="passive"/>
+<t-item Lid="A" Tid="s" ord="1" type="actor"/>
+<t-item Lid="" Tid="v" ord="2" type="action"/>
+<t-item Lid="" Tid="v2" ord="3" type="passive"/>
+<t-item Lid="B" Tid="o" ord="4" type="actor"/>
+</target>
+<items>
+<item-entry Tid="a" ord="0" type="passive">
+<item dummysound="" dummytext="" ord="0" sound="audio/words-sv/TheSinging.wav" text="Den sjungande" var-1="singing" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="1" sound="audio/words-sv/TheCrying.wav" text="Den gråtande" var-1="crying" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="s" ord="1" type="actor">
+<item Lid="dragon:{-1}" dummysound="" dummytext="" ord="0" sound="audio/words-sv/dragon.wav" text="draken" var-1="" var-2="" var-3=""/>
+<item Lid="fox:{-1}" dummysound="" dummytext="" ord="1" sound="audio/words-sv/fox.wav" text="räven" var-1="" var-2="" var-3=""/>
+<item Lid="penguin:{-1}" dummysound="" dummytext="" ord="2" sound="audio/words-sv/penguin.wav" text="pingvinen" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="2" type="action">
+<item action-fname="anim/ActiveAnim/Bridge{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-sv/RunsOverTheBridge.wav" text="springer över bron" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Lake{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-sv/SailsOverTheLake.wav" text="seglar över sjön" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v2" ord="3" type="passive">
+<item dummysound="" dummytext="" ord="0" sound="audio/words-sv/AndHugs.wav" text="och kramar" var-1="Hug" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="1" sound="audio/words-sv/AndHelps.wav" text="och hjälper" var-1="Help" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="4" type="passive">
+<item Lid="bear" dummysound="" dummytext="" ord="0" sound="audio/words-sv/bear.wav" text="björnen" var-1="" var-2="" var-3=""/>
+<item Lid="cat" dummysound="" dummytext="" ord="1" sound="audio/words-sv/cat.wav" text="katten" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Den stora bävern äter den gröna bananen"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Den lilla bananen hoppar över det stora äpplet"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Den lilla bävern gömmer den gröna bananen"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Det stora äpplet äter den gröna bananen"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

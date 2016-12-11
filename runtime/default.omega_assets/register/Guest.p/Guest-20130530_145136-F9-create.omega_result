@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-maj-30_14_51_36" pupil="Guest" type="create">
+<entries session_length="500047">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="16203" word="pingvinen"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="2859" word="matar"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="6063" word="dinosaurien"/>
+<entry duration="25125" l_id_list="s;v;o" ord="3" sentence="Pingvinen matar dinosaurien" type="create"/>
+</entries>
+</result>

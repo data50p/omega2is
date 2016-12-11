@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-mar-16_11_08_34" pupil="test" type="create">
+<entries session_length="70078">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="2954" word="lejonet"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="1936" word="jagar"/>
+<entry extra=":again" l_id="v" ord="2" type="select" when="7657" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="3" type="select" when="4172" word="lejonet"/>
+<entry duration="16719" l_id_list="s;v;o" ord="4" sentence="Lejonet jagar lejonet" type="create"/>
+</entries>
+</result>

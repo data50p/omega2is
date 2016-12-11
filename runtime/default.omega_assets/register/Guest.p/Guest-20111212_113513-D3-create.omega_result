@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2011-dec-12_11_35_13" pupil="Guest" type="create">
+<entries session_length="51187">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="10656" word="Bananen"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="2672" word="studsar"/>
+<entry duration="13328" l_id_list="s;v" ord="2" sentence="Bananen studsar" type="create"/>
+</entries>
+</result>

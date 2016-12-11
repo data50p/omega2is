@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2011-okt-19_13_53_21" pupil="Guest" type="create">
+<entries session_length="744313">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="2031" word="fågeln"/>
+<entry extra="create:build" l_id="o" ord="1" type="select" when="1797" word="fågeln"/>
+</entries>
+</result>

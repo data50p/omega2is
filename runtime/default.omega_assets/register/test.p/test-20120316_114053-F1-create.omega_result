@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-mar-16_11_40_53" pupil="test" type="create">
+<entries session_length="446141">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="1125" word="fågeln"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="7437" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="6891" word="moroten"/>
+<entry duration="15453" l_id_list="s;v;o" ord="3" sentence="Fågeln jagar moroten" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="1203" word="fågeln"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="7344" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="6" type="select" when="9093" word="moroten"/>
+<entry duration="17640" l_id_list="s;v;o" ord="7" sentence="Fågeln jagar moroten" type="create"/>
+<entry extra="create:build" l_id="o" ord="8" type="select" when="8906" word="moroten"/>
+<entry extra="create:build" l_id="v" ord="9" type="select" when="6359" word="jagar"/>
+<entry extra="create:build" l_id="s" ord="10" type="select" when="6766" word="fågeln"/>
+<entry duration="22031" l_id_list="s;v;o" ord="11" sentence="Fågeln jagar moroten" type="create"/>
+<entry extra="create:build" l_id="s" ord="12" type="select" when="5297" word="fågeln"/>
+<entry extra="create:build" l_id="v" ord="13" type="select" when="8000" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="14" type="select" when="6641" word="fågeln"/>
+<entry duration="19938" l_id_list="s;v;o" ord="15" sentence="Fågeln jagar fågeln" type="create"/>
+<entry extra="create:build" l_id="s" ord="16" type="select" when="2141" word="fågeln"/>
+<entry extra="create:build" l_id="v" ord="17" type="select" when="7672" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="18" type="select" when="8265" word="fågeln"/>
+<entry duration="18078" l_id_list="s;v;o" ord="19" sentence="Fågeln jagar fågeln" type="create"/>
+<entry extra="create:build" l_id="s" ord="20" type="select" when="2079" word="moroten"/>
+<entry extra="create:build" l_id="v" ord="21" type="select" when="6671" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="22" type="select" when="8188" word="moroten"/>
+<entry duration="16938" l_id_list="s;v;o" ord="23" sentence="Moroten jagar moroten" type="create"/>
+<entry extra="create:build" l_id="s" ord="24" type="select" when="3531" word="moroten"/>
+<entry extra="create:build" l_id="v" ord="25" type="select" when="7063" word="jagar"/>
+<entry extra="create:build" l_id="o" ord="26" type="select" when="8828" word="fågeln"/>
+<entry duration="19422" l_id_list="s;v;o" ord="27" sentence="Moroten jagar fågeln" type="create"/>
+</entries>
+</result>

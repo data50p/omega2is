@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="dog" action-fname="" action-type="omega_anim" dummysound="audio/words-nn/Dummyord/hemnen.wav" dummytext="Hemnen" ord="0" sound="audio/words-nn/Leksjonsord/hunden.wav" text="Hunden" var-1="n" var-2="" var-3=""/>
+<item Lid="banana" action-fname="" action-type="null" dummysound="audio/words-nn/Dummyord/ananasen.wav" dummytext="Ananasen" ord="1" sound="audio/words-nn/Leksjonsord/bananen.wav" text="Bananen" var-1="n" var-2="" var-3=""/>
+<item Lid="mouse" action-fname="" action-type="omega_anim" dummysound="audio/words-nn/Dummyord/lusa.wav" dummytext="Lusa" ord="2" sound="audio/words-nn/Leksjonsord/musa.wav" text="Musa" var-1="n" var-2="" var-3=""/>
+<item Lid="ball" action-fname="" action-type="null" dummysound="audio/words-nn/Dummyord/bilen.wav" dummytext="Bilen" ord="3" sound="audio/words-nn/Leksjonsord/ballen.wav" text="Ballen" var-1="null" var-2="null" var-3="null"/>
+<item Lid="frog" action-fname="" action-type="null" dummysound="audio/words-nn/Dummyord/frosten.wav" dummytext="Frosten" ord="4" sound="audio/words-nn/Leksjonsord/frosken.wav" text="Frosken" var-1="null" var-2="null" var-3="null"/>
+<item Lid="cat" action-fname="" action-type="null" dummysound="audio/words-nn/Dummyord/natta.wav" dummytext="Natta" ord="5" sound="audio/words-nn/Leksjonsord/katta.wav" text="Katta" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/RollingInMeadow" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nn/Leksjonsord/rullar.wav" text="rullar" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/BouncingInMat" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-nn/Leksjonsord/sprett.wav" text="sprett" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/GrowingInMeadow" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-nn/Leksjonsord/veks.wav" text="veks" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/ActiveAnim/FlyPlane" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-nn/Leksjonsord/flyg.wav" text="flyg" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/ActiveAnim/SleepingInGrassByTree" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/words-nn/Leksjonsord/snorkar.wav" text="snorkar" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/ActiveAnim/SingingInRoomByWindow" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/words-nn/Leksjonsord/syng.wav" text="syng" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Hunden{s} rullar{v}"/>
+<sentence ord="1" text="Bananen{s} rullar{v}"/>
+<sentence ord="2" text="Musa{s} sprett{v}"/>
+<sentence ord="3" text="Ballen{s} flyg{v}"/>
+<sentence ord="4" text="Frosken{s} veks{v}"/>
+<sentence ord="5" text="Katta{s} sprett{v}"/>
+<sentence ord="6" text="Katta{s} syng{v}"/>
+<sentence ord="7" text="Ballen{s} veks{v}"/>
+<sentence ord="8" text="Hunden{s} sprett{v}"/>
+<sentence ord="9" text="Bananen{s} flyg{v}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Ballen{s} flyg{v}"/>
+<sentence ord="0" text="Hunden{s} rullar{v}"/>
+<sentence ord="1" text="Katta{s} sprett{v}"/>
+<sentence ord="2" text="Katta{s} syng{v}"/>
+<sentence ord="3" text="Bananen{s} flyg{v}"/>
+<sentence ord="4" text="Hunden{s} sprett{v}"/>
+<sentence ord="5" text="Ballen{s} veks{v}"/>
+<sentence ord="6" text="Frosken{s} veks{v}"/>
+<sentence ord="7" text="Musa{s} sprett{v}"/>
+<sentence ord="8" text="Bananen{s} rullar{v}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Hunden{s} veks{v}"/>
+<sentence ord="1" text="Bananen{s} sprett{v}"/>
+<sentence ord="2" text="Musa{s} veks{v}"/>
+<sentence ord="3" text="Ballen{s} rullar{v}"/>
+<sentence ord="4" text="Ballen{s} sprett{v}"/>
+<sentence ord="5" text="Frosken{s} sprett{v}"/>
+<sentence ord="6" text="Katta{s} veks{v}"/>
+<sentence ord="7" text="Katta{s} snorkar{v}"/>
+<sentence ord="8" text="Hunden{s} rullar{v}"/>
+<sentence ord="9" text="Ballen{s} flyg{v}"/>
+<sentence ord="10" text="Katta{s} sprett{v}"/>
+<sentence ord="11" text="Katta{s} syng{v}"/>
+<sentence ord="12" text="Bananen{s} flyg{v}"/>
+<sentence ord="13" text="Hunden{s} sprett{v}"/>
+<sentence ord="14" text="Ballen{s} veks{v}"/>
+<sentence ord="15" text="Frosken{s} veks{v}"/>
+<sentence ord="16" text="Musa{s} sprett{v}"/>
+<sentence ord="17" text="Bananen{s} rullar{v}"/>
+<sentence ord="18" text="Frosken{s} syng{v}"/>
+<sentence ord="19" text="Katta{s} rullar{v}"/>
+<sentence ord="20" text="Katta{s} flyg{v}"/>
+<sentence ord="21" text="Hunden{s} flyg{v}"/>
+<sentence ord="22" text="Hunden{s} snorkar{v}"/>
+<sentence ord="23" text="Hunden{s} syng{v}"/>
+<sentence ord="24" text="Bananen{s} veks{v}"/>
+<sentence ord="25" text="Bananen{s} syng{v}"/>
+<sentence ord="26" text="Musa{s} flyg{v}"/>
+<sentence ord="27" text="Frosken{s} flyg{v}"/>
+<sentence ord="28" text="Frosken{s} snorkar{v}"/>
+<sentence ord="29" text="Bananen{s} snorkar{v}"/>
+<sentence ord="30" text="Musa{s} rullar{v}"/>
+<sentence ord="31" text="Musa{s} snorkar{v}"/>
+<sentence ord="32" text="Musa{s} syng{v}"/>
+<sentence ord="33" text="Ballen{s} snorkar{v}"/>
+<sentence ord="34" text="Ballen{s} syng{v}"/>
+<sentence ord="35" text="Frosken{s} rullar{v}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Hunden{s} rullar{v}"/>
+<sentence ord="1" text="Katta{s} veks{v}"/>
+<sentence ord="2" text="Frosken{s} sprett{v}"/>
+<sentence ord="3" text="Musa{s} rullar{v}"/>
+<sentence ord="4" text="Bananen{s} snorkar{v}"/>
+<sentence ord="5" text="Frosken{s} snorkar{v}"/>
+<sentence ord="6" text="Frosken{s} flyg{v}"/>
+<sentence ord="7" text="Musa{s} flyg{v}"/>
+<sentence ord="8" text="Bananen{s} syng{v}"/>
+<sentence ord="9" text="Bananen{s} veks{v}"/>
+<sentence ord="10" text="Hunden{s} syng{v}"/>
+<sentence ord="11" text="Hunden{s} snorkar{v}"/>
+<sentence ord="12" text="Hunden{s} flyg{v}"/>
+<sentence ord="13" text="Katta{s} flyg{v}"/>
+<sentence ord="14" text="Katta{s} rullar{v}"/>
+<sentence ord="15" text="Ballen{s} flyg{v}"/>
+<sentence ord="16" text="Katta{s} snorkar{v}"/>
+<sentence ord="17" text="Ballen{s} sprett{v}"/>
+<sentence ord="18" text="Ballen{s} rullar{v}"/>
+<sentence ord="19" text="Musa{s} veks{v}"/>
+<sentence ord="20" text="Bananen{s} sprett{v}"/>
+<sentence ord="21" text="Hunden{s} veks{v}"/>
+<sentence ord="22" text="Frosken{s} rullar{v}"/>
+<sentence ord="23" text="Ballen{s} syng{v}"/>
+<sentence ord="24" text="Ballen{s} snorkar{v}"/>
+<sentence ord="25" text="Musa{s} syng{v}"/>
+<sentence ord="26" text="Musa{s} snorkar{v}"/>
+<sentence ord="27" text="Frosken{s} syng{v}"/>
+<sentence ord="28" text="Bananen{s} rullar{v}"/>
+<sentence ord="29" text="Musa{s} sprett{v}"/>
+<sentence ord="30" text="Frosken{s} veks{v}"/>
+<sentence ord="31" text="Ballen{s} veks{v}"/>
+<sentence ord="32" text="Hunden{s} sprett{v}"/>
+<sentence ord="33" text="Bananen{s} flyg{v}"/>
+<sentence ord="34" text="Katta{s} syng{v}"/>
+<sentence ord="35" text="Katta{s} sprett{v}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

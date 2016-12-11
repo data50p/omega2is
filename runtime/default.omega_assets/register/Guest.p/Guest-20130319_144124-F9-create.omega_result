@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-mar-19_14_41_24" pupil="Guest" type="create">
+<entries session_length="285109">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="12156" word="pingvinen"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="6032" word="tvättar"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="21718" word="spöket"/>
+<entry duration="39906" l_id_list="s;v;o" ord="3" sentence="Pingvinen tvättar spöket" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="22392" word="tigern"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="6171" word="tvättar"/>
+<entry extra="create:build" l_id="o" ord="6" type="select" when="2844" word="fågeln"/>
+<entry duration="31407" l_id_list="s;v;o" ord="7" sentence="Tigern tvättar fågeln" type="create"/>
+<entry extra="create:build" l_id="s" ord="8" type="select" when="6532" word="pingvinen"/>
+<entry extra="create:build" l_id="v" ord="9" type="select" when="4203" word="matar"/>
+<entry extra="create:build" l_id="o" ord="10" type="select" when="2890" word="astronauten"/>
+<entry duration="13625" l_id_list="s;v;o" ord="11" sentence="Pingvinen matar astronauten" type="create"/>
+</entries>
+</result>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="" Tid="a" ord="0" type="passive"/>
+<t-item Lid="A" Tid="s" ord="1" type="passive"/>
+<t-item Lid="" Tid="v" ord="2" type="action"/>
+<t-item Lid="" Tid="av" ord="3" type="passive"/>
+<t-item Lid="B" Tid="pf" ord="4" type="passive"/>
+</target>
+<items>
+<item-entry Tid="a" ord="0" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/big2.wav" text="Velika" var-1="big" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/smallmala.wav" text="Mala" var-1="small" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="s" ord="1" type="actor">
+<item Lid="blowfish:{-1}" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/fishSINGLE.wav" text="riba" var-1="" var-2="" var-3=""/>
+<item Lid="frog:{-1}" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/frog5.wav" text="{382}aba" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="2" type="action">
+<item action-fname="anim/ActiveAnim/Swim{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/swims2.wav" text="pliva" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Dive{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/dives3.wav" text="roni" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="3" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/J3/underthebait.wav" dummytext="ispod mamca" ord="0" sound="audio/Words-hr/undertheboat2.wav" text="ispod {269}amca" var-1="UnderTheBoat" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/J3/throughblackcoffee.wav" dummytext="kroz crnu kavu" ord="1" sound="audio/Words-hr/throughtheseaweed2.wav" text="kroz morsku travu" var-1="ThroughTheSeaweed" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/J3/beyondtheshoulder.wav" dummytext="iza ramena" ord="2" sound="audio/Words-hr/behindthestone2.wav" text="iza kamena" var-1="BehindTheStone" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="pf" ord="4" type="passive">
+<item Lid="bubbles" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/blowingbubbles2.wav" text="i pu{353}e mjehuri{263}e" var-1="" var-2="" var-3=""/>
+<item Lid="fish" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/chasingsmallfish2.wav" text="i lovi malu ribu" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Velika{a} riba{s} pliva{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+<sentence ord="1" text="Velika{a} riba{s} roni{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+<sentence ord="2" text="Velika{a} žaba{s} pliva{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+<sentence ord="3" text="Velika{a} žaba{s} pliva{v} iza kamena{av} i puše mjehuriće{pf}"/>
+<sentence ord="4" text="Velika{a} žaba{s} roni{v} kroz morsku travu{av} i puše mjehuriće{pf}"/>
+<sentence ord="5" text="Mala{a} riba{s} pliva{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+<sentence ord="6" text="Mala{a} riba{s} roni{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+<sentence ord="7" text="Mala{a} žaba{s} pliva{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+<sentence ord="8" text="Mala{a} žaba{s} roni{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+<sentence ord="9" text="Mala{a} žaba{s} roni{v} iza kamena{av} i lovi malu ribu{pf}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Mala{a} žaba{s} roni{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+<sentence ord="1" text="Mala{a} žaba{s} pliva{v} kroz morsku travu{av} i puše mjehuriće{pf}"/>
+<sentence ord="2" text="Mala{a} žaba{s} pliva{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+<sentence ord="3" text="Mala{a} riba{s} roni{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+<sentence ord="4" text="Mala{a} riba{s} pliva{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+<sentence ord="5" text="Velika{a} žaba{s} roni{v} iza kamena{av} i puše mjehuriće{pf}"/>
+<sentence ord="6" text="Velika{a} žaba{s} roni{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+<sentence ord="7" text="Velika{a} žaba{s} pliva{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+<sentence ord="8" text="Velika{a} riba{s} roni{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+<sentence ord="9" text="Velika{a} riba{s} pliva{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Mala{a} žaba{s} roni{v} iza kamena{av} i puše mjehuriće{pf}"/>
+<sentence ord="1" text="Mala{a} žaba{s} pliva{v} kroz morsku travu{av} i lovi malu ribu{pf}"/>
+<sentence ord="2" text="Mala{a} riba{s} roni{v} kroz morsku travu{av} i lovi malu ribu{pf}"/>
+<sentence ord="3" text="Mala{a} riba{s} roni{v} iza kamena{av} i lovi malu ribu{pf}"/>
+<sentence ord="4" text="Mala{a} riba{s} roni{v} kroz morsku travu{av} i puše mjehuriće{pf}"/>
+<sentence ord="5" text="Velika{a} žaba{s} roni{v} iza kamena{av} i lovi malu ribu{pf}"/>
+<sentence ord="6" text="Mala{a} riba{s} pliva{v} kroz morsku travu{av} i lovi malu ribu{pf}"/>
+<sentence ord="7" text="Mala{a} riba{s} pliva{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+<sentence ord="8" text="Velika{a} žaba{s} pliva{v} iza kamena{av} i puše mjehuriće{pf}"/>
+<sentence ord="9" text="Velika{a} žaba{s} roni{v} kroz morsku travu{av} i puše mjehuriće{pf}"/>
+<sentence ord="10" text="Velika{a} žaba{s} pliva{v} kroz morsku travu{av} i lovi malu ribu{pf}"/>
+<sentence ord="11" text="Velika{a} žaba{s} pliva{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+<sentence ord="12" text="Velika{a} riba{s} roni{v} kroz morsku travu{av} i puše mjehuriće{pf}"/>
+<sentence ord="13" text="Velika{a} riba{s} pliva{v} iza kamena{av} i puše mjehuriće{pf}"/>
+<sentence ord="14" text="Velika{a} riba{s} pliva{v} kroz morsku travu{av} i puše mjehuriće{pf}"/>
+<sentence ord="15" text="Velika{a} riba{s} pliva{v} kroz morsku travu{av} i lovi malu ribu{pf}"/>
+<sentence ord="16" text="Velika{a} riba{s} pliva{v} iza kamena{av} i lovi malu ribu{pf}"/>
+<sentence ord="17" text="Velika{a} riba{s} roni{v} kroz morsku travu{av} i lovi malu ribu{pf}"/>
+<sentence ord="18" text="Velika{a} žaba{s} pliva{v} kroz morsku travu{av} i puše mjehuriće{pf}"/>
+<sentence ord="19" text="Velika{a} žaba{s} roni{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Velika{a} riba{s} pliva{v} iza kamena{av} i lovi malu ribu{pf}"/>
+<sentence ord="1" text="Mala{a} riba{s} roni{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+<sentence ord="2" text="Mala{a} žaba{s} roni{v} iza kamena{av} i lovi malu ribu{pf}"/>
+<sentence ord="3" text="Mala{a} riba{s} pliva{v} iza kamena{av} i lovi malu ribu{pf}"/>
+<sentence ord="4" text="Velika{a} riba{s} roni{v} iza kamena{av} i lovi malu ribu{pf}"/>
+<sentence ord="5" text="Velika{a} žaba{s} pliva{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+<sentence ord="6" text="Mala{a} riba{s} roni{v} iza kamena{av} i puše mjehuriće{pf}"/>
+<sentence ord="7" text="Mala{a} žaba{s} roni{v} kroz morsku travu{av} i lovi malu ribu{pf}"/>
+<sentence ord="8" text="Mala{a} riba{s} pliva{v} iza kamena{av} i puše mjehuriće{pf}"/>
+<sentence ord="9" text="Velika{a} riba{s} roni{v} iza kamena{av} i puše mjehuriće{pf}"/>
+<sentence ord="10" text="Velika{a} žaba{s} pliva{v} iza kamena{av} i lovi malu ribu{pf}"/>
+<sentence ord="11" text="Mala{a} žaba{s} pliva{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+<sentence ord="12" text="Mala{a} žaba{s} roni{v} kroz morsku travu{av} i puše mjehuriće{pf}"/>
+<sentence ord="13" text="Mala{a} riba{s} pliva{v} kroz morsku travu{av} i puše mjehuriće{pf}"/>
+<sentence ord="14" text="Velika{a} riba{s} roni{v} ispod čamca{av} i puše mjehuriće{pf}"/>
+<sentence ord="15" text="Velika{a} žaba{s} roni{v} kroz morsku travu{av} i lovi malu ribu{pf}"/>
+<sentence ord="16" text="Mala{a} žaba{s} pliva{v} iza kamena{av} i puše mjehuriće{pf}"/>
+<sentence ord="17" text="Mala{a} žaba{s} pliva{v} iza kamena{av} i lovi malu ribu{pf}"/>
+<sentence ord="18" text="Velika{a} žaba{s} roni{v} iza kamena{av} i puše mjehuriće{pf}"/>
+<sentence ord="19" text="Velika{a} riba{s} pliva{v} ispod čamca{av} i lovi malu ribu{pf}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

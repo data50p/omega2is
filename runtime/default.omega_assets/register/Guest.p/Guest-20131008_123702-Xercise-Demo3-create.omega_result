@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-okt-08_12_37_02" pupil="Guest" type="create">
+<entries session_length="8370335">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="-2963086" word="Trädet"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="1547" word="är"/>
+<entry extra="create:build" l_id="a" ord="2" type="select" when="1312" word="stort"/>
+<entry duration="-2960227" l_id_list="s;v;a" ord="3" sentence="Trädet är stort" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="-2965320" word="Bussen"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="1266" word="är"/>
+<entry extra="create:build" l_id="a" ord="6" type="select" when="1468" word="liten"/>
+<entry duration="-2962586" l_id_list="s;v;a" ord="7" sentence="Bussen är liten" type="create"/>
+<entry extra="create:build" l_id="s" ord="8" type="select" when="-2965336" word="Huset"/>
+<entry extra="create:build" l_id="v" ord="9" type="select" when="2656" word="är"/>
+<entry extra="create:build" l_id="a" ord="10" type="select" when="1125" word="litet"/>
+<entry duration="-2961555" l_id_list="s;v;a" ord="11" sentence="Huset är litet" type="create"/>
+</entries>
+</result>

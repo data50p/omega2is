@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-maj-08_09_03_26" pupil="Guest" type="create">
+<entries session_length="133656">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="31360" word="Bananen"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="6828" word="snarkar"/>
+<entry duration="38188" l_id_list="s;v" ord="2" sentence="Bananen snarkar" type="create"/>
+<entry extra="create:build" l_id="s" ord="3" type="select" when="4141" word="Bananen"/>
+<entry extra="create:build" l_id="v" ord="4" type="select" when="5156" word="flyger"/>
+<entry duration="9297" l_id_list="s;v" ord="5" sentence="Bananen flyger" type="create"/>
+</entries>
+</result>

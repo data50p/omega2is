@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="actor"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="squirrel" dummysound="audio/words-sv/dummy/stag-beetle.wav" dummytext="Ekoxen" ord="0" sound="audio/words-sv/squirrel.wav" text="Ekorren" var-1="n" var-2="" var-3=""/>
+<item Lid="frog" dummysound="audio/words-sv/dummy/crops.wav" dummytext="Grödan" ord="1" sound="audio/words-sv/frog.wav" text="Grodan" var-1="n" var-2="" var-3=""/>
+<item Lid="mouse" dummysound="audio/words-sv/dummy/gull.wav" dummytext="Måsen" ord="2" sound="audio/words-sv/mouse.wav" text="Musen" var-1="n" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/HidingBehindStone" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-sv/hidesitself.wav" text="gömmer sig" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/DancingAroundStone" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-sv/dances.wav" text="dansar" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/JumpingByStone" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-sv/jumps.wav" text="hoppar" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Ekorren{s} gömmer sig{v}"/>
+<sentence ord="1" text="Ekorren{s} dansar{v}"/>
+<sentence ord="2" text="Ekorren{s} hoppar{v}"/>
+<sentence ord="3" text="Grodan{s} gömmer sig{v}"/>
+<sentence ord="4" text="Grodan{s} dansar{v}"/>
+<sentence ord="5" text="Grodan{s} hoppar{v}"/>
+<sentence ord="6" text="Musen{s} gömmer sig{v}"/>
+<sentence ord="7" text="Musen{s} dansar{v}"/>
+<sentence ord="8" text="Musen{s} hoppar{v}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Musen{s} hoppar{v}"/>
+<sentence ord="1" text="Musen{s} dansar{v}"/>
+<sentence ord="2" text="Musen{s} gömmer sig{v}"/>
+<sentence ord="3" text="Grodan{s} hoppar{v}"/>
+<sentence ord="4" text="Grodan{s} dansar{v}"/>
+<sentence ord="5" text="Grodan{s} gömmer sig{v}"/>
+<sentence ord="6" text="Ekorren{s} hoppar{v}"/>
+<sentence ord="7" text="Ekorren{s} dansar{v}"/>
+<sentence ord="8" text="Ekorren{s} gömmer sig{v}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Grodan{s} dansar{v}"/>
+<sentence ord="1" text="Musen{s} gömmer sig{v}"/>
+<sentence ord="2" text="Grodan{s} hoppar{v}"/>
+<sentence ord="3" text="Musen{s} dansar{v}"/>
+<sentence ord="4" text="Musen{s} hoppar{v}"/>
+<sentence ord="5" text="Ekorren{s} hoppar{v}"/>
+<sentence ord="6" text="Ekorren{s} gömmer sig{v}"/>
+<sentence ord="7" text="Grodan{s} gömmer sig{v}"/>
+<sentence ord="8" text="Ekorren{s} dansar{v}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Grodan{s} hoppar{v}"/>
+<sentence ord="1" text="Musen{s} hoppar{v}"/>
+<sentence ord="2" text="Ekorren{s} dansar{v}"/>
+<sentence ord="3" text="Musen{s} gömmer sig{v}"/>
+<sentence ord="4" text="Ekorren{s} gömmer sig{v}"/>
+<sentence ord="5" text="Ekorren{s} hoppar{v}"/>
+<sentence ord="6" text="Grodan{s} gömmer sig{v}"/>
+<sentence ord="7" text="Grodan{s} dansar{v}"/>
+<sentence ord="8" text="Musen{s} dansar{v}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

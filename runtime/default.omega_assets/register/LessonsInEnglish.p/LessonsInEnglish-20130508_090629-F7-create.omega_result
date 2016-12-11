@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-maj-08_09_06_29" pupil="LessonsInEnglish" type="create">
+<entries session_length="170344">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="23281" word="the ice-cream"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="2360" word="flies over"/>
+<entry extra="create:build" l_id="o" ord="2" type="select" when="6234" word="the flower"/>
+<entry duration="31875" l_id_list="s;v;o" ord="3" sentence="The ice-cream flies over the flower" type="create"/>
+<entry extra="create:build" l_id="s" ord="4" type="select" when="3875" word="the ice-cream"/>
+<entry extra="create:build" l_id="v" ord="5" type="select" when="1797" word="flies over"/>
+<entry extra="create:build" l_id="o" ord="6" type="select" when="1812" word="the ice-cream"/>
+<entry duration="7484" l_id_list="s;v;o" ord="7" sentence="The ice-cream flies over the ice-cream" type="create"/>
+</entries>
+</result>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="sv" ord="0" type="action"/>
+</target>
+<items>
+<item-entry Tid="sv" ord="0" type="action">
+<item Lid="swan" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nn/Leksjonsord/svana.wav" text="Svana" var-1="" var-2="" var-3=""/>
+<item Lid="beaver" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-nn/Leksjonsord/beveren.wav" text="Beveren" var-1="" var-2="" var-3=""/>
+<item Lid="box" action-fname="anim/ActiveAnim/ActorpresB4DownOnRoundTable" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-nn/Leksjonsord/øskja.wav" text="Øskja" var-1="" var-2="" var-3=""/>
+<item Lid="mouse" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-nn/Leksjonsord/musa2.wav" text="Musa" var-1="" var-2="" var-3=""/>
+<item Lid="bee" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/words-nn/Leksjonsord/bia.wav" text="Bia" var-1="" var-2="" var-3=""/>
+<item Lid="ghost" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/words-nn/Leksjonsord/spøkelse.wav" text="Spøkelset" var-1="" var-2="" var-3=""/>
+<item Lid="cat" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="audio/words-nn/Leksjonsord/katta.wav" text="Katta" var-1="" var-2="" var-3=""/>
+<item Lid="lemur" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="audio/words-nn/Leksjonsord/lemuren.wav" text="Lemuren" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="sv" ord="1" type="action">
+<item Lid="buzzard" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nn/Leksjonsord/fuglen.wav" text="Fuglen" var-1="" var-2="" var-3=""/>
+<item Lid="lion" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-nn/Leksjonsord/løva2.wav" text="Løva" var-1="" var-2="" var-3=""/>
+<item Lid="helicopter" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-nn/Leksjonsord/helikopteret.wav" text="Helikopteret" var-1="" var-2="" var-3=""/>
+<item Lid="bus" action-fname="anim/ActiveAnim/ActorPresB2" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-nn/Leksjonsord/bussen.wav" text="Bussen" var-1="" var-2="" var-3=""/>
+<item Lid="house" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/words-nn/Leksjonsord/huset.wav" text="Huset" var-1="" var-2="" var-3=""/>
+<item Lid="penguin" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/words-nn/Leksjonsord/pingvinen.wav" text="Pingvinen" var-1="" var-2="" var-3=""/>
+<item Lid="hand" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="audio/words-nn/Leksjonsord/handa.wav" text="Handa" var-1="" var-2="" var-3=""/>
+<item Lid="dino" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="audio/words-nn/Leksjonsord/dinosauren.wav" text="Dinosauren" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="sv" ord="2" type="action">
+<item Lid="candle" action-fname="anim/ActiveAnim/ActorpresB4DownOnRoundTable" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nn/Leksjonsord/lyset.wav" text="Lyset" var-1="" var-2="" var-3=""/>
+<item Lid="leopard" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-nn/Leksjonsord/leoparden.wav" text="Leoparden" var-1="" var-2="" var-3=""/>
+<item Lid="dog" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-nn/Leksjonsord/hunden.wav" text="Hunden" var-1="" var-2="" var-3=""/>
+<item Lid="astronaut" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-nn/Leksjonsord/astronauten.wav" text="Astronauten" var-1="" var-2="" var-3=""/>
+<item Lid="mc" action-fname="anim/ActiveAnim/ActorPresB2" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/words-nn/Leksjonsord/motorsykkelen.wav" text="Motorsykkelen" var-1="" var-2="" var-3=""/>
+<item Lid="carrot" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/words-nn/Leksjonsord/gulrota.wav" text="Gulrota" var-1="" var-2="" var-3=""/>
+<item Lid="car" action-fname="anim/ActiveAnim/ActorPresB2" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="audio/words-nn/Leksjonsord/bilen.wav" text="Bilen" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Svana{sv}"/>
+<sentence ord="1" text="Øskja{sv}"/>
+<sentence ord="2" text="Bia{sv}"/>
+<sentence ord="3" text="Katta{sv}"/>
+<sentence ord="4" text="Fuglen{sv}"/>
+<sentence ord="5" text="Helikopteret{sv}"/>
+<sentence ord="6" text="Huset{sv}"/>
+<sentence ord="7" text="Handa{sv}"/>
+<sentence ord="8" text="Lyset{sv}"/>
+<sentence ord="9" text="Hunden{sv}"/>
+<sentence ord="10" text="Motorsykkelen{sv}"/>
+<sentence ord="11" text="Bilen{sv}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Beveren{sv}"/>
+<sentence ord="1" text="Musa{sv}"/>
+<sentence ord="2" text="Spøkelset{sv}"/>
+<sentence ord="3" text="Lemuren{sv}"/>
+<sentence ord="4" text="Løva{sv}"/>
+<sentence ord="5" text="Bussen{sv}"/>
+<sentence ord="6" text="Pingvinen{sv}"/>
+<sentence ord="7" text="Dinosauren{sv}"/>
+<sentence ord="8" text="Leoparden{sv}"/>
+<sentence ord="9" text="Astronauten{sv}"/>
+<sentence ord="10" text="Bilen{sv}"/>
+<sentence ord="11" text="Gulrota{sv}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Bilen{sv}"/>
+<sentence ord="1" text="Motorsykkelen{sv}"/>
+<sentence ord="2" text="Hunden{sv}"/>
+<sentence ord="3" text="Lyset{sv}"/>
+<sentence ord="4" text="Handa{sv}"/>
+<sentence ord="5" text="Huset{sv}"/>
+<sentence ord="6" text="Helikopteret{sv}"/>
+<sentence ord="7" text="Fuglen{sv}"/>
+<sentence ord="8" text="Katta{sv}"/>
+<sentence ord="9" text="Bia{sv}"/>
+<sentence ord="10" text="Øskja{sv}"/>
+<sentence ord="11" text="Svana{sv}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Løva{sv}"/>
+<sentence ord="1" text="Helikopteret{sv}"/>
+<sentence ord="2" text="Lemuren{sv}"/>
+<sentence ord="3" text="Spøkelset{sv}"/>
+<sentence ord="4" text="Katta{sv}"/>
+<sentence ord="5" text="Øskja{sv}"/>
+<sentence ord="6" text="Beveren{sv}"/>
+<sentence ord="7" text="Pingvinen{sv}"/>
+<sentence ord="8" text="Dinosauren{sv}"/>
+<sentence ord="9" text="Astronauten{sv}"/>
+<sentence ord="10" text="Gulrota{sv}"/>
+<sentence ord="11" text="Leoparden{sv}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

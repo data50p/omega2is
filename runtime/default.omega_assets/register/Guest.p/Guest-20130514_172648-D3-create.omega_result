@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2013-maj-14_17_26_48" pupil="Guest" type="create">
+<entries session_length="1370657">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="-31" word="Bananen"/>
+<entry extra=":again" l_id="s" ord="1" type="select" when="0" word="Bananen"/>
+<entry extra="create:build" l_id="v" ord="2" type="select" when="9578" word="studsar"/>
+<entry duration="9547" l_id_list="s;v" ord="3" sentence="Bananen studsar" type="create"/>
+<entry extra=":again" l_id="v" ord="4" type="select" when="500" word="studsar"/>
+<entry extra=":again" l_id="v" ord="5" type="select" when="0" word="studsar"/>
+<entry extra=":again" l_id="v" ord="6" type="select" when="500" word="växer"/>
+<entry extra=":again" l_id="v" ord="7" type="select" when="0" word="växer"/>
+<entry extra="create:build" l_id="s" ord="8" type="select" when="9297" word="Hunden"/>
+<entry extra="create:build" l_id="v" ord="9" type="select" when="7828" word="studsar"/>
+<entry duration="17125" l_id_list="s;v" ord="10" sentence="Hunden studsar" type="create"/>
+<entry extra="create:build" l_id="s" ord="11" type="select" when="13140" word="Bollen"/>
+<entry extra="create:build" l_id="v" ord="12" type="select" when="13688" word="studsar"/>
+<entry duration="26828" l_id_list="s;v" ord="13" sentence="Bollen studsar" type="create"/>
+<entry extra="create:build" l_id="s" ord="14" type="select" when="10813" word="Bananen"/>
+<entry extra="create:build" l_id="v" ord="15" type="select" when="18547" word="studsar"/>
+<entry duration="29360" l_id_list="s;v" ord="16" sentence="Bananen studsar" type="create"/>
+<entry extra="create:build" l_id="s" ord="17" type="select" when="10437" word="Bananen"/>
+<entry extra="create:build" l_id="v" ord="18" type="select" when="25375" word="flyger"/>
+<entry duration="35812" l_id_list="s;v" ord="19" sentence="Bananen flyger" type="create"/>
+<entry extra="create:build" l_id="s" ord="20" type="select" when="18953" word="Hunden"/>
+<entry extra="create:build" l_id="v" ord="21" type="select" when="7703" word="rullar"/>
+<entry duration="26656" l_id_list="s;v" ord="22" sentence="Hunden rullar" type="create"/>
+<entry extra="create:build" l_id="s" ord="23" type="select" when="11500" word="Katten"/>
+<entry extra="create:build" l_id="v" ord="24" type="select" when="5312" word="rullar"/>
+<entry duration="16812" l_id_list="s;v" ord="25" sentence="Katten rullar" type="create"/>
+<entry extra="create:build" l_id="s" ord="26" type="select" when="37281" word="Katten"/>
+<entry extra="create:build" l_id="v" ord="27" type="select" when="15609" word="sjunger"/>
+<entry duration="52890" l_id_list="s;v" ord="28" sentence="Katten sjunger" type="create"/>
+<entry extra=":again" l_id="v" ord="29" type="select" when="875" word="sjunger"/>
+<entry extra=":again" l_id="v" ord="30" type="select" when="0" word="sjunger"/>
+<entry extra=":again" l_id="v" ord="31" type="select" when="0" word="sjunger"/>
+<entry extra="create:build" l_id="v" ord="32" type="select" when="296" word="sjunger"/>
+<entry extra="create:build" l_id="s" ord="33" type="select" when="9922" word="Musen"/>
+<entry duration="10218" l_id_list="s;v" ord="34" sentence="Musen sjunger" type="create"/>
+<entry extra="create:build" l_id="s" ord="35" type="select" when="12703" word="Katten"/>
+<entry extra="create:build" l_id="v" ord="36" type="select" when="20906" word="sjunger"/>
+<entry duration="33609" l_id_list="s;v" ord="37" sentence="Katten sjunger" type="create"/>
+<entry extra="create:build" l_id="s" ord="38" type="select" when="24109" word="Katten"/>
+<entry extra="create:build" l_id="v" ord="39" type="select" when="9360" word="sjunger"/>
+<entry duration="33469" l_id_list="s;v" ord="40" sentence="Katten sjunger" type="create"/>
+<entry extra="create:build" l_id="s" ord="41" type="select" when="19250" word="Katten"/>
+<entry extra="create:build" l_id="v" ord="42" type="select" when="4187" word="snarkar"/>
+<entry duration="23437" l_id_list="s;v" ord="43" sentence="Katten snarkar" type="create"/>
+<entry extra="create:build" l_id="v" ord="44" type="select" when="171" word="snarkar"/>
+<entry extra=":again" l_id="v" ord="45" type="select" when="625" word="snarkar"/>
+<entry extra=":again" l_id="v" ord="46" type="select" when="0" word="snarkar"/>
+<entry extra=":again" l_id="v" ord="47" type="select" when="0" word="snarkar"/>
+<entry extra=":again" l_id="v" ord="48" type="select" when="891" word="sjunger"/>
+<entry extra=":again" l_id="v" ord="49" type="select" when="281" word="sjunger"/>
+<entry extra="create:build" l_id="s" ord="50" type="select" when="9985" word="Bananen"/>
+<entry duration="11953" l_id_list="s;v" ord="51" sentence="Bananen snarkar" type="create"/>
+<entry extra="create:build" l_id="s" ord="52" type="select" when="15187" word="Katten"/>
+<entry extra=":again" l_id="s" ord="53" type="select" when="41297" word="Katten"/>
+<entry extra="create:build" l_id="v" ord="54" type="select" when="14047" word="rullar"/>
+<entry duration="70531" l_id_list="s;v" ord="55" sentence="Katten rullar" type="create"/>
+<entry extra=":again" l_id="v" ord="56" type="select" when="234" word="rullar"/>
+<entry extra=":again" l_id="v" ord="57" type="select" when="1157" word="studsar"/>
+<entry extra=":again" l_id="v" ord="58" type="select" when="0" word="studsar"/>
+<entry extra=":again" l_id="v" ord="59" type="select" when="0" word="studsar"/>
+<entry extra=":again" l_id="v" ord="60" type="select" when="0" word="studsar"/>
+<entry extra=":again" l_id="v" ord="61" type="select" when="0" word="studsar"/>
+</entries>
+</result>

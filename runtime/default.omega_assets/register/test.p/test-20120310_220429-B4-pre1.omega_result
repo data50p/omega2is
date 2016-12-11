@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE result >
+
+<result created_date="2012-mar-10_22_04_29" pupil="test" type="pre1">
+<entries session_length="87984">
+<entry extra="test:build:OK" l_id="sv" ord="0" type="select" when="6047" word="Svanen"/>
+<entry answer="Svanen" cnt_correct_words="s 1;w +1 -0" duration="6047" extra="" l_id_list="sv" ord="1" sentence="Svanen" type="test"/>
+<entry extra="test:build:OK" l_id="sv" ord="2" type="select" when="6312" word="Asken"/>
+<entry answer="Asken" cnt_correct_words="s 1;w +1 -0" duration="6312" extra="" l_id_list="sv" ord="3" sentence="Asken" type="test"/>
+</entries>
+</result>
