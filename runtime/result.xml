@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE result >
 
-<result created_date="2016-dec-11_23_33_22" pupil="Guest" type="create">
-<entries session_length="96395">
-<entry extra="create:build" l_id="sv" ord="0" type="select" when="3930" word="Biet"/>
-<entry duration="3930" l_id_list="sv" ord="1" sentence="Biet" type="create"/>
-<entry extra="create:build" l_id="sv" ord="2" type="select" when="21232" word="Svanen"/>
-<entry duration="21232" l_id_list="sv" ord="3" sentence="Svanen" type="create"/>
+<result created_date="2016-dec-12_20_50_27" pupil="Guest" type="create">
+<entries session_length="50031">
+<entry extra="create:build" l_id="s" ord="0" type="select" when="1292" word="Biet"/>
+<entry extra="create:build" l_id="v" ord="1" type="select" when="1196" word="dyker"/>
+<entry duration="2488" l_id_list="s;v" ord="2" sentence="Biet dyker" type="create"/>
+<entry extra="create:build" l_id="s" ord="3" type="select" when="1968" word="Pojken"/>
+<entry extra="create:build" l_id="v" ord="4" type="select" when="1065" word="hoppar"/>
+<entry duration="3033" l_id_list="s;v" ord="5" sentence="Pojken hoppar" type="create"/>
 </entries>
 </result>

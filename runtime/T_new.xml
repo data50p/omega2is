@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_112" class="java.beans.XMLDecoder">
+<java version="1.8.0_111" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>Norsk-bokmål</string>
@@ -18,6 +18,58 @@
    <string>Sign Word Transparence</string>
   </void>
   <void method="put">
+   <string>Sign Sentence Movie Scale</string>
+   <string>Sign Sentence Movie Scale</string>
+  </void>
+  <void method="put">
+   <string>Sign Sentence Transparence</string>
+   <string>Sign Sentence Transparence</string>
+  </void>
+  <void method="put">
+   <string>default.omega_assets/register/Norsk-bokmål</string>
+   <string>default.omega_assets/register/Norsk-bokmål</string>
+  </void>
+  <void method="put">
+   <string>default.omega_assets/register/Svenska</string>
+   <string>default.omega_assets/register/Svenska</string>
+  </void>
+  <void method="put">
+   <string>Sign Sentence Background</string>
+   <string>Sign Sentence Background</string>
+  </void>
+  <void method="put">
+   <string>default.omega_assets/register/Tomas</string>
+   <string>default.omega_assets/register/Tomas</string>
+  </void>
+  <void method="put">
+   <string>Svenska</string>
+   <string>Svenska</string>
+  </void>
+  <void method="put">
+   <string>Error while loading lesson: &quot;</string>
+   <string>Error while loading lesson: &quot;</string>
+  </void>
+  <void method="put">
+   <string>Can&apos;t find test test </string>
+   <string>Can&apos;t find test test </string>
+  </void>
+  <void method="put">
+   <string>&lt;Ny Elev&gt;</string>
+   <string>&lt;Ny Elev&gt;</string>
+  </void>
+  <void method="put">
+   <string>Play Sign Moview</string>
+   <string>Play Sign Moview</string>
+  </void>
+  <void method="put">
+   <string>default.omega_assets/register/Guest</string>
+   <string>default.omega_assets/register/Guest</string>
+  </void>
+  <void method="put">
+   <string>default.omega_assets/register/Croatian</string>
+   <string>default.omega_assets/register/Croatian</string>
+  </void>
+  <void method="put">
    <string>Norsk-bm-Bergen</string>
    <string>Norsk-bm-Bergen</string>
   </void>
@@ -30,12 +82,16 @@
    <string>Lesson Lang</string>
   </void>
   <void method="put">
-   <string>Sign Sentence Movie Scale</string>
-   <string>Sign Sentence Movie Scale</string>
+   <string>Can&apos;t find animation: anim/ActiveAnim/StopsInRelationTo1.omega_anim</string>
+   <string>Can&apos;t find animation: anim/ActiveAnim/StopsInRelationTo1.omega_anim</string>
   </void>
   <void method="put">
-   <string>Sign Sentence Transparence</string>
-   <string>Sign Sentence Transparence</string>
+   <string>default.omega_assets/register/test</string>
+   <string>default.omega_assets/register/test</string>
+  </void>
+  <void method="put">
+   <string>default.omega_assets/register/LessonsInEnglish</string>
+   <string>default.omega_assets/register/LessonsInEnglish</string>
   </void>
   <void method="put">
    <string>Item: Sign Movies, positive </string>
@@ -46,24 +102,20 @@
    <string>Croatian</string>
   </void>
   <void method="put">
-   <string>Sign Sentence Background</string>
-   <string>Sign Sentence Background</string>
+   <string>default.omega_assets/register/Nynorsk</string>
+   <string>default.omega_assets/register/Nynorsk</string>
+  </void>
+  <void method="put">
+   <string>default.omega_assets/register/Norsk-bm-Bergen</string>
+   <string>default.omega_assets/register/Norsk-bm-Bergen</string>
   </void>
   <void method="put">
    <string>Tomas</string>
    <string>Tomas</string>
   </void>
   <void method="put">
-   <string>Svenska</string>
-   <string>Svenska</string>
-  </void>
-  <void method="put">
    <string>LessonsInEnglish</string>
    <string>LessonsInEnglish</string>
-  </void>
-  <void method="put">
-   <string>Error while loading lesson: &quot;</string>
-   <string>Error while loading lesson: &quot;</string>
   </void>
   <void method="put">
    <string>Select Directory</string>
@@ -72,14 +124,6 @@
   <void method="put">
    <string>Show Sign after sentence</string>
    <string>Show Sign after sentence</string>
-  </void>
-  <void method="put">
-   <string>Can&apos;t find test test </string>
-   <string>Can&apos;t find test test </string>
-  </void>
-  <void method="put">
-   <string>&lt;Ny Elev&gt;</string>
-   <string>&lt;Ny Elev&gt;</string>
   </void>
   <void method="put">
    <string>Nynorsk</string>
@@ -92,10 +136,6 @@
   <void method="put">
    <string>Tomas Croatia</string>
    <string>Tomas Croatia</string>
-  </void>
-  <void method="put">
-   <string>Play Sign Moview</string>
-   <string>Play Sign Moview</string>
   </void>
  </object>
 </java>

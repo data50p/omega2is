@@ -47,10 +47,20 @@ public class Context {
     public static String omega_lang = null;
 
     public static String omegaAssets(String path) {
+	if (path == null ) {
+	    return null;
+	}
+
+        boolean noAssets = path.contains("toolbarButtonGraphics");
+
 	if (path != null && path.startsWith(omegaAssets)) {
 	    sout_log.getLogger().warning("omegaAssets(): Already omega_assets: " + path);
+	    if ( noAssets )
+	        return antiOmegaAssets(path);
 	    return path;
 	}
+	if ( noAssets )
+	    return path;
         return omegaAssets + '/' + path;
     }
 

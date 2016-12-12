@@ -1,6 +1,7 @@
 package omega.adm.register.data;
 
 import fpdo.sundry.S;
+import omega.Context;
 import omega.i18n.T;
 import omega.lesson.appl.ApplContext;
 
@@ -17,14 +18,19 @@ public class RegLocator {
     public RegLocator() {
     }
 
+    String aFbase() {
+    	return Context.omegaAssets(fbase);
+    }
+
     static String[] scanDir(String dir, FilenameFilter fnf) {
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "scan " + dir + ' ' + fnf);
-	File df = new File(dir);
+	omega.Context.sout_log.getLogger().info("ERR: " + "scan " + dir + ' ' + fnf);
+	String aDir = Context.omegaAssets(dir);
+	File df = new File(aDir);
 	File[] fa = df.listFiles(fnf);
 	if (fa != null) {
 	    String[] sa = new String[fa.length];
 	    for (int i = 0; i < fa.length; i++)
-		sa[i] = dir + File.separatorChar + fa[i].getName();
+		sa[i] = aDir + File.separatorChar + fa[i].getName();
 	    Arrays.sort(sa);
 	    return sa;
 	}
@@ -56,24 +62,24 @@ public class RegLocator {
     }
 
     public String[] getAllPupilsName() {
-	String sa[] = scanDir(fbase, new FilenameFilterExt(PUPIL_SUF));
-	return removePrefix(removeSuffix(sa, PUPIL_SUF), fbase + File.separatorChar);
+	String sa[] = scanDir(aFbase(), new FilenameFilterExt(PUPIL_SUF));
+	return removePrefix(removeSuffix(sa, PUPIL_SUF), aFbase() + File.separatorChar);
     }
 
     public String[] getAllResultsFName(String pupil, String[] with) {
-	String sa[] = scanDir(fbase + File.separatorChar + pupil + PUPIL_SUF, new FilenameFilterExt(RESULT_SUF, with));
+	String sa[] = scanDir(aFbase() + File.separatorChar + pupil + PUPIL_SUF, new FilenameFilterExt(RESULT_SUF, with));
 	return sa;
     }
 
     public String getFullFName(String pupil, String lesson_name) {
-	String s = fbase + File.separatorChar +
+	String s = aFbase() + File.separatorChar +
 		pupil + PUPIL_SUF + File.separatorChar +
 	    /*pupil + '-' +*/ lesson_name + RESULT_SUF;
 	return s;
     }
 
     public String getDirPath(String pupil) {
-	return fbase + File.separatorChar +
+	return aFbase() + File.separatorChar +
 		pupil + PUPIL_SUF + File.separatorChar;
     }
 
@@ -83,7 +89,7 @@ public class RegLocator {
 
     public String mkResultsFName(String pupil, String name) {
 	String s =
-		fbase + File.separatorChar +
+		aFbase() + File.separatorChar +
 			pupil + PUPIL_SUF + File.separatorChar +
 			name + RESULT_SUF;
 	return s;

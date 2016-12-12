@@ -3676,10 +3676,10 @@ public class Lesson implements LessonCanvasListener {
 
     void putDynamic(String thisLessonName,
 		    String actor_lid,
-		    String actor_text, // ¬ß_ separated    ////    UTF-8
+		    String actor_text, // § separated    ////    UTF-8
 		    String timeline_lid) {
 	try {
-	    String sa[] = actor_text.split("¬ß");  ////    UTF-8
+	    String sa[] = actor_text.split("§");  ////    UTF-8
 	    // 	    omega.Context.sout_log.getLogger().info("ERR: " + "put dyn " + thisLessonName + ' ' +
 	    // 		 actor_lid + ' ' +
 	    // 		 actor_text + ' ' +
