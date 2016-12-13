@@ -28,23 +28,22 @@
 <AllActors>
 <Actor hotspot_begin="0.5438993710691824 0.94" hotspot_end="0.839496855345912 0.24" hotspot_rotate="0.7330817610062894 0.61" lesson_id="squirrel" name="actor/FlyJump/Squirrel.png" nid="0" prim_mirror="0" prim_scale="0.7" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.4952830188679246 0.85" hotspot_end="0.5023584905660378 0.85" hotspot_rotate="0.5 0.5" name="actor/water/splash256.png" nid="1" prim_mirror="0" prim_scale="0.5" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.39106870229007634 0.84" hotspot_end="0.83206106870229 0.22" hotspot_rotate="0.47427480916030534 0.45" lesson_id="frog" name="actor/water/frog.png" nid="2" prim_mirror="0" prim_scale="0.7" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.8571428571428571 0.93" hotspot_end="0.1836734693877551 0.46" hotspot_rotate="0.5 0.5" lesson_id="cat" name="actor/FlyJump/Cat.png" nid="3" prim_mirror="1" prim_scale="0.8" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.39106870229007634 0.84" hotspot_end="0.83206106870229 0.22" hotspot_rotate="0.47427480916030534 0.45" lesson_id="frog" name="actor/frog.png" nid="2" prim_mirror="0" prim_scale="0.7" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.8571428571428571 0.93" hotspot_end="0.17346938775510204 0.41" hotspot_rotate="0.5 0.5" lesson_id="cat" name="actor/FlyJump/Cat.png" nid="3" prim_mirror="1" prim_scale="0.8" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.4459898477157361 0.95" hotspot_end="0.4459898477157361 0.11" hotspot_rotate="0.4459898477157361 0.47" lesson_id="girl" name="actor/FlyJump/Girl.png" nid="4" prim_mirror="1" prim_scale="0.8" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.48698630136986293 0.95" hotspot_end="0.43287671232876707 0.12" hotspot_rotate="0.5 0.5" lesson_id="boy" name="actor/FlyJump/Boy.png" nid="5" prim_mirror="1" prim_scale="0.8" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.47340563991323215 0.89" hotspot_end="0.8284598698481562 0.5" hotspot_rotate="0.47340563991323215 0.51" lesson_id="bee" name="actor/ChaseRun/Bee3.png" nid="6" prim_mirror="0" prim_scale="0.3" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.6131147540983607 0.85" hotspot_end="0.8918032786885246 0.23" hotspot_rotate="0.6444672131147541 0.43" lesson_id="mouse" name="actor/FlyJump/mouse.png" nid="7" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_8.gif" nid="8" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.47340563991323215 0.89" hotspot_end="0.8284598698481562 0.5" hotspot_rotate="0.47340563991323215 0.51" lesson_id="bee" name="actor/ChaseRun/Bee3.png" nid="6" prim_mirror="1" prim_scale="0.3" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.6131147540983607 0.85" hotspot_end="0.8952868852459016 0.16" hotspot_rotate="0.6444672131147541 0.43" lesson_id="mouse" name="actor/mouse.png" nid="7" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_9.gif" nid="9" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_10.gif" nid="10" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_11.gif" nid="11" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 </AllActors>
 <AllWings>
-<Wing layer="4" mirror="0" name="Wings/PondLayer1_3.png" nid="0" position="-9.0 234.0" scale="1.0"/>
-<Wing layer="0" mirror="0" name="Wings/PondLayer4_5.png" nid="1" position="-23.0 153.0" scale="1.0"/>
-<Wing layer="4" mirror="0" name="Wings/PondLayer6.png" nid="2" position="-12.0 365.0" scale="1.0"/>
-<Wing layer="0" mirror="1" name="Wings/PondLayer6.png" nid="3" position="264.0 449.0" scale="0.6"/>
-<Wing layer="1" mirror="0" name="Wings/PondLayer7.png" nid="4" position="-1.0 3.0" scale="1.0"/>
+<Wing layer="4" mirror="0" name="Wings/dammlayer1_3.png" nid="0" position="-9.0 234.0" scale="1.0"/>
+<Wing layer="0" mirror="0" name="Wings/dammlayer4_5.png" nid="1" position="-23.0 153.0" scale="1.0"/>
+<Wing layer="4" mirror="0" name="Wings/dammlayer6.png" nid="2" position="-12.0 365.0" scale="1.0"/>
+<Wing layer="0" mirror="1" name="Wings/dammlayer6.png" nid="3" position="264.0 449.0" scale="0.6"/>
+<Wing layer="1" mirror="0" name="Wings/dammlayer7.png" nid="4" position="-1.0 3.0" scale="1.0"/>
 <Wing layer="2" mirror="0" name="Wings/boat.png" nid="5" position="-165.0 173.0" scale="1.0"/>
 <Wing layer="4" mirror="0" name="Wings/PondLayer6.png" nid="6" position="323.0 384.0" scale="1.0"/>
 </AllWings>

@@ -21,7 +21,7 @@
 </AllPath>
 <lesson verb="jagar"/>
 <AllActors>
-<Actor hotspot_begin="0.8631446540880504 0.96" hotspot_end="0.8749685534591196 0.97" hotspot_rotate="0.5 0.5" lesson_id="squirrel" name="actor/FlyJump/Squirrel.png" nid="0" prim_mirror="0" prim_scale="0.3" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.8631446540880504 0.96" hotspot_end="0.8749685534591196 0.97" hotspot_rotate="0.5 0.5" lesson_id="squirrel" name="actor/Squirrel.png" nid="0" prim_mirror="0" prim_scale="0.3" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="actor/FlyJump/JumpMatJump.png" nid="1" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.1326530612244898 0.97" hotspot_end="0.1326530612244898 0.96" hotspot_rotate="0.5 0.5" lesson_id="cat" name="actor/FlyJump/Cat.png" nid="2" prim_mirror="1" prim_scale="0.4" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.2908629441624366 0.92" hotspot_end="0.310253807106599 0.92" hotspot_rotate="0.5 0.5" lesson_id="girl" name="actor/FlyJump/Girl.png" nid="3" prim_mirror="1" prim_scale="0.5" var1="" var2="" var3=""/>

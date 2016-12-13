@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_111" class="java.beans.XMLDecoder">
+<java version="1.8.0_101" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>Norsk-bokmål</string>
@@ -38,6 +38,10 @@
    <string>Sign Sentence Background</string>
   </void>
   <void method="put">
+   <string>Can&apos;t find animation: anim/ActiveAnim/SwimUnderTheBoat.omega_anim</string>
+   <string>Can&apos;t find animation: anim/ActiveAnim/SwimUnderTheBoat.omega_anim</string>
+  </void>
+  <void method="put">
    <string>default.omega_assets/register/Tomas</string>
    <string>default.omega_assets/register/Tomas</string>
   </void>
@@ -110,8 +114,16 @@
    <string>default.omega_assets/register/Norsk-bm-Bergen</string>
   </void>
   <void method="put">
+   <string>(Post Test Dummy Sign):</string>
+   <string>(Post Test Dummy Sign):</string>
+  </void>
+  <void method="put">
    <string>Tomas</string>
    <string>Tomas</string>
+  </void>
+  <void method="put">
+   <string>Sign</string>
+   <string>Sign</string>
   </void>
   <void method="put">
    <string>LessonsInEnglish</string>

@@ -23,7 +23,7 @@
 <Actor hotspot_begin="0.9 0.19" hotspot_end="0.9211764705882353 0.17" hotspot_rotate="0.47647058823529415 0.51" lesson_id="buzzard" name="actor/ChaseRun/Buzzard.png" nid="0" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.6305000000000001 0.21000000000000002" hotspot_end="0.6305000000000001 0.21000000000000002" hotspot_rotate="0.6466666666666667 0.5700000000000001" lesson_id="banana" name="actor/puts/Banana.png" nid="1" prim_mirror="0" prim_scale="0.6" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.9766666666666667 0.5031764705882352" hotspot_end="0.9766666666666667 0.5031764705882352" hotspot_rotate="0.5 0.5" lesson_id="beaver" name="actor/ChaseRun/Beaver.png" nid="2" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.42810126582278474 0.19" hotspot_end="0.4168354430379746 0.2" hotspot_rotate="0.5 0.5" lesson_id="apple" name="actor/puts/apple.png" nid="3" prim_mirror="0" prim_scale="0.5" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.42810126582278474 0.19" hotspot_end="0.4168354430379746 0.2" hotspot_rotate="0.5 0.5" lesson_id="apple" name="actor/apple.png" nid="3" prim_mirror="0" prim_scale="0.5" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" lesson_id="bananas" name="actor/puts/Bananas.png" nid="4" prim_mirror="0" prim_scale="0.4" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_5.gif" nid="5" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_6.gif" nid="6" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>

@@ -14,9 +14,9 @@
 <lesson verb="$chase jagar $chased"/>
 <AllActors>
 <Actor hotspot_begin="0.49874999999999997 0.88" hotspot_end="0.49874999999999997 0.88" hotspot_rotate="0.5 0.5" lesson_id="car" name="actor/Things/car2big.png" nid="0" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.4783950617283951 0.88" hotspot_end="0.4861111111111111 0.88" hotspot_rotate="0.5 0.5" lesson_id="mc" name="actor/Things/mc_and_man_big.png" nid="1" prim_mirror="0" prim_scale="0.8" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.4783950617283951 0.88" hotspot_end="0.4861111111111111 0.88" hotspot_rotate="0.5 0.5" lesson_id="mc" name="actor/mc_and_man_big.png" nid="1" prim_mirror="0" prim_scale="0.8" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.4989154013015184 0.85" hotspot_end="0.49392624728850326 0.85" hotspot_rotate="0.5 0.5" lesson_id="bus" name="actor/Things/bus.png" nid="2" prim_mirror="0" prim_scale="0.55" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="actor/Things/mcB.png" nid="3" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="actor/mcB.png" nid="3" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_4.gif" nid="4" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_5.gif" nid="5" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_6.gif" nid="6" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>

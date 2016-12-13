@@ -38,11 +38,11 @@
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_9.gif" nid="9" prim_mirror="0" prim_scale="1.0"/>
 </AllActors>
 <AllWings>
-<Wing layer="4" mirror="0" name="Wings/PondLayer1_3.png" nid="0" position="-9.0 234.0" scale="1.0"/>
-<Wing layer="0" mirror="0" name="Wings/PondLayer4_5.png" nid="1" position="-23.0 153.0" scale="1.0"/>
-<Wing layer="4" mirror="0" name="Wings/PondLayer6.png" nid="2" position="-12.0 365.0" scale="1.0"/>
-<Wing layer="0" mirror="1" name="Wings/PondLayer6.png" nid="3" position="264.0 449.0" scale="0.6"/>
-<Wing layer="1" mirror="0" name="Wings/PondLayer7.png" nid="4" position="-1.0 3.0" scale="1.0"/>
+<Wing layer="4" mirror="0" name="Wings/dammlayer1_3.png" nid="0" position="-9.0 234.0" scale="1.0"/>
+<Wing layer="0" mirror="0" name="Wings/dammlayer4_5.png" nid="1" position="-23.0 153.0" scale="1.0"/>
+<Wing layer="4" mirror="0" name="Wings/dammlayer6.png" nid="2" position="-12.0 365.0" scale="1.0"/>
+<Wing layer="0" mirror="1" name="Wings/dammlayer6.png" nid="3" position="264.0 449.0" scale="0.6"/>
+<Wing layer="1" mirror="0" name="Wings/dammlayer7.png" nid="4" position="-1.0 3.0" scale="1.0"/>
 <Wing layer="4" mirror="0" name="Wings/PondLayer6.png" nid="5" position="323.0 384.0" scale="1.0"/>
 <Wing layer="0" mirror="0" name="Wings/PondLayer6.png" nid="6" position="514.0 364.0" scale="1.0"/>
 <Wing layer="4" mirror="1" name="Wings/PondLayer6.png" nid="7" position="520.0 322.0" scale="1.2"/>
