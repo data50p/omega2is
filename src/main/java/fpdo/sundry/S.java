@@ -19,15 +19,6 @@ public class S {
 
     // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    public static BufferedReader fopenr(String fn) {
-	try {
-	    FileReader fr = new FileReader(fn);
-	    return new BufferedReader(fr);
-	} catch (Exception ex) {
-	    return null;
-	}
-    }
-
     public static PrintWriter createPrintWriter(String fn) {
 	return createPrintWriter(fn, false);
     }
@@ -50,16 +41,6 @@ public class S {
 	return pw;
     }
 
-
-    public static PrintWriter createPrintWriterUTF8(OutputStream os) {
-	try {
-	    PrintWriter pw = new PrintWriter(new OutputStreamWriter(new BufferedOutputStream(os), "UTF-8"));
-	    return pw;
-	} catch (IOException ex) {
-	    return null;
-	}
-    }
-
     public static PrintWriter createPrintWriterUTF8(String fn) {
 	return createPrintWriterUTF8(fn, false);
     }
@@ -75,44 +56,6 @@ public class S {
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    public static String as02(int d) {
-	if (d < 10)
-	    return "0" + d;
-	else
-	    return "" + d;
-    }
-
-    public static String as_2(int d) {
-	if (d < 10)
-	    return " " + d;
-	else
-	    return "" + d;
-    }
-
-    public static String as_02(double d) {
-	if (d < 0)
-	    return "-" + as_02(-d);
-	int a = (int) d;
-	double f = d - a;
-	f *= 100;
-	int b = (int) (f + 0.001);
-	if (b == 100)
-	    return "" + (a + 1) + ".00";
-	else if (b < 10)
-	    return "" + a + ".0" + b;
-	else
-	    return "" + a + "." + b;
-    }
-
-    public static String pR(int a, int w) {
-	String s = "" + a;
-	int n = w - s.length();
-	String ss = "";
-	for (int i = 0; i < n; i++)
-	    ss += ' ';
-	return s + ss;
-    }
 
     public static String pL(int a, int w, char pad) {
 	String s = "" + a;
@@ -169,18 +112,6 @@ public class S {
 	return arr;
     }
 
-    public static int[] splitI(String str, String split) {
-	String sa[] = split(str, split);
-	int[] ia = (int[]) castArray(sa, new int[0]);
-	return ia;
-    }
-
-    public static double[] splitD(String str, String split) {
-	String sa[] = split(str, split);
-	double[] ia = (double[]) castArray(sa, new double[0]);
-	return ia;
-    }
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     public static String a2s(Object o, int w) {
@@ -199,16 +130,8 @@ public class S {
 	return arrToString(o, delim, w, pad);
     }
 
-    public static String arrToString(Object o, int w) {
-	return arrToString(o, ",", w, ' ');
-    }
-
     public static String arrToString(Object o) {
 	return arrToString(o, ",", 0, ' ');
-    }
-
-    public static String arrToString(Object o, String delim) {
-	return arrToString(o, delim, 0, ' ');
     }
 
     public static String arrToString(Object o, String delim, int w, char pad) {
@@ -398,10 +321,6 @@ public class S {
 
     static int scrN = 5;
 
-    public static void setScrambleN(int n) {
-	scrN = n;
-    }
-
     public static void scrambleArr(Object a) {
 	if (a == null)
 	    return;
@@ -492,29 +411,7 @@ public class S {
 	return;
     }
 
-    public static String scrambleStr(String s) {
-	char[] arr = s.toCharArray();
-	scrambleArr(arr);
-	return new String(arr);
-    }
-
-
-    /*
-	try {
-	    Class type = Class.forName("int");
-	    int size = 10;
-	    Object o = java.lang.reflect.Array.newInstance(type, size);
-
-	    for(int i = 0; i < size; i++) {
-		java.lang.reflect.Array.setInt(o, i, i);
-	    }
-	    ff(o);
-	} catch (Exception ex) {
-	    omega.Context.sout_log.getLogger().info("ex " + ex);
-	}
-    */
-
-// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     public static double tD(String s) {
 	try {
@@ -526,45 +423,6 @@ public class S {
 	}
     }
 
-//  // - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-//      static void sortIntArr(int[] a) throws Exception {
-//  	Arrays.sort(a);
-//      }
-
-//      static void sortCharArr(char[] a) throws Exception {
-//  	Arrays.sort(a);
-//      }
-
-//      static void sortByteArr(byte[] a) throws Exception {
-//  	Arrays.sort(a);
-//      }
-
-//      public static boolean sortArr(Object a) {
-//  	if ( a == null )
-//  	    return true;
-//  	try {
-//  	    Class cls = a.getClass();
-//  	    if ( cls.isArray() ) {
-//  		Class clsc = cls.getComponentType();
-//  		if ( !clsc.isPrimitive() ) {
-//  		    sortArr(a);
-//  		}
-//  		if ( clsc.getName().equals("int") ) {
-//  		    sortIntArr((int[])a);
-//  		}
-//  		if ( clsc.getName().equals("char") ) {
-//  		    sortCharArr((char[])a);
-//  		}
-//  		if ( clsc.getName().equals("byte") ) {
-//  		    sortByteArr((byte[])a);
-//  		}
-//  	    }
-//  	    return true;
-//  	} catch (Exception ex) {
-//  	    return false;
-//  	}
-//      }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -637,16 +495,7 @@ public class S {
 	    return ia;
 	}
 
-	public synchronized int[] asIntArray(int n) {
-	    int[] ia = new int[n];
-	    for (int i = 0; i < n; i++)
-		ia[i] = getNext();
-	    return ia;
-	}
-
     }
-
-    ;
 
     public static Uniq createUniq(int max) {
 	return new S.Uniq(max);
@@ -656,22 +505,7 @@ public class S {
 
     private static Random randG = new Random();
 
-    static RandGen alt_rand;
-
-    public static void setAltRand(RandGen rg) {
-	omega.Context.sout_log.getLogger().info("ERR: " + "### alt");
-	alt_rand = rg;
-    }
-
     public static int rand(int a) {
-	if (alt_rand != null)
-	    return alt_rand.rand_(a);
-
-	int r = 0x7fffffff & randG.nextInt();
-	return r % a;
-    }
-
-    public static int rand_(int a) {
 	int r = 0x7fffffff & randG.nextInt();
 	return r % a;
     }
@@ -718,4 +552,3 @@ public class S {
 	return argl;
     }
 }
-

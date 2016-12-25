@@ -3,19 +3,21 @@ package fpdo.sundry;
 import java.awt.*;
 import java.util.HashMap;
 
-class Item {
-    int r, g, b;
-    String name;
-
-    Item(int r, int g, int b, String n) {
-	this.r = r;
-	this.g = g;
-	this.b = b;
-	this.name = n;
-    }
-}
 
 public class RGB {
+
+    static class Item {
+	int r, g, b;
+	String name;
+
+	Item(int r, int g, int b, String n) {
+	    this.r = r;
+	    this.g = g;
+	    this.b = b;
+	    this.name = n;
+	}
+    }
+
     static HashMap hm;
     static HashMap hmc;
 
