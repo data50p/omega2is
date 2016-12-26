@@ -1,7 +1,5 @@
 package omega.lesson.appl;
 
-import com.apple.eawt.Application;
-import com.apple.eawt.FullScreenUtilities;
 import omega.connect.httpd.Server;
 import omega.help.HelpSystem;
 

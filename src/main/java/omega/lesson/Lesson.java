@@ -2,7 +2,6 @@ package omega.lesson;
 
 // has UTF-8 ¬ß
 
-import com.apple.eawt.Application;
 import fpdo.sundry.S;
 import fpdo.xml.Element;
 import omega.Config;
@@ -3933,14 +3932,18 @@ public class Lesson implements LessonCanvasListener {
 	if (smaller == false && window instanceof JFrame) {
 	    ((JFrame) window).setExtendedState(JFrame.MAXIMIZED_BOTH);
 	    if (ApplLesson.isMac) {
-	        try {
-//		    Class util = Class.forName("com.apple.eawt.Application");
-//		    Class params[] = new Class[]{Window.class};
-//		    Method method = util.getMethod("requestToggleFullScreen", params);
-//		    method.invoke(util, this, true);
-		    Application.getApplication().requestToggleFullScreen(window);
-		} catch (Exception ex) {
-	            ex.printStackTrace();
+		try {
+		    Class appClass = Class.forName("com.apple.eawt.Application");
+		    Class params[] = new Class[]{};
+
+		    Method getApplication = appClass.getMethod("getApplication", params);
+		    Object application = getApplication.invoke(appClass);
+		    Method requestToggleFulLScreen = application.getClass().getMethod("requestToggleFullScreen", Window.class);
+
+		    requestToggleFulLScreen.invoke(application, window);
+//		    Application.getApplication().requestToggleFullScreen(window);
+		} catch (Exception e) {
+		    System.out.println("An exception occurred while trying to toggle full screen mode");
 		}
 	    }
 	}

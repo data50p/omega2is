@@ -1,7 +1,5 @@
 package omega.lesson.appl;
 
-import com.apple.eawt.Application;
-import com.apple.eawt.FullScreenUtilities;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.ToolBar_LessonEditor;
