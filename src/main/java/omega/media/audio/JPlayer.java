@@ -2,13 +2,8 @@ package omega.media.audio;
 
 //åäö
 
-import javazoom.jl.player.advanced.PlaybackEvent;
-import javazoom.jl.player.advanced.PlaybackListener;
-import javazoom.jl.player.advanced.jlap;
-
 import javax.sound.sampled.*;
 import java.io.File;
-import java.io.IOException;
 
 public class JPlayer implements LineListener {
     String fn;
@@ -28,9 +23,8 @@ public class JPlayer implements LineListener {
     static boolean o = false;
     static int N = 4096 * 16;
 
-    boolean use_mp3 = false;
-
     String realy_name;
+
 
     private static void s_pe(String s) {
 	if (o)
@@ -72,23 +66,6 @@ public class JPlayer implements LineListener {
 
 	this.fn = fn;
 	realy_name = fn;
-	if (fn.endsWith(".mp3")) {
-	    initMp3(fn);
-	    return;
-	}
-
-	if (true) {
-	    String fn3 = fn.replaceAll("\\.wav", ".mp3");
-	    File file3 = new File(fn3);
-	    File file2 = new File(fn);
-	    if (file3.exists() && !file2.exists()) {
-		omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer: fn -> " + fn3);
-		initMp3(fn3);
-		realy_name = fn3;
-		return;
-	    }
-	}
-
 	try {
 	    File file = new File(fn);
 	    ais = AudioSystem.getAudioInputStream(file);
@@ -96,7 +73,7 @@ public class JPlayer implements LineListener {
 	    sdataline = getSourceDataLine(aformat);
 	    sdataline.addLineListener(this);
 
-	    //omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer: " + ais + ' ' + aformat + ' ' + sdataline);
+	    System.err.println("ERR: " + "JPlayer: " + ais + ' ' + aformat + ' ' + sdataline);
 	} catch (Exception ex) {
 	    ais = null;
 	    aformat = null;
@@ -105,11 +82,6 @@ public class JPlayer implements LineListener {
 	    omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer: " + ex);
 	}
     }
-
-    private void initMp3(String fn) {
-	use_mp3 = true;
-    }
-
 
     public static SourceDataLine getSourceDataLine(AudioFormat format) throws LineUnavailableException {
 	DataLine.Info info = new DataLine.Info(SourceDataLine.class, format);
@@ -123,7 +95,7 @@ public class JPlayer implements LineListener {
 	synchronized (lock) {
 	    try {
 		while (!done)
-		    lock.wait();
+		    lock.wait(1000);
 	    } catch (InterruptedException ex) {
 	    }
 	}
@@ -132,29 +104,6 @@ public class JPlayer implements LineListener {
     static final byte[] silent_buf = new byte[4096 * 4];
 
     void play() {
-	if (use_mp3) {
-	    //	if ( jlp_player != null ) {
-	    Thread th = new Thread(new Runnable() {
-		public void run() {
-		    try {
-			Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
-			InfoListener lst = new InfoListener();
-			String filename = realy_name;
-			jlap.playMp3(new File(filename), lst);
-			//omega.Context.sout_log.getLogger().info("ERR: " + "mp3 play running " + filename);
-		    } catch (javazoom.jl.decoder.JavaLayerException ex) {
-			ex.printStackTrace(System.err);
-			done = true;
-		    } catch (IOException ex) {
-			ex.printStackTrace(System.err);
-			done = true;
-		    }
-		}
-	    });
-	    th.start();
-	    return;
-	}
-
 	try {
 	    Thread th = new Thread(new Runnable() {
 		public void run() {
@@ -219,7 +168,6 @@ public class JPlayer implements LineListener {
 	}
     }
 
-
     private void waitOpen() {
 	synchronized (this) {
 	    while (!opened) {
@@ -275,19 +223,4 @@ public class JPlayer implements LineListener {
 
 	notifyAll();
     }
-
-    public class InfoListener extends PlaybackListener {
-	public void playbackStarted(PlaybackEvent evt) {
-	    omega.Context.sout_log.getLogger().info("Play started from frame " + evt.getFrame());
-	}
-
-	public void playbackFinished(PlaybackEvent evt) {
-	    omega.Context.sout_log.getLogger().info("Play completed at frame " + evt.getFrame());
-	    done = true;
-	    synchronized (lock) {
-		lock.notifyAll();
-	    }
-	}
-    }
 }
-

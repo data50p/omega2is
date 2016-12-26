@@ -20,7 +20,10 @@ public class APlayer {
 
     static boolean T = true;
 
+    static boolean alwaysFxPlayer = true;
+
     JPlayer jplayer;
+    FxPlayer fxplayer;
 
     private APlayer() {
     }
@@ -158,8 +161,14 @@ public class APlayer {
 	    try {
 		if (true || !omega.appl.Settings.getSettings().getBoolean("audio-jmf")) {
 		    apl = new APlayer(nname, id);
-		    apl.jplayer = new JPlayer(ffname);
-		    // omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer created: " + nname + ' ' + apl.jplayer.realy_name);
+		    ffname = maybeeTheMp3(ffname);
+		    if ( ffname.endsWith(".mp3") || alwaysFxPlayer ) {
+		    	apl.fxplayer = new FxPlayer(ffname);
+			omega.Context.sout_log.getLogger().info("ERR: " + "FxPlayer created: " + nname + ' ' + apl.fxplayer.realy_name);
+		    } else {
+			apl.jplayer = new JPlayer(ffname);
+			omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer created: " + nname + ' ' + apl.jplayer.realy_name);
+		    }
 		} else {
 		    URL url = new URL(url_name);
 		    if (omega.Config.T)
@@ -195,25 +204,38 @@ public class APlayer {
 	return null;
     }
 
+    private static String maybeeTheMp3(String fn) {
+	String fnMp3 = fn.replaceAll("\\.wav$", ".mp3");
+	File fileMp3 = new File(fnMp3);
+	File file = new File(fn);
+	return fileMp3.exists() && !file.exists() ? fnMp3 : fn;
+    }
+
 
     public void play() {
+	if (fxplayer != null) {
+	    fxplayer.play(false);
+	    return;
+	}
 	if (jplayer != null) {
 	    jplayer.play();
 	    return;
 	}
-
 	if (player != null) {
 	    player.start();
 	}
     }
 
     public void playWait() {
+	if (fxplayer != null) {
+	    fxplayer.play(true);
+	    return;
+	}
 	if (jplayer != null) {
 	    jplayer.play();
 	    jplayer.waitAudio();
 	    return;
 	}
-
 	if (player == null)
 	    return;
 	if (state_helper != null) {
