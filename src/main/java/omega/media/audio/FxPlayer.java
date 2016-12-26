@@ -2,18 +2,9 @@ package omega.media.audio;
 
 //åäö
 
-// This is LGPL, http://www.javazoom.net/mp3spi/about.html
-
-import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
-import javafx.event.EventHandler;
-import javafx.scene.SceneBuilder;
-import javafx.scene.control.LabelBuilder;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.text.Font;
-import javafx.stage.StageBuilder;
-import javafx.stage.WindowEvent;
 
 import javax.sound.sampled.*;
 import javax.swing.*;
