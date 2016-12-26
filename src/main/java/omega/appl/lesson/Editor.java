@@ -1,5 +1,6 @@
 package omega.appl.lesson;
 
+import com.apple.eawt.Application;
 import fpdo.sundry.S;
 import omega.Context;
 import omega.LicenseShow;

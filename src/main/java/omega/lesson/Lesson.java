@@ -2,6 +2,7 @@ package omega.lesson;
 
 // has UTF-8 ¬ß
 
+import com.apple.eawt.Application;
 import fpdo.sundry.S;
 import fpdo.xml.Element;
 import omega.Config;
@@ -12,6 +13,7 @@ import omega.lesson.actions.ActionI;
 import omega.lesson.actions.AnimAction;
 import omega.lesson.actions.MpgAction;
 import omega.lesson.appl.ApplContext;
+import omega.lesson.appl.ApplLesson;
 import omega.lesson.canvas.*;
 import omega.lesson.canvas.result.ResultDialogTableSummary;
 import omega.lesson.machine.Item;
@@ -36,6 +38,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.*;
+import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -3929,6 +3932,17 @@ public class Lesson implements LessonCanvasListener {
 
 	if (smaller == false && window instanceof JFrame) {
 	    ((JFrame) window).setExtendedState(JFrame.MAXIMIZED_BOTH);
+	    if (ApplLesson.isMac) {
+	        try {
+//		    Class util = Class.forName("com.apple.eawt.Application");
+//		    Class params[] = new Class[]{Window.class};
+//		    Method method = util.getMethod("requestToggleFullScreen", params);
+//		    method.invoke(util, this, true);
+		    Application.getApplication().requestToggleFullScreen(window);
+		} catch (Exception ex) {
+	            ex.printStackTrace();
+		}
+	    }
 	}
 
 	for (; ; ) {

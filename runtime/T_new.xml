@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_101" class="java.beans.XMLDecoder">
+<java version="1.8.0_112" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>Norsk-bokmål</string>
@@ -100,6 +100,10 @@
   <void method="put">
    <string>Item: Sign Movies, positive </string>
    <string>Item: Sign Movies, positive </string>
+  </void>
+  <void method="put">
+   <string>Reset Starter</string>
+   <string>Reset Starter</string>
   </void>
   <void method="put">
    <string>Croatian</string>

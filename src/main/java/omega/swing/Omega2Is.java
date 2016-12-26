@@ -3,18 +3,21 @@ package omega.swing;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
-import omega.ShowLicense;
+import fpdo.sundry.PreferenceUtil;
+import javafx.embed.swing.JFXPanel;
+import omega.appl.Settings;
 import omega.appl.lesson.Editor;
 import omega.appl.lesson.Runtime;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.HashMap;
 
 /**
  * Created by lars on 2016-12-10.
  */
-public class ShowStarter extends JDialog {
+public class Omega2Is extends JDialog {
     private JPanel contentPane;
     private JButton lessonEditorButton;
     private JButton settingsButton;
@@ -25,7 +28,15 @@ public class ShowStarter extends JDialog {
     String[] args;
     private static Integer selection = null;
 
-    public ShowStarter() {
+    private static PreferenceUtil pu = new PreferenceUtil(Omega2Is.class);
+
+    public Omega2Is() {
+        super((Frame) null, "Omega2Is");
+	initFx();
+
+	HashMap settings = (HashMap) pu.getObject("settings", new HashMap());
+
+	setTitle("Omega2Is - Selection");
 	setContentPane(contentPane);
 	setModal(true);
 	getRootPane().setDefaultButton(settingsButton);
@@ -35,6 +46,7 @@ public class ShowStarter extends JDialog {
 	    public void actionPerformed(ActionEvent e) {
 		setVisible(false);
 		selection = 1;
+		savePref(settings);
 	    }
 	});
 	lessonRuntimeButton.addActionListener(new ActionListener() {
@@ -42,6 +54,7 @@ public class ShowStarter extends JDialog {
 	    public void actionPerformed(ActionEvent e) {
 		setVisible(false);
 		selection = 2;
+		//savePref(settings);
 	    }
 	});
 	animEditorButton.addActionListener(new ActionListener() {
@@ -49,27 +62,57 @@ public class ShowStarter extends JDialog {
 	    public void actionPerformed(ActionEvent e) {
 		setVisible(false);
 		selection = 3;
+		savePref(settings);
 	    }
 	});
 	settingsButton.addActionListener(new ActionListener() {
 	    @Override
 	    public void actionPerformed(ActionEvent e) {
+		setVisible(false);
 		selection = 4;
 	    }
 	});
     }
 
+    public static void enableStarter() {
+	HashMap settings = (HashMap) pu.getObject("settings", new HashMap());
+	settings.put("selection", 0);
+	pu.save("settings", settings);
+    }
+
+    private void savePref(HashMap settings) {
+	if (rememberSelectionCheckBox.isSelected()) {
+	    settings.put("selection", selection);
+	} else {
+	    settings.put("selection", 0);
+	}
+	pu.save("settings", settings);
+    }
+
+    public static void initFx() {
+	SwingUtilities.invokeLater(() -> {
+	    new JFXPanel();
+	});
+    }
+
     public static void main(String[] args) {
-	ShowStarter ss = new ShowStarter();
-	ss.args = args;
-	ss.pack();
-	ss.setVisible(true);
-	while (selection == null) {
+	HashMap settings = (HashMap) pu.getObject("settings", new HashMap());
+	Integer setting_selection = (Integer) settings.get("selection");
+	if (false && setting_selection != null && setting_selection > 0) {
+	    selection = setting_selection;
+	} else {
+	    Omega2Is ss = new Omega2Is();
+	    ss.args = args;
+	    ss.pack();
+	    ss.setVisible(true);
+	}
+	while (selection == null || selection == 0) {
 	    try {
 		Thread.sleep(200);
 	    } catch (InterruptedException e) {
 	    }
 	}
+
 	switch (selection) {
 	    case 1:
 		Editor.main(args);
@@ -81,10 +124,9 @@ public class ShowStarter extends JDialog {
 		omega.appl.animator.Editor.main(args);
 		break;
 	    case 4:
-		ShowLicense.main(args);
+		Settings.main(args);
 		break;
 	}
-	System.exit(0);
     }
 
     {

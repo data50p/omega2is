@@ -1,9 +1,11 @@
 package omega.lesson.appl;
 
-import omega.Context;
+import com.apple.eawt.Application;
+import com.apple.eawt.FullScreenUtilities;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.ToolBar_LessonEditor;
+import omega.swing.Omega2Is;
 import omega.swing.ToolAction;
 import omega.swing.ToolExecute;
 
@@ -19,7 +21,6 @@ public class LessonEditor extends ApplLesson {
     public LessonEditor(String title, String fn) {
 	super(title, true);
 	is_editor = true;
-
 
 	TOP_JFRAME = this;
 	ApplContext.top_frame = this;
@@ -107,6 +108,8 @@ public class LessonEditor extends ApplLesson {
 	    } else if ("save".equals(cmd)) {
 		le.mact_Save();
 		unsetDirty();
+	    } else if ("resetstarter".equals(cmd)) {
+		Omega2Is.enableStarter();
 	    } else if ("saveas".equals(cmd)) {
 		le.mact_SaveAs();
 		unsetDirty();
@@ -168,6 +171,7 @@ public class LessonEditor extends ApplLesson {
 
 	jm.addSeparator();
 	toolbar.addSeparator();
+	jm.add(tac = new ToolAction(T.t("Reset Starter"), null, "resetstarter", ae_texec));
 	jm.add(tac = new ToolAction(T.t("Exit"), null, "exit", ae_texec));
 
 /* -- * /

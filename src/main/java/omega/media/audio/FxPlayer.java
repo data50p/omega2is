@@ -95,7 +95,7 @@ public class FxPlayer {
     private static boolean once = false;
 
     private void doOnce() {
-	if (once == false) {
+	if (false && once == false) {
 	    once = true;
 	    initFxFramework();
 	    try {

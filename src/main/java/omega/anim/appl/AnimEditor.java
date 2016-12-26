@@ -17,6 +17,7 @@ import omega.connect.httpd.Server;
 import omega.graphic.render.Wing;
 import omega.i18n.T;
 import omega.media.audio.APlayer;
+import omega.swing.Omega2Is;
 import omega.swing.ToolAction;
 import omega.swing.ToolExecute;
 
@@ -209,6 +210,8 @@ public class AnimEditor extends JFrame {
 				"Omega",
 				JOptionPane.INFORMATION_MESSAGE);
 		    }
+		} else if ("resetstarter".equals(cmd)) {
+		    Omega2Is.enableStarter();
 		} else if ("about".equals(cmd)) {
 		    help.showAbout();
 		} else if ("aboutAE".equals(cmd)) {
@@ -314,6 +317,8 @@ public class AnimEditor extends JFrame {
 	toolbar_cmd.add(tac);
 
 	jm.addSeparator();
+	if ( exit_on_close )
+	    jm.add(tac = new ToolAction("Reset Starter", "resetstarter", ae_texec));
 	jm.add(tac = new ToolAction(exit_on_close ? T.t("Exit") : T.t("Close"), "exit", ae_texec));
 
 	toolbar_cmd.addSeparator();
