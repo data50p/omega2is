@@ -7,3 +7,4 @@ logs
 out
 runtime/logs
 runtime/omega2*.jar
+*.omega_result
