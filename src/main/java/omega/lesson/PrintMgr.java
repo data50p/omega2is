@@ -24,14 +24,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
-// import javax.media.jai.JAI;
-// import javax.media.jai.LookupTableJAI;
-// import javax.media.jai.RenderedOp;
-// import com.sun.media.jai.codec.FileSeekableStream;
-// import com.sun.media.jai.codec.TIFFDecodeParam;
-//import javax.media.jai.widget.ScrollingImagePanel;
-// import javax.media.jai.*;
-
 public class PrintMgr implements Printable {
     static HashMap flags;
     static List argl;

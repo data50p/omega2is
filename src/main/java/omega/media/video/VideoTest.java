@@ -1,14 +1,21 @@
 package omega.media.video;
 
-//import javax.media.*;
-
+import javax.media.Manager;
+import javax.media.NoPlayerException;
+import javax.media.Player;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 //  import	javax.swing.event.InternalFrameAdapter;
 //  import	javax.swing.event.InternalFrameEvent;
 
 public class VideoTest extends JFrame {
-/*    static String args[];
+    static String args[];
 
     public static void main( String [] args ) {
 	VideoTest.args = args;
@@ -39,7 +46,7 @@ public class VideoTest extends JFrame {
 	omega.Context.sout_log.getLogger().info("arg 0: " + args[0]);
 
 	try {
-	    url = new URL ("file:"+args[0]);
+	    url = new URL("file:"+args[0]);
 
 	    try {
 		Player player = Manager.createPlayer(url);
@@ -61,5 +68,5 @@ public class VideoTest extends JFrame {
 	    omega.Context.sout_log.getLogger().info("ERR: " + "IO Error:" + e);
 	}
 
-    }*/
+    }
 }

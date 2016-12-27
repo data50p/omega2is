@@ -58,11 +58,11 @@ public class JPlayer implements LineListener {
 	else
 	    o = false;
 
-	omega.Context.sout_log.getLogger().info("ERR: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
+	omega.Context.sout_log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
     }
 
     JPlayer(String fn) {
-	omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer: fn = " + fn);
+	omega.Context.sout_log.getLogger().info("INIT: " + "JPlayer: fn = " + fn);
 
 	this.fn = fn;
 	realy_name = fn;
@@ -73,13 +73,13 @@ public class JPlayer implements LineListener {
 	    sdataline = getSourceDataLine(aformat);
 	    sdataline.addLineListener(this);
 
-	    System.err.println("ERR: " + "JPlayer: " + ais + ' ' + aformat + ' ' + sdataline);
+	    omega.Context.sout_log.getLogger().info("<init>: " + "JPlayer0: " + ais + ' ' + aformat + ' ' + sdataline);
 	} catch (Exception ex) {
 	    ais = null;
 	    aformat = null;
 	    sdataline = null;
 	    done = true;
-	    omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer: " + ex);
+	    omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer1: " + ex);
 	}
     }
 
