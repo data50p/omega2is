@@ -18,7 +18,9 @@ import omega.Context;
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URISyntaxException;
+import java.net.URL;
 
 public class VideoTest extends Application {
 
@@ -26,9 +28,7 @@ public class VideoTest extends Application {
     static Group root;
     static JFrame frame;
 
-    private static final String MEDIA2_URL = "file:omega-assets/MOV01445.mp4";
-    private static final String MEDIA0_URL = Context.omegaAssets("MOV01445.mp4");
-    private static final String MEDIA_URL = MEDIA2_URL;
+    private static final String MEDIA_FN = Context.omegaAssets("media/MOV01445.mp4");
 
     private JFXPanel initAndShowGUI() {
 	// This method is invoked on the EDT thread
@@ -60,13 +60,21 @@ public class VideoTest extends Application {
 	VideoTest.scene = scene;
 	fxPanel.setScene(scene);
 
-	File file = new File(MEDIA0_URL);
+	File file = new File(MEDIA_FN);
 	String uu = file.toURI().toString();
-
-	String u = getClass().getResource(MEDIA0_URL).toURI().toString();
-
-	System.err.println("U is " + u);
 	System.err.println("UU is " + uu);
+
+	Class<? extends VideoTest> aClass = getClass();
+	System.err.println("aClass is " + aClass);
+	URL resource = null;//aClass.getResource(MEDIA0_URL);
+	try {
+	    resource = file.toURI().toURL();
+	} catch (MalformedURLException e) {
+	    e.printStackTrace();
+	}
+	System.err.println("resource is " + resource);
+	String u = resource.toURI().toString();
+	System.err.println("U is " + u);
 
 	MediaPlayer player = new MediaPlayer(new Media(uu));
 	MediaView mediaView = new MediaView(player);
@@ -146,7 +154,7 @@ public class VideoTest extends Application {
 
 	StackPane root = new StackPane();
 
-	MediaPlayer player = new MediaPlayer(new Media(MEDIA_URL));
+	MediaPlayer player = new MediaPlayer(new Media(MEDIA_FN));
 	MediaView mediaView = new MediaView(player);
 	root.getChildren().add(mediaView);
 
