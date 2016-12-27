@@ -11,12 +11,12 @@ import java.util.Iterator;
 import java.util.List;
 
 public class MasterTimeLine implements PlayCtrlListener {
-    PropertyChangeSupport pr_ch;
+    private PropertyChangeSupport pr_ch;
     private TimeLine[] timelines;
-    EventListenerList play_listeners;
-    EventListenerList edit_listeners;
+    private EventListenerList play_listeners;
+    private EventListenerList edit_listeners;
     public AnimContext a_ctxt;
-    boolean dry;
+    private boolean dry;
 
     public MasterTimeLine(AnimContext a_ctxt) {
 	this.a_ctxt = a_ctxt;
@@ -33,8 +33,7 @@ public class MasterTimeLine implements PlayCtrlListener {
 
     public int getMaxDuration() {
 	int max = 0;
-	for (int i = 0; i < timelines.length; i++) {
-	    TimeLine tl = timelines[i];
+	for (TimeLine tl : timelines) {
 	    if (tl != null) {
 		int d = tl.getOffset() + tl.getDuration();
 		if (d > max)
@@ -72,11 +71,10 @@ public class MasterTimeLine implements PlayCtrlListener {
 	return -1;
     }
 
-    private List getMarkers(char type) {
-	List l = new ArrayList();
+    private List<TimeMarker> getMarkers(char type) {
+	List<TimeMarker> l = new ArrayList<>();
 
-	for (int i = 0; i < timelines.length; i++) {
-	    TimeLine tl = timelines[i];
+	for (TimeLine tl : timelines) {
 	    if (tl == null)
 		continue;
 	    l.addAll(tl.getMarkersType(type));
@@ -86,11 +84,10 @@ public class MasterTimeLine implements PlayCtrlListener {
 	return Arrays.asList(tla);
     }
 
-    private List getMarkersAbs(int from, int to) {
-	List l = new ArrayList();
+    private List<TimeMarker> getMarkersAbs(int from, int to) {
+	List<Object> l = new ArrayList<>();
 
-	for (int i = 0; i < timelines.length; i++) {
-	    TimeLine tl = timelines[i];
+	for (TimeLine tl : timelines) {
 	    if (tl == null)
 		continue;
 	    l.addAll(tl.getMarkersAbs(from, to));
@@ -128,10 +125,10 @@ public class MasterTimeLine implements PlayCtrlListener {
     }
 
     public void fireEventMarkerAtTime(int from, int to) {
-	List l = getMarkersAbs(from, to);
-	Iterator it = l.iterator();
+	List<TimeMarker> l = getMarkersAbs(from, to);
+	Iterator<TimeMarker> it = l.iterator();
 	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	    TimeMarker tm = it.next();
 
 	    Object[] lia = play_listeners.getListenerList();
 	    for (int i = 0; i < lia.length; i += 2) {
@@ -151,8 +148,7 @@ public class MasterTimeLine implements PlayCtrlListener {
     }
 
     public void updateEndMarkers(int when) {
-	for (int i = 0; i < timelines.length; i++) {
-	    TimeLine tl = timelines[i];
+	for (TimeLine tl : timelines) {
 	    if (tl == null)
 		continue;
 	    tl.updateEndMarker(when);
@@ -161,8 +157,7 @@ public class MasterTimeLine implements PlayCtrlListener {
     }
 
     public void updateBeginMarkers(int when) {
-	for (int i = 0; i < timelines.length; i++) {
-	    TimeLine tl = timelines[i];
+	for (TimeLine tl : timelines) {
 	    if (tl == null)
 		continue;
 	    tl.updateBeginMarker(when);
@@ -187,8 +182,7 @@ public class MasterTimeLine implements PlayCtrlListener {
     public void fillElement(Element el) {
 	Element mel = new Element("MTL");
 
-	for (int i = 0; i < timelines.length; i++) {
-	    TimeLine tl = timelines[i];
+	for (TimeLine tl : timelines) {
 	    if (tl == null)
 		continue;
 	    Element tel = tl.getElement();
@@ -229,10 +223,9 @@ public class MasterTimeLine implements PlayCtrlListener {
     }
 
     public String[] getLessonId_TimeLines() {
-	ArrayList li = new ArrayList();
+	ArrayList<String> li = new ArrayList<String>();
 
-	for (int i = 0; i < timelines.length; i++) {
-	    TimeLine tl = timelines[i];
+	for (TimeLine tl : timelines) {
 	    if (tl != null) {
 		String lid = tl.getLessonId();
 		if (lid != null && lid.length() > 0)

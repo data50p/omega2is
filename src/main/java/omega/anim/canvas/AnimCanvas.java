@@ -193,9 +193,14 @@ public class AnimCanvas extends omega.graphic.render.Canvas {
 			case 0:
 			    press_p = new Point2D.Double((e.getX() - offs_x) / sca, (e.getY() - offs_y) / sca);
 
-			    if (e.isPopupTrigger()) {
+			    boolean pt = e.isPopupTrigger();
+
+			    if (false) { // omega 2
 				popup_maction(e, Path.global_selected);
 			    } else {
+				if (pt ) { // omega 2
+				    popup_maction(e, Path.global_selected);
+				}
 				ap.deselectAll(getGraphics2D());
 				if (e.isControlDown()) {
 				    Path.Mark mk = ap.findNearestMarker(press_p);

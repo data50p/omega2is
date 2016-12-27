@@ -7,12 +7,12 @@ import java.util.*;
 
 public class TimeLine implements Serializable {
     int offset;
-    int duration;
-    List markers;
+    private int duration;
+    private List<TimeMarker> markers;
     public int nid;
     public TimeMarker last_added_tm = null;
 
-    String lesson_id = "";
+    private String lesson_id = "";
 
     public String getLessonId() {
 	return lesson_id;
@@ -24,11 +24,11 @@ public class TimeLine implements Serializable {
 
     public TimeLine(int nid) {
 	this.nid = nid;
-	markers = new LinkedList();
+	markers = new LinkedList<TimeMarker>();
     }
 
     public TimeLine(Element el) {
-	markers = new LinkedList();
+	markers = new LinkedList<TimeMarker>();
 	String id = el.findAttr("lesson_id");
 	if (id != null)
 	    lesson_id = id;
@@ -74,13 +74,13 @@ public class TimeLine implements Serializable {
     }
 
     public TimeLine(int nid, TimeLine src) {
-	markers = new LinkedList();
+	markers = new LinkedList<TimeMarker>();
 	this.nid = nid;
 	offset = src.offset;
 	duration = src.duration;
-	Iterator it = src.markers.iterator();
+	Iterator<TimeMarker> it = src.markers.iterator();
 	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	    TimeMarker tm = it.next();
 	    TimeMarker new_tm = addMarker(tm.type,
 		    tm.when - offset,
 		    tm.duration);
@@ -128,16 +128,12 @@ public class TimeLine implements Serializable {
 	markers.remove(tm);
     }
 
-    public void reNumerateMarker() {
+    void reNumerateMarker() {
 	TimeMarker[] ma = (TimeMarker[]) (markers.toArray(new TimeMarker[0]));
-	Arrays.sort(ma, new Comparator() {
-	    public int compare(Object o1, Object o2) {
-		TimeMarker tm1 = (TimeMarker) o1;
-		TimeMarker tm2 = (TimeMarker) o2;
-		return (int) (tm1.when - tm2.when);
-	    }
+	Arrays.sort(ma, (TimeMarker tm1, TimeMarker tm2) -> {
+	    return tm1.when - tm2.when;
 	});
-	markers = new ArrayList();
+	markers = new ArrayList<TimeMarker>();
 	for (int i = 0; i < ma.length; i++)
 	    ma[i].ord = i;
 
@@ -153,7 +149,7 @@ public class TimeLine implements Serializable {
 //   	    if ( ma[i].type == ty )
 // 		ma[i].ord_same_type = cc++;
 
-	Collection col = Arrays.asList(ma);
+	Collection<TimeMarker> col = Arrays.asList(ma);
 	markers.addAll(col);
     }
 
@@ -182,9 +178,9 @@ public class TimeLine implements Serializable {
 
     public TimeMarker[] getAllTimeMarkerType(char t) {
 	int c = 0;
-	Iterator it = markers.iterator();
+	Iterator<TimeMarker> it = markers.iterator();
 	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	    TimeMarker tm = it.next();
 	    if (tm.type == t)
 		c++;
 	}
@@ -194,15 +190,13 @@ public class TimeLine implements Serializable {
 	c = 0;
 	it = markers.iterator();
 	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	    TimeMarker tm = it.next();
 	    if (tm.type == t)
 		ta[c++] = tm;
 	}
-	Arrays.sort(ta, new Comparator() {
-	    public int compare(Object o1, Object o2) {
-		TimeMarker tm1 = (TimeMarker) o1;
-		TimeMarker tm2 = (TimeMarker) o2;
-		return (int) (tm1.when - tm2.when);
+	Arrays.sort(ta, new Comparator<TimeMarker>() {
+	    public int compare(TimeMarker o1, TimeMarker o2) {
+		return o1.when - o2.when;
 	    }
 	});
 	return ta;
@@ -210,9 +204,7 @@ public class TimeLine implements Serializable {
 
 
     public void adjustSomeTimeMarkerRelative(double d) {
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	for (TimeMarker tm : markers) {
 	    if (tm.relativeAdjust()) {
 		double dd = d * (tm.when - offset);
 		tm.move((int) dd, 1);
@@ -230,21 +222,17 @@ public class TimeLine implements Serializable {
 	move(d, 1);
     }
 
-    public void move(int d, int grid) {
+    void move(int d, int grid) {
 	offset += d;
 	offset = omega.util.Num.grid(offset, grid);
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	for (TimeMarker tm : markers) {
 	    if (tm.isMoveAble())
 		tm.move(d, grid);
 	}
     }
 
     public void moveSelectedTimeMarker(int d, int grid) {
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	for (TimeMarker tm : markers) {
 	    if (tm.selected) {
 		if (tm.type == TimeMarker.STOP)
 		    size(d);
@@ -257,9 +245,7 @@ public class TimeLine implements Serializable {
     }
 
     public TimeMarker getSelectedTimeMarker() {
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	for (TimeMarker tm : markers) {
 	    if (tm.selected) {
 		return tm;
 	    }
@@ -267,29 +253,23 @@ public class TimeLine implements Serializable {
 	return null;
     }
 
-    public void updateEndMarker(int when) {
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+    void updateEndMarker(int when) {
+	for (TimeMarker tm : markers) {
 	    if (tm.type == TimeMarker.END)
 		tm.when = when;
 	}
     }
 
-    public int getEndMarker() {
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+    int getEndMarker() {
+	for (TimeMarker tm : markers) {
 	    if (tm.type == TimeMarker.END)
 		return tm.when;
 	}
 	return 2000;
     }
 
-    public void updateBeginMarker(int when) {
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+    void updateBeginMarker(int when) {
+	for (TimeMarker tm : markers) {
 	    if (tm.type == TimeMarker.BEGIN)
 		tm.when = when;
 	}
@@ -299,9 +279,7 @@ public class TimeLine implements Serializable {
 	duration += d;
 	if (duration <= 0)
 	    duration = 1;
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	for (TimeMarker tm : markers) {
 	    if (tm.type == TimeMarker.STOP)
 		tm.when = offset + duration;
 	}
@@ -315,26 +293,22 @@ public class TimeLine implements Serializable {
 	return offset;
     }
 
-    public List getMarkersAbs(int from, int to) {
+    public List<TimeMarker> getMarkersAbs(int from, int to) {
 	return getMarkersAbs(from, to, false);
     }
 
-    public List getMarkersAbs(int from, int to, boolean special) {
-	List l = new ArrayList();
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+    public List<TimeMarker> getMarkersAbs(int from, int to, boolean special) {
+	List<TimeMarker> l = new ArrayList<TimeMarker>();
+	for (TimeMarker tm : markers) {
 	    if (tm.when > from && tm.when <= to)
 		l.add(tm);
 	}
 	return l;
     }
 
-    public List getMarkersType(char type) {
-	List l = new ArrayList();
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+    List<TimeMarker> getMarkersType(char type) {
+	List<TimeMarker> l = new ArrayList<>();
+	for (TimeMarker tm : markers) {
 	    if (tm.type == type)
 		l.add(tm);
 	}
@@ -342,10 +316,10 @@ public class TimeLine implements Serializable {
     }
 
     public TimeMarker getMarkerAtIndexType(int ix, char type) {
-	Iterator it = markers.iterator();
+	Iterator<TimeMarker> it = markers.iterator();
 	int c = 0;
 	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	    TimeMarker tm = it.next();
 	    if (tm.type == type)
 		if (c == ix)
 		    return tm;
@@ -360,9 +334,7 @@ public class TimeLine implements Serializable {
 	TimeMarker tm_f = null;
 
 	List l = new ArrayList();
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	for (TimeMarker tm : markers) {
 	    int tdist = (int) Math.abs(tm.when - dt);
 	    if (tdist < dt_f) {
 		dt_f = tdist;
@@ -373,9 +345,7 @@ public class TimeLine implements Serializable {
     }
 
     public void setDeselectTimeMarker() {
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	for (TimeMarker tm : markers) {
 	    tm.setSelected(false);
 	}
     }
@@ -403,18 +373,14 @@ public class TimeLine implements Serializable {
 	el.addAttr("offset", "" + offset);
 	el.addAttr("duration", "" + duration);
 	el.addAttr("nid", "" + nid);
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+	for (TimeMarker tm : markers) {
 	    el.add(tm.getElement());
 	}
 	return el;
     }
 
-    public void fetchPlaySound(List li) {
-	Iterator it = markers.iterator();
-	while (it.hasNext()) {
-	    TimeMarker tm = (TimeMarker) it.next();
+    void fetchPlaySound(List li) {
+	for (TimeMarker tm : markers) {
 	    tm.fetchPlaySound(li);
 	}
     }

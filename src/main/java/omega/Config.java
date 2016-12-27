@@ -16,6 +16,8 @@ public class Config {
 
     static public boolean LIU_Mode = true;
 
+    static public boolean alwaysShowLicense = true;
+
     static public boolean isKeyNext(int kc) {
 	return kc == key_next_1 ||
 		kc == key_next_2;

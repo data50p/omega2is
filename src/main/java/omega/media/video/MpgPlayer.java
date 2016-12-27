@@ -110,8 +110,6 @@ public class MpgPlayer {
 
 	} catch (MalformedURLException e) {
 	    omega.Context.lesson_log.getLogger().info("ERR: " + "MUE Error:" + e);
-	} catch (IOException e) {
-	    omega.Context.lesson_log.getLogger().info("ERR: " + "IOException:" + e);
 	} catch (Exception e) {
 	    omega.Context.lesson_log.getLogger().info("ERR: " + "Exception:" + e);
 	}

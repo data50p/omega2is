@@ -18,6 +18,10 @@
    <string>Sign Word Transparence</string>
   </void>
   <void method="put">
+   <string>length = </string>
+   <string>length = </string>
+  </void>
+  <void method="put">
    <string>Sign Sentence Movie Scale</string>
    <string>Sign Sentence Movie Scale</string>
   </void>
@@ -62,6 +66,10 @@
    <string>&lt;Ny Elev&gt;</string>
   </void>
   <void method="put">
+   <string>Path for timeline</string>
+   <string>Path for timeline</string>
+  </void>
+  <void method="put">
    <string>Play Sign Moview</string>
    <string>Play Sign Moview</string>
   </void>
@@ -72,6 +80,10 @@
   <void method="put">
    <string>default.omega_assets/register/Croatian</string>
    <string>default.omega_assets/register/Croatian</string>
+  </void>
+  <void method="put">
+   <string>--unknown--</string>
+   <string>--unknown--</string>
   </void>
   <void method="put">
    <string>Norsk-bm-Bergen</string>
@@ -88,6 +100,10 @@
   <void method="put">
    <string>Can&apos;t find animation: anim/ActiveAnim/StopsInRelationTo1.omega_anim</string>
    <string>Can&apos;t find animation: anim/ActiveAnim/StopsInRelationTo1.omega_anim</string>
+  </void>
+  <void method="put">
+   <string>length</string>
+   <string>length</string>
   </void>
   <void method="put">
    <string>default.omega_assets/register/test</string>
@@ -120,6 +136,10 @@
   <void method="put">
    <string>(Post Test Dummy Sign):</string>
    <string>(Post Test Dummy Sign):</string>
+  </void>
+  <void method="put">
+   <string>Actor Image Name</string>
+   <string>Actor Image Name</string>
   </void>
   <void method="put">
    <string>Tomas</string>
