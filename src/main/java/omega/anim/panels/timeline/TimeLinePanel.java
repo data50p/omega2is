@@ -75,7 +75,7 @@ public class TimeLinePanel extends JPanel {
 
 		int mod = e.getModifiers();
 
-		boolean pt = e.isPopupTrigger();
+		boolean pt = e.isPopupTrigger(); // macOS ?
 
 		if (pt) {
 		    if (e.isControlDown()) {
@@ -188,7 +188,7 @@ public class TimeLinePanel extends JPanel {
 
 	    int mod = e.getModifiers();
 
-	    boolean pt = e.isPopupTrigger();
+	    boolean pt = e.isPopupTrigger(); // macOS ?
 
 	    if (pt) {
 		if (e.isControlDown()) {
