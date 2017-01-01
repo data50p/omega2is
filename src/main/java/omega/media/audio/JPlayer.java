@@ -20,7 +20,7 @@ public class JPlayer implements LineListener {
 
     static int wah = 2;
     static boolean silent = !true;
-    static boolean o = false;
+    static boolean o = !false;
     static int N = 4096 * 16;
 
     String realy_name;
@@ -57,8 +57,10 @@ public class JPlayer implements LineListener {
 	    o = true;
 	else
 	    o = false;
+o=true;
 
 	omega.Context.sout_log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
+	System.err.println("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
     }
 
     JPlayer(String fn) {
@@ -108,7 +110,7 @@ public class JPlayer implements LineListener {
 	    Thread th = new Thread(new Runnable() {
 		public void run() {
 		    try {
-			Thread.currentThread().setPriority(Thread.NORM_PRIORITY + 3);
+			//Thread.currentThread().setPriority(Thread.NORM_PRIORITY + 3);
 
 			sdataline.open(aformat);
 			waitOpen();
