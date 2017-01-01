@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_112" class="java.beans.XMLDecoder">
+<java version="1.8.0_111" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>Norsk-bokmål</string>
@@ -86,6 +86,10 @@
    <string>--unknown--</string>
   </void>
   <void method="put">
+   <string>Omega - Message</string>
+   <string>Omega - Message</string>
+  </void>
+  <void method="put">
    <string>Norsk-bm-Bergen</string>
    <string>Norsk-bm-Bergen</string>
   </void>
@@ -114,6 +118,10 @@
    <string>default.omega_assets/register/LessonsInEnglish</string>
   </void>
   <void method="put">
+   <string>Nu such directory</string>
+   <string>Nu such directory</string>
+  </void>
+  <void method="put">
    <string>Item: Sign Movies, positive </string>
    <string>Item: Sign Movies, positive </string>
   </void>
@@ -124,6 +132,10 @@
   <void method="put">
    <string>Croatian</string>
    <string>Croatian</string>
+  </void>
+  <void method="put">
+   <string>File is</string>
+   <string>File is</string>
   </void>
   <void method="put">
    <string>default.omega_assets/register/Nynorsk</string>

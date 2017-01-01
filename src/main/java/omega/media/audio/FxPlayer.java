@@ -5,6 +5,7 @@ package omega.media.audio;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import omega.util.MilliTimer;
 
 import javax.sound.sampled.*;
 import javax.swing.*;
@@ -62,23 +63,23 @@ public class FxPlayer {
 
     void playFX(String fn) {
 	doOnce();
-
+	MilliTimer mt = new MilliTimer();
 	File f = new File(fn);
 	String bip = null;
 	bip = f.toURI().toString();
-	System.err.println("fxPrepare " + bip);
+	System.err.println("fxPrepare " + bip + ' ' + mt.getString());
 	Media hit = new Media(bip);
 	mediaPlayer = new MediaPlayer(hit);
 	synchronized (mediaPlayer) {
 	    mediaPlayer.setOnEndOfMedia(() -> {
 		synchronized (mediaPlayer) {
 		    mediaPlayer.dispose();
-		    System.err.println("fxPlayed eof");
+		    System.err.println("fxPlayed eof" + ' ' + mt.getString());
 		    done = true;
 		    mediaPlayer.notifyAll();
 		}
 	    });
-	    System.err.println("fxPlay...");
+	    System.err.println("fxPlay..." + ' ' + mt.getString());
 	    mediaPlayer.play();
 	}
     }
