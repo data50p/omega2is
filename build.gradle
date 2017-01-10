@@ -25,7 +25,7 @@ repositories {
 task runApp(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     main = 'omega.swing.Omega2Is'
-
+    workingDir file('runtime')
 }
 task customrun << {
     javaexec {omega.appl.Starter}
