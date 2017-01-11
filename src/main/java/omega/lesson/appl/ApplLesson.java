@@ -1,5 +1,6 @@
 package omega.lesson.appl;
 
+import omega.Config;
 import omega.connect.httpd.Server;
 import omega.help.HelpSystem;
 
@@ -23,15 +24,16 @@ public class ApplLesson extends JFrame {
 	omega.Context.init("Httpd", null);
 	httpd = ((omega.subsystem.Httpd) (omega.Context.getSubsystem("Httpd"))).httpd;
 
-	try {
-	    Class util = Class.forName("com.apple.eawt.FullScreenUtilities");
-	    Class params[] = new Class[]{Window.class, Boolean.TYPE};
-	    Method method = util.getMethod("setWindowCanFullScreen", params);
-	    method.invoke(util, this, true);
-	    isMac = true;
-	} catch (Exception ex) {
-	    ex.printStackTrace();
-	}
+	if (Config.fullScreen ) {
+	    try {
+		Class util = Class.forName("com.apple.eawt.FullScreenUtilities");
+		Class params[] = new Class[]{Window.class, Boolean.TYPE};
+		Method method = util.getMethod("setWindowCanFullScreen", params);
+		method.invoke(util, this, true);
+		isMac = true;
+	    } catch (Exception ex) {
+		ex.printStackTrace();
+	    }
 //	getRootPane().putClientProperty("apple.awt.fullscreenable", Boolean.valueOf(true));
 	/*
 	if ( FullScreenUtilities.class != null ) {
@@ -39,6 +41,7 @@ public class ApplLesson extends JFrame {
 	    Application.getApplication().requestToggleFullScreen(this);
 	}
 	*/
+	}
 
 	help = new HelpSystem();
     }

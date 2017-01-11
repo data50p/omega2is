@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_111" class="java.beans.XMLDecoder">
+<java version="1.8.0_112" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>Norsk-bokmål</string>
@@ -10,10 +10,6 @@
    <string>Sign Word Movie Scale</string>
   </void>
   <void method="put">
-   <string>Show Sign after each word</string>
-   <string>Show Sign after each word</string>
-  </void>
-  <void method="put">
    <string>Sign Word Transparence</string>
    <string>Sign Word Transparence</string>
   </void>
@@ -30,18 +26,6 @@
    <string>Sign Sentence Transparence</string>
   </void>
   <void method="put">
-   <string>default.omega_assets/register/Norsk-bokmål</string>
-   <string>default.omega_assets/register/Norsk-bokmål</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/Svenska</string>
-   <string>default.omega_assets/register/Svenska</string>
-  </void>
-  <void method="put">
-   <string>Sign Sentence Background</string>
-   <string>Sign Sentence Background</string>
-  </void>
-  <void method="put">
    <string>Can&apos;t find animation: anim/ActiveAnim/SwimUnderTheBoat.omega_anim</string>
    <string>Can&apos;t find animation: anim/ActiveAnim/SwimUnderTheBoat.omega_anim</string>
   </void>
@@ -50,32 +34,16 @@
    <string>default.omega_assets/register/Tomas</string>
   </void>
   <void method="put">
-   <string>Svenska</string>
-   <string>Svenska</string>
+   <string>Sign movie</string>
+   <string>Sign movie</string>
   </void>
   <void method="put">
    <string>Error while loading lesson: &quot;</string>
    <string>Error while loading lesson: &quot;</string>
   </void>
   <void method="put">
-   <string>Can&apos;t find test test </string>
-   <string>Can&apos;t find test test </string>
-  </void>
-  <void method="put">
-   <string>&lt;Ny Elev&gt;</string>
-   <string>&lt;Ny Elev&gt;</string>
-  </void>
-  <void method="put">
    <string>Path for timeline</string>
    <string>Path for timeline</string>
-  </void>
-  <void method="put">
-   <string>Play Sign Moview</string>
-   <string>Play Sign Moview</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/Guest</string>
-   <string>default.omega_assets/register/Guest</string>
   </void>
   <void method="put">
    <string>default.omega_assets/register/Croatian</string>
@@ -94,6 +62,78 @@
    <string>Norsk-bm-Bergen</string>
   </void>
   <void method="put">
+   <string>default.omega_assets/register/test</string>
+   <string>default.omega_assets/register/test</string>
+  </void>
+  <void method="put">
+   <string>Actor Image Name</string>
+   <string>Actor Image Name</string>
+  </void>
+  <void method="put">
+   <string>Tomas</string>
+   <string>Tomas</string>
+  </void>
+  <void method="put">
+   <string>LessonsInEnglish</string>
+   <string>LessonsInEnglish</string>
+  </void>
+  <void method="put">
+   <string>Show Sign after sentence</string>
+   <string>Show Sign after sentence</string>
+  </void>
+  <void method="put">
+   <string>Nynorsk</string>
+   <string>Nynorsk</string>
+  </void>
+  <void method="put">
+   <string>Tomas Croatia</string>
+   <string>Tomas Croatia</string>
+  </void>
+  <void method="put">
+   <string>Show Sign after each word</string>
+   <string>Show Sign after each word</string>
+  </void>
+  <void method="put">
+   <string>Automatic, play each separate word</string>
+   <string>Automatic, play each separate word</string>
+  </void>
+  <void method="put">
+   <string>default.omega_assets/register/Norsk-bokmål</string>
+   <string>default.omega_assets/register/Norsk-bokmål</string>
+  </void>
+  <void method="put">
+   <string>default.omega_assets/register/Svenska</string>
+   <string>default.omega_assets/register/Svenska</string>
+  </void>
+  <void method="put">
+   <string>Sign Sentence Background</string>
+   <string>Sign Sentence Background</string>
+  </void>
+  <void method="put">
+   <string>Svenska</string>
+   <string>Svenska</string>
+  </void>
+  <void method="put">
+   <string>Can&apos;t find test test </string>
+   <string>Can&apos;t find test test </string>
+  </void>
+  <void method="put">
+   <string>&lt;Ny Elev&gt;</string>
+   <string>&lt;Ny Elev&gt;</string>
+  </void>
+  <void method="put">
+   <string>Play Sign Moview</string>
+   <string>Play Sign Moview</string>
+  </void>
+  <void method="put">
+   <string>default.omega_assets/register/Guest</string>
+   <string>default.omega_assets/register/Guest</string>
+  </void>
+  <void method="put">
+   <string>Set sign file</string>
+   <string>Set sign file</string>
+  </void>
+  <void method="put">
    <string>Sound after each word</string>
    <string>Sound after each word</string>
   </void>
@@ -108,10 +148,6 @@
   <void method="put">
    <string>length</string>
    <string>length</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/test</string>
-   <string>default.omega_assets/register/test</string>
   </void>
   <void method="put">
    <string>default.omega_assets/register/LessonsInEnglish</string>
@@ -150,40 +186,16 @@
    <string>(Post Test Dummy Sign):</string>
   </void>
   <void method="put">
-   <string>Actor Image Name</string>
-   <string>Actor Image Name</string>
-  </void>
-  <void method="put">
-   <string>Tomas</string>
-   <string>Tomas</string>
-  </void>
-  <void method="put">
    <string>Sign</string>
    <string>Sign</string>
-  </void>
-  <void method="put">
-   <string>LessonsInEnglish</string>
-   <string>LessonsInEnglish</string>
   </void>
   <void method="put">
    <string>Select Directory</string>
    <string>Select Directory</string>
   </void>
   <void method="put">
-   <string>Show Sign after sentence</string>
-   <string>Show Sign after sentence</string>
-  </void>
-  <void method="put">
-   <string>Nynorsk</string>
-   <string>Nynorsk</string>
-  </void>
-  <void method="put">
    <string>Sign Word Background</string>
    <string>Sign Word Background</string>
-  </void>
-  <void method="put">
-   <string>Tomas Croatia</string>
-   <string>Tomas Croatia</string>
   </void>
  </object>
 </java>

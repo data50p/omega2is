@@ -2,6 +2,7 @@ package omega.media.audio;
 
 //åäö
 
+import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -15,6 +16,7 @@ public class FxPlayer {
     String fn;
     boolean done = false;
     MediaPlayer mediaPlayer = null;
+    Object lock = new Object();
 
     String realy_name;
 
@@ -50,10 +52,10 @@ public class FxPlayer {
     void play(boolean wait) {
 	playFX(realy_name);
 	if (wait) {
-	    synchronized (mediaPlayer) {
+	    synchronized (lock) {
 		try {
 		    while (!done)
-			mediaPlayer.wait(200);
+			lock.wait(200);
 		} catch (InterruptedException ex) {
 		}
 		System.err.println("fxPlayed waited ... notified done");
@@ -62,7 +64,9 @@ public class FxPlayer {
     }
 
     void playFX(String fn) {
+	System.err.println("Enter playFX " + fn);
 	doOnce();
+	Platform.runLater(() -> {
 	MilliTimer mt = new MilliTimer();
 	File f = new File(fn);
 	String bip = null;
@@ -70,18 +74,19 @@ public class FxPlayer {
 	System.err.println("fxPrepare " + bip + ' ' + mt.getString());
 	Media hit = new Media(bip);
 	mediaPlayer = new MediaPlayer(hit);
-	synchronized (mediaPlayer) {
+
 	    mediaPlayer.setOnEndOfMedia(() -> {
-		synchronized (mediaPlayer) {
+		synchronized (lock) {
 		    mediaPlayer.dispose();
 		    System.err.println("fxPlayed eof" + ' ' + mt.getString());
 		    done = true;
-		    mediaPlayer.notifyAll();
+		    lock.notifyAll();
 		}
 	    });
 	    System.err.println("fxPlay..." + ' ' + mt.getString());
 	    mediaPlayer.play();
-	}
+	});
+	System.err.println("Leave playFX " + fn);
     }
 
     private static boolean once = false;
@@ -97,9 +102,12 @@ public class FxPlayer {
 	}
     }
 
+    static JFXPanel z = null;
+
     private void initFxFramework() {
 	SwingUtilities.invokeLater(() -> {
-	    new JFXPanel(); // this will prepare JavaFX toolkit and environment
+	    z = new JFXPanel(); // this will prepare JavaFX toolkit and environment
+	    Platform.setImplicitExit(false);
 	    /*
 	    Platform.runLater(() -> {
 		StageBuilder.create()

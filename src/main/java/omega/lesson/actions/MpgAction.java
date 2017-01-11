@@ -32,6 +32,8 @@ public class MpgAction implements ActionI {
     private boolean again_audio = false;
     private boolean again_audio2 = false;
 
+    MsgDialog msg_dlg = new MsgDialog();
+
     class MyPanel extends JPanel {
 	Mouse m;
 
@@ -53,6 +55,7 @@ public class MpgAction implements ActionI {
 	    g.fillRect(0, 0, 2000, 2000);
 	    if (show_msg)
 		msg_dlg.draw((Graphics2D) g);
+	    super.paintComponent(g);
 	}
     }
 
@@ -75,7 +78,7 @@ public class MpgAction implements ActionI {
     public MpgAction() {
 	if (jpan == null)
 	    jpan = new MyPanel();
-	jpan.setLayout(null);
+	jpan.setLayout(new BorderLayout());
     }
 
     public Element prefetch(String action_s) {
@@ -110,25 +113,28 @@ public class MpgAction implements ActionI {
     }
 
     public void dispose() {
-	mpg_player.dispose(jpan);
+	if ( mpg_player != null )
+	    mpg_player.dispose(jpan);
 	omega.Context.sout_log.getLogger().info("ERR: " + "mpg disposed");
+	jpan.setVisible(false);
 	mpg_player = null;
     }
 
     public void reset() {
-	mpg_player.reset();
+	if ( mpg_player != null )
+	    mpg_player.reset();
     }
 
     public int getW() {
-	if (mpg_player != null)
+	if (false && mpg_player != null)
 	    return mpg_player.getW();
-	return 1;
+	return 333;
     }
 
     public int getH() {
-	if (mpg_player != null)
+	if (false && mpg_player != null)
 	    return mpg_player.getH();
-	return 1;
+	return 333;
     }
 
     public int getPW() {
@@ -294,8 +300,6 @@ public class MpgAction implements ActionI {
 	}
     }
 
-    MsgDialog msg_dlg = new MsgDialog();
-
     public void showMsg(MsgItem mi) {
 	msg_dlg.show(mi);
     }
@@ -316,14 +320,17 @@ public class MpgAction implements ActionI {
 			Runnable hook) {
 	if (mpg_player == null)
 	    mpg_player = MpgPlayer.createMpgPlayer(action_s, jpan);
+	else
+		System.err.println("already created MpgPayer ... ");
 	omega.Context.sout_log.getLogger().info("ERR: " + "mpg created " + mpg_player.getOrigW() + ' ' + mpg_player.getOrigH());
 	again_play2 = true;
 	again_audio2 = true;
 	//mpg_player.setSize(mpg_player.getOrigW(), mpg_player.getOrigH());
 	int ww = (getW() - mpg_player.getOrigW()) / 2;
 	int hh = (getH() - mpg_player.getOrigH()) / 2;
-	//mpg_player.setLocation(ww, hh);
-	mpg_player.visual.setVisible(true);
+//	mpg_player.setLocation(ww, hh);
+//	mpg_player.setSize(200, 200);
+//	mpg_player.visual.setVisible(true);
 
 	mpg_player.start();
 	mpg_player.wait4();
@@ -351,7 +358,7 @@ public class MpgAction implements ActionI {
 		}
 	    }
 	}
-// 	mpg_player.stop();
+// may play twice	mpg_player.stop();
 // 	mpg_player.dispose(jpan);
 // 	mpg_player = null;
 	omega.Context.sout_log.getLogger().info("ERR: " + "mp_shown");

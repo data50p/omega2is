@@ -188,14 +188,19 @@ public class APlayer {
     }
 
     public void playWait() {
-	if (fxplayer != null) {
-	    fxplayer.play(true);
-	    return;
-	}
-	if (jplayer != null) {
-	    jplayer.play();
-	    jplayer.waitAudio();
-	    return;
+        try {
+	    if (fxplayer != null) {
+		fxplayer.play(true);
+		return;
+	    }
+	    if (jplayer != null) {
+		jplayer.play();
+		jplayer.waitAudio();
+		return;
+	    }
+	} catch (Exception ex) {
+	    System.err.println("while playWait audio " + fxplayer + ' ' + ex);
+	    ex.printStackTrace();
 	}
     }
 
