@@ -1,2 +1,2 @@
-gradle clean build jar
-cp build/libs/omega2-is-1.0.0-SNAPSHOT.jar runtime
+./gradlew clean build jar
+cp build/libs/omega2-is-*.*.*.jar runtime
