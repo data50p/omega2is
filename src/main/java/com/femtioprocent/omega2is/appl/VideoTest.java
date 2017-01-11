@@ -28,7 +28,7 @@ public class VideoTest extends Application {
     static Group root;
     static JFrame frame;
 
-    private static final String MEDIA_FN = Context.omegaAssets("media/MOV01445.mp4");
+    private static final String MEDIA_FN = Context.omegaAssets("media/feedback/film1/feedback1.mp4");
 
     private JFXPanel initAndShowGUI() {
 	// This method is invoked on the EDT thread
