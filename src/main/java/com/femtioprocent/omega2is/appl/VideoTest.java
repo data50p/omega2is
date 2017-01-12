@@ -25,10 +25,10 @@ import java.net.URL;
 
 public class VideoTest /*extends Application*/ {
 
-    static Scene scene;
-    static Group root;
+    Scene scene;
+    Group root;
     static JFrame frame;
-    static JComponent jcomp;
+    JComponent jcomp;
     MediaPlayer player = null;
     boolean initDone = false;
     boolean stopped = false;
@@ -36,6 +36,8 @@ public class VideoTest /*extends Application*/ {
 
     private static final String MEDIA_FN = Context.omegaAssets("media/feedback/film1/feedback1.mp4");
     private static final String MEDIA_FN2 = Context.omegaAssets("media/feedback/film1/feedback2.mp4");
+
+    boolean ready = false;
 
     private JFXPanel initAndShowGUI() {
         stopped = false;
@@ -78,9 +80,9 @@ public class VideoTest /*extends Application*/ {
 //    }
 
     public JFXPanel initAndShowGUI(JComponent jcomp, String fn) {
-	System.err.println("enter initAndShowGUI");
+	System.err.println("enter initAndShowGUI " + Platform.isFxApplicationThread());
 	// This method is invoked on the EDT thread
-	VideoTest.jcomp = jcomp;
+	this.jcomp = jcomp;
 	boolean snd = true;
 
 	if ( fxPanel == null ) {
@@ -97,13 +99,16 @@ public class VideoTest /*extends Application*/ {
 	    @Override
 	    public void run() {
 		try {
+		    System.err.println("runLater: 100");
 		    if ( snd_ ) {
 			initFX2(fxPanel, fn);
 		    } else {
 			initFX(fxPanel, fn);
 			initFX2(fxPanel, fn);
 		    }
+		    System.err.println("runLater: play()...");
 		    player.play();
+		    System.err.println("runLater: ...play()");
 		} catch (URISyntaxException e) {
 		    e.printStackTrace();
 		}
@@ -115,16 +120,22 @@ public class VideoTest /*extends Application*/ {
 	return fxPanel;
     }
 
+    public void waitReady() {
+        while ( ! ready )
+	    S.m_sleep(100);
+
+    }
+
     public void initAndShowGUI2(String fn) {
 	System.err.println("enter initAndShowGUI2");
-	player.play();
+	Platform.runLater(() -> player.play());
     }
 
     private void initFX(JFXPanel fxPanel, String fn) throws URISyntaxException {
 	System.err.println("enter initFX");
 	// This method is invoked on the JavaFX thread
 	Scene scene = createScene();
-	VideoTest.scene = scene;
+	this.scene = scene;
 	fxPanel.setScene(scene);
     }
 
@@ -177,12 +188,19 @@ public class VideoTest /*extends Application*/ {
 		int h = player.getMedia().getHeight();
 
 		Dimension d = jcomp.getSize();
+		jcomp.setSize(555,555);
+		jcomp.setLocation(111, 111);
 		double xx = (d.getWidth() - w) / 2.0;
 		double yy = (d.getHeight() - h) / 2.0;
+		xx = 10;
+		yy= 10;
+		mediaView.setFitHeight(h);
+		fxPanel.setSize(w, h);
 		mediaView.setTranslateX(xx);
 		mediaView.setTranslateY(yy);
 		System.out.println("---++-- " + d + ' ' + w + ' ' + h + ' ' + xx + ' ' + yy);
 		System.err.println("VP " + mediaView.getX());
+		ready = true;
 //		player.play();
 	    }
 	});
@@ -190,9 +208,10 @@ public class VideoTest /*extends Application*/ {
 	player.setOnEndOfMedia(() -> {
 	    System.out.println("EOF ");
 	    stopped = true;
-//	    player.dispose();
+	    player.dispose();
 	});
 
+	/*
 	Runtime.getRuntime().addShutdownHook(new Thread() {
 	    @Override
 	    public void run() {
@@ -208,6 +227,7 @@ public class VideoTest /*extends Application*/ {
 		}
 	    }
 	});
+	*/
 	System.err.println("leave initFX");
     }
 
@@ -226,7 +246,7 @@ public class VideoTest /*extends Application*/ {
 	}
     }
 
-    private static Scene createScene() {
+    private Scene createScene() {
 	Group root = new Group();
 	Scene scene = new Scene(root, Color.BISQUE);
 	Text text = new Text();
@@ -238,7 +258,7 @@ public class VideoTest /*extends Application*/ {
 
 	//root.getChildren().add(text);
 
-	VideoTest.root = root;
+	this.root = root;
 
 	return (scene);
     }
@@ -247,8 +267,8 @@ public class VideoTest /*extends Application*/ {
 	if ( player != null ) {
 	    MediaPlayer mp = player;
 //	    Platform.runLater(() -> {
-	        mp.stop();
-	        mp.dispose();
+//	        mp.stop();
+//	        mp.dispose();
 //	    });
 	    player = null;
 	}

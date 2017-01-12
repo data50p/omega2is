@@ -23,7 +23,7 @@ public class MpgPlayer {
     private boolean ready = false;
 
     public Component visual;
-    VideoTest vt = null;
+    public VideoTest vt = null;
 
     public MpgPlayer(Object player, String title) {
         if ( false ) {
@@ -62,6 +62,7 @@ public class MpgPlayer {
         vt = null;
 	ready = true;
 	visual = null;
+	jcomp.removeAll();
     }
 
     public int getX() {
@@ -73,11 +74,11 @@ public class MpgPlayer {
     }
 
     public int getW() {
-	return vw;
+	return visual.getWidth();//vw;
     }
 
     public int getH() {
-	return vh;
+	return visual.getHeight(); //vh;
     }
 
     public int getOrigW() {

@@ -18,7 +18,7 @@ import java.util.HashMap;
 
 
 public class MpgAction implements ActionI {
-    private MpgPlayer mpg_player;
+    public MpgPlayer mpg_player;
     MyPanel jpan;
     HashMap args = new HashMap();
     private Font item_fo = null;
@@ -126,13 +126,13 @@ public class MpgAction implements ActionI {
     }
 
     public int getW() {
-	if (false && mpg_player != null)
+	if (mpg_player != null)
 	    return mpg_player.getW();
 	return 333;
     }
 
     public int getH() {
-	if (false && mpg_player != null)
+	if (mpg_player != null)
 	    return mpg_player.getH();
 	return 333;
     }
@@ -323,6 +323,7 @@ public class MpgAction implements ActionI {
 	else
 		System.err.println("already created MpgPayer ... ");
 	omega.Context.sout_log.getLogger().info("ERR: " + "mpg created " + mpg_player.getOrigW() + ' ' + mpg_player.getOrigH());
+	mpg_player.vt.waitReady();
 	again_play2 = true;
 	again_audio2 = true;
 	//mpg_player.setSize(mpg_player.getOrigW(), mpg_player.getOrigH());

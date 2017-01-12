@@ -31,6 +31,15 @@ task customrun << {
     javaexec {omega.appl.Starter}
 }
 
+task debug(dependsOn: classes, type: JavaExec) {
+    main = project.mainClassName
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+    workingDir file('runtime')
+    ignoreExitValue = true
+    debug = true
+}
+
 //ant.importBuild 'build.xml'
 //task compileJava(overwrite: true, dependsOn: customcompile) {
 //}

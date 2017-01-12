@@ -3308,6 +3308,7 @@ public class Lesson implements LessonCanvasListener {
 		mpg_action.reset();
 	    }
 	    mpg_action.prefetch(action_specific.getAction(all_text));
+	    mpg_action.mpg_player.vt.waitReady();
 	    pan = mpg_action.getCanvas();
 	    //pan.setLayout(null);
 	    pan.setBackground(omega_settings_dialog.action_movie_background.color);
