@@ -1,12 +1,10 @@
-package com.femtioprocent.omega2is.appl;
+package omega.media.video;
 
 import fpdo.sundry.S;
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -23,7 +21,7 @@ import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
 
-public class VideoTest /*extends Application*/ {
+public class FxMoviePlayer {
 
     Scene scene;
     Group root;
@@ -39,7 +37,7 @@ public class VideoTest /*extends Application*/ {
 
     boolean ready = false;
 
-    private JFXPanel initAndShowGUI() {
+    private JFXPanel initGUI() {
         stopped = false;
         initDone = false;
 	// This method is invoked on the EDT thread
@@ -52,35 +50,11 @@ public class VideoTest /*extends Application*/ {
 
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-	return initAndShowGUI(jcomp, MEDIA_FN);
+	return initGUI(jcomp, MEDIA_FN);
     }
 
-//    private JFXPanel initAndShowGUI(JFrame frame) {
-//	// This method is invoked on the EDT thread
-//	VideoTest.frame = frame;
-//
-//	final JFXPanel fxPanel = new JFXPanel();
-//	frame.add(fxPanel);
-//	frame.setSize(800, 600);
-//	frame.setVisible(true);
-//	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//
-//	Platform.runLater(new Runnable() {
-//	    @Override
-//	    public void run() {
-//		try {
-//		    initFX(fxPanel);
-//		    play();
-//		} catch (URISyntaxException e) {
-//		    e.printStackTrace();
-//		}
-//	    }
-//	});
-//	return fxPanel;
-//    }
-
-    public JFXPanel initAndShowGUI(JComponent jcomp, String fn) {
-	System.err.println("enter initAndShowGUI " + Platform.isFxApplicationThread());
+    public JFXPanel initGUI(JComponent jcomp, String fn) {
+	System.err.println("enter initGUI " + Platform.isFxApplicationThread());
 	// This method is invoked on the EDT thread
 	this.jcomp = jcomp;
 	boolean snd = true;
@@ -116,7 +90,7 @@ public class VideoTest /*extends Application*/ {
 	    }
 	});
 
-	System.err.println("leave initAndShowGUI");
+	System.err.println("leave initGUI");
 	return fxPanel;
     }
 
@@ -126,13 +100,8 @@ public class VideoTest /*extends Application*/ {
 
     }
 
-    public void initAndShowGUI2(String fn) {
-	System.err.println("enter initAndShowGUI2");
-	Platform.runLater(() -> player.play());
-    }
-
     private void initFX(JFXPanel fxPanel, String fn) throws URISyntaxException {
-	System.err.println("enter initFX");
+	System.err.println("enter initFX FxAppThread => " + Platform.isFxApplicationThread());
 	// This method is invoked on the JavaFX thread
 	Scene scene = createScene();
 	this.scene = scene;
@@ -144,7 +113,7 @@ public class VideoTest /*extends Application*/ {
 	String uu = file.toURI().toString();
 	System.err.println("UU is " + uu);
 
-	Class<? extends VideoTest> aClass = getClass();
+	Class<? extends FxMoviePlayer> aClass = getClass();
 	System.err.println("aClass is " + aClass);
 	URL resource = null;//aClass.getResource(MEDIA0_URL);
 	try {
@@ -163,24 +132,6 @@ public class VideoTest /*extends Application*/ {
 	root.getChildren().clear();
 	root.getChildren().add(mediaView);
 
-//        DoubleProperty mvw = mv.fitWidthProperty();
-//        DoubleProperty mvh = mv.fitHeightProperty();
-//        mvw.bind(Bindings.selectDouble(mv.sceneProperty(), "width"));
-//        mvh.bind(Bindings.selectDouble(mv.sceneProperty(), "height"));
-//        mv.setPreserveRatio(true);
-//
-//        mediaView.setTranslateX(0);
-//        mediaView.setTranslateY(0);
-	//        Scene scene = new Scene(root, 1024, 768);
-	//        fxPanel.setScene(scene);
-
-	//        primaryStage.setMaximized(true);
-	//        primaryStage.setFullScreen(true);
-	//        primaryStage.setScene(scene);
-	//        primaryStage.show();
-
-
-//	player.play();
 	player.setOnReady(new Runnable() {
 	    @Override
 	    public void run() {
@@ -211,23 +162,6 @@ public class VideoTest /*extends Application*/ {
 	    player.dispose();
 	});
 
-	/*
-	Runtime.getRuntime().addShutdownHook(new Thread() {
-	    @Override
-	    public void run() {
-		try {
-		    player.stop();
-		} catch (Exception ex) {
-		    System.err.println("stoppping " + ex);
-		}
-		try {
-		    player.dispose();
-		} catch (Exception ex) {
-		    System.err.println("disposing " + ex);
-		}
-	    }
-	});
-	*/
 	System.err.println("leave initFX");
     }
 
@@ -285,12 +219,14 @@ public class VideoTest /*extends Application*/ {
 	System.err.println("User Home: " + System.getProperty("user.home"));
 	System.err.println("User dir: " + System.getProperty("user.dir"));
 
-	Thread th = new Thread(() -> {initAndShowGUI();});
+	Thread th = new Thread(() -> {
+	    initGUI();});
 	th.start();
 	while (stopped == false)
 	    S.m_sleep(200);
 
-	th = new Thread(() -> {initAndShowGUI(jcomp, MEDIA_FN2);});
+	th = new Thread(() -> {
+	    initGUI(jcomp, MEDIA_FN2);});
 	th.start();
 	while (stopped == false)
 	    S.m_sleep(200);
@@ -298,21 +234,8 @@ public class VideoTest /*extends Application*/ {
 	dispose();
     }
 
-    /**
-     * The main() method is ignored in correctly deployed JavaFX application.
-     * main() serves only as fallback in case the application can not be
-     * launched through deployment artifacts, e.g., in IDEs with limited FX
-     * support. NetBeans ignores main().
-     *
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-
-        //launch(args);
-	VideoTest vt = new VideoTest();
-	vt.start(null);
+	FxMoviePlayer fxp = new FxMoviePlayer();
+	fxp.start(null);
     }
-
-
-
 }

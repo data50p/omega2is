@@ -83,6 +83,7 @@ public class EachWordMovie {
 
     public Rectangle getMovieRectangle() {
 	Rectangle r = new Rectangle(mp.getX(), mp.getY(), mp.getW(), mp.getH());
+	System.err.println("Movie rect = " + r);
 	return r;
     }
 

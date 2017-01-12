@@ -2,7 +2,6 @@
 package omega;
 
 import fpdo.sundry.PreferenceUtil;
-import fpdo.sundry.S;
 
 import static omega.Config.alwaysShowLicense;
 

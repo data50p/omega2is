@@ -1,7 +1,5 @@
 package omega.lesson.pupil;
 
-import omega.Context;
-
 import java.awt.*;
 import java.util.HashMap;
 

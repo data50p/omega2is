@@ -1,12 +1,10 @@
 package omega.media.video;
 
-import com.femtioprocent.omega2is.appl.VideoTest;
 import fpdo.sundry.S;
 import javafx.embed.swing.JFXPanel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -23,7 +21,7 @@ public class MpgPlayer {
     private boolean ready = false;
 
     public Component visual;
-    public VideoTest vt = null;
+    public FxMoviePlayer fxp = null;
 
     public MpgPlayer(Object player, String title) {
         if ( false ) {
@@ -38,16 +36,16 @@ public class MpgPlayer {
 }
 
     public void start() {
-        if ( vt != null )
-            vt.play();
+        if ( fxp != null )
+            fxp.play();
     }
 
     public void stop() {
     }
 
     public void wait4() {
-	if ( vt != null )
-	    vt.wait4done();
+	if ( fxp != null )
+	    fxp.wait4done();
 //	if ( true ) {
 //	    S.m_sleep(4000);
 //	    return;
@@ -57,9 +55,9 @@ public class MpgPlayer {
     }
 
     public void dispose(JComponent jcomp) {
-        if ( vt != null )
-            vt.dispose();
-        vt = null;
+        if ( fxp != null )
+            fxp.dispose();
+        fxp = null;
 	ready = true;
 	visual = null;
 	jcomp.removeAll();
@@ -93,12 +91,12 @@ public class MpgPlayer {
 	vw = w;
 	vh = h;
 	visual.setSize(new Dimension(vw, vh));
-	omega.Context.lesson_log.getLogger().info("set m size is: " + w + ' ' + h);
+	System.err.println("set m size to: " + w + ' ' + h);
     }
 
     public void setLocation(int x, int y) {
 	visual.setLocation(x, y);
-	omega.Context.lesson_log.getLogger().info("set m loc is: " + x + ' ' + y);
+	System.err.println("set m loc at: " + x + ' ' + y);
     }
 
     static public MpgPlayer createMpgPlayer(String fn, JComponent jcomp) {
@@ -146,22 +144,12 @@ public class MpgPlayer {
 	    url = new URL("file:" + fn);
 
 	    try {
-		if (true) {
-		    VideoTest vt = new VideoTest();
-		    JFXPanel fxP = vt.initAndShowGUI(jcomp, fn);
-		    MpgPlayer mp = new MpgPlayer(null, "null");
-		    mp.visual = jcomp;
-//  		    if ( old != null )
-//  			jpan.remove(old);
-//		    mp.visual.setVisible(!false);
-		    //mp.setSize(1, 1);
-		    //mp.setLocation(10, 10);
-//		    jcomp.add(mp.visual);//, BorderLayout.CENTER);
-//		    mp.visual.setVisible(!false);
-//                    mp.visual.setVisible(false);
-		    mp.vt = vt;
-		    return mp;
-		}
+		FxMoviePlayer fxp = new FxMoviePlayer();
+		JFXPanel fxPanel = fxp.initGUI(jcomp, fn);
+		MpgPlayer mp = new MpgPlayer(null, "null");
+		mp.visual = jcomp;
+		mp.fxp = fxp;
+		return mp;
 	    } catch (Exception e) {
 		e.printStackTrace();
 		omega.Context.lesson_log.getLogger().info("NoPlayerEx: " + e);

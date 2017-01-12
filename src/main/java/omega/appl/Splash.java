@@ -1,7 +1,5 @@
 package omega.appl;
 
-import omega.Context;
-
 import javax.swing.*;
 import java.awt.*;
 

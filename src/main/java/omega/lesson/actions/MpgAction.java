@@ -2,7 +2,6 @@ package omega.lesson.actions;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
-import omega.Context;
 import omega.lesson.canvas.MsgItem;
 import omega.media.video.MpgPlayer;
 
@@ -126,15 +125,19 @@ public class MpgAction implements ActionI {
     }
 
     public int getW() {
+        int w = -1;
 	if (mpg_player != null)
-	    return mpg_player.getW();
-	return 333;
+	    w =  mpg_player.getW();
+	System.err.println("Movie width: " + w);
+	return w;
     }
 
     public int getH() {
+        int h = -1;
 	if (mpg_player != null)
-	    return mpg_player.getH();
-	return 333;
+	    h = mpg_player.getH();
+	System.err.println("Movie width: " + h);
+	return h;
     }
 
     public int getPW() {
@@ -323,7 +326,7 @@ public class MpgAction implements ActionI {
 	else
 		System.err.println("already created MpgPayer ... ");
 	omega.Context.sout_log.getLogger().info("ERR: " + "mpg created " + mpg_player.getOrigW() + ' ' + mpg_player.getOrigH());
-	mpg_player.vt.waitReady();
+	mpg_player.fxp.waitReady();
 	again_play2 = true;
 	again_audio2 = true;
 	//mpg_player.setSize(mpg_player.getOrigW(), mpg_player.getOrigH());
