@@ -17,7 +17,7 @@ import omega.connect.httpd.Server;
 import omega.graphic.render.Wing;
 import omega.i18n.T;
 import omega.media.audio.APlayer;
-import omega.swing.Omega2Is;
+import omega.appl.Omega2Is;
 import omega.swing.ToolAction;
 import omega.swing.ToolExecute;
 

@@ -6,7 +6,7 @@ apply plugin: 'idea'
 apply plugin: 'maven-publish'
 apply plugin: 'application'
 
-mainClassName = 'omega.swing.Omega2Is'
+mainClassName = 'omega.appl.Omega2Is'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -24,7 +24,7 @@ repositories {
 
 task runApp(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'omega.swing.Omega2Is'
+    main = 'omega.appl.Omega2Is'
     workingDir file('runtime')
 }
 task customrun << {
@@ -66,7 +66,7 @@ jar {
     manifest {
         attributes(
                 "Class-Path": configurations.compile.collect { it.getName() }.join(' '),
-                "Main-Class": "omega.swing.Omega2Is"
+                "Main-Class": "omega.appl.Omega2Is"
         )
     }
     from configurations.compile.collect { entry -> zipTree(entry) }

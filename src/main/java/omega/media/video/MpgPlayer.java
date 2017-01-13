@@ -100,42 +100,6 @@ public class MpgPlayer {
     }
 
     static public MpgPlayer createMpgPlayer(String fn, JComponent jcomp) {
-        if ( true ) {
-            return createMpgPlayer2(fn, jcomp);
-	}
-	URL url = null;
-
-	omega.Context.lesson_log.getLogger().info("create mpgPlayer jcomp: " + fn);
-
-	try {
-	    url = new URL("file:" + fn);
-
-	    try {
-		if (true) {
-		    MpgPlayer mp = new MpgPlayer(null, "null");
-//  		    if ( old != null )
-//  			jpan.remove(old);
-		    mp.visual.setVisible(false);
-		    //mp.setSize(1, 1);
-		    //mp.setLocation(10, 10);
-		    jcomp.add(mp.visual);//, BorderLayout.CENTER);
-		    mp.visual.setVisible(false);
-//                    mp.visual.setVisible(false);
-		    return mp;
-		}
-	    } catch (Exception e) {
-		omega.Context.lesson_log.getLogger().info("NoPlayerEx: " + e);
-	    }
-
-	} catch (MalformedURLException e) {
-	    omega.Context.lesson_log.getLogger().info("ERR: " + "MUE Error:" + e);
-	} catch (Exception e) {
-	    omega.Context.lesson_log.getLogger().info("ERR: " + "Exception:" + e);
-	}
-	return null;
-    }
-
-    static public MpgPlayer createMpgPlayer2(String fn, JComponent jcomp) {
 	URL url = null;
 
 	omega.Context.lesson_log.getLogger().info("create mpgPlayer jcomp: " + fn);

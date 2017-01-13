@@ -1,7 +1,5 @@
 package omega.appl;
 
-import omega.swing.Omega2Is;
-
 import java.util.HashMap;
 
 public class OmegaAppl {
