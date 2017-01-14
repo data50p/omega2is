@@ -45,6 +45,8 @@ import java.util.prefs.Preferences;
 
 public class Lesson implements LessonCanvasListener {
 
+    boolean globalExit = false;
+
     public LessonContext l_ctxt;
     int run_mode = 'p';
     public static HashMap story_hm = new HashMap();
@@ -1025,7 +1027,8 @@ public class Lesson implements LessonCanvasListener {
 		    act_pupil_test_p();
 		}
 		if (submsg.equals("quit")) {
-		    System.exit(0);
+//		    System.exit(0);
+		    globalExit = true;
 		    return;
 		}
 	    }
@@ -1168,7 +1171,8 @@ public class Lesson implements LessonCanvasListener {
 	    omega.Context.sout_log.getLogger().info("ERR: " + "sm1 " + current_card + ' ' + register);
 	    // savePrefetch();
 	    if (edit) {
-		System.exit(0);
+		globalExit = true;
+		//System.exit(0);
 	    }
 	    if (register != null) {
 		register.close();
@@ -3896,7 +3900,8 @@ public class Lesson implements LessonCanvasListener {
 	window.addWindowListener(new WindowAdapter() {
 	    public void windowClosing(WindowEvent ev) {
 		//		    savePrefetch();
-		System.exit(0);
+		globalExit = true;
+		//System.exit(0);
 	    }
 	});
 
@@ -3918,6 +3923,8 @@ public class Lesson implements LessonCanvasListener {
 
 	window.setVisible(true);
 
+	smaller |= Config.smaller;
+
 	Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
 	if (smaller) {
 	    d.width = 600;
@@ -3933,7 +3940,6 @@ public class Lesson implements LessonCanvasListener {
 	} else {
 	    card_show("pupil");
 	}
-
 	if (smaller == false && window instanceof JFrame) {
 	    ((JFrame) window).setExtendedState(JFrame.MAXIMIZED_BOTH);
 	    if (ApplLesson.isMac) {
@@ -3956,6 +3962,8 @@ public class Lesson implements LessonCanvasListener {
 	for (; ; ) {
 	    try {
 		execLesson(fn);
+		if ( globalExit )
+		    return;
 		break;
 	    } catch (Exception ex) {
 		omega.Context.sout_log.getLogger().info("ERR: " + "OOOOPPPSS " + ex);

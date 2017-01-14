@@ -131,7 +131,7 @@ public class AnimEditor extends JFrame {
 	addWindowListener(new WindowAdapter() {
 	    public void windowClosing(WindowEvent ev) {
 //log		    omega.Context.sout_log.getLogger().info("ERR: " + "closing");
-		if (exit_on_close) {
+		if (false && exit_on_close) {
 		    System.exit(0);
 		} else
 		    setVisible(false);
@@ -148,7 +148,7 @@ public class AnimEditor extends JFrame {
 		    if (a_ctxt != null && a_ctxt.ae != null && a_ctxt.ae.isDirty())
 			s = "\n" + T.t("Changes not saved");
 
-		    if (exit_on_close) {
+		    if (false && exit_on_close) {
 			int sel = JOptionPane.showConfirmDialog(AnimEditor.this,
 				T.t("Are you sure to exit Omega?") +
 					s);

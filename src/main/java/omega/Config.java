@@ -18,6 +18,7 @@ public class Config {
 
     static public boolean alwaysShowLicense = false;
     public static boolean fullScreen = false;
+    public static boolean smaller = true;
 
     static public boolean isKeyNext(int kc) {
 	return kc == key_next_1 ||

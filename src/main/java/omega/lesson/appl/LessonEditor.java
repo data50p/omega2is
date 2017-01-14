@@ -13,6 +13,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class LessonEditor extends ApplLesson {
+    boolean globalExit2 = false;
+
     Lesson le;
     static String title;
 
@@ -28,7 +30,8 @@ public class LessonEditor extends ApplLesson {
 
 	addWindowListener(new WindowAdapter() {
 	    public void windowClosing(WindowEvent ev) {
-		System.exit(0);
+	        globalExit2 = true;
+		//System.exit(0);
 	    }
 	});
 
@@ -37,6 +40,7 @@ public class LessonEditor extends ApplLesson {
 	le = new Lesson('e');
 	le.mact_New();
 	le.runLessons(this, mpan, fn, true, false);
+	System.err.println("LessonEditor done " + globalExit2);
     }
 
     public void processEvent(AWTEvent e) {
@@ -88,7 +92,7 @@ public class LessonEditor extends ApplLesson {
 				(is_dirty ? ("\n" + T.t("Changes are unsaved!")) : "")
 		);
 		if (sel == 0)
-		    System.exit(0);
+		    globalExit2 = true;//System.exit(0);
 	    } else if ("new".equals(cmd)) {
 		boolean do_open = false;
 		if (is_dirty) {

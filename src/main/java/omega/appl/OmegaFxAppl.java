@@ -8,9 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -52,31 +50,57 @@ public class OmegaFxAppl extends Application {
     public void start(Stage stage) {
         Platform.setImplicitExit(false);
 
-	// Get the toolkit
 	MenuToolkit tk = MenuToolkit.toolkit();
 
-// Create the default Application menu
-	Menu defaultApplicationMenu = tk.createDefaultApplicationMenu("test");
+	MenuBar bar = new MenuBar();
 
-// Update the existing Application menu
-	tk.setApplicationMenu(defaultApplicationMenu);
+	String appName = "Omega2 IS";
+	// Application Menu
+	// TBD: services menu
+	Menu appMenu = new Menu(appName); // Name for appMenu can't be set at
+	// Runtime
+	MenuItem aboutItem = tk.createAboutMenuItem(appName);
+	MenuItem prefsItem = new MenuItem("Preferences...");
+	prefsItem.setOnAction(event -> System.out.println("prefs clicked"));
+	appMenu.getItems().addAll(aboutItem, new SeparatorMenuItem(), prefsItem, new SeparatorMenuItem(),
+		tk.createHideMenuItem(appName), tk.createHideOthersMenuItem(), tk.createUnhideAllMenuItem(),
+		new SeparatorMenuItem(), tk.createQuitMenuItem(appName));
 
-// Since we now have a reference to the menu, we can rename items
-	defaultApplicationMenu.getItems().get(1).setText("Hide all the otters");
+	// File Menu (items TBD)
+	Menu fileMenu = new Menu("File");
+	MenuItem newItem = new MenuItem("New...");
+	fileMenu.getItems().addAll(newItem, new SeparatorMenuItem(), tk.createCloseWindowMenuItem(),
+		new SeparatorMenuItem(), new MenuItem("TBD"));
 
-	MenuBar menuBar = new MenuBar ();
-	if( System.getProperty("os.name","UNKNOWN").equals("Mac OS X")) {
-	    menuBar.setUseSystemMenuBar(true);
-	}
+	// Edit (items TBD)
+	Menu editMenu = new Menu("Edit");
+	editMenu.getItems().addAll(new MenuItem("TBD"));
 
-	final Menu menu1 = new Menu("File");
-	final Menu menu2 = new Menu("Options");
-	final Menu menu3 = new Menu("Help");
+	// Format (items TBD)
+	Menu formatMenu = new Menu("Format");
+	formatMenu.getItems().addAll(new MenuItem("TBD"));
 
-	menuBar.getMenus().addAll(menu1, menu2, menu3);
+	// View Menu (items TBD)
+	Menu viewMenu = new Menu("View");
+	viewMenu.getItems().addAll(new MenuItem("TBD"));
 
-	Platform.runLater(() -> menuBar.setUseSystemMenuBar(true));
+	// Window Menu
+	// TBD standard window menu items
+	Menu windowMenu = new Menu("Window");
+	windowMenu.getItems().addAll(tk.createMinimizeMenuItem(), tk.createZoomMenuItem(), tk.createCycleWindowsItem(),
+		new SeparatorMenuItem(), tk.createBringAllToFrontItem());
 
+	// Help Menu (items TBD)
+	Menu helpMenu = new Menu("Help");
+	helpMenu.getItems().addAll(new MenuItem("TBD"));
+
+	bar.getMenus().addAll(appMenu, fileMenu, editMenu, formatMenu, viewMenu, windowMenu, helpMenu);
+
+	tk.autoAddWindowMenuItems(windowMenu);
+	tk.setGlobalMenuBar(bar);
+	tk.setGlobalMenuBar(bar);
+
+	Platform.runLater(() -> bar.setUseSystemMenuBar(true));
 
         int scW = 1000;
         int scH = 1000;
@@ -97,19 +121,20 @@ public class OmegaFxAppl extends Application {
 	imView.setX(4);
 	imView.setY(4);
         root.getChildren().addAll(imView);
-	root.getChildren().add(menuBar);
+	root.getChildren().add(bar);
 
         stage.setScene(scene);
         stage.setAlwaysOnTop(true);
         stage.show();
 	System.err.println("started");
 	new Thread(()->{
-	    S.m_sleep(3000);
+	    S.m_sleep(500);
 	    Platform.runLater(() -> {
-	        stage.setIconified(true);
-//	        stage.hide();
+//	        stage.setIconified(true);
+	        stage.hide();
 		new Thread(() -> {
 		    S.m_sleep(500);
+			Platform.runLater(() -> stage.show());
 			omega.appl.lesson.Editor.main(args);
 		}).start();
 	    });

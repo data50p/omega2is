@@ -21,7 +21,7 @@ public class LessonRuntime extends ApplLesson {
 
 	f.addWindowListener(new WindowAdapter() {
 	    public void windowClosing(WindowEvent ev) {
-		System.exit(0);
+		//System.exit(0);
 	    }
 	});
 
