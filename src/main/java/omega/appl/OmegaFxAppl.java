@@ -1,5 +1,6 @@
 package omega.appl;
 
+import de.codecentric.centerdevice.*;
 import fpdo.sundry.S;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -50,6 +51,18 @@ public class OmegaFxAppl extends Application {
     @Override
     public void start(Stage stage) {
         Platform.setImplicitExit(false);
+
+	// Get the toolkit
+	MenuToolkit tk = MenuToolkit.toolkit();
+
+// Create the default Application menu
+	Menu defaultApplicationMenu = tk.createDefaultApplicationMenu("test");
+
+// Update the existing Application menu
+	tk.setApplicationMenu(defaultApplicationMenu);
+
+// Since we now have a reference to the menu, we can rename items
+	defaultApplicationMenu.getItems().get(1).setText("Hide all the otters");
 
 	MenuBar menuBar = new MenuBar ();
 	if( System.getProperty("os.name","UNKNOWN").equals("Mac OS X")) {
