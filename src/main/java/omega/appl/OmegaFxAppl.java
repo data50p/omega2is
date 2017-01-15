@@ -32,14 +32,7 @@ public class OmegaFxAppl extends Application {
 	primaryStage.setTitle("Hello World!");
 	Button btn = new Button();
 	btn.setText("Say 'Hello World'");
-	btn.setOnAction(new EventHandler<ActionEvent>() {
-
-	    @Override
-	    public void handle(ActionEvent event) {
-		System.out.println("Hello World!");
-	    }
-	});
-
+	btn.setOnAction(event -> System.out.println("Hello World!"));
 	StackPane root = new StackPane();
 	root.getChildren().add(btn);
 	primaryStage.setScene(new Scene(root, 300, 250));
@@ -134,8 +127,9 @@ public class OmegaFxAppl extends Application {
 	        stage.hide();
 		new Thread(() -> {
 		    S.m_sleep(500);
-			Platform.runLater(() -> stage.show());
-			omega.appl.lesson.Editor.main(args);
+		    omega.appl.lesson.Editor.main(args);
+		    Platform.runLater(() -> stage.show());
+		    S.m_sleep(500);
 		}).start();
 	    });
 	}).start();
