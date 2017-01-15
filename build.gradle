@@ -24,12 +24,16 @@ repositories {
 
 task runApp(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'omega.appl.Omega2Is'
+    main = project.mainClassName
+    workingDir file('runtime')
+}
+
+run {
     workingDir file('runtime')
 }
 
 task customrun << {
-    javaexec {omega.appl.Starter}
+    javaexec {project.mainClassName}
 }
 
 task debug(dependsOn: classes, type: JavaExec) {
@@ -68,7 +72,7 @@ jar {
     manifest {
         attributes(
                 "Class-Path": configurations.compile.collect { it.getName() }.join(' '),
-                "Main-Class": "omega.appl.Omega2Is"
+                "Main-Class": project.mainClassName
         )
     }
     from configurations.compile.collect { entry -> zipTree(entry) }
