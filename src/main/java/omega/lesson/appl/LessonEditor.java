@@ -91,8 +91,11 @@ public class LessonEditor extends ApplLesson {
 			T.t("Are you sure to exit Omega?") +
 				(is_dirty ? ("\n" + T.t("Changes are unsaved!")) : "")
 		);
-		if (sel == 0)
+		if (sel == 0) {
+		    le.sendMsg("exitLesson", "");
 		    globalExit2 = true;//System.exit(0);
+		    setVisible(false);
+		}
 	    } else if ("new".equals(cmd)) {
 		boolean do_open = false;
 		if (is_dirty) {

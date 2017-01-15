@@ -1028,6 +1028,7 @@ public class Lesson implements LessonCanvasListener {
 		}
 		if (submsg.equals("quit")) {
 //		    System.exit(0);
+		    sendMsg("exitLesson", "", "");
 		    globalExit = true;
 		    return;
 		}
@@ -1172,6 +1173,7 @@ public class Lesson implements LessonCanvasListener {
 	    // savePrefetch();
 	    if (edit) {
 		globalExit = true;
+		sendMsg("exitLesson", "", "");
 		//System.exit(0);
 	    }
 	    if (register != null) {
@@ -2012,7 +2014,7 @@ public class Lesson implements LessonCanvasListener {
 
 	int[][] test_index = null;
 
-	for (; ; ) {
+	for (;;) {
 	    // 	    omega.Context.sout_log.getLogger().info("ERR: " + "%%%%%%%%%%%%%%%%%%%wait");
 	    Object o[] = getMsg();
 	    String msg = (String) o[0];
@@ -2289,6 +2291,8 @@ public class Lesson implements LessonCanvasListener {
 
 	    } else if ("test_dialog".equals(msg)) {
 		testDialog();
+	    } else if ("exitLesson".equals(msg)) {
+		return;
 	    }
 	}
     }
@@ -3901,6 +3905,7 @@ public class Lesson implements LessonCanvasListener {
 	    public void windowClosing(WindowEvent ev) {
 		//		    savePrefetch();
 		globalExit = true;
+		sendMsg("exitLesson", "", "");
 		//System.exit(0);
 	    }
 	});
