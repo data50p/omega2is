@@ -75,6 +75,14 @@ public class MpgPlayer {
 	return visual.getWidth();//vw;
     }
 
+    public int getMediaH() {
+	return fxp.mediaH;
+    }
+
+    public int getMediaW() {
+	return fxp.mediaW;
+    }
+
     public int getH() {
 	return visual.getHeight(); //vh;
     }
@@ -100,6 +108,10 @@ public class MpgPlayer {
     }
 
     static public MpgPlayer createMpgPlayer(String fn, JComponent jcomp) {
+	return createMpgPlayer(fn, jcomp, 0, 0);
+    }
+
+    static public MpgPlayer createMpgPlayer(String fn, JComponent jcomp, int winW, int winH) {
 	URL url = null;
 
 	omega.Context.lesson_log.getLogger().info("create mpgPlayer jcomp: " + fn);
@@ -108,7 +120,7 @@ public class MpgPlayer {
 	    url = new URL("file:" + fn);
 
 	    try {
-		FxMoviePlayer fxp = new FxMoviePlayer();
+		FxMoviePlayer fxp = new FxMoviePlayer(winW, winH);
 		JFXPanel fxPanel = fxp.initGUI(jcomp, fn);
 		MpgPlayer mp = new MpgPlayer(null, "null");
 		mp.visual = jcomp;

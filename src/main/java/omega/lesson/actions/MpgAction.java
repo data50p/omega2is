@@ -81,8 +81,12 @@ public class MpgAction implements ActionI {
     }
 
     public Element prefetch(String action_s) {
+    	return prefetch(action_s, 0, 0);
+    }
+
+    public Element prefetch(String action_s, int winW, int winH) {
 	Element el = null;
-	mpg_player = MpgPlayer.createMpgPlayer(action_s, jpan);
+	mpg_player = MpgPlayer.createMpgPlayer(action_s, jpan, winW, winH);
 	return el;
     }
 
@@ -127,7 +131,7 @@ public class MpgAction implements ActionI {
     public int getW() {
         int w = -1;
 	if (mpg_player != null)
-	    w =  mpg_player.getW();
+	    w =  mpg_player.fxp.mediaW;
 	System.err.println("Movie width: " + w);
 	return w;
     }
@@ -135,7 +139,7 @@ public class MpgAction implements ActionI {
     public int getH() {
         int h = -1;
 	if (mpg_player != null)
-	    h = mpg_player.getH();
+	    h = mpg_player.fxp.mediaH;
 	System.err.println("Movie width: " + h);
 	return h;
     }
@@ -322,9 +326,9 @@ public class MpgAction implements ActionI {
 			int ord,
 			Runnable hook) {
 	if (mpg_player == null)
-	    mpg_player = MpgPlayer.createMpgPlayer(action_s, jpan);
+	    mpg_player = MpgPlayer.createMpgPlayer(action_s, jpan, window.getWidth(), window.getHeight());
 	else
-		System.err.println("already created MpgPayer ... ");
+	    System.err.println("already created MpgPayer ... ");
 	omega.Context.sout_log.getLogger().info("ERR: " + "mpg created " + mpg_player.getOrigW() + ' ' + mpg_player.getOrigH());
 	mpg_player.fxp.waitReady();
 	again_play2 = true;

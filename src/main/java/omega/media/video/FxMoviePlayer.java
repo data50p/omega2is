@@ -32,15 +32,26 @@ public class FxMoviePlayer {
     boolean stopped = false;
     JFXPanel fxPanel = null;
 
+    public int mediaW;
+    public int mediaH;
+
     private static final String MEDIA_FN = Context.omegaAssets("media/feedback/film1/feedback1.mp4");
     private static final String MEDIA_FN2 = Context.omegaAssets("media/feedback/film1/feedback2.mp4");
 
     boolean ready = false;
+    int winW;
+    int winH;
+
+
+    FxMoviePlayer(int winW, int winH) {
+        this.winW = winW;
+        this.winH = winH;
+    }
 
     private JFXPanel initGUI() {
         stopped = false;
         initDone = false;
-	// This method is invoked on the EDT thread
+ 	// This method is invoked on the EDT thread
 	JFrame frame = new JFrame("Swing and JavaFX");
 	JComponent jcomp = new JPanel();
 	jcomp.setLayout(new BorderLayout(0, 0));
@@ -61,8 +72,8 @@ public class FxMoviePlayer {
 
 	if ( fxPanel == null ) {
 	    fxPanel = new JFXPanel();
-	    fxPanel.setSize(1112, 1112);
-	    fxPanel.setLocation(0, 0);
+	    fxPanel.setSize(111, 111);
+	    fxPanel.setLocation(22, 22);
 	    jcomp.add(fxPanel);
 	    snd = false;
 	    //jcomp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -103,7 +114,8 @@ public class FxMoviePlayer {
     private void initFX(JFXPanel fxPanel, String fn) throws URISyntaxException {
 	System.err.println("enter initFX FxAppThread => " + Platform.isFxApplicationThread());
 	// This method is invoked on the JavaFX thread
-	Scene scene = createScene();
+	this.root = new Group();
+	Scene scene = new Scene(this.root, 120, 130, Color.BISQUE);
 	this.scene = scene;
 	fxPanel.setScene(scene);
     }
@@ -137,16 +149,17 @@ public class FxMoviePlayer {
 	    public void run() {
 		int w = player.getMedia().getWidth();
 		int h = player.getMedia().getHeight();
+		mediaW = w;
+		mediaH = h;
 
 		Dimension d = jcomp.getSize();
-		jcomp.setSize(555,555);
+		d.setSize(winW, winH);
+		jcomp.setSize(mediaW, mediaH);
 		jcomp.setLocation(111, 111);
 		double xx = (d.getWidth() - w) / 2.0;
 		double yy = (d.getHeight() - h) / 2.0;
-		xx = 10;
-		yy= 10;
-		mediaView.setFitHeight(h);
-		fxPanel.setSize(w, h);
+		//mediaView.setFitHeight(h);
+		fxPanel.setSize((int)(1.5*w), (int)(1.5*h));
 		mediaView.setTranslateX(xx);
 		mediaView.setTranslateY(yy);
 		System.out.println("---++-- " + d + ' ' + w + ' ' + h + ' ' + xx + ' ' + yy);
@@ -178,23 +191,6 @@ public class FxMoviePlayer {
 	    System.err.println("Play the movie...");
 	    player.play();
 	}
-    }
-
-    private Scene createScene() {
-	Group root = new Group();
-	Scene scene = new Scene(root, Color.BISQUE);
-	Text text = new Text();
-
-	text.setX(20);
-	text.setY(40);
-	text.setFont(new Font(25));
-	text.setText("Welcome JavaFX! movie");
-
-	//root.getChildren().add(text);
-
-	this.root = root;
-
-	return (scene);
     }
 
     public void dispose() {
@@ -235,7 +231,7 @@ public class FxMoviePlayer {
     }
 
     public static void main(String[] args) {
-	FxMoviePlayer fxp = new FxMoviePlayer();
+	FxMoviePlayer fxp = new FxMoviePlayer(800, 600);
 	fxp.start(null);
     }
 }
