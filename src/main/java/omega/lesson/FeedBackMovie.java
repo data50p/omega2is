@@ -45,6 +45,7 @@ public class FeedBackMovie extends FeedBack {
 	return canvas;
     }
 
+    @Deprecated
     public JComponent prepareAlt(String rsrs, JComponent canvas) {
 	omega.Context.lesson_log.getLogger().info(": " + "+++++++ prepare " + rsrs);
 	if (rsrs == null) {

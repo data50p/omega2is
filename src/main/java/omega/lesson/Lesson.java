@@ -3316,33 +3316,35 @@ public class Lesson implements LessonCanvasListener {
 		mpg_action.reset();
 	    }
 	    mpg_action.prefetch(action_specific.getAction(all_text), window.getWidth(), window.getHeight());
-if ( !false ) {
-    mpg_action.mpg_player.fxp.waitReady();
-    pan = mpg_action.getCanvas();
-    //pan.setLayout(null);
-    pan.setBackground(omega_settings_dialog.action_movie_background.color);
-    int v_w = mpg_action.getW();
-    int v_h = mpg_action.getH();
-    int c_w = card_panel.getWidth();
-    int c_h = card_panel.getHeight();
-    System.err.println("mpg size " + v_w + ' ' + v_h + ' ' + c_w + ' ' + c_h);
-    double wwd = 0.81415926535897932 * (c_w * 1.0 / v_w);
-    double hhd = 0.81415926535897932 * (c_h * 1.0 / v_h);
 
-    double ffd = wwd < hhd ? wwd : hhd;
-    if (ffd > 3.1415926535897932384626) {
-	ffd = 3.1415926535897932384626;
-    }
-    int www = (int) (ffd * v_w);
-    int hhh = (int) (ffd * v_h);
-    //mpg_action.setSize((int) www, (int) hhh);
-    System.err.println("mpg size " + www + ' ' + hhh);
-    int o_w = (int) ((c_w - www) / 2);
-    int o_h = (int) ((c_h - hhh) / 2);
+	    if (!false) {
+		mpg_action.mpg_player.fxp.waitReady();
+		pan = mpg_action.getCanvas();
+		//pan.setLayout(null);
+		pan.setBackground(omega_settings_dialog.action_movie_background.color);
+		int v_w = mpg_action.getW();
+		int v_h = mpg_action.getH();
+		int c_w = card_panel.getWidth();
+		int c_h = card_panel.getHeight();
+		System.err.println("mpg size " + v_w + ' ' + v_h + ' ' + c_w + ' ' + c_h);
+		double wwd = 0.81415926535897932 * (c_w * 1.0 / v_w);
+		double hhd = 0.81415926535897932 * (c_h * 1.0 / v_h);
 
-    //mpg_action.setLocation(o_w, (int) (o_h * 0.851415926535897932384626));
-    System.err.println("mpg  loc " + o_w + ' ' + o_h);
-}
+		double ffd = wwd < hhd ? wwd : hhd;
+		if (ffd > 3.1415926535897932384626) {
+		    ffd = 3.1415926535897932384626;
+		}
+		int www = (int) (ffd * v_w);
+		int hhh = (int) (ffd * v_h);
+		//mpg_action.setSize((int) www, (int) hhh);
+		System.err.println("mpg size " + www + ' ' + hhh);
+		int o_w = (int) ((c_w - www) / 2);
+		int o_h = (int) ((c_h - hhh) / 2);
+
+		//mpg_action.setLocation(o_w, (int) (o_h * 0.851415926535897932384626));
+		System.err.println("mpg  loc " + o_w + ' ' + o_h);
+	    }
+
 	    pan.setVisible(true);
 	    card_panel.add(pan, "msg_anim");
 	    //log 			omega.Context.sout_log.getLogger().info("ERR: " + "CCnt " + card_panel.getComponentCount());

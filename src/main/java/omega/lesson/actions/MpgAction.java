@@ -205,7 +205,9 @@ public class MpgAction implements ActionI {
 	}
 
 	void draw(Graphics2D g2) {
-	    String text = msg_item.text;
+	    if ( true )
+	        return;   // JavaFX
+	    String text = msg_item != null ? msg_item.text : "";
 
 	    if (item_fo == null) {
 		int fH = gY(0.04);
@@ -267,7 +269,7 @@ public class MpgAction implements ActionI {
 // 	    g2.setFont(item_fo);
 // 	    g2.drawString(msg_item.title, x + 1 * w / 10, (int)(y + gY(0.03)));
 
-	    if (msg_item.image != null) {
+	    if (msg_item != null && msg_item.image != null) {
 		int hh = (int) (h * 0.7);
 		int ww = (4 * hh) / 3;
 		try {
@@ -346,8 +348,8 @@ public class MpgAction implements ActionI {
 	if (ord == 0) {
 //	    dispose();
 	    if (show_sentence) {
-		showMsg(new MsgItem("", sentence));
-		while (show_msg) {
+		showMsgFx(new MsgItem("", sentence));
+		while (show_msg && mpg_player.fxp.messageShown) {
 		    S.m_sleep(200);
 		    System.err.print(".");
 		    if (again_audio && again_audio2) {
@@ -370,6 +372,13 @@ public class MpgAction implements ActionI {
 // 	mpg_player.dispose(jpan);
 // 	mpg_player = null;
 	omega.Context.sout_log.getLogger().info("ERR: " + "mp_shown");
+    }
+
+    private void showMsgFx(MsgItem mi) {
+        mpg_player.fxp.showMsg(mi);
+        mpg_player.visual.repaint();
+	mpg_player.fxp.messageShown = true;
+	show_msg = true;
     }
 
     public void clearScreen() {

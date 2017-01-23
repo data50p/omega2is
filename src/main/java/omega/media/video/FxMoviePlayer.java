@@ -3,8 +3,10 @@ package omega.media.video;
 import fpdo.sundry.S;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -13,6 +15,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import omega.Context;
+import omega.lesson.canvas.MsgItem;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,6 +44,7 @@ public class FxMoviePlayer {
     boolean ready = false;
     int winW;
     int winH;
+    public boolean messageShown;
 
 
     FxMoviePlayer(int winW, int winH) {
@@ -74,7 +78,7 @@ public class FxMoviePlayer {
 	    fxPanel = new JFXPanel();
 	    fxPanel.setSize(111, 111);
 	    fxPanel.setLocation(22, 22);
-	    jcomp.add(fxPanel);
+	    jcomp.add(fxPanel, BorderLayout.CENTER);
 	    snd = false;
 	    //jcomp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
@@ -115,8 +119,14 @@ public class FxMoviePlayer {
 	System.err.println("enter initFX FxAppThread => " + Platform.isFxApplicationThread());
 	// This method is invoked on the JavaFX thread
 	this.root = new Group();
-	Scene scene = new Scene(this.root, 120, 130, Color.BISQUE);
+	Scene scene = new Scene(this.root, 120, 130, new Color(0.24, 0.44, 0.84, 0.184));
 	this.scene = scene;
+	scene.setOnMousePressed(new EventHandler<MouseEvent>() {
+	    public void handle(MouseEvent me) {
+		System.out.println("Mouse pressed");
+		messageShown = false;
+	    }
+	});
 	fxPanel.setScene(scene);
     }
 
@@ -215,15 +225,11 @@ public class FxMoviePlayer {
 	System.err.println("User Home: " + System.getProperty("user.home"));
 	System.err.println("User dir: " + System.getProperty("user.dir"));
 
-	Thread th = new Thread(() -> {
-	    initGUI();});
-	th.start();
+	(new Thread(() -> initGUI())).start();
 	while (stopped == false)
 	    S.m_sleep(200);
 
-	th = new Thread(() -> {
-	    initGUI(jcomp, MEDIA_FN2);});
-	th.start();
+	(new Thread(() -> initGUI(jcomp, MEDIA_FN2))).start();
 	while (stopped == false)
 	    S.m_sleep(200);
 
@@ -233,5 +239,15 @@ public class FxMoviePlayer {
     public static void main(String[] args) {
 	FxMoviePlayer fxp = new FxMoviePlayer(800, 600);
 	fxp.start(null);
+    }
+
+    public void showMsg(MsgItem mi) {
+	Platform.runLater(() -> {
+	    Text text = new Text(mi.text);
+	    text.setX(55);
+	    text.setY(55);
+	    text.setFont(new Font(25));
+	    root.getChildren().add(text);
+	});
     }
 }
