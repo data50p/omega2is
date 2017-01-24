@@ -6,6 +6,7 @@ import javafx.embed.swing.JFXPanel;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -76,9 +77,9 @@ public class FxMoviePlayer {
 
 	if ( fxPanel == null ) {
 	    fxPanel = new JFXPanel();
-	    fxPanel.setSize(111, 111);
-	    fxPanel.setLocation(22, 22);
-	    jcomp.add(fxPanel, BorderLayout.CENTER);
+	    fxPanel.setSize(291, 251);
+	    fxPanel.setLocation(62, 72);
+	    jcomp.add(fxPanel);//, BorderLayout.CENTER);
 	    snd = false;
 	    //jcomp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
@@ -119,12 +120,24 @@ public class FxMoviePlayer {
 	System.err.println("enter initFX FxAppThread => " + Platform.isFxApplicationThread());
 	// This method is invoked on the JavaFX thread
 	this.root = new Group();
-	Scene scene = new Scene(this.root, 120, 130, new Color(0.24, 0.44, 0.84, 0.184));
+	Scene scene = new Scene(this.root, winW, winH, new Color(0.24, 0.44, 0.84, 0.184));
 	this.scene = scene;
 	scene.setOnMousePressed(new EventHandler<MouseEvent>() {
 	    public void handle(MouseEvent me) {
 		System.out.println("Mouse pressed");
 		messageShown = false;
+	    }
+	});
+
+	scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+	    public void handle(KeyEvent ke) {
+		System.out.println("Key Pressed: " + ke.getText() + ' ' + ke.getCode());
+	    }
+	});
+
+	scene.setOnKeyReleased(new EventHandler<KeyEvent>() {
+	    public void handle(KeyEvent ke) {
+		System.out.println("Key Released: " + ke.getText()+ ' ' + ke.getCode());
 	    }
 	});
 	fxPanel.setScene(scene);
@@ -168,11 +181,13 @@ public class FxMoviePlayer {
 		jcomp.setLocation(111, 111);
 		double xx = (d.getWidth() - w) / 2.0;
 		double yy = (d.getHeight() - h) / 2.0;
+		xx = 0; yy = 0;
 		//mediaView.setFitHeight(h);
-		fxPanel.setSize((int)(1.5*w), (int)(1.5*h));
+		double scal = 1.5;
+		fxPanel.setSize((int)(scal*w), (int)(scal*h));
 		mediaView.setTranslateX(xx);
 		mediaView.setTranslateY(yy);
-		System.out.println("---++-- " + d + ' ' + w + ' ' + h + ' ' + xx + ' ' + yy);
+		System.out.println("---++-- " + d + " media: " + w + ' ' + h + " translate: " + xx + ' ' + yy);
 		System.err.println("VP " + mediaView.getX());
 		ready = true;
 //		player.play();

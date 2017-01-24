@@ -25,7 +25,7 @@ public class EachWordMovie {
 
 	if (mp == null) {
 	    omega.Context.sout_log.getLogger().info("ERR: " + "+++++++ prepare new: " + fName);
-	    mp = MpgPlayer.createMpgPlayer(fName, jcomp);
+	    mp = MpgPlayer.createMpgPlayer(fName, jcomp, jcomp.getWidth(), jcomp.getHeight());
 	    if (mp == null)
 		return null;
 	    this.jcomp = jcomp;
