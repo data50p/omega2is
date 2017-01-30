@@ -32,9 +32,9 @@ run {
     workingDir file('runtime')
 }
 
-task customrun << {
-    javaexec {project.mainClassName}
-}
+//task customrun {
+    //javaexec {project.mainClassName}
+//}
 
 task debug(dependsOn: classes, type: JavaExec) {
     main = project.mainClassName
