@@ -164,30 +164,24 @@ public class FxMoviePlayer {
 	MediaView mediaView = new MediaView(player);
 	mediaView.setX(0);
 	mediaView.setY(0);
-	root.getChildren().clear();
+	//root.getChildren().clear();
 	root.getChildren().add(mediaView);
 
 	player.setOnReady(new Runnable() {
 	    @Override
 	    public void run() {
-		int w = player.getMedia().getWidth();
-		int h = player.getMedia().getHeight();
-		mediaW = w;
-		mediaH = h;
+		mediaW = player.getMedia().getWidth();
+		mediaH = player.getMedia().getHeight();
 
-		Dimension d = jcomp.getSize();
-		d.setSize(winW, winH);
-		jcomp.setSize(mediaW, mediaH);
-		jcomp.setLocation(111, 111);
-		double xx = (d.getWidth() - w) / 2.0;
-		double yy = (d.getHeight() - h) / 2.0;
-		xx = 0; yy = 0;
-		//mediaView.setFitHeight(h);
-		double scal = 1.5;
-		fxPanel.setSize((int)(scal*w), (int)(scal*h));
+		double scal = 1.6;
+		double xx = (winW - mediaW) / 2.0;
+		double yy = (winH - mediaH) / 2.0;
+		mediaView.setScaleX(scal);
+		mediaView.setScaleY(scal);
 		mediaView.setTranslateX(xx);
 		mediaView.setTranslateY(yy);
-		System.out.println("---++-- " + d + " media: " + w + ' ' + h + " translate: " + xx + ' ' + yy);
+
+		System.out.println("---++-- win: " + winW + ' ' + winH + " media: " + mediaW + ' ' + mediaH + " translate: " + xx + ' ' + yy);
 		System.err.println("VP " + mediaView.getX());
 		ready = true;
 //		player.play();
