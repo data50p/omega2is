@@ -47,7 +47,7 @@ public class OmegaFxAppl extends Application {
 
 	MenuBar bar = new MenuBar();
 
-	String appName = "Omega2 IS";
+	String appName = "Omega IS";
 	// Application Menu
 	// TBD: services menu
 	Menu appMenu = new Menu(appName); // Name for appMenu can't be set at
@@ -105,7 +105,7 @@ public class OmegaFxAppl extends Application {
         Circle circ = new Circle(40, 40, 30);
         Group root = new Group(circ);
         Scene scene = new Scene(root, 700, 330 + 22 * 3);
-        stage.setTitle("Omega2 IS");
+        stage.setTitle("Omega IS");
 
 	String aImname = Context.omegaAssets("media/default/omega_splash.gif");
 	Image im = new Image("file:" + aImname);

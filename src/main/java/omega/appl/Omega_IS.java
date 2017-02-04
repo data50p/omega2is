@@ -17,7 +17,7 @@ import java.util.HashMap;
 /**
  * Created by lars on 2016-12-10.
  */
-public class Omega2Is extends JDialog {
+public class Omega_IS extends JDialog {
     private JPanel contentPane;
     private JButton lessonEditorButton;
     private JButton settingsButton;
@@ -28,15 +28,15 @@ public class Omega2Is extends JDialog {
     String[] args;
     private static Integer selection = null;
 
-    private static PreferenceUtil pu = new PreferenceUtil(Omega2Is.class);
+    private static PreferenceUtil pu = new PreferenceUtil(Omega_IS.class);
 
-    public Omega2Is() {
-        super((Frame) null, "Omega2Is");
+    public Omega_IS() {
+        super((Frame) null, "Omega_IS");
 	initFx();
 
 	HashMap settings = (HashMap) pu.getObject("settings", new HashMap());
 
-	setTitle("Omega2Is - Selection");
+	setTitle("Omega_IS - Selection");
 	setContentPane(contentPane);
 	setModal(true);
 	getRootPane().setDefaultButton(settingsButton);
@@ -101,7 +101,7 @@ public class Omega2Is extends JDialog {
 	if (false && setting_selection != null && setting_selection > 0) {
 	    selection = setting_selection;
 	} else {
-	    Omega2Is ss = new Omega2Is();
+	    Omega_IS ss = new Omega_IS();
 	    ss.args = args;
 	    ss.pack();
 	    ss.setVisible(true);

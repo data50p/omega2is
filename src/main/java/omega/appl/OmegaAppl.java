@@ -11,7 +11,7 @@ public class OmegaAppl {
     public OmegaAppl(String name) {
 	this.name = "Omega - " + name;
 	prop.put("name", name);
-	Omega2Is.initFx(); // for audio played by JavaFX
+	Omega_IS.initFx(); // for audio played by JavaFX
     }
 
     public static void closeSplash() {

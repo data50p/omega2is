@@ -6,7 +6,7 @@ invoke
 logs
 out
 runtime/logs
-runtime/omega2*.jar
+runtime/omega*.jar
 *.omega_result
 /.nb-gradle/
 .nb-gradle-properties

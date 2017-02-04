@@ -1,9 +1,9 @@
 package omega.lesson.appl;
 
+import omega.appl.Omega_IS;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.ToolBar_LessonEditor;
-import omega.appl.Omega2Is;
 import omega.swing.ToolAction;
 import omega.swing.ToolExecute;
 
@@ -114,7 +114,7 @@ public class LessonEditor extends ApplLesson {
 		le.mact_Save();
 		unsetDirty();
 	    } else if ("resetstarter".equals(cmd)) {
-		Omega2Is.enableStarter();
+		Omega_IS.enableStarter();
 	    } else if ("saveas".equals(cmd)) {
 		le.mact_SaveAs();
 		unsetDirty();

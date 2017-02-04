@@ -13,11 +13,11 @@ import omega.anim.tool.path.AllPath;
 import omega.anim.tool.path.Path;
 import omega.anim.tool.timeline.TimeLine;
 import omega.anim.tool.timeline.TimeMarker;
+import omega.appl.Omega_IS;
 import omega.connect.httpd.Server;
 import omega.graphic.render.Wing;
 import omega.i18n.T;
 import omega.media.audio.APlayer;
-import omega.appl.Omega2Is;
 import omega.swing.ToolAction;
 import omega.swing.ToolExecute;
 
@@ -211,7 +211,7 @@ public class AnimEditor extends JFrame {
 				JOptionPane.INFORMATION_MESSAGE);
 		    }
 		} else if ("resetstarter".equals(cmd)) {
-		    Omega2Is.enableStarter();
+		    Omega_IS.enableStarter();
 		} else if ("about".equals(cmd)) {
 		    help.showAbout();
 		} else if ("aboutAE".equals(cmd)) {
