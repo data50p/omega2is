@@ -3,13 +3,14 @@ package omega.lesson.repository;
 import fpdo.xml.Element;
 import fpdo.xml.SAX_node;
 import omega.Context;
+import omega.util.Log;
 
 public class Restore {
     public static Element restore(String fname) {
 	try {
 	    String aName;
 	    if ( fname.startsWith(Context.omegaAssets(""))) {
-		System.err.println("Already assets: " + fname);
+		Log.getLogger().info("Already assets: " + fname);
 		aName = fname;
 	    } else {
 		aName = Context.omegaAssets(fname);

@@ -6,6 +6,7 @@ import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import omega.util.Log;
 import omega.util.MilliTimer;
 
 import javax.swing.*;
@@ -48,33 +49,33 @@ public class FxPlayer {
 			lock.wait(200);
 		} catch (InterruptedException ex) {
 		}
-		System.err.println("fxPlayed waited ... notified done");
+		Log.getLogger().info("fxPlayed waited ... notified done");
 	    }
 	}
     }
 
     void playFX(final String fn) {
-	System.err.println("Enter playFX " + fn);
+	Log.getLogger().info("Enter playFX " + fn);
 	doOnce();
 	Platform.runLater(() -> {
 	    MilliTimer mt = new MilliTimer();
 	    File f = new File(fn);
 	    String bip = null;
 	    bip = f.toURI().toString();
-	    System.err.println("fxPrepare " + bip + ' ' + mt.getString());
+	    Log.getLogger().info("fxPrepare " + bip + ' ' + mt.getString());
 	    Media hit = new Media(bip);
 	    mediaPlayer = new MediaPlayer(hit);mediaPlayer.setOnEndOfMedia(() -> {
 	    	synchronized (lock) {
 			mediaPlayer.dispose();
-			System.err.println("fxPlayed eof" + ' ' + mt.getString());
+		    Log.getLogger().info("fxPlayed eof" + ' ' + mt.getString());
 			done = true;
 			lock.notifyAll();
 		}
 	    });
-	    System.err.println("fxPlay..." + ' ' + mt.getString());
+	    Log.getLogger().info("fxPlay..." + ' ' + mt.getString());
 	    mediaPlayer.play();
 	});
-	System.err.println("Leave playFX " + fn);
+	Log.getLogger().info("Leave playFX " + fn);
     }
 
     private static boolean once = false;

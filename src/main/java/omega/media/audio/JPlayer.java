@@ -2,6 +2,8 @@ package omega.media.audio;
 
 //åäö
 
+import omega.util.Log;
+
 import javax.sound.sampled.*;
 import java.io.File;
 
@@ -60,7 +62,7 @@ public class JPlayer implements LineListener {
 o=true;
 
 	omega.Context.sout_log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
-	System.err.println("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
+	Log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
     }
 
     JPlayer(String fn) {

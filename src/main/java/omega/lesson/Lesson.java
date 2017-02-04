@@ -56,9 +56,10 @@ public class Lesson implements LessonCanvasListener {
 	// special entry med list sentence
     }
 
-    Log audio_log = new Log("audio");
-    Log lesson_log = new Log("lesson");
-    Log msg_log = new Log("msg");
+    Log audio_log = Context.def_log;
+    Log lesson_log = Context.def_log;
+    Log msg_log = Context.def_log;
+
     public static LessonCanvas le_canvas;
     public static SentenceCanvas sentence_canvas;
     public static LessonMainCanvas lemain_canvas;
@@ -235,7 +236,7 @@ public class Lesson implements LessonCanvasListener {
 	long last_ct;
 	String lesson_name;
 	String test_mode;
-	Log register_log = new Log("register");
+	Log register_log = Context.def_log;
 	boolean has_shown = false;
 
 	RegisterProxy(Pupil pupil) {
@@ -3312,7 +3313,7 @@ public class Lesson implements LessonCanvasListener {
 	    if (mpg_action == null) {
 		mpg_action = new MpgAction();
 	    } else {
-		System.err.println("--------------- probably not to come here");
+		Log.getLogger().info("--------------- probably not to come here");
 		mpg_action.reset();
 	    }
 	    mpg_action.prefetch(action_specific.getAction(all_text), window.getWidth(), window.getHeight());
@@ -3326,7 +3327,7 @@ public class Lesson implements LessonCanvasListener {
 		int v_h = mpg_action.getH();
 		int c_w = card_panel.getWidth();
 		int c_h = card_panel.getHeight();
-		System.err.println("mpg size " + v_w + ' ' + v_h + ' ' + c_w + ' ' + c_h);
+		Log.getLogger().info("mpg size " + v_w + ' ' + v_h + ' ' + c_w + ' ' + c_h);
 		double wwd = 0.81415926535897932 * (c_w * 1.0 / v_w);
 		double hhd = 0.81415926535897932 * (c_h * 1.0 / v_h);
 
@@ -3337,12 +3338,12 @@ public class Lesson implements LessonCanvasListener {
 		int www = (int) (ffd * v_w);
 		int hhh = (int) (ffd * v_h);
 		//mpg_action.setSize((int) www, (int) hhh);
-		System.err.println("mpg size " + www + ' ' + hhh);
+		Log.getLogger().info("mpg size " + www + ' ' + hhh);
 		int o_w = (int) ((c_w - www) / 2);
 		int o_h = (int) ((c_h - hhh) / 2);
 
 		//mpg_action.setLocation(o_w, (int) (o_h * 0.851415926535897932384626));
-		System.err.println("mpg  loc " + o_w + ' ' + o_h);
+		Log.getLogger().info("mpg  loc " + o_w + ' ' + o_h);
 	    }
 
 	    pan.setVisible(true);
@@ -3962,7 +3963,7 @@ public class Lesson implements LessonCanvasListener {
 		    requestToggleFulLScreen.invoke(application, window);
 //		    Application.getApplication().requestToggleFullScreen(window);
 		} catch (Exception e) {
-		    System.out.println("An exception occurred while trying to toggle full screen mode");
+		    Log.getLogger().warning("An exception occurred while trying to toggle full screen mode");
 		}
 	    }
 	}

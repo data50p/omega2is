@@ -1,6 +1,7 @@
 package omega.media.audio;
 
 import fpdo.sundry.S;
+import omega.util.Log;
 
 import java.io.File;
 import java.util.HashMap;
@@ -199,7 +200,7 @@ public class APlayer {
 		return;
 	    }
 	} catch (Exception ex) {
-	    System.err.println("while playWait audio " + fxplayer + ' ' + ex);
+	    Log.getLogger().info("while playWait audio " + fxplayer + ' ' + ex);
 	    ex.printStackTrace();
 	}
     }

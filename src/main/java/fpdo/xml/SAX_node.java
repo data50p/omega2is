@@ -2,6 +2,7 @@ package fpdo.xml;
 
 
 import fpdo.sundry.S;
+import omega.util.Log;
 import org.xml.sax.*;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -163,9 +164,9 @@ public class SAX_node extends DefaultHandler {
     public static Element parse(String file, boolean validating) {
 	try {
 	    SAX_node sn = new SAX_node();
-	    System.err.println("Loading xml: (A) " + file);
+	    Log.getLogger().info("Loading xml: (A) " + file);
 	    Element el = element(file, sn, validating);
-	    System.err.println("           : " + el);
+	    Log.getLogger().info("           : " + el);
 	    return el;
 	} catch (IOException ex) {
 	}
@@ -199,8 +200,8 @@ public class SAX_node extends DefaultHandler {
 
 	    ell.render(sbu, sbl);
 
-	    System.out.println(sbu.toString());
-	    System.out.println(sbl.toString());
+	    Log.getLogger().info(sbu.toString());
+	    Log.getLogger().info(sbl.toString());
 	}
     }
 }

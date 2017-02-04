@@ -15,6 +15,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import omega.Context;
+import omega.util.Log;
 
 public class OmegaFxAppl extends Application {
 
@@ -32,7 +33,7 @@ public class OmegaFxAppl extends Application {
 	primaryStage.setTitle("Hello World!");
 	Button btn = new Button();
 	btn.setText("Say 'Hello World'");
-	btn.setOnAction(event -> System.out.println("Hello World!"));
+	btn.setOnAction(event -> Log.getLogger().info("Hello World!"));
 	StackPane root = new StackPane();
 	root.getChildren().add(btn);
 	primaryStage.setScene(new Scene(root, 300, 250));
@@ -54,7 +55,7 @@ public class OmegaFxAppl extends Application {
 	// Runtime
 	MenuItem aboutItem = tk.createAboutMenuItem(appName);
 	MenuItem prefsItem = new MenuItem("Preferences...");
-	prefsItem.setOnAction(event -> System.out.println("prefs clicked"));
+	prefsItem.setOnAction(event -> Log.getLogger().info("prefs clicked"));
 	appMenu.getItems().addAll(aboutItem, new SeparatorMenuItem(), prefsItem, new SeparatorMenuItem(),
 		tk.createHideMenuItem(appName), tk.createHideOthersMenuItem(), tk.createUnhideAllMenuItem(),
 		new SeparatorMenuItem(), tk.createQuitMenuItem(appName));
@@ -119,7 +120,7 @@ public class OmegaFxAppl extends Application {
         stage.setScene(scene);
         stage.setAlwaysOnTop(true);
         stage.show();
-	System.err.println("started");
+	Log.getLogger().info("started");
 	new Thread(()->{
 	    S.m_sleep(500);
 	    Platform.runLater(() -> {
@@ -137,7 +138,7 @@ public class OmegaFxAppl extends Application {
     }
 
     public void stop() {
-	System.err.println("stop");
+	Log.getLogger().info("stop");
 //	Platform.exit();
     }
 

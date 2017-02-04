@@ -1,18 +1,32 @@
 package omega.util;
 
 import fpdo.sundry.S;
+import omega.appl.Omega_IS;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.logging.FileHandler;
+import java.util.*;
+import java.util.logging.*;
 import java.util.logging.Formatter;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 
 public class Log {
+    static FileHandler fh = null;
+    static Handler h2;
+
+    static class MyHandler extends StreamHandler {
+        MyHandler(OutputStream out, Formatter f) {
+            super(out, f);
+	}
+
+	public synchronized void publish(LogRecord record) {
+	    super.publish(record);
+	    flush();
+	}
+    }
+
     private static class MyFormatter extends Formatter {
 	static DateFormat dformat = new SimpleDateFormat("dd/MM HH:mm:ss.SSS");
 	long last = S.ct();
@@ -30,43 +44,43 @@ public class Log {
 		    d + ' ' +
 		    S.padLeft("" + lt, 5, ' ') + ' ' +
 		    S.padRight("" + s, 23, ' ') + ' ' +
-		    S.padRight("" + record.getSourceMethodName(), 18, ' ') + ' ' +
+		    S.padRight("" + record.getSourceMethodName(), 22, ' ') + ' ' +
 		    record.getMessage() + '\n';
 	}
     }
 
-    private MyFormatter my_formatter = new MyFormatter();
+    private static MyFormatter my_formatter = new MyFormatter();
 
-    public java.util.logging.Logger logger;
+    private static HashMap<String, Logger> myMap = new HashMap<String, Logger>();
 
-    public Log(String name) {
-	this(name, omega.Context.logon);
+    public static Logger getLogger() {
+    	return getLogger(Omega_IS.class);
     }
 
-    public Log(String name, boolean on) {
+    private static Logger getLogger(Class clazz) {
 	try {
-	    logger = java.util.logging.Logger.getLogger(name);
+	    Logger logger = myMap.get(clazz.getName());
+	    if ( logger != null )
+	        return  logger;
+	    logger = Logger.getLogger(clazz.getName());
+	    myMap.put(clazz.getName(), logger);
 	    //logger.getParent().setLevel(Level.OFF);
-	    logger.setLevel(on ? Level.ALL : Level.OFF);
-	    File d = new File("logs");
-	    d.mkdir();
-	    FileHandler fh = new FileHandler("logs/" + name);
+	    logger.setLevel(Level.ALL);
+	    if ( fh == null ) {
+		File d = new File("logs");
+		d.mkdir();
+		fh = new FileHandler(d.getName() + '/' + "omega.log");
+	    }
 	    fh.setFormatter(my_formatter);
 	    logger.addHandler(fh);
+	    h2 = new MyHandler(System.out, my_formatter);
+	    logger.addHandler(h2);
 	    logger.setUseParentHandlers(false);
+	    return logger;
 	} catch (IOException ex) {
 	} catch (NoClassDefFoundError ex) {
-	    logger = null;
 	}
-    }
-
-    public void setOn(boolean b) {
-	logger.setLevel(b ? Level.INFO : Level.OFF);
-	logger.getParent().setLevel(b ? Level.INFO : Level.OFF);
-    }
-
-    public java.util.logging.Logger getLogger() {
-	return logger;
+	return null;
     }
 }
 

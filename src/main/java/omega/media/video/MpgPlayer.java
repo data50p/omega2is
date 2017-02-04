@@ -2,6 +2,7 @@ package omega.media.video;
 
 import fpdo.sundry.S;
 import javafx.embed.swing.JFXPanel;
+import omega.util.Log;
 
 import javax.swing.*;
 import java.awt.*;
@@ -99,12 +100,12 @@ public class MpgPlayer {
 	vw = w;
 	vh = h;
 	visual.setSize(new Dimension(vw, vh));
-	System.err.println("set m size to: " + w + ' ' + h);
+	Log.getLogger().info("set m size to: " + w + ' ' + h);
     }
 
     public void setLocation(int x, int y) {
 	visual.setLocation(x, y);
-	System.err.println("set m loc at: " + x + ' ' + y);
+	Log.getLogger().info("set m loc at: " + x + ' ' + y);
     }
 
     static public MpgPlayer createMpgPlayer(String fn, JComponent jcomp) {

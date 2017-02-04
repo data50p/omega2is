@@ -30,7 +30,7 @@ public class Server extends Thread {
 	omega.Context.sout_log.getLogger().info("ERR: " + "httpd: Server started");
 	try {
 	    sso = new ServerSocket(port);
-	    for (; ; ) {
+	    for (;;) {
 		Socket so = sso.accept();
 //		omega.Context.sout_log.getLogger().info("ERR: " + "httpd: Connection accepted");
 		connection_cnt++;

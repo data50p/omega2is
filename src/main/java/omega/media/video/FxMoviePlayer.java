@@ -17,6 +17,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import omega.Context;
 import omega.lesson.canvas.MsgItem;
+import omega.util.Log;
 
 import javax.swing.*;
 import java.awt.*;
@@ -70,7 +71,7 @@ public class FxMoviePlayer {
     }
 
     public JFXPanel initGUI(JComponent jcomp, String fn) {
-	System.err.println("enter initGUI " + Platform.isFxApplicationThread());
+	Log.getLogger().info("enter initGUI " + Platform.isFxApplicationThread());
 	// This method is invoked on the EDT thread
 	this.jcomp = jcomp;
 	boolean snd = true;
@@ -89,16 +90,16 @@ public class FxMoviePlayer {
 	    @Override
 	    public void run() {
 		try {
-		    System.err.println("runLater: 100");
+		    Log.getLogger().info("runLater: 100");
 		    if ( snd_ ) {
 			initFX2(fxPanel, fn);
 		    } else {
 			initFX(fxPanel, fn);
 			initFX2(fxPanel, fn);
 		    }
-		    System.err.println("runLater: play()...");
+		    Log.getLogger().info("runLater: play()...");
 		    player.play();
-		    System.err.println("runLater: ...play()");
+		    Log.getLogger().info("runLater: ...play()");
 		} catch (URISyntaxException e) {
 		    e.printStackTrace();
 		}
@@ -106,7 +107,7 @@ public class FxMoviePlayer {
 	    }
 	});
 
-	System.err.println("leave initGUI");
+	Log.getLogger().info("leave initGUI");
 	return fxPanel;
     }
 
@@ -117,27 +118,27 @@ public class FxMoviePlayer {
     }
 
     private void initFX(JFXPanel fxPanel, String fn) throws URISyntaxException {
-	System.err.println("enter initFX FxAppThread => " + Platform.isFxApplicationThread());
+	Log.getLogger().info("enter initFX FxAppThread => " + Platform.isFxApplicationThread());
 	// This method is invoked on the JavaFX thread
 	this.root = new Group();
 	Scene scene = new Scene(this.root, winW, winH, new Color(0.24, 0.44, 0.84, 0.184));
 	this.scene = scene;
 	scene.setOnMousePressed(new EventHandler<MouseEvent>() {
 	    public void handle(MouseEvent me) {
-		System.out.println("Mouse pressed");
+		Log.getLogger().info("Mouse pressed");
 		messageShown = false;
 	    }
 	});
 
 	scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
 	    public void handle(KeyEvent ke) {
-		System.out.println("Key Pressed: " + ke.getText() + ' ' + ke.getCode());
+		Log.getLogger().info("Key Pressed: " + ke.getText() + ' ' + ke.getCode());
 	    }
 	});
 
 	scene.setOnKeyReleased(new EventHandler<KeyEvent>() {
 	    public void handle(KeyEvent ke) {
-		System.out.println("Key Released: " + ke.getText()+ ' ' + ke.getCode());
+		Log.getLogger().info("Key Released: " + ke.getText()+ ' ' + ke.getCode());
 	    }
 	});
 	fxPanel.setScene(scene);
@@ -146,19 +147,19 @@ public class FxMoviePlayer {
     private void initFX2(JFXPanel fxPanel, String fn) throws URISyntaxException {
 	File file = new File(fn);
 	String uu = file.toURI().toString();
-	System.err.println("UU is " + uu);
+	Log.getLogger().info("UU is " + uu);
 
 	Class<? extends FxMoviePlayer> aClass = getClass();
-	System.err.println("aClass is " + aClass);
+	Log.getLogger().info("aClass is " + aClass);
 	URL resource = null;//aClass.getResource(MEDIA0_URL);
 	try {
 	    resource = file.toURI().toURL();
 	} catch (MalformedURLException e) {
 	    e.printStackTrace();
 	}
-	System.err.println("resource is " + resource);
+	Log.getLogger().info("resource is " + resource);
 	String u = resource.toURI().toString();
-	System.err.println("U is " + u);
+	Log.getLogger().info("U is " + u);
 
 	player = new MediaPlayer(new Media(uu));
 	MediaView mediaView = new MediaView(player);
@@ -181,20 +182,20 @@ public class FxMoviePlayer {
 		mediaView.setTranslateX(xx);
 		mediaView.setTranslateY(yy);
 
-		System.out.println("---++-- win: " + winW + ' ' + winH + " media: " + mediaW + ' ' + mediaH + " translate: " + xx + ' ' + yy);
-		System.err.println("VP " + mediaView.getX());
+		Log.getLogger().info("---++-- win: " + winW + ' ' + winH + " media: " + mediaW + ' ' + mediaH + " translate: " + xx + ' ' + yy);
+		Log.getLogger().info("VP " + mediaView.getX());
 		ready = true;
 //		player.play();
 	    }
 	});
 
 	player.setOnEndOfMedia(() -> {
-	    System.out.println("EOF ");
+	    Log.getLogger().info("EOF ");
 	    stopped = true;
 	    player.dispose();
 	});
 
-	System.err.println("leave initFX");
+	Log.getLogger().info("leave initFX");
     }
 
     public void play() {
@@ -207,7 +208,7 @@ public class FxMoviePlayer {
 		S.m_sleep(100);
 
 	if ( player != null ) {
-	    System.err.println("Play the movie...");
+	    Log.getLogger().info("Play the movie...");
 	    player.play();
 	}
     }
@@ -230,9 +231,9 @@ public class FxMoviePlayer {
 
 
     public void start(Stage primaryStage) {
-	System.err.println("Java Home: " + System.getProperty("java.home"));
-	System.err.println("User Home: " + System.getProperty("user.home"));
-	System.err.println("User dir: " + System.getProperty("user.dir"));
+	Log.getLogger().info("Java Home: " + System.getProperty("java.home"));
+	Log.getLogger().info("User Home: " + System.getProperty("user.home"));
+	Log.getLogger().info("User dir: " + System.getProperty("user.dir"));
 
 	(new Thread(() -> initGUI())).start();
 	while (stopped == false)

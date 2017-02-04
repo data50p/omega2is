@@ -1,6 +1,7 @@
 package omega.lesson;
 
 import omega.media.video.MpgPlayer;
+import omega.util.Log;
 
 import javax.swing.*;
 import java.awt.*;
@@ -83,7 +84,7 @@ public class EachWordMovie {
 
     public Rectangle getMovieRectangle() {
 	Rectangle r = new Rectangle(mp.getX(), mp.getY(), mp.getW(), mp.getH());
-	System.err.println("Movie rect = " + r);
+	Log.getLogger().info("Movie rect = " + r);
 	return r;
     }
 

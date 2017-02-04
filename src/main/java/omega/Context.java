@@ -7,6 +7,7 @@ import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
+import java.util.logging.Level;
 
 
 public class Context {
@@ -22,12 +23,12 @@ public class Context {
 
     public static boolean logon = !false;
 
-    public static Log def_log = new Log("default", logon);
-    public static Log sout_log = new Log("stdout", logon);
-    public static Log exc_log = new Log("exception", logon);
-    public static Log story_log = new Log("story", logon);
-    public static Log lesson_log = new Log("lesson", logon);
-    public static Log audio_log = new Log("audio", true);
+    public static Log def_log = new Log();
+    public static Log sout_log = def_log;
+    public static Log exc_log = def_log;
+    public static Log story_log = def_log;
+    public static Log lesson_log = def_log;
+    public static Log audio_log = def_log;
 
     private static String lesson_lang = omega.i18n.T.lang;
     private static String lesson_lang_editor = omega.i18n.T.lang;
@@ -129,9 +130,7 @@ public class Context {
     static public HelpStack HELP_STACK = new HelpStack();
 
     public static void setLogon(boolean b) {
-	logon = b;
-	def_log.setOn(b);
-	story_log.setOn(b);
+        Log.getLogger().setLevel(b ? Level.ALL : Level.OFF);
     }
 
     public static String getLessonLang() {

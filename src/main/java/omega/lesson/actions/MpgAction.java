@@ -4,6 +4,7 @@ import fpdo.sundry.S;
 import fpdo.xml.Element;
 import omega.lesson.canvas.MsgItem;
 import omega.media.video.MpgPlayer;
+import omega.util.Log;
 
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
@@ -49,7 +50,6 @@ public class MpgAction implements ActionI {
 	}
 
 	public void paintComponent(Graphics g) {
-	    omega.Context.sout_log.getLogger().info("ERR: " + "[paint]");
 	    g.setColor(omega.lesson.Lesson.omega_settings_dialog.action_movie_background.color);
 	    g.fillRect(0, 0, 2000, 2000);
 	    if (show_msg)
@@ -132,7 +132,7 @@ public class MpgAction implements ActionI {
         int w = -1;
 	if (mpg_player != null)
 	    w =  mpg_player.fxp.mediaW;
-	System.err.println("Movie width: " + w);
+	Log.getLogger().info("Movie width: " + w);
 	return w;
     }
 
@@ -140,7 +140,7 @@ public class MpgAction implements ActionI {
         int h = -1;
 	if (mpg_player != null)
 	    h = mpg_player.fxp.mediaH;
-	System.err.println("Movie width: " + h);
+	Log.getLogger().info("Movie width: " + h);
 	return h;
     }
 
@@ -330,7 +330,7 @@ public class MpgAction implements ActionI {
 	if (mpg_player == null)
 	    mpg_player = MpgPlayer.createMpgPlayer(action_s, jpan, window.getWidth(), window.getHeight());
 	else
-	    System.err.println("already created MpgPayer ... ");
+	    Log.getLogger().info("already created MpgPayer ... ");
 	omega.Context.sout_log.getLogger().info("ERR: " + "mpg created " + mpg_player.getOrigW() + ' ' + mpg_player.getOrigH());
 	mpg_player.fxp.waitReady();
 	again_play2 = true;
@@ -351,7 +351,6 @@ public class MpgAction implements ActionI {
 		showMsgFx(new MsgItem("", sentence));
 		while (show_msg && mpg_player.fxp.messageShown) {
 		    S.m_sleep(200);
-		    System.err.print(".");
 		    if (again_audio && again_audio2) {
 			hook.run();
 			again_audio2 = false;

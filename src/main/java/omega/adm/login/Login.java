@@ -2,6 +2,7 @@ package omega.adm.login;
 
 import omega.adm.people.PeopleTeacher;
 import omega.adm.people.PeopleUser;
+import omega.util.Log;
 
 import javax.swing.*;
 
@@ -31,7 +32,7 @@ abstract public class Login {
     }
 
     public void setName(String name) {
-	omega.Context.sout_log.getLogger().info("ERR: " + "setName " + name + mode);
+	Log.getLogger().info("ERR: " + "setName " + name + mode);
 	switch (mode) {
 	    case USER:
 		user.setName(name);

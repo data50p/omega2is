@@ -152,7 +152,7 @@ public class ToString {
 			    }
 			}
 		    } catch (Exception ex) {
-			System.err.println("" + ex);
+			Log.getLogger().info("" + ex);
 			v = ex.getMessage();
 		    }
 		    sb.append("" + f.getName() + '=' + v);
@@ -205,7 +205,7 @@ public class ToString {
     public static void main(String[] args) {
 	if (args.length == 0)
 	    args = new String[]{"-.*Foo.*", "-nominal123.*", "=foobar"};
-	System.out.println("" + toString(new ToString()));
-	System.out.println("" + toString(new ToString(), args));
+	Log.getLogger().info("" + toString(new ToString()));
+	Log.getLogger().info("" + toString(new ToString(), args));
     }
 }

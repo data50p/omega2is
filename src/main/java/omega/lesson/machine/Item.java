@@ -83,7 +83,8 @@ public class Item {
 	String action_fname_ = el.findAttr("action-fname");
 	action_fname_orig = action_fname_;
 	this.action_fname = krull(action_fname_);
-	omega.Context.sout_log.getLogger().info("ERR: " + "ACTION " + this.action_fname + ' ' + action_fname_);
+	if ( action_fname_ != null && action_fname_.length() > 0 )
+	    omega.Context.sout_log.getLogger().info("ERR: " + "ACTION " + this.action_fname + ' ' + action_fname_);
     }
 
     public void setDefaultAction() {

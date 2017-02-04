@@ -1,5 +1,7 @@
 package fpdo.xml;
 
+import omega.util.Log;
+
 public class XML {
     XML() {
     }
@@ -33,8 +35,7 @@ public class XML {
 	StringBuffer sbl = new StringBuffer();
 	xn.render(sbu, sbl);
 
-	System.out.println(sbu);
-	omega.Context.sout_log.getLogger().info("" + sbl);
+	Log.getLogger().info(sbu.toString());
     }
 
     static public void main(String[] args) {

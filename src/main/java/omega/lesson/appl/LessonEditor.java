@@ -6,6 +6,7 @@ import omega.lesson.Lesson;
 import omega.lesson.ToolBar_LessonEditor;
 import omega.swing.ToolAction;
 import omega.swing.ToolExecute;
+import omega.util.Log;
 
 import javax.swing.*;
 import java.awt.*;
@@ -40,7 +41,7 @@ public class LessonEditor extends ApplLesson {
 	le = new Lesson('e');
 	le.mact_New();
 	le.runLessons(this, mpan, fn, true, false);
-	System.err.println("LessonEditor done " + globalExit2);
+	Log.getLogger().info("LessonEditor done " + globalExit2);
     }
 
     public void processEvent(AWTEvent e) {
