@@ -295,6 +295,10 @@ public class SundryUtils {
 	return s.trim();
     }
 
+    public static boolean empty(String s) {
+        return s == null || s.length() == 0;
+    }
+
     // simple crypt/decrypt
     static final String oef62xc = "cvbnmQWERTY";
     static final String nmdb = "RTYASDFGH";

@@ -14,7 +14,7 @@ public class Files {
     // urldir, name
 
     static public String[] splitUrlString(String url_s) {
-	File fi = new File(".");
+	File fi = new File(Context.omegaAssets("."));
 	String cdu = null;
 	try {
 	    cdu = fi.toURI().toURL().toString();
@@ -63,7 +63,7 @@ public class Files {
     }
 
     static public String mkRelFname(String url_s) {
-	File fi = new File(".");
+	File fi = new File(Context.omegaAssets("."));// ".");
 	String cdu = null;
 	try {
 	    cdu = fi.toURI().toURL().toString();
@@ -84,7 +84,7 @@ public class Files {
     }
 
     static public String mkRelFname(String url_s, String prefix) {
-	File fi = new File(".");
+	File fi = new File(Context.omegaAssets("."));
 	String cdu = null;
 	try {
 	    cdu = fi.toURI().toURL().toString();

@@ -31,8 +31,8 @@ public class Editor extends OmegaAppl {
 	    System.exit(1);
 	}
 
-	String Context_omegaAssets = (String) flag.get("omega_assets");
-	Context.setOmegaAssets(Context_omegaAssets);
+	Context.setOmegaAssets((String) flag.get("omega_assets"));
+
 	omega.Context.omega_lang = (String) flag.get("omega_lang");
 	omega.Context.sout_log.getLogger().info("ERR: " + "param omega_lang is " + omega.Context.omega_lang);
 

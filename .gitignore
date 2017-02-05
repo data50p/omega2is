@@ -10,3 +10,4 @@ runtime/omega*.jar
 *.omega_result
 /.nb-gradle/
 .nb-gradle-properties
+alternate.omega_assets

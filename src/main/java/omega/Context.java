@@ -2,6 +2,7 @@ package omega;
 
 import omega.subsystem.Subsystem;
 import omega.util.Log;
+import omega.util.SundryUtils;
 
 import java.awt.*;
 import java.io.File;
@@ -14,8 +15,10 @@ import java.util.logging.Level;
 public class Context {
     public static final String OMEGA_ASSETS_SUFFIX = ".omega_assets";
     public static final String defaultOmegaAssets = "default" + OMEGA_ASSETS_SUFFIX;
+    public static final String alternateOmegaAssets = "alternate" + OMEGA_ASSETS_SUFFIX;
 
-    public static String omegaAssets = defaultOmegaAssets;
+    private  static String omegaAssets = defaultOmegaAssets;
+
     static Object lock = new Object();
     static HashMap subsystems = new HashMap();
     public static String URL_BASE = "http://localhost:8089/";
@@ -48,6 +51,12 @@ public class Context {
     public static boolean DEMO = false;
     public static String omega_lang = null;
 
+    /**
+     * Get the full path for current omega assets
+     *
+     * @param path
+     * @return
+     */
     public static String omegaAssets(String path) {
 	if (path == null ) {
 	    return null;
@@ -90,14 +99,24 @@ public class Context {
 	return asa;
     }
 
-    public static void setOmegaAssets(String oa) {
-        if ( oa == null || oa.length() == 0 ) {
+    /**
+     * Set the from now on choosen omega assets
+     *
+     * @param omega_assets_name null value restores default
+     */
+    public static void setOmegaAssets(String omega_assets_name) throws IllegalArgumentException {
+        if (SundryUtils.empty(omega_assets_name) ) {
 	    omegaAssets = defaultOmegaAssets;
+	    Context.sout_log.getLogger().info("setOmegaAssets: " + omegaAssets);
 	} else {
-	    if (oa.endsWith(OMEGA_ASSETS_SUFFIX))
-		oa = oa.replaceAll(OMEGA_ASSETS_SUFFIX, "");
-	    Context.sout_log.getLogger().info("setOmegaAssets: " + omegaAssets + " -> " + oa);
-	    omegaAssets = oa;
+	    if ( !omega_assets_name.endsWith(OMEGA_ASSETS_SUFFIX))
+		omega_assets_name = omega_assets_name + OMEGA_ASSETS_SUFFIX;
+	    if ( (new File(omegaAssets)).exists() ) {
+		Context.sout_log.getLogger().info("setOmegaAssets: " + omegaAssets);
+		omegaAssets = omega_assets_name;
+		return;
+	    }
+	    Context.sout_log.getLogger().info("setOmegaAssets: unable to set " + omegaAssets);
 	}
     }
 
