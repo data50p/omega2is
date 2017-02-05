@@ -7,8 +7,8 @@ Build with Idea 2016.3 or later.
 
 After build:
 
-cd /runtime
+(cd runtime; java -jar omega-is-2.*.jar)
 
-java -jar omega-is-2.*.jar
+
 
 
