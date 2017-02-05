@@ -4,6 +4,7 @@ import omega.subsystem.Subsystem;
 import omega.util.Log;
 
 import java.awt.*;
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -142,6 +143,10 @@ public class Context {
 	lesson_lang = s;
     }
 
+    public static boolean isDeveloper() {
+        File f = new File("../.git");
+        return f.exists();
+    }
 //    public static String getEditorLessonLang() {
 //	return lesson_lang_editor;
 //    }
