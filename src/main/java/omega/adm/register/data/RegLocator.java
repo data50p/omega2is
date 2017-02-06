@@ -11,26 +11,29 @@ import java.io.FilenameFilter;
 import java.util.Arrays;
 
 public class RegLocator {
-    static String fbase = "register";
+    static String fbase = "register";  // this is not inside the omega_assets
     static String PUPIL_SUF = ".p";
     static String RESULT_SUF = ".omega_result";
 
     public RegLocator() {
     }
 
-    String aFbase() {
-    	return Context.omegaAssets(fbase);
+    String aRegisterFbase(String subPath) {
+	return fbase + File.separatorChar + subPath;
+    }
+
+    String aRegisterFbase() {
+	return fbase;
     }
 
     static String[] scanDir(String dir, FilenameFilter fnf) {
 	omega.Context.sout_log.getLogger().info("ERR: " + "scan " + dir + ' ' + fnf);
-	String aDir = Context.omegaAssets(dir);
-	File df = new File(aDir);
+	File df = new File(dir);
 	File[] fa = df.listFiles(fnf);
 	if (fa != null) {
 	    String[] sa = new String[fa.length];
 	    for (int i = 0; i < fa.length; i++)
-		sa[i] = aDir + File.separatorChar + fa[i].getName();
+		sa[i] = dir + File.separatorChar + fa[i].getName();
 	    Arrays.sort(sa);
 	    return sa;
 	}
@@ -62,24 +65,24 @@ public class RegLocator {
     }
 
     public String[] getAllPupilsName() {
-	String sa[] = scanDir(aFbase(), new FilenameFilterExt(PUPIL_SUF));
-	return removePrefix(removeSuffix(sa, PUPIL_SUF), aFbase() + File.separatorChar);
+	String sa[] = scanDir(aRegisterFbase(), new FilenameFilterExt(PUPIL_SUF));
+	return removePrefix(removeSuffix(sa, PUPIL_SUF), aRegisterFbase() + File.separatorChar);
     }
 
     public String[] getAllResultsFName(String pupil, String[] with) {
-	String sa[] = scanDir(aFbase() + File.separatorChar + pupil + PUPIL_SUF, new FilenameFilterExt(RESULT_SUF, with));
+	String sa[] = scanDir(aRegisterFbase() + File.separatorChar + pupil + PUPIL_SUF, new FilenameFilterExt(RESULT_SUF, with));
 	return sa;
     }
 
     public String getFullFName(String pupil, String lesson_name) {
-	String s = aFbase() + File.separatorChar +
+	String s = aRegisterFbase() + File.separatorChar +
 		pupil + PUPIL_SUF + File.separatorChar +
 	    /*pupil + '-' +*/ lesson_name + RESULT_SUF;
 	return s;
     }
 
     public String getDirPath(String pupil) {
-	return aFbase() + File.separatorChar +
+	return aRegisterFbase() + File.separatorChar +
 		pupil + PUPIL_SUF + File.separatorChar;
     }
 
@@ -89,15 +92,15 @@ public class RegLocator {
 
     public String mkResultsFName(String pupil, String name) {
 	String s =
-		aFbase() + File.separatorChar +
+		aRegisterFbase() + File.separatorChar +
 			pupil + PUPIL_SUF + File.separatorChar +
 			name + RESULT_SUF;
 	return s;
     }
 
     public void createPupilName(String name) {
-	File f_old = new File("register/" + name + ".deleted");
-	File f = new File("register/" + name + ".p");
+	File f_old = new File(aRegisterFbase(name + ".deleted"));
+	File f = new File(aRegisterFbase() + "/" + name + ".p");
 	if (f.exists()) {
 	    JOptionPane.showMessageDialog(ApplContext.top_frame,
 		    T.t("Pupil exist already"));
@@ -108,11 +111,11 @@ public class RegLocator {
 	    f_old.renameTo(f);
 	} else {
 	    f.mkdir();
-	    File ft = new File("register/" + name + ".p/id.png");
+	    File ft = new File(aRegisterFbase(name + ".p/id.png"));
 	    File ff = new File("media/default/pupil.png");
 	    omega.util.Files.fileCopy(ff, ft);
-	    ft = new File("register/" + name + ".p/pupil_settings.xml");
-	    ff = new File("register/" + "Guest" + ".p/pupil_settings.xml");
+	    ft = new File(aRegisterFbase(name + ".p/pupil_settings.xml"));
+	    ff = new File(aRegisterFbase("Guest" + ".p/pupil_settings.xml"));
 	    omega.util.Files.fileCopy(ff, ft);
 	}
     }

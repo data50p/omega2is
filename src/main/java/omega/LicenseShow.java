@@ -3,8 +3,6 @@ package omega;
 
 import fpdo.sundry.PreferenceUtil;
 
-import static omega.Config.alwaysShowLicense;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -26,7 +24,7 @@ public class LicenseShow {
 	PreferenceUtil pu = new PreferenceUtil(LicenseShow.class);
 	String answer = (String) pu.getObject(licShow, no);
 
-	if (Context.isDeveloper() || !alwaysShowLicense && yes.equals(answer))
+	if (Context.isDeveloper() || yes.equals(answer))
 	    return true;
 
 	ShowLicense dialog = new ShowLicense();

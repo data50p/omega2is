@@ -16,7 +16,6 @@ public class Config {
 
     static public boolean LIU_Mode = true;
 
-    static public boolean alwaysShowLicense = false;
     public static boolean fullScreen = false;
     public static boolean smaller = true;
 

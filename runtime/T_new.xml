@@ -26,6 +26,10 @@
    <string>Sign Sentence Transparence</string>
   </void>
   <void method="put">
+   <string>Can&apos;t find animation: anim/ActiveAnim/ActorpresB1.omega_anim</string>
+   <string>Can&apos;t find animation: anim/ActiveAnim/ActorpresB1.omega_anim</string>
+  </void>
+  <void method="put">
    <string>Can&apos;t find animation: anim/ActiveAnim/SwimUnderTheBoat.omega_anim</string>
    <string>Can&apos;t find animation: anim/ActiveAnim/SwimUnderTheBoat.omega_anim</string>
   </void>
