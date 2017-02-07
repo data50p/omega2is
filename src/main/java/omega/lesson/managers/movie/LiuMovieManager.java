@@ -168,7 +168,7 @@ public class LiuMovieManager extends Manager {
     }
 
     private boolean mediaFileExist(String sfn) {
-	File f = new File(VideoUtil.supportedFname(Context.omegaAssets("media/" + sfn)));
+	File f = new File(VideoUtil.findSupportedFname(Context.omegaAssets("media/" + sfn)));
 	boolean exist = f.exists() && f.canRead();
 	omega.Context.sout_log.getLogger().info("mediaFileExist: " + sfn + ' ' + exist);
 	return exist;

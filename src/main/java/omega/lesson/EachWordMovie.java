@@ -1,6 +1,8 @@
 package omega.lesson;
 
+import omega.Context;
 import omega.media.video.MpgPlayer;
+import omega.media.video.VideoUtil;
 import omega.util.Log;
 
 import javax.swing.*;
@@ -24,9 +26,9 @@ public class EachWordMovie {
 	if (jcomp == null || fName == null) {
 	    return null;
 	}
-
-	File f = new File(fName);
-	if ( ! f.exists() )
+	fName = Context.omegaAssets(fName);
+	fName = VideoUtil.findSupportedFname(fName);
+	if ( fName == null )
 	    return null;
 
 	if (mp == null) {

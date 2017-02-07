@@ -1,5 +1,7 @@
 package omega.media.video;
 
+import omega.Context;
+
 import java.io.File;
 
 /**
@@ -14,23 +16,33 @@ public class VideoUtil {
      * @return
      */
     public static boolean exist(String fname) {
-	if ( fname.endsWith(".mpg") ) {
-	    String fBase = fname.replaceAll("\\.mpg$", "");
-	    File f = new File(fBase + ".mp4");
-	    if ( f.exists() && f.canRead() )
-		return true;
-	}
-	return true;
+        return findSupportedFname(fname) != null;
     }
 
-    public static String supportedFname(String fname) {
-	if ( fname.endsWith(".mpg") ) {
-	    String fBase = fname.replaceAll("\\.mpg$", "");
-	    String supported = fBase + ".mp4";
-	    File f = new File(supported);
-	    if ( f.exists() && f.canRead() )
-		return supported;
-	}
-	return fname;
+    /**
+     * Find the first found supported existing movie file name from the intended.
+     * @param fname
+     * @return
+     */
+    public static String findSupportedFname(String fname) {
+	String altFname = fname.replaceAll("\\.[mM][pP][gG]$", ".mp4").replaceAll("\\.[mM][oO][vV]$", ".mp4").replaceAll("\\.[mM][pP][eE][gG]$", ".mp4").replaceAll("\\.[aA][vV][iI]$", ".mp4");
+	if ( false && fileExist(altFname) )
+	    return altFname;
+
+	File f = new File(altFname);
+	String parent = f.getParentFile().getPath();
+	String fn = f.getName();
+	File altFile = new File(parent, fn.toLowerCase());
+	if ( fileExist(altFile) )
+	    return altFile.getPath();
+	return null;
+    }
+
+    private static boolean fileExist(String fname) {
+	return fileExist(new File(fname));
+    }
+
+    private static boolean fileExist(File file) {
+	return file.exists() && file.canRead();
     }
 }
