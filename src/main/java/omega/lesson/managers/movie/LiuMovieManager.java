@@ -5,11 +5,13 @@
 package omega.lesson.managers.movie;
 
 import omega.Config;
+import omega.Context;
 import omega.lesson.EachWordMovie;
 import omega.lesson.canvas.LessonCanvas;
 import omega.lesson.machine.Item;
 import omega.lesson.machine.Target;
 import omega.lesson.managers.Manager;
+import omega.media.video.VideoUtil;
 
 import javax.swing.*;
 import java.awt.*;
@@ -166,7 +168,7 @@ public class LiuMovieManager extends Manager {
     }
 
     private boolean mediaFileExist(String sfn) {
-	File f = new File("media/" + sfn);
+	File f = new File(VideoUtil.supportedFname(Context.omegaAssets("media/" + sfn)));
 	boolean exist = f.exists() && f.canRead();
 	omega.Context.sout_log.getLogger().info("mediaFileExist: " + sfn + ' ' + exist);
 	return exist;

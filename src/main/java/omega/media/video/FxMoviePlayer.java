@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
+import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
@@ -100,6 +101,8 @@ public class FxMoviePlayer {
 		    Log.getLogger().info("runLater: play()...");
 		    player.play();
 		    Log.getLogger().info("runLater: ...play()");
+		} catch (MediaException e) {
+		    e.printStackTrace();
 		} catch (URISyntaxException e) {
 		    e.printStackTrace();
 		}

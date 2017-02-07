@@ -27,6 +27,7 @@ import omega.lesson.repository.Save;
 import omega.lesson.settings.OmegaSettingsDialog;
 import omega.lesson.settings.PupilSettingsDialog;
 import omega.media.audio.APlayer;
+import omega.media.video.VideoUtil;
 import omega.util.Log;
 import omega.value.Values;
 
@@ -161,8 +162,8 @@ public class Lesson implements LessonCanvasListener {
 		    omega.Context.sout_log.getLogger().info("While play movie: " + ex_mv);
 		}
 	    } else {
-		String smFname = "media/sign-" + omega.Context.getLessonLang() + "/" + all_text + ".mpg";
-		File smFile = new File(smFname);
+		String smFname = Context.omegaAssets("media/sign-" + omega.Context.getLessonLang() + "/" + all_text + ".mp4");
+		File smFile = new File(VideoUtil.supportedFname(smFname));
 		if (smFile.exists() && smFile.canRead()) {
 		    try {
 			le_canvas.setMarkTargetAll();

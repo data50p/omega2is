@@ -5,6 +5,7 @@ import omega.util.Log;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 
 //import omega.lesson.test.*;
 
@@ -23,6 +24,10 @@ public class EachWordMovie {
 	if (jcomp == null || fName == null) {
 	    return null;
 	}
+
+	File f = new File(fName);
+	if ( ! f.exists() )
+	    return null;
 
 	if (mp == null) {
 	    omega.Context.sout_log.getLogger().info("ERR: " + "+++++++ prepare new: " + fName);
