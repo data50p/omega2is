@@ -10,13 +10,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 
-public class SentencePropPanel extends JPanel {
+@Deprecated
+class SentencePropPanel extends JPanel {
     SentenceProperty sprop;
     HashMap guimap;
 
     GBC_Factory gbcf = new GBC_Factory();
 
-    SentencePropPanel(SentenceProperty sprop) {
+    private SentencePropPanel(SentenceProperty sprop) {
 	this.sprop = sprop;
 	guimap = sprop.guimap;
 	build();

@@ -42,8 +42,24 @@
    <string>Sign movie</string>
   </void>
   <void method="put">
+   <string>Alt 3</string>
+   <string>Alt 3</string>
+  </void>
+  <void method="put">
    <string>Error while loading lesson: &quot;</string>
    <string>Error while loading lesson: &quot;</string>
+  </void>
+  <void method="put">
+   <string>Alt 4</string>
+   <string>Alt 4</string>
+  </void>
+  <void method="put">
+   <string>Alt 1</string>
+   <string>Alt 1</string>
+  </void>
+  <void method="put">
+   <string>Alt 2</string>
+   <string>Alt 2</string>
   </void>
   <void method="put">
    <string>Path for timeline</string>
@@ -104,6 +120,14 @@
   <void method="put">
    <string>default.omega_assets/register/Norsk-bokmål</string>
    <string>default.omega_assets/register/Norsk-bokmål</string>
+  </void>
+  <void method="put">
+   <string>What</string>
+   <string>What</string>
+  </void>
+  <void method="put">
+   <string>Dependent File</string>
+   <string>Dependent File</string>
   </void>
   <void method="put">
    <string>default.omega_assets/register/Svenska</string>
@@ -174,6 +198,10 @@
    <string>Reset Starter</string>
   </void>
   <void method="put">
+   <string>Foobar</string>
+   <string>Foobar</string>
+  </void>
+  <void method="put">
    <string>Croatian</string>
    <string>Croatian</string>
   </void>
@@ -192,6 +220,10 @@
   <void method="put">
    <string>(Post Test Dummy Sign):</string>
    <string>(Post Test Dummy Sign):</string>
+  </void>
+  <void method="put">
+   <string>Omega - Assets Property</string>
+   <string>Omega - Assets Property</string>
   </void>
   <void method="put">
    <string>Sign</string>
