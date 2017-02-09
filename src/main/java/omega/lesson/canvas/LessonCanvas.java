@@ -30,9 +30,8 @@ import java.awt.geom.Area;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.*;
+import java.util.List;
 
 /*
  --gapE---|=====|--gapB--|=========|---gapE---
@@ -1227,6 +1226,20 @@ public class LessonCanvas extends BaseCanvas {
 	    return sa;
 	} catch (Exception ex) {
 	    return new String[0];
+	}
+    }
+
+    public List<Target.SentenceResult> getAllTargetCombinationsEx2(String sep, boolean dummy, char delim) {
+	try {
+	    Target tg2 = new Target();
+	    HashMap story_hm = Lesson.story_hm;
+	    tg2.loadFromEl(l_ctxt.getLesson().getElement(), "", story_hm, dummy, false); // FIX nomix?
+
+	    List<Target.SentenceResult> li = tg2.getAllTargetCombinationsEx2(sep, delim);
+
+	    return li;
+	} catch (Exception ex) {
+	    return new ArrayList<Target.SentenceResult>();
 	}
     }
 

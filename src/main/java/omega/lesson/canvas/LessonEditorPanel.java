@@ -383,6 +383,12 @@ public class LessonEditorPanel extends JPanel {
         if (assets_prop == null) {
             assets_prop = new OmegaAssetsProperty(omega.lesson.appl.LessonEditor.TOP_JFRAME, le_canvas.l_ctxt);
             assets_prop.addValuesListener(mvl_tg);
+        } else {
+            assets_prop.destroy();
+            assets_prop.removeAll();
+            assets_prop.setVisible(false);
+            assets_prop = new OmegaAssetsProperty(omega.lesson.appl.LessonEditor.TOP_JFRAME, le_canvas.l_ctxt);
+            assets_prop.addValuesListener(mvl_tg);
         }
         assets_prop.setVisible(true);
     }

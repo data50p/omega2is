@@ -6,12 +6,11 @@ import fpdo.sundry.S;
 import fpdo.xml.Element;
 import omega.Context;
 import omega.lesson.managers.movie.LiuMovieManager;
+import omega.util.SundryUtils;
 import omega.value.Values;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.*;
 import java.util.List;
 
 public class Target {
@@ -1086,6 +1085,7 @@ public class Target {
 	}
     }
 
+    @Deprecated
     public String getActionFromTarget() {
 	for (Iterator it = t_items.iterator(); it.hasNext(); ) {
 	    T_Item titm = (T_Item) it.next();
@@ -1356,6 +1356,115 @@ public class Target {
 	    li.add(tg2.getAllText(sep, delim));
 	}
 	return (String[]) li.toArray(new String[0]);
+    }
+
+    public static class SentenceResult {
+        public String sound;
+	public Set<String> set;
+
+        SentenceResult(String sound, Set<String> set) {
+            this.sound = sound;
+            this.set = set;
+	}
+    }
+
+    public List<SentenceResult> getAllTargetCombinationsEx2(String sep, char delim) {
+	List<SentenceResult> li = new ArrayList<SentenceResult>();
+
+	Target tg2 = this;
+
+	int Tn = tg2.get_howManyT_Items();
+
+	Set<String> set = new HashSet<String>();
+
+	if (Tn > 0) {
+	    String tid0 = tg2.getT_Item(0).tid;
+	    ItemEntryVirtualList it_ent0 = tg2.findItemEntryVirtualListMatchTid(tid0);
+	    int ie_n0 = it_ent0.howManyItems();
+	    for (int i0 = 0; i0 < ie_n0; i0++) {
+		Item itm0 = it_ent0.getItemAt(i0);
+		tg2.pickItemAt(itm0.it_ent.ord, itm0.ord, 0);
+		if (Tn > 1) {
+		    String tid1 = tg2.getT_Item(1).tid;
+		    ItemEntryVirtualList it_ent1 = tg2.findItemEntryVirtualListMatchTid(tid1);
+		    int ie_n1 = it_ent1.howManyItems();
+		    for (int i1 = 0; i1 < ie_n1; i1++) {
+			Item itm1 = it_ent1.getItemAt(i1);
+			tg2.pickItemAt(itm1.it_ent.ord, itm1.ord, 1);
+			if (Tn > 2) {
+			    String tid2 = tg2.getT_Item(2).tid;
+			    ItemEntryVirtualList it_ent2 = tg2.findItemEntryVirtualListMatchTid(tid2);
+			    int ie_n2 = it_ent2.howManyItems();
+			    for (int i2 = 0; i2 < ie_n2; i2++) {
+				Item itm2 = it_ent2.getItemAt(i2);
+				tg2.pickItemAt(itm2.it_ent.ord, itm2.ord, 2);
+				if (Tn > 3) {
+				    String tid3 = tg2.getT_Item(3).tid;
+				    ItemEntryVirtualList it_ent3 = tg2.findItemEntryVirtualListMatchTid(tid3);
+				    int ie_n3 = it_ent3.howManyItems();
+				    for (int i3 = 0; i3 < ie_n3; i3++) {
+					Item itm3 = it_ent3.getItemAt(i3);
+					tg2.pickItemAt(itm3.it_ent.ord, itm3.ord, 3);
+					if (Tn > 4) {
+					    String tid4 = tg2.getT_Item(4).tid;
+					    ItemEntryVirtualList it_ent4 = tg2.findItemEntryVirtualListMatchTid(tid4);
+					    int ie_n4 = it_ent4.howManyItems();
+					    for (int i4 = 0; i4 < ie_n4; i4++) {
+						Item itm4 = it_ent4.getItemAt(i4);
+						tg2.pickItemAt(itm4.it_ent.ord, itm4.ord, 4);
+						if (Tn > 5) {
+						    String tid5 = tg2.getT_Item(5).tid;
+						    ItemEntryVirtualList it_ent5 = tg2.findItemEntryVirtualListMatchTid(tid5);
+						    int ie_n5 = it_ent5.howManyItems();
+						    for (int i5 = 0; i5 < ie_n5; i5++) {
+							Item itm5 = it_ent5.getItemAt(i5);
+							tg2.pickItemAt(itm5.it_ent.ord, itm5.ord, 5);
+							li.add(tg2.getSentenceResult(sep, delim, set));
+						    }
+						} else {
+						    li.add(tg2.getSentenceResult(sep, delim, set));
+						}
+					    }
+					} else {
+					    li.add(tg2.getSentenceResult(sep, delim, set));
+					}
+				    }
+				} else {
+				    li.add(tg2.getSentenceResult(sep, delim, set));
+				}
+			    }
+			} else {
+			    li.add(tg2.getSentenceResult(sep, delim, set));
+			}
+		    }
+		} else {
+		    li.add(tg2.getSentenceResult(sep, delim, set));
+		}
+	    }
+	} else {
+	    li.add(tg2.getSentenceResult(sep, delim, set));
+	}
+
+	return li;
+    }
+
+    private SentenceResult getSentenceResult(String sep, char delim, Set<String> set) {
+	String s2 = ":";
+	String sound_list = getAll_Sound_Item(); // sound,sound...
+	String sa[] = sound_list.split(",");
+	for(String s: sa) {
+	    set.add(s);
+	}
+	for(Object o : t_items) {
+            T_Item titm = (T_Item)o;
+	    if (titm.item != null && ! SundryUtils.empty(titm.item.action_fname)) {
+		s2 += "(" + (titm.item).getActionFile() + ")";
+		set.add((titm.item).getActionFile());
+	    }
+
+	}
+	String s = sound_list + "   " + s2;
+        return new SentenceResult(s, set);
     }
 
     String[] gDta(Target tg2) {

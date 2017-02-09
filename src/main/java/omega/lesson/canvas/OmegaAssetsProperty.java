@@ -4,6 +4,7 @@ package omega.lesson.canvas;
 import fpdo.sundry.S;
 import omega.i18n.T;
 import omega.lesson.LessonContext;
+import omega.lesson.machine.Target;
 import omega.swing.TableSorter;
 import omega.value.Value;
 import omega.value.Values;
@@ -338,10 +339,10 @@ public class OmegaAssetsProperty extends Property_B {
         Y++;
         X = 0;
 
-        String sa[] = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx(" ", false, '{');
-        tmm = l_ctxt.getLesson().getTestMatrix(sa);
-        omega.Context.sout_log.getLogger().info("ERR: " + "Got sa sent " + S.a2s(sa));
-        OmAssProp_TableModel tmod = new OmAssProp_TableModel(this, sa, tmm);
+        java.util.List<Target.SentenceResult> li = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(" ", false, '{');
+        //tmm = l_ctxt.getLesson().getTestMatrix(sa);
+        omega.Context.sout_log.getLogger().info("ERR: " + "Got sa sent " + li);
+        OmAssProp_TableModel tmod = new OmAssProp_TableModel(this, li, tmm);
 
         TableSorter tsort = new TableSorter(tmod);
 
