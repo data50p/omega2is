@@ -30,7 +30,8 @@ public class OmAssProp_TableModel extends AbstractTableModel {
 	this.sprop = sprop;
 	this.li = li;
 	li_set = new ArrayList<String>();
-	li_set.addAll(li.get(0).set);
+	if ( li.size() > 0 )
+	    li_set.addAll(li.get(0).set);
 	test_member_map = tmm;
     }
 
@@ -39,7 +40,7 @@ public class OmAssProp_TableModel extends AbstractTableModel {
     }
 
     public int getRowCount() {
-	return li.size();
+	return Math.max(li.size(), li.size() > 0 ? li.get(0).set.size() : 0);
     }
 
     public Class getColumnClass(int c) {
@@ -57,19 +58,10 @@ public class OmAssProp_TableModel extends AbstractTableModel {
     }
 
     public Object getValueAt(int row, int col) {
-	if (col == 0)
-	    return li.get(row).sound;
-
-	if (col == 1) {
-	    String se = li.get(row).sound;
-	    if (se == null)
-		se = "";
-	    String sent = se.replaceAll("\\{[a-z0-9]*?\\}", "");
-	    String s = sprop.l_ctxt.getLesson().action_specific.getAction(sent);
-	    if (s != null)
-		return s;
-	    else
+	if (col == 0) {
+	    if (row >= li.size())
 		return "";
+	    return li.get(row).sound;
 	}
 
 	if (col == 2) {

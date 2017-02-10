@@ -11,3 +11,5 @@ runtime/omega*.jar
 /.nb-gradle/
 .nb-gradle-properties
 alternate.omega_assets
+*.omega_anim.prev*
+SAVED-*

@@ -5,11 +5,14 @@ package omega.lesson.machine;
 import fpdo.sundry.S;
 import fpdo.xml.Element;
 import omega.Context;
+import omega.anim.appl.Anim_Repository;
 import omega.lesson.managers.movie.LiuMovieManager;
+import omega.util.Log;
 import omega.util.SundryUtils;
 import omega.value.Values;
 
 import java.awt.*;
+import java.io.File;
 import java.util.*;
 import java.util.List;
 
@@ -1359,12 +1362,12 @@ public class Target {
     }
 
     public static class SentenceResult {
-        public String sound;
+	public String sound;
 	public Set<String> set;
 
-        SentenceResult(String sound, Set<String> set) {
-            this.sound = sound;
-            this.set = set;
+	SentenceResult(String sound, Set<String> set) {
+	    this.sound = sound;
+	    this.set = set;
 	}
     }
 
@@ -1452,19 +1455,71 @@ public class Target {
 	String s2 = ":";
 	String sound_list = getAll_Sound_Item(); // sound,sound...
 	String sa[] = sound_list.split(",");
-	for(String s: sa) {
+	for (String s : sa) {
 	    set.add(s);
 	}
-	for(Object o : t_items) {
-            T_Item titm = (T_Item)o;
-	    if (titm.item != null && ! SundryUtils.empty(titm.item.action_fname)) {
-		s2 += "(" + (titm.item).getActionFile() + ")";
-		set.add((titm.item).getActionFile());
+	for (Object o : t_items) {
+	    T_Item titm = (T_Item) o;
+	    if (titm.item != null && !SundryUtils.empty(titm.item.action_fname)) {
+		String af = (titm.item).getActionFile();
+
+		Anim_Repository ar = new Anim_Repository();
+		Element anim_el_root = ar.open(null, Context.omegaAssets(af));
+		Log.getLogger().info(anim_el_root.toString());
+
+		Element cel = anim_el_root.findElement("Canvas", 0);
+		if (cel != null) {
+		    Element eb = anim_el_root.findElement("background", 0);
+		    if (eb != null) {
+			String s = eb.findAttr("name");
+			if (s != null) {
+			    set.add("media" + File.separator + s);
+			}
+		    }
+		}
+
+		Element ael = anim_el_root.findElement("AllActors", 0);
+		if (ael != null) {
+		    for (int i = 0; i < 10; i++) {
+			Element eb = anim_el_root.findElement("Actor", i);
+			if (eb != null) {
+			    String s = eb.findAttr("name");
+			    if (s != null) {
+				set.add("media" + File.separator + s);
+			    }
+			}
+		    }
+		}
+
+		for (int ti = 0; ti < 100; ti++) {
+		    Element mel = anim_el_root.findElement("TimeMarker", ti);
+		    if (mel != null) {
+			for (int ei = 0; ei < 100; ei++) {
+			    Element tel = mel.findElement("T_Event", ei);
+			    if (tel != null) {
+				for (int i = 0; i < 10; i++) {
+				    Element eb = tel.findElement("TriggerEvent", i);
+				    if (eb != null) {
+					String cmd = eb.findAttr("cmd");
+					if (cmd != null && cmd.equals("PlaySound")) {
+					    String sf = eb.findAttr("arg");
+					    if (!SundryUtils.empty(sf)) {
+						set.add("media" + File.separator + sf);
+					    }
+					}
+				    }
+				}
+			    }
+			}
+		    }
+		}
+		s2 += "(" + af + ")";
+		set.add(af);
 	    }
 
 	}
 	String s = sound_list + "   " + s2;
-        return new SentenceResult(s, set);
+	return new SentenceResult(s, set);
     }
 
     String[] gDta(Target tg2) {

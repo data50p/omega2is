@@ -22,7 +22,7 @@ public class Anim_Repository extends XML_Repository {
     ChooseAnimatorFile choose_af = new ChooseAnimatorFile();
 
 
-    Anim_Repository() {
+    public Anim_Repository() {
     }
 
     void clearName() {
@@ -166,7 +166,7 @@ public class Anim_Repository extends XML_Repository {
 	}
     }
 
-    Element open(AnimContext a_ctxt, String fn) {
+    public Element open(AnimContext a_ctxt, String fn) {
 	try {
 //log	    omega.Context.sout_log.getLogger().info("ERR: " + "** PARSING " + fn);
 	    Element el = SAX_node.parse(fn, false);
@@ -180,7 +180,7 @@ public class Anim_Repository extends XML_Repository {
 	return null;
     }
 
-    Element load(AnimContext a_ctxt, Element el) {
+    public Element load(AnimContext a_ctxt, Element el) {
 	if (el == null)
 	    return null;
 
