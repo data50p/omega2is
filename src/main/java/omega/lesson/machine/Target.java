@@ -67,6 +67,13 @@ public class Target {
                 return fillVarHere(ord, item.getTextD());
         }
 
+        String getFilledActionText() {
+            if (item == null)
+                return "               ";
+            else
+                return fillVarHere(ord, item.getActionFile());
+        }
+
         public String getLIDText() {
             if (item == null)
                 return "";
@@ -1056,6 +1063,20 @@ public class Target {
         return s;
     }
 
+    public List<String> getAll_Sound_Items() {
+        List<String> li = new ArrayList<>();
+        int ix = 0;
+        for (Iterator it = t_items.iterator(); it.hasNext(); ) {
+            T_Item titm = (T_Item) it.next();
+            String snd = titm.item.getSound();
+            snd = fillVarHere(ix, snd);          // WHY-S
+            if ( !SundryUtils.empty(snd) )
+                li.add(snd);
+            ix++;
+        }
+        return li;
+    }
+
     public String[] getAll_TextVars_Item() {  // actor,actor...
         List li = new ArrayList();
 
@@ -1461,11 +1482,9 @@ public class Target {
 
     private void update(TargetCombinations tc) {
         String s2 = ":";
-        String sound_list = getAll_Sound_Item(); // sound,sound...
-        String sa[] = sound_list.split(",");
-        for (String s : sa) {
-            tc.set.add(s);
-        }
+        List<String> sound_list = getAll_Sound_Items();
+        for(String s : sound_list)
+            tc.set.add("media" + File.separator + s);
 
 /*
         Element asel = .findElement("action_specific", 0);
@@ -1485,10 +1504,14 @@ public class Target {
         for (Object o : t_items) {
             T_Item titm = (T_Item) o;
             if (titm.item != null && !SundryUtils.empty(titm.item.action_fname)) {
-                String af = (titm.item).getActionFile();
-
+                String af_alt = (titm.item).getActionFile();
+                String af = titm.getFilledActionText();
+                if ( SundryUtils.empty(af) )
+                    continue;;
                 Anim_Repository ar = new Anim_Repository();
                 Element anim_el_root = ar.open(null, Context.omegaAssets(af));
+                if ( anim_el_root == null )
+                    continue;;
                 Log.getLogger().info(anim_el_root.toString());
 
                 Element cel = anim_el_root.findElement("Canvas", 0);

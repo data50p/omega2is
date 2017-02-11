@@ -522,7 +522,8 @@ public class Item {
 	for (int i = 0; i < sa.length; i++) {
 	    if (i > 0)
 		ss += ',';
-	    ss += sa[i] + '.' + action_type;
+	    String sx = sa[i] + '.' + action_type;
+	    ss += sx;
 	}
 	omega.Context.sout_log.getLogger().info("ERR: " + "return getActionText " + ss);
 	return ss;
@@ -548,7 +549,8 @@ public class Item {
     }
 
     public String getActionFile() {
-	return getActionText(); // action_fname + '.' + action_type;
+	String at = getActionText();
+	return at;
     }
 
 

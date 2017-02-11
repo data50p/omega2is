@@ -40,7 +40,7 @@ public class OmAssProp_TableModel extends AbstractTableModel {
     }
 
     public int getRowCount() {
-        return Math.max(tc.srList.size(), tc.set.size());
+        return tc.set.size();
     }
 
     public Class getColumnClass(int c) {
