@@ -1532,7 +1532,10 @@ public class Target {
                         if (eb != null) {
                             String s = eb.findAttr("name");
                             if (s != null) {
-                                tc.set.add("media" + File.separator + s);
+                                String ms = "media" + File.separator + s;
+                                tc.set.add(ms);
+                                List<String> aiL = attributedImages(ms);
+                                tc.set.addAll(aiL);
                             }
                         }
                     }
@@ -1567,6 +1570,24 @@ public class Target {
         }
         String s = sound_list + "   " + s2;
         tc.srList.add(new TargetCombinations.SentenceResult(s));
+    }
+
+    private List<String> attributedImages(String ms) {
+        List<String> li = new ArrayList<String>();
+        String fName = Context.omegaAssets(ms);
+        File fBase = new File(fName);
+        String fn = fBase.getName();
+        int ix = fn.lastIndexOf('.');
+        if ( ix == -1 )
+            return li;
+        String fnNEx = fn.substring(0, ix) + "-";
+        File dir = fBase.getParentFile();
+        File[] files = dir.listFiles();
+        for(File f : files) {
+            if ( f.getName().startsWith(fnNEx))
+                li.add(Context.antiOmegaAssets(f.getPath()));
+        }
+        return li;
     }
 
     String[] gDta(Target tg2) {
