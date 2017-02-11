@@ -2,6 +2,7 @@ package omega.lesson.canvas;
 
 
 import fpdo.sundry.S;
+import omega.Context;
 import omega.i18n.T;
 import omega.lesson.LessonContext;
 import omega.swing.TableSorter;
@@ -393,6 +394,7 @@ public class SentenceProperty extends Property_B {
 	    url_s = omega.util.Files.toURL(file);
 
 	    String tfn = omega.util.Files.rmHead(url_s);
+	    tfn = Context.antiOmegaAssets(tfn);
 	    return tfn;
 	}
 	return null;

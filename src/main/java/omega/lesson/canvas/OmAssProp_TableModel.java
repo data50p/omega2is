@@ -12,74 +12,68 @@ import java.util.List;
 public class OmAssProp_TableModel extends AbstractTableModel {
     OmegaAssetsProperty sprop;
 
-    List<Target.SentenceResult> li;
+    Target.TargetCombinations tc;
     List<String> li_set;
 
     int[][] test_member_map;
 
     final int TEST_MEM_OFFS = SentenceProperty.COL_TEST;
 
-    String[] hdn = new String[]{T.t("What"),
-	    T.t("Dependent File"),
-	    T.t("Foobar"),
-	    T.t("Alt 1"),
-	    T.t("Alt 2"),
+    String[] hdn = new String[]{
+            T.t("Dependent File"),
+            T.t("Foobar"),
+            T.t("Alt 1"),
+            T.t("Alt 2")
     };
 
-    OmAssProp_TableModel(OmegaAssetsProperty sprop, List<Target.SentenceResult> li, int[][] tmm) {
-	this.sprop = sprop;
-	this.li = li;
-	li_set = new ArrayList<String>();
-	if ( li.size() > 0 )
-	    li_set.addAll(li.get(0).set);
-	test_member_map = tmm;
+    OmAssProp_TableModel(OmegaAssetsProperty sprop, Target.TargetCombinations tc, int[][] tmm) {
+        this.sprop = sprop;
+        this.tc = tc;
+        li_set = new ArrayList<String>();
+        if (tc.srList.size() > 0)
+            li_set.addAll(tc.set);
+        test_member_map = tmm;
     }
 
     public int getColumnCount() {
-	return 5;
+        return 4;
     }
 
     public int getRowCount() {
-	return Math.max(li.size(), li.size() > 0 ? li.get(0).set.size() : 0);
+        return Math.max(tc.srList.size(), tc.set.size());
     }
 
     public Class getColumnClass(int c) {
-	return c == 0 ? String.class :
-		c >= TEST_MEM_OFFS ? Integer.class :
-			String.class;
+        return c == 0 ? String.class :
+                c >= TEST_MEM_OFFS ? Integer.class :
+                        String.class;
     }
 
     public String getColumnName(int c) {
-	return hdn[c];
+        return hdn[c];
     }
 
     public boolean isCellEditable(int r, int c) {
-	return c >= TEST_MEM_OFFS;
+        return c >= TEST_MEM_OFFS;
     }
 
     public Object getValueAt(int row, int col) {
-	if (col == 0) {
-	    if (row >= li.size())
-		return "";
-	    return li.get(row).sound;
-	}
+        if (col == 0) {
+            String se = row < li_set.size() ? li_set.get(row) : "";
+            if (se == null)
+                se = "";
+            return se;
+        }
 
-	if (col == 2) {
-	    String se = row < li_set.size() ? li_set.get(row) : "";
-	    if (se == null)
-		se = "";
-	    return se;
-	}
+        if (col >= TEST_MEM_OFFS) {
+            return col;//new Integer(test_member_map[row][col - TEST_MEM_OFFS]);
+        }
 
-	if (col >= TEST_MEM_OFFS) {
-	    return col;//new Integer(test_member_map[row][col - TEST_MEM_OFFS]);
-	}
-
-	return "";
+        return "";
     }
 
     public void setValueAt(Object val, int row, int col) {
-	omega.Context.sout_log.getLogger().info("ERR: " + "SET VAL " + val);
+        omega.Context.sout_log.getLogger().info("ERR: " + "SET VAL " + val);
 //	if (col == SentenceProperty.COL_ACT) {
 //	    String sent = sa[row].replaceAll("\\{[a-z0-9]*?\\}", "");
 //	    sprop.l_ctxt.getLesson().action_specific.setAction(sent, (String) val);

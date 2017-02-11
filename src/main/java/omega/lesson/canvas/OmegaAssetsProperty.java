@@ -26,10 +26,10 @@ import java.util.Iterator;
 
 public class OmegaAssetsProperty extends Property_B {
 
-    static final int COL_SENT = 0;
-    static final int COL_ACT = 1;
-    static final int COL_SIGN = 2;
-    static final int COL_TEST = 3;
+    static final int COL_MEDIA = 0;
+    static final int COL_FOOBAR = 1;
+    static final int COL_ACT1 = 2;
+    static final int COL_ACT2 = 3;
 
     HashMap guimap = new HashMap();
     LessonContext l_ctxt;
@@ -95,81 +95,7 @@ public class OmegaAssetsProperty extends Property_B {
 
         public void actionPerformed(ActionEvent ev) {
             String s = ev.getActionCommand();
-            if (s.equals("set action file")) {
-                omega.lesson.appl.LessonEditor.setDirty();
-                TableModel tmod = (TableModel) table.getModel();
-                int row = table.getSelectedRow();
-                String ss = (String) tmod.getValueAt(row, COL_ACT);
-                String fn = setActionField(ss);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
-                if (fn != null) {
-                    tmod.setValueAt(fn, row, COL_ACT);
-                }
-            }
-            if (s.equals("isDef")) {
-                omega.lesson.appl.LessonEditor.setDirty();
-                set_act_b.setEnabled(false);
-                TableModel tmod = (TableModel) table.getModel();
-                int row = table.getSelectedRow();
-                String ss = (String) tmod.getValueAt(row, COL_ACT);
-                String fn = "";//setActionField(ss);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
-                if (fn != null) {
-                    tmod.setValueAt(fn, row, COL_ACT);
-                }
-            }
-            if (s.equals("isSpec")) {
-                omega.lesson.appl.LessonEditor.setDirty();
-                set_act_b.setEnabled(true);
-                TableModel tmod = (TableModel) table.getModel();
-                int row = table.getSelectedRow();
-                String ss = (String) tmod.getValueAt(row, COL_ACT);
-                if (ss == null || ss.length() == 0) {
-                    String fn = setActionField(ss);
-                    //log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
-                    if (fn != null) {
-                        tmod.setValueAt(fn, row, COL_ACT);
-                    }
-                }
-            }
-            if (s.equals("set sign file")) {
-                omega.lesson.appl.LessonEditor.setDirty();
-                TableModel tmod = (TableModel) table.getModel();
-                int row = table.getSelectedRow();
-                String ss = (String) tmod.getValueAt(row, COL_SIGN);
-                String fn = setActionField(ss);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
-                if (fn != null) {
-                    tmod.setValueAt(fn, row, COL_SIGN);
-                }
-            }
-            if (s.equals("isDefSign")) {
-                omega.lesson.appl.LessonEditor.setDirty();
-                set_sgn_b.setEnabled(false);
-                TableModel tmod = (TableModel) table.getModel();
-                int row = table.getSelectedRow();
-                String ss = (String) tmod.getValueAt(row, COL_SIGN);
-                String fn = "";//setActionField(ss);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
-                if (fn != null) {
-                    tmod.setValueAt(fn, row, COL_SIGN);
-                }
-            }
-            if (s.equals("isSpecSign")) {
-                omega.lesson.appl.LessonEditor.setDirty();
-                set_sgn_b.setEnabled(true);
-                TableModel tmod = (TableModel) table.getModel();
-                int row = table.getSelectedRow();
-                String ss = (String) tmod.getValueAt(row, COL_SIGN);
-                if (ss == null || ss.length() == 0) {
-                    String fn = setActionField(ss);
-                    //log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
-                    if (fn != null) {
-                        tmod.setValueAt(fn, row, COL_SIGN);
-                    }
-                }
-            }
-            if (s.equals("dump sent")) {
+            if (s.equals("dump assets")) {
                 ChooseGenericFile choose_f = new ChooseGenericFile();
 
                 String url_s = null;
@@ -181,9 +107,9 @@ public class OmegaAssetsProperty extends Property_B {
                     String tfn = omega.util.Files.rmHead(url_s);
 
                     PrintWriter pw = S.createPrintWriter(tfn);
-                    String sa[] = l_ctxt.getLessonCanvas().getAllTargetCombinations("; ", false);
-                    for (int i = 0; i < sa.length; i++) {
-                        pw.println(sa[i]);
+                    Target.TargetCombinations tc = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
+                    for (String s2 : tc.set) {
+                        pw.println(s2);
                     }
                     pw.close();
                 }
@@ -205,30 +131,13 @@ public class OmegaAssetsProperty extends Property_B {
         public void valueChanged(ListSelectionEvent ev) {
 //log	    omega.Context.sout_log.getLogger().info("ERR: " + "" + ev);
             if (ev.getValueIsAdjusting() == false) {
-                SentenceProperty.MyListSelectionModel lselmod_ = (SentenceProperty.MyListSelectionModel) ev.getSource();
+                OmegaAssetsProperty.MyListSelectionModel lselmod_ = (OmegaAssetsProperty.MyListSelectionModel) ev.getSource();
                 int ix = lselmod_.getMinSelectionIndex();
                 TableModel tmod = (TableModel) table.getModel();
-                String s = (String) tmod.getValueAt(ix, COL_SENT);
+                String s = (String) tmod.getValueAt(ix, COL_ACT1);
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "SEL " + lselmod_ + ' ' + ix + ' ' + s);
                 JTextField tf2 = (JTextField) guimap.get("sentence");
                 tf2.setText(s);
-
-                s = (String) tmod.getValueAt(ix, COL_ACT);
-                if (s.length() > 0) {
-                    rb_act.setSelected(true);
-                    set_act_b.setEnabled(true);
-                } else {
-                    rb_def.setSelected(true);
-                    set_act_b.setEnabled(false);
-                }
-                s = (String) tmod.getValueAt(ix, COL_SIGN);
-                if (s.length() > 0) {
-                    rb_actSign.setSelected(true);
-                    set_sgn_b.setEnabled(true);
-                } else {
-                    rb_defSign.setSelected(true);
-                    set_sgn_b.setEnabled(false);
-                }
             }
         }
     }
@@ -276,61 +185,9 @@ public class OmegaAssetsProperty extends Property_B {
         tf.setEnabled(false);
 
         fpan.add(new JLabel(""), jb = new JButton(T.t("Save sentence list")), Y, ++X);
-        jb.setActionCommand("dump sent");
+        jb.setActionCommand("dump assets");
         jb.addActionListener(myactl);
 
-
-        Y++;
-        X = 0;
-        JRadioButton rb;
-        fpan.add(new JLabel(T.t("Type:")), rb = rb_def = new JRadioButton(T.t("Default, as set in word prop")), Y, ++X);
-
-        ButtonGroup bgr = new ButtonGroup();
-        bgr.add(rb);
-        rb.setActionCommand("isDef");
-        rb.addActionListener(myactl);
-
-        Y++;
-        X = 0;
-        fpan.add(new JLabel(""), rb = rb_act = new JRadioButton(T.t("Specific")), Y, ++X);
-        bgr.add(rb);
-        rb.setActionCommand("isSpec");
-        rb.addActionListener(myactl);
-
-        JPanel jp2 = new JPanel();
-        jp2.add(jb = new JButton(T.t("Set action file")));
-        jp2.add(new JLabel(""));
-        fpan.add(new JLabel(""), jp2, Y, X);
-        set_act_b = jb;
-        guimap.put("set action file", jb);
-        jb.setActionCommand("set action file");
-        jb.addActionListener(myactl);
-
-        Y++;
-        X = 0;
-        JRadioButton rbS;
-        fpan.add(new JLabel(T.t("Type:")), rbS = rb_defSign = new JRadioButton(T.t("Automatic, play each separate word")), Y, ++X);
-
-        ButtonGroup bgrS = new ButtonGroup();
-        bgrS.add(rbS);
-        rbS.setActionCommand("isDefSign");
-        rbS.addActionListener(myactl);
-
-        Y++;
-        X = 0;
-        fpan.add(new JLabel(""), rbS = rb_actSign = new JRadioButton(T.t("Specific")), Y, ++X);
-        bgrS.add(rbS);
-        rbS.setActionCommand("isSpecSign");
-        rbS.addActionListener(myactl);
-
-        JPanel jp2S = new JPanel();
-        jp2S.add(jb = new JButton(T.t("Set sign file")));
-        jp2S.add(new JLabel(""));
-        fpan.add(new JLabel(""), jp2S, Y, X);
-        set_sgn_b = jb;
-        guimap.put("set sign file", jb);
-        jb.setActionCommand("set sign file");
-        jb.addActionListener(myactl);
 
         Y++;
         X = 0;
@@ -339,10 +196,11 @@ public class OmegaAssetsProperty extends Property_B {
         Y++;
         X = 0;
 
-        java.util.List<Target.SentenceResult> li = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(" ", false, '{');
+        Target.TargetCombinations tc = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
+        java.util.List<Target.TargetCombinations.SentenceResult> li = tc.srList;
         //tmm = l_ctxt.getLesson().getTestMatrix(sa);
         omega.Context.sout_log.getLogger().info("ERR: " + "Got sa sent " + li);
-        OmAssProp_TableModel tmod = new OmAssProp_TableModel(this, li, tmm);
+        OmAssProp_TableModel tmod = new OmAssProp_TableModel(this, tc, tmm);
 
         TableSorter tsort = new TableSorter(tmod);
 

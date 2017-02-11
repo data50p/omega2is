@@ -43,10 +43,11 @@
 </items>
 </lesson>
 <action_specific>
-<value key="Aktör 1 agerar med aktör 1" val="default.omega_assets/./media/feedback/film1/feedback1.mp4"/>
+<value key="Aktör 1 agerar med aktör 1" val="media/feedback/film2/Peek_a_boo.mp4"/>
+<value key="Aktör 2 agerar med aktör 2" val="media/feedback/film3/Dunk_Bear.mp4"/>
 </action_specific>
 <sign_specific>
-<value key="Aktör 1 agerar med aktör 1" val="default.omega_assets/./media/sign/svanen.mp4"/>
+<value key="Aktör 1 agerar med aktör 1" val="media/feedback/film1/soccer_flowers.mp4"/>
 </sign_specific>
 <test_entries/>
 </omega_lesson>
