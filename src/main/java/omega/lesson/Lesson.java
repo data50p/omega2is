@@ -1343,7 +1343,13 @@ public class Lesson implements LessonCanvasListener {
             int rv = choose_f.showDialog(null, T.t("Open"));
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
-                omega.Context.sout_log.getLogger().info("mact_Open file: " + file);
+                String s = "!";
+                try {
+                    s = file.getCanonicalPath();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                omega.Context.sout_log.getLogger().info("mact_Open file: " + file + ' ' + s);
                 url_s = omega.util.Files.toURL(file);
                 if (!url_s.endsWith("." + ChooseLessonFile.ext)) {
                     url_s = url_s + "." + ChooseLessonFile.ext;
