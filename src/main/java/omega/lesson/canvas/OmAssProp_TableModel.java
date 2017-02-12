@@ -1,8 +1,8 @@
 package omega.lesson.canvas;
 
 
+import omega.adm.assets.TargetCombinations;
 import omega.i18n.T;
-import omega.lesson.machine.Target;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
@@ -12,7 +12,8 @@ import java.util.List;
 public class OmAssProp_TableModel extends AbstractTableModel {
     OmegaAssetsProperty sprop;
 
-    Target.TargetCombinations tc;
+    TargetCombinations tc;
+    List<String> li_set0;
     List<String> li_set;
 
     int[][] test_member_map;
@@ -20,18 +21,19 @@ public class OmAssProp_TableModel extends AbstractTableModel {
     final int TEST_MEM_OFFS = SentenceProperty.COL_TEST;
 
     String[] hdn = new String[]{
-            T.t("Dependent File"),
-            T.t("Foobar"),
+            T.t("Source Files"),
+            T.t("Dependent Files"),
             T.t("Alt 1"),
             T.t("Alt 2")
     };
 
-    OmAssProp_TableModel(OmegaAssetsProperty sprop, Target.TargetCombinations tc, int[][] tmm) {
+    OmAssProp_TableModel(OmegaAssetsProperty sprop, TargetCombinations tc, int[][] tmm) {
         this.sprop = sprop;
         this.tc = tc;
         li_set = new ArrayList<String>();
-        if (tc.srList.size() > 0)
-            li_set.addAll(tc.set);
+        li_set.addAll(tc.dep_set);
+        li_set0 = new ArrayList<String>();
+        li_set0.addAll(tc.src_set);
         test_member_map = tmm;
     }
 
@@ -40,7 +42,7 @@ public class OmAssProp_TableModel extends AbstractTableModel {
     }
 
     public int getRowCount() {
-        return tc.set.size();
+        return Math.max(tc.dep_set.size(), tc.src_set.size());
     }
 
     public Class getColumnClass(int c) {
@@ -59,6 +61,13 @@ public class OmAssProp_TableModel extends AbstractTableModel {
 
     public Object getValueAt(int row, int col) {
         if (col == 0) {
+            String se = row < li_set0.size() ? li_set0.get(row) : "";
+            if (se == null)
+                se = "";
+            return se;
+        }
+
+        if (col == 1) {
             String se = row < li_set.size() ? li_set.get(row) : "";
             if (se == null)
                 se = "";
@@ -87,6 +96,15 @@ public class OmAssProp_TableModel extends AbstractTableModel {
 //	    sprop.l_ctxt.getLesson().setTestMatrix(sa, test_member_map);
 //	}
 //	sprop.repaint();
+    }
+
+    public void update(TargetCombinations targetCombinations) {
+        tc = targetCombinations;
+        li_set = new ArrayList<String>();
+        li_set.addAll(tc.dep_set);
+        li_set0 = new ArrayList<String>();
+        li_set0.addAll(tc.src_set);
+        fireTableDataChanged();
     }
 }
 

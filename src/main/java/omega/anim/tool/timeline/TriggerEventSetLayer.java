@@ -31,7 +31,7 @@ public class TriggerEventSetLayer extends TriggerEventSelections {
     }
 
     public String getCmdLabel() {
-	return T.t("set Layer");
+	return T.t("dep_set Layer");
     }
 
     public String getHelp() {

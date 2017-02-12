@@ -100,12 +100,12 @@ public class MpgPlayer {
 	vw = w;
 	vh = h;
 	visual.setSize(new Dimension(vw, vh));
-	Log.getLogger().info("set m size to: " + w + ' ' + h);
+	Log.getLogger().info("dep_set m size to: " + w + ' ' + h);
     }
 
     public void setLocation(int x, int y) {
 	visual.setLocation(x, y);
-	Log.getLogger().info("set m loc at: " + x + ' ' + y);
+	Log.getLogger().info("dep_set m loc at: " + x + ' ' + y);
     }
 
     static public MpgPlayer createMpgPlayer(String fn, JComponent jcomp) {

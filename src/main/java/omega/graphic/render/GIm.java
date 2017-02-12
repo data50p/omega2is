@@ -61,7 +61,7 @@ public class GIm {
     public void setAttribName(String an) {
 	if (an != null && an.length() == 0)
 	    an = null;
-//	omega.Context.sout_log.getLogger().info("ERR: " + "ATTR set " + an);
+//	omega.Context.sout_log.getLogger().info("ERR: " + "ATTR dep_set " + an);
 	xim.setAttrib(an);
 	initIm();
     }
@@ -78,7 +78,7 @@ public class GIm {
     public void setAttribNameUncommited(String an) {
 	if (an == null)
 	    an = "@@@ null @@@";
-//	omega.Context.sout_log.getLogger().info("ERR: " + "ATTR set delayed " + an);
+//	omega.Context.sout_log.getLogger().info("ERR: " + "ATTR dep_set delayed " + an);
 	delayed_id_attrib = an;
     }
 

@@ -222,21 +222,21 @@ public class AnimEditor extends JFrame {
 		    a_ctxt.ae.cabaret_panel.popup(0);
 		} else if ("show prop wing".equals(cmd)) {
 		    a_ctxt.ae.wings_panel.popup(0);
-		} else if ("set background".equals(cmd)) {
+		} else if ("dep_set background".equals(cmd)) {
 		    String url_s = getFileAsURLString();
 		    setBackground(url_s);
 		    wings_panel.removeAllWings();
 		    a_ctxt.anim_canvas.getToolExecute().execute("fit");
-		} else if ("set actor0".equals(cmd)) {
+		} else if ("dep_set actor0".equals(cmd)) {
 		    String url_s = getFileAsURLStringActor();
 		    loadActor(0, url_s);
-		} else if ("set actor1".equals(cmd)) {
+		} else if ("dep_set actor1".equals(cmd)) {
 		    String url_s = getFileAsURLStringActor();
 		    loadActor(1, url_s);
-		} else if ("set actor2".equals(cmd)) {
+		} else if ("dep_set actor2".equals(cmd)) {
 		    String url_s = getFileAsURLStringActor();
 		    loadActor(2, url_s);
-		} else if ("set actor3".equals(cmd)) {
+		} else if ("dep_set actor3".equals(cmd)) {
 		    String url_s = getFileAsURLStringActor();
 		    loadActor(3, url_s);
 		} else if ("flip aw".equals(cmd)) {
@@ -322,7 +322,7 @@ public class AnimEditor extends JFrame {
 	jm.add(tac = new ToolAction(exit_on_close ? T.t("Exit") : T.t("Close"), "exit", ae_texec));
 
 	toolbar_cmd.addSeparator();
-	jmca.add(tac = new ToolAction(T.t("Set background"), "set background", ae_texec));
+	jmca.add(tac = new ToolAction(T.t("Set background"), "dep_set background", ae_texec));
 	jmca.addSeparator();
 	jmca.add(tac = new ToolAction(T.t("Left"), "navigation/Back", "left", ae_texec));
 	toolbar_cmd.add(tac);
@@ -369,10 +369,10 @@ public class AnimEditor extends JFrame {
 	JMenu jmac2 = new JMenu(T.t("Set actor"));
 	jmac.add(jmac2);
 
-	jmac2.add(tac = new ToolAction("1", "set actor0", ae_texec));
-	jmac2.add(tac = new ToolAction("2", "set actor1", ae_texec));
-	jmac2.add(tac = new ToolAction("3", "set actor2", ae_texec));
-	jmac2.add(tac = new ToolAction("4", "set actor3", ae_texec));
+	jmac2.add(tac = new ToolAction("1", "dep_set actor0", ae_texec));
+	jmac2.add(tac = new ToolAction("2", "dep_set actor1", ae_texec));
+	jmac2.add(tac = new ToolAction("3", "dep_set actor2", ae_texec));
+	jmac2.add(tac = new ToolAction("4", "dep_set actor3", ae_texec));
 	jmac.add(tac = new ToolAction(T.t("Add a wing"), "add w", ae_texec));
 	jmac.addSeparator();
 	jmac.add(tac = new ToolAction(T.t("Show actor properties..."), "show prop act", ae_texec));

@@ -26,6 +26,10 @@
    <string>Sign Sentence Transparence</string>
   </void>
   <void method="put">
+   <string>Add Omega Assets Bundle</string>
+   <string>Add Omega Assets Bundle</string>
+  </void>
+  <void method="put">
    <string>Can&apos;t find animation: anim/ActiveAnim/ActorpresB1.omega_anim</string>
    <string>Can&apos;t find animation: anim/ActiveAnim/ActorpresB1.omega_anim</string>
   </void>
@@ -44,6 +48,10 @@
   <void method="put">
    <string>Alt 3</string>
    <string>Alt 3</string>
+  </void>
+  <void method="put">
+   <string>Save Omega Assets</string>
+   <string>Save Omega Assets</string>
   </void>
   <void method="put">
    <string>Error while loading lesson: &quot;</string>
@@ -78,6 +86,10 @@
    <string>Omega - Message</string>
   </void>
   <void method="put">
+   <string>Src File</string>
+   <string>Src File</string>
+  </void>
+  <void method="put">
    <string>Norsk-bm-Bergen</string>
    <string>Norsk-bm-Bergen</string>
   </void>
@@ -92,6 +104,10 @@
   <void method="put">
    <string>Tomas</string>
    <string>Tomas</string>
+  </void>
+  <void method="put">
+   <string>Dependent Files</string>
+   <string>Dependent Files</string>
   </void>
   <void method="put">
    <string>LessonsInEnglish</string>
@@ -178,6 +194,10 @@
    <string>Can&apos;t find animation: anim/ActiveAnim/ActorPresB3.omega_anim</string>
   </void>
   <void method="put">
+   <string>Bundle</string>
+   <string>Bundle</string>
+  </void>
+  <void method="put">
    <string>length</string>
    <string>length</string>
   </void>
@@ -188,6 +208,10 @@
   <void method="put">
    <string>Nu such directory</string>
    <string>Nu such directory</string>
+  </void>
+  <void method="put">
+   <string>Save Omega Assets list</string>
+   <string>Save Omega Assets list</string>
   </void>
   <void method="put">
    <string>Item: Sign Movies, positive </string>
@@ -202,6 +226,10 @@
    <string>Foobar</string>
   </void>
   <void method="put">
+   <string>Source Files</string>
+   <string>Source Files</string>
+  </void>
+  <void method="put">
    <string>Croatian</string>
    <string>Croatian</string>
   </void>
@@ -212,6 +240,10 @@
   <void method="put">
    <string>default.omega_assets/register/Nynorsk</string>
    <string>default.omega_assets/register/Nynorsk</string>
+  </void>
+  <void method="put">
+   <string>New Omega Assets Bundle</string>
+   <string>New Omega Assets Bundle</string>
   </void>
   <void method="put">
    <string>default.omega_assets/register/Norsk-bm-Bergen</string>

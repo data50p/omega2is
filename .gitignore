@@ -13,3 +13,4 @@ runtime/omega*.jar
 alternate.omega_assets
 *.omega_anim.prev*
 SAVED-*
+*.omega_assets.zip

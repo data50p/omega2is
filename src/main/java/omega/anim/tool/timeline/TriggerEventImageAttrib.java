@@ -8,7 +8,7 @@ public class TriggerEventImageAttrib extends TriggerEvent {
     }
 
     public String getCmdLabel() {
-	return T.t("set Image Attribute");
+	return T.t("dep_set Image Attribute");
     }
 
     public String getHelp() {

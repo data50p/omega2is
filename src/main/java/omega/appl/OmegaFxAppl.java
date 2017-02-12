@@ -51,7 +51,7 @@ public class OmegaFxAppl extends Application {
 	String appName = "Omega IS";
 	// Application Menu
 	// TBD: services menu
-	Menu appMenu = new Menu(appName); // Name for appMenu can't be set at
+	Menu appMenu = new Menu(appName); // Name for appMenu can't be dep_set at
 	// Runtime
 	MenuItem aboutItem = tk.createAboutMenuItem(appName);
 	MenuItem prefsItem = new MenuItem("Preferences...");

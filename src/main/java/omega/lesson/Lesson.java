@@ -681,7 +681,7 @@ public class Lesson implements LessonCanvasListener {
                         if (ord > 0) {
                             String txt = sentA[j];
 
-                            //log 			    omega.Context.sout_log.getLogger().info("ERR: " + "--- set seq " + j + ' ' + ord + ' ' + txt);
+                            //log 			    omega.Context.sout_log.getLogger().info("ERR: " + "--- dep_set seq " + j + ' ' + ord + ' ' + txt);
 
                             int ord_i = ord - 1;
                             li.add(genSeqKey(ord_i) + ':' + txt);

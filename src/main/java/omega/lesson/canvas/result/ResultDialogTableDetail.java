@@ -727,7 +727,7 @@ public class ResultDialogTableDetail extends JDialog
 	}
     }
 
-//     public void set(Lesson.RegisterProxy register) {
+//     public void dep_set(Lesson.RegisterProxy register) {
 // 	this.register = register;
 // 	pupil_name.setText(register.pupil.getName());
 // 	cur_ix = 0;

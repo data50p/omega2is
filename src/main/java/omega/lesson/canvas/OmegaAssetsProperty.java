@@ -2,9 +2,11 @@ package omega.lesson.canvas;
 
 
 import fpdo.sundry.S;
+import omega.Context;
+import omega.adm.assets.TargetCombinations;
 import omega.i18n.T;
 import omega.lesson.LessonContext;
-import omega.lesson.machine.Target;
+import omega.lesson.canvas.result.ChooseOmegaAssetsFile;
 import omega.swing.TableSorter;
 import omega.value.Value;
 import omega.value.Values;
@@ -19,10 +21,12 @@ import javax.swing.text.Document;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipOutputStream;
 
 public class OmegaAssetsProperty extends Property_B {
 
@@ -44,6 +48,10 @@ public class OmegaAssetsProperty extends Property_B {
 
     int[][] tmm;
 
+    OmAssProp_TableModel tmod;
+
+    TargetCombinations targetCombinations;
+    static TargetCombinations.Builder targetCombinationsBuilder;
 
     OmegaAssetsProperty(JFrame owner, LessonContext l_ctxt) {
         super(owner, T.t("Omega - Assets Property"));
@@ -89,35 +97,119 @@ public class OmegaAssetsProperty extends Property_B {
                 if (value == null)
                     value = def;
             }
-            JTextField tf2 = (JTextField) guimap.get("sentence");
+            JTextField tf2 = (JTextField) guimap.get("bundle");
             tf2.setText(value);
         }
 
         public void actionPerformed(ActionEvent ev) {
             String s = ev.getActionCommand();
+
             if (s.equals("dump assets")) {
-                ChooseGenericFile choose_f = new ChooseGenericFile();
+                ChooseGenericFile choose_f = new ChooseGenericFile(true);
 
                 String url_s = null;
                 int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Save"));
                 omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
                 if (rv == JFileChooser.APPROVE_OPTION) {
                     File file = choose_f.getSelectedFile();
-                    url_s = omega.util.Files.toURL(file);
-                    String tfn = omega.util.Files.rmHead(url_s);
-
-                    PrintWriter pw = S.createPrintWriter(tfn);
-                    Target.TargetCombinations tc = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(true);
-                    for (String s2 : tc.set) {
-                        pw.println(s2);
+                    PrintWriter pw = S.createPrintWriter(file.getPath());
+                    for (String s2 : targetCombinations.src_set) {
+                        print(pw, "src", s2);
+                    }
+                    for (String s2 : targetCombinations.dep_set) {
+                        print(pw, "dep", s2);
                     }
                     pw.close();
                 }
             }
+
+            if (s.equals("create assets")) {
+                ChooseOmegaAssetsFile choose_f = new ChooseOmegaAssetsFile(true);
+
+                String url_s = null;
+                int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Save"));
+                omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
+                if (rv == JFileChooser.APPROVE_OPTION) {
+                    File file = choose_f.getSelectedFile();
+                    if ( ! file.getName().endsWith("omega_assets.zip") )
+                        file = new File(file.getPath() + ".omega_assets.zip");
+                    try {
+                        ZipOutputStream out = new ZipOutputStream(new FileOutputStream(file));
+
+                        for (String s2 : targetCombinations.src_set) {
+                            put(out, s2);
+                        }
+                        for (String s2 : targetCombinations.dep_set) {
+                            put(out, s2);
+                        }
+                        out.close();
+
+                    } catch (IOException e) {
+                    }
+                }
+            }
+
+            if (s.equals("new bundle")) {
+                targetCombinationsBuilder = new TargetCombinations.Builder();
+                targetCombinationsBuilder.add(targetCombinations);
+            }
+
+            if (s.equals("add bundle")) {
+                if ( targetCombinationsBuilder == null )
+                    targetCombinationsBuilder = new TargetCombinations.Builder();
+                targetCombinationsBuilder.add(targetCombinations);
+                targetCombinations = targetCombinationsBuilder.asOne();
+                tmod.update(targetCombinations);
+            }
+
             if (s.equals("close")) {
                 setVisible(false);
             }
         }
+    }
+
+    private void print(PrintWriter pw, String prfx, String s2) {
+        File f = new File(Context.omegaAssets(s2));
+        String stat =  f.exists() && f.canRead() ? "OK" : "??";
+        pw.println(prfx + ", " + stat + ", " + s2);
+    }
+
+    private void put(ZipOutputStream out, String s2) throws IOException {
+        byte[] data = fileAsBytaArray(s2);
+        if (data != null) {
+	    ZipEntry e = new ZipEntry(s2);
+	    out.putNextEntry(e);
+
+	    out.write(data, 0, data.length);
+	    out.closeEntry();
+	}
+    }
+
+    private byte[] fileAsBytaArray(String fn) {
+        File f = new File(Context.omegaAssets(fn));
+        try {
+            long fileSize = f.length();
+            if (fileSize > Integer.MAX_VALUE) {
+                fileSize = Integer.MAX_VALUE;
+            }
+            InputStream is = new FileInputStream(f);
+            byte[] data = new byte[(int)fileSize];
+            byte[] buf = new byte[1024];
+            int pos = 0;
+            for(;;) {
+                int n = is.read(buf);
+                if ( n == -1 )
+                    break;
+                System.arraycopy(buf,0, data, pos, n);
+                pos += n;
+            }
+            return data;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     OmegaAssetsProperty.myActionListener myactl = new OmegaAssetsProperty.myActionListener();
@@ -133,11 +225,10 @@ public class OmegaAssetsProperty extends Property_B {
             if (ev.getValueIsAdjusting() == false) {
                 OmegaAssetsProperty.MyListSelectionModel lselmod_ = (OmegaAssetsProperty.MyListSelectionModel) ev.getSource();
                 int ix = lselmod_.getMinSelectionIndex();
-                TableModel tmod = (TableModel) table.getModel();
-                String s = (String) tmod.getValueAt(ix, COL_ACT1);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "SEL " + lselmod_ + ' ' + ix + ' ' + s);
-                JTextField tf2 = (JTextField) guimap.get("sentence");
-                tf2.setText(s);
+                if ( ix >= 0 ) {
+                    TableModel tmod = (TableModel) table.getModel();
+                    String s = (String) tmod.getValueAt(ix, COL_ACT1);
+                }
             }
         }
     }
@@ -177,15 +268,27 @@ public class OmegaAssetsProperty extends Property_B {
 
 // 	Y++;
 // 	X = 0;
-        fpan.add(jl = new JLabel(T.t("Sentence")), tf = new JTextField("", 50), Y, ++X);
+        fpan.add(jl = new JLabel(T.t("Bundle")), tf = new JTextField("", 30), Y, ++X);
 
 
-        guimap.put("sentence", tf);
+        guimap.put("bundle", tf);
         tf.getDocument().addDocumentListener(mydocl);
         tf.setEnabled(false);
 
-        fpan.add(new JLabel(""), jb = new JButton(T.t("Save sentence list")), Y, ++X);
+        fpan.add(new JLabel(""), jb = new JButton(T.t("Save Omega Assets list")), Y, ++X);
         jb.setActionCommand("dump assets");
+        jb.addActionListener(myactl);
+
+        fpan.add(new JLabel(""), jb = new JButton(T.t("Save Omega Assets")), Y, ++X);
+        jb.setActionCommand("create assets");
+        jb.addActionListener(myactl);
+
+        fpan.add(new JLabel(""), jb = new JButton(T.t("Add Omega Assets Bundle")), Y, ++X);
+        jb.setActionCommand("add bundle");
+        jb.addActionListener(myactl);
+
+        fpan.add(new JLabel(""), jb = new JButton(T.t("New Omega Assets Bundle")), Y, ++X);
+        jb.setActionCommand("new bundle");
         jb.addActionListener(myactl);
 
 
@@ -196,11 +299,10 @@ public class OmegaAssetsProperty extends Property_B {
         Y++;
         X = 0;
 
-        Target.TargetCombinations tc = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
-        java.util.List<Target.TargetCombinations.SentenceResult> li = tc.srList;
-        //tmm = l_ctxt.getLesson().getTestMatrix(sa);
-        omega.Context.sout_log.getLogger().info("ERR: " + "Got sa sent " + li);
-        OmAssProp_TableModel tmod = new OmAssProp_TableModel(this, tc, tmm);
+        targetCombinations = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
+        targetCombinations.src_set.add(l_ctxt.getLesson().getLoadedFName());
+
+        tmod = new OmAssProp_TableModel(this, targetCombinations, tmm);
 
         TableSorter tsort = new TableSorter(tmod);
 
@@ -213,9 +315,9 @@ public class OmegaAssetsProperty extends Property_B {
 
         for (int i = 0; i < table.getColumnModel().getColumnCount(); i++) {
             TableColumn tcol = table.getColumnModel().getColumn(i);
-            tcol.setPreferredWidth(i == 0 ? 410 :
-                    i == 1 ? 180 :
-                            i == 2 ? 180 :
+            tcol.setPreferredWidth(i == 0 ? 350 :
+                    i == 1 ? 350 :
+                            i == 2 ? 40 :
                                     40);
         }
         try {

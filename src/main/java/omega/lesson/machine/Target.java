@@ -5,6 +5,7 @@ package omega.lesson.machine;
 import fpdo.sundry.S;
 import fpdo.xml.Element;
 import omega.Context;
+import omega.adm.assets.TargetCombinations;
 import omega.anim.appl.Anim_Repository;
 import omega.lesson.Lesson;
 import omega.lesson.managers.movie.LiuMovieManager;
@@ -476,7 +477,7 @@ public class Target {
     }
 
     void set(int ix, Item it) {
-//	item_list.set(ix, it);
+//	item_list.dep_set(ix, it);
     }
 
     public boolean isTargetFilled() {
@@ -1387,25 +1388,11 @@ public class Target {
         return (String[]) li.toArray(new String[0]);
     }
 
-    public static class TargetCombinations {
-        public static class SentenceResult {
-            public String sound;
-
-            SentenceResult(String sound) {
-                this.sound = sound;
-            }
-        }
-
-        public List<SentenceResult> srList = new ArrayList<SentenceResult>();
-        public Set<String> set = new HashSet<String>();
-    }
-
     public TargetCombinations getAllTargetCombinationsEx2(Lesson lesson) {
         TargetCombinations tc = new TargetCombinations();
-        tc.srList = new ArrayList<TargetCombinations.SentenceResult>();
 
         List<String> media = lesson.action_specific.getMedia();
-        tc.set.addAll(media);
+        tc.dep_set.addAll(media);
 
         Target tg2 = this;
 
@@ -1488,7 +1475,7 @@ public class Target {
         String s2 = ":";
         List<String> sound_list = getAll_Sound_Items();
         for(String s : sound_list)
-            tc.set.add("media" + File.separator + s);
+            tc.dep_set.add("media" + File.separator + s);
 
 /*
         Element asel = .findElement("action_specific", 0);
@@ -1498,7 +1485,7 @@ public class Target {
                 if (eb != null) {
                     String val = eb.findAttr("val");
                     if (!SundryUtils.empty(val)) {
-                        tc.set.add("media" + File.separator + val);
+                        tc.dep_set.add("media" + File.separator + val);
                     }
                 }
             }
@@ -1524,7 +1511,7 @@ public class Target {
                     if (eb != null) {
                         String s = eb.findAttr("name");
                         if (s != null) {
-                            tc.set.add("media" + File.separator + s);
+                            tc.dep_set.add("media" + File.separator + s);
                         }
                     }
                 }
@@ -1537,9 +1524,9 @@ public class Target {
                             String s = eb.findAttr("name");
                             if (s != null) {
                                 String ms = "media" + File.separator + s;
-                                tc.set.add(ms);
+                                tc.dep_set.add(ms);
                                 List<String> aiL = attributedImages(ms);
-                                tc.set.addAll(aiL);
+                                tc.dep_set.addAll(aiL);
                             }
                         }
                     }
@@ -1558,7 +1545,7 @@ public class Target {
                                         if (cmd != null && cmd.equals("PlaySound")) {
                                             String sf = eb.findAttr("arg");
                                             if (!SundryUtils.empty(sf)) {
-                                                tc.set.add("media" + File.separator + sf);
+                                                tc.dep_set.add("media" + File.separator + sf);
                                             }
                                         }
                                     }
@@ -1568,12 +1555,10 @@ public class Target {
                     }
                 }
                 s2 += "(" + af + ")";
-                tc.set.add(af);
+                tc.dep_set.add(af);
             }
 
         }
-        String s = sound_list + "   " + s2;
-        tc.srList.add(new TargetCombinations.SentenceResult(s));
     }
 
     private List<String> attributedImages(String ms) {

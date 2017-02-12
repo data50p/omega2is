@@ -227,7 +227,7 @@ public class TableSorter extends TableMap {
         sub-array can just be copied.  The array must be copied rather
         than assigned otherwise sister calls in the recursion might
         get out of sinc.  When the number of elements is three they
-        are partitioned so that the first set, [low, mid), has one
+        are partitioned so that the first dep_set, [low, mid), has one
         element and and the second, [mid, high), has two. We skip the
         optimisation when the number of elements is three or less as
         the first compare in the normal merge will produce the same

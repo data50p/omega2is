@@ -500,7 +500,7 @@ public class Item {
 
     public void setDummy(boolean b) {
 	dummy_flag = b;
-	//	omega.Context.sout_log.getLogger().info("ERR: " + "DUMMY set to " + b + ' ' + dummytext + ' ' + text);
+	//	omega.Context.sout_log.getLogger().info("ERR: " + "DUMMY dep_set to " + b + ' ' + dummytext + ' ' + text);
     }
 
     public void restoreSavedDummy() {

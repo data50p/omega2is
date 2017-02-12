@@ -11,6 +11,9 @@ public class ChooseGenericFile extends JFileChooser {
     ChooseGenericFile() {
 	super(new File(Context.omegaAssets(".")));
     }
+    ChooseGenericFile(boolean runtime) {
+	super(new File(Context.omegaAssets(runtime ? ".." : ".")));
+    }
 }
 
 

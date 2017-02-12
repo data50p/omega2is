@@ -11,6 +11,7 @@ package omega.lesson.canvas;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
+import omega.adm.assets.TargetCombinations;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
@@ -1228,14 +1229,14 @@ public class LessonCanvas extends BaseCanvas {
         }
     }
 
-    public Target.TargetCombinations getAllTargetCombinationsEx2(boolean dummy) {
+    public TargetCombinations getAllTargetCombinationsEx2(boolean dummy) {
         try {
             Target tg2 = new Target();
             HashMap story_hm = Lesson.story_hm;
             tg2.loadFromEl(l_ctxt.getLesson().getElement(), "", story_hm, dummy, false); // FIX nomix?
             return tg2.getAllTargetCombinationsEx2(l_ctxt.getLesson());
         } catch (Exception ex) {
-            return new Target.TargetCombinations();
+            return new TargetCombinations();
         }
     }
 
@@ -2734,7 +2735,7 @@ public class LessonCanvas extends BaseCanvas {
         }
 
         lesson_name = "-noname-";
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "=-= set lesson_name ");
+//log	omega.Context.sout_log.getLogger().info("ERR: " + "=-= dep_set lesson_name ");
         Element lesson_el = el.findElement("lesson", 0);
         if (lesson_el != null) {
             String nm = lesson_el.findAttr("name");

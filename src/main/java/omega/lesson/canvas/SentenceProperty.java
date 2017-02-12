@@ -95,7 +95,7 @@ public class SentenceProperty extends Property_B {
 
 	public void actionPerformed(ActionEvent ev) {
 	    String s = ev.getActionCommand();
-	    if (s.equals("set action file")) {
+	    if (s.equals("dep_set action file")) {
 		omega.lesson.appl.LessonEditor.setDirty();
 		TableModel tmod = (TableModel) table.getModel();
 		int row = table.getSelectedRow();
@@ -132,7 +132,7 @@ public class SentenceProperty extends Property_B {
 		    }
 		}
 	    }
-	    if (s.equals("set sign file")) {
+	    if (s.equals("dep_set sign file")) {
 		omega.lesson.appl.LessonEditor.setDirty();
 		TableModel tmod = (TableModel) table.getModel();
 		int row = table.getSelectedRow();
@@ -285,7 +285,7 @@ public class SentenceProperty extends Property_B {
 	Y++;
 	X = 0;
 	JRadioButton rb;
-	fpan.add(new JLabel(T.t("Type:")), rb = rb_def = new JRadioButton(T.t("Default, as set in word prop")), Y, ++X);
+	fpan.add(new JLabel(T.t("Type:")), rb = rb_def = new JRadioButton(T.t("Default, as dep_set in word prop")), Y, ++X);
 
 	ButtonGroup bgr = new ButtonGroup();
 	bgr.add(rb);
@@ -304,8 +304,8 @@ public class SentenceProperty extends Property_B {
 	jp2.add(new JLabel(""));
 	fpan.add(new JLabel(""), jp2, Y, X);
 	set_act_b = jb;
-	guimap.put("set action file", jb);
-	jb.setActionCommand("set action file");
+	guimap.put("dep_set action file", jb);
+	jb.setActionCommand("dep_set action file");
 	jb.addActionListener(myactl);
 
 	Y++;
@@ -330,8 +330,8 @@ public class SentenceProperty extends Property_B {
 	jp2S.add(new JLabel(""));
 	fpan.add(new JLabel(""), jp2S, Y, X);
 	set_sgn_b = jb;
-	guimap.put("set sign file", jb);
-	jb.setActionCommand("set sign file");
+	guimap.put("dep_set sign file", jb);
+	jb.setActionCommand("dep_set sign file");
 	jb.addActionListener(myactl);
 
 	Y++;

@@ -436,7 +436,7 @@ public class InvokeExternBrowser {
 		    Object aeTarget = aeTargetConstructor.newInstance(new Object[]{finderCreatorCode});
 		    Integer gurlType = (Integer) makeOSType.invoke(null, new Object[]{GURL_EVENT});
 		    Object appleEvent = appleEventConstructor.newInstance(new Object[]{gurlType, gurlType, aeTarget, kAutoGenerateReturnID, kAnyTransactionID});
-		    // Don't set browser = appleEvent because then the next time we call
+		    // Don't dep_set browser = appleEvent because then the next time we call
 		    // locateBrowser(), we'll get the same AppleEvent, to which we'll already have
 		    // added the relevant parameter. Instead, regenerate the AppleEvent every time.
 		    // There's probably a way to do this better; if any has any ideas, please let

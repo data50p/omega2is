@@ -47,7 +47,7 @@ public class TriggerEventSetVisibility extends TriggerEventSelections {
     }
 
     public String getCmdLabel() {
-	return T.t("set Visibility");
+	return T.t("dep_set Visibility");
     }
 
     public String getHelp() {

@@ -76,9 +76,9 @@ public class MilliTimer {
     }
 
     /**
-     * Check is timer is expired and set status
+     * Check is timer is expired and dep_set status
      * @param expireValue in ms
-     * @param status set[0] to the status, do nothing if null
+     * @param status dep_set[0] to the status, do nothing if null
      * @return
      */
     public boolean isExpired(long expireValue, String[] status) {

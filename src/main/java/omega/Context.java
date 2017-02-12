@@ -116,7 +116,7 @@ public class Context {
 		omegaAssets = omega_assets_name;
 		return;
 	    }
-	    Context.sout_log.getLogger().info("setOmegaAssets: unable to set " + omegaAssets);
+	    Context.sout_log.getLogger().info("setOmegaAssets: unable to dep_set " + omegaAssets);
 	}
     }
 

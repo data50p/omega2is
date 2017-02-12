@@ -26,7 +26,7 @@ class SentencePropPanel extends JPanel {
     class myActionListener implements ActionListener {
 	public void actionPerformed(ActionEvent ev) {
 	    String s = ev.getActionCommand();
-	    if (s.equals("set action")) {
+	    if (s.equals("dep_set action")) {
 
 	    }
 	}
@@ -49,7 +49,7 @@ class SentencePropPanel extends JPanel {
 
 	JRadioButton rb1, rb2;
 	ButtonGroup bgr = new ButtonGroup();
-	add(rb1 = new JRadioButton(T.t("Default, as set in word prop")), gbcf.createL(X++, Y, 1));
+	add(rb1 = new JRadioButton(T.t("Default, as dep_set in word prop")), gbcf.createL(X++, Y, 1));
 	bgr.add(rb1);
 
 	Y++;
@@ -57,8 +57,8 @@ class SentencePropPanel extends JPanel {
 	add(rb2 = new JRadioButton(T.t("Specific")), gbcf.createL(X++, Y, 1));
 	bgr.add(rb2);
 	add(jb = new JButton(T.t("Set action file")), gbcf.createL(X++, Y, 1));
-	guimap.put("set action file", jb);
-	jb.setActionCommand("set action file");
+	guimap.put("dep_set action file", jb);
+	jb.setActionCommand("dep_set action file");
 	jb.addActionListener(myactl);
     }
 }
