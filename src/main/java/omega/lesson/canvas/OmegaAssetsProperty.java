@@ -107,7 +107,7 @@ public class OmegaAssetsProperty extends Property_B {
                     String tfn = omega.util.Files.rmHead(url_s);
 
                     PrintWriter pw = S.createPrintWriter(tfn);
-                    Target.TargetCombinations tc = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
+                    Target.TargetCombinations tc = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(true);
                     for (String s2 : tc.set) {
                         pw.println(s2);
                     }

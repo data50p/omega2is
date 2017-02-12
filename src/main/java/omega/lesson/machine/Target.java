@@ -1072,6 +1072,10 @@ public class Target {
             snd = fillVarHere(ix, snd);          // WHY-S
             if ( !SundryUtils.empty(snd) )
                 li.add(snd);
+            String sndD = titm.item.getDummySound();
+            sndD = fillVarHere(ix, sndD);          // WHY-S
+            if ( !SundryUtils.empty(sndD) )
+                li.add(sndD);
             ix++;
         }
         return li;
