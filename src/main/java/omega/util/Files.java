@@ -111,8 +111,9 @@ public class Files {
 //log	omega.Context.sout_log.getLogger().info("ERR: " + "got file " + file);
 	try {
 	    URL url = file.toURI().toURL();
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "got url " + url);
-	    url_s = url.toString();
+	    URL url2 = file.toURL();
+	    Log.getLogger().warning("URL matter: " + file + ' ' + url + ' ' + url2);
+	    url_s = url2.toString();
 	} catch (Exception ex) {
 	    Context.exc_log.getLogger().throwing(Files.class.getName(), "toURL", ex);
 	}

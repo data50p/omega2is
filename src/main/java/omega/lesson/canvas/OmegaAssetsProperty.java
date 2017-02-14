@@ -52,6 +52,7 @@ public class OmegaAssetsProperty extends Property_B {
 
     TargetCombinations latestTargetCombinations;
     static TargetCombinations.Builder targetCombinationsBuilder = new TargetCombinations.Builder();
+    private JButton oaBundleJB;
 
     OmegaAssetsProperty(JFrame owner, LessonContext l_ctxt) {
         super(owner, T.t("Omega - Assets Dialog"));
@@ -158,6 +159,7 @@ public class OmegaAssetsProperty extends Property_B {
                 targetCombinationsBuilder.add(latestTargetCombinations);
                 latestTargetCombinations = targetCombinationsBuilder.asOne();
                 tmod.update(latestTargetCombinations);
+                oaBundleJB.setText(T.t("Add Omega Assets to Bundle") + " " + targetCombinationsBuilder.srcSize());
             }
 
             if (s.equals("close")) {
@@ -281,9 +283,10 @@ public class OmegaAssetsProperty extends Property_B {
         jb.setActionCommand("create assets");
         jb.addActionListener(myactl);
 
-        fpan.add(new JLabel(""), jb = new JButton(T.t("Add Omega Assets to Bundle")), Y, ++X);
+        fpan.add(new JLabel(""), jb = new JButton(T.t("Add Omega Assets to Bundle") + " " + targetCombinationsBuilder.srcSize()), Y, ++X);
         jb.setActionCommand("add bundle");
         jb.addActionListener(myactl);
+        oaBundleJB = jb;
 
         fpan.add(new JLabel(""), jb = new JButton(T.t("New Omega Assets Bundle")), Y, ++X);
         jb.setActionCommand("new bundle");
