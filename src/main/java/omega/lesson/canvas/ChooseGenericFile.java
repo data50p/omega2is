@@ -9,8 +9,9 @@ import java.io.File;
 
 public class ChooseGenericFile extends JFileChooser {
     ChooseGenericFile() {
-	super(new File(Context.omegaAssets(".")));
+	this(false);
     }
+
     ChooseGenericFile(boolean runtime) {
 	super(new File(Context.omegaAssets(runtime ? ".." : ".")));
     }

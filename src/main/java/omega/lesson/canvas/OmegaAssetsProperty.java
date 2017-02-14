@@ -50,11 +50,11 @@ public class OmegaAssetsProperty extends Property_B {
 
     OmAssProp_TableModel tmod;
 
-    TargetCombinations targetCombinations;
-    static TargetCombinations.Builder targetCombinationsBuilder;
+    TargetCombinations latestTargetCombinations;
+    static TargetCombinations.Builder targetCombinationsBuilder = new TargetCombinations.Builder();
 
     OmegaAssetsProperty(JFrame owner, LessonContext l_ctxt) {
-        super(owner, T.t("Omega - Assets Property"));
+        super(owner, T.t("Omega - Assets Dialog"));
         this.owner = owner;
         this.l_ctxt = l_ctxt;
         build(getContentPane());
@@ -113,10 +113,10 @@ public class OmegaAssetsProperty extends Property_B {
                 if (rv == JFileChooser.APPROVE_OPTION) {
                     File file = choose_f.getSelectedFile();
                     PrintWriter pw = S.createPrintWriter(file.getPath());
-                    for (String s2 : targetCombinations.src_set) {
+                    for (String s2 : targetCombinationsBuilder.asOne().src_set) {
                         print(pw, "src", s2);
                     }
-                    for (String s2 : targetCombinations.dep_set) {
+                    for (String s2 : targetCombinationsBuilder.asOne().dep_set) {
                         print(pw, "dep", s2);
                     }
                     pw.close();
@@ -136,10 +136,10 @@ public class OmegaAssetsProperty extends Property_B {
                     try {
                         ZipOutputStream out = new ZipOutputStream(new FileOutputStream(file));
 
-                        for (String s2 : targetCombinations.src_set) {
+                        for (String s2 : targetCombinationsBuilder.asOne().src_set) {
                             put(out, s2);
                         }
-                        for (String s2 : targetCombinations.dep_set) {
+                        for (String s2 : targetCombinationsBuilder.asOne().dep_set) {
                             put(out, s2);
                         }
                         out.close();
@@ -151,15 +151,13 @@ public class OmegaAssetsProperty extends Property_B {
 
             if (s.equals("new bundle")) {
                 targetCombinationsBuilder = new TargetCombinations.Builder();
-                targetCombinationsBuilder.add(targetCombinations);
+                targetCombinationsBuilder.add(latestTargetCombinations);
             }
 
             if (s.equals("add bundle")) {
-                if ( targetCombinationsBuilder == null )
-                    targetCombinationsBuilder = new TargetCombinations.Builder();
-                targetCombinationsBuilder.add(targetCombinations);
-                targetCombinations = targetCombinationsBuilder.asOne();
-                tmod.update(targetCombinations);
+                targetCombinationsBuilder.add(latestTargetCombinations);
+                latestTargetCombinations = targetCombinationsBuilder.asOne();
+                tmod.update(latestTargetCombinations);
             }
 
             if (s.equals("close")) {
@@ -283,7 +281,7 @@ public class OmegaAssetsProperty extends Property_B {
         jb.setActionCommand("create assets");
         jb.addActionListener(myactl);
 
-        fpan.add(new JLabel(""), jb = new JButton(T.t("Add Omega Assets Bundle")), Y, ++X);
+        fpan.add(new JLabel(""), jb = new JButton(T.t("Add Omega Assets to Bundle")), Y, ++X);
         jb.setActionCommand("add bundle");
         jb.addActionListener(myactl);
 
@@ -299,10 +297,9 @@ public class OmegaAssetsProperty extends Property_B {
         Y++;
         X = 0;
 
-        targetCombinations = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
-        targetCombinations.src_set.add(l_ctxt.getLesson().getLoadedFName());
-
-        tmod = new OmAssProp_TableModel(this, targetCombinations, tmm);
+        latestTargetCombinations = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
+        latestTargetCombinations.src_set.add(l_ctxt.getLesson().getLoadedFName());
+        tmod = new OmAssProp_TableModel(this, latestTargetCombinations, tmm);
 
         TableSorter tsort = new TableSorter(tmod);
 

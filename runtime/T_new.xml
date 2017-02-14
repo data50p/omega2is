@@ -42,6 +42,10 @@
    <string>default.omega_assets/register/Tomas</string>
   </void>
   <void method="put">
+   <string>Add Omega Assets to Bundle</string>
+   <string>Add Omega Assets to Bundle</string>
+  </void>
+  <void method="put">
    <string>Sign movie</string>
    <string>Sign movie</string>
   </void>
@@ -146,8 +150,16 @@
    <string>Dependent File</string>
   </void>
   <void method="put">
+   <string>Depending Files</string>
+   <string>Depending Files</string>
+  </void>
+  <void method="put">
    <string>default.omega_assets/register/Svenska</string>
    <string>default.omega_assets/register/Svenska</string>
+  </void>
+  <void method="put">
+   <string>Omega - Assets Dialog</string>
+   <string>Omega - Assets Dialog</string>
   </void>
   <void method="put">
    <string>Sign Sentence Background</string>

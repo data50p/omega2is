@@ -28,11 +28,11 @@ public class TargetCombinations {
 	}
     }
 
+    public Set<String> src_set = new HashSet<>();
+    public Set<String> dep_set = new HashSet<>();
+
     private void merge(TargetCombinations tc) {
 	dep_set.addAll(tc.dep_set);
 	src_set.addAll(tc.src_set);
     }
-
-    public Set<String> src_set = new HashSet<>();
-    public Set<String> dep_set = new HashSet<>();
 }

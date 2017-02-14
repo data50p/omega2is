@@ -22,7 +22,7 @@ public class OmAssProp_TableModel extends AbstractTableModel {
 
     String[] hdn = new String[]{
             T.t("Source Files"),
-            T.t("Dependent Files"),
+            T.t("Depending Files"),
             T.t("Alt 1"),
             T.t("Alt 2")
     };
