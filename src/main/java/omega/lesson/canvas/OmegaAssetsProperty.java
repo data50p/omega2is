@@ -204,28 +204,33 @@ public class OmegaAssetsProperty extends Property_B {
                             System.err.println("Created dir: f " + dir);
                         }
                     } else {
-                        System.err.println("Got: " + name + ' ' + Context.omegaAssets("."));
-                        FileOutputStream output = null;
                         try {
+                            System.err.println("Got: " + name + ' ' + Context.omegaAssets("."));
+                            FileOutputStream output = null;
                             File entFile = new File(Context.omegaAssets(name));
-                            if (!entFile.getParentFile().exists())
-                                entFile.getParentFile().mkdirs();
-                            if (entFile.exists()) {
-                                System.err.println("SKIP: exist " + entFile);
-                                continue;
+                            long time = zent.getTime();
+                            try {
+                                if (!entFile.getParentFile().exists())
+                                    entFile.getParentFile().mkdirs();
+                                if (entFile.exists()) {
+                                    System.err.println("SKIP: exist " + entFile);
+                                    continue;
+                                }
+                                output = new FileOutputStream(entFile);
+                                int len = 0;
+                                byte[] buffer = new byte[4096];
+                                while ((len = in.read(buffer)) > 0) {
+                                    output.write(buffer, 0, len);
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            } finally {
+                                if (output != null)
+                                    output.close();
                             }
-                            output = new FileOutputStream(entFile);
-                            int len = 0;
-                            byte[] buffer = new byte[4096];
-                            while ((len = in.read(buffer)) > 0)
-                            {
-                                output.write(buffer, 0, len);
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        } finally {
-                            if(output!=null)
-                                output.close();
+                            entFile.setLastModified(time);
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
                         }
                     }
                 }
@@ -246,6 +251,8 @@ public class OmegaAssetsProperty extends Property_B {
         byte[] data = fileAsBytaArray(s2);
         if (data != null) {
 	    ZipEntry e = new ZipEntry(s2);
+	    File f = new File(Context.omegaAssets(s2));
+	    e.setTime(f.lastModified());
 	    out.putNextEntry(e);
 
 	    out.write(data, 0, data.length);
