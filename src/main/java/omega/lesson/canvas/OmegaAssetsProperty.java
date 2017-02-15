@@ -26,6 +26,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 public class OmegaAssetsProperty extends Property_B {
@@ -162,8 +163,75 @@ public class OmegaAssetsProperty extends Property_B {
                 oaBundleJB.setText(T.t("Add Omega Assets to Bundle") + " " + targetCombinationsBuilder.srcSize());
             }
 
+            if (s.equals("import bundle")) {
+                importOmegaAssetsBundle();
+                tmod.update(latestTargetCombinations);
+                oaBundleJB.setText(T.t("Import Omega Assets to Bundle") + " " + targetCombinationsBuilder.srcSize());
+            }
+
             if (s.equals("close")) {
                 setVisible(false);
+            }
+        }
+    }
+
+    private void importOmegaAssetsBundle() {
+        ChooseOmegaAssetsFile choose_f = new ChooseOmegaAssetsFile(true);
+
+        String url_s = null;
+        int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Import"));
+        omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
+        if (rv == JFileChooser.APPROVE_OPTION) {
+            File file = choose_f.getSelectedFile();
+            if ( ! file.getName().endsWith("omega_assets.zip") )
+
+                // add dialog
+
+                return;
+            try {
+                ZipInputStream in = new ZipInputStream(new FileInputStream(file));
+                for(;;) {
+                    ZipEntry zent = in.getNextEntry();
+                    if ( zent == null )
+                        break;
+
+                    String name = zent.getName();
+                    if (zent.isDirectory()) {
+                        File dir = new File(Context.omegaAssets(name));
+                        if (dir.mkdirs()) {
+                            System.err.println("Created dir: T " + dir);
+                        } else {
+                            System.err.println("Created dir: f " + dir);
+                        }
+                    } else {
+                        System.err.println("Got: " + name + ' ' + Context.omegaAssets("."));
+                        FileOutputStream output = null;
+                        try {
+                            File entFile = new File(Context.omegaAssets(name));
+                            if (!entFile.getParentFile().exists())
+                                entFile.getParentFile().mkdirs();
+                            if (entFile.exists()) {
+                                System.err.println("SKIP: exist " + entFile);
+                                continue;
+                            }
+                            output = new FileOutputStream(entFile);
+                            int len = 0;
+                            byte[] buffer = new byte[4096];
+                            while ((len = in.read(buffer)) > 0)
+                            {
+                                output.write(buffer, 0, len);
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } finally {
+                            if(output!=null)
+                                output.close();
+                        }
+                    }
+                }
+                in.close();
+
+            } catch (IOException e) {
             }
         }
     }
@@ -283,6 +351,8 @@ public class OmegaAssetsProperty extends Property_B {
         jb.setActionCommand("create assets");
         jb.addActionListener(myactl);
 
+        Y++;
+        X = 0;
         fpan.add(new JLabel(""), jb = new JButton(T.t("Add Omega Assets to Bundle") + " " + targetCombinationsBuilder.srcSize()), Y, ++X);
         jb.setActionCommand("add bundle");
         jb.addActionListener(myactl);
@@ -290,6 +360,10 @@ public class OmegaAssetsProperty extends Property_B {
 
         fpan.add(new JLabel(""), jb = new JButton(T.t("New Omega Assets Bundle")), Y, ++X);
         jb.setActionCommand("new bundle");
+        jb.addActionListener(myactl);
+
+        fpan.add(new JLabel(""), jb = new JButton(T.t("Import Omega Assets Bundle")), Y, ++X);
+        jb.setActionCommand("import bundle");
         jb.addActionListener(myactl);
 
 
