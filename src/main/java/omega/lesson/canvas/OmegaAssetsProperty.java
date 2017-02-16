@@ -2,6 +2,7 @@ package omega.lesson.canvas;
 
 
 import fpdo.sundry.S;
+import omega.Config;
 import omega.Context;
 import omega.adm.assets.TargetCombinations;
 import omega.i18n.T;
@@ -22,6 +23,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.zip.ZipEntry;
@@ -34,7 +37,7 @@ public class OmegaAssetsProperty extends Property_B {
     static final int COL_FOOBAR = 1;
     static final int COL_ACT1 = 2;
     static final int COL_ACT2 = 3;
-    public static final String OMEGA_BUNDLE_INFO = "OMEGA_BUNDLE.INFO";
+    public static final String OMEGA_BUNDLE_MANIFEST = "omega_bundle.manifest";
 
     HashMap guimap = new HashMap();
     LessonContext l_ctxt;
@@ -134,18 +137,36 @@ public class OmegaAssetsProperty extends Property_B {
                 omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
                 if (rv == JFileChooser.APPROVE_OPTION) {
                     File file = choose_f.getSelectedFile();
-                    if ( ! file.getName().endsWith(".omega_bundle") )
-                        file = new File(file.getPath() + ".omega_bundle");
+                    if (!file.getName().endsWith(Config.OMEGA_BUNDLE_EXTENSION))
+                        file = new File(file.getPath() + Config.OMEGA_BUNDLE_EXTENSION);
                     try {
-                        ZipOutputStream out = new ZipOutputStream(new FileOutputStream(file));
+                        java.util.List<String> manifest = new ArrayList<>();
+                        for (String s2 : targetCombinationsBuilder.asOne().src_set) {
+                            String manifestInfo = manifestInfo(s2);
+                            manifest.add(manifestInfo);
+                        }
+                        for (String s2 : targetCombinationsBuilder.asOne().dep_set) {
+                            String manifestInfo = manifestInfo(s2);
+                            manifest.add(manifestInfo);
+                        }
 
-                        putData(out, OMEGA_BUNDLE_INFO, infoTF.getText() + "\n");
+                        ZipOutputStream out = new ZipOutputStream(new FileOutputStream(file));
+                        StringBuilder sb = new StringBuilder();
+                        sb.append("type: omega-assets\n");
+                        sb.append("saved: " + new Date() + "\n");
+                        sb.append("user: " + System.getProperty("user.name") + "\n");
+                        sb.append("info: " + infoTF.getText() + "\n");
+                        for(String man: manifest)
+                            sb.append(man + "\n");
+                        putData(out, OMEGA_BUNDLE_MANIFEST, sb.toString());
+
                         for (String s2 : targetCombinationsBuilder.asOne().src_set) {
                             put(out, s2);
                         }
                         for (String s2 : targetCombinationsBuilder.asOne().dep_set) {
                             put(out, s2);
                         }
+
                         out.close();
 
                     } catch (IOException e) {
@@ -178,6 +199,14 @@ public class OmegaAssetsProperty extends Property_B {
         }
     }
 
+    private String manifestInfo(String fName) {
+        File f = new File(Context.omegaAssets(fName));
+        if (f.exists() && f.canRead())
+            return "entry: " + f.length() + ", " + fName;
+        else
+            return "entry: -1, " + fName;
+    }
+
     private void importOmegaAssetsBundle() {
         ChooseOmegaBundleFile choose_f = new ChooseOmegaBundleFile(true);
 
@@ -186,16 +215,16 @@ public class OmegaAssetsProperty extends Property_B {
         omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
         if (rv == JFileChooser.APPROVE_OPTION) {
             File file = choose_f.getSelectedFile();
-            if ( ! file.getName().endsWith(".omega_bundle") )
+            if (!file.getName().endsWith(".omega_bundle"))
 
                 // add dialog
 
                 return;
             try {
                 ZipInputStream in = new ZipInputStream(new FileInputStream(file));
-                for(;;) {
+                for (; ; ) {
                     ZipEntry zent = in.getNextEntry();
-                    if ( zent == null )
+                    if (zent == null)
                         break;
 
                     String name = zent.getName();
@@ -210,8 +239,8 @@ public class OmegaAssetsProperty extends Property_B {
                         try {
                             System.err.println("Got: " + name + ' ' + Context.omegaAssets("."));
                             FileOutputStream output = null;
-                            boolean omega_bundle = OMEGA_BUNDLE_INFO.equals(name);
-                            if ( omega_bundle)
+                            boolean omega_bundle = OMEGA_BUNDLE_MANIFEST.equals(name);
+                            if (omega_bundle)
                                 name = rmExt(file.getName()) + "-" + name;
                             File entFile = new File(Context.omegaAssets(name));
                             long time = zent.getTime();
@@ -228,8 +257,14 @@ public class OmegaAssetsProperty extends Property_B {
                                 while ((len = in.read(buffer)) > 0) {
                                     output.write(buffer, 0, len);
                                     // hack
-                                    if ( omega_bundle )
-                                        infoTF.setText(new String(buffer, 0, len));
+                                    if (omega_bundle) {
+                                        String infoText = new String(buffer, 0, len);
+                                        String sa[] = infoText.split("\n");
+                                        for (String s : sa) {
+                                            if (s.startsWith("info: "))
+                                                infoTF.setText(s.substring(6));
+                                        }
+                                    }
                                 }
                             } catch (IOException e) {
                                 e.printStackTrace();
@@ -252,28 +287,28 @@ public class OmegaAssetsProperty extends Property_B {
 
     private String rmExt(String name) {
         int ix = name.lastIndexOf(".");
-        if ( ix != -1  )
+        if (ix != -1)
             return name.substring(0, ix);
         return name;
     }
 
     private void print(PrintWriter pw, String prfx, String s2) {
         File f = new File(Context.omegaAssets(s2));
-        String stat =  f.exists() && f.canRead() ? "OK" : "??";
+        String stat = f.exists() && f.canRead() ? "OK" : "??";
         pw.println(prfx + ", " + stat + ", " + s2);
     }
 
     private void put(ZipOutputStream out, String s2) throws IOException {
         byte[] data = fileAsBytaArray(s2);
         if (data != null) {
-	    ZipEntry e = new ZipEntry(s2);
-	    File f = new File(Context.omegaAssets(s2));
-	    e.setTime(f.lastModified());
-	    out.putNextEntry(e);
+            ZipEntry e = new ZipEntry(s2);
+            File f = new File(Context.omegaAssets(s2));
+            e.setTime(f.lastModified());
+            out.putNextEntry(e);
 
-	    out.write(data, 0, data.length);
-	    out.closeEntry();
-	}
+            out.write(data, 0, data.length);
+            out.closeEntry();
+        }
     }
 
     private void putData(ZipOutputStream out, String name, String text) throws IOException {
@@ -292,14 +327,14 @@ public class OmegaAssetsProperty extends Property_B {
                 fileSize = Integer.MAX_VALUE;
             }
             InputStream is = new FileInputStream(f);
-            byte[] data = new byte[(int)fileSize];
+            byte[] data = new byte[(int) fileSize];
             byte[] buf = new byte[1024];
             int pos = 0;
-            for(;;) {
+            for (; ; ) {
                 int n = is.read(buf);
-                if ( n == -1 )
+                if (n == -1)
                     break;
-                System.arraycopy(buf,0, data, pos, n);
+                System.arraycopy(buf, 0, data, pos, n);
                 pos += n;
             }
             return data;
@@ -324,7 +359,7 @@ public class OmegaAssetsProperty extends Property_B {
             if (ev.getValueIsAdjusting() == false) {
                 OmegaAssetsProperty.MyListSelectionModel lselmod_ = (OmegaAssetsProperty.MyListSelectionModel) ev.getSource();
                 int ix = lselmod_.getMinSelectionIndex();
-                if ( ix >= 0 ) {
+                if (ix >= 0) {
                     TableModel tmod = (TableModel) table.getModel();
                     String s = (String) tmod.getValueAt(ix, COL_ACT1);
                 }
