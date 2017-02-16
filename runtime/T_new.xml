@@ -34,6 +34,10 @@
    <string>Add Omega Assets Bundle</string>
   </void>
   <void method="put">
+   <string>New Omega Bundle</string>
+   <string>New Omega Bundle</string>
+  </void>
+  <void method="put">
    <string>Can&apos;t find animation: anim/ActiveAnim/ActorpresB1.omega_anim</string>
    <string>Can&apos;t find animation: anim/ActiveAnim/ActorpresB1.omega_anim</string>
   </void>
@@ -110,6 +114,10 @@
    <string>Actor Image Name</string>
   </void>
   <void method="put">
+   <string>Import Omega Bundle</string>
+   <string>Import Omega Bundle</string>
+  </void>
+  <void method="put">
    <string>Tomas</string>
    <string>Tomas</string>
   </void>
@@ -140,6 +148,10 @@
   <void method="put">
    <string>Automatic, play each separate word</string>
    <string>Automatic, play each separate word</string>
+  </void>
+  <void method="put">
+   <string>Description</string>
+   <string>Description</string>
   </void>
   <void method="put">
    <string>default.omega_assets/register/Norsk-bokmål</string>
@@ -176,6 +188,10 @@
   <void method="put">
    <string>Svenska</string>
    <string>Svenska</string>
+  </void>
+  <void method="put">
+   <string>Save Omega Bundle list</string>
+   <string>Save Omega Bundle list</string>
   </void>
   <void method="put">
    <string>Can&apos;t find test test </string>
@@ -226,6 +242,10 @@
    <string>length</string>
   </void>
   <void method="put">
+   <string>Save Omega Bundle</string>
+   <string>Save Omega Bundle</string>
+  </void>
+  <void method="put">
    <string>default.omega_assets/register/LessonsInEnglish</string>
    <string>default.omega_assets/register/LessonsInEnglish</string>
   </void>
@@ -236,6 +256,10 @@
   <void method="put">
    <string>Save Omega Assets list</string>
    <string>Save Omega Assets list</string>
+  </void>
+  <void method="put">
+   <string>Info</string>
+   <string>Info</string>
   </void>
   <void method="put">
    <string>Item: Sign Movies, positive </string>
