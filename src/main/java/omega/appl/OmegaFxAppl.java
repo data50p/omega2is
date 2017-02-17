@@ -148,7 +148,7 @@ public class OmegaFxAppl extends Application {
 //	g.drawString(omega.Version.getVersion(), 5, 12);
 //	g.drawString(omega.Version.getCWD(), 5, 322 + 20 * 0);
 //	g.drawString(omega.Version.getJavaVersion(), 5, 322 + 20 * 1);
-//	g.drawString(omega.Version.getXXX(), 5, 322 + 20 * 2);
-//	g.drawString(omega.Version.getYYY(), 5, 322 + 20 * 3);
+//	g.drawString(omega.Version.getJavaVendor(), 5, 322 + 20 * 2);
+//	g.drawString(omega.Version.getJavaHome(), 5, 322 + 20 * 3);
 //    }
 }

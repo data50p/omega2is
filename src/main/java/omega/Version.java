@@ -3,27 +3,36 @@ package omega;
 // DO NO CHANGE HERE
 
 public class Version {
-    static public String getVersion() {
-	return getVersion(null);
+    static public String getOmegaVersion() {
+	return getOmegaVersion(null);
     }
 
-    static public String getVersion(String s) {
-	String ver = "\u03a9, ver liu.1.3.2.509 2016-11-30 21:32:28";
+    static public String getOmegaVersion(String s) {
 	if (s != null)
-	    return s + ' ' + ver;
+	    return s + ' ' + "Ω, ver " + getDetailedVersion();
 	else
-	    return ver;
+	    return "Ω, ver " + getDetailedVersion();
+    }
+
+    static public String getDetailedVersion() {
+	String ver = getVersion() + " 2017-02-18 00:03:42";
+	return ver;
+    }
+
+    static public String getVersion() {
+	String ver = "2.0.0";
+	return ver;
     }
 
     public static String getCWD() {
         return System.getProperty("user.dir");
     }
 
-    public static String getYYY() {
+    public static String getJavaHome() {
 	return System.getProperty("java.home");
     }
 
-    public static String getXXX() {
+    public static String getJavaVendor() {
 	return System.getProperty("java.vendor");
     }
 

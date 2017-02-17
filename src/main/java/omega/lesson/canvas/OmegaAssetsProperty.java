@@ -4,6 +4,7 @@ package omega.lesson.canvas;
 import fpdo.sundry.S;
 import omega.Config;
 import omega.Context;
+import omega.Version;
 import omega.adm.assets.TargetCombinations;
 import omega.i18n.T;
 import omega.lesson.LessonContext;
@@ -37,7 +38,7 @@ public class OmegaAssetsProperty extends Property_B {
     static final int COL_FOOBAR = 1;
     static final int COL_ACT1 = 2;
     static final int COL_ACT2 = 3;
-    public static final String OMEGA_BUNDLE_MANIFEST = "omega_bundle.manifest";
+    public static final String OMEGA_BUNDLE_MANIFEST = "bundle.omega_manifest";
 
     HashMap guimap = new HashMap();
     LessonContext l_ctxt;
@@ -153,6 +154,7 @@ public class OmegaAssetsProperty extends Property_B {
                         ZipOutputStream out = new ZipOutputStream(new FileOutputStream(file));
                         StringBuilder sb = new StringBuilder();
                         sb.append("type: omega-assets\n");
+                        sb.append("version: " + Version.getVersion() + "\n");
                         sb.append("saved: " + new Date() + "\n");
                         sb.append("user: " + System.getProperty("user.name") + "\n");
                         sb.append("info: " + infoTF.getText() + "\n");

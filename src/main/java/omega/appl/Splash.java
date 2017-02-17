@@ -8,8 +8,8 @@ public class Splash extends JWindow {
 
     Splash() {
 	Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
-	int ww = 700;
-	int hh = 330 + 22 * 3;
+	int ww = 500;
+	int hh = 330 + 22 * 4;
 	setLocation((d.width - ww) / 2, (d.height - hh) / 2);
 	setSize(ww, hh);
 	if (im == null)
@@ -19,12 +19,14 @@ public class Splash extends JWindow {
     }
 
     public void paint(Graphics g) {
-	g.drawImage(im, 0, 0, null);
+	g.drawImage(im, 50, 10, null);
 	g.setColor(Color.yellow);
-	g.drawString(omega.Version.getVersion(), 5, 12);
-	g.drawString(omega.Version.getCWD(), 5, 322 + 20 * 0);
-	g.drawString(omega.Version.getJavaVersion(), 5, 322 + 20 * 1);
-	g.drawString(omega.Version.getXXX(), 5, 322 + 20 * 2);
-	g.drawString(omega.Version.getYYY(), 5, 322 + 20 * 3);
+	int line = 0;
+	int yoff = 324;
+	g.drawString(omega.Version.getOmegaVersion(), 5, yoff + 20 * line++);
+	g.drawString(omega.Version.getCWD(), 5, yoff + 20 * line++);
+	g.drawString(omega.Version.getJavaVersion(), 5, yoff + 20 * line++);
+	g.drawString(omega.Version.getJavaVendor(), 5, yoff + 20 * line++);
+	g.drawString(omega.Version.getJavaHome(), 5, yoff + 20 * line++);
     }
 }
