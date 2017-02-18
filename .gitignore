@@ -14,4 +14,5 @@ alternate.omega_assets
 *.omega_anim.prev*
 SAVED-*
 *.omega_assets.zip
+*omega_bundle.manifest
 __*
