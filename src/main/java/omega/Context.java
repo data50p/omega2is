@@ -122,6 +122,14 @@ public class Context {
         }
     }
 
+    public static String t9n(String s) {
+        if ( s == null )
+            return null;
+        if ( s.startsWith("t9n/") )
+            return s;
+        return "t9n/" + s;
+    }
+
     public static class HelpStack {
         Stack stack = new Stack();
 

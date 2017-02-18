@@ -1,6 +1,7 @@
 package omega.i18n;
 
 import fpdo.sundry.S;
+import omega.Context;
 
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
@@ -77,7 +78,7 @@ public class T {
 	int[] who = new int[1];
 
 	try {
-	    FileInputStream in = fopen(fn, fn2, who);
+	    FileInputStream in = fopen(Context.t9n(fn), fn2, who);
 	    if (in == null)
 		return -1;
 	    InputStreamReader ir = new InputStreamReader(in);
@@ -128,7 +129,7 @@ public class T {
 	try {
 	    int[] who = new int[1];
 
-	    FileInputStream in = fopen(fn + ".xml", fn2 + ".xml", who);
+	    FileInputStream in = fopen(Context.t9n(fn + ".xml"), Context.t9n(fn2 + ".xml"), who);
 	    if (in == null)
 		return -1;
 	    InputStreamReader ir = new InputStreamReader(in);
@@ -162,17 +163,17 @@ public class T {
     }
 
     static private void putEncoding() {
-	File f = new File("T_new");
+	File f = new File(Context.t9n("T_new"));
 	if (f.exists() && f.length() > 0)
 	    return;
-	PrintWriter pw = S.createPrintWriter("T_new");
+	PrintWriter pw = S.createPrintWriter(Context.t9n("T_new"));
 	pw.println("utf-8");
 	pw.close();
     }
 
     synchronized static private void putXML(HashMap hm, String fn) {
 	try {
-	    XMLEncoder e = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(fn + ".xml")));
+	    XMLEncoder e = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(Context.t9n(fn + ".xml"))));
 	    e.writeObject(hm);
 	    e.close();
 	} catch (Exception ex) {
