@@ -1,5 +1,7 @@
 package omega.anim.panels.timeline;
 
+import omega.swing.properties.SwingUtils;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -16,8 +18,8 @@ public class UpDownTextField extends JPanel {
 	l = new JLabel(label);
 	tf = new JTextField(def, 4);
 	tf.setEditable(false);
-	up = new JButton(new ImageIcon("toolbarButtonGraphics/navigation/Up16.gif"));
-	down = new JButton(new ImageIcon("toolbarButtonGraphics/navigation/Down16.gif"));
+	up = new JButton(SwingUtils.getImageIcon("toolbarButtonGraphics/navigation/Up16.gif"));
+	down = new JButton(SwingUtils.getImageIcon("toolbarButtonGraphics/navigation/Down16.gif"));
 	up.setPreferredSize(new Dimension(16, 12));
 	down.setPreferredSize(new Dimension(16, 12));
 	JPanel pl = new JPanel();

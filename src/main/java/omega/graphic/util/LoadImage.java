@@ -1,6 +1,7 @@
 package omega.graphic.util;
 
 import omega.Context;
+import omega.swing.properties.SwingUtils;
 
 import java.awt.*;
 import java.io.File;
@@ -58,7 +59,8 @@ public class LoadImage {
     }
 
     public static Image loadAndWaitFromFile(Component comp, String im_name) {
-	Toolkit tk = Toolkit.getDefaultToolkit();
+	    return SwingUtils.getImage(im_name);
+/*	Toolkit tk = Toolkit.getDefaultToolkit();
 	Image im = null;
 	try {
 	    String aImname = Context.omegaAssets(im_name);
@@ -75,5 +77,6 @@ public class LoadImage {
 	    //	    im=null;
 	}
 	return im;
+	*/
     }
 }

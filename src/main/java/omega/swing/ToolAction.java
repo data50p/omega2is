@@ -1,5 +1,7 @@
 package omega.swing;
 
+import omega.swing.properties.SwingUtils;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,21 +17,13 @@ public class ToolAction extends AbstractAction {
     }
 
     public ToolAction(String text, String icons, String cmd, ToolExecute texec) {
-	super(text,
-		new ImageIcon(
-			Toolkit.getDefaultToolkit().createImage("toolbarButtonGraphics/" +
-				icons +
-				"24.gif")));
+	super(text, SwingUtils.getImageIcon("toolbarButtonGraphics/" + icons + "24.gif"));
 	this.cmd = cmd;
 	this.texec = texec;
     }
 
     public ToolAction(String text, String icons, String cmd, ToolExecute texec, boolean _b) {
-	super(text,
-		new ImageIcon(
-			Toolkit.getDefaultToolkit().createImage("toolbarButtonGraphics/" +
-				icons +
-				"24.png")));
+	super(text, SwingUtils.getImageIcon("toolbarButtonGraphics/" + icons + "24.png"));
 	this.cmd = cmd;
 	this.texec = texec;
     }
