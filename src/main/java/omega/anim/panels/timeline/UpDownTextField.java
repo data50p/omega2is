@@ -1,6 +1,6 @@
 package omega.anim.panels.timeline;
 
-import omega.swing.properties.SwingUtils;
+import omega.swing.SwingUtils;
 
 import javax.swing.*;
 import java.awt.*;

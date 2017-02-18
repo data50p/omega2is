@@ -1,9 +1,6 @@
 package omega.swing;
 
-import omega.swing.properties.SwingUtils;
-
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class ToolAction extends AbstractAction {
