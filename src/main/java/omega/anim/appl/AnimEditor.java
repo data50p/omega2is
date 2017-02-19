@@ -656,7 +656,7 @@ public class AnimEditor extends JFrame {
 	}
 
 	wings_panel.removeAllWings();
-	Element el = anim_repository.open(a_ctxt, fn);
+	Element el = anim_repository.open(a_ctxt, Context.omegaAssets(fn));
 	anim_repository.load(a_ctxt, el);
 	httpd.getHashMap().put("lesson:loaded resource ", anim_repository.getName());
 	a_ctxt.anim_canvas.getToolExecute().execute("fit");

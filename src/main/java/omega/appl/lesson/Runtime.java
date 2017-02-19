@@ -6,6 +6,7 @@ import omega.appl.OmegaAppl;
 import omega.i18n.T;
 import omega.lesson.ChooseLessonFile;
 import omega.lesson.appl.LessonRuntime;
+import omega.util.Files;
 
 import javax.swing.*;
 import java.io.File;
@@ -18,16 +19,7 @@ public class Runtime extends OmegaAppl {
     boolean ask;
 
     private static String toURL(File file) {
-	String url_s = null;
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "got file " + file);
-	try {
-	    URL url = file.toURI().toURL();
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "got url " + url);
-	    url_s = url.toString();
-	} catch (Exception ex) {
-	    omega.Context.exc_log.getLogger().throwing(Runtime.class.getName(), "toURL", ex);
-	}
-	return url_s;
+    	return Files.toURL(file);
     }
 
     public Runtime(String fn, boolean ask, boolean with_frame, char run_mode) {

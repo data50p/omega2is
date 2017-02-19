@@ -9,6 +9,7 @@ import omega.Context;
 import omega.anim.context.AnimContext;
 import omega.i18n.T;
 import omega.lesson.pupil.Pupil;
+import omega.util.Files;
 import org.hs.jfc.FormPanel;
 
 import javax.swing.*;
@@ -777,14 +778,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	int rv = choose_if.showDialog(this, T.t("Select"));
 	if (rv == JFileChooser.APPROVE_OPTION) {
 	    File file = choose_if.getSelectedFile();
-	    try {
-		URL url = file.toURI().toURL();
-		url_s = url.toString();
-		return url_s;
-	    } catch (Exception ex) {
-		Context.exc_log.getLogger().throwing(PupilSettingsDialog.class.getName(), "selImage", ex);
-	    } finally {
-	    }
+	    return Files.toURL(file);
 	}
 	return null;
     }
@@ -794,14 +788,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	int rv = choose_mf.showDialog(this, T.t("Select"));
 	if (rv == JFileChooser.APPROVE_OPTION) {
 	    File file = choose_mf.getSelectedFile();
-	    try {
-		URL url = file.toURI().toURL();
-		url_s = url.toString();
-		return url_s;
-	    } catch (Exception ex) {
-		Context.exc_log.getLogger().throwing(PupilSettingsDialog.class.getName(), "selMovie", ex);
-	    } finally {
-	    }
+	    return Files.toURL(file);
 	}
 	return null;
     }
@@ -811,14 +798,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	int rv = choose_md.showDialog(this, T.t("Select Directory"));
 	if (rv == JFileChooser.APPROVE_OPTION) {
 	    File file = choose_md.getSelectedFile();
-	    try {
-		URL url = file.toURI().toURL();
-		url_s = url.toString();
-		return url_s;
-	    } catch (Exception ex) {
-		Context.exc_log.getLogger().throwing(PupilSettingsDialog.class.getName(), "selMovie", ex);
-	    } finally {
-	    }
+	    return Files.toURL(file);
 	}
 	return null;
     }
@@ -828,14 +808,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	int rv = choose_sf.showDialog(this, T.t("Select"));
 	if (rv == JFileChooser.APPROVE_OPTION) {
 	    File file = choose_sf.getSelectedFile();
-	    try {
-		URL url = file.toURI().toURL();
-		url_s = url.toString();
-		return url_s;
-	    } catch (Exception ex) {
-		Context.exc_log.getLogger().throwing(PupilSettingsDialog.class.getName(), "selSpeech", ex);
-	    } finally {
-	    }
+	    return Files.toURL(file);
 	}
 	return null;
     }

@@ -12,6 +12,7 @@ import omega.connect.httpd.Server;
 import omega.i18n.T;
 import omega.media.audio.APlayer;
 import omega.swing.ToolExecute;
+import omega.util.Files;
 
 import javax.swing.*;
 import java.awt.*;
@@ -407,16 +408,7 @@ public class AnimRuntime {
     }
 
     private static String toURL(File file) {
-	String url_s = null;
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "got file " + file);
-	try {
-	    URL url = file.toURI().toURL();
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "got url " + url);
-	    url_s = url.toString();
-	} catch (Exception ex) {
-	    Context.exc_log.getLogger().throwing(AnimRuntime.class.getName(), "toURL", ex);
-	}
-	return url_s;
+    	return Files.toURL(file);
     }
 
     Element anim_el_root;

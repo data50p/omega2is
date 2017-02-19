@@ -133,13 +133,25 @@ public class Files {
 	try {
 	    URL url = file.toURI().toURL();
 	    URL url2 = file.toURL();
-	    Log.getLogger().warning("URL matter: " + file + ' ' + url + ' ' + url2);
-	    url_s = url2.toString();
+	    String url0 = "file:" + slashify(file.getAbsolutePath(), file.isDirectory());
+	    Log.getLogger().warning("URL matter: " + file + ' ' + url + ' ' + url2 + ' ' + url0);
+	    url_s = url0;//url2.toString();
 	} catch (Exception ex) {
 	    Context.exc_log.getLogger().throwing(Files.class.getName(), "toURL", ex);
 	}
 	return url_s;
     }
+
+	private static String slashify(String path, boolean isDirectory) {
+		String p = path;
+		if (File.separatorChar != '/')
+			p = p.replace(File.separatorChar, '/');
+		if (!p.startsWith("/"))
+			p = "/" + p;
+		if (!p.endsWith("/") && isDirectory)
+			p = p + "/";
+		return p;
+	}
 
     public static void fileCopy(File from, File to) {
 	try {

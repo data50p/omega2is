@@ -5,6 +5,7 @@ import fpdo.sundry.S;
 import omega.Context;
 import omega.i18n.T;
 import omega.lesson.repository.Locator;
+import omega.util.Files;
 import omega.value.Value;
 import omega.value.Values;
 import org.hs.jfc.FormPanel;
@@ -36,15 +37,7 @@ public class ItemProperty extends Property_B implements ActionListener {
     ChooseActionFile2 choose_af = new ChooseActionFile2();
 
     String toURL(File file) {
-	String url_s = null;
-	try {
-	    URL url = file.toURI().toURL();
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "got url " + url);
-	    url_s = url.toString();
-	} catch (Exception ex) {
-	    Context.exc_log.getLogger().throwing(ItemProperty.class.getName(), "toURL", ex);
-	}
-	return url_s;
+    	return Files.toURL(file);
     }
 
     String getFName() {

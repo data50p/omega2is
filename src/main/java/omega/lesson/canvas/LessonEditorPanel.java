@@ -8,6 +8,7 @@ import omega.i18n.T;
 import omega.lesson.machine.Item;
 import omega.lesson.machine.Target;
 import omega.swing.GBC_Factory;
+import omega.util.Files;
 import omega.value.Value;
 import omega.value.Values;
 import omega.value.ValuesListener;
@@ -210,7 +211,8 @@ public class LessonEditorPanel extends JPanel {
                         File file = choose_af.getSelectedFile();
                         String fname_s = file.getName();
 //log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fname_s);
-                        fname_s = file.toURI().toURL().toString(); // getCanonicalPath();
+//                        fname_s = file.toURI().toURL().toString(); // getCanonicalPath();
+                        fname_s = Files.toURL(file);
 //log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fname_s);
                         String fn = omega.util.Files.rmHead(fname_s);
 //log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fn);
@@ -218,7 +220,7 @@ public class LessonEditorPanel extends JPanel {
                         enable_LLN.setSelected(true);
                         lesson_link_next.setEnabled(true);
                         //			omega.lesson.appl.LessonEditor.setDirty();
-                    } catch (IOException ex) {
+                    } catch (Exception ex) {
                         omega.Context.sout_log.getLogger().info("ERR: " + "can't " + ex);
                     }
                 }

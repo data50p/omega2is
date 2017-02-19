@@ -114,6 +114,10 @@
    <string>default.omega_assets/register/test</string>
   </void>
   <void method="put">
+   <string>dep_set Layer</string>
+   <string>dep_set Layer</string>
+  </void>
+  <void method="put">
    <string>Actor Image Name</string>
    <string>Actor Image Name</string>
   </void>
@@ -162,6 +166,10 @@
    <string>Description</string>
   </void>
   <void method="put">
+   <string>dep_set Image Attribute</string>
+   <string>dep_set Image Attribute</string>
+  </void>
+  <void method="put">
    <string>default.omega_assets/register/Norsk-bokmål</string>
    <string>default.omega_assets/register/Norsk-bokmål</string>
   </void>
@@ -176,6 +184,10 @@
   <void method="put">
    <string>Depending Files</string>
    <string>Depending Files</string>
+  </void>
+  <void method="put">
+   <string>dep_set Visibility</string>
+   <string>dep_set Visibility</string>
   </void>
   <void method="put">
    <string>default.omega_assets/register/Svenska</string>

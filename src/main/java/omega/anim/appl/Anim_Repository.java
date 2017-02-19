@@ -8,6 +8,7 @@ import omega.Context;
 import omega.adm.persistence.xml.XML_Repository;
 import omega.anim.context.AnimContext;
 import omega.i18n.T;
+import omega.util.Files;
 
 import javax.swing.*;
 import java.awt.*;
@@ -39,16 +40,7 @@ public class Anim_Repository extends XML_Repository {
 
 
     String toURL(File file) {
-	String url_s = null;
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "got file " + file);
-	try {
-	    URL url = file.toURI().toURL();
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "got url " + url);
-	    url_s = url.toString();
-	} catch (Exception ex) {
-	    Context.exc_log.getLogger().throwing(this.getClass().getName(), "toURL", ex);
-	}
-	return url_s;
+    	return Files.toURL(file);
     }
 
     public String getNameDlg(Component c, boolean ask, String label) {
@@ -211,15 +203,8 @@ public class Anim_Repository extends XML_Repository {
 	if (rv == JFileChooser.APPROVE_OPTION) {
 	    File file = choose_if.getSelectedFile();
 //log	    omega.Context.sout_log.getLogger().info("ERR: " + "got file " + file);
-	    try {
-		URL url = file.toURI().toURL();
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "got url " + url);
-		url_s = url.toString();
-		return url_s;
-	    } catch (Exception ex) {
-		Context.exc_log.getLogger().throwing(this.getClass().getName(), "getImage", ex);
-	    } finally {
-	    }
+            url_s = Files.toURL(file);
+            return url_s;
 	}
 	return null;
     }
