@@ -86,6 +86,10 @@
    <string>Path for timeline</string>
   </void>
   <void method="put">
+   <string>Scan and Add to Bundle</string>
+   <string>Scan and Add to Bundle</string>
+  </void>
+  <void method="put">
    <string>default.omega_assets/register/Croatian</string>
    <string>default.omega_assets/register/Croatian</string>
   </void>
@@ -124,6 +128,10 @@
   <void method="put">
    <string>Dependent Files</string>
    <string>Dependent Files</string>
+  </void>
+  <void method="put">
+   <string>Scan</string>
+   <string>Scan</string>
   </void>
   <void method="put">
    <string>LessonsInEnglish</string>
@@ -208,6 +216,10 @@
   <void method="put">
    <string>Play Sign Moview</string>
    <string>Play Sign Moview</string>
+  </void>
+  <void method="put">
+   <string>(( Scan and Add to Bundle ))</string>
+   <string>(( Scan and Add to Bundle ))</string>
   </void>
   <void method="put">
    <string>default.omega_assets/register/Guest</string>
@@ -304,6 +316,10 @@
   <void method="put">
    <string>Omega - Assets Property</string>
    <string>Omega - Assets Property</string>
+  </void>
+  <void method="put">
+   <string>Default, as dep_set in word prop</string>
+   <string>Default, as dep_set in word prop</string>
   </void>
   <void method="put">
    <string>Sign</string>

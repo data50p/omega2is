@@ -31,6 +31,7 @@ import java.awt.geom.Area;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
+import java.io.File;
 import java.util.*;
 
 /*
@@ -1230,6 +1231,18 @@ public class LessonCanvas extends BaseCanvas {
     }
 
     public TargetCombinations getAllTargetCombinationsEx2(boolean dummy) {
+        try {
+            Target tg2 = new Target();
+            HashMap story_hm = Lesson.story_hm;
+            tg2.loadFromEl(l_ctxt.getLesson().getElement(), "", story_hm, dummy, false); // FIX nomix?
+            return tg2.getAllTargetCombinationsEx2(l_ctxt.getLesson());
+        } catch (Exception ex) {
+            return new TargetCombinations();
+        }
+    }
+
+    @Deprecated
+    public TargetCombinations getAllTargetCombinationsEx2(File omega_lesson, boolean dummy) {
         try {
             Target tg2 = new Target();
             HashMap story_hm = Lesson.story_hm;

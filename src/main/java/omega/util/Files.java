@@ -62,6 +62,27 @@ public class Files {
 	return null;
     }
 
+    static public String mkRelFname1(String url_s) {
+	File fi = new File(Context.omegaAssets("."));// ".");
+	String cdu = null;
+	try {
+	    cdu = fi.toURI().toURL().toString();
+	} catch (MalformedURLException ex) {
+	    return null;
+	}
+	//cdu = cdu.substring(0, cdu.length() - 1);
+//log	omega.Context.sout_log.getLogger().info("ERR: " + "rmHead\n" + url_s + '\n' + cdu);
+	int len_cd = cdu.length();
+
+	String[] sa = new String[2];
+	String name = url_s.substring(len_cd);
+	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "+++ " + name);
+	sa[0] = cdu;
+	sa[1] = name;
+	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "" + S.arrToString(sa));
+	return sa[1];
+    }
+
     static public String mkRelFname(String url_s) {
 	File fi = new File(Context.omegaAssets("."));// ".");
 	String cdu = null;

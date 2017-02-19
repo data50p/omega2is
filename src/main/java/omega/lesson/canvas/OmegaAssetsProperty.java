@@ -2,13 +2,16 @@ package omega.lesson.canvas;
 
 
 import fpdo.sundry.S;
+import fpdo.xml.Element;
 import omega.Config;
 import omega.Context;
 import omega.Version;
 import omega.adm.assets.TargetCombinations;
 import omega.i18n.T;
 import omega.lesson.LessonContext;
+import omega.lesson.canvas.result.ChooseDir;
 import omega.lesson.canvas.result.ChooseOmegaBundleFile;
+import omega.lesson.repository.Restore;
 import omega.swing.TableSorter;
 import omega.value.Value;
 import omega.value.Values;
@@ -58,6 +61,8 @@ public class OmegaAssetsProperty extends Property_B {
     TargetCombinations latestTargetCombinations;
     static TargetCombinations.Builder targetCombinationsBuilder = new TargetCombinations.Builder();
     private JButton oaBundleJB;
+    private JButton imBundle;
+    private JButton scanBundle;
     private JTextField infoTF;
 
     OmegaAssetsProperty(JFrame owner, LessonContext l_ctxt) {
@@ -195,9 +200,63 @@ public class OmegaAssetsProperty extends Property_B {
                 oaBundleJB.setText(T.t("Import Omega Bundle") + " " + targetCombinationsBuilder.srcSize());
             }
 
+            if (s.equals("scan add bundle")) {
+                scanAddOmegaAssetsBundle();
+                tmod.update(latestTargetCombinations);
+                oaBundleJB.setText(T.t("Import Omega Bundle") + " " + targetCombinationsBuilder.srcSize());
+            }
+
             if (s.equals("close")) {
                 setVisible(false);
             }
+        }
+    }
+
+    private void scanAddOmegaAssetsBundle() {
+        ChooseDir choose_f = new ChooseDir();
+
+        int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Scan"));
+        omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
+        if (rv == JFileChooser.APPROVE_OPTION) {
+            File dir = choose_f.getSelectedFile();
+
+            java.util.List<File> list = new ArrayList<>();
+            scanOmegaLessons(dir, list);
+
+            Thread th = new Thread(() -> {
+                try {
+                    imBundle.setEnabled(false);
+                    scanBundle.setEnabled(false);
+                    for (File file : list) {
+                        String url_s = omega.util.Files.toURL(file);
+                        String fn = omega.util.Files.mkRelFname1(url_s);
+                        System.err.println("scanned: " + fn);
+                        l_ctxt.getLesson().sendMsgWait("load", (String) fn);
+                        S.m_sleep(200);
+                        latestTargetCombinations = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
+                        latestTargetCombinations.src_set.add(l_ctxt.getLesson().getLoadedFName());
+
+                        targetCombinationsBuilder.add(latestTargetCombinations);
+                        latestTargetCombinations = targetCombinationsBuilder.asOne();
+                        tmod.update(latestTargetCombinations);
+                        oaBundleJB.setText(T.t("Add Omega Assets to Bundle") + " " + targetCombinationsBuilder.srcSize());
+                    }
+                } finally {
+                    imBundle.setEnabled(true);
+                    scanBundle.setEnabled(true);
+                }
+            });
+            th.start();
+        }
+    }
+
+    private void scanOmegaLessons(File file, java.util.List list) {
+        File[] files = file.listFiles();
+        for(File f : files) {
+            if ( f.isDirectory() )
+                scanOmegaLessons(f, list);
+            if ( f.getName().endsWith(".omega_lesson") )
+                list.add(f);
         }
     }
 
@@ -421,13 +480,17 @@ public class OmegaAssetsProperty extends Property_B {
         jb.addActionListener(myactl);
         oaBundleJB = jb;
 
+        fpan.add(new JLabel(""), jb = new JButton(T.t("Scan and Add to Bundle")), Y, ++X);
+        jb.setActionCommand("scan add bundle");
+        jb.addActionListener(myactl);
+        scanBundle = jb;
+
+        Y++;
+        X = 0;
         fpan.add(new JLabel(""), jb = new JButton(T.t("Save Omega Bundle")), Y, ++X);
         jb.setActionCommand("save bundle");
         jb.addActionListener(myactl);
 
-
-        Y++;
-        X = 0;
         fpan.add(new JLabel(""), jb = new JButton(T.t("Save Omega Bundle list")), Y, ++X);
         jb.setActionCommand("dump assets");
         jb.addActionListener(myactl);
@@ -435,6 +498,7 @@ public class OmegaAssetsProperty extends Property_B {
         fpan.add(new JLabel(""), jb = new JButton(T.t("Import Omega Assets Bundle")), Y, ++X);
         jb.setActionCommand("import bundle");
         jb.addActionListener(myactl);
+        imBundle = jb;
 
 
         Y++;

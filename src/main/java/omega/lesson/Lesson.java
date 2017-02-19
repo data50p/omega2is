@@ -1739,6 +1739,18 @@ public class Lesson implements LessonCanvasListener {
         sendMsg(msg, o, "");
     }
 
+    public void sendMsgWait(String msg, Object o) {
+        wait_id[0] = "" + System.nanoTime();
+        sendMsg(msg, o, wait_id[0]);
+        synchronized (wait_id) {
+            try {
+                wait_id.wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     private void sendMsg(String msg, Object o, String id) {
         omega.Context.sout_log.getLogger().info("ERR: " + "!!!!!!!! sendMsg " + msg + ' ' + S.ct() + ' ' + o + ' ' + id);
         synchronized (msg_list) {
@@ -2008,6 +2020,8 @@ public class Lesson implements LessonCanvasListener {
         return false;
     }
 
+    String wait_id[] = new String[] {""};
+
     private long last_msg_time = S.ct();
 
     void execLesson(String fn) {
@@ -2032,8 +2046,15 @@ public class Lesson implements LessonCanvasListener {
 
         int[][] test_index = null;
 
+        String last_id = "!";
+
         for (; ; ) {
-            // 	    omega.Context.sout_log.getLogger().info("ERR: " + "%%%%%%%%%%%%%%%%%%%wait");
+            synchronized (wait_id) {
+                if (last_id.equals(wait_id[0]))
+                    wait_id.notify();
+            }
+
+            System.err.println(" -----------> done " + last_id);
             Object o[] = getMsg();
             String msg = (String) o[0];
             Object obj = o[1];
@@ -2312,6 +2333,8 @@ public class Lesson implements LessonCanvasListener {
             } else if ("exitLesson".equals(msg)) {
                 return;
             }
+
+            last_id = id;
         }
     }
 
