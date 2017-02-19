@@ -2,6 +2,8 @@ package omega;
 
 // DO NO CHANGE HERE
 
+import java.io.*;
+
 public class Version {
     static public String getOmegaVersion() {
 	return getOmegaVersion(null);
@@ -15,13 +17,32 @@ public class Version {
     }
 
     static public String getDetailedVersion() {
-	String ver = getVersion() + " 2017-02-18 00:03:42";
+	String ver = getVersion() + " " + getBuildDate();
 	return ver;
     }
 
     static public String getVersion() {
-	String ver = "2.0.0";
-	return ver;
+        return get("Version");
+    }
+
+    static public String getBuildDate() {
+        return get("Date");
+    }
+
+    static public String get(String item) {
+        try {
+            InputStream ins = Version.class.getClassLoader().getResourceAsStream("version");
+            Reader r = new InputStreamReader(ins);
+            BufferedReader br = new BufferedReader(r);
+            for(;;) {
+                String s = br.readLine();
+                if ( s.startsWith(item + ":") )
+                    return s.substring((item + ":").length()).trim();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return item + ": ?";
     }
 
     public static String getCWD() {
