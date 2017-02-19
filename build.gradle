@@ -25,7 +25,7 @@ def getDate() {
 }
 
 task generateVersionFile << {
-    if (!outputFile.isFile()) {
+    if (true || !outputFile.isFile()) {
         outputFile.parentFile.mkdirs()
         outputFile.createNewFile()
     }
@@ -34,6 +34,7 @@ task generateVersionFile << {
  
 generateVersionFile.inputs.property "version", version
 generateVersionFile.outputs.files outputFile
+generateVersionFile.outputs.upToDateWhen { false }
  
 task showContents << {
     println outputFile.text
