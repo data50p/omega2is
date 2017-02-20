@@ -1,6 +1,7 @@
 package omega.anim.tool.timeline;
 
 import fpdo.sundry.S;
+import omega.util.Log;
 
 import javax.swing.event.EventListenerList;
 import java.awt.event.ActionEvent;
@@ -56,7 +57,15 @@ public class TimeLinePlayer implements ActionListener {
 	}
     }
 
+    int cnt = 0;
+    long last = 0;
     private boolean callPlay_playAt(int t) {
+        long ct0 = System.currentTimeMillis();
+        long a = ct0-last;
+	Log.getLogger().info("P " + a + ' ' + t);
+	if ( last > 0 && a > 300 )
+	    System.err.println("z");
+	last=ct0;
 	boolean b = false;
 	Object[] lia = playctrl_listeners.getListenerList();
 	for (int i = 0; i < lia.length; i += 2) {

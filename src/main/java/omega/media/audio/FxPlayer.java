@@ -81,9 +81,12 @@ public class FxPlayer {
     private static boolean once = false;
 
     private void doOnce() {
+        if ( once )
+            return;
 	initFxFramework();
+	once = true;
 	try {
-	    Thread.sleep(500);
+	    Thread.sleep(5);
 	} catch (InterruptedException e) {
 	}
     }

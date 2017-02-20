@@ -19,7 +19,7 @@ public class Config {
     static public boolean LIU_Mode = true;
 
     public static boolean fullScreen = false;
-    public static boolean smaller = true;
+    public static boolean smaller = Context.isDeveloper();
 
     static public boolean isKeyNext(int kc) {
 	return kc == key_next_1 ||
