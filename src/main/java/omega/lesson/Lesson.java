@@ -164,8 +164,9 @@ public class Lesson implements LessonCanvasListener {
                 }
             } else {
                 String smFname = Context.omegaAssets("media/sign-" + omega.Context.getLessonLang() + "/" + all_text + ".mp4");
-                File smFile = new File(VideoUtil.findSupportedFname(smFname));
-                if (smFile.exists() && smFile.canRead()) {
+                String smFileName = VideoUtil.findSupportedFname(smFname);
+                File smFile = smFileName == null ? null : new File(smFileName);
+                if (smFile != null && smFile.exists() && smFile.canRead()) {
                     try {
                         le_canvas.setMarkTargetAll();
                         if (lmm.prepare("", smFname, true)) {
