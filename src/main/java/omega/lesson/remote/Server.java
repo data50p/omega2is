@@ -1,5 +1,7 @@
 package omega.lesson.remote;
 
+import fpdo.sundry.S;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -15,7 +17,7 @@ public class Server implements Runnable {
 
     public void run() {
 //log	omega.Context.sout_log.getLogger().info("ERR: " + "Server started");
-	for (; ; ) {
+	for (;;) {
 	    try {
 		ServerSocket sso = new ServerSocket(port);
 		for (; ; ) {
@@ -26,6 +28,7 @@ public class Server implements Runnable {
 		}
 	    } catch (IOException ex) {
 		omega.Context.sout_log.getLogger().info("ERR: " + "lessond: Exception: " + ex);
+		S.m_sleep(3000);
 	    }
 	}
     }
