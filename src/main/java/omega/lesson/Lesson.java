@@ -1279,7 +1279,7 @@ public class Lesson implements LessonCanvasListener {
         lemain_canvas.addLessonCanvasListener(this);
         pupil_canvas.addLessonCanvasListener(this);
 
-        omega.lesson.remote.Server lessond = new omega.lesson.remote.Server();
+        // omega.lesson.remote.Server lessond = new omega.lesson.remote.Server();
 
         sentence_canvas.om_msg_mgr.addListener(om_msg_li);
         le_canvas.om_msg_mgr.addListener(om_msg_li);

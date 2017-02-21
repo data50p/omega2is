@@ -103,7 +103,7 @@ public class HtmlPanel extends JPanel implements HyperlinkListener {
 		    + "with a bad URL: " + url);
 	    url = null;
 	}
-	if (url != null) {
+	if (html != null && url != null) {
 	    Cursor c = html.getCursor();
 	    Cursor waitCursor = Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR);
 	    html.setCursor(waitCursor);

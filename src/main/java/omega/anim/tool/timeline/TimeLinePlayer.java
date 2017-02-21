@@ -62,9 +62,9 @@ public class TimeLinePlayer implements ActionListener {
     private boolean callPlay_playAt(int t) {
         long ct0 = System.currentTimeMillis();
         long a = ct0-last;
-	Log.getLogger().info("P " + a + ' ' + t);
+//	Log.getLogger().info("P " + a + ' ' + t);
 	if ( last > 0 && a > 300 )
-	    System.err.println("z");
+	    System.err.println("playAt: long time " + a + ' ' + t);
 	last=ct0;
 	boolean b = false;
 	Object[] lia = playctrl_listeners.getListenerList();

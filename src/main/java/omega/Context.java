@@ -22,7 +22,7 @@ public class Context {
     static Object lock = new Object();
     static HashMap subsystems = new HashMap();
     public static String URL_BASE = "http://localhost:8089/";
-    public static String URL_BASE_AS_FILE = omegaAssets + "/" + "media/";
+    public static String URL_BASE_AS_FILE = "";
     public static String FILE_BASE = omegaAssets + "/" + "media/";  // null
 
     public static boolean logon = !false;
