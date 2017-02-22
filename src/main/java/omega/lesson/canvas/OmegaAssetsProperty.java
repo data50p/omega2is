@@ -116,27 +116,8 @@ public class OmegaAssetsProperty extends Property_B {
         public void actionPerformed(ActionEvent ev) {
             String s = ev.getActionCommand();
 
-            if (s.equals("dump assets")) {
-                ChooseGenericFile choose_f = new ChooseGenericFile(true);
-
-                String url_s = null;
-                int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Save"));
-                omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
-                if (rv == JFileChooser.APPROVE_OPTION) {
-                    File file = choose_f.getSelectedFile();
-                    PrintWriter pw = S.createPrintWriter(file.getPath());
-                    for (String s2 : targetCombinationsBuilder.asOne().src_set) {
-                        print(pw, "src", s2);
-                    }
-                    for (String s2 : targetCombinationsBuilder.asOne().dep_set) {
-                        print(pw, "dep", s2);
-                    }
-                    pw.close();
-                }
-            }
-
             if (s.equals("save bundle")) {
-                ChooseOmegaBundleFile choose_f = new ChooseOmegaBundleFile(true);
+                ChooseOmegaBundleFile choose_f = new ChooseOmegaBundleFile();
 
                 String url_s = null;
                 int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Save"));
@@ -195,9 +176,14 @@ public class OmegaAssetsProperty extends Property_B {
             }
 
             if (s.equals("import bundle")) {
-                importOmegaAssetsBundle();
+                importOmegaAssetsBundle(true);
                 tmod.update(latestTargetCombinations);
                 oaBundleJB.setText(T.t("Import Omega Bundle") + " " + targetCombinationsBuilder.srcSize());
+            }
+
+            if (s.equals("view bundle")) {
+                importOmegaAssetsBundle(false);
+                tmod.update(latestTargetCombinations);
             }
 
             if (s.equals("scan add bundle")) {
@@ -268,11 +254,13 @@ public class OmegaAssetsProperty extends Property_B {
             return "entry: -1, " + fName;
     }
 
-    private void importOmegaAssetsBundle() {
-        ChooseOmegaBundleFile choose_f = new ChooseOmegaBundleFile(true);
+    private void importOmegaAssetsBundle(boolean unpack) {
+        latestTargetCombinations = new TargetCombinations();
+
+        ChooseOmegaBundleFile choose_f = new ChooseOmegaBundleFile();
 
         String url_s = null;
-        int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Import"));
+        int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t(unpack ? "Import" : "List"));
         omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
         if (rv == JFileChooser.APPROVE_OPTION) {
             File file = choose_f.getSelectedFile();
@@ -291,10 +279,12 @@ public class OmegaAssetsProperty extends Property_B {
                     String name = zent.getName();
                     if (zent.isDirectory()) {
                         File dir = new File(Context.omegaAssets(name));
-                        if (dir.mkdirs()) {
-                            System.err.println("Created dir: T " + dir);
-                        } else {
-                            System.err.println("Created dir: f " + dir);
+                        if ( unpack ) {
+                            if (dir.mkdirs()) {
+                                System.err.println("Created dir: T " + dir);
+                            } else {
+                                System.err.println("Created dir: f " + dir);
+                            }
                         }
                     } else {
                         try {
@@ -306,17 +296,20 @@ public class OmegaAssetsProperty extends Property_B {
                             File entFile = new File(Context.omegaAssets(name));
                             long time = zent.getTime();
                             try {
-                                if (!entFile.getParentFile().exists())
-                                    entFile.getParentFile().mkdirs();
-                                if (entFile.exists()) {
-                                    System.err.println("Overwrite: exist " + entFile);
+                                if ( unpack ) {
+                                    if (!entFile.getParentFile().exists())
+                                        entFile.getParentFile().mkdirs();
+                                    if (entFile.exists()) {
+                                        System.err.println("Overwrite: exist " + entFile);
 //                                    continue;
+                                    }
                                 }
-                                output = new FileOutputStream(entFile);
+                                output = unpack ? new FileOutputStream(entFile) : null;
                                 int len = 0;
                                 byte[] buffer = new byte[4096];
                                 while ((len = in.read(buffer)) > 0) {
-                                    output.write(buffer, 0, len);
+                                    if ( unpack )
+                                        output.write(buffer, 0, len);
                                     // hack
                                     if (omega_bundle) {
                                         String infoText = new String(buffer, 0, len);
@@ -327,13 +320,18 @@ public class OmegaAssetsProperty extends Property_B {
                                         }
                                     }
                                 }
+                                if ( name.endsWith(".omega_lesson"))
+                                    latestTargetCombinations.src_set.add(name);
+                                else
+                                    latestTargetCombinations.dep_set.add(name);
                             } catch (IOException e) {
                                 e.printStackTrace();
                             } finally {
                                 if (output != null)
                                     output.close();
                             }
-                            entFile.setLastModified(time);
+                            if ( unpack )
+                                entFile.setLastModified(time);
                         } catch (Exception ex) {
                             ex.printStackTrace();
                         }
@@ -487,12 +485,12 @@ public class OmegaAssetsProperty extends Property_B {
 
         Y++;
         X = 0;
-        fpan.add(new JLabel(""), jb = new JButton(T.t("Save Omega Bundle")), Y, ++X);
+        fpan.add(new JLabel(""), jb = new JButton(T.t("Save Omega Assets Bundle")), Y, ++X);
         jb.setActionCommand("save bundle");
         jb.addActionListener(myactl);
 
-        fpan.add(new JLabel(""), jb = new JButton(T.t("Save Omega Bundle list")), Y, ++X);
-        jb.setActionCommand("dump assets");
+        fpan.add(new JLabel(""), jb = new JButton(T.t("View Omega Bundle")), Y, ++X);
+        jb.setActionCommand("view bundle");
         jb.addActionListener(myactl);
 
         fpan.add(new JLabel(""), jb = new JButton(T.t("Import Omega Assets Bundle")), Y, ++X);

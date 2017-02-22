@@ -66,6 +66,10 @@
    <string>Save Omega Assets</string>
   </void>
   <void method="put">
+   <string>List</string>
+   <string>List</string>
+  </void>
+  <void method="put">
    <string>Error while loading lesson: &quot;</string>
    <string>Error while loading lesson: &quot;</string>
   </void>
@@ -222,8 +226,16 @@
    <string>&lt;Ny Elev&gt;</string>
   </void>
   <void method="put">
+   <string>View Omega Bundle</string>
+   <string>View Omega Bundle</string>
+  </void>
+  <void method="put">
    <string>Import Omega Assets to Bundle</string>
    <string>Import Omega Assets to Bundle</string>
+  </void>
+  <void method="put">
+   <string>Save Omega Assets Bundle</string>
+   <string>Save Omega Assets Bundle</string>
   </void>
   <void method="put">
    <string>Play Sign Moview</string>
@@ -284,6 +296,10 @@
   <void method="put">
    <string>Info</string>
    <string>Info</string>
+  </void>
+  <void method="put">
+   <string>View</string>
+   <string>View</string>
   </void>
   <void method="put">
    <string>Item: Sign Movies, positive </string>
