@@ -10,7 +10,7 @@ import java.io.File;
 
 public class ChooseSpecificActionFile extends JFileChooser {
     ChooseSpecificActionFile() {
-	super(new File(Context.omegaAssets("media")));
+	super(new File(Context.omegaAssets("anim")));
 	ExtensionFileFilter fi = new ExtensionFileFilter();
 	fi.addExtension("mpg");
 	fi.addExtension("mpeg");

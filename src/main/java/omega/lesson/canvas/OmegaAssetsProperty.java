@@ -535,39 +535,11 @@ public class OmegaAssetsProperty extends Property_B {
         } catch (Exception ex) {
         }
 
-        //	fpan.add(new JLabel(""), jscr, Y, ++X);
-
-// 	JPanel c_pan = new JPanel();
-// 	pan1.add(c_pan,  gbcf.createL(X++, Y, 5));
-
         con.add(fpan, BorderLayout.NORTH);
         con.add(jscr, BorderLayout.CENTER);
         JPanel jpa = new JPanel();
         jpa.add(jb = new JButton(new OmegaAssetsProperty.CloseAction()));
         con.add(jpa, BorderLayout.SOUTH);
-    }
-
-    String setActionField(String current) {
-        ChooseSpecificActionFile choose_f = new ChooseSpecificActionFile();
-
-        String url_s = null;
-        int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Select"));
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
-        if (rv == JFileChooser.APPROVE_OPTION) {
-            File file = choose_f.getSelectedFile();
-            url_s = omega.util.Files.toURL(file);
-
-            String tfn = omega.util.Files.rmHead(url_s);
-            return tfn;
-        }
-        return null;
-    }
-
-    public void updValues(Values vs) {
-        Iterator it = vs.iterator();
-        while (it.hasNext()) {
-            Value v = (Value) it.next();
-        }
     }
 
     void updTrigger(Document doc) {

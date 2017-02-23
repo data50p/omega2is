@@ -5,6 +5,7 @@ import fpdo.sundry.S;
 import omega.Context;
 import omega.i18n.T;
 import omega.lesson.LessonContext;
+import omega.lesson.canvas.result.ChooseSignFileAlt;
 import omega.swing.TableSorter;
 import omega.value.Value;
 import omega.value.Values;
@@ -137,7 +138,7 @@ public class SentenceProperty extends Property_B {
 		TableModel tmod = (TableModel) table.getModel();
 		int row = table.getSelectedRow();
 		String ss = (String) tmod.getValueAt(row, COL_SIGN);
-		String fn = setActionField(ss);
+		String fn = setSignField(ss);
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
 		if (fn != null) {
 		    tmod.setValueAt(fn, row, COL_SIGN);
@@ -385,6 +386,23 @@ public class SentenceProperty extends Property_B {
 
     String setActionField(String current) {
 	ChooseSpecificActionFile choose_f = new ChooseSpecificActionFile();
+
+	String url_s = null;
+	int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Select"));
+//log	omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
+	if (rv == JFileChooser.APPROVE_OPTION) {
+	    File file = choose_f.getSelectedFile();
+	    url_s = omega.util.Files.toURL(file);
+
+	    String tfn = omega.util.Files.rmHead(url_s);
+	    tfn = Context.antiOmegaAssets(tfn);
+	    return tfn;
+	}
+	return null;
+    }
+
+    String setSignField(String current) {
+	ChooseSignFileAlt choose_f = new ChooseSignFileAlt();
 
 	String url_s = null;
 	int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Select"));
