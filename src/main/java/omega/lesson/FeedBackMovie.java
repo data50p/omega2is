@@ -1,5 +1,6 @@
 package omega.lesson;
 
+import omega.Context;
 import omega.media.video.MpgPlayer;
 
 import javax.swing.*;
@@ -73,7 +74,7 @@ public class FeedBackMovie extends FeedBack {
     static int fix = 0;
 
     String random(String rsrs) {
-	File f = new File(rsrs);
+	File f = new File(Context.omegaAssets(rsrs));
 	omega.Context.lesson_log.getLogger().info(": " + "+++++++ random  " + f + ' ' + f.exists() + ' ' + f.isDirectory());
 	if (f.exists() && f.isDirectory()) {
 	    return randomDir(rsrs);
@@ -100,7 +101,7 @@ public class FeedBackMovie extends FeedBack {
     }
 
     String randomDir(String rsrs) {
-	File mpg_dir = new File(rsrs);
+	File mpg_dir = new File(Context.omegaAssets(rsrs));
 	File[] other = mpg_dir.listFiles(new FileFilter() {
 	    public boolean accept(File f) {
 		String name = f.getName();

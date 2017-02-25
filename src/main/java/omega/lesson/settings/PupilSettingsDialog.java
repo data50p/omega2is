@@ -56,7 +56,7 @@ public class PupilSettingsDialog extends SettingsDialog {
     boolean active = false;
 
     void updColors(String fname) {
-	File file = new File(fname);
+	File file = new File(Context.omegaAssets(fname));
 	if (file.canWrite()) {
 	    col_lesson.setEnabled(true);
 	    col_login.setEnabled(true);
@@ -824,7 +824,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	}
 
 	Locale inlocale = new Locale(T.lang);
-	File dot = new File(".");
+	File dot = new File(Context.omegaAssets("."));
 	String[] scanned_lang = dot.list(new java.io.FilenameFilter() {
 
 	    public boolean accept(File dir, String name) {
@@ -871,7 +871,7 @@ public class PupilSettingsDialog extends SettingsDialog {
     }
 
     Vector getThemes() {
-	File dot = new File(".");
+	File dot = new File(Context.omegaAssets("."));
 	String[] scanned_themes = dot.list(new java.io.FilenameFilter() {
 
 	    public boolean accept(File dir, String name) {
@@ -899,9 +899,9 @@ public class PupilSettingsDialog extends SettingsDialog {
 
     String getPupilDir(Pupil pup) {
 	if (pupil == null) {
-	    return Context.omegaAssets("register/Guest.p");
+	    return "register/Guest.p";
 	}
-	return Context.omegaAssets("register/" + pup.getName() + ".p");
+	return "register/" + pup.getName() + ".p";
     }
 
     void loadDefault() {
@@ -1009,10 +1009,10 @@ public class PupilSettingsDialog extends SettingsDialog {
     }
 
     private void deletePupil() {
-	File file = new File(Context.omegaAssets("register/" + pupil.getName() + ".p"));
-	File file2 = new File(Context.omegaAssets("register/" + pupil.getName() + ".deleted"));
+	File file = new File("register/" + pupil.getName() + ".p");
+	File file2 = new File("register/" + pupil.getName() + ".deleted");
 	if (file2.exists()) {
-	    File file3 = new File(Context.omegaAssets("register/" + pupil.getName() + ".deleted_" + S.ct()));
+	    File file3 = new File("register/" + pupil.getName() + ".deleted_" + S.ct());
 	    file2.renameTo(file3);
 	}
 	file.renameTo(file2);

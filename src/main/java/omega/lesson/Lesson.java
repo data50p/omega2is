@@ -97,11 +97,6 @@ public class Lesson implements LessonCanvasListener {
     private Pupil current_pupil;
     long session_length_start = S.ct();
 
-    private boolean mediaFileExist(String sfn) {
-        File f = new File("media/" + sfn);
-        return f.exists() && f.canRead();
-    }
-
     private LiuMovieManager signMoviePrepare(Target tg, int tg_ix) {
         Rectangle tgr = le_canvas.getTargetRectangle(tg_ix);
         LiuMovieManager lmm = new LiuMovieManager(window, le_canvas);
@@ -4121,7 +4116,7 @@ public class Lesson implements LessonCanvasListener {
     static int CnT = 200;
 
     String tryLessonLanguages(String s) {
-        File dot = new File(".");
+        File dot = new File(Context.omegaAssets("."));
         String[] scanned_lang = dot.list(new java.io.FilenameFilter() {
             public boolean accept(File dir, String name) {
 
