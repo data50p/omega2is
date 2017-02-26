@@ -62,7 +62,7 @@ public class Context {
             return null;
         }
 
-        boolean noAssets = path.contains("toolbarButtonGraphics");
+        boolean noAssets = path != null && path.contains("toolbarButtonGraphics") || path.startsWith("register/");
 
         if (path != null && path.startsWith(omegaAssets)) {
             sout_log.getLogger().warning("omegaAssets(): Already omega_assets: " + path);

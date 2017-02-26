@@ -1002,7 +1002,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 //	secure_jb.cb.setEnabled(! "Guest".equals(pupil.getName()));
 	load();
 	pupil_name.setText(pnameL);
-	String val = Context.omegaAssets("register/" + pname + ".p/id.png");
+	String val = "register/" + pname + ".p/id.png";
 	ImageIcon imc2 = createImageIcon(val, 80, 60);
 	pupim_jl.setIcon(imc2);
 	pack();
