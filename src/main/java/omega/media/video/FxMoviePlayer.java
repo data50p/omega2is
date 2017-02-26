@@ -147,7 +147,8 @@ public class FxMoviePlayer {
 	fxPanel.setScene(scene);
     }
 
-    private void initFX2(JFXPanel fxPanel, String fn) throws URISyntaxException {
+    private void initFX2(JFXPanel fxPanel, String fn_) throws URISyntaxException {
+        String fn = Context.omegaAssets(fn_);
 	File file = new File(fn);
 	String uu = file.toURI().toString();
 	Log.getLogger().info("UU is " + uu);

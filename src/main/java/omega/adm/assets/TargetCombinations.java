@@ -17,6 +17,8 @@ public class TargetCombinations {
         public TCItem(String fn, boolean exist) {
             this.fn = fn;
             this.exist = exist;
+            if ( fn.contains("{") )
+                System.err.println("MORE using var");
             if ( fn.contains(",") )
                 System.err.println("MORE using ,");
             if ( ! fn.contains("/") )
