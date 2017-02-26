@@ -90,6 +90,10 @@
    <string>Path for timeline</string>
   </void>
   <void method="put">
+   <string>_?_</string>
+   <string>_?_</string>
+  </void>
+  <void method="put">
    <string>Scan and Add to Bundle</string>
    <string>Scan and Add to Bundle</string>
   </void>
@@ -154,6 +158,10 @@
    <string>Nynorsk</string>
   </void>
   <void method="put">
+   <string>not found</string>
+   <string>not found</string>
+  </void>
+  <void method="put">
    <string>Tomas Croatia</string>
    <string>Tomas Croatia</string>
   </void>
@@ -200,6 +208,10 @@
   <void method="put">
    <string>Omega - Assets Dialog</string>
    <string>Omega - Assets Dialog</string>
+  </void>
+  <void method="put">
+   <string>Exist</string>
+   <string>Exist</string>
   </void>
   <void method="put">
    <string>Sign Sentence Background</string>

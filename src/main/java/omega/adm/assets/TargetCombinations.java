@@ -14,15 +14,13 @@ public class TargetCombinations {
         public Boolean exist;
         public String originalExtention;
 
-        public TCItem(String fn) {
-            if ( fn == null )
-                fn = "";
-            this.fn = fn;
-        }
-
         public TCItem(String fn, boolean exist) {
             this.fn = fn;
             this.exist = exist;
+            if ( fn.contains(",") )
+                System.err.println("MORE using ,");
+            if ( ! fn.contains("/") )
+                System.err.println("LESS using /");
         }
 
         public boolean equals(Object o) {

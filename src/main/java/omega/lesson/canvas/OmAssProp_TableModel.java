@@ -22,9 +22,9 @@ public class OmAssProp_TableModel extends AbstractTableModel {
 
     String[] hdn = new String[]{
             T.t("Source Files"),
-            T.t("Depending Files"),
-            T.t("Alt 1"),
-            T.t("Alt 2")
+            T.t("Dependent Files"),
+            T.t("Exist"),
+            T.t("_?_")
     };
 
     OmAssProp_TableModel(OmegaAssetsProperty sprop, TargetCombinations tc, int[][] tmm) {
@@ -74,11 +74,22 @@ public class OmAssProp_TableModel extends AbstractTableModel {
             return se;
         }
 
+        if (col == 2) {
+            String se = row < li_set.size() ? encode2Text(li_set.get(row).exist) : "";
+            if (se == null)
+                se = "";
+            return se;
+        }
+
         if (col >= TEST_MEM_OFFS) {
             return col;//new Integer(test_member_map[row][col - TEST_MEM_OFFS]);
         }
 
         return "";
+    }
+
+    private String encode2Text(Boolean exist) {
+        return exist == null ? "·" : exist ? T.t("OK") : T.t("not found");
     }
 
     public void setValueAt(Object val, int row, int col) {

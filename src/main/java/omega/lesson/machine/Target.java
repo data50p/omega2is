@@ -1393,7 +1393,7 @@ public class Target {
 
         List<String> media = lesson.action_specific.getMedia();
         for (String s : media)
-            tc.dep_set.add(new TargetCombinations.TCItem(s));
+            tc.dep_set.add(new TargetCombinations.TCItem(s, Context.omegaAssetsExist(s)));
 
         Target tg2 = this;
 
@@ -1473,16 +1473,22 @@ public class Target {
     }
 
     private void update(TargetCombinations tc) {
-        String s2 = ":";
         List<String> sound_list = getAll_Sound_Items();
         for (String s : sound_list) {
             String fn = "media" + File.separator + s;
             List<String> l = expandVariants(fn);
-            for (String f : l)
-                if (Context.omegaAssetsExist(f))
+            boolean oneExist = false;
+            for (String f : l) {
+                if (Context.omegaAssetsExist(f)) {
                     tc.dep_set.add(new TargetCombinations.TCItem(f, true));
-                else
+                    oneExist = true;
+                } else {
                     ;//tc.dep_set.add(new TargetCombinations.TCItem(f, false));
+                }
+            }
+            if ( ! oneExist ) {
+                tc.dep_set.add(new TargetCombinations.TCItem(fn, false));
+            }
         }
 /*
         Element asel = .findElement("action_specific", 0);
@@ -1520,7 +1526,8 @@ public class Target {
                     if (eb != null) {
                         String s = eb.findAttr("name");
                         if (s != null) {
-                            tc.dep_set.add(new TargetCombinations.TCItem("media" + File.separator + s));
+                            String fn = "media" + File.separator + s;
+                            tc.dep_set.add(new TargetCombinations.TCItem(fn, Context.omegaAssetsExist(fn)));
                         }
                     }
                 }
@@ -1533,10 +1540,10 @@ public class Target {
                             String s = eb.findAttr("name");
                             if (s != null) {
                                 String ms = "media" + File.separator + s;
-                                tc.dep_set.add(new TargetCombinations.TCItem(ms));
-                                List<String> aiL = attributedImages(ms);
-                                for (String ai : aiL)
-                                    tc.dep_set.add(new TargetCombinations.TCItem(ai));
+                                tc.dep_set.add(new TargetCombinations.TCItem(ms, Context.omegaAssetsExist(ms)));
+                                List<TargetCombinations.TCItem> aiL = attributedImages(ms);
+                                for (TargetCombinations.TCItem ai : aiL)
+                                    tc.dep_set.add(ai);
                             }
                         }
                     }
@@ -1557,11 +1564,18 @@ public class Target {
                                             if (!SundryUtils.empty(sf)) {
                                                 String fn = "media" + File.separator + sf;
                                                 List<String> l = expandVariants(fn);
-                                                for (String f : l)
-                                                    if (Context.omegaAssetsExist(f))
+                                                boolean oneExist = false;
+                                                for (String f : l) {
+                                                    if (Context.omegaAssetsExist(f)) {
                                                         tc.dep_set.add(new TargetCombinations.TCItem(f, true));
-                                                    else
+                                                        oneExist = true;
+                                                    } else {
                                                         ;//tc.dep_set.add(new TargetCombinations.TCItem(f, false));
+                                                    }
+                                                }
+                                                if ( ! oneExist ) {
+                                                    tc.dep_set.add(new TargetCombinations.TCItem(fn, false));
+                                                }
                                             }
                                         }
                                     }
@@ -1570,8 +1584,7 @@ public class Target {
                         }
                     }
                 }
-                s2 += "(" + af + ")";
-                tc.dep_set.add(new TargetCombinations.TCItem(af));
+                tc.dep_set.add(new TargetCombinations.TCItem(af, Context.omegaAssetsExist(af)));
             }
         }
     }
@@ -1579,13 +1592,19 @@ public class Target {
     private List<String> expandVariants(String fn) {
         List<String> l = new ArrayList<>();
         l.add(fn);
-        String fnMp3 = fn.replaceAll("\\.wav$", ".mp3");
-        l.add(fnMp3);
+        String alt = fn.replaceAll("\\.wav$", ".mp3");
+        l.add(alt);
+        alt = fn.replaceAll("\\.mpg$", ".mp4");
+        l.add(alt);
+        alt = fn.replaceAll("\\.avi$", ".mp4");
+        l.add(alt);
+        alt = fn.replaceAll("\\.mov$", ".mp4");
+        l.add(alt);
         return l;
     }
 
-    private List<String> attributedImages(String ms) {
-        List<String> li = new ArrayList<String>();
+    private List<TargetCombinations.TCItem> attributedImages(String ms) {
+        List<TargetCombinations.TCItem> li = new ArrayList<>();
         String fName = Context.omegaAssets(ms);
         File fBase = new File(fName);
         String fn = fBase.getName();
@@ -1596,8 +1615,10 @@ public class Target {
         File dir = fBase.getParentFile();
         File[] files = dir.listFiles();
         for (File f : files) {
-            if (f.getName().startsWith(fnNEx))
-                li.add(Context.antiOmegaAssets(f.getPath()));
+            if (f.getName().startsWith(fnNEx)) {
+                String fn2 = f.getPath();
+                li.add(new TargetCombinations.TCItem(Context.antiOmegaAssets(fn2), Context.omegaAssetsExist(fn2)));
+            }
         }
         return li;
     }
