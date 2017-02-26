@@ -1071,11 +1071,11 @@ public class Target {
             T_Item titm = (T_Item) it.next();
             String snd = titm.item.getSound();
             snd = fillVarHere(ix, snd);          // WHY-S
-            if ( !SundryUtils.empty(snd) )
+            if (!SundryUtils.empty(snd))
                 li.add(snd);
             String sndD = titm.item.getDummySound();
             sndD = fillVarHere(ix, sndD);          // WHY-S
-            if ( !SundryUtils.empty(sndD) )
+            if (!SundryUtils.empty(sndD))
                 li.add(sndD);
             ix++;
         }
@@ -1392,7 +1392,8 @@ public class Target {
         TargetCombinations tc = new TargetCombinations();
 
         List<String> media = lesson.action_specific.getMedia();
-        tc.dep_set.addAll(media);
+        for (String s : media)
+            tc.dep_set.add(new TargetCombinations.TCItem(s));
 
         Target tg2 = this;
 
@@ -1474,9 +1475,15 @@ public class Target {
     private void update(TargetCombinations tc) {
         String s2 = ":";
         List<String> sound_list = getAll_Sound_Items();
-        for(String s : sound_list)
-            tc.dep_set.add("media" + File.separator + s);
-
+        for (String s : sound_list) {
+            String fn = "media" + File.separator + s;
+            List<String> l = expandVariants(fn);
+            for (String f : l)
+                if (Context.omegaAssetsExist(f))
+                    tc.dep_set.add(new TargetCombinations.TCItem(f, true));
+                else
+                    ;//tc.dep_set.add(new TargetCombinations.TCItem(f, false));
+        }
 /*
         Element asel = .findElement("action_specific", 0);
         if (asel != null) {
@@ -1497,12 +1504,14 @@ public class Target {
             if (titm.item != null && !SundryUtils.empty(titm.item.action_fname)) {
                 String af_alt = (titm.item).getActionFile();
                 String af = titm.getFilledActionText();
-                if ( SundryUtils.empty(af) )
-                    continue;;
+                if (SundryUtils.empty(af))
+                    continue;
+                ;
                 Anim_Repository ar = new Anim_Repository();
                 Element anim_el_root = ar.open(null, Context.omegaAssets(af));
-                if ( anim_el_root == null )
-                    continue;;
+                if (anim_el_root == null)
+                    continue;
+                ;
                 Log.getLogger().info(anim_el_root.toString());
 
                 Element cel = anim_el_root.findElement("Canvas", 0);
@@ -1511,7 +1520,7 @@ public class Target {
                     if (eb != null) {
                         String s = eb.findAttr("name");
                         if (s != null) {
-                            tc.dep_set.add("media" + File.separator + s);
+                            tc.dep_set.add(new TargetCombinations.TCItem("media" + File.separator + s));
                         }
                     }
                 }
@@ -1524,9 +1533,10 @@ public class Target {
                             String s = eb.findAttr("name");
                             if (s != null) {
                                 String ms = "media" + File.separator + s;
-                                tc.dep_set.add(ms);
+                                tc.dep_set.add(new TargetCombinations.TCItem(ms));
                                 List<String> aiL = attributedImages(ms);
-                                tc.dep_set.addAll(aiL);
+                                for (String ai : aiL)
+                                    tc.dep_set.add(new TargetCombinations.TCItem(ai));
                             }
                         }
                     }
@@ -1545,7 +1555,13 @@ public class Target {
                                         if (cmd != null && cmd.equals("PlaySound")) {
                                             String sf = eb.findAttr("arg");
                                             if (!SundryUtils.empty(sf)) {
-                                                tc.dep_set.add("media" + File.separator + sf);
+                                                String fn = "media" + File.separator + sf;
+                                                List<String> l = expandVariants(fn);
+                                                for (String f : l)
+                                                    if (Context.omegaAssetsExist(f))
+                                                        tc.dep_set.add(new TargetCombinations.TCItem(f, true));
+                                                    else
+                                                        ;//tc.dep_set.add(new TargetCombinations.TCItem(f, false));
                                             }
                                         }
                                     }
@@ -1555,10 +1571,17 @@ public class Target {
                     }
                 }
                 s2 += "(" + af + ")";
-                tc.dep_set.add(af);
+                tc.dep_set.add(new TargetCombinations.TCItem(af));
             }
-
         }
+    }
+
+    private List<String> expandVariants(String fn) {
+        List<String> l = new ArrayList<>();
+        l.add(fn);
+        String fnMp3 = fn.replaceAll("\\.wav$", ".mp3");
+        l.add(fnMp3);
+        return l;
     }
 
     private List<String> attributedImages(String ms) {
@@ -1567,13 +1590,13 @@ public class Target {
         File fBase = new File(fName);
         String fn = fBase.getName();
         int ix = fn.lastIndexOf('.');
-        if ( ix == -1 )
+        if (ix == -1)
             return li;
         String fnNEx = fn.substring(0, ix) + "-";
         File dir = fBase.getParentFile();
         File[] files = dir.listFiles();
-        for(File f : files) {
-            if ( f.getName().startsWith(fnNEx))
+        for (File f : files) {
+            if (f.getName().startsWith(fnNEx))
                 li.add(Context.antiOmegaAssets(f.getPath()));
         }
         return li;

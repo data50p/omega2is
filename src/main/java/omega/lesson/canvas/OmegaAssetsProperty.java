@@ -128,12 +128,12 @@ public class OmegaAssetsProperty extends Property_B {
                         file = new File(file.getPath() + Config.OMEGA_BUNDLE_EXTENSION);
                     try {
                         java.util.List<String> manifest = new ArrayList<>();
-                        for (String s2 : targetCombinationsBuilder.asOne().src_set) {
-                            String manifestInfo = manifestInfo(s2);
+                        for (TargetCombinations.TCItem s2 : targetCombinationsBuilder.asOne().src_set) {
+                            String manifestInfo = manifestInfo(s2.fn);
                             manifest.add(manifestInfo);
                         }
-                        for (String s2 : targetCombinationsBuilder.asOne().dep_set) {
-                            String manifestInfo = manifestInfo(s2);
+                        for (TargetCombinations.TCItem s2 : targetCombinationsBuilder.asOne().dep_set) {
+                            String manifestInfo = manifestInfo(s2.fn);
                             manifest.add(manifestInfo);
                         }
 
@@ -148,11 +148,11 @@ public class OmegaAssetsProperty extends Property_B {
                             sb.append(man + "\n");
                         putData(out, OMEGA_BUNDLE_MANIFEST, sb.toString());
 
-                        for (String s2 : targetCombinationsBuilder.asOne().src_set) {
-                            put(out, s2);
+                        for (TargetCombinations.TCItem s2 : targetCombinationsBuilder.asOne().src_set) {
+                            put(out, s2.fn);
                         }
-                        for (String s2 : targetCombinationsBuilder.asOne().dep_set) {
-                            put(out, s2);
+                        for (TargetCombinations.TCItem s2 : targetCombinationsBuilder.asOne().dep_set) {
+                            put(out, s2.fn);
                         }
 
                         out.close();
@@ -220,7 +220,7 @@ public class OmegaAssetsProperty extends Property_B {
                         l_ctxt.getLesson().sendMsgWait("load", (String) fn);
                         S.m_sleep(200);
                         latestTargetCombinations = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
-                        latestTargetCombinations.src_set.add(l_ctxt.getLesson().getLoadedFName());
+                        latestTargetCombinations.src_set.add(new TargetCombinations.TCItem(l_ctxt.getLesson().getLoadedFName(), true));
 
                         targetCombinationsBuilder.add(latestTargetCombinations);
                         latestTargetCombinations = targetCombinationsBuilder.asOne();
@@ -321,9 +321,9 @@ public class OmegaAssetsProperty extends Property_B {
                                     }
                                 }
                                 if ( name.endsWith(".omega_lesson"))
-                                    latestTargetCombinations.src_set.add(name);
+                                    latestTargetCombinations.src_set.add(new TargetCombinations.TCItem(name));
                                 else
-                                    latestTargetCombinations.dep_set.add(name);
+                                    latestTargetCombinations.dep_set.add(new TargetCombinations.TCItem(name));
                             } catch (IOException e) {
                                 e.printStackTrace();
                             } finally {
@@ -507,7 +507,7 @@ public class OmegaAssetsProperty extends Property_B {
         X = 0;
 
         latestTargetCombinations = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
-        latestTargetCombinations.src_set.add(l_ctxt.getLesson().getLoadedFName());
+        latestTargetCombinations.src_set.add(new TargetCombinations.TCItem(l_ctxt.getLesson().getLoadedFName(), true));
         tmod = new OmAssProp_TableModel(this, latestTargetCombinations, tmm);
 
         TableSorter tsort = new TableSorter(tmod);

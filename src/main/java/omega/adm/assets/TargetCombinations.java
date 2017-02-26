@@ -9,40 +9,72 @@ import java.util.*;
  */
 public class TargetCombinations {
 
-    public static class Builder {
-    	List<TargetCombinations> bundle = new ArrayList<>();
-	TargetCombinations as_one_cache = null;
+    public static class TCItem {
+        public String fn;
+        public Boolean exist;
+        public String originalExtention;
 
-    	public Builder() {
-	}
+        public TCItem(String fn) {
+            if ( fn == null )
+                fn = "";
+            this.fn = fn;
+        }
 
-	public void add(TargetCombinations tc) {
-    	    bundle.add(tc);
-    	    as_one_cache = null;
-	}
+        public TCItem(String fn, boolean exist) {
+            this.fn = fn;
+            this.exist = exist;
+        }
 
-	public TargetCombinations asOne() {
-    	    if ( as_one_cache != null )
-    	        return as_one_cache;
+        public boolean equals(Object o) {
+            if ( o == null )
+                return false;
+            if ( ! (o instanceof TCItem) )
+                return false;
+            if (((TCItem) o).fn.equals(fn))
+                return true;
+            else
+                return false;
+        }
 
-    	    TargetCombinations as_one = new TargetCombinations();
-    	    for(TargetCombinations tc : bundle) {
-    	        as_one.merge(tc);
-	    }
-	    as_one_cache = as_one;
-	    return as_one;
-	}
-
-	public int srcSize() {
-    	    return asOne().src_set.size();
-	}
+        public int hashCode() {
+            return fn.hashCode();
+        }
     }
 
-    public Set<String> src_set = new HashSet<>();
-    public Set<String> dep_set = new HashSet<>();
+    public static class Builder {
+        List<TargetCombinations> bundle = new ArrayList<>();
+        TargetCombinations as_one_cache = null;
+
+        public Builder() {
+        }
+
+        public void add(TargetCombinations tc) {
+            bundle.add(tc);
+            as_one_cache = null;
+        }
+
+        public TargetCombinations asOne() {
+            if (as_one_cache != null)
+                return as_one_cache;
+
+            TargetCombinations as_one = new TargetCombinations();
+            for (TargetCombinations tc : bundle) {
+                as_one.merge(tc);
+            }
+            as_one_cache = as_one;
+            return as_one;
+        }
+
+        public int srcSize() {
+            return asOne().src_set.size();
+        }
+    }
+
+    public Set<TCItem> src_set = new HashSet<>();
+    public Set<TCItem> dep_set = new HashSet<>();
 
     private void merge(TargetCombinations tc) {
-	dep_set.addAll(tc.dep_set);
-	src_set.addAll(tc.src_set);
+        dep_set.addAll(tc.dep_set);
+        src_set.addAll(tc.src_set);
     }
 }

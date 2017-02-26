@@ -13,8 +13,8 @@ public class OmAssProp_TableModel extends AbstractTableModel {
     OmegaAssetsProperty sprop;
 
     TargetCombinations tc;
-    List<String> li_set0;
-    List<String> li_set;
+    List<TargetCombinations.TCItem> li_set0;
+    List<TargetCombinations.TCItem> li_set;
 
     int[][] test_member_map;
 
@@ -30,9 +30,9 @@ public class OmAssProp_TableModel extends AbstractTableModel {
     OmAssProp_TableModel(OmegaAssetsProperty sprop, TargetCombinations tc, int[][] tmm) {
         this.sprop = sprop;
         this.tc = tc;
-        li_set = new ArrayList<String>();
+        li_set = new ArrayList<TargetCombinations.TCItem>();
         li_set.addAll(tc.dep_set);
-        li_set0 = new ArrayList<String>();
+        li_set0 = new ArrayList<TargetCombinations.TCItem>();
         li_set0.addAll(tc.src_set);
         test_member_map = tmm;
     }
@@ -61,14 +61,14 @@ public class OmAssProp_TableModel extends AbstractTableModel {
 
     public Object getValueAt(int row, int col) {
         if (col == 0) {
-            String se = row < li_set0.size() ? li_set0.get(row) : "";
+            String se = row < li_set0.size() ? li_set0.get(row).fn : "";
             if (se == null)
                 se = "";
             return se;
         }
 
         if (col == 1) {
-            String se = row < li_set.size() ? li_set.get(row) : "";
+            String se = row < li_set.size() ? li_set.get(row).fn : "";
             if (se == null)
                 se = "";
             return se;
@@ -100,9 +100,9 @@ public class OmAssProp_TableModel extends AbstractTableModel {
 
     public void update(TargetCombinations targetCombinations) {
         tc = targetCombinations;
-        li_set = new ArrayList<String>();
+        li_set = new ArrayList<TargetCombinations.TCItem>();
         li_set.addAll(tc.dep_set);
-        li_set0 = new ArrayList<String>();
+        li_set0 = new ArrayList<TargetCombinations.TCItem>();
         li_set0.addAll(tc.src_set);
         fireTableDataChanged();
     }

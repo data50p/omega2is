@@ -130,6 +130,12 @@ public class Context {
         return "t9n/" + s;
     }
 
+    public static boolean omegaAssetsExist(String fn) {
+        String of = omegaAssets(fn);
+        File f = new File(of);
+        return f.exists() && f.canRead();
+    }
+
     public static class HelpStack {
         Stack stack = new Stack();
 
