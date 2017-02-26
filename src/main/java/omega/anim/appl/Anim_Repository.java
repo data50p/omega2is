@@ -65,6 +65,12 @@ public class Anim_Repository extends XML_Repository {
 	    Context.exc_log.getLogger().throwing(this.getClass().getName(), "getName", ex);
 	    return null;
 	}
+	if ( fn.startsWith("/") ) {
+	    File file = new File(fn);
+	    String url_s = omega.util.Files.toURL(file);
+	    String fnr = omega.util.Files.mkRelFnameAlt(url_s, Context.omegaAssets("."));
+	    fn = fnr;
+	}
 	return fn;
     }
 
@@ -90,8 +96,8 @@ public class Anim_Repository extends XML_Repository {
 
 //log	omega.Context.sout_log.getLogger().info("ERR: " + "EEEEEE " + sbu + ' ' + sbl);
 
-	PrintWriter ppw = S.createPrintWriter("SAVED-omega_anim.dump");
-	ppw.println("<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"yes\"?>\n" +
+	PrintWriter ppw = S.createPrintWriterUTF8("SAVED-omega_anim.dump");
+	ppw.println("<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>\n" +
 		"<!DOCTYPE omega >\n\n" +
 		sbu + ' ' + sbl);
 	ppw.close();
@@ -107,7 +113,7 @@ public class Anim_Repository extends XML_Repository {
 	} else {
 	    boolean err = false;
 
-	    XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fn + ".tmp"), false);
+	    XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(Context.omegaAssets(fn + ".tmp")), false);
 	    xmlpw.put(el);
 	    xmlpw.popAll();
 	    xmlpw.flush();
@@ -132,13 +138,13 @@ public class Anim_Repository extends XML_Repository {
 	    }
 
 	    if (err == false) {
-		File file = new File(fn);
-		File filet = new File(fn + ".tmp");
+		File file = new File(Context.omegaAssets(fn));
+		File filet = new File(Context.omegaAssets(fn + ".tmp"));
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "SAVED " + file + ' ' + filet);
 		if (file.exists()) {
-		    File filep = new File(fn + ".prev");
+		    File filep = new File(Context.omegaAssets(fn + ".prev"));
 		    if (filep.exists()) {
-			File filepp = new File(fn + ".prevprev");
+			File filepp = new File(Context.omegaAssets(fn + ".prevprev"));
 			if (filepp.exists()) {
 			    filepp.delete();
 			}

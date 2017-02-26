@@ -74,6 +74,8 @@ public class Context {
             return path;
         if (".".equals(path))
             return omegaAssets;
+        if (path.startsWith("/"))
+            return path;
         return omegaAssets + '/' + path;
     }
 
