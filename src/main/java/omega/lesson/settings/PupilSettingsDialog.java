@@ -17,7 +17,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.net.URL;
 import java.util.*;
 
 public class PupilSettingsDialog extends SettingsDialog {
@@ -84,7 +83,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	    if ("selImage".equals(cmd)) {
 		String url_s = selImage();
 		if (url_s != null) {
-		    String tfn = omega.util.Files.rmHead(url_s);
+		    String tfn = omega.util.Files.mkRelativeCWD(url_s);
 		    image_label.setText(tfn);
 		    ImageIcon imc = createImageIcon(tfn, 100, 80);
 		    image_label.setIcon(imc);
@@ -95,7 +94,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	    if ("selImageWrong".equals(cmd)) {
 		String url_s = selImage();
 		if (url_s != null) {
-		    String tfn = omega.util.Files.rmHead(url_s);
+		    String tfn = omega.util.Files.mkRelativeCWD(url_s);
 		    image_wrong_label.setText(tfn);
 		    ImageIcon imc = createImageIcon(tfn, 100, 80);
 		    image_wrong_label.setIcon(imc);
@@ -106,7 +105,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	    if ("selMovie".equals(cmd)) {
 		String url_s = selMovie();
 		if (url_s != null) {
-		    String tfn = omega.util.Files.rmHead(url_s);
+		    String tfn = omega.util.Files.mkRelativeCWD(url_s);
 		    String tfno = tfn;
 		    movie_label.setText(tfn);
 		    tfn = tfn.replaceFirst("\\.mpg", ".png");
@@ -127,7 +126,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	    if ("selSignMovie".equals(cmd)) {
 		String url_s = selMoviesDir();
 		if (url_s != null) {
-		    String tfn = omega.util.Files.rmHead(url_s);
+		    String tfn = omega.util.Files.mkRelativeCWD(url_s);
 		    File f = new File(tfn);
 		    if (!f.exists()) {
 			JOptionPane.showMessageDialog(AnimContext.top_frame,
@@ -155,7 +154,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	    if ("selSpeech".equals(cmd)) {
 		String url_s = selSpeech();
 		if (url_s != null) {
-		    String tfn = omega.util.Files.rmHead(url_s);
+		    String tfn = omega.util.Files.mkRelativeCWD(url_s);
 		    if (tfn.startsWith("media/")) {
 			tfn = tfn.substring(6);
 		    }

@@ -179,7 +179,7 @@ public class SentenceProperty extends Property_B {
 		if (rv == JFileChooser.APPROVE_OPTION) {
 		    File file = choose_f.getSelectedFile();
 		    url_s = omega.util.Files.toURL(file);
-		    String tfn = omega.util.Files.rmHead(url_s);
+		    String tfn = omega.util.Files.mkRelativeCWD(url_s);
 
 		    PrintWriter pw = S.createPrintWriter(tfn);
 		    String sa[] = l_ctxt.getLessonCanvas().getAllTargetCombinations("; ", false);
@@ -394,7 +394,7 @@ public class SentenceProperty extends Property_B {
 	    File file = choose_f.getSelectedFile();
 	    url_s = omega.util.Files.toURL(file);
 
-	    String tfn = omega.util.Files.rmHead(url_s);
+	    String tfn = omega.util.Files.mkRelativeCWD(url_s);
 	    tfn = Context.antiOmegaAssets(tfn);
 	    return tfn;
 	}
@@ -411,7 +411,7 @@ public class SentenceProperty extends Property_B {
 	    File file = choose_f.getSelectedFile();
 	    url_s = omega.util.Files.toURL(file);
 
-	    String tfn = omega.util.Files.rmHead(url_s);
+	    String tfn = omega.util.Files.mkRelativeCWD(url_s);
 	    tfn = Context.antiOmegaAssets(tfn);
 	    return tfn;
 	}

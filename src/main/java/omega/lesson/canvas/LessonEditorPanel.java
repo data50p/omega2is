@@ -23,7 +23,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
 
 public class LessonEditorPanel extends JPanel {
     GBC_Factory gbcf = new GBC_Factory();
@@ -214,7 +213,7 @@ public class LessonEditorPanel extends JPanel {
 //                        fname_s = file.toURI().toURL().toString(); // getCanonicalPath();
                         fname_s = Files.toURL(file);
 //log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fname_s);
-                        String fn = omega.util.Files.rmHead(fname_s);
+                        String fn = omega.util.Files.mkRelativeCWD(fname_s);
 //log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fn);
                         lesson_link_next.setText(fn);
                         enable_LLN.setSelected(true);

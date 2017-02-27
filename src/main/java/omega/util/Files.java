@@ -36,7 +36,7 @@ public class Files {
 	return sa;
     }
 
-    static public String rmHead(String fn) {
+    static public String mkRelativeCWD(String fn) {
 	try {
 	    File fi = new File(".");
 	    String cdu = null;
@@ -45,9 +45,8 @@ public class Files {
 	    } catch (MalformedURLException ex) {
 		return null;
 	    }
-	    cdu = cdu.substring(0, cdu.length() - 2);
-//	cdu += "media/";
-	    omega.Context.sout_log.getLogger().info("ERR: " + "rmHead " + fn + " -> " + cdu);
+	    cdu = cdu.substring(0, cdu.length() - 2); // -1 is to remove "./"
+	    omega.Context.sout_log.getLogger().info("ERR: " + "mkRelativeCWD " + fn + " -> " + cdu);
 	    int len_cd = cdu.length();
 
 	    String[] sa = new String[2];
@@ -71,7 +70,7 @@ public class Files {
 	    return null;
 	}
 	//cdu = cdu.substring(0, cdu.length() - 1);
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "rmHead\n" + url_s + '\n' + cdu);
+//log	omega.Context.sout_log.getLogger().info("ERR: " + "mkRelativeCWD\n" + url_s + '\n' + cdu);
 	int len_cd = cdu.length();
 
 	String[] sa = new String[2];
@@ -92,7 +91,7 @@ public class Files {
 	    return null;
 	}
 	cdu = cdu.substring(0, cdu.length() - 2);
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "rmHead\n" + url_s + '\n' + cdu);
+//log	omega.Context.sout_log.getLogger().info("ERR: " + "mkRelativeCWD\n" + url_s + '\n' + cdu);
 	int len_cd = cdu.length();
 
 	String[] sa = new String[2];
@@ -102,29 +101,6 @@ public class Files {
 	sa[1] = name;
 	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "" + S.arrToString(sa));
 	return sa[1];
-    }
-
-    static public String mkRelFname(String url_s, String prefix) {
-	File fi = new File(Context.omegaAssets("."));
-	String cdu = null;
-	try {
-	    cdu = fi.toURI().toURL().toString();
-	} catch (MalformedURLException ex) {
-	    return null;
-	}
-	cdu = cdu.substring(0, cdu.length() - 2);
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "rmHead\n" + url_s + '\n' + cdu);
-	int len_cd = cdu.length();
-
-	String[] sa = new String[2];
-	String name = url_s.substring(len_cd);
-	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "+++ " + url_s + ' ' + prefix);
-	sa[0] = cdu;
-	sa[1] = name;
-	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "=== " + S.arrToString(sa));
-	if (sa[1].startsWith(prefix))
-	    return sa[1].substring(prefix.length() + 1);
-	return null;
     }
 
     static public String mkRelFnameAlt(String url_s, String prefix) {

@@ -1287,7 +1287,7 @@ public class Lesson implements LessonCanvasListener {
     public void mact_New() {
         File file = new File(Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/new.omega_lesson")); // LESSON-DIR
         String url_s = omega.util.Files.toURL(file);
-        String tfn = omega.util.Files.rmHead(url_s);
+        String tfn = omega.util.Files.mkRelativeCWD(url_s);
         tfn = Context.antiOmegaAssets(tfn);
         loadFN(tfn);
         saved_name = null;
@@ -1316,7 +1316,7 @@ public class Lesson implements LessonCanvasListener {
                     url_s = url_s + "." + ChooseLessonFile.ext;
                 }
 
-                String tfn = omega.util.Files.rmHead(url_s);
+                String tfn = omega.util.Files.mkRelativeCWD(url_s);
 
                 save(tfn);
 
@@ -1351,7 +1351,7 @@ public class Lesson implements LessonCanvasListener {
                     url_s = url_s + "." + ChooseLessonFile.ext;
                 }
 
-                String atfn = omega.util.Files.rmHead(url_s);
+                String atfn = omega.util.Files.mkRelativeCWD(url_s);
                 String tfn = Context.antiOmegaAssets(atfn);
                 loadFN(tfn);
                 saved_name = tfn;
@@ -4045,7 +4045,7 @@ public class Lesson implements LessonCanvasListener {
                                 url_s = url_s + "." + ChooseColorFile.ext;
                             }
 
-                            String tfn = omega.util.Files.rmHead(url_s);
+                            String tfn = omega.util.Files.mkRelativeCWD(url_s);
                             saveSettings(tfn);
                         }
                     } else {
@@ -4072,7 +4072,7 @@ public class Lesson implements LessonCanvasListener {
                     url_s = url_s + "." + ChooseColorFile.ext;
                 }
 
-                String tfn = omega.util.Files.rmHead(url_s);
+                String tfn = omega.util.Files.mkRelativeCWD(url_s);
 
                 Element el = getSettingsElement();
                 Save.save(tfn, el);
