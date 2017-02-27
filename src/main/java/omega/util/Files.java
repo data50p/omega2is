@@ -21,7 +21,7 @@ public class Files {
 	} catch (MalformedURLException ex) {
 	    return null;
 	}
-	cdu = cdu.substring(0, cdu.length() - 2);
+	cdu = cdu.substring(0, cdu.length());
 	cdu += "media/";
 	if (omega.Config.T)
 	    omega.Context.sout_log.getLogger().info("ERR: " + "try loading url from\n" + url_s + '\n' + cdu);
@@ -76,10 +76,10 @@ public class Files {
 
 	String[] sa = new String[2];
 	String name = url_s.substring(len_cd);
-	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "+++ " + name);
+	if (omega.Config.T) omega.Context.sout_log.getLogger().info(". " + "+++ " + url_s);
 	sa[0] = cdu;
 	sa[1] = name;
-	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "" + S.arrToString(sa));
+	if (omega.Config.T) omega.Context.sout_log.getLogger().info(". " + "=== " + S.arrToString(sa));
 	return sa[1];
     }
 
@@ -118,32 +118,31 @@ public class Files {
 
 	String[] sa = new String[2];
 	String name = url_s.substring(len_cd);
-	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "+++ " + name);
+	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "+++ " + url_s + ' ' + prefix);
 	sa[0] = cdu;
 	sa[1] = name;
-	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "" + S.arrToString(sa));
+	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "=== " + S.arrToString(sa));
 	if (sa[1].startsWith(prefix))
 	    return sa[1].substring(prefix.length() + 1);
 	return null;
     }
 
     static public String mkRelFnameAlt(String url_s, String prefix) {
-	File fi = new File(Context.omegaAssets("."));
+	File fi = new File(Context.omegaAssets(prefix  ));
 	String cdu = null;
 	try {
 	    cdu = fi.toURI().toURL().toString();
 	} catch (MalformedURLException ex) {
 	    return null;
 	}
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "rmHead\n" + url_s + '\n' + cdu);
 	int len_cd = cdu.length();
 
 	String[] sa = new String[2];
 	String name = url_s.substring(len_cd);
-	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "+++ " + name);
+	if (omega.Config.T) omega.Context.sout_log.getLogger().info("+++ " + url_s + ' ' + prefix);
 	sa[0] = cdu;
 	sa[1] = name;
-	if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "" + S.arrToString(sa));
+	if (omega.Config.T) omega.Context.sout_log.getLogger().info("=== " + S.arrToString(sa));
 	return sa[1];
     }
 
@@ -154,7 +153,10 @@ public class Files {
 	    URL url = file.toURI().toURL();
 	    URL url2 = file.toURL();
 	    String url0 = "file:" + slashify(file.getAbsolutePath(), file.isDirectory());
-	    Log.getLogger().warning("URL matter: " + file + ' ' + url + ' ' + url2 + ' ' + url0);
+	    Log.getLogger().warning("URL matter:      " + file);
+	    Log.getLogger().warning("    matter: " + url);
+	    Log.getLogger().warning("    matter: " + url2);
+	    Log.getLogger().warning("    matter: " + url0);
 	    url_s = url0;//url2.toString();
 	} catch (Exception ex) {
 	    Context.exc_log.getLogger().throwing(Files.class.getName(), "toURL", ex);

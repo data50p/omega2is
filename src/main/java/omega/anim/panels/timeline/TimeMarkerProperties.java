@@ -330,7 +330,7 @@ public class TimeMarkerProperties extends OmegaProperties implements ActionListe
 // 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
 // 		    url_s = url_s + "." + ChooseAudioFile.ext;
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
-		String fn = omega.util.Files.mkRelFname(url_s, "media");
+		String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
 		TriggerEvent te = bound_tm.findTEvent("PlaySound");
 		te.setArg(fn);

@@ -43,8 +43,10 @@
 </items>
 </lesson>
 <action_specific>
-<value key="Aktör 1 agerar med aktör 1" val="media/feedback/film2/feedback22.mp4"/>
+<value key="Aktör 1 agerar med aktör 1" val="anim/ActiveVideo/feedback1.mp4"/>
 </action_specific>
-<sign_specific/>
+<sign_specific>
+<value key="Aktör 1 agerar med aktör 1" val="media/sign/hoppar över.mp4"/>
+</sign_specific>
 <test_entries/>
 </omega_lesson>

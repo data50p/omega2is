@@ -69,7 +69,7 @@ public class Runtime extends OmegaAppl {
 	} catch (Exception e) {
 	}
 
-	omega.Config.T = false;
+	omega.Config.T = !false;
 
 	boolean few = flag.get("few") != null;
 	if (few) {

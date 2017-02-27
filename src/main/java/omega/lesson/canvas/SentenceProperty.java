@@ -163,7 +163,7 @@ public class SentenceProperty extends Property_B {
 		int row = table.getSelectedRow();
 		String ss = (String) tmod.getValueAt(row, COL_SIGN);
 		if (ss == null || ss.length() == 0) {
-		    String fn = setActionField(ss);
+		    String fn = setSignField(ss);
 		    //log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
 		    if (fn != null) {
 			tmod.setValueAt(fn, row, COL_SIGN);

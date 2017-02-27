@@ -239,7 +239,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 // 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
 // 		    url_s = url_s + "." + ChooseAudioFile.ext;
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
-		String fn = omega.util.Files.mkRelFname(url_s, "media");
+		String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
 
 		JTextField tf = (JTextField) guimap.get("sound");
@@ -258,7 +258,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 // 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
 // 		    url_s = url_s + "." + ChooseAudioFile.ext;
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
-		String fn = omega.util.Files.mkRelFname(url_s, "media");
+		String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
 
 		JTextField tf = (JTextField) guimap.get("sign");
@@ -277,7 +277,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 // 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
 // 		    url_s = url_s + "." + ChooseAudioFile.ext;
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
-		String fn = omega.util.Files.mkRelFname(url_s, "media");
+		String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
 
 		JTextField tf = (JTextField) guimap.get("dummysound");
@@ -296,7 +296,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 // 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
 // 		    url_s = url_s + "." + ChooseAudioFile.ext;
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
-		String fn = omega.util.Files.mkRelFname(url_s, "media");
+		String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
 
 		JTextField tf = (JTextField) guimap.get("dummysign");
