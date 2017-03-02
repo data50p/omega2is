@@ -15,10 +15,9 @@ import java.util.logging.Level;
 public class Context {
     public static final String OMEGA_ASSETS_SUFFIX = ".omega_assets";
     public static final String defaultOmegaAssets = "default" + OMEGA_ASSETS_SUFFIX;
-    public static final String alternateOmegaAssets = "alternate" + OMEGA_ASSETS_SUFFIX;
     public static final String developerOmegaAssets = "developer" + OMEGA_ASSETS_SUFFIX;
 
-    private static String omegaAssets = isDeveloper() ? developerOmegaAssets : defaultOmegaAssets;
+    private static String currentOmegaAssets = getDefaultOmegaAssets();
 
     static Object lock = new Object();
     static HashMap subsystems = new HashMap();
@@ -64,8 +63,8 @@ public class Context {
 
         boolean noAssets = path != null && path.contains("toolbarButtonGraphics") || path.startsWith("register/");
 
-        if (path != null && path.startsWith(omegaAssets)) {
-            sout_log.getLogger().warning("omegaAssets(): Already omega_assets: " + path);
+        if (path != null && path.startsWith(currentOmegaAssets)) {
+            sout_log.getLogger().warning("currentOmegaAssets(): Already omega_assets: " + path);
             if (noAssets)
                 return antiOmegaAssets(path);
             return path;
@@ -73,10 +72,10 @@ public class Context {
         if (noAssets)
             return path;
         if (".".equals(path))
-            return omegaAssets;
+            return currentOmegaAssets;
         if (path.startsWith("/"))
             return path;
-        return omegaAssets + '/' + path;
+        return currentOmegaAssets + '/' + path;
     }
 
     public static String antiOmegaAssets(String afn) {
@@ -110,18 +109,22 @@ public class Context {
      */
     public static void setOmegaAssets(String omega_assets_name) throws IllegalArgumentException {
         if (SundryUtils.empty(omega_assets_name)) {
-            omegaAssets = defaultOmegaAssets;
-            Context.sout_log.getLogger().info("setOmegaAssets: " + omegaAssets);
+            currentOmegaAssets = getDefaultOmegaAssets();
+            Context.sout_log.getLogger().info("setOmegaAssets: " + currentOmegaAssets);
         } else {
             if (!omega_assets_name.endsWith(OMEGA_ASSETS_SUFFIX))
                 omega_assets_name = omega_assets_name + OMEGA_ASSETS_SUFFIX;
-            if ((new File(omegaAssets)).exists()) {
-                Context.sout_log.getLogger().info("setOmegaAssets: " + omegaAssets);
-                omegaAssets = omega_assets_name;
+            if ((new File(currentOmegaAssets)).exists()) {
+                Context.sout_log.getLogger().info("setOmegaAssets: " + currentOmegaAssets);
+                currentOmegaAssets = omega_assets_name;
                 return;
             }
-            Context.sout_log.getLogger().info("setOmegaAssets: unable to dep_set " + omegaAssets);
+            Context.sout_log.getLogger().info("setOmegaAssets: unable to set omega assets, keep old! " + currentOmegaAssets);
         }
+    }
+
+    private static String getDefaultOmegaAssets() {
+        return isDeveloper() ? developerOmegaAssets : defaultOmegaAssets;
     }
 
     public static String getMediaFile(String name) {
@@ -140,6 +143,10 @@ public class Context {
         String of = omegaAssets(fn);
         File f = new File(of);
         return f.exists() && f.canRead();
+    }
+
+    public static String media() {
+        return "media/";
     }
 
     public static class HelpStack {

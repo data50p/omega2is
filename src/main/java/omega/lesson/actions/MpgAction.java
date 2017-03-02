@@ -2,6 +2,7 @@ package omega.lesson.actions;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
+import omega.Context;
 import omega.lesson.canvas.MsgItem;
 import omega.media.video.MpgPlayer;
 import omega.util.Log;
@@ -187,7 +188,7 @@ public class MpgAction implements ActionI {
 
     class MsgDialog {
 	MsgItem msg_item;
-	String cont_image_fn = "media/default/continue.png";
+	String cont_image_fn = Context.media() + "default/continue.png";
 
 	void show(MsgItem msg) {
 	    set(msg);

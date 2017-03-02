@@ -112,7 +112,7 @@ public class RegLocator {
 	} else {
 	    f.mkdir();
 	    File ft = new File(aRegisterFbase(name + ".p/id.png"));
-	    File ff = new File(Context.omegaAssets("media/default/pupil.png"));
+	    File ff = new File(Context.getMediaFile("default/pupil.png"));
 	    omega.util.Files.fileCopy(ff, ft);
 	    ft = new File(aRegisterFbase(name + ".p/pupil_settings.xml"));
 	    ff = new File(aRegisterFbase("Guest" + ".p/pupil_settings.xml"));

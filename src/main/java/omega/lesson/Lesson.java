@@ -103,7 +103,7 @@ public class Lesson implements LessonCanvasListener {
         final T_Item t_Item = tg.getT_Item(tg_ix);
         String smfName = lmm.getSignMovieFileName(t_Item.item, tg, tg_ix);
         if (smfName != null) {
-            boolean liuMovieOk = lmm.prepare("media/", smfName, true);
+            boolean liuMovieOk = lmm.prepare(Context.media(), smfName, true);
             if (!liuMovieOk) {
                 return null;
             }
@@ -158,7 +158,7 @@ public class Lesson implements LessonCanvasListener {
                     omega.Context.sout_log.getLogger().info("While play movie: " + ex_mv);
                 }
             } else {
-                String smFname = Context.omegaAssets("media/sign-" + omega.Context.getLessonLang() + "/" + all_text + ".mp4");
+                String smFname = Context.getMediaFile("sign-" + omega.Context.getLessonLang() + "/" + all_text + ".mp4");
                 String smFileName = VideoUtil.findSupportedFname(smFname);
                 File smFile = smFileName == null ? null : new File(smFileName);
                 if (smFile != null && smFile.exists() && smFile.canRead()) {
@@ -181,7 +181,7 @@ public class Lesson implements LessonCanvasListener {
                     for (String sign_mv : sign_movies) {
                         try {
                             le_canvas.setMarkTarget(tg_ix, true);
-                            if (sign_mv.length() > 0 && lmm.prepare("media/", sign_mv, true)) {
+                            if (sign_mv.length() > 0 && lmm.prepare(Context.media(), sign_mv, true)) {
                                 Shape sh = le_canvas.getTargetShape();
                                 Rectangle tgr = sh.getBounds();
                                 startMovieAndWait(lmm, tgr, bgCol, alphaCol, sms, 2);

@@ -1509,7 +1509,7 @@ public class Target {
                 if (eb != null) {
                     String val = eb.findAttr("val");
                     if (!SundryUtils.empty(val)) {
-                        tc.dep_set.add("media" + File.separator + val);
+                        tc.dep_set.add(Context.media() + val);
                     }
                 }
             }

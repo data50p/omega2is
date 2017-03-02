@@ -108,7 +108,7 @@ public class OmegaFxAppl extends Application {
         Scene scene = new Scene(root, 700, 330 + 22 * 3);
         stage.setTitle("Omega IS");
 
-	String aImname = Context.omegaAssets("media/default/omega_splash.gif");
+	String aImname = Context.getMediaFile("default/omega_splash.gif");
 	Image im = new Image("file:" + aImname);
 	ImageView imView = new ImageView();
 	imView.setImage(im);
