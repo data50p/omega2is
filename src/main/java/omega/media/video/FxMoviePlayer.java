@@ -41,8 +41,8 @@ public class FxMoviePlayer {
     public int mediaW;
     public int mediaH;
 
-    private static final String MEDIA_FN = Context.omegaAssets("media/feedback/film1/feedback1.mp4");
-    private static final String MEDIA_FN2 = Context.omegaAssets("media/feedback/film1/feedback2.mp4");
+    private static final String MEDIA_FN = Context.getMediaFile("feedback/film1/feedback1.mp4");
+    private static final String MEDIA_FN2 = Context.getMediaFile("feedback/film1/feedback2.mp4");
 
     boolean ready = false;
     int winW;

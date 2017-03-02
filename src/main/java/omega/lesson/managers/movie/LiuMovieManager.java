@@ -168,7 +168,7 @@ public class LiuMovieManager extends Manager {
     }
 
     private boolean mediaFileExist(String sfn) {
-	String smFn = VideoUtil.findSupportedFname(Context.omegaAssets("media/" + sfn));
+	String smFn = VideoUtil.findSupportedFname(Context.getMediaFile(sfn));
 	if ( smFn == null )
 	    return false;
 	File f = new File(smFn);

@@ -24,7 +24,6 @@ public class Context {
     static HashMap subsystems = new HashMap();
     public static String URL_BASE = "http://localhost:8089/";
     public static String URL_BASE_AS_FILE = "";
-    public static String FILE_BASE = omegaAssets + "/" + "media/";  // null
 
     public static boolean logon = !false;
 
@@ -123,6 +122,10 @@ public class Context {
             }
             Context.sout_log.getLogger().info("setOmegaAssets: unable to dep_set " + omegaAssets);
         }
+    }
+
+    public static String getMediaFile(String name) {
+        return omegaAssets("media/" + name);
     }
 
     public static String t9n(String s) {

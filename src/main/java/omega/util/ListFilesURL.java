@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class ListFilesURL {
     public static String[] getMediaList(String n) {
-	String name = omega.Context.FILE_BASE + n;
+	String name = omega.Context.getMediaFile(n);
 	File dir = new File(name);
 	String[] names = dir.list();
 // 	omega.Context.sout_log.getLogger().info("ERR: " + "FILE dir[] name " + name + ' ' + names);

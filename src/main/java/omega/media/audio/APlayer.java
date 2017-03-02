@@ -130,7 +130,7 @@ public class APlayer {
 	    nname = dir + '/' + nname;
 
 	    String lang_id = "";
-	    String ffname = omega.Context.FILE_BASE + nname;
+	    String ffname = omega.Context.getMediaFile(nname);
 	    if (ffname.indexOf("words-") != -1) {
 		String alname = ffname.replaceAll("words\\-[a-zA-Z]*", "words-" + lang);
 		File fffile = new File(alname);

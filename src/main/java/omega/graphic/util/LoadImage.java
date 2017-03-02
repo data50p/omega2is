@@ -12,7 +12,7 @@ public class LoadImage {
         Toolkit tk = Toolkit.getDefaultToolkit();
         Image im = null;
         try {
-            String fn = omega.Context.FILE_BASE + im_name;
+            String fn = omega.Context.getMediaFile(im_name);
             if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "loading file name " + fn);
             File file = new File(Context.omegaAssets(fn));
             if (file != null && file.canRead())
@@ -36,7 +36,7 @@ public class LoadImage {
         Toolkit tk = Toolkit.getDefaultToolkit();
         Image im = null;
         try {
-            String fn = omega.Context.FILE_BASE + im_name;
+            String fn = omega.Context.getMediaFile(im_name);
             if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "loading file name " + fn);
             File file = new File(Context.omegaAssets(fn));
             if (file != null && file.canRead())
