@@ -16,8 +16,9 @@ public class Context {
     public static final String OMEGA_ASSETS_SUFFIX = ".omega_assets";
     public static final String defaultOmegaAssets = "default" + OMEGA_ASSETS_SUFFIX;
     public static final String alternateOmegaAssets = "alternate" + OMEGA_ASSETS_SUFFIX;
+    public static final String developerOmegaAssets = "developer" + OMEGA_ASSETS_SUFFIX;
 
-    private static String omegaAssets = defaultOmegaAssets;
+    private static String omegaAssets = isDeveloper() ? developerOmegaAssets : defaultOmegaAssets;
 
     static Object lock = new Object();
     static HashMap subsystems = new HashMap();
