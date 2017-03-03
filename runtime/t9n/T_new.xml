@@ -38,6 +38,10 @@
    <string>New Omega Bundle</string>
   </void>
   <void method="put">
+   <string>View &amp; Add Omega Bundle</string>
+   <string>View &amp; Add Omega Bundle</string>
+  </void>
+  <void method="put">
    <string>Can&apos;t find animation: anim/ActiveAnim/ActorpresB1.omega_anim</string>
    <string>Can&apos;t find animation: anim/ActiveAnim/ActorpresB1.omega_anim</string>
   </void>

@@ -11,8 +11,8 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="actor1" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/actor1.wav" text="aktör 1" var-1="" var-2="" var-3=""/>
-<item Lid="actor2" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/actor2.wav" text="aktör 2" var-1="" var-2="" var-3=""/>
+<item Lid="actor1" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/actor1.wav" text="aktör 1" var-1="v11" var-2="v12" var-3="v13"/>
+<item Lid="actor2" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/actor2.wav" text="aktör 2" var-1="v21" var-2="v22" var-3="v23"/>
 <item Lid="actor3" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/actor3.wav" text="aktör 3" var-1="" var-2="" var-3=""/>
 <item Lid="actor4" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/actor4.wav" text="aktör 4" var-1="" var-2="" var-3=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
@@ -31,7 +31,7 @@
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="passive">
-<item Lid="actor1" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/actor1.wav" text="aktör 1" var-1="" var-2="" var-3=""/>
+<item Lid="actor1" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/actor1-{--1}.wav" text="aktör 1" var-1="" var-2="" var-3=""/>
 <item Lid="actor2" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/actor2.wav" text="aktör 2" var-1="" var-2="" var-3=""/>
 <item Lid="actor3" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/actor3.wav" text="aktör 3" var-1="" var-2="" var-3=""/>
 <item Lid="actor4" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/actor4.wav" text="aktör 4" var-1="" var-2="" var-3=""/>
@@ -43,10 +43,11 @@
 </items>
 </lesson>
 <action_specific>
-<value key="Aktör 1 agerar med aktör 1" val="anim/ActiveVideo/feedback1.mp4"/>
+<value key="Aktör 1 agerar med aktör 1" val="media/feedback/film2/Peek_a_boo.mp4"/>
+<value key="Aktör 2 agerar med aktör 2" val="media/feedback/film3/Dunk_Bear.mp4"/>
 </action_specific>
 <sign_specific>
-<value key="Aktör 1 agerar med aktör 1" val="media/sign/hoppar över.mp4"/>
+<value key="Aktör 1 agerar med aktör 1" val="media/feedback/film1/soccer_flowers.mp4"/>
 </sign_specific>
 <test_entries/>
 </omega_lesson>
