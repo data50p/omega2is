@@ -26,14 +26,13 @@ def getDate() {
 
 task generateVersionFile {
     doLast {
-        if (true || !outputFile.isFile()) {
+        if (!outputFile.isFile()) {
             outputFile.parentFile.mkdirs()
             outputFile.createNewFile()
         }
         outputFile.write "Version: $version\n" + "Date: " + getDate() + "\n"
     }
 }
-
 generateVersionFile.inputs.property "version", version
 generateVersionFile.outputs.files outputFile
 generateVersionFile.outputs.upToDateWhen { false }
@@ -44,6 +43,13 @@ task showContents {
     }
 }
 
+task removeVersionFile {
+	outputFile.delete()
+}
+
+
+
+removeVersionFile.dependsOn clean
 showContents.dependsOn generateVersionFile
 processResources.dependsOn showContents
 

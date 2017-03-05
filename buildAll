@@ -1,2 +1,2 @@
-./gradlew clean build jar
+./gradlew clean build
 cp build/libs/omega-is-*.*.*.jar runtime
