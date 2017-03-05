@@ -7,6 +7,7 @@ import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
 import omega.lesson.appl.ApplContext;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -221,7 +222,7 @@ public class BaseCanvas extends JPanel {
 	}
 
 	void setNew(String txt, String im_n, String im_enter_n, Object o) {
-	    setText(txt);
+	    setText(SundryUtils.formatDisplayText(txt));
 	    this.im_n = im_n;
 	    this.im_enter_n = im_enter_n;
 	    this.o = o;
@@ -311,7 +312,7 @@ public class BaseCanvas extends JPanel {
 	}
 
 	public void setText(String s) {
-	    super.setText(s);
+	    super.setText(SundryUtils.formatDisplayText(s));
 	}
 
 	public void paintComponent(Graphics g) {

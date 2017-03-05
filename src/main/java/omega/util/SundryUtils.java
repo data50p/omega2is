@@ -358,4 +358,8 @@ public class SundryUtils {
     public static boolean isValueLikeNumericId(String s) {
 	return s != null && s.length() > 0 && !s.equals("0");
     }
+
+    public static String formatDisplayText(String txt) {
+        return txt.replace("_", " ");
+    }
 }
