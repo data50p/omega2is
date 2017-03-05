@@ -24,20 +24,24 @@ def getDate() {
     return formattedDate
 }
 
-task generateVersionFile << {
-    if (true || !outputFile.isFile()) {
-        outputFile.parentFile.mkdirs()
-        outputFile.createNewFile()
+task generateVersionFile {
+    doLast {
+        if (true || !outputFile.isFile()) {
+            outputFile.parentFile.mkdirs()
+            outputFile.createNewFile()
+        }
+        outputFile.write "Version: $version\n" + "Date: " + getDate() + "\n"
     }
-    outputFile.write "Version: $version\n" + "Date: " + getDate() + "\n"
 }
- 
+
 generateVersionFile.inputs.property "version", version
 generateVersionFile.outputs.files outputFile
 generateVersionFile.outputs.upToDateWhen { false }
  
-task showContents << {
-    println outputFile.text
+task showContents {
+    doLast {
+        println outputFile.text
+    }
 }
 
 showContents.dependsOn generateVersionFile
