@@ -32,12 +32,14 @@ public class Version {
     static public String get(String item) {
         try {
             InputStream ins = Version.class.getClassLoader().getResourceAsStream("version");
-            Reader r = new InputStreamReader(ins);
-            BufferedReader br = new BufferedReader(r);
-            for(;;) {
-                String s = br.readLine();
-                if ( s.startsWith(item + ":") )
-                    return s.substring((item + ":").length()).trim();
+            if ( ins != null ) {
+                Reader r = new InputStreamReader(ins);
+                BufferedReader br = new BufferedReader(r);
+                for (; ; ) {
+                    String s = br.readLine();
+                    if (s.startsWith(item + ":"))
+                        return s.substring((item + ":").length()).trim();
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
