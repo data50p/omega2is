@@ -24,7 +24,7 @@ public class OmAssProp_TableModel extends AbstractTableModel {
             T.t("Source Files"),
             T.t("Dependent Files"),
             T.t("Exist"),
-            T.t("_?_")
+            T.t("specified")
     };
 
     OmAssProp_TableModel(OmegaAssetsProperty sprop, TargetCombinations tc, int[][] tmm) {
@@ -81,8 +81,11 @@ public class OmAssProp_TableModel extends AbstractTableModel {
             return se;
         }
 
-        if (col >= TEST_MEM_OFFS) {
-            return col;//new Integer(test_member_map[row][col - TEST_MEM_OFFS]);
+        if (col == 3 ) {
+            String se = row < li_set.size() ? li_set.get(row).formatOriginalExtention() : "";
+            if (se == null)
+                se = "";
+            return se;
         }
 
         return "";

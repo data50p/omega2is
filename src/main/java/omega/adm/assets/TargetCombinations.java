@@ -1,6 +1,7 @@
 package omega.adm.assets;
 
-import omega.lesson.machine.Target;
+import omega.Context;
+import omega.util.SundryUtils;
 
 import java.util.*;
 
@@ -14,9 +15,15 @@ public class TargetCombinations {
         public Boolean exist;
         public String originalExtention;
 
-        public TCItem(String fn, boolean exist) {
+        public TCItem(String fn) {
+            this(fn, null);
+        }
+
+        public TCItem(String fn, String originalExtention) {
             this.fn = fn;
-            this.exist = exist;
+            this.originalExtention = originalExtention;
+            this.exist = Context.omegaAssetsExist(fn);
+
             if ( fn.contains("{") )
                 System.err.println("MORE using var");
             if ( fn.contains(",") )
@@ -38,6 +45,10 @@ public class TargetCombinations {
 
         public int hashCode() {
             return fn.hashCode();
+        }
+
+        public String formatOriginalExtention() {
+            return SundryUtils.empty(originalExtention) ? "·" : originalExtention;
         }
     }
 

@@ -2,7 +2,6 @@ package omega.lesson.canvas;
 
 
 import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.Config;
 import omega.Context;
 import omega.Version;
@@ -11,10 +10,8 @@ import omega.i18n.T;
 import omega.lesson.LessonContext;
 import omega.lesson.canvas.result.ChooseDir;
 import omega.lesson.canvas.result.ChooseOmegaBundleFile;
-import omega.lesson.repository.Restore;
 import omega.swing.TableSorter;
 import omega.value.Value;
-import omega.value.Values;
 import org.hs.jfc.FormPanel;
 
 import javax.swing.*;
@@ -222,7 +219,7 @@ public class OmegaAssetsProperty extends Property_B {
 			l_ctxt.getLesson().sendMsgWait("load", (String) fn);
 			S.m_sleep(200);
 			latestTargetCombinations = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
-			latestTargetCombinations.src_set.add(new TargetCombinations.TCItem(l_ctxt.getLesson().getLoadedFName(), true));
+			latestTargetCombinations.src_set.add(new TargetCombinations.TCItem(l_ctxt.getLesson().getLoadedFName()));
 
 			targetCombinationsBuilder.add(latestTargetCombinations);
 			latestTargetCombinations = targetCombinationsBuilder.asOne();
@@ -330,10 +327,10 @@ public class OmegaAssetsProperty extends Property_B {
 				    }
 				}
 				if (name.endsWith(".omega_lesson")) {
-				    latestTargetCombinations.src_set.add(new TargetCombinations.TCItem(name, Context.omegaAssetsExist(name)));
+				    latestTargetCombinations.src_set.add(new TargetCombinations.TCItem(name));
 				} else {
 				    if ( ! obManifest )
-					latestTargetCombinations.dep_set.add(new TargetCombinations.TCItem(name, Context.omegaAssetsExist(name)));
+					latestTargetCombinations.dep_set.add(new TargetCombinations.TCItem(name));
 				}
 			    } catch (IOException e) {
 				e.printStackTrace();
@@ -518,7 +515,7 @@ public class OmegaAssetsProperty extends Property_B {
 	X = 0;
 
 	latestTargetCombinations = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
-	latestTargetCombinations.src_set.add(new TargetCombinations.TCItem(l_ctxt.getLesson().getLoadedFName(), true));
+	latestTargetCombinations.src_set.add(new TargetCombinations.TCItem(l_ctxt.getLesson().getLoadedFName()));
 	tmod = new OmAssProp_TableModel(this, latestTargetCombinations, tmm);
 
 	TableSorter tsort = new TableSorter(tmod);
@@ -535,7 +532,7 @@ public class OmegaAssetsProperty extends Property_B {
 	    tcol.setPreferredWidth(i == 0 ? 350 :
 		    i == 1 ? 350 :
 			    i == 2 ? 60 :
-				    40);
+				    60);
 	}
 	try {
 	    table.setAutoResizeMode(table.AUTO_RESIZE_OFF);
