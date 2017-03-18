@@ -114,7 +114,7 @@ public class Context {
         } else {
             if (!omega_assets_name.endsWith(OMEGA_ASSETS_SUFFIX))
                 omega_assets_name = omega_assets_name + OMEGA_ASSETS_SUFFIX;
-            if ((new File(currentOmegaAssets)).exists()) {
+            if ((new File(omega_assets_name)).exists()) {
                 Context.sout_log.getLogger().info("setOmegaAssets: " + currentOmegaAssets + " -> " + omega_assets_name);
                 currentOmegaAssets = omega_assets_name;
                 return;
