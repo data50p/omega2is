@@ -18,9 +18,6 @@ import java.io.PrintWriter;
 
 public class Anim_Repository extends XML_Repository {
     private String saved_file = null;
-    ChooseImageFile choose_if = new ChooseImageFile();
-    ChooseAnimatorFile choose_af = new ChooseAnimatorFile();
-
 
     public Anim_Repository() {
     }
@@ -47,6 +44,7 @@ public class Anim_Repository extends XML_Repository {
         try {
             if (ask || fn == null) {
                 String url_s = null;
+                ChooseAnimatorFile choose_af = new ChooseAnimatorFile();
                 int rv = choose_af.showDialog(c, label);
                 if (rv == JFileChooser.APPROVE_OPTION) {
                     File file = choose_af.getSelectedFile();
@@ -204,6 +202,7 @@ public class Anim_Repository extends XML_Repository {
 
     public String getImageURL_Dlg(Component c) {
         String url_s = null;
+        ChooseImageFile choose_if = new ChooseImageFile();
         int rv = choose_if.showDialog(c, T.t("Select"));
         if (rv == JFileChooser.APPROVE_OPTION) {
             File file = choose_if.getSelectedFile();

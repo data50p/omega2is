@@ -33,8 +33,6 @@ public class ItemProperty extends Property_B implements ActionListener {
         setVisible(true);
     }
 
-    ChooseActionFile2 choose_af = new ChooseActionFile2();
-
     String toURL(File file) {
         return Files.toURL(file);
     }
@@ -43,6 +41,7 @@ public class ItemProperty extends Property_B implements ActionListener {
         String fn = null;
         try {
             String url_s = null;
+            ChooseActionFile2 choose_af = new ChooseActionFile2();
             int rv = choose_af.showDialog(this, T.t("Select"));
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_af.getSelectedFile();

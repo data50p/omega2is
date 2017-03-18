@@ -1301,12 +1301,11 @@ public class Lesson implements LessonCanvasListener {
         }
     }
 
-    ChooseLessonFile choose_f = new ChooseLessonFile();
-
     public void mact_SaveAs() {
 
         String url_s = null;
         try {
+            ChooseLessonFile choose_f = new ChooseLessonFile();
             global_skipF(true);
             int rv = choose_f.showDialog(null, T.t("Save"));
             if (rv == JFileChooser.APPROVE_OPTION) {
@@ -1334,6 +1333,7 @@ public class Lesson implements LessonCanvasListener {
     public void mact_Open() {
         String url_s = null;
         try {
+            ChooseLessonFile choose_f = new ChooseLessonFile();
             omega.Context.sout_log.getLogger().info("mact_Open " + "null");
             global_skipF(true);
             int rv = choose_f.showDialog(null, T.t("Open"));

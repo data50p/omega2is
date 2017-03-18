@@ -23,11 +23,6 @@ public class PupilSettingsDialog extends SettingsDialog {
 
     public omega.lesson.Lesson lesson;
     Pupil pupil;
-    ChooseImageFile choose_if = new ChooseImageFile();
-    ChoosePImageFile choose_pif = new ChoosePImageFile();
-    ChooseMovieFile choose_mf = new ChooseMovieFile();
-    ChooseMovieDir choose_md = new ChooseMovieDir();
-    ChooseSpeechFile choose_sf = new ChooseSpeechFile();
     JTextField pupil_name = new JTextField("               ");
     JSlider speed_slider;
     JSlider frequency_slider;
@@ -195,6 +190,7 @@ public class PupilSettingsDialog extends SettingsDialog {
             }
             if ("pupim".equals(cmd)) {
                 try {
+                    ChoosePImageFile choose_pif = new ChoosePImageFile();
                     int rv = choose_pif.showDialog(PupilSettingsDialog.this, T.t("Select"));
                     if (rv == JFileChooser.APPROVE_OPTION) {
                         File file = choose_pif.getSelectedFile();
@@ -773,6 +769,7 @@ public class PupilSettingsDialog extends SettingsDialog {
     }
 
     String selImage() {
+        ChooseImageFile choose_if = new ChooseImageFile();
         String url_s = null;
         int rv = choose_if.showDialog(this, T.t("Select"));
         if (rv == JFileChooser.APPROVE_OPTION) {
@@ -783,6 +780,7 @@ public class PupilSettingsDialog extends SettingsDialog {
     }
 
     String selMovie() {
+        ChooseMovieFile choose_mf = new ChooseMovieFile();
         String url_s = null;
         int rv = choose_mf.showDialog(this, T.t("Select"));
         if (rv == JFileChooser.APPROVE_OPTION) {
@@ -793,6 +791,7 @@ public class PupilSettingsDialog extends SettingsDialog {
     }
 
     String selMoviesDir() {
+        ChooseMovieDir choose_md = new ChooseMovieDir();
         String url_s = null;
         int rv = choose_md.showDialog(this, T.t("Select Directory"));
         if (rv == JFileChooser.APPROVE_OPTION) {
@@ -803,6 +802,7 @@ public class PupilSettingsDialog extends SettingsDialog {
     }
 
     String selSpeech() {
+        ChooseSpeechFile choose_sf = new ChooseSpeechFile();
         String url_s = null;
         int rv = choose_sf.showDialog(this, T.t("Select"));
         if (rv == JFileChooser.APPROVE_OPTION) {

@@ -26,6 +26,8 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
+import static omega.Context.OMEGA_ASSETS_SUFFIX;
+
 public class LessonEditorPanel extends JPanel {
     GBC_Factory gbcf = new GBC_Factory();
 
@@ -242,6 +244,7 @@ public class LessonEditorPanel extends JPanel {
                     try {
                         url_s = Files.toURL(file.getCanonicalFile());
                         url_s = url_s.replaceAll("/$", "");
+                        url_s = rmDuplicate(url_s);
                         String oa = omega.util.Files.mkRelativeCWD(url_s);
                         System.err.println("setOmegaAssets: " + url_s);
                         omega.Context.setOmegaAssets(oa);
@@ -249,6 +252,16 @@ public class LessonEditorPanel extends JPanel {
                     }
                 }
             }
+        }
+
+        private String rmDuplicate(String url_s) {
+            int i1 = url_s.indexOf(OMEGA_ASSETS_SUFFIX);
+            int i2 = url_s.lastIndexOf(OMEGA_ASSETS_SUFFIX);
+            if ( i1 == i2 )
+                return url_s;
+            String s = url_s.substring(0, i1);
+            s += OMEGA_ASSETS_SUFFIX;
+            return s;
         }
 
         private void playSign() {
