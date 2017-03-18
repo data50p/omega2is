@@ -1878,9 +1878,9 @@ public class Lesson implements LessonCanvasListener {
 
         public List<String> getMedia() {
             List<String> li = new ArrayList<>();
-            for(Object ov : hm.values())
+            for (Object ov : hm.values())
                 li.add(ov.toString());
-            for(Object ov : hmSign.values())
+            for (Object ov : hmSign.values())
                 li.add(ov.toString());
             return li;
         }
@@ -2016,7 +2016,7 @@ public class Lesson implements LessonCanvasListener {
         return false;
     }
 
-    String wait_id[] = new String[] {""};
+    String wait_id[] = new String[]{""};
 
     private long last_msg_time = S.ct();
 

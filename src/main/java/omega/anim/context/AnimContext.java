@@ -23,18 +23,18 @@ public class AnimContext extends Context {
     public double anim_speed = 1.0;
 
     public AnimContext(AnimEditor ae) {
-	this.ae = ae;
-	this.arun = null;
+        this.ae = ae;
+        this.arun = null;
     }
 
     public AnimContext(AnimRuntime arun) {
-	this.ae = null;
-	this.arun = arun;
+        this.ae = null;
+        this.arun = arun;
     }
 
     public void fillElement(Element el) {
-	anim_canvas.fillElement(el);
-	mtl.fillElement(el);
+        anim_canvas.fillElement(el);
+        mtl.fillElement(el);
     }
 
 //      public void save(XML_PW xmlpw) {

@@ -115,7 +115,7 @@ public class Context {
             if (!omega_assets_name.endsWith(OMEGA_ASSETS_SUFFIX))
                 omega_assets_name = omega_assets_name + OMEGA_ASSETS_SUFFIX;
             if ((new File(currentOmegaAssets)).exists()) {
-                Context.sout_log.getLogger().info("setOmegaAssets: " + currentOmegaAssets);
+                Context.sout_log.getLogger().info("setOmegaAssets: " + currentOmegaAssets + " -> " + omega_assets_name);
                 currentOmegaAssets = omega_assets_name;
                 return;
             }
@@ -132,9 +132,9 @@ public class Context {
     }
 
     public static String t9n(String s) {
-        if ( s == null )
+        if (s == null)
             return null;
-        if ( s.startsWith("t9n/") )
+        if (s.startsWith("t9n/"))
             return s;
         return "t9n/" + s;
     }

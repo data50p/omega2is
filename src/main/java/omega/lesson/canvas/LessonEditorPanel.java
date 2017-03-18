@@ -7,6 +7,7 @@ import omega.anim.appl.EditStateListener;
 import omega.i18n.T;
 import omega.lesson.machine.Item;
 import omega.lesson.machine.Target;
+import omega.lesson.settings.ChooseOmegaAssetsDir;
 import omega.swing.GBC_Factory;
 import omega.util.Files;
 import omega.value.Value;
@@ -23,6 +24,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 
 public class LessonEditorPanel extends JPanel {
     GBC_Factory gbcf = new GBC_Factory();
@@ -33,6 +35,7 @@ public class LessonEditorPanel extends JPanel {
     JButton redraw;
     JButton editanim;
     JButton playSign;
+    JButton setAssets;
 
     public LessonCanvas le_canvas;
 
@@ -227,6 +230,25 @@ public class LessonEditorPanel extends JPanel {
             if (s.equals("getOmegaAssetsDependenciec")) {
                 popupOmegaAssetsProp();
             }
+            if (s.equals("setassets")) {
+                Boolean old = UIManager.getBoolean("FileChooser.readOnly");
+                ChooseOmegaAssetsDir chooseOmegaAssetsDir = new ChooseOmegaAssetsDir();
+                UIManager.put("FileChooser.readOnly", old);
+
+                String url_s = null;
+                int rv = chooseOmegaAssetsDir.showDialog(null, T.t("Select"));
+                if (rv == JFileChooser.APPROVE_OPTION) {
+                    File file = chooseOmegaAssetsDir.getSelectedFile();
+                    try {
+                        url_s = Files.toURL(file.getCanonicalFile());
+                        url_s = url_s.replaceAll("/$", "");
+                        String oa = omega.util.Files.mkRelativeCWD(url_s);
+                        System.err.println("setOmegaAssets: " + url_s);
+                        omega.Context.setOmegaAssets(oa);
+                    } catch (IOException e) {
+                    }
+                }
+            }
         }
 
         private void playSign() {
@@ -312,6 +334,7 @@ public class LessonEditorPanel extends JPanel {
 
         add(editorLessonLang = new JTextField(T.t("Lesson Lang")), gbcf.createL(X++, Y, 1));
         editorLessonLang.setText(Context.getLessonLang());
+        editorLessonLang.setMinimumSize(new Dimension(50, 20));
 
         Y++;
         X = 0;
@@ -337,6 +360,10 @@ public class LessonEditorPanel extends JPanel {
         add(editanim = new JButton(T.t("Edit anim")), gbcf.createL(X++, Y, 1));
         editanim.setActionCommand("editanim");
         editanim.addActionListener(myactl);
+
+        add(setAssets = new JButton(T.t("Set Assets")), gbcf.createL(X++, Y, 1));
+        setAssets.setActionCommand("setassets");
+        setAssets.addActionListener(myactl);
     }
 
     void destroyAllPopups() {

@@ -8,13 +8,13 @@ import java.io.File;
 
 public class ChooseMovieFile extends JFileChooser {
     ChooseMovieFile() {
-	super(new File("media"));
-	ExtensionFileFilter fi = new ExtensionFileFilter(new String[]{"mpg",
-		"mpeg",
-		"mov",
-		"avi"});
-	setFileFilter(fi);
-	setApproveButtonText(T.t("Select"));
+        super(new File("media"));
+        ExtensionFileFilter fi = new ExtensionFileFilter(new String[]{"mpg",
+                "mpeg",
+                "mov",
+                "avi"});
+        setFileFilter(fi);
+        setApproveButtonText(T.t("Select"));
     }
 }
 

@@ -29,202 +29,202 @@ public class JPlayer implements LineListener {
 
 
     private static void s_pe(String s) {
-	if (o)
-	    System.err.println(s);
+        if (o)
+            System.err.println(s);
     }
 
     private static void s_pe_(String s) {
-	if (o)
-	    System.err.print(s);
+        if (o)
+            System.err.print(s);
     }
 
     static {
-	String bs = omega.appl.Settings.getSettings().getString("audio-bufsize");
-	if (bs != null) {
-	    int bs_i = 1024 * Integer.parseInt(bs);
-	    N = bs_i;
-	}
+        String bs = omega.appl.Settings.getSettings().getString("audio-bufsize");
+        if (bs != null) {
+            int bs_i = 1024 * Integer.parseInt(bs);
+            N = bs_i;
+        }
 
-	bs = omega.appl.Settings.getSettings().getString("audio-write-ahead");
-	if (bs != null) {
-	    wah = Integer.parseInt(bs);
-	}
+        bs = omega.appl.Settings.getSettings().getString("audio-write-ahead");
+        if (bs != null) {
+            wah = Integer.parseInt(bs);
+        }
 
-	if (omega.appl.Settings.getSettings().getBoolean("audio-silent"))
-	    silent = true;
-	else
-	    silent = false;
+        if (omega.appl.Settings.getSettings().getBoolean("audio-silent"))
+            silent = true;
+        else
+            silent = false;
 
-	if (omega.appl.Settings.getSettings().getBoolean("audio-debug"))
-	    o = true;
-	else
-	    o = false;
-o=true;
+        if (omega.appl.Settings.getSettings().getBoolean("audio-debug"))
+            o = true;
+        else
+            o = false;
+        o = true;
 
-	omega.Context.sout_log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
-	Log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
+        omega.Context.sout_log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
+        Log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
     }
 
     JPlayer(String fn) {
-	omega.Context.sout_log.getLogger().info("INIT: " + "JPlayer: fn = " + fn);
+        omega.Context.sout_log.getLogger().info("INIT: " + "JPlayer: fn = " + fn);
 
-	this.fn = fn;
-	realy_name = fn;
-	try {
-	    File file = new File(fn);
-	    ais = AudioSystem.getAudioInputStream(file);
-	    aformat = ais.getFormat();
-	    sdataline = getSourceDataLine(aformat);
-	    sdataline.addLineListener(this);
+        this.fn = fn;
+        realy_name = fn;
+        try {
+            File file = new File(fn);
+            ais = AudioSystem.getAudioInputStream(file);
+            aformat = ais.getFormat();
+            sdataline = getSourceDataLine(aformat);
+            sdataline.addLineListener(this);
 
-	    omega.Context.sout_log.getLogger().info("<init>: " + "JPlayer0: " + ais + ' ' + aformat + ' ' + sdataline);
-	} catch (Exception ex) {
-	    ais = null;
-	    aformat = null;
-	    sdataline = null;
-	    done = true;
-	    omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer1: " + ex);
-	}
+            omega.Context.sout_log.getLogger().info("<init>: " + "JPlayer0: " + ais + ' ' + aformat + ' ' + sdataline);
+        } catch (Exception ex) {
+            ais = null;
+            aformat = null;
+            sdataline = null;
+            done = true;
+            omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer1: " + ex);
+        }
     }
 
     public static SourceDataLine getSourceDataLine(AudioFormat format) throws LineUnavailableException {
-	DataLine.Info info = new DataLine.Info(SourceDataLine.class, format);
+        DataLine.Info info = new DataLine.Info(SourceDataLine.class, format);
 
-	return (SourceDataLine) AudioSystem.getLine(info);
+        return (SourceDataLine) AudioSystem.getLine(info);
     }
 
     Object w_w = new Object();
 
     void waitAudio() {
-	synchronized (lock) {
-	    try {
-		while (!done)
-		    lock.wait(1000);
-	    } catch (InterruptedException ex) {
-	    }
-	}
+        synchronized (lock) {
+            try {
+                while (!done)
+                    lock.wait(1000);
+            } catch (InterruptedException ex) {
+            }
+        }
     }
 
     static final byte[] silent_buf = new byte[4096 * 4];
 
     void play() {
-	try {
-	    Thread th = new Thread(new Runnable() {
-		public void run() {
-		    try {
-			//Thread.currentThread().setPriority(Thread.NORM_PRIORITY + 3);
+        try {
+            Thread th = new Thread(new Runnable() {
+                public void run() {
+                    try {
+                        //Thread.currentThread().setPriority(Thread.NORM_PRIORITY + 3);
 
-			sdataline.open(aformat);
-			waitOpen();
-			sdataline.start();
+                        sdataline.open(aformat);
+                        waitOpen();
+                        sdataline.start();
 
-			byte[] ba = new byte[N];
-			for (int i = 0; ; i++) {
-			    int n = ais.read(ba);
-			    if (n < 0)
-				break;
-			    sdataline.write(ba, 0, n);
-			    if (i < wah)
-				s_pe_("{w}");
-			    else
-				s_pe_("{W}");
+                        byte[] ba = new byte[N];
+                        for (int i = 0; ; i++) {
+                            int n = ais.read(ba);
+                            if (n < 0)
+                                break;
+                            sdataline.write(ba, 0, n);
+                            if (i < wah)
+                                s_pe_("{w}");
+                            else
+                                s_pe_("{W}");
 
-			    if (wah > 0 && i == wah) {
-				s_pe("-w-");
-				waitStart();
-				s_pe("-W-");
-			    }
-			}
-			s_pe(">d>");
-			sdataline.drain();
-			done = true;
-			synchronized (lock) {
-			    lock.notifyAll();
-			}
-			if (silent) {
-			    sdataline.write(silent_buf, 0, silent_buf.length);
-			    s_pe(">D>");
-			    sdataline.drain();
-			}
+                            if (wah > 0 && i == wah) {
+                                s_pe("-w-");
+                                waitStart();
+                                s_pe("-W-");
+                            }
+                        }
+                        s_pe(">d>");
+                        sdataline.drain();
+                        done = true;
+                        synchronized (lock) {
+                            lock.notifyAll();
+                        }
+                        if (silent) {
+                            sdataline.write(silent_buf, 0, silent_buf.length);
+                            s_pe(">D>");
+                            sdataline.drain();
+                        }
 
-			ais.close();
-			ais = null;
+                        ais.close();
+                        ais = null;
 
-			s_pe(">S>");
-			sdataline.stop();
-			s_pe(">C>");
-			sdataline.close();
-		    } catch (Exception ex) {
-			omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer2: " + ex);
-			ex.printStackTrace();
-		    } finally {
-			//			    sdataline.removeLineListener(JPlayer.this);
-			sdataline = null;
-			synchronized (lock) {
-			    lock.notifyAll();
-			}
-		    }
-		}
-	    });
-	    th.start();
-	} catch (Exception ex) {
-	    omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer3: " + ex);
-	}
+                        s_pe(">S>");
+                        sdataline.stop();
+                        s_pe(">C>");
+                        sdataline.close();
+                    } catch (Exception ex) {
+                        omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer2: " + ex);
+                        ex.printStackTrace();
+                    } finally {
+                        //			    sdataline.removeLineListener(JPlayer.this);
+                        sdataline = null;
+                        synchronized (lock) {
+                            lock.notifyAll();
+                        }
+                    }
+                }
+            });
+            th.start();
+        } catch (Exception ex) {
+            omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer3: " + ex);
+        }
     }
 
     private void waitOpen() {
-	synchronized (this) {
-	    while (!opened) {
-		try {
-		    wait(5000);
-		    return;
-		} catch (InterruptedException ie) {
-		}
-	    }
-	}
+        synchronized (this) {
+            while (!opened) {
+                try {
+                    wait(5000);
+                    return;
+                } catch (InterruptedException ie) {
+                }
+            }
+        }
     }
 
     private void waitStart() {
-	synchronized (this) {
-	    if (!started) {
-		while (!started) {
-		    try {
-			wait(5000);
-		    } catch (InterruptedException ie) {
-		    }
-		}
-	    }
-	}
+        synchronized (this) {
+            if (!started) {
+                while (!started) {
+                    try {
+                        wait(5000);
+                    } catch (InterruptedException ie) {
+                    }
+                }
+            }
+        }
     }
 
     private void waitEOM() {
-	synchronized (this) {
-	    while (!eom) {
-		try {
-		    wait(5000);
-		    return;
-		} catch (InterruptedException ie) {
-		}
-	    }
-	}
+        synchronized (this) {
+            while (!eom) {
+                try {
+                    wait(5000);
+                    return;
+                } catch (InterruptedException ie) {
+                }
+            }
+        }
     }
 
     public synchronized void update(LineEvent le) {
-	LineEvent.Type t = le.getType();
+        LineEvent.Type t = le.getType();
 
-	if (t == LineEvent.Type.OPEN) {
-	    opened = true;
-	    s_pe("+O+");
-	} else if (t == LineEvent.Type.START) {
-	    started = true;
-	    s_pe("+s+");
-	} else if (t == LineEvent.Type.CLOSE) {
-	    eom = true;
-	    s_pe("+C+");
-	} else if (t == LineEvent.Type.STOP) {
-	    s_pe("+S+");
-	}
+        if (t == LineEvent.Type.OPEN) {
+            opened = true;
+            s_pe("+O+");
+        } else if (t == LineEvent.Type.START) {
+            started = true;
+            s_pe("+s+");
+        } else if (t == LineEvent.Type.CLOSE) {
+            eom = true;
+            s_pe("+C+");
+        } else if (t == LineEvent.Type.STOP) {
+            s_pe("+S+");
+        }
 
-	notifyAll();
+        notifyAll();
     }
 }

@@ -9,18 +9,18 @@ abstract public class Entry {
     abstract Element getElement();
 
     static Entry create(Element entry) {
-	String ty = entry.findAttr("type");
-	Entry e = null;
-	if ("select".equals(ty))
-	    e = new SelectEntry(entry);
-	if ("test".equals(ty))
-	    e = new TestEntry(entry);
-	if ("create".equals(ty))
-	    e = new CreateEntry(entry);
-	return e;
+        String ty = entry.findAttr("type");
+        Entry e = null;
+        if ("select".equals(ty))
+            e = new SelectEntry(entry);
+        if ("test".equals(ty))
+            e = new TestEntry(entry);
+        if ("create".equals(ty))
+            e = new CreateEntry(entry);
+        return e;
     }
 
     public String toString() {
-	return "Entry{}";
+        return "Entry{}";
     }
 }

@@ -11,9 +11,9 @@ public class ChooseStoryFile extends JFileChooser {
     static String ext = "omega_story_replay";
 
     public ChooseStoryFile(String dir) {
-	super(new File(dir));
-	ExtensionFileFilter fi = new ExtensionFileFilter();
-	fi.addExtension(ext);
-	setFileFilter(fi);
+        super(new File(dir));
+        ExtensionFileFilter fi = new ExtensionFileFilter();
+        fi.addExtension(ext);
+        setFileFilter(fi);
     }
 }

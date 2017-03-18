@@ -8,64 +8,64 @@ public class StatValue1 {
     int cnt;
 
     int asInt(String s) {
-	s = s.replace('-', ' ');
-	s = s.replace('+', ' ');
-	int a = Integer.parseInt(s.trim());
-	return a;
+        s = s.replace('-', ' ');
+        s = s.replace('+', ' ');
+        int a = Integer.parseInt(s.trim());
+        return a;
     }
 
     void add(double v) {
-	sum += v;
-	cnt++;
+        sum += v;
+        cnt++;
     }
 
     void add(String s) {
-	int v = asInt(s);
-	add(v);
+        int v = asInt(s);
+        add(v);
     }
 
     double getAvg() {
-	return 100.0 * sum / cnt;
+        return 100.0 * sum / cnt;
     }
 
     double getAvg_minus() {
-	return 100.0 * sum / cnt;
+        return 100.0 * sum / cnt;
     }
 
     double getAvgTot(int n) {
-	return 100.0 * sum / n;
+        return 100.0 * sum / n;
     }
 
     double getTotal() {
-	return sum;
+        return sum;
     }
 
     int getCnt() {
-	return cnt;
+        return cnt;
     }
 
     String getTotal(String prfx) {
-	return prfx + getTotal();
+        return prfx + getTotal();
     }
 
     String getTotalInt(String prfx) {
-	return prfx + (int) getTotal();
+        return prfx + (int) getTotal();
     }
 
     String getAvg(String prfx, String suf) {
-	DecimalFormat df = new DecimalFormat("##0.0#");
-	String s = df.format(getAvg());
-	return prfx + s + suf;
+        DecimalFormat df = new DecimalFormat("##0.0#");
+        String s = df.format(getAvg());
+        return prfx + s + suf;
     }
 
     String getAvgTot(String prfx, String suf, int n) {
-	DecimalFormat df = new DecimalFormat("##0.0#");
-	String s = df.format(getAvgTot(n));
-	return prfx + s + suf;
+        DecimalFormat df = new DecimalFormat("##0.0#");
+        String s = df.format(getAvgTot(n));
+        return prfx + s + suf;
     }
 
     String getCnt(String prfx) {
-	return prfx + getCnt();
+        return prfx + getCnt();
     }
 }
 // class StatValue1 {

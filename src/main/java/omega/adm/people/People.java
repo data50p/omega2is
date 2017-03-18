@@ -5,13 +5,13 @@ public abstract class People {
     public String name;
 
     public void setName(String name) {
-	if (name == null)
-	    this.name = null_name;
-	else
-	    this.name = name;
+        if (name == null)
+            this.name = null_name;
+        else
+            this.name = name;
     }
 
     public String toString() {
-	return "People{" + name + "}";
+        return "People{" + name + "}";
     }
 }

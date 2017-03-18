@@ -11,7 +11,7 @@ import java.net.URL;
 /**
  * Created by lars on 2017-02-18.
  */
-public class SwingUtils {
+public class OmegaSwingUtils {
     public static ImageIcon getImageIcon(String path) {
         try {
             Image im = getImage(path);
@@ -25,7 +25,7 @@ public class SwingUtils {
 
     public static Image getImage(String path) {
         try {
-            URL url = SwingUtils.class.getClassLoader().getResource(path);
+            URL url = OmegaSwingUtils.class.getClassLoader().getResource(path);
             BufferedImage c = ImageIO.read(url);
             return c;
         } catch (Exception e) {

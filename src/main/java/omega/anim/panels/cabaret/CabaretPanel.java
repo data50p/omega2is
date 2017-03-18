@@ -34,335 +34,335 @@ public class CabaretPanel extends JPanel {
     int selected_dst_fld;
 
     Cabaret getCab() {
-	return ae.a_ctxt.anim_canvas.cab;
+        return ae.a_ctxt.anim_canvas.cab;
     }
 
     public CabaretPanel(omega.anim.appl.AnimEditor ae) {
-	this.ae = ae;
-	setLayout(new BorderLayout());
+        this.ae = ae;
+        setLayout(new BorderLayout());
 
 //	actA = new ActA();
 
-	setMinimumSize(new Dimension(IMSIZE * ACT_N, IMSIZE + 20));
-	setMaximumSize(new Dimension(IMSIZE * ACT_N, IMSIZE + 20));
-	setPreferredSize(new Dimension(IMSIZE * ACT_N, IMSIZE + 20));
-	m = new Mouse();
+        setMinimumSize(new Dimension(IMSIZE * ACT_N, IMSIZE + 20));
+        setMaximumSize(new Dimension(IMSIZE * ACT_N, IMSIZE + 20));
+        setPreferredSize(new Dimension(IMSIZE * ACT_N, IMSIZE + 20));
+        m = new Mouse();
     }
 
     void replaceActor(int ixx) {
-	if (ae != null)
-	    ae.replaceActor(ixx);
+        if (ae != null)
+            ae.replaceActor(ixx);
     }
 
     void deleteActor(int ixx) {
-	if (ae != null)
-	    ae.deleteActor(ixx);
+        if (ae != null)
+            ae.deleteActor(ixx);
     }
 
     Actor getActor(int ix) {
-	return getCab().getActor(ix);
+        return getCab().getActor(ix);
     }
 
     GImAE getGImAE(int ix) {
-	return getCab().actA.getGImAE(ix);
+        return getCab().actA.getGImAE(ix);
     }
 
     void setPropTarget(int ixx) {
-	if (prop != null)
-	    prop.setTarget(getActor(ixx), ixx);
-	if (prop != null) {
-	    int tl_nid = getCab().getTLnid(ixx);
-	    omega.anim.tool.timeline.TimeLine tl = ae.a_ctxt.mtl.getTimeLine(tl_nid);
-	}
-	selected = ixx;
-	repaint();
+        if (prop != null)
+            prop.setTarget(getActor(ixx), ixx);
+        if (prop != null) {
+            int tl_nid = getCab().getTLnid(ixx);
+            omega.anim.tool.timeline.TimeLine tl = ae.a_ctxt.mtl.getTimeLine(tl_nid);
+        }
+        selected = ixx;
+        repaint();
     }
 
     public void addChangeListener(ChangeListener li) {
-	cLiLi.add(li);
+        cLiLi.add(li);
     }
 
     void fireStateChange() {
-	Iterator it = cLiLi.iterator();
-	while (it.hasNext()) {
-	    ChangeListener cli = (ChangeListener) it.next();
-	    cli.stateChanged(new ChangeEvent(this));
-	}
+        Iterator it = cLiLi.iterator();
+        while (it.hasNext()) {
+            ChangeListener cli = (ChangeListener) it.next();
+            cli.stateChanged(new ChangeEvent(this));
+        }
     }
 
     class Mouse extends MouseInputAdapter {
-	Point2D mpress_p;
+        Point2D mpress_p;
 
-	Mouse() {
-	    addMouseListener(this);
-	    addMouseMotionListener(this);
-	}
+        Mouse() {
+            addMouseListener(this);
+            addMouseMotionListener(this);
+        }
 
-	private void fldState(MouseEvent e) {
-	    if (e.getY() > IMSIZE &&
-		    e.getY() < IMSIZE + 20)
-		fld_state_id = true;
-	    else
-		fld_state_id = false;
-	}
+        private void fldState(MouseEvent e) {
+            if (e.getY() > IMSIZE &&
+                    e.getY() < IMSIZE + 20)
+                fld_state_id = true;
+            else
+                fld_state_id = false;
+        }
 
-	public void mousePressed(MouseEvent e) {
-	    fldState(e);
+        public void mousePressed(MouseEvent e) {
+            fldState(e);
 
-	    boolean pt = e.isPopupTrigger();
+            boolean pt = e.isPopupTrigger();
 
-	    int ixx = e.getX() / IMSIZE;
+            int ixx = e.getX() / IMSIZE;
 
-	    if (ixx >= ACT_N)
-		return;
+            if (ixx >= ACT_N)
+                return;
 
-	    if (pt) {
-		popup(ixx);
-		return;
-	    }
+            if (pt) {
+                popup(ixx);
+                return;
+            }
 
-	    setPropTarget(ixx);
+            setPropTarget(ixx);
 
-	    mpress_p = new Point2D.Double(e.getX(), e.getY());
-	    if (e.getY() < IMSIZE) {
-	    } else {
-		selected_dst_fld = ixx;
-		selected_src_fld = ixx;
-	    }
-	    repaint();
-	}
+            mpress_p = new Point2D.Double(e.getX(), e.getY());
+            if (e.getY() < IMSIZE) {
+            } else {
+                selected_dst_fld = ixx;
+                selected_src_fld = ixx;
+            }
+            repaint();
+        }
 
-	public void mouseMoved(MouseEvent e) {
-	}
+        public void mouseMoved(MouseEvent e) {
+        }
 
-	public void mouseDragged(MouseEvent e) {
-	    int ixx = e.getX() / IMSIZE;
-	    if (ixx >= ACT_N)
-		return;
-	    fldState(e);
-	    selected_dst_fld = ixx;
-	    repaint();
-	}
+        public void mouseDragged(MouseEvent e) {
+            int ixx = e.getX() / IMSIZE;
+            if (ixx >= ACT_N)
+                return;
+            fldState(e);
+            selected_dst_fld = ixx;
+            repaint();
+        }
 
-	public void mouseReleased(MouseEvent e) {
-	    boolean pt = e.isPopupTrigger();
+        public void mouseReleased(MouseEvent e) {
+            boolean pt = e.isPopupTrigger();
 
-	    fldState(e);
+            fldState(e);
 
-	    if (pt) {
-		int ixx = e.getX() / IMSIZE;
-		if (ixx >= ACT_N)
-		    return;
-		popup(ixx);
-		return;
-	    }
+            if (pt) {
+                int ixx = e.getX() / IMSIZE;
+                if (ixx >= ACT_N)
+                    return;
+                popup(ixx);
+                return;
+            }
 
-	    int ixx = e.getX() / IMSIZE;
-	    if (ixx >= ACT_N)
-		return;
-	    if (fld_state_id &&
-		    selected_src_fld != EMPTY &&
-		    selected_dst_fld != EMPTY &&
-		    selected_src_fld != selected_dst_fld) {
-		ae.a_ctxt.anim_canvas.hideActors();
-		int tl_nid1 = getCab().actA.arr[selected_src_fld].tl_nid;
-		int tl_nid2 = getCab().actA.arr[selected_dst_fld].tl_nid;
-		getCab().actA.arr[selected_src_fld].tl_nid = tl_nid2;
-		getCab().actA.arr[selected_dst_fld].tl_nid = tl_nid1;
-		selected_dst_fld = selected_src_fld = EMPTY;
-		fireStateChange();
-	    } else {
-		selected_dst_fld = selected_src_fld = EMPTY;
-	    }
-	    repaint();
-	}
+            int ixx = e.getX() / IMSIZE;
+            if (ixx >= ACT_N)
+                return;
+            if (fld_state_id &&
+                    selected_src_fld != EMPTY &&
+                    selected_dst_fld != EMPTY &&
+                    selected_src_fld != selected_dst_fld) {
+                ae.a_ctxt.anim_canvas.hideActors();
+                int tl_nid1 = getCab().actA.arr[selected_src_fld].tl_nid;
+                int tl_nid2 = getCab().actA.arr[selected_dst_fld].tl_nid;
+                getCab().actA.arr[selected_src_fld].tl_nid = tl_nid2;
+                getCab().actA.arr[selected_dst_fld].tl_nid = tl_nid1;
+                selected_dst_fld = selected_src_fld = EMPTY;
+                fireStateChange();
+            } else {
+                selected_dst_fld = selected_src_fld = EMPTY;
+            }
+            repaint();
+        }
     }
 
     public void resetCabaretOrder() {
-	selected_dst_fld = selected_src_fld = EMPTY;
-	getCab().newActA();
-	fireStateChange();
+        selected_dst_fld = selected_src_fld = EMPTY;
+        getCab().newActA();
+        fireStateChange();
     }
 
     public void popup(int ix) {
-	if (prop == null) {
-	    JFrame owner = (JFrame) getTopLevelAncestor();
-	    prop = new CabaretProperties(owner, this);
+        if (prop == null) {
+            JFrame owner = (JFrame) getTopLevelAncestor();
+            prop = new CabaretProperties(owner, this);
 //	    prop_pa = new CabaretPathProperties(owner, this);
-	}
-	prop.setVisible(true);
+        }
+        prop.setVisible(true);
 //	prop_pa.setVisible(true);
-	setPropTarget(ix);
+        setPropTarget(ix);
     }
 
     public Actor getActorInPanel(int tl_nid) {
-	int ix = getCab().actA.findOrdTL(tl_nid);
-	if (ix >= 0)
-	    return getActor(ix);
-	return null;
+        int ix = getCab().actA.findOrdTL(tl_nid);
+        if (ix >= 0)
+            return getActor(ix);
+        return null;
     }
 
     public Actor getActorInPanelAbs(int ix) {
-	return getActor(ix);
+        return getActor(ix);
     }
 
     // NOFATAL FIX alloc tl_nid
 
     public int setActorInPanelAbs(Actor ac, int ix) {
-	if (ix >= 0 && ix < getCab().actA.arr.length) {
-	    int tl_nid = getCab().getTLnid(ix);//actA.arr[ix].tl_nid;
-	    if (tl_nid == EMPTY) {
-		int fix = getCab().actA.findOrdTL(ix);
-		if (fix == -1) {
-		    fix = getCab().actA.findFree();
-		    if (fix < 4) {
-			ix = fix;
-			getCab().actA.arr[ix].tl_nid = ix;
-		    }
-		} else
-		    ix = fix;
-	    }
-	    getCab().actA.arr[ix].ac = ac;
-	    repaint();
-	    setPropTarget(ix);
+        if (ix >= 0 && ix < getCab().actA.arr.length) {
+            int tl_nid = getCab().getTLnid(ix);//actA.arr[ix].tl_nid;
+            if (tl_nid == EMPTY) {
+                int fix = getCab().actA.findOrdTL(ix);
+                if (fix == -1) {
+                    fix = getCab().actA.findFree();
+                    if (fix < 4) {
+                        ix = fix;
+                        getCab().actA.arr[ix].tl_nid = ix;
+                    }
+                } else
+                    ix = fix;
+            }
+            getCab().actA.arr[ix].ac = ac;
+            repaint();
+            setPropTarget(ix);
 
-	    return tl_nid;
-	} else
-	    return -1;
+            return tl_nid;
+        } else
+            return -1;
     }
 
     void draw(Graphics2D g2) {
-	g2.setColor(new Color(110, 110, 110));
-	g2.fillRect(0, 0, 2000, 1000);
-	g2.setColor(new Color(35, 35, 110));
-	g2.fillRect(0, 0, IMSIZE * ACT_N, IMSIZE);
+        g2.setColor(new Color(110, 110, 110));
+        g2.fillRect(0, 0, 2000, 1000);
+        g2.setColor(new Color(35, 35, 110));
+        g2.fillRect(0, 0, IMSIZE * ACT_N, IMSIZE);
 
-	for (int i = 0; i < getCab().actA.arr.length; i++) {
-	    if (getCab().actA.arr[i] != null) {
-		AffineTransform at = new AffineTransform();
+        for (int i = 0; i < getCab().actA.arr.length; i++) {
+            if (getCab().actA.arr[i] != null) {
+                AffineTransform at = new AffineTransform();
 
-		int tl_nid = getCab().getTLnid(i); // actA.arr[i].tl_nid;
-		try {
-		    GImAE gimae = getGImAE(i);
-		    if (gimae != null) {
-			Image im = gimae.getBaseImage();
+                int tl_nid = getCab().getTLnid(i); // actA.arr[i].tl_nid;
+                try {
+                    GImAE gimae = getGImAE(i);
+                    if (gimae != null) {
+                        Image im = gimae.getBaseImage();
 
-			int im_w = im.getWidth(null);
-			int im_h = im.getHeight(null);
+                        int im_w = im.getWidth(null);
+                        int im_h = im.getHeight(null);
 
-			double asp_x = im_w / (double) IMSIZE;
-			double asp_y = im_h / (double) IMSIZE;
-			double asp = asp_x < asp_y ? asp_y : asp_x;
+                        double asp_x = im_w / (double) IMSIZE;
+                        double asp_y = im_h / (double) IMSIZE;
+                        double asp = asp_x < asp_y ? asp_y : asp_x;
 
-			at.translate(i * IMSIZE, 0);
-			double scale = 1.0 / asp;
-			at.scale(scale, scale);
+                        at.translate(i * IMSIZE, 0);
+                        double scale = 1.0 / asp;
+                        at.scale(scale, scale);
 
-			g2.drawImage(im, at, null);
+                        g2.drawImage(im, at, null);
 
-			if (tl_nid < omega.Config.TIMELINES_N) {
+                        if (tl_nid < omega.Config.TIMELINES_N) {
 
-			    int ww = getGImAE(i).imw;
-			    int hh = getGImAE(i).imh;
-			    double fx, fy;
-			    if (ww > hh) {
-				fx = 1.0;
-				fy = (double) hh / ww;
-			    } else {
-				fy = 1.0;
-				fx = (double) ww / hh;
-			    }
+                            int ww = getGImAE(i).imw;
+                            int hh = getGImAE(i).imh;
+                            double fx, fy;
+                            if (ww > hh) {
+                                fx = 1.0;
+                                fy = (double) hh / ww;
+                            } else {
+                                fy = 1.0;
+                                fx = (double) ww / hh;
+                            }
 
-			    if (selected == i) {
-				int xx = i * IMSIZE;
+                            if (selected == i) {
+                                int xx = i * IMSIZE;
 
-				g2.setColor(Color.yellow);
-				g2.drawRect(xx, 0, IMSIZE - 1, IMSIZE - 1);
-			    }
-			}
-		    }
-		} catch (NullPointerException ex) {
-		}
+                                g2.setColor(Color.yellow);
+                                g2.drawRect(xx, 0, IMSIZE - 1, IMSIZE - 1);
+                            }
+                        }
+                    }
+                } catch (NullPointerException ex) {
+                }
 
-		// fld id
+                // fld id
 
-		Color idf = new Color(135, 135, 210);
-		g2.setColor(idf);
-		if (i == selected_src_fld)
-		    g2.setColor(idf.darker());
-		if (i == selected_dst_fld && fld_state_id)
-		    g2.setColor(idf.brighter());
+                Color idf = new Color(135, 135, 210);
+                g2.setColor(idf);
+                if (i == selected_src_fld)
+                    g2.setColor(idf.darker());
+                if (i == selected_dst_fld && fld_state_id)
+                    g2.setColor(idf.brighter());
 
-		g2.fillRect(i * IMSIZE, IMSIZE, IMSIZE, 20);
+                g2.fillRect(i * IMSIZE, IMSIZE, IMSIZE, 20);
 
-		g2.setColor(Color.white);
+                g2.setColor(Color.white);
 
 
-		if (tl_nid >= 0 && tl_nid < omega.Config.TIMELINES_N) {
-		    GImAE gimae = getGImAE(i);
+                if (tl_nid >= 0 && tl_nid < omega.Config.TIMELINES_N) {
+                    GImAE gimae = getGImAE(i);
 
-		    // ae.ae_ctxt.mtl;
-		    omega.anim.tool.timeline.TimeLine tl = ae.a_ctxt.mtl.getTimeLine(tl_nid);
-		    String ID = "";
-		    if (tl != null)
-			ID = tl.getLessonId();
+                    // ae.ae_ctxt.mtl;
+                    omega.anim.tool.timeline.TimeLine tl = ae.a_ctxt.mtl.getTimeLine(tl_nid);
+                    String ID = "";
+                    if (tl != null)
+                        ID = tl.getLessonId();
 
-		    g2.drawString("" + (tl_nid + 1) + ": " + ID,
-			    5 + i * IMSIZE,
-			    IMSIZE + 16);
-		}
+                    g2.drawString("" + (tl_nid + 1) + ": " + ID,
+                            5 + i * IMSIZE,
+                            IMSIZE + 16);
+                }
 
-		g2.setColor(new Color(35, 35, 110));
-		g2.drawLine(i * IMSIZE, IMSIZE, i * IMSIZE, IMSIZE + 20);
-	    }
-	}
-	if (EMPTY != selected_src_fld &&
-		EMPTY != selected_dst_fld)
-	    drawArrFld(g2, selected_src_fld, selected_dst_fld);
+                g2.setColor(new Color(35, 35, 110));
+                g2.drawLine(i * IMSIZE, IMSIZE, i * IMSIZE, IMSIZE + 20);
+            }
+        }
+        if (EMPTY != selected_src_fld &&
+                EMPTY != selected_dst_fld)
+            drawArrFld(g2, selected_src_fld, selected_dst_fld);
     }
 
     private void drawArrFld(Graphics2D g2, int src, int dst) {
-	g2.setColor(Color.black);
-	int h = IMSIZE + 10;
-	if (src == dst) {
-	    g2.drawLine(src * IMSIZE, h,
-		    (dst + 1) * IMSIZE, h);
-	    g2.drawLine(dst * IMSIZE, h,
-		    dst * IMSIZE + 5, h - 5);
-	    g2.drawLine(dst * IMSIZE, h,
-		    dst * IMSIZE + 5, h + 5);
-	    g2.drawLine((dst + 1) * IMSIZE, h,
-		    (dst + 1) * IMSIZE - 5, h - 5);
-	    g2.drawLine((dst + 1) * IMSIZE, h,
-		    (dst + 1) * IMSIZE - 5, h + 5);
-	} else if (src < dst) {
-	    g2.drawLine(src * IMSIZE, h,
-		    dst * IMSIZE, h);
-	    g2.drawLine(dst * IMSIZE, h,
-		    dst * IMSIZE - 5, h - 5);
-	    g2.drawLine(dst * IMSIZE, h,
-		    dst * IMSIZE - 5, h + 5);
-	} else {
-	    g2.drawLine(src * IMSIZE, h,
-		    dst * IMSIZE + 15, h);
-	    g2.drawLine(dst * IMSIZE + 15, h,
-		    dst * IMSIZE + 15 + 5, h - 5);
-	    g2.drawLine(dst * IMSIZE + 15, h,
-		    dst * IMSIZE + 15 + 5, h + 5);
-	}
+        g2.setColor(Color.black);
+        int h = IMSIZE + 10;
+        if (src == dst) {
+            g2.drawLine(src * IMSIZE, h,
+                    (dst + 1) * IMSIZE, h);
+            g2.drawLine(dst * IMSIZE, h,
+                    dst * IMSIZE + 5, h - 5);
+            g2.drawLine(dst * IMSIZE, h,
+                    dst * IMSIZE + 5, h + 5);
+            g2.drawLine((dst + 1) * IMSIZE, h,
+                    (dst + 1) * IMSIZE - 5, h - 5);
+            g2.drawLine((dst + 1) * IMSIZE, h,
+                    (dst + 1) * IMSIZE - 5, h + 5);
+        } else if (src < dst) {
+            g2.drawLine(src * IMSIZE, h,
+                    dst * IMSIZE, h);
+            g2.drawLine(dst * IMSIZE, h,
+                    dst * IMSIZE - 5, h - 5);
+            g2.drawLine(dst * IMSIZE, h,
+                    dst * IMSIZE - 5, h + 5);
+        } else {
+            g2.drawLine(src * IMSIZE, h,
+                    dst * IMSIZE + 15, h);
+            g2.drawLine(dst * IMSIZE + 15, h,
+                    dst * IMSIZE + 15 + 5, h - 5);
+            g2.drawLine(dst * IMSIZE + 15, h,
+                    dst * IMSIZE + 15 + 5, h + 5);
+        }
     }
 
     public Dimension getPreferredSize() {
-	return new Dimension(IMSIZE * ACT_N, IMSIZE + 20);
+        return new Dimension(IMSIZE * ACT_N, IMSIZE + 20);
     }
 
     public void paintComponent(Graphics g) {
-	Graphics2D g2 = (Graphics2D) g;
-	draw(g2);
+        Graphics2D g2 = (Graphics2D) g;
+        draw(g2);
     }
 
     public void setSelected(boolean b) {
-	if (prop != null)
-	    prop.enableDelete(b);
+        if (prop != null)
+            prop.enableDelete(b);
     }
 }

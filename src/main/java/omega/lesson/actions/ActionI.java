@@ -10,11 +10,11 @@ public interface ActionI {
     public Element prefetch(String action_s);
 
     public void perform(Window window,
-			String action_s,
-			String[] actA,
-			String[] pathA,
-			int ord,
-			Runnable hook);
+                        String action_s,
+                        String[] actA,
+                        String[] pathA,
+                        int ord,
+                        Runnable hook);
 
     public void show();
 

@@ -10,9 +10,9 @@ import java.io.File;
 
 public class ChooseSignFile extends JFileChooser {
     ChooseSignFile() {
-	super(new File(Context.omegaAssets("media/sign")));
-	ExtensionFileFilter fi = new ExtensionFileFilter();
-	fi.addExtension("mpg");
-	setFileFilter(fi);
+        super(new File(Context.omegaAssets("media/sign")));
+        ExtensionFileFilter fi = new ExtensionFileFilter();
+        fi.addExtension("mpg");
+        setFileFilter(fi);
     }
 }

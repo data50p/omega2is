@@ -81,7 +81,7 @@ public class OmAssProp_TableModel extends AbstractTableModel {
             return se;
         }
 
-        if (col == 3 ) {
+        if (col == 3) {
             String se = row < li_set.size() ? li_set.get(row).formatOriginalExtention() : "";
             if (se == null)
                 se = "";

@@ -9,10 +9,10 @@ import java.io.File;
 
 public class ChooseOmegaBundleFile extends JFileChooser {
     public ChooseOmegaBundleFile() {
-	super(new File(Context.omegaAssets("..")));
-	ExtensionFileFilter fi = new ExtensionFileFilter();
-	fi.addExtension(Config.OMEGA_BUNDLE);
-	setFileFilter(fi);
+        super(new File(Context.omegaAssets("..")));
+        ExtensionFileFilter fi = new ExtensionFileFilter();
+        fi.addExtension(Config.OMEGA_BUNDLE);
+        setFileFilter(fi);
     }
 }
 

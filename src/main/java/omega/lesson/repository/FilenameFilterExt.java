@@ -7,12 +7,12 @@ public class FilenameFilterExt implements FilenameFilter {
     String ext;
 
     FilenameFilterExt(String ext) {
-	this.ext = ext;
+        this.ext = ext;
     }
 
     public boolean accept(File dir, String fname) {
-	if (fname.endsWith(ext))
-	    return true;
-	return false;
+        if (fname.endsWith(ext))
+            return true;
+        return false;
     }
 }

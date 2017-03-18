@@ -19,11 +19,11 @@ abstract class FeedBack {
 
 
     int getW() {
-	return vw;
+        return vw;
     }
 
     int getH() {
-	return vh;
+        return vh;
     }
 
     abstract JPanel prepare(String rsrs, JPanel jpan);

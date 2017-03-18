@@ -8,35 +8,35 @@ public class Dtd extends Item {
     List elem; // Item
 
     public Dtd() {
-	elem = new ArrayList();
+        elem = new ArrayList();
     }
 
     public void add(Element el) {
-	elem.add(el);
+        elem.add(el);
     }
 
     public void render(StringBuffer sb) {
-	sb.append("<?xml " + "encoding=\"US-ASCII\"" + "?>\n\n");
-	Iterator it = elem.iterator();
-	while (it.hasNext()) {
-	    Element el = (Element) it.next();
-	    el.render(sb);
-	}
+        sb.append("<?xml " + "encoding=\"US-ASCII\"" + "?>\n\n");
+        Iterator it = elem.iterator();
+        while (it.hasNext()) {
+            Element el = (Element) it.next();
+            el.render(sb);
+        }
     }
 
 
     public static void main(String[] args) {
-	Dtd d = new Dtd();
+        Dtd d = new Dtd();
 
-	Element apa = new Element("apa", "ANY");
-	d.add(apa);
+        Element apa = new Element("apa", "ANY");
+        d.add(apa);
 
-	Element el;
-	d.add(el = new Element("elem", "(#PCDATA | " + apa.getName() + ")"));
-	el.addAttr(new Attrib("attr", "CDATA", "#REQUIRED"));
+        Element el;
+        d.add(el = new Element("elem", "(#PCDATA | " + apa.getName() + ")"));
+        el.addAttr(new Attrib("attr", "CDATA", "#REQUIRED"));
 
-	StringBuffer sb = new StringBuffer();
-	d.render(sb);
-	omega.Context.sout_log.getLogger().info("" + sb.toString());
+        StringBuffer sb = new StringBuffer();
+        d.render(sb);
+        omega.Context.sout_log.getLogger().info("" + sb.toString());
     }
 }

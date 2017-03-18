@@ -26,19 +26,19 @@ public class MpgPlayer {
     public FxMoviePlayer fxp = null;
 
     public MpgPlayer(Object player, String title) {
-        if ( false ) {
-	    for (int i = 0; i < 100; i++)
-		if (prefetch_done == false)
-		    S.m_sleep(100);
-	}
+        if (false) {
+            for (int i = 0; i < 100; i++)
+                if (prefetch_done == false)
+                    S.m_sleep(100);
+        }
     }
 
     public void reset() {
-	ready = false;
-}
+        ready = false;
+    }
 
     public void start() {
-        if ( fxp != null )
+        if (fxp != null)
             fxp.play();
     }
 
@@ -46,8 +46,8 @@ public class MpgPlayer {
     }
 
     public void wait4() {
-	if ( fxp != null )
-	    fxp.wait4done();
+        if (fxp != null)
+            fxp.wait4done();
 //	if ( true ) {
 //	    S.m_sleep(4000);
 //	    return;
@@ -57,88 +57,88 @@ public class MpgPlayer {
     }
 
     public void dispose(JComponent jcomp) {
-        if ( fxp != null )
+        if (fxp != null)
             fxp.dispose();
         fxp = null;
-	ready = true;
-	visual = null;
-	jcomp.removeAll();
+        ready = true;
+        visual = null;
+        jcomp.removeAll();
     }
 
     public int getX() {
-	return visual.getX();
+        return visual.getX();
     }
 
     public int getY() {
-	return visual.getY();
+        return visual.getY();
     }
 
     public int getW() {
-	return visual.getWidth();//vw;
+        return visual.getWidth();//vw;
     }
 
     public int getMediaH() {
-	return fxp.mediaH;
+        return fxp.mediaH;
     }
 
     public int getMediaW() {
-	return fxp.mediaW;
+        return fxp.mediaW;
     }
 
     public int getH() {
-	return visual.getHeight(); //vh;
+        return visual.getHeight(); //vh;
     }
 
     public int getOrigW() {
-	return vw_orig;
+        return vw_orig;
     }
 
     public int getOrigH() {
-	return vh_orig;
+        return vh_orig;
     }
 
     public void setSize(int w, int h) {
-	vw = w;
-	vh = h;
-	visual.setSize(new Dimension(vw, vh));
-	Log.getLogger().info("dep_set m size to: " + w + ' ' + h);
+        vw = w;
+        vh = h;
+        visual.setSize(new Dimension(vw, vh));
+        Log.getLogger().info("dep_set m size to: " + w + ' ' + h);
     }
 
     public void setLocation(int x, int y) {
-	visual.setLocation(x, y);
-	Log.getLogger().info("dep_set m loc at: " + x + ' ' + y);
+        visual.setLocation(x, y);
+        Log.getLogger().info("dep_set m loc at: " + x + ' ' + y);
     }
 
     static public MpgPlayer createMpgPlayer(String fn, JComponent jcomp) {
-	return createMpgPlayer(fn, jcomp, 0, 0);
+        return createMpgPlayer(fn, jcomp, 0, 0);
     }
 
     static public MpgPlayer createMpgPlayer(String fn, JComponent jcomp, int winW, int winH) {
-	URL url = null;
+        URL url = null;
 
-	omega.Context.lesson_log.getLogger().info("create mpgPlayer jcomp: " + fn);
+        omega.Context.lesson_log.getLogger().info("create mpgPlayer jcomp: " + fn);
 
-	try {
-	    if (Context.omegaAssetsExist(fn) ) {
-		url = new URL("file:" + fn);
+        try {
+            if (Context.omegaAssetsExist(fn)) {
+                url = new URL("file:" + fn);
 
-		try {
-		    FxMoviePlayer fxp = new FxMoviePlayer(winW, winH);
-		    JFXPanel fxPanel = fxp.initGUI(jcomp, fn);
-		    MpgPlayer mp = new MpgPlayer(null, "null");
-		    mp.visual = jcomp;
-		    mp.fxp = fxp;
-		    return mp;
-		} catch (Exception e) {
-		    e.printStackTrace();
-		    omega.Context.lesson_log.getLogger().info("NoPlayerEx: " + e);
-		}
-	    }
-	} catch (MalformedURLException e) {
-	    omega.Context.lesson_log.getLogger().info("ERR: " + "MUE Error:" + e);
-	} catch (Exception e) {
-	    omega.Context.lesson_log.getLogger().info("ERR: " + "Exception:" + e);
-	}
-	return null;
+                try {
+                    FxMoviePlayer fxp = new FxMoviePlayer(winW, winH);
+                    JFXPanel fxPanel = fxp.initGUI(jcomp, fn);
+                    MpgPlayer mp = new MpgPlayer(null, "null");
+                    mp.visual = jcomp;
+                    mp.fxp = fxp;
+                    return mp;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    omega.Context.lesson_log.getLogger().info("NoPlayerEx: " + e);
+                }
+            }
+        } catch (MalformedURLException e) {
+            omega.Context.lesson_log.getLogger().info("ERR: " + "MUE Error:" + e);
+        } catch (Exception e) {
+            omega.Context.lesson_log.getLogger().info("ERR: " + "Exception:" + e);
+        }
+        return null;
     }
 }

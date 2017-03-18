@@ -5,11 +5,11 @@ public class MultiString {
     String[] sa;
 
     MultiString(String s, String[] sa) {
-	this.s = s;
-	this.sa = sa;
+        this.s = s;
+        this.sa = sa;
     }
 
     public String toString() {
-	return s;
+        return s;
     }
 }

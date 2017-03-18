@@ -11,10 +11,10 @@ public class ChooseAnimatorFile extends JFileChooser {
     static String ext = "omega_anim";
 
     ChooseAnimatorFile() {
-	super(new File(Context.omegaAssets("anim")));
-	ExtensionFileFilter fi = new ExtensionFileFilter();
-	fi.addExtension(ext);
-	setFileFilter(fi);
+        super(new File(Context.omegaAssets("anim")));
+        ExtensionFileFilter fi = new ExtensionFileFilter();
+        fi.addExtension(ext);
+        setFileFilter(fi);
     }
 }
 

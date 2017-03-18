@@ -7,14 +7,14 @@ public class Machine {
     LessonContext l_ctxt;
 
     public Machine(LessonContext l_ctxt) {
-	this.l_ctxt = l_ctxt;
+        this.l_ctxt = l_ctxt;
     }
 
     public Target getTarget() {
-	return tg;
+        return tg;
     }
 
     public void setTarget(Target tg) {
-	this.tg = tg;
+        this.tg = tg;
     }
 }

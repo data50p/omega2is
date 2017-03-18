@@ -6,6 +6,6 @@ abstract class Item {
     abstract void render(StringBuffer sb);
 
     public String getName() {
-	return name;
+        return name;
     }
 }

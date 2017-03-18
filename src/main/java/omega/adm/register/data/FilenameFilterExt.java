@@ -8,28 +8,28 @@ public class FilenameFilterExt implements FilenameFilter {
     String with[];
 
     FilenameFilterExt(String ext) {
-	this(ext, null);
+        this(ext, null);
     }
 
     FilenameFilterExt(String ext, String[] with) {
-	this.ext = ext;
-	this.with = with;
+        this.ext = ext;
+        this.with = with;
     }
 
     public boolean accept(File dir, String fname) {
-	if (fname.endsWith(ext)) {
-	    if (with == null)
-		return true;
-	    for (int i = 0; i < with.length; i++) {
-		if (fname.indexOf(with[i]) != -1)
-		    return true;
-	    }
-	    return false;
-	}
-	return false;
+        if (fname.endsWith(ext)) {
+            if (with == null)
+                return true;
+            for (int i = 0; i < with.length; i++) {
+                if (fname.indexOf(with[i]) != -1)
+                    return true;
+            }
+            return false;
+        }
+        return false;
     }
 
     public String toString() {
-	return "FilenameFilterExt{" + ext + "}";
+        return "FilenameFilterExt{" + ext + "}";
     }
 }

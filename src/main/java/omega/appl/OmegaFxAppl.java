@@ -1,11 +1,9 @@
 package omega.appl;
 
-import de.codecentric.centerdevice.*;
+import de.codecentric.centerdevice.MenuToolkit;
 import fpdo.sundry.S;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -25,82 +23,82 @@ public class OmegaFxAppl extends Application {
     }
 
     public static void main(String[] args) {
-	OmegaFxAppl.args = args;
+        OmegaFxAppl.args = args;
         launch(args);
     }
 
     public void start2(Stage primaryStage) {
-	primaryStage.setTitle("Hello World!");
-	Button btn = new Button();
-	btn.setText("Say 'Hello World'");
-	btn.setOnAction(event -> Log.getLogger().info("Hello World!"));
-	StackPane root = new StackPane();
-	root.getChildren().add(btn);
-	primaryStage.setScene(new Scene(root, 300, 250));
-	primaryStage.show();
+        primaryStage.setTitle("Hello World!");
+        Button btn = new Button();
+        btn.setText("Say 'Hello World'");
+        btn.setOnAction(event -> Log.getLogger().info("Hello World!"));
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+        primaryStage.setScene(new Scene(root, 300, 250));
+        primaryStage.show();
     }
 
     @Override
     public void start(Stage stage) {
         Platform.setImplicitExit(false);
 
-	MenuToolkit tk = MenuToolkit.toolkit();
+        MenuToolkit tk = MenuToolkit.toolkit();
 
-	MenuBar bar = new MenuBar();
+        MenuBar bar = new MenuBar();
 
-	String appName = "Omega IS";
-	// Application Menu
-	// TBD: services menu
-	Menu appMenu = new Menu(appName); // Name for appMenu can't be dep_set at
-	// Runtime
-	MenuItem aboutItem = tk.createAboutMenuItem(appName);
-	MenuItem prefsItem = new MenuItem("Preferences...");
-	prefsItem.setOnAction(event -> Log.getLogger().info("prefs clicked"));
-	appMenu.getItems().addAll(aboutItem, new SeparatorMenuItem(), prefsItem, new SeparatorMenuItem(),
-		tk.createHideMenuItem(appName), tk.createHideOthersMenuItem(), tk.createUnhideAllMenuItem(),
-		new SeparatorMenuItem(), tk.createQuitMenuItem(appName));
+        String appName = "Omega IS";
+        // Application Menu
+        // TBD: services menu
+        Menu appMenu = new Menu(appName); // Name for appMenu can't be dep_set at
+        // Runtime
+        MenuItem aboutItem = tk.createAboutMenuItem(appName);
+        MenuItem prefsItem = new MenuItem("Preferences...");
+        prefsItem.setOnAction(event -> Log.getLogger().info("prefs clicked"));
+        appMenu.getItems().addAll(aboutItem, new SeparatorMenuItem(), prefsItem, new SeparatorMenuItem(),
+                tk.createHideMenuItem(appName), tk.createHideOthersMenuItem(), tk.createUnhideAllMenuItem(),
+                new SeparatorMenuItem(), tk.createQuitMenuItem(appName));
 
-	// File Menu (items TBD)
-	Menu fileMenu = new Menu("File");
-	MenuItem newItem = new MenuItem("New...");
-	fileMenu.getItems().addAll(newItem, new SeparatorMenuItem(), tk.createCloseWindowMenuItem(),
-		new SeparatorMenuItem(), new MenuItem("TBD"));
+        // File Menu (items TBD)
+        Menu fileMenu = new Menu("File");
+        MenuItem newItem = new MenuItem("New...");
+        fileMenu.getItems().addAll(newItem, new SeparatorMenuItem(), tk.createCloseWindowMenuItem(),
+                new SeparatorMenuItem(), new MenuItem("TBD"));
 
-	// Edit (items TBD)
-	Menu editMenu = new Menu("Edit");
-	editMenu.getItems().addAll(new MenuItem("TBD"));
+        // Edit (items TBD)
+        Menu editMenu = new Menu("Edit");
+        editMenu.getItems().addAll(new MenuItem("TBD"));
 
-	// Format (items TBD)
-	Menu formatMenu = new Menu("Format");
-	formatMenu.getItems().addAll(new MenuItem("TBD"));
+        // Format (items TBD)
+        Menu formatMenu = new Menu("Format");
+        formatMenu.getItems().addAll(new MenuItem("TBD"));
 
-	// View Menu (items TBD)
-	Menu viewMenu = new Menu("View");
-	viewMenu.getItems().addAll(new MenuItem("TBD"));
+        // View Menu (items TBD)
+        Menu viewMenu = new Menu("View");
+        viewMenu.getItems().addAll(new MenuItem("TBD"));
 
-	// Window Menu
-	// TBD standard window menu items
-	Menu windowMenu = new Menu("Window");
-	windowMenu.getItems().addAll(tk.createMinimizeMenuItem(), tk.createZoomMenuItem(), tk.createCycleWindowsItem(),
-		new SeparatorMenuItem(), tk.createBringAllToFrontItem());
+        // Window Menu
+        // TBD standard window menu items
+        Menu windowMenu = new Menu("Window");
+        windowMenu.getItems().addAll(tk.createMinimizeMenuItem(), tk.createZoomMenuItem(), tk.createCycleWindowsItem(),
+                new SeparatorMenuItem(), tk.createBringAllToFrontItem());
 
-	// Help Menu (items TBD)
-	Menu helpMenu = new Menu("Help");
-	helpMenu.getItems().addAll(new MenuItem("TBD"));
+        // Help Menu (items TBD)
+        Menu helpMenu = new Menu("Help");
+        helpMenu.getItems().addAll(new MenuItem("TBD"));
 
-	bar.getMenus().addAll(appMenu, fileMenu, editMenu, formatMenu, viewMenu, windowMenu, helpMenu);
+        bar.getMenus().addAll(appMenu, fileMenu, editMenu, formatMenu, viewMenu, windowMenu, helpMenu);
 
-	tk.autoAddWindowMenuItems(windowMenu);
-	tk.setGlobalMenuBar(bar);
-	tk.setGlobalMenuBar(bar);
+        tk.autoAddWindowMenuItems(windowMenu);
+        tk.setGlobalMenuBar(bar);
+        tk.setGlobalMenuBar(bar);
 
-	Platform.runLater(() -> bar.setUseSystemMenuBar(true));
+        Platform.runLater(() -> bar.setUseSystemMenuBar(true));
 
         int scW = 1000;
         int scH = 1000;
         int ww = 700;
-	int hh = 330 + 22 * 3;
-	int xx = (scW - ww) / 2;
+        int hh = 330 + 22 * 3;
+        int xx = (scW - ww) / 2;
         int yy = (scH - hh) / 2;
 
         Circle circ = new Circle(40, 40, 30);
@@ -108,37 +106,37 @@ public class OmegaFxAppl extends Application {
         Scene scene = new Scene(root, 700, 330 + 22 * 3);
         stage.setTitle("Omega IS");
 
-	String aImname = Context.getMediaFile("default/omega_splash.gif");
-	Image im = new Image("file:" + aImname);
-	ImageView imView = new ImageView();
-	imView.setImage(im);
-	imView.setX(4);
-	imView.setY(4);
+        String aImname = Context.getMediaFile("default/omega_splash.gif");
+        Image im = new Image("file:" + aImname);
+        ImageView imView = new ImageView();
+        imView.setImage(im);
+        imView.setX(4);
+        imView.setY(4);
         root.getChildren().addAll(imView);
-	root.getChildren().add(bar);
+        root.getChildren().add(bar);
 
         stage.setScene(scene);
         stage.setAlwaysOnTop(true);
         stage.show();
-	Log.getLogger().info("started");
-	new Thread(()->{
-	    S.m_sleep(500);
-	    Platform.runLater(() -> {
+        Log.getLogger().info("started");
+        new Thread(() -> {
+            S.m_sleep(500);
+            Platform.runLater(() -> {
 //	        stage.setIconified(true);
-	        stage.hide();
-		new Thread(() -> {
-		    S.m_sleep(500);
-		    omega.appl.lesson.Editor.main(args);
-		    Platform.runLater(() -> stage.show());
-		    S.m_sleep(500);
-		}).start();
-	    });
-	}).start();
+                stage.hide();
+                new Thread(() -> {
+                    S.m_sleep(500);
+                    omega.appl.lesson.Editor.main(args);
+                    Platform.runLater(() -> stage.show());
+                    S.m_sleep(500);
+                }).start();
+            });
+        }).start();
 
     }
 
     public void stop() {
-	Log.getLogger().info("stop");
+        Log.getLogger().info("stop");
 //	Platform.exit();
     }
 

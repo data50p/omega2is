@@ -31,73 +31,73 @@ public class Canvas extends JPanel implements java.awt.image.ImageObserver {
     public boolean HIDDEN = false;
 
     public Canvas() {
-	allgim = new AllGIm(this);
+        allgim = new AllGIm(this);
     }
 
     public Image getImageBackground() {
-	return bg_wings;
+        return bg_wings;
     }
 
     public void resetBackground() {
-	setBackground(im_name, wings);
+        setBackground(im_name, wings);
     }
 
     public void setBackground(String im_name) {
-	setBackground(im_name, null);
+        setBackground(im_name, null);
     }
 
     public void setBackground(String im_name, java.util.List wings) {
-	this.im_name = im_name;
-	if (wings == null)
-	    wings = new ArrayList();
-	this.wings = wings;
+        this.im_name = im_name;
+        if (wings == null)
+            wings = new ArrayList();
+        this.wings = wings;
 
-	String imn = im_name;
-	bg = LoadImage.loadAndWait(this, imn);
+        String imn = im_name;
+        bg = LoadImage.loadAndWait(this, imn);
 //	omega.Context.sout_log.getLogger().info("ERR: " + "bg " + bg + ' ' + imn);
-	im_size = new Dimension(bg.getWidth(null), bg.getHeight(null));
+        im_size = new Dimension(bg.getWidth(null), bg.getHeight(null));
 
-	updWings();
+        updWings();
 
-	Server httpd = ((omega.subsystem.Httpd) (Context.getSubsystem("Httpd"))).httpd;
-	httpd.getHashMap().put("lesson:background", imn);
+        Server httpd = ((omega.subsystem.Httpd) (Context.getSubsystem("Httpd"))).httpd;
+        httpd.getHashMap().put("lesson:background", imn);
 
-	repaint();
+        repaint();
     }
 
     public Wing createWing(String fn, int x, int y, int layer, double scale, int mirror) {
-	Wing w = new Wing(this, fn, x, y, layer, wings.size());
-	w.mirror = mirror;
-	w.scale = scale;
-	wings.add(w);
-	return w;
+        Wing w = new Wing(this, fn, x, y, layer, wings.size());
+        w.mirror = mirror;
+        w.scale = scale;
+        wings.add(w);
+        return w;
     }
 
     public java.util.List removeWing(int ix) {
-	if (ix >= wings.size())
-	    return null;
+        if (ix >= wings.size())
+            return null;
 
-	wings.remove(ix);
-	resetBackground();
-	return wings;
+        wings.remove(ix);
+        resetBackground();
+        return wings;
     }
 
     public void updWings() {
-	if (bg != null)
-	    bg_wings = bg;
-	bg_wings = createWithWings(bg_wings, im_size, wings);
-	bg = null;
+        if (bg != null)
+            bg_wings = bg;
+        bg_wings = createWithWings(bg_wings, im_size, wings);
+        bg = null;
 
-	off_im = createImage(im_size.width, im_size.height);
-	if (off_im != null) {
-	    off_g2 = (Graphics2D) off_im.getGraphics();
-	    restoreImage(0, 0, im_size.width, im_size.height);
+        off_im = createImage(im_size.width, im_size.height);
+        if (off_im != null) {
+            off_g2 = (Graphics2D) off_im.getGraphics();
+            restoreImage(0, 0, im_size.width, im_size.height);
 //	    repaint();
-	}
+        }
     }
 
     Wing getWing(int ix) {
-	return (Wing) wings.get(ix);
+        return (Wing) wings.get(ix);
     }
 
     int trace_wing = -1;
@@ -106,205 +106,205 @@ public class Canvas extends JPanel implements java.awt.image.ImageObserver {
     int trace_wing_dy = 0;
 
     public void traceNoWing() {
-	trace_wing = -1;
-	trace_wing_drag = false;
-	repaint();
+        trace_wing = -1;
+        trace_wing_drag = false;
+        repaint();
     }
 
     public void traceWing(int ixx, double dx, double dy, boolean is_drag) {
-	trace_wing = ixx;
-	trace_wing_drag = is_drag;
-	trace_wing_dx = (int) dx;
-	trace_wing_dy = (int) dy;
-	repaint();
+        trace_wing = ixx;
+        trace_wing_drag = is_drag;
+        trace_wing_dx = (int) dx;
+        trace_wing_dy = (int) dy;
+        repaint();
     }
 
     void drawWing(Wing w) {
-	drawWing(off_g2, w);
+        drawWing(off_g2, w);
     }
 
     void drawWing(Graphics2D g2, Wing w) {
-	AffineTransform at = new AffineTransform();
-	at.translate(w.pos.getX(), w.pos.getY());
-	double sc = w.scale;
-	if (sc == 0)
-	    sc = 1.0;
+        AffineTransform at = new AffineTransform();
+        at.translate(w.pos.getX(), w.pos.getY());
+        double sc = w.scale;
+        if (sc == 0)
+            sc = 1.0;
 
-	at.scale(w.scale, w.scale);
-	switch (w.mirror) {
-	    case 1:
-		at.translate(w.width, 0);
-		at.scale(-1, 1);
-		break;
-	    case 2:
-		at.translate(0, w.height);
-		at.scale(1, -1);
-		break;
-	    case 3:
-		at.translate(w.width, w.height);
-		at.scale(-1, -1);
-		break;
-	}
+        at.scale(w.scale, w.scale);
+        switch (w.mirror) {
+            case 1:
+                at.translate(w.width, 0);
+                at.scale(-1, 1);
+                break;
+            case 2:
+                at.translate(0, w.height);
+                at.scale(1, -1);
+                break;
+            case 3:
+                at.translate(w.width, w.height);
+                at.scale(-1, -1);
+                break;
+        }
 
-	g2.drawImage(w.im, at, null);
+        g2.drawImage(w.im, at, null);
     }
 
     Image createWithWings(Image bg, Dimension im_size, java.util.List wings) {
-	try {
-	    Image im = createImage(im_size.width, im_size.height);
+        try {
+            Image im = createImage(im_size.width, im_size.height);
 //	omega.Context.sout_log.getLogger().info("ERR: " + "withW im is " + im + ' ' + im_size);
-	    if (im == null)
-		return bg;
+            if (im == null)
+                return bg;
 
-	    Graphics gg = im.getGraphics();
-	    gg.drawImage(bg, 0, 0, null);
-	    if (wings != null) {
-		for (int il = 0; il < 5; il++) {
-		    for (int i = 0; i < wings.size(); i++) {
-			Wing wing = getWing(i);
-			if (wing != null && il == wing.layer) {
-			    drawWing((Graphics2D) gg, wing);
-			}
-		    }
-		}
-	    }
-	    return im;
-	} catch (IllegalArgumentException ex) {
-	    omega.Context.sout_log.getLogger().info("ERR: " + "createWithWings: " + ex);
-	    return null;
-	}
+            Graphics gg = im.getGraphics();
+            gg.drawImage(bg, 0, 0, null);
+            if (wings != null) {
+                for (int il = 0; il < 5; il++) {
+                    for (int i = 0; i < wings.size(); i++) {
+                        Wing wing = getWing(i);
+                        if (wing != null && il == wing.layer) {
+                            drawWing((Graphics2D) gg, wing);
+                        }
+                    }
+                }
+            }
+            return im;
+        } catch (IllegalArgumentException ex) {
+            omega.Context.sout_log.getLogger().info("ERR: " + "createWithWings: " + ex);
+            return null;
+        }
     }
 
     public Dimension getPreferredSize() {
-	return im_size;
+        return im_size;
     }
 
     public synchronized void drawImage(Image im, AffineTransform at, AlphaComposite acomp) {
-	if (acomp == null)
-	    acomp = AlphaComposite.getInstance(AlphaComposite.SRC_OVER,
-		    (float) (0.0));
-	else
-	    off_g2.setComposite(acomp);
-	off_g2.drawImage(im, at, null);
-	off_g2.setComposite(AlphaComposite.SrcOver);
+        if (acomp == null)
+            acomp = AlphaComposite.getInstance(AlphaComposite.SRC_OVER,
+                    (float) (0.0));
+        else
+            off_g2.setComposite(acomp);
+        off_g2.drawImage(im, at, null);
+        off_g2.setComposite(AlphaComposite.SrcOver);
     }
 
     public double getOffsX() {
-	return 0;
+        return 0;
     }
 
     public double getOffsY() {
-	return 0;
+        return 0;
     }
 
     public synchronized void off_upd(int x, int y, int w, int h) {
-	if (h < 0) {
-	    y += h;
-	    h = -h;
-	}
-	if (w < 0) {
-	    x += w;
-	    w = -w;
-	}
-	double offs_x = getOffsX();
-	double offs_y = getOffsY();
-	Graphics2D gg = (Graphics2D) getGraphics().create(x + (int) (offs_x),
-		y + (int) (offs_y), w, h);
-	gg.drawImage(off_im, -x, -y, this);  // Rxy
-	gg.dispose();
+        if (h < 0) {
+            y += h;
+            h = -h;
+        }
+        if (w < 0) {
+            x += w;
+            w = -w;
+        }
+        double offs_x = getOffsX();
+        double offs_y = getOffsY();
+        Graphics2D gg = (Graphics2D) getGraphics().create(x + (int) (offs_x),
+                y + (int) (offs_y), w, h);
+        gg.drawImage(off_im, -x, -y, this);  // Rxy
+        gg.dispose();
     }
 
     synchronized void off_upd(Rectangle2D[] ra) {
-	int a = S.rand(255);
-	for (int i = 0; i < ra.length; i++) {
-	    off_upd((int) ra[i].getX(),
-		    (int) ra[i].getY(),
-		    (int) ra[i].getWidth(),
-		    (int) ra[i].getHeight());
-	    if (gdbg) {
-		Graphics2D g2 = (Graphics2D) getGraphics();
-		AffineTransform at = g2.getTransform();
-		int offs_x = (int) getOffsX();
-		int offs_y = (int) getOffsY();
-		at.translate(offs_x, offs_y);
-		g2.setTransform(at);
-		g2.setColor(new Color(a, a, a));
-		g2.drawRect((int) ra[i].getX(),
-			(int) ra[i].getY(),
-			(int) ra[i].getWidth(),
-			(int) ra[i].getHeight());
-	    }
-	}
+        int a = S.rand(255);
+        for (int i = 0; i < ra.length; i++) {
+            off_upd((int) ra[i].getX(),
+                    (int) ra[i].getY(),
+                    (int) ra[i].getWidth(),
+                    (int) ra[i].getHeight());
+            if (gdbg) {
+                Graphics2D g2 = (Graphics2D) getGraphics();
+                AffineTransform at = g2.getTransform();
+                int offs_x = (int) getOffsX();
+                int offs_y = (int) getOffsY();
+                at.translate(offs_x, offs_y);
+                g2.setTransform(at);
+                g2.setColor(new Color(a, a, a));
+                g2.drawRect((int) ra[i].getX(),
+                        (int) ra[i].getY(),
+                        (int) ra[i].getWidth(),
+                        (int) ra[i].getHeight());
+            }
+        }
     }
 
     synchronized void restoreImage(int x, int y, int w, int h) {
-	if (bg_wings == null)
-	    return;
-	if (off_g2 != null) {
-	    Graphics gg = off_g2.create(x, y, w + 2, h + 2);
-	    gg.drawImage(bg_wings, -x, -y, null);
-	    gg.dispose();
-	}
+        if (bg_wings == null)
+            return;
+        if (off_g2 != null) {
+            Graphics gg = off_g2.create(x, y, w + 2, h + 2);
+            gg.drawImage(bg_wings, -x, -y, null);
+            gg.dispose();
+        }
     }
 
     synchronized void restoreImage(Rectangle2D r) {
-	restoreImage((int) r.getX(), (int) r.getY(), (int) r.getWidth(), (int) r.getHeight());
+        restoreImage((int) r.getX(), (int) r.getY(), (int) r.getWidth(), (int) r.getHeight());
     }
 
     public void paintComponent(Graphics g) {
-	Graphics2D g2 = (Graphics2D) g;
-	if (off_im != null) {
-	    double offs_x = getOffsX();
-	    double offs_y = getOffsY();
-	    offs_y = offs_x = 0;
-	    g2.drawImage(off_im, (int) offs_x, (int) offs_y, null);
-	}
-	if (trace_wing != -1) {
-	    if (trace_wing < wings.size()) {
-		if (trace_wing_drag)
-		    g2.setColor(Color.red);
-		else
-		    g2.setColor(Color.yellow);
-		g2.drawRect((int) getWing(trace_wing).pos.getX() + trace_wing_dx,
-			(int) getWing(trace_wing).pos.getY() + trace_wing_dy,
-			(int) (getWing(trace_wing).scale * getWing(trace_wing).im.getWidth(null)),
-			(int) (getWing(trace_wing).scale * getWing(trace_wing).im.getHeight(null)));
-	    }
-	}
+        Graphics2D g2 = (Graphics2D) g;
+        if (off_im != null) {
+            double offs_x = getOffsX();
+            double offs_y = getOffsY();
+            offs_y = offs_x = 0;
+            g2.drawImage(off_im, (int) offs_x, (int) offs_y, null);
+        }
+        if (trace_wing != -1) {
+            if (trace_wing < wings.size()) {
+                if (trace_wing_drag)
+                    g2.setColor(Color.red);
+                else
+                    g2.setColor(Color.yellow);
+                g2.drawRect((int) getWing(trace_wing).pos.getX() + trace_wing_dx,
+                        (int) getWing(trace_wing).pos.getY() + trace_wing_dy,
+                        (int) (getWing(trace_wing).scale * getWing(trace_wing).im.getWidth(null)),
+                        (int) (getWing(trace_wing).scale * getWing(trace_wing).im.getHeight(null)));
+            }
+        }
     }
 
     public void initPlay(Object o) {
-	traceNoWing();
+        traceNoWing();
 //	repaint();
-	allgim.initPlay(o);
+        allgim.initPlay(o);
     }
 
     public void updateAtTime(int dt, TimeLine[] tlA) {
-	allgim.updateAtTime(dt, tlA);
+        allgim.updateAtTime(dt, tlA);
     }
 
     public Element getElement() {
-	Element el = new Element("Canvas");
-	Element bel = new Element("background");
-	bel.addAttr("name", im_name);
-	bel.addAttr("width", "" + bg_wings.getWidth(null));
-	bel.addAttr("height", "" + bg_wings.getHeight(null));
-	el.add(bel);
-	return el;
+        Element el = new Element("Canvas");
+        Element bel = new Element("background");
+        bel.addAttr("name", im_name);
+        bel.addAttr("width", "" + bg_wings.getWidth(null));
+        bel.addAttr("height", "" + bg_wings.getHeight(null));
+        el.add(bel);
+        return el;
     }
 
 
     public void load(Element el) {
-	Element cel = el.findElement("Canvas", 0);
-	if (cel != null) {
-	    Element eb = el.findElement("background", 0);
-	    if (eb != null) {
-		String s = eb.findAttr("name");
-		if (s != null) {
-		    setBackground(s, new ArrayList());
+        Element cel = el.findElement("Canvas", 0);
+        if (cel != null) {
+            Element eb = el.findElement("background", 0);
+            if (eb != null) {
+                String s = eb.findAttr("name");
+                if (s != null) {
+                    setBackground(s, new ArrayList());
 //fix		    wings_panel.removeAllWings();
-		}
-	    }
-	}
+                }
+            }
+        }
     }
 }

@@ -8,28 +8,28 @@ public class ToolActionGroup {
     List li;
 
     public ToolActionGroup() {
-	li = new ArrayList();
+        li = new ArrayList();
     }
 
     public void add(ToolAction ta) {
-	li.add(ta);
+        li.add(ta);
     }
 
     public Iterator iterator() {
-	return li.iterator();
+        return li.iterator();
     }
 
     public int size() {
-	return li.size();
+        return li.size();
     }
 
     public ToolAction find(String cmd) {
-	Iterator it = li.iterator();
-	while (it.hasNext()) {
-	    ToolAction ta = (ToolAction) it.next();
-	    if (ta.getCommand().equals(cmd))
-		return ta;
-	}
-	return null;
+        Iterator it = li.iterator();
+        while (it.hasNext()) {
+            ToolAction ta = (ToolAction) it.next();
+            if (ta.getCommand().equals(cmd))
+                return ta;
+        }
+        return null;
     }
 }

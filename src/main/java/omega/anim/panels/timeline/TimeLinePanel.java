@@ -49,439 +49,439 @@ public class TimeLinePanel extends JPanel {
     private boolean last_was_back = false;
 
     class Mouse extends MouseInputAdapter {
-	public void mousePressed(final MouseEvent e) {
-	    Point pd = new Point(e.getX(), e.getY());
-	    press_p = pd;
+        public void mousePressed(final MouseEvent e) {
+            Point pd = new Point(e.getX(), e.getY());
+            press_p = pd;
 
-	    if (e.getY() < TL_M_SCAN) {
-		hitMode = HITM_scan_object;
-		int t_h = ((e.getX() - TLOFF) * scale) / 10;
-		t_h *= 10;
-		setTick(t_h);
-		firePropertyChange();
-		mtl.playAt(tick_h);
-		repaint();
-	    } else {
-		int old_selected_tl = selected_tl;
+            if (e.getY() < TL_M_SCAN) {
+                hitMode = HITM_scan_object;
+                int t_h = ((e.getX() - TLOFF) * scale) / 10;
+                t_h *= 10;
+                setTick(t_h);
+                firePropertyChange();
+                mtl.playAt(tick_h);
+                repaint();
+            } else {
+                int old_selected_tl = selected_tl;
 
-		deselectAllTimeLine();
-		int tl_ix = hitTimeLine(pd);
-		selected_tl = tl_ix;
+                deselectAllTimeLine();
+                int tl_ix = hitTimeLine(pd);
+                selected_tl = tl_ix;
 
-		final TimeLine tl = mtl.getTimeLine(selected_tl);
-		if (tl == null)
-		    return;
-		fireEvent("selectTL", tl);
+                final TimeLine tl = mtl.getTimeLine(selected_tl);
+                if (tl == null)
+                    return;
+                fireEvent("selectTL", tl);
 
-		int mod = e.getModifiers();
+                int mod = e.getModifiers();
 
-		boolean pt = e.isPopupTrigger(); // macOS ?
+                boolean pt = e.isPopupTrigger(); // macOS ?
 
-		if (pt) {
-		    if (e.isControlDown()) {
-			popup_ctrl_maction(e, tl);
-		    } else {
-			popup_maction(e, tl);
-		    }
-		} else {
-		    normal_maction(e, tl);
-		}
-	    }
-	}
+                if (pt) {
+                    if (e.isControlDown()) {
+                        popup_ctrl_maction(e, tl);
+                    } else {
+                        popup_maction(e, tl);
+                    }
+                } else {
+                    normal_maction(e, tl);
+                }
+            }
+        }
 
-	public void mouseDragged(MouseEvent e) {
-	    if (hitMode == HITM_scan_object) {
-		int t_h = ((e.getX() - TLOFF) * scale) / 10;
-		t_h *= 10;
-		setTick(t_h);
-		if (tick_h < mtl.getLastTimeTick())
-		    last_was_back = true;
-		firePropertyChange();
-		if (tick_h > mtl.getLastTimeTick() && last_was_back) {
-		    mtl.setLastTimeTick(0);
-		    last_was_back = false;
-		}
-		mtl.playAt(tick_h);
-		repaint();
-	    } else if (hitMode == HITM_NORMAL) {
-		if (selected_tl != -1 && lock == false) {
-		    TimeLine tl = mtl.getTimeLine(selected_tl);
-		    if (tl != null) {
-			if (e.isShiftDown()) {
-			    int dx = scale * (int) (e.getX() - press_p.getX());
-			    dx = tl.adjustMove(dx);
-			    omega.anim.context.AnimContext.ae.setDirty(true);
-			    if (dx != 0) {
-				tl.move(dx);
-				press_p = new Point(e.getX(), e.getY());
-			    }
-			    firePropertyChange();
-			    mtl.playAt(tick_h);
-			    repaint();
-			} else if (e.isControlDown()) {
-			    int dx = scale * (int) (e.getX() - press_p.getX());
-			    if (dx != 0) {
-				TimeMarker tm = tl.getSelectedTimeMarker();
-				if (tmp != null)
-				    tmp.setObject(tm);
+        public void mouseDragged(MouseEvent e) {
+            if (hitMode == HITM_scan_object) {
+                int t_h = ((e.getX() - TLOFF) * scale) / 10;
+                t_h *= 10;
+                setTick(t_h);
+                if (tick_h < mtl.getLastTimeTick())
+                    last_was_back = true;
+                firePropertyChange();
+                if (tick_h > mtl.getLastTimeTick() && last_was_back) {
+                    mtl.setLastTimeTick(0);
+                    last_was_back = false;
+                }
+                mtl.playAt(tick_h);
+                repaint();
+            } else if (hitMode == HITM_NORMAL) {
+                if (selected_tl != -1 && lock == false) {
+                    TimeLine tl = mtl.getTimeLine(selected_tl);
+                    if (tl != null) {
+                        if (e.isShiftDown()) {
+                            int dx = scale * (int) (e.getX() - press_p.getX());
+                            dx = tl.adjustMove(dx);
+                            omega.anim.context.AnimContext.ae.setDirty(true);
+                            if (dx != 0) {
+                                tl.move(dx);
+                                press_p = new Point(e.getX(), e.getY());
+                            }
+                            firePropertyChange();
+                            mtl.playAt(tick_h);
+                            repaint();
+                        } else if (e.isControlDown()) {
+                            int dx = scale * (int) (e.getX() - press_p.getX());
+                            if (dx != 0) {
+                                TimeMarker tm = tl.getSelectedTimeMarker();
+                                if (tmp != null)
+                                    tmp.setObject(tm);
 
-				if (tm.type == TimeMarker.END) {
-				    global_tick_stop = e.getX() * scale;
-				    if (global_tick_stop < tick_start)
-					global_tick_stop = tick_start;
+                                if (tm.type == TimeMarker.END) {
+                                    global_tick_stop = e.getX() * scale;
+                                    if (global_tick_stop < tick_start)
+                                        global_tick_stop = tick_start;
 
-				    mtl.updateEndMarkers(global_tick_stop);
-				    omega.anim.context.AnimContext.ae.setDirty(true);
-				    repaint();
-				} else if (tm.type == TimeMarker.BEGIN) {
-				    if (false) {
-					tick_start = (e.getX() - TLOFF) * scale;
-					if (tick_start < 0)
-					    tick_start = 0;
-					if (tick_start > global_tick_stop)
-					    tick_start = global_tick_stop;
-					mtl.updateBeginMarkers(tick_start);
-					omega.anim.context.AnimContext.ae.setDirty(true);
-					repaint();
-				    }
-				} else if (tm.type == TimeMarker.STOP) {
-				    tl.adjustSomeTimeMarkerRelative((double) dx / (tm.when - tl.getOffset()));
-				    tl.moveSelectedTimeMarker(dx, grid);
-				    omega.anim.context.AnimContext.ae.setDirty(true);
-				} else {
-				    tl.moveSelectedTimeMarker(dx, grid);
-				    omega.anim.context.AnimContext.ae.setDirty(true);
-				}
+                                    mtl.updateEndMarkers(global_tick_stop);
+                                    omega.anim.context.AnimContext.ae.setDirty(true);
+                                    repaint();
+                                } else if (tm.type == TimeMarker.BEGIN) {
+                                    if (false) {
+                                        tick_start = (e.getX() - TLOFF) * scale;
+                                        if (tick_start < 0)
+                                            tick_start = 0;
+                                        if (tick_start > global_tick_stop)
+                                            tick_start = global_tick_stop;
+                                        mtl.updateBeginMarkers(tick_start);
+                                        omega.anim.context.AnimContext.ae.setDirty(true);
+                                        repaint();
+                                    }
+                                } else if (tm.type == TimeMarker.STOP) {
+                                    tl.adjustSomeTimeMarkerRelative((double) dx / (tm.when - tl.getOffset()));
+                                    tl.moveSelectedTimeMarker(dx, grid);
+                                    omega.anim.context.AnimContext.ae.setDirty(true);
+                                } else {
+                                    tl.moveSelectedTimeMarker(dx, grid);
+                                    omega.anim.context.AnimContext.ae.setDirty(true);
+                                }
 
-				press_p = new Point(e.getX(), e.getY());
-			    }
-			    repaint();
-			} else {
-			}
-		    }
-		}
-	    }
-	}
+                                press_p = new Point(e.getX(), e.getY());
+                            }
+                            repaint();
+                        } else {
+                        }
+                    }
+                }
+            }
+        }
 
-	public void mouseMoved(MouseEvent e) {
-	    if (e.getY() > TL_M_SCAN) {
-		tick_m = ((e.getX() - TLOFF) * scale) / 10;
-		tick_m *= 10;
-		firePropertyChange();
-		repaint();
-	    }
-	}
+        public void mouseMoved(MouseEvent e) {
+            if (e.getY() > TL_M_SCAN) {
+                tick_m = ((e.getX() - TLOFF) * scale) / 10;
+                tick_m *= 10;
+                firePropertyChange();
+                repaint();
+            }
+        }
 
-	public void mouseReleased(MouseEvent e) {
-	    Point pd = new Point(e.getX() - TLOFF, e.getY());
+        public void mouseReleased(MouseEvent e) {
+            Point pd = new Point(e.getX() - TLOFF, e.getY());
 
-	    int old_selected_tl = selected_tl;
+            int old_selected_tl = selected_tl;
 
-	    deselectAllTimeLine();
-	    int tl_ix = hitTimeLine(pd);
-	    selected_tl = tl_ix;
+            deselectAllTimeLine();
+            int tl_ix = hitTimeLine(pd);
+            selected_tl = tl_ix;
 
-	    final TimeLine tl = mtl.getTimeLine(selected_tl);
-	    if (tl == null)
-		return;
-	    fireEvent("selectTL", tl);
+            final TimeLine tl = mtl.getTimeLine(selected_tl);
+            if (tl == null)
+                return;
+            fireEvent("selectTL", tl);
 
-	    int mod = e.getModifiers();
+            int mod = e.getModifiers();
 
-	    boolean pt = e.isPopupTrigger(); // macOS ?
+            boolean pt = e.isPopupTrigger(); // macOS ?
 
-	    if (pt) {
-		if (e.isControlDown()) {
-		    popup_ctrl_maction(e, tl);
-		} else {
-		    popup_maction(e, tl);
-		}
-	    } else {
-		hitMode = HITM_NORMAL;
-		firePropertyChange();
-	    }
-	}
+            if (pt) {
+                if (e.isControlDown()) {
+                    popup_ctrl_maction(e, tl);
+                } else {
+                    popup_maction(e, tl);
+                }
+            } else {
+                hitMode = HITM_NORMAL;
+                firePropertyChange();
+            }
+        }
     }
 
     public TimeLinePanel(MasterTimeLine mtl) {
-	this.mtl = mtl;
-	setLayout(null);
-	listeners = new EventListenerList();
-	setBackground(low_blue);
-	Mouse mouse = new Mouse();
-	addMouseListener(mouse);
-	addMouseMotionListener(mouse);
-	updName();
+        this.mtl = mtl;
+        setLayout(null);
+        listeners = new EventListenerList();
+        setBackground(low_blue);
+        Mouse mouse = new Mouse();
+        addMouseListener(mouse);
+        addMouseMotionListener(mouse);
+        updName();
     }
 
     JLabel[] name = new JLabel[4];
 
     public void updName() {
-	if (name[0] == null)
-	    for (int i = 0; i < 4; i++) {
-		name[i] = new JLabel(T.t("name"));
-		name[i].setLocation(5, TL_M_SCAN + 4 + i * TL_H - 1);
-		name[i].setForeground(Color.white);
-		add(name[i]);
-	    }
+        if (name[0] == null)
+            for (int i = 0; i < 4; i++) {
+                name[i] = new JLabel(T.t("name"));
+                name[i].setLocation(5, TL_M_SCAN + 4 + i * TL_H - 1);
+                name[i].setForeground(Color.white);
+                add(name[i]);
+            }
     }
 
     public void popupProp() {
-	try {
-	    int nid = 0;//id.charAt(1) - '0';
-	    JFrame owner = (JFrame) TimeLinePanel.this.getTopLevelAncestor();
-	    if (tmp == null)
-		tmp = new TimeMarkerProperties(mtl.a_ctxt, owner);
+        try {
+            int nid = 0;//id.charAt(1) - '0';
+            JFrame owner = (JFrame) TimeLinePanel.this.getTopLevelAncestor();
+            if (tmp == null)
+                tmp = new TimeMarkerProperties(mtl.a_ctxt, owner);
 
-	    TimeLine tl = mtl.getTimeLine(nid);
-	    TimeMarker tm = tl.getNearestTimeMarker(0);
+            TimeLine tl = mtl.getTimeLine(nid);
+            TimeMarker tm = tl.getNearestTimeMarker(0);
 
-	    tmp.setObject(tm);
-	    tmp.setVisible(true);
-	} catch (NullPointerException ex) {
-	}
+            tmp.setObject(tm);
+            tmp.setVisible(true);
+        } catch (NullPointerException ex) {
+        }
     }
 
     void setSelectedTM(TimeMarker tm) {
-	if (tm != null)
-	    tm.setSelected(true);
-	if (tmp != null)
-	    tmp.setObject(tm);
+        if (tm != null)
+            tm.setSelected(true);
+        if (tmp != null)
+            tmp.setObject(tm);
     }
 
     void normal_maction(MouseEvent e, final TimeLine tl) {
 //		    TimeLine tl = mtl.getTimeLine(selected_tl);
-	if (tl != null) {
-	    TimeMarker tm = tl.getNearestTimeMarker((e.getX() - TLOFF) * scale);
-	    setSelectedTM(tm);
-	}
-	repaint();
-	hitMode = HITM_NORMAL;
+        if (tl != null) {
+            TimeMarker tm = tl.getNearestTimeMarker((e.getX() - TLOFF) * scale);
+            setSelectedTM(tm);
+        }
+        repaint();
+        hitMode = HITM_NORMAL;
     }
 
     void popup_maction(final MouseEvent e, final TimeLine tl) {
-	final String[] choice = {T.t("Marker properties"),
-		T.t("Add timesync"),
-		T.t("Add trigger"),
-		"",
-		T.t("Cancel")};
+        final String[] choice = {T.t("Marker properties"),
+                T.t("Add timesync"),
+                T.t("Add trigger"),
+                "",
+                T.t("Cancel")};
 
-	omega.swing.Popup pop = new omega.swing.Popup(TimeLinePanel.this);
-	pop.popup(T.t("Marker"), choice, e.getX(), e.getY(), new ActionListener() {
-	    public void actionPerformed(ActionEvent ev) {
-		int ix = -1;
-		try {
-		    ix = Integer.parseInt(ev.getActionCommand());
-		} catch (Exception ex) {
-		}
-		if (ix >= 0 && ix < choice.length) {
-		    switch (ix) {
-			case 0: {
-			    JFrame owner = (JFrame) TimeLinePanel.this.getTopLevelAncestor();
-			    if (tmp == null)
-				tmp = new TimeMarkerProperties(mtl.a_ctxt, owner);
-			    TimeMarker tm = tl.getNearestTimeMarker((e.getX() - TLOFF) * scale);
-			    setSelectedTM(tm);
-			    tmp.setVisible(true);
-			}
-			break;
+        omega.swing.Popup pop = new omega.swing.Popup(TimeLinePanel.this);
+        pop.popup(T.t("Marker"), choice, e.getX(), e.getY(), new ActionListener() {
+            public void actionPerformed(ActionEvent ev) {
+                int ix = -1;
+                try {
+                    ix = Integer.parseInt(ev.getActionCommand());
+                } catch (Exception ex) {
+                }
+                if (ix >= 0 && ix < choice.length) {
+                    switch (ix) {
+                        case 0: {
+                            JFrame owner = (JFrame) TimeLinePanel.this.getTopLevelAncestor();
+                            if (tmp == null)
+                                tmp = new TimeMarkerProperties(mtl.a_ctxt, owner);
+                            TimeMarker tm = tl.getNearestTimeMarker((e.getX() - TLOFF) * scale);
+                            setSelectedTM(tm);
+                            tmp.setVisible(true);
+                        }
+                        break;
 
-			case 1:
-			case 2: {
-			    char tmty = 0;
-			    int duration = 0;
-			    tmty = TimeMarker.TRIGGER;
-			    if (ix == 1) {
-				tmty = TimeMarker.TSYNC;
-				duration = 0;
-			    }
-			    tl.addMarker(tmty, (e.getX() - TLOFF) * scale - tl.getOffset(), duration);
-			    omega.anim.context.AnimContext.ae.setDirty(true);
-			    fireEvent("addMarker", tl);
-			    repaint();
-			    hitMode = HITM_NORMAL;
-			}
-			break;
-		    }
-		}
-	    }
-	});
+                        case 1:
+                        case 2: {
+                            char tmty = 0;
+                            int duration = 0;
+                            tmty = TimeMarker.TRIGGER;
+                            if (ix == 1) {
+                                tmty = TimeMarker.TSYNC;
+                                duration = 0;
+                            }
+                            tl.addMarker(tmty, (e.getX() - TLOFF) * scale - tl.getOffset(), duration);
+                            omega.anim.context.AnimContext.ae.setDirty(true);
+                            fireEvent("addMarker", tl);
+                            repaint();
+                            hitMode = HITM_NORMAL;
+                        }
+                        break;
+                    }
+                }
+            }
+        });
     }
 
     void popup_ctrl_maction(MouseEvent e, final TimeLine tl) {
 //TimeLine tl = mtl.getTimeLine(selected_tl);
-	if (tl != null) {
-	    final TimeMarker tm = tl.getNearestTimeMarker((e.getX() - TLOFF) * scale);
-	    if (tm != null) {
-		tm.setSelected(true);
-		final String[] choice = {T.t("Marker properties"),
-			T.t("Marker delete"),
-			"",
-			T.t("Cancel")};
+        if (tl != null) {
+            final TimeMarker tm = tl.getNearestTimeMarker((e.getX() - TLOFF) * scale);
+            if (tm != null) {
+                tm.setSelected(true);
+                final String[] choice = {T.t("Marker properties"),
+                        T.t("Marker delete"),
+                        "",
+                        T.t("Cancel")};
 
-		omega.swing.Popup pop = new omega.swing.Popup(TimeLinePanel.this);
-		pop.popup("Marker", choice, e.getX(), e.getY(), new ActionListener() {
-		    public void actionPerformed(ActionEvent ev) {
-			// REWRITE THIS
-			int ix = -1;
-			try {
-			    ix = Integer.parseInt(ev.getActionCommand());
-			} catch (Exception ex) {
-			}
-			switch (ix) {
+                omega.swing.Popup pop = new omega.swing.Popup(TimeLinePanel.this);
+                pop.popup("Marker", choice, e.getX(), e.getY(), new ActionListener() {
+                    public void actionPerformed(ActionEvent ev) {
+                        // REWRITE THIS
+                        int ix = -1;
+                        try {
+                            ix = Integer.parseInt(ev.getActionCommand());
+                        } catch (Exception ex) {
+                        }
+                        switch (ix) {
 
-			    case 0: {
-				JFrame owner = (JFrame) TimeLinePanel.this.getTopLevelAncestor();
-				if (tmp == null)
-				    tmp = new TimeMarkerProperties(mtl.a_ctxt, owner);
-				tmp.setObject(tm);
-				tmp.setVisible(true);
-			    }
-			    break;
+                            case 0: {
+                                JFrame owner = (JFrame) TimeLinePanel.this.getTopLevelAncestor();
+                                if (tmp == null)
+                                    tmp = new TimeMarkerProperties(mtl.a_ctxt, owner);
+                                tmp.setObject(tm);
+                                tmp.setVisible(true);
+                            }
+                            break;
 
-			    case 1:
-				if (tm.canRemove()) {
-				    int tix = -1;
-				    if (tm.type == TimeMarker.TSYNC) {
-					for (int i = 0; i < 1000; i++) {
-					    TimeMarker tmi =
-						    tm.tl.getMarkerAtIndexType(i, TimeMarker.TSYNC);
-					    if (tmi == tm) {
-						tix = i;
-						break;
-					    }
-					}
-					if (tix != -1) {
-					    tm.setDeleteCandidate(true);
-					    repaint();
-					    if (JOptionPane.showConfirmDialog(mtl.a_ctxt.ae,
-						    T.t("Delete selected red timesync?"),
-						    "Omega",
-						    JOptionPane.YES_NO_OPTION) == 0) {
-						tm.tl.removeMarker(tm);
-						omega.anim.context.AnimContext.ae.setDirty(true);
-						fireEvent("delMarker", new Integer(tix));
-					    } else
-						tm.setDeleteCandidate(false);
-					    repaint();
-					}
-				    } else if (tm.type == TimeMarker.TRIGGER) {
-					for (int i = 0; i < 1000; i++) {
-					    TimeMarker tmi =
-						    tm.tl.getMarkerAtIndexType(i, TimeMarker.TRIGGER);
-					    if (tmi == tm) {
-						tix = i;
-						break;
-					    }
-					}
-					if (tix != -1) {
-					    tm.setDeleteCandidate(true);
-					    repaint();
-					    if (JOptionPane.showConfirmDialog(mtl.a_ctxt.ae,
-						    T.t("Delete selected red trigger?"),
-						    "Omega",
-						    JOptionPane.YES_NO_OPTION) == 0) {
-						tm.tl.removeMarker(tm);
-						omega.anim.context.AnimContext.ae.setDirty(true);
+                            case 1:
+                                if (tm.canRemove()) {
+                                    int tix = -1;
+                                    if (tm.type == TimeMarker.TSYNC) {
+                                        for (int i = 0; i < 1000; i++) {
+                                            TimeMarker tmi =
+                                                    tm.tl.getMarkerAtIndexType(i, TimeMarker.TSYNC);
+                                            if (tmi == tm) {
+                                                tix = i;
+                                                break;
+                                            }
+                                        }
+                                        if (tix != -1) {
+                                            tm.setDeleteCandidate(true);
+                                            repaint();
+                                            if (JOptionPane.showConfirmDialog(mtl.a_ctxt.ae,
+                                                    T.t("Delete selected red timesync?"),
+                                                    "Omega",
+                                                    JOptionPane.YES_NO_OPTION) == 0) {
+                                                tm.tl.removeMarker(tm);
+                                                omega.anim.context.AnimContext.ae.setDirty(true);
+                                                fireEvent("delMarker", new Integer(tix));
+                                            } else
+                                                tm.setDeleteCandidate(false);
+                                            repaint();
+                                        }
+                                    } else if (tm.type == TimeMarker.TRIGGER) {
+                                        for (int i = 0; i < 1000; i++) {
+                                            TimeMarker tmi =
+                                                    tm.tl.getMarkerAtIndexType(i, TimeMarker.TRIGGER);
+                                            if (tmi == tm) {
+                                                tix = i;
+                                                break;
+                                            }
+                                        }
+                                        if (tix != -1) {
+                                            tm.setDeleteCandidate(true);
+                                            repaint();
+                                            if (JOptionPane.showConfirmDialog(mtl.a_ctxt.ae,
+                                                    T.t("Delete selected red trigger?"),
+                                                    "Omega",
+                                                    JOptionPane.YES_NO_OPTION) == 0) {
+                                                tm.tl.removeMarker(tm);
+                                                omega.anim.context.AnimContext.ae.setDirty(true);
 
-					    } else
-						tm.setDeleteCandidate(false);
-					    repaint();
-					}
-				    }
-				    repaint();
-				}
-				break;
-			}
-		    }
-		});
-	    }
-	}
-	repaint();
-	hitMode = HITM_NORMAL;
+                                            } else
+                                                tm.setDeleteCandidate(false);
+                                            repaint();
+                                        }
+                                    }
+                                    repaint();
+                                }
+                                break;
+                        }
+                    }
+                });
+            }
+        }
+        repaint();
+        hitMode = HITM_NORMAL;
     }
 
     public int getPlayEnd() {
-	return global_tick_stop;
+        return global_tick_stop;
     }
 
     public void setTick(int t) {
-	ltick_h = tick_h;
-	tick_h = t;
-	if (tick_h < ltick_h)
-	    repaint();
-	else
-	    repaint(TLOFF + ltick_h / scale - 5, 0, TLOFF + tick_h / scale + 5, 200);
+        ltick_h = tick_h;
+        tick_h = t;
+        if (tick_h < ltick_h)
+            repaint();
+        else
+            repaint(TLOFF + ltick_h / scale - 5, 0, TLOFF + tick_h / scale + 5, 200);
     }
 
     public int getHitMS() {
-	return tick_h;
+        return tick_h;
     }
 
     public int getMouseHitMS() {
-	return tick_m;
+        return tick_m;
     }
 
     void firePropertyChange() {
-	Object[] lia = listeners.getListenerList();
-	for (int i = 0; i < lia.length; i += 2) {
-	    ((TimeLinePanelListener) lia[i + 1]).updateValues();
-	}
+        Object[] lia = listeners.getListenerList();
+        for (int i = 0; i < lia.length; i += 2) {
+            ((TimeLinePanelListener) lia[i + 1]).updateValues();
+        }
     }
 
     void fireEvent(String evs, Object o) {
-	Object[] lia = listeners.getListenerList();
-	for (int i = 0; i < lia.length; i += 2) {
-	    ((TimeLinePanelListener) lia[i + 1]).event(evs, o);
-	}
+        Object[] lia = listeners.getListenerList();
+        for (int i = 0; i < lia.length; i += 2) {
+            ((TimeLinePanelListener) lia[i + 1]).event(evs, o);
+        }
     }
 
     public void addTimeLinePanelListener(TimeLinePanelListener tll) {
-	listeners.add(TimeLinePanelListener.class, tll);
+        listeners.add(TimeLinePanelListener.class, tll);
     }
 
     void deselectAllTimeLine() {
-	for (int i = 0; i < mtl.getMaxTimeLineIndex(); i++) {
-	    TimeLine tl = mtl.getTimeLine(i);
-	    if (tl != null)
-		tl.setDeselectTimeMarker();
-	}
+        for (int i = 0; i < mtl.getMaxTimeLineIndex(); i++) {
+            TimeLine tl = mtl.getTimeLine(i);
+            if (tl != null)
+                tl.setDeselectTimeMarker();
+        }
     }
 
     private int hitTimeLine(Point p) {
-	int y = (int) p.getY();
-	if (y < TL_M_SCAN)
-	    return -1;
-	return (y - TL_M_SCAN) / TL_H;
+        int y = (int) p.getY();
+        if (y < TL_M_SCAN)
+            return -1;
+        return (y - TL_M_SCAN) / TL_H;
     }
 
 
     public void setLock(boolean b) {
-	lock = b;
+        lock = b;
     }
 
     private void paintMasterTimeLine(Graphics g) {
-	g.setColor(gray30);
-	g.fillRect(0, 0, 2000, TL_M_SCAN);
-	g.setColor(gray60);
-	g.fillRect(tick_start / scale, 0, (global_tick_stop - tick_start) / scale, TL_M_DUR);
+        g.setColor(gray30);
+        g.fillRect(0, 0, 2000, TL_M_SCAN);
+        g.setColor(gray60);
+        g.fillRect(tick_start / scale, 0, (global_tick_stop - tick_start) / scale, TL_M_DUR);
 
-	g.setColor(gray45);
-	if (100 / scale >= 5)
-	    for (double i = 1; i < 10000; i += 100.0 / scale)
-		g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_DUR);
-	for (double i = 1; i < 10000; i += 500.0 / scale)
-	    g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_DUR + 3);
-	for (double i = 1; i < 10000; i += 1000.0 / scale)
-	    g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_SCAN);
-	g.setColor(gray80);
-	if (100 / scale >= 5)
-	    for (double i = 0; i < 10000; i += 100.0 / scale)
-		g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_DUR);
-	for (double i = 0; i < 10000; i += 500.0 / scale)
-	    g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_DUR + 3);
-	for (double i = 0; i < 10000; i += 1000.0 / scale)
-	    g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_SCAN);
+        g.setColor(gray45);
+        if (100 / scale >= 5)
+            for (double i = 1; i < 10000; i += 100.0 / scale)
+                g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_DUR);
+        for (double i = 1; i < 10000; i += 500.0 / scale)
+            g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_DUR + 3);
+        for (double i = 1; i < 10000; i += 1000.0 / scale)
+            g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_SCAN);
+        g.setColor(gray80);
+        if (100 / scale >= 5)
+            for (double i = 0; i < 10000; i += 100.0 / scale)
+                g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_DUR);
+        for (double i = 0; i < 10000; i += 500.0 / scale)
+            g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_DUR + 3);
+        for (double i = 0; i < 10000; i += 1000.0 / scale)
+            g.drawLine((int) (i + 0.5), 0, (int) (i + 0.5), TL_M_SCAN);
     }
 
     Color low_blue = new Color(80, 80, 130);
@@ -514,115 +514,115 @@ public class TimeLinePanel extends JPanel {
     int TLOFF = 80;
 
     private void drawTLBut(Graphics g, int y) {
-	g.setColor(gray80);
-	g.fillRect(-TLOFF + 3, y - 5, 10, 10);
+        g.setColor(gray80);
+        g.fillRect(-TLOFF + 3, y - 5, 10, 10);
     }
 
     private void paintTimeLine(Graphics g, MasterTimeLine mtl) {
-	Graphics2D g2 = (Graphics2D) g;
-	AffineTransform at = null;
+        Graphics2D g2 = (Graphics2D) g;
+        AffineTransform at = null;
 
-	try {
-	    g.setColor(gray30);
-	    g.fillRect(0, 0, TLOFF, 1000);
+        try {
+            g.setColor(gray30);
+            g.fillRect(0, 0, TLOFF, 1000);
 
-	    at = g2.getTransform();
-	    at.translate(TLOFF, 0);
-	    g2.setTransform(at);
+            at = g2.getTransform();
+            at.translate(TLOFF, 0);
+            g2.setTransform(at);
 
-	    paintMasterTimeLine(g);
+            paintMasterTimeLine(g);
 
-	    int t_x = tick_h / scale;
-	    int t_mx = tick_m / scale;
-	    int t_x_ = ltick_h / scale;
+            int t_x = tick_h / scale;
+            int t_mx = tick_m / scale;
+            int t_x_ = ltick_h / scale;
 
-	    g.setColor(vertical_tl_cursor_color);
-	    g.drawLine(t_x, 0, t_x, 200);
-	    g.setColor(vertical_tl_mousecursor_color);
-	    g.drawLine(t_mx, 0, t_mx, 200);
+            g.setColor(vertical_tl_cursor_color);
+            g.drawLine(t_x, 0, t_x, 200);
+            g.setColor(vertical_tl_mousecursor_color);
+            g.drawLine(t_mx, 0, t_mx, 200);
 
-	    for (int i = 0; i < mtl.getMaxTimeLineIndex(); i++) {
-		int y = TL_M_SCAN + 10 + i * TL_H;
-		g.setColor(outside_tl_color);
-		g.drawLine(0, y, 2000, y);
-		TimeLine tl = mtl.getTimeLine(i);
-		if (tl == null)
-		    continue;
-		int start = (int) (tl.getOffset() / scale);
-		int stop = (int) ((tl.getOffset() + tl.getDuration()) / scale);
-		g.setColor(outside_tl_color);
-		g.drawLine(0, y, start, y);
-		if (i == selected_tl)
-		    g.setColor(selected_tl_timeline_color);
-		else
-		    g.setColor(normal_tl_timeline_color);
-		g.drawLine(start, y, stop, y);
-		if (t_x > start) {
-		    if (i == selected_tl)
-			g.setColor(light_selected_tl_timeline_color);
-		    else
-			g.setColor(light_normal_tl_timeline_color);
-		    g.drawLine(start, y, t_x, y);
-		}
-		if (t_x_ > start) {
-		    g.setColor(light_vertical_tl_cursor_color);
-		    g.drawLine(t_x_, y, t_x, y);
-		}
-		g.setColor(outside_tl_color);
-		g.drawLine(stop, y, 2000, y);
+            for (int i = 0; i < mtl.getMaxTimeLineIndex(); i++) {
+                int y = TL_M_SCAN + 10 + i * TL_H;
+                g.setColor(outside_tl_color);
+                g.drawLine(0, y, 2000, y);
+                TimeLine tl = mtl.getTimeLine(i);
+                if (tl == null)
+                    continue;
+                int start = (int) (tl.getOffset() / scale);
+                int stop = (int) ((tl.getOffset() + tl.getDuration()) / scale);
+                g.setColor(outside_tl_color);
+                g.drawLine(0, y, start, y);
+                if (i == selected_tl)
+                    g.setColor(selected_tl_timeline_color);
+                else
+                    g.setColor(normal_tl_timeline_color);
+                g.drawLine(start, y, stop, y);
+                if (t_x > start) {
+                    if (i == selected_tl)
+                        g.setColor(light_selected_tl_timeline_color);
+                    else
+                        g.setColor(light_normal_tl_timeline_color);
+                    g.drawLine(start, y, t_x, y);
+                }
+                if (t_x_ > start) {
+                    g.setColor(light_vertical_tl_cursor_color);
+                    g.drawLine(t_x_, y, t_x, y);
+                }
+                g.setColor(outside_tl_color);
+                g.drawLine(stop, y, 2000, y);
 
-		Iterator it = tl.getMarkersAbs(-1, 999999, true).iterator();
-		while (it.hasNext()) {
-		    TimeMarker tm = (TimeMarker) it.next();
-		    int xx = (int) (tm.when / scale);
-		    int dd = (int) (tm.duration / scale);
-		    g.setColor(gray30);
-		    TimeMarkerDraw.draw(g, tm, xx + 1, y + 1, dd);
+                Iterator it = tl.getMarkersAbs(-1, 999999, true).iterator();
+                while (it.hasNext()) {
+                    TimeMarker tm = (TimeMarker) it.next();
+                    int xx = (int) (tm.when / scale);
+                    int dd = (int) (tm.duration / scale);
+                    g.setColor(gray30);
+                    TimeMarkerDraw.draw(g, tm, xx + 1, y + 1, dd);
 
-		    Color mcol = normal_marker_color;
-		    if (tm.type == TimeMarker.TSYNC)
-			mcol = normal_TSync_marker_color;
-		    if (tm.isDeleteCandidate())
-			g.setColor(Color.red);
-		    else if (tm.isSelected())
-			g.setColor(mcol.brighter().brighter());
-		    else
-			g.setColor(mcol);
-		    TimeMarkerDraw.draw(g, tm, xx, y, dd);
-		}
+                    Color mcol = normal_marker_color;
+                    if (tm.type == TimeMarker.TSYNC)
+                        mcol = normal_TSync_marker_color;
+                    if (tm.isDeleteCandidate())
+                        g.setColor(Color.red);
+                    else if (tm.isSelected())
+                        g.setColor(mcol.brighter().brighter());
+                    else
+                        g.setColor(mcol);
+                    TimeMarkerDraw.draw(g, tm, xx, y, dd);
+                }
 
-		it = tl.getMarkersAbs(t_x_ * scale, t_x * scale).iterator();
-		g.setColor(light_yellow);
-		while (it.hasNext()) {
-		    TimeMarker tm = (TimeMarker) it.next();
-		    int xx = (int) (tm.when / scale);
-		    int dd = (int) (tm.duration / scale);
-		    TimeMarkerDraw.draw(g, tm, xx, y, dd);
-		}
+                it = tl.getMarkersAbs(t_x_ * scale, t_x * scale).iterator();
+                g.setColor(light_yellow);
+                while (it.hasNext()) {
+                    TimeMarker tm = (TimeMarker) it.next();
+                    int xx = (int) (tm.when / scale);
+                    int dd = (int) (tm.duration / scale);
+                    TimeMarkerDraw.draw(g, tm, xx, y, dd);
+                }
 
 //		drawTLBut(g, y);
-		at.translate(-TLOFF, 0);
-		g2.setTransform(at);
-		int xx = 10;
-		String name = mtl.getTimeLine(i).getLessonId();
-		if (name != null)
-		    g2.drawString(name, xx, y + 3);
-		at.translate(TLOFF, 0);
-		g2.setTransform(at);
-	    }
-	} finally {
-	    at.translate(-TLOFF, 0);
-	    g2.setTransform(at);
-	}
+                at.translate(-TLOFF, 0);
+                g2.setTransform(at);
+                int xx = 10;
+                String name = mtl.getTimeLine(i).getLessonId();
+                if (name != null)
+                    g2.drawString(name, xx, y + 3);
+                at.translate(TLOFF, 0);
+                g2.setTransform(at);
+            }
+        } finally {
+            at.translate(-TLOFF, 0);
+            g2.setTransform(at);
+        }
     }
 
     public Dimension getMinimumSize() {
-	return new Dimension(100, 120);
+        return new Dimension(100, 120);
     }
 
     public void paintComponent(Graphics g) {
-	super.paintComponent(g);
-	paintTimeLine(g, mtl);
-	updName();
+        super.paintComponent(g);
+        paintTimeLine(g, mtl);
+        updName();
     }
 }

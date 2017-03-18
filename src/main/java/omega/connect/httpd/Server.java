@@ -17,39 +17,39 @@ public class Server extends Thread {
     int connection_cnt = 0;
 
     public Server() {
-	this(8089);
+        this(8089);
     }
 
     public Server(int port) {
-	super("httpd");
-	this.port = port;
-	ht = new Hashtable();
+        super("httpd");
+        this.port = port;
+        ht = new Hashtable();
     }
 
     public void run() {
-	omega.Context.sout_log.getLogger().info("ERR: " + "httpd: Server started");
-	try {
-	    sso = new ServerSocket(port);
-	    for (;;) {
-		Socket so = sso.accept();
+        omega.Context.sout_log.getLogger().info("ERR: " + "httpd: Server started");
+        try {
+            sso = new ServerSocket(port);
+            for (; ; ) {
+                Socket so = sso.accept();
 //		omega.Context.sout_log.getLogger().info("ERR: " + "httpd: Connection accepted");
-		connection_cnt++;
-		ServerConnection con = new ServerConnection(so, this);
-		con.start();
-	    }
-	} catch (IOException ex) {
-	    omega.Context.sout_log.getLogger().info("ERR: " + "httpd: Exception: " + ex);
-	}
+                connection_cnt++;
+                ServerConnection con = new ServerConnection(so, this);
+                con.start();
+            }
+        } catch (IOException ex) {
+            omega.Context.sout_log.getLogger().info("ERR: " + "httpd: Exception: " + ex);
+        }
     }
 
     HashMap hm = new HashMap();
 
     public HashMap getHashMap() {
-	return hm;
+        return hm;
     }
 
     public static void main(String[] args) {
-	Server s = new Server();
-	s.start();
+        Server s = new Server();
+        s.start();
     }
 }

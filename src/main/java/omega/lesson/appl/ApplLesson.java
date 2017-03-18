@@ -18,31 +18,31 @@ public class ApplLesson extends JFrame {
     public static boolean isMac = false;
 
     ApplLesson(String title, boolean is_editor) {
-	super(title);
-	this.is_editor = is_editor;
-	TOP_JFRAME = this;
-	omega.Context.init("Httpd", null);
-	httpd = ((omega.subsystem.Httpd) (omega.Context.getSubsystem("Httpd"))).httpd;
+        super(title);
+        this.is_editor = is_editor;
+        TOP_JFRAME = this;
+        omega.Context.init("Httpd", null);
+        httpd = ((omega.subsystem.Httpd) (omega.Context.getSubsystem("Httpd"))).httpd;
 
-	if (Config.fullScreen ) {
-	    try {
-		Class util = Class.forName("com.apple.eawt.FullScreenUtilities");
-		Class params[] = new Class[]{Window.class, Boolean.TYPE};
-		Method method = util.getMethod("setWindowCanFullScreen", params);
-		method.invoke(util, this, true);
-		isMac = true;
-	    } catch (Exception ex) {
-		ex.printStackTrace();
-	    }
+        if (Config.fullScreen) {
+            try {
+                Class util = Class.forName("com.apple.eawt.FullScreenUtilities");
+                Class params[] = new Class[]{Window.class, Boolean.TYPE};
+                Method method = util.getMethod("setWindowCanFullScreen", params);
+                method.invoke(util, this, true);
+                isMac = true;
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
 //	getRootPane().putClientProperty("apple.awt.fullscreenable", Boolean.valueOf(true));
-	/*
+        /*
 	if ( FullScreenUtilities.class != null ) {
 	    FullScreenUtilities.setWindowCanFullScreen(this, true);
 	    Application.getApplication().requestToggleFullScreen(this);
 	}
 	*/
-	}
+        }
 
-	help = new HelpSystem();
+        help = new HelpSystem();
     }
 }

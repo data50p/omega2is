@@ -8,37 +8,37 @@ public class ToolAction extends AbstractAction {
     ToolExecute texec;
 
     public ToolAction(String text, String cmd, ToolExecute texec) {
-	super(text);
-	this.cmd = cmd;
-	this.texec = texec;
+        super(text);
+        this.cmd = cmd;
+        this.texec = texec;
     }
 
     public ToolAction(String text, String icons, String cmd, ToolExecute texec) {
-	super(text, SwingUtils.getImageIcon("toolbarButtonGraphics/" + icons + "24.gif"));
-	this.cmd = cmd;
-	this.texec = texec;
+        super(text, OmegaSwingUtils.getImageIcon("toolbarButtonGraphics/" + icons + "24.gif"));
+        this.cmd = cmd;
+        this.texec = texec;
     }
 
     public ToolAction(String text, String icons, String cmd, ToolExecute texec, boolean _b) {
-	super(text, SwingUtils.getImageIcon("toolbarButtonGraphics/" + icons + "24.png"));
-	this.cmd = cmd;
-	this.texec = texec;
+        super(text, OmegaSwingUtils.getImageIcon("toolbarButtonGraphics/" + icons + "24.png"));
+        this.cmd = cmd;
+        this.texec = texec;
     }
 
     public ToolAction() {
-	this.cmd = null;
+        this.cmd = null;
     }
 
     public void actionPerformed(ActionEvent ae) {
-	if (texec != null)
-	    texec.execute(getCommand());
+        if (texec != null)
+            texec.execute(getCommand());
     }
 
     public String getCommand() {
-	return cmd;
+        return cmd;
     }
 
     public Icon getIcon() {
-	return (Icon) getValue(Action.SMALL_ICON);
+        return (Icon) getValue(Action.SMALL_ICON);
     }
 }

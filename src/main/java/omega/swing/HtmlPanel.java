@@ -33,36 +33,36 @@ public class HtmlPanel extends JPanel implements HyperlinkListener {
     JEditorPane html;
 
     public HtmlPanel(String s) {
-	setLayout(new BorderLayout());
-	getAccessibleContext().setAccessibleName("HTML panel");
-	getAccessibleContext().setAccessibleDescription("A panel for viewing HTML documents, and following their links");
+        setLayout(new BorderLayout());
+        getAccessibleContext().setAccessibleName("HTML panel");
+        getAccessibleContext().setAccessibleDescription("A panel for viewing HTML documents, and following their links");
 
-	try {
-	    URL url = null;
-	    try {
-		url = new URL(s);
-	    } catch (java.net.MalformedURLException exc) {
-		omega.Context.sout_log.getLogger().info("ERR: " + "Attempted to open example.html "
-			+ "with a bad URL: " + url);
-		url = null;
-	    }
+        try {
+            URL url = null;
+            try {
+                url = new URL(s);
+            } catch (java.net.MalformedURLException exc) {
+                omega.Context.sout_log.getLogger().info("ERR: " + "Attempted to open example.html "
+                        + "with a bad URL: " + url);
+                url = null;
+            }
 
-	    if (url != null) {
-		html = new JEditorPane(url);
-		html.setEditable(false);
-		html.addHyperlinkListener(this);
-		JScrollPane scroller = new JScrollPane();
+            if (url != null) {
+                html = new JEditorPane(url);
+                html.setEditable(false);
+                html.addHyperlinkListener(this);
+                JScrollPane scroller = new JScrollPane();
 //                scroller.setBorder(swing.loweredBorder);
-		JViewport vp = scroller.getViewport();
-		vp.add(html);
+                JViewport vp = scroller.getViewport();
+                vp.add(html);
 // not in Java 2, 1.3                vp.setBackingStoreEnabled(true);
-		add(scroller, BorderLayout.CENTER);
-	    }
-	} catch (MalformedURLException e) {
-	    omega.Context.sout_log.getLogger().info("ERR: " + "Malformed URL: " + e);
-	} catch (IOException e) {
-	    omega.Context.sout_log.getLogger().info("ERR: " + "IOException: " + e);
-	}
+                add(scroller, BorderLayout.CENTER);
+            }
+        } catch (MalformedURLException e) {
+            omega.Context.sout_log.getLogger().info("ERR: " + "Malformed URL: " + e);
+        } catch (IOException e) {
+            omega.Context.sout_log.getLogger().info("ERR: " + "IOException: " + e);
+        }
     }
 
     /**
@@ -70,9 +70,9 @@ public class HtmlPanel extends JPanel implements HyperlinkListener {
      * hyperlink.
      */
     public void hyperlinkUpdate(HyperlinkEvent e) {
-	if (e.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
-	    linkActivated(e.getURL());
-	}
+        if (e.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
+            linkActivated(e.getURL());
+        }
     }
 
     /**
@@ -88,27 +88,27 @@ public class HtmlPanel extends JPanel implements HyperlinkListener {
      * @param u the URL to follow
      */
     protected void linkActivated(URL u) {
-	Cursor c = html.getCursor();
-	Cursor waitCursor = Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR);
-	html.setCursor(waitCursor);
-	SwingUtilities.invokeLater(new PageLoader(u, c));
+        Cursor c = html.getCursor();
+        Cursor waitCursor = Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR);
+        html.setCursor(waitCursor);
+        SwingUtilities.invokeLater(new PageLoader(u, c));
     }
 
     public void goTo(String s) {
-	URL url = null;
-	try {
-	    url = new URL(s);
-	} catch (java.net.MalformedURLException exc) {
-	    omega.Context.sout_log.getLogger().info("ERR: " + "Attempted to open example.html "
-		    + "with a bad URL: " + url);
-	    url = null;
-	}
-	if (html != null && url != null) {
-	    Cursor c = html.getCursor();
-	    Cursor waitCursor = Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR);
-	    html.setCursor(waitCursor);
-	    SwingUtilities.invokeLater(new PageLoader(url, c));
-	}
+        URL url = null;
+        try {
+            url = new URL(s);
+        } catch (java.net.MalformedURLException exc) {
+            omega.Context.sout_log.getLogger().info("ERR: " + "Attempted to open example.html "
+                    + "with a bad URL: " + url);
+            url = null;
+        }
+        if (html != null && url != null) {
+            Cursor c = html.getCursor();
+            Cursor waitCursor = Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR);
+            html.setCursor(waitCursor);
+            SwingUtilities.invokeLater(new PageLoader(url, c));
+        }
     }
 
     /**
@@ -118,38 +118,38 @@ public class HtmlPanel extends JPanel implements HyperlinkListener {
      */
     class PageLoader implements Runnable {
 
-	PageLoader(URL u, Cursor c) {
-	    url = u;
-	    cursor = c;
-	}
+        PageLoader(URL u, Cursor c) {
+            url = u;
+            cursor = c;
+        }
 
-	public void run() {
-	    if (url == null) {
-		// restore the original cursor
-		html.setCursor(cursor);
+        public void run() {
+            if (url == null) {
+                // restore the original cursor
+                html.setCursor(cursor);
 
-		// PENDING(prinz) remove this hack when
-		// automatic validation is activated.
-		Container parent = html.getParent();
-		parent.repaint();
-	    } else {
-		Document doc = html.getDocument();
-		try {
-		    html.setPage(url);
-		} catch (IOException ioe) {
-		    html.setDocument(doc);
-		    getToolkit().beep();
-		} finally {
-		    // schedule the cursor to revert after
-		    // the paint has happended.
-		    url = null;
-		    SwingUtilities.invokeLater(this);
-		}
-	    }
-	}
+                // PENDING(prinz) remove this hack when
+                // automatic validation is activated.
+                Container parent = html.getParent();
+                parent.repaint();
+            } else {
+                Document doc = html.getDocument();
+                try {
+                    html.setPage(url);
+                } catch (IOException ioe) {
+                    html.setDocument(doc);
+                    getToolkit().beep();
+                } finally {
+                    // schedule the cursor to revert after
+                    // the paint has happended.
+                    url = null;
+                    SwingUtilities.invokeLater(this);
+                }
+            }
+        }
 
-	URL url;
-	Cursor cursor;
+        URL url;
+        Cursor cursor;
     }
 
 }

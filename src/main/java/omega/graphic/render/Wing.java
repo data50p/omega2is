@@ -19,23 +19,23 @@ public class Wing {
 //    public int mirror;
 
     public Wing(Component comp, String fn, int x, int y, int layer, int ord) {
-	this.name = fn;
-	im = LoadImage.loadAndWait(comp, fn);
-	this.layer = layer;
-	dim = new Dimension(im.getWidth(null), im.getHeight(null));
-	pos = new Point(x, y);
-	this.ord = ord;
-	width = im.getWidth(null);
-	height = im.getHeight(null);
+        this.name = fn;
+        im = LoadImage.loadAndWait(comp, fn);
+        this.layer = layer;
+        dim = new Dimension(im.getWidth(null), im.getHeight(null));
+        pos = new Point(x, y);
+        this.ord = ord;
+        width = im.getWidth(null);
+        height = im.getHeight(null);
     }
 
     public Element getElement() {
-	Element el = new Element("Wing");
-	el.addAttr("name", name);
-	el.addAttr("layer", "" + layer);
-	el.addAttr("mirror", "" + mirror);
-	el.addAttr("scale", "" + scale);
-	el.addAttr("position", "" + pos.getX() + ' ' + pos.getY());
-	return el;
+        Element el = new Element("Wing");
+        el.addAttr("name", name);
+        el.addAttr("layer", "" + layer);
+        el.addAttr("mirror", "" + mirror);
+        el.addAttr("scale", "" + scale);
+        el.addAttr("position", "" + pos.getX() + ' ' + pos.getY());
+        return el;
     }
 }

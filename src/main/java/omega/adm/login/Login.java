@@ -19,38 +19,38 @@ abstract public class Login {
     int mode = USER;
 
     Login() {
-	user = new PeopleUser();
-	teacher = new PeopleTeacher();
+        user = new PeopleUser();
+        teacher = new PeopleTeacher();
     }
 
     public JComponent getJComponent() {
-	return comp;
+        return comp;
     }
 
     public void setMode(int m) {
-	mode = m;
+        mode = m;
     }
 
     public void setName(String name) {
-	Log.getLogger().info("ERR: " + "setName " + name + mode);
-	switch (mode) {
-	    case USER:
-		user.setName(name);
-		break;
-	    case TEACHER:
-		teacher.setName(name);
-		break;
-	}
+        Log.getLogger().info("ERR: " + "setName " + name + mode);
+        switch (mode) {
+            case USER:
+                user.setName(name);
+                break;
+            case TEACHER:
+                teacher.setName(name);
+                break;
+        }
     }
 
     public void waitDone() {
-	synchronized (o) {
-	    while (!ready) {
-		try {
-		    o.wait();
-		} catch (InterruptedException ex) {
-		}
-	    }
-	}
+        synchronized (o) {
+            while (!ready) {
+                try {
+                    o.wait();
+                } catch (InterruptedException ex) {
+                }
+            }
+        }
     }
 }

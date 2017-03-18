@@ -16,58 +16,58 @@ public class SettingsDialog extends JDialog implements ActionListener {
     private int Y = 0;
 
     public SettingsDialog(String title) {
-	super(ApplContext.top_frame, title, true);
+        super(ApplContext.top_frame, title, true);
     }
 
     void addb(String txt, String cmd) {
-	JButton b = new JButton(txt);
-	b.setActionCommand(cmd);
-	b.addActionListener(this);
-	jpan.add(b);
+        JButton b = new JButton(txt);
+        b.setActionCommand(cmd);
+        b.addActionListener(this);
+        jpan.add(b);
     }
 
     JTextField addtf(JPanel jp, String txt) {
-	JTextField tf = new JTextField(20);
-	JLabel l = new JLabel(txt);
-	l.setLabelFor(tf);
-	jp.add(l, gbcf.createL(X++, Y, 1));
-	jp.add(tf, gbcf.createL(X++, Y, 1));
-	X = 0;
-	Y++;
-	return tf;
+        JTextField tf = new JTextField(20);
+        JLabel l = new JLabel(txt);
+        l.setLabelFor(tf);
+        jp.add(l, gbcf.createL(X++, Y, 1));
+        jp.add(tf, gbcf.createL(X++, Y, 1));
+        X = 0;
+        Y++;
+        return tf;
     }
 
     JComboBox addcb(JPanel jp, String txt, String[] sa) {
-	JComboBox cb = new JComboBox();
-	JLabel l = new JLabel(txt);
-	l.setLabelFor(cb);
-	jp.add(l, gbcf.createL(X++, Y, 1));
-	jp.add(cb, gbcf.createL(X++, Y, 1));
-	for (int i = 0; i < sa.length; i++)
-	    cb.addItem(sa[i]);
-	X = 0;
-	Y++;
-	return cb;
+        JComboBox cb = new JComboBox();
+        JLabel l = new JLabel(txt);
+        l.setLabelFor(cb);
+        jp.add(l, gbcf.createL(X++, Y, 1));
+        jp.add(cb, gbcf.createL(X++, Y, 1));
+        for (int i = 0; i < sa.length; i++)
+            cb.addItem(sa[i]);
+        X = 0;
+        Y++;
+        return cb;
     }
 
     JCheckBox addchb(JPanel jp, String txt) {
-	JCheckBox chb = new JCheckBox();
-	JLabel l = new JLabel(txt);
-	l.setLabelFor(chb);
-	jp.add(l, gbcf.createL(X++, Y, 1));
-	jp.add(chb, gbcf.createL(X++, Y, 1));
-	X = 0;
-	Y++;
-	return chb;
+        JCheckBox chb = new JCheckBox();
+        JLabel l = new JLabel(txt);
+        l.setLabelFor(chb);
+        jp.add(l, gbcf.createL(X++, Y, 1));
+        jp.add(chb, gbcf.createL(X++, Y, 1));
+        X = 0;
+        Y++;
+        return chb;
     }
 
     void populateCommon() {
-	Container c = getContentPane();
+        Container c = getContentPane();
 
-	addb(T.t("OK"), "OK");
-	addb(T.t("Cancel"), "cancel");
+        addb(T.t("OK"), "OK");
+        addb(T.t("Cancel"), "cancel");
 
-	c.add(jpan, BorderLayout.SOUTH);
+        c.add(jpan, BorderLayout.SOUTH);
     }
 
     void save() {
@@ -77,14 +77,14 @@ public class SettingsDialog extends JDialog implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-	String cmd = e.getActionCommand();
+        String cmd = e.getActionCommand();
 //log	omega.Context.sout_log.getLogger().info("ERR: " + "" + cmd);
-	if ("OK".equals(cmd)) {
-	    save();
-	    setVisible(false);
-	}
-	if ("cancel".equals(cmd)) {
-	    setVisible(false);
-	}
+        if ("OK".equals(cmd)) {
+            save();
+            setVisible(false);
+        }
+        if ("cancel".equals(cmd)) {
+            setVisible(false);
+        }
     }
 }

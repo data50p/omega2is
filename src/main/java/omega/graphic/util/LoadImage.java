@@ -1,7 +1,7 @@
 package omega.graphic.util;
 
 import omega.Context;
-import omega.swing.SwingUtils;
+import omega.swing.OmegaSwingUtils;
 
 import java.awt.*;
 import java.io.File;
@@ -79,6 +79,6 @@ public class LoadImage {
     }
 
     public static Image loadAndWaitFromResource(Component comp, String im_name) {
-        return SwingUtils.getImage(im_name);
+        return OmegaSwingUtils.getImage(im_name);
     }
 }

@@ -8,8 +8,8 @@ public class GenericEvent {
     public HashMap hm;
 
     public GenericEvent(String grp, String id, HashMap hm) {
-	this.grp = grp;
-	this.id = id;
-	this.hm = hm;
+        this.grp = grp;
+        this.id = id;
+        this.hm = hm;
     }
 }

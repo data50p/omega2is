@@ -21,84 +21,85 @@ public class FxPlayer {
     final String fname;
 
     FxPlayer(String fn) {
-	realy_name = fn;
+        realy_name = fn;
 
-	if (fn.endsWith(".wav")) {
-	    String fn3 = fn.replaceAll("\\.wav", ".mp3");
-	    File file3 = new File(fn3);
-	    File file2 = new File(fn);
-	    if (file3.exists() && !file2.exists()) {
-		fname = fn3;
-		omega.Context.sout_log.getLogger().info(": " + "FxPlayer: fn -> " + fname + " (" + realy_name + ")");
-	    } else {
-	        fname = fn;
-		omega.Context.sout_log.getLogger().info(": " + "FxPlayer: fn => " + fname);
-	    }
-	} else {
-	    fname = fn;
-	    omega.Context.sout_log.getLogger().info(": " + "FxPlayer: fn => " + fname);
-	}
+        if (fn.endsWith(".wav")) {
+            String fn3 = fn.replaceAll("\\.wav", ".mp3");
+            File file3 = new File(fn3);
+            File file2 = new File(fn);
+            if (file3.exists() && !file2.exists()) {
+                fname = fn3;
+                omega.Context.sout_log.getLogger().info(": " + "FxPlayer: fn -> " + fname + " (" + realy_name + ")");
+            } else {
+                fname = fn;
+                omega.Context.sout_log.getLogger().info(": " + "FxPlayer: fn => " + fname);
+            }
+        } else {
+            fname = fn;
+            omega.Context.sout_log.getLogger().info(": " + "FxPlayer: fn => " + fname);
+        }
     }
 
     void play(boolean wait) {
-	playFX(fname);
-	if (wait) {
-	    synchronized (lock) {
-		try {
-		    while (!done)
-			lock.wait(200);
-		} catch (InterruptedException ex) {
-		}
-		Log.getLogger().info("fxPlayed waited ... notified done");
-	    }
-	}
+        playFX(fname);
+        if (wait) {
+            synchronized (lock) {
+                try {
+                    while (!done)
+                        lock.wait(200);
+                } catch (InterruptedException ex) {
+                }
+                Log.getLogger().info("fxPlayed waited ... notified done");
+            }
+        }
     }
 
     void playFX(final String fn) {
-	Log.getLogger().info("Enter playFX " + fn);
-	doOnce();
-	Platform.runLater(() -> {
-	    MilliTimer mt = new MilliTimer();
-	    File f = new File(fn);
-	    String bip = null;
-	    bip = f.toURI().toString();
-	    Log.getLogger().info("fxPrepare " + bip + ' ' + mt.getString());
-	    Media hit = new Media(bip);
-	    mediaPlayer = new MediaPlayer(hit);mediaPlayer.setOnEndOfMedia(() -> {
-	    	synchronized (lock) {
-			mediaPlayer.dispose();
-		    Log.getLogger().info("fxPlayed eof" + ' ' + mt.getString());
-			done = true;
-			lock.notifyAll();
-		}
-	    });
-	    Log.getLogger().info("fxPlay..." + ' ' + mt.getString());
-	    mediaPlayer.play();
-	});
-	Log.getLogger().info("Leave playFX " + fn);
+        Log.getLogger().info("Enter playFX " + fn);
+        doOnce();
+        Platform.runLater(() -> {
+            MilliTimer mt = new MilliTimer();
+            File f = new File(fn);
+            String bip = null;
+            bip = f.toURI().toString();
+            Log.getLogger().info("fxPrepare " + bip + ' ' + mt.getString());
+            Media hit = new Media(bip);
+            mediaPlayer = new MediaPlayer(hit);
+            mediaPlayer.setOnEndOfMedia(() -> {
+                synchronized (lock) {
+                    mediaPlayer.dispose();
+                    Log.getLogger().info("fxPlayed eof" + ' ' + mt.getString());
+                    done = true;
+                    lock.notifyAll();
+                }
+            });
+            Log.getLogger().info("fxPlay..." + ' ' + mt.getString());
+            mediaPlayer.play();
+        });
+        Log.getLogger().info("Leave playFX " + fn);
     }
 
     private static boolean once = false;
 
     private void doOnce() {
-        if ( once )
+        if (once)
             return;
-	initFxFramework();
-	once = true;
-	try {
-	    Thread.sleep(5);
-	} catch (InterruptedException e) {
-	}
+        initFxFramework();
+        once = true;
+        try {
+            Thread.sleep(5);
+        } catch (InterruptedException e) {
+        }
     }
 
     static JFXPanel z = null;
 
     private synchronized static void initFxFramework() {
-        if ( z == null ) {
-	    SwingUtilities.invokeLater(() -> {
-		z = new JFXPanel(); // this will prepare JavaFX toolkit and environment
-		Platform.setImplicitExit(false);
-	    });
-	}
+        if (z == null) {
+            SwingUtilities.invokeLater(() -> {
+                z = new JFXPanel(); // this will prepare JavaFX toolkit and environment
+                Platform.setImplicitExit(false);
+            });
+        }
     }
 }

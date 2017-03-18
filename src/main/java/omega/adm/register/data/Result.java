@@ -13,16 +13,16 @@ public abstract class Result {
     }
 
     public String mkFname(String pname) {
-	Date d = getFirstPerformDate();
+        Date d = getFirstPerformDate();
 //	DateFormat df = DateFormat.getDateTimeInstance();
-	DateFormat df = new SimpleDateFormat("yyyyMMdd_HHmmss");
-	String s = pname + '-' + df.format(d) + '-' + getLessonName();
-	String fn = s.replace(':', '-').replace(' ', '_');
-	return fn;
+        DateFormat df = new SimpleDateFormat("yyyyMMdd_HHmmss");
+        String s = pname + '-' + df.format(d) + '-' + getLessonName();
+        String fn = s.replace(':', '-').replace(' ', '_');
+        return fn;
     }
 
     String getType() {
-	return "generic";
+        return "generic";
     }
 
     abstract String getLessonName();

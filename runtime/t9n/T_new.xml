@@ -110,6 +110,10 @@
    <string>Import Omega Assets Bundle</string>
   </void>
   <void method="put">
+   <string>Set Assets</string>
+   <string>Set Assets</string>
+  </void>
+  <void method="put">
    <string>&lt;Ny Elev&gt;</string>
    <string>&lt;Ny Elev&gt;</string>
   </void>

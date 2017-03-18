@@ -15,43 +15,43 @@ public class XML_PW {
     boolean use_dtd = true;
 
     public XML_PW() {
-	st = new Stack();
+        st = new Stack();
     }
 
     public XML_PW(boolean dtd) {
-	st = new Stack();
-	use_dtd = dtd;
+        st = new Stack();
+        use_dtd = dtd;
     }
 
     public XML_PW(OutputStream os) {
-	pw = S.createPrintWriter(os);
-	st = new Stack();
+        pw = S.createPrintWriter(os);
+        st = new Stack();
     }
 
     public XML_PW(PrintWriter pw) {
-	this.pw = pw;
-	st = new Stack();
+        this.pw = pw;
+        st = new Stack();
     }
 
     public XML_PW(PrintWriter pw, boolean dtd) {
-	this.pw = pw;
-	st = new Stack();
-	use_dtd = dtd;
+        this.pw = pw;
+        st = new Stack();
+        use_dtd = dtd;
     }
 
     void ensureDTD(String tag) {
-	File f = new File(tag + ".dtd");
-	if (f.exists())
-	    return;
-	try {
-	    f.createNewFile();
-	} catch (IOException ex) {
-	}
+        File f = new File(tag + ".dtd");
+        if (f.exists())
+            return;
+        try {
+            f.createNewFile();
+        } catch (IOException ex) {
+        }
     }
 
     void ensurePW(String tag) {
-	if (pw == null)
-	    pw = S.createPrintWriter(tag + ".xml");
+        if (pw == null)
+            pw = S.createPrintWriter(tag + ".xml");
     }
 
     StringBuffer dtd_sb;
@@ -59,218 +59,218 @@ public class XML_PW {
     private boolean lastE = true;
 
     public void setDTD(String s) {
-	dtd_sb = new StringBuffer();
-	dtd_sb.append(s);
+        dtd_sb = new StringBuffer();
+        dtd_sb.append(s);
     }
 
     public void addDTD_E(String tag) {
-	addDTD_E(tag, null, null);
+        addDTD_E(tag, null, null);
     }
 
     public void addDTD_E(String tag, String def) {
-	addDTD_E(tag, def, null);
+        addDTD_E(tag, def, null);
     }
 
     public void addDTD_E(String tag, String def, String cmnt) {
-	if (!lastE)
-	    addDTD("\n");
-	addDTD("	<!ELEMENT " +
-		tag +
-		' ' +
-		(def == null ? "EMPTY" : def) +
-		">" +
-		(cmnt == null ? "\n" : ("  <!-- " + cmnt + " -->\n")));
-	lastE = true;
+        if (!lastE)
+            addDTD("\n");
+        addDTD("	<!ELEMENT " +
+                tag +
+                ' ' +
+                (def == null ? "EMPTY" : def) +
+                ">" +
+                (cmnt == null ? "\n" : ("  <!-- " + cmnt + " -->\n")));
+        lastE = true;
     }
 
     public void addDTD_A(String tag, String attr) {
-	addDTD_A(tag, attr, true, null);
+        addDTD_A(tag, attr, true, null);
     }
 
     public void addDTD_A(String tag, String attr, boolean req) {
-	addDTD_A(tag, attr, req, null);
+        addDTD_A(tag, attr, req, null);
     }
 
     public void addDTD_A(String tag, String attr, boolean req, String cmnt) {
-	addDTD("	<!ATTLIST " +
-		tag + ' ' +
-		attr + ' ' +
-		"CDATA " +
-		(req ? "#REQUIRED" : "#IMPLIED") +
-		">" +
-		(cmnt == null ? "\n" : "  <!-- " + cmnt + " -->\n"));
-	lastE = false;
+        addDTD("	<!ATTLIST " +
+                tag + ' ' +
+                attr + ' ' +
+                "CDATA " +
+                (req ? "#REQUIRED" : "#IMPLIED") +
+                ">" +
+                (cmnt == null ? "\n" : "  <!-- " + cmnt + " -->\n"));
+        lastE = false;
     }
 
     public void addDTD_A(String tag, String attr, String kind, boolean req, String cmnt) {
-	addDTD("	<!ATTLIST " +
-		tag + ' ' +
-		attr + ' ' +
-		kind + ' ' +
-		(req ? "#REQUIRED" : "#IMPLIED") +
-		">" +
-		(cmnt == null ? "\n" : "  <!-- " + cmnt + " -->\n"));
-	lastE = false;
+        addDTD("	<!ATTLIST " +
+                tag + ' ' +
+                attr + ' ' +
+                kind + ' ' +
+                (req ? "#REQUIRED" : "#IMPLIED") +
+                ">" +
+                (cmnt == null ? "\n" : "  <!-- " + cmnt + " -->\n"));
+        lastE = false;
     }
 
     public void addDTD_A(String tag, String attr, String[] val, String def) {
-	addDTD_A(tag, attr, val, def, null);
+        addDTD_A(tag, attr, val, def, null);
     }
 
     public void addDTD_A(String tag, String attr, String[] val, String def, String cmnt) {
-	addDTD("	<!ATTLIST " +
-		tag + ' ' +
-		attr + ' ' +
-		" (");
-	for (int i = 0; i < val.length; i++)
-	    addDTD((i == 0 ? "" : " | ") + val[i]);
-	addDTD(") \"" + def + "\">" +
-		(cmnt == null ? "\n" : "  <!-- " + cmnt + " -->\n"));
-	lastE = false;
+        addDTD("	<!ATTLIST " +
+                tag + ' ' +
+                attr + ' ' +
+                " (");
+        for (int i = 0; i < val.length; i++)
+            addDTD((i == 0 ? "" : " | ") + val[i]);
+        addDTD(") \"" + def + "\">" +
+                (cmnt == null ? "\n" : "  <!-- " + cmnt + " -->\n"));
+        lastE = false;
     }
 
     public void addDTD(String s) {
-	if (dtd_sb == null)
-	    dtd_sb = new StringBuffer();
-	dtd_sb.append(s);
+        if (dtd_sb == null)
+            dtd_sb = new StringBuffer();
+        dtd_sb.append(s);
     }
 
     String getDTD() {
-	if (dtd_sb == null)
-	    return null;
-	return dtd_sb.toString();
+        if (dtd_sb == null)
+            return null;
+        return dtd_sb.toString();
     }
 
     void first(String tag) {
-	if (first_done == false) {
-	    if (pw == null)
-		ensurePW(tag);
-	    pw.println("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
-	    String dtd = getDTD();
-	    if (dtd == null)
-		if (use_dtd)
-		    pw.println("<!DOCTYPE " + tag + " SYSTEM \"" + tag + ".dtd\">");
-		else
-		    pw.println("<!DOCTYPE " + tag + " >");
-	    else
-		pw.println("<!DOCTYPE " + tag + "  [\n" + dtd + "]>");
-	    pw.println("");
-	    if (dtd == null && use_dtd)
-		ensureDTD(tag);
-	    first_done = true;
-	}
+        if (first_done == false) {
+            if (pw == null)
+                ensurePW(tag);
+            pw.println("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>");
+            String dtd = getDTD();
+            if (dtd == null)
+                if (use_dtd)
+                    pw.println("<!DOCTYPE " + tag + " SYSTEM \"" + tag + ".dtd\">");
+                else
+                    pw.println("<!DOCTYPE " + tag + " >");
+            else
+                pw.println("<!DOCTYPE " + tag + "  [\n" + dtd + "]>");
+            pw.println("");
+            if (dtd == null && use_dtd)
+                ensureDTD(tag);
+            first_done = true;
+        }
     }
 
     public void push(Element el) {
-	first(el.name);
-	StringBuffer sbu = new StringBuffer();
-	StringBuffer sbl = new StringBuffer();
-	el.render(sbu, sbl);
-	pw.print(sbu.toString());
-	st.push(sbl);
-	el.setRO();
+        first(el.name);
+        StringBuffer sbu = new StringBuffer();
+        StringBuffer sbl = new StringBuffer();
+        el.render(sbu, sbl);
+        pw.print(sbu.toString());
+        st.push(sbl);
+        el.setRO();
     }
 
     public void put(Element el) {
-	push(el);
-	pop(el);
+        push(el);
+        pop(el);
     }
 
     public boolean putDT(String tag) {
-	if (first_done)
-	    return false;
-	first(tag);
-	return true;
+        if (first_done)
+            return false;
+        first(tag);
+        return true;
     }
 
     public void put(PCDATA pcdata) {
-	pw.print(pcdata.getString());
+        pw.print(pcdata.getString());
     }
 
     public void put(String s) {
-	pw.print(s);
+        pw.print(s);
     }
 
     public void pop() {
-	pop(null);
+        pop(null);
     }
 
     public void popAll() {
-	while (!st.isEmpty())
-	    pop(null);
+        while (!st.isEmpty())
+            pop(null);
     }
 
     public void pop(Element el) {
-	Object o = st.pop();
-	if (o instanceof StringBuffer) {
-	    StringBuffer sb = (StringBuffer) o;
-	    pw.print(sb.toString());
-	} else {
-	    pw.println("<!-- FEL -->");
-	}
+        Object o = st.pop();
+        if (o instanceof StringBuffer) {
+            StringBuffer sb = (StringBuffer) o;
+            pw.print(sb.toString());
+        } else {
+            pw.println("<!-- FEL -->");
+        }
     }
 
     public void flush() {
-	pw.flush();
+        pw.flush();
     }
 
     public void close() {
-	popAll();
-	flush();
-	pw.close();
+        popAll();
+        flush();
+        pw.close();
     }
 
     public boolean checkError() {
-	return pw.checkError();
+        return pw.checkError();
     }
 
     static public void main(String[] args) {
-	PrintWriter pw = new PrintWriter(System.out);
-	XML_PW xmls = new XML_PW(pw);
+        PrintWriter pw = new PrintWriter(System.out);
+        XML_PW xmls = new XML_PW(pw);
 
-	Element xn = new Element("el_xn_test");
+        Element xn = new Element("el_xn_test");
 
-	PCDATA pcd = new PCDATA();
-	pcd.add("hello world (xn)");
-	xn.add(pcd);
+        PCDATA pcd = new PCDATA();
+        pcd.add("hello world (xn)");
+        xn.add(pcd);
 
-	Element xn2 = new Element("empty_xn2_in_xn");
-	xn.add(xn2);
+        Element xn2 = new Element("empty_xn2_in_xn");
+        xn.add(xn2);
 
-	xn.add(xn2 = new Element("another_xn2_notempty"));
-	xn2.add(new PCDATA("first text"));
+        xn.add(xn2 = new Element("another_xn2_notempty"));
+        xn2.add(new PCDATA("first text"));
 
-	xn2 = new Element("emptyA");
-	xn2.addAttr("attr", "value");
-	xn2.addAttr("attr2", "value2");
+        xn2 = new Element("emptyA");
+        xn2.addAttr("attr", "value");
+        xn2.addAttr("attr2", "value2");
 
-	xn.add(xn2 = new Element("notempty_xn2_again"));
+        xn.add(xn2 = new Element("notempty_xn2_again"));
 
-	xn2.addAttr("attr3", "value3");
-	xn2.addAttr("attr4", "value4");
-	xn2.add(new PCDATA("last text"));
+        xn2.addAttr("attr3", "value3");
+        xn2.addAttr("attr4", "value4");
+        xn2.add(new PCDATA("last text"));
 
-	xn2 = new Element("xn2separate");
+        xn2 = new Element("xn2separate");
 
-	xn2.addAttr("attr3", "value3");
-	xn2.addAttr("attr4", "value4");
-	xn2.add(new PCDATA("separate text"));
+        xn2.addAttr("attr3", "value3");
+        xn2.addAttr("attr4", "value4");
+        xn2.add(new PCDATA("separate text"));
 
 
-	xmls.push(xn);
-	xmls.push(xn2);
-	xmls.pop();
-	xmls.push(xn2);
-	xmls.pop();
-	xmls.push(xn2);
-	xmls.pop();
-	xmls.push(xn2);
-	xmls.pop();
-	xmls.push(xn2);
-	xmls.pop();
-	xmls.pop(xn);
+        xmls.push(xn);
+        xmls.push(xn2);
+        xmls.pop();
+        xmls.push(xn2);
+        xmls.pop();
+        xmls.push(xn2);
+        xmls.pop();
+        xmls.push(xn2);
+        xmls.pop();
+        xmls.push(xn2);
+        xmls.pop();
+        xmls.pop(xn);
 
-	pw.flush();
+        pw.flush();
     }
 }
 

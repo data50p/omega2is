@@ -8,9 +8,9 @@ import java.awt.*;
 
 public class RegisterPanel extends JPanel {
     RegisterPanel() {
-	setLayout(new GridBagLayout());
-	populate();
-	setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
+        setLayout(new GridBagLayout());
+        populate();
+        setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
     }
 
     GBC_Factory gbcf = new GBC_Factory();
@@ -19,10 +19,10 @@ public class RegisterPanel extends JPanel {
     }
 
     public Insets getInsets() {
-	return new Insets(5, 5, 5, 5);
+        return new Insets(5, 5, 5, 5);
     }
 
     public void dispose() {
-	removeAll();
+        removeAll();
     }
 }

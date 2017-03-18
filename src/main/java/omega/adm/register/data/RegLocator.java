@@ -19,112 +19,112 @@ public class RegLocator {
     }
 
     String aRegisterFbase(String subPath) {
-	return fbase + File.separatorChar + subPath;
+        return fbase + File.separatorChar + subPath;
     }
 
     String aRegisterFbase() {
-	return fbase;
+        return fbase;
     }
 
     static String[] scanDir(String dir, FilenameFilter fnf) {
-	omega.Context.sout_log.getLogger().info("ERR: " + "scan " + dir + ' ' + fnf);
-	File df = new File(dir);
-	File[] fa = df.listFiles(fnf);
-	if (fa != null) {
-	    String[] sa = new String[fa.length];
-	    for (int i = 0; i < fa.length; i++)
-		sa[i] = dir + File.separatorChar + fa[i].getName();
-	    Arrays.sort(sa);
-	    return sa;
-	}
-	return null;
+        omega.Context.sout_log.getLogger().info("ERR: " + "scan " + dir + ' ' + fnf);
+        File df = new File(dir);
+        File[] fa = df.listFiles(fnf);
+        if (fa != null) {
+            String[] sa = new String[fa.length];
+            for (int i = 0; i < fa.length; i++)
+                sa[i] = dir + File.separatorChar + fa[i].getName();
+            Arrays.sort(sa);
+            return sa;
+        }
+        return null;
     }
 
     String[] removeSuffix(String[] sa, String suf) {
-	if (sa == null)
-	    return new String[0];
-	String nsa[] = new String[sa.length];
-	for (int i = 0; i < sa.length; i++)
-	    if (sa[i].endsWith(suf))
-		nsa[i] = sa[i].substring(0, sa[i].length() - suf.length());
-	    else
-		nsa[i] = sa[i];
-	return nsa;
+        if (sa == null)
+            return new String[0];
+        String nsa[] = new String[sa.length];
+        for (int i = 0; i < sa.length; i++)
+            if (sa[i].endsWith(suf))
+                nsa[i] = sa[i].substring(0, sa[i].length() - suf.length());
+            else
+                nsa[i] = sa[i];
+        return nsa;
     }
 
     String[] removePrefix(String[] sa, String pre) {
-	if (sa == null)
-	    return new String[0];
-	String nsa[] = new String[sa.length];
-	for (int i = 0; i < sa.length; i++)
-	    if (sa[i].startsWith(pre))
-		nsa[i] = sa[i].substring(pre.length());
-	    else
-		nsa[i] = sa[i];
-	return nsa;
+        if (sa == null)
+            return new String[0];
+        String nsa[] = new String[sa.length];
+        for (int i = 0; i < sa.length; i++)
+            if (sa[i].startsWith(pre))
+                nsa[i] = sa[i].substring(pre.length());
+            else
+                nsa[i] = sa[i];
+        return nsa;
     }
 
     public String[] getAllPupilsName() {
-	String sa[] = scanDir(aRegisterFbase(), new FilenameFilterExt(PUPIL_SUF));
-	return removePrefix(removeSuffix(sa, PUPIL_SUF), aRegisterFbase() + File.separatorChar);
+        String sa[] = scanDir(aRegisterFbase(), new FilenameFilterExt(PUPIL_SUF));
+        return removePrefix(removeSuffix(sa, PUPIL_SUF), aRegisterFbase() + File.separatorChar);
     }
 
     public String[] getAllResultsFName(String pupil, String[] with) {
-	String sa[] = scanDir(aRegisterFbase() + File.separatorChar + pupil + PUPIL_SUF, new FilenameFilterExt(RESULT_SUF, with));
-	return sa;
+        String sa[] = scanDir(aRegisterFbase() + File.separatorChar + pupil + PUPIL_SUF, new FilenameFilterExt(RESULT_SUF, with));
+        return sa;
     }
 
     public String getFullFName(String pupil, String lesson_name) {
-	String s = aRegisterFbase() + File.separatorChar +
-		pupil + PUPIL_SUF + File.separatorChar +
-	    /*pupil + '-' +*/ lesson_name + RESULT_SUF;
-	return s;
+        String s = aRegisterFbase() + File.separatorChar +
+                pupil + PUPIL_SUF + File.separatorChar +
+            /*pupil + '-' +*/ lesson_name + RESULT_SUF;
+        return s;
     }
 
     public String getDirPath(String pupil) {
-	return aRegisterFbase() + File.separatorChar +
-		pupil + PUPIL_SUF + File.separatorChar;
+        return aRegisterFbase() + File.separatorChar +
+                pupil + PUPIL_SUF + File.separatorChar;
     }
 
     String getTestSuffix() {
-	return RESULT_SUF;
+        return RESULT_SUF;
     }
 
     public String mkResultsFName(String pupil, String name) {
-	String s =
-		aRegisterFbase() + File.separatorChar +
-			pupil + PUPIL_SUF + File.separatorChar +
-			name + RESULT_SUF;
-	return s;
+        String s =
+                aRegisterFbase() + File.separatorChar +
+                        pupil + PUPIL_SUF + File.separatorChar +
+                        name + RESULT_SUF;
+        return s;
     }
 
     public void createPupilName(String name) {
-	File f_old = new File(aRegisterFbase(name + ".deleted"));
-	File f = new File(aRegisterFbase() + "/" + name + ".p");
-	if (f.exists()) {
-	    JOptionPane.showMessageDialog(ApplContext.top_frame,
-		    T.t("Pupil exist already"));
-	}
-	if (f_old.exists()) {
-	    JOptionPane.showMessageDialog(ApplContext.top_frame,
-		    T.t("Pupil reinstalled"));
-	    f_old.renameTo(f);
-	} else {
-	    f.mkdir();
-	    File ft = new File(aRegisterFbase(name + ".p/id.png"));
-	    File ff = new File(Context.getMediaFile("default/pupil.png"));
-	    omega.util.Files.fileCopy(ff, ft);
-	    ft = new File(aRegisterFbase(name + ".p/pupil_settings.xml"));
-	    ff = new File(aRegisterFbase("Guest" + ".p/pupil_settings.xml"));
-	    omega.util.Files.fileCopy(ff, ft);
-	}
+        File f_old = new File(aRegisterFbase(name + ".deleted"));
+        File f = new File(aRegisterFbase() + "/" + name + ".p");
+        if (f.exists()) {
+            JOptionPane.showMessageDialog(ApplContext.top_frame,
+                    T.t("Pupil exist already"));
+        }
+        if (f_old.exists()) {
+            JOptionPane.showMessageDialog(ApplContext.top_frame,
+                    T.t("Pupil reinstalled"));
+            f_old.renameTo(f);
+        } else {
+            f.mkdir();
+            File ft = new File(aRegisterFbase(name + ".p/id.png"));
+            File ff = new File(Context.getMediaFile("default/pupil.png"));
+            omega.util.Files.fileCopy(ff, ft);
+            ft = new File(aRegisterFbase(name + ".p/pupil_settings.xml"));
+            ff = new File(aRegisterFbase("Guest" + ".p/pupil_settings.xml"));
+            omega.util.Files.fileCopy(ff, ft);
+        }
     }
 
     public static void main(String[] args) {
-	RegLocator l = new RegLocator();
-	String sa[] = l.getAllPupilsName();
-	omega.Context.sout_log.getLogger().info("ERR: " + "" + S.a2s(sa));
-	sa = l.getAllResultsFName("Lars", new String[]{"test"});
-	omega.Context.sout_log.getLogger().info("ERR: " + "" + S.a2s(sa));
+        RegLocator l = new RegLocator();
+        String sa[] = l.getAllPupilsName();
+        omega.Context.sout_log.getLogger().info("ERR: " + "" + S.a2s(sa));
+        sa = l.getAllResultsFName("Lars", new String[]{"test"});
+        omega.Context.sout_log.getLogger().info("ERR: " + "" + S.a2s(sa));
     }
 }

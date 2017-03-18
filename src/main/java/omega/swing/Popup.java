@@ -11,23 +11,23 @@ public class Popup implements PopupMenuListener {
     JPopupMenu jpop;
 
     public Popup(Component comp) {
-	this.comp = comp;
+        this.comp = comp;
     }
 
     public void popup(String title, String[] sa, int x, int y, ActionListener al) {
-	jpop = new JPopupMenu(title);
-	jpop.addPopupMenuListener(this);
-	for (int i = 0; i < sa.length; i++) {
-	    if ("".equals(sa[i])) {
-		jpop.addSeparator();
-	    } else {
-		JMenuItem mi = new JMenuItem(sa[i]);
-		mi.setActionCommand("" + i);
-		mi.addActionListener(al);
-		jpop.add(mi);
-	    }
-	}
-	jpop.show(comp, x, y);
+        jpop = new JPopupMenu(title);
+        jpop.addPopupMenuListener(this);
+        for (int i = 0; i < sa.length; i++) {
+            if ("".equals(sa[i])) {
+                jpop.addSeparator();
+            } else {
+                JMenuItem mi = new JMenuItem(sa[i]);
+                mi.setActionCommand("" + i);
+                mi.addActionListener(al);
+                jpop.add(mi);
+            }
+        }
+        jpop.show(comp, x, y);
     }
 
     public void popupMenuCanceled(PopupMenuEvent ev) {

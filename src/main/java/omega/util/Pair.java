@@ -9,19 +9,19 @@ public class Pair<T> {
     public final T snd;
 
     public Pair(T fst, T snd) {
-	this.fst = fst;
-	this.snd = snd;
+        this.fst = fst;
+        this.snd = snd;
     }
 
     public T getFst() {
-	return fst;
+        return fst;
     }
 
     public T getSnd() {
-	return snd;
+        return snd;
     }
 
     public String toString() {
-	return "[" + fst + ',' + snd + ']';
+        return "[" + fst + ',' + snd + ']';
     }
 }

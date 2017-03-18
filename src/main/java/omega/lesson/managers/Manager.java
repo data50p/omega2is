@@ -11,7 +11,7 @@ public class Manager {
     public String name;
 
     public Manager(String name) {
-	this.name = name;
+        this.name = name;
     }
 
 }

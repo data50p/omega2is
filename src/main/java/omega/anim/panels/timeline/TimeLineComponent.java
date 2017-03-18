@@ -11,16 +11,16 @@ public class TimeLineComponent extends JPanel implements PlayCtrlListener {
     TimeLineControlPanel tlcp;
 
     public TimeLineComponent(TimeLinePanel tlp) {
-	this.tlp = tlp;
-	tlsp = new TimeLineStatusPanel(tlp);
-	tlcp = new TimeLineControlPanel(tlp);
-	setLayout(new BorderLayout());
-	JPanel p = new JPanel();
-	p.setLayout(new BorderLayout());
-	p.add(tlp, BorderLayout.CENTER);
-	p.add(tlsp, BorderLayout.SOUTH);
-	add(p, BorderLayout.CENTER);
-	add(tlcp, BorderLayout.WEST);
+        this.tlp = tlp;
+        tlsp = new TimeLineStatusPanel(tlp);
+        tlcp = new TimeLineControlPanel(tlp);
+        setLayout(new BorderLayout());
+        JPanel p = new JPanel();
+        p.setLayout(new BorderLayout());
+        p.add(tlp, BorderLayout.CENTER);
+        p.add(tlsp, BorderLayout.SOUTH);
+        add(p, BorderLayout.CENTER);
+        add(tlcp, BorderLayout.WEST);
     }
 
     // --------- interface PlayCtrlListener
@@ -31,13 +31,13 @@ public class TimeLineComponent extends JPanel implements PlayCtrlListener {
 
     public boolean playAt(int lt, int t) {
 //log	omega.Context.sout_log.getLogger().info("ERR: " + "updatera " + lt + ' ' + t);
-	return false;
+        return false;
     }
 
     public boolean playAt(int t) {
-	tlsp.updateValues();
-	tlp.setTick(t);
-	return false;
+        tlsp.updateValues();
+        tlp.setTick(t);
+        return false;
     }
 
     public void endPlay() {

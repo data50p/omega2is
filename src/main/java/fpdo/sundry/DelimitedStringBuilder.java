@@ -5,27 +5,27 @@ public class DelimitedStringBuilder {
     String delim;
 
     public DelimitedStringBuilder() {
-	this(" ");
+        this(" ");
     }
 
     public DelimitedStringBuilder(String delim) {
-	this.delim = delim;
+        this.delim = delim;
     }
 
     public StringBuilder append(String s) {
-	if (sb.length() > 0)
-	    sb.append(delim);
-	return sb.append(s);
+        if (sb.length() > 0)
+            sb.append(delim);
+        return sb.append(s);
     }
 
     public StringBuilder append(char ch) {
-	if (sb.length() > 0)
-	    sb.append(delim);
-	return sb.append(ch);
+        if (sb.length() > 0)
+            sb.append(delim);
+        return sb.append(ch);
     }
 
     public String toString() {
-	return sb.toString();
+        return sb.toString();
     }
 }
 

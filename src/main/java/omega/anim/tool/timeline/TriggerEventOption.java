@@ -2,49 +2,49 @@ package omega.anim.tool.timeline;
 
 public class TriggerEventOption extends TriggerEventSelections {
     static String[] st_selections_cmd = new String[]{
-	    ""
+            ""
     };
     static String[] st_selections_human = new String[]{
-	    "normal"
+            "normal"
     };
 
     public TriggerEventOption() {
-	super("");
+        super("");
     }
 
     public TriggerEventOption(String arg) {
-	super(arg);
+        super(arg);
     }
 
     public String getCmd() {
-	return "Option";
+        return "Option";
     }
 
     public String getCmdLabel() {
-	return "option";
+        return "option";
     }
 
     public String getHelp() {
-	return "Options";
+        return "Options";
     }
 
     public String[] getSelections_cmd() {
-	return st_selections_cmd;
+        return st_selections_cmd;
     }
 
     public String[] getSelections_human() {
-	return st_selections_human;
+        return st_selections_human;
     }
 
     public int getArgInt() {
-	String s = getArgString();
-	return getIx(s);
+        String s = getArgString();
+        return getIx(s);
     }
 
     static int getIx(String s) {
-	for (int i = 0; i < st_selections_cmd.length; i++)
-	    if (st_selections_cmd[i].equals(s))
-		return i;
-	return 2;
+        for (int i = 0; i < st_selections_cmd.length; i++)
+            if (st_selections_cmd[i].equals(s))
+                return i;
+        return 2;
     }
 }

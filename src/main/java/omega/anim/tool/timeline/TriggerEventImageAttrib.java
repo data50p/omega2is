@@ -4,22 +4,22 @@ import omega.i18n.T;
 
 public class TriggerEventImageAttrib extends TriggerEvent {
     public String getCmd() {
-	return "ImageAttrib";
+        return "ImageAttrib";
     }
 
     public String getCmdLabel() {
-	return T.t("dep_set Image Attribute");
+        return T.t("dep_set Image Attribute");
     }
 
     public String getHelp() {
-	return T.t("Tail part in filename (${banid:var})");
+        return T.t("Tail part in filename (${banid:var})");
     }
 
     public TriggerEventImageAttrib() {
-	super("");
+        super("");
     }
 
     public TriggerEventImageAttrib(String arg) {
-	super(arg);
+        super(arg);
     }
 }

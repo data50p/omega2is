@@ -7,9 +7,9 @@ import java.io.File;
 
 public class ChooseMovieDir extends JFileChooser {
     ChooseMovieDir() {
-	super(new File("media"));
-	setFileSelectionMode(DIRECTORIES_ONLY);
-	setApproveButtonText(T.t("Select Directory"));
+        super(new File("media"));
+        setFileSelectionMode(DIRECTORIES_ONLY);
+        setApproveButtonText(T.t("Select Directory"));
     }
 }
 

@@ -8,21 +8,21 @@ public abstract class ToolBar_ extends ToolBar {
     HashMap jb;
 
     ToolBar_(Object o) {
-	super();
-	jb = new HashMap();
-	init(o);
+        super();
+        jb = new HashMap();
+        init(o);
     }
 
     ToolBar_(Object o, int orientation) {
-	super(orientation);
-	jb = new HashMap();
-	init(o);
+        super(orientation);
+        jb = new HashMap();
+        init(o);
     }
 
     abstract protected void init(Object o);
 
     public void populate() {
-	populate("default");
+        populate("default");
     }
 
     public void populate(String id) {

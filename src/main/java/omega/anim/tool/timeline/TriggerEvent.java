@@ -10,49 +10,49 @@ public class TriggerEvent {
     public boolean is_on = false;
 
     public TriggerEvent(String arg) {
-	this.arg = arg;
-	this.arg_human = arg;
+        this.arg = arg;
+        this.arg_human = arg;
     }
 
     public String getCmd() {
-	return "";
+        return "";
     }
 
     public String getCmdLabel() {
-	return "";
+        return "";
     }
 
     public TriggerEvent() {
-	this(null);
+        this(null);
     }
 
     public String getHelp() {
-	return "";
+        return "";
     }
 
     public String[] getSelections_cmd() {
-	return null;
+        return null;
     }
 
     public String[] getSelections_human() {
-	return null;
+        return null;
     }
 
     public String getArgString() {
-	if (arg == null)
-	    return "";
-	return arg;
+        if (arg == null)
+            return "";
+        return arg;
     }
 
     public String getArgString_human() {
-	if (arg_human == null)
-	    return "";
-	return arg_human;
+        if (arg_human == null)
+            return "";
+        return arg_human;
     }
 
     public void setArg(String arg) {
-	this.arg = arg;
-	this.arg_human = arg;
+        this.arg = arg;
+        this.arg_human = arg;
     }
 
 //      public void setArg_human(String arg) {
@@ -61,29 +61,29 @@ public class TriggerEvent {
 //      }
 
     public void setOn(boolean is_on) {
-	this.is_on = is_on;
+        this.is_on = is_on;
     }
 
     public String toString() {
-	return getCmd() + ' ' + arg;
+        return getCmd() + ' ' + arg;
     }
 
     public boolean hasSelections() {
-	return false;
+        return false;
     }
 
     public Element getElement() {
-	Element el = new Element("TriggerEvent");
-	el.addAttr("cmd", getCmd());
-	el.addAttr("arg", arg);
-	el.addAttr("isOn", is_on ? "true" : "false");
-	return el;
+        Element el = new Element("TriggerEvent");
+        el.addAttr("cmd", getCmd());
+        el.addAttr("arg", arg);
+        el.addAttr("isOn", is_on ? "true" : "false");
+        return el;
     }
 
     public void doAction() {
     }
 
     public String[] getFiles() {
-	return null;
+        return null;
     }
 }

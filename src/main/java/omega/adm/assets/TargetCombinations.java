@@ -3,7 +3,10 @@ package omega.adm.assets;
 import omega.Context;
 import omega.util.SundryUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by lars on 2017-02-12.
@@ -24,18 +27,18 @@ public class TargetCombinations {
             this.originalExtention = originalExtention;
             this.exist = Context.omegaAssetsExist(fn);
 
-            if ( fn.contains("{") )
+            if (fn.contains("{"))
                 System.err.println("MORE using var");
-            if ( fn.contains(",") )
+            if (fn.contains(","))
                 System.err.println("MORE using ,");
-            if ( ! fn.contains("/") )
+            if (!fn.contains("/"))
                 System.err.println("LESS using /");
         }
 
         public boolean equals(Object o) {
-            if ( o == null )
+            if (o == null)
                 return false;
-            if ( ! (o instanceof TCItem) )
+            if (!(o instanceof TCItem))
                 return false;
             if (((TCItem) o).fn.equals(fn))
                 return true;

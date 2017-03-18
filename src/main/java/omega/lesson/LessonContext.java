@@ -7,18 +7,18 @@ public class LessonContext {
     Lesson le;
 
     LessonContext(Lesson le) {
-	this.le = le;
+        this.le = le;
     }
 
     public Lesson getLesson() {
-	return le;
+        return le;
     }
 
     public LessonCanvas getLessonCanvas() {
-	return le.le_canvas;
+        return le.le_canvas;
     }
 
     public Target getTarget() {
-	return le.machine.getTarget();
+        return le.machine.getTarget();
     }
 }

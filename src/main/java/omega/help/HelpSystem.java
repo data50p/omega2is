@@ -12,70 +12,70 @@ public class HelpSystem {
 
     // konvert xx/hh.xx.html -> xx/hh.html
     private String rmLang(String s) {
-	Matcher mat = pat.matcher(s);
-	boolean b = mat.matches();
+        Matcher mat = pat.matcher(s);
+        boolean b = mat.matches();
 
-	if (b)
-	    return mat.group(1) + ".html";
-	return s;
+        if (b)
+            return mat.group(1) + ".html";
+        return s;
     }
 
     protected void show(String doc, int w, int h) {
-	omega.Context.sout_log.getLogger().info("ERR: " + "--SHOW MANUAL " + doc);
+        omega.Context.sout_log.getLogger().info("ERR: " + "--SHOW MANUAL " + doc);
 
-	String file_s = omega.Context.URL_BASE_AS_FILE + "webroot/" + doc;
-	File file = new File(file_s);
-	if (!file.exists())
-	    doc = rmLang(doc);
-	file_s = omega.Context.URL_BASE_AS_FILE + "webroot/" + doc;
-	file = new File(file_s);
-	if (!file.exists())
-	    return;
+        String file_s = omega.Context.URL_BASE_AS_FILE + "webroot/" + doc;
+        File file = new File(file_s);
+        if (!file.exists())
+            doc = rmLang(doc);
+        file_s = omega.Context.URL_BASE_AS_FILE + "webroot/" + doc;
+        file = new File(file_s);
+        if (!file.exists())
+            return;
 
-	String url_s = omega.Context.URL_BASE + "webroot/" + doc;
-	if (true || omega.util.InvokeExternBrowser.show_if(url_s) == false) {
-	    if (html_fr == null)
-		html_fr = new HtmlFrame(url_s);
-	    else
-		html_fr.goTo(url_s);
-	    html_fr.setSize(w, h);
-	    html_fr.setVisible(true);
-	}
+        String url_s = omega.Context.URL_BASE + "webroot/" + doc;
+        if (true || omega.util.InvokeExternBrowser.show_if(url_s) == false) {
+            if (html_fr == null)
+                html_fr = new HtmlFrame(url_s);
+            else
+                html_fr.goTo(url_s);
+            html_fr.setSize(w, h);
+            html_fr.setVisible(true);
+        }
     }
 
     private String base() {
-	return omega.lesson.appl.ApplLesson.is_editor ? "editor_manual" : "lesson_manual";
+        return omega.lesson.appl.ApplLesson.is_editor ? "editor_manual" : "lesson_manual";
     }
 
     protected String mkFileName(String base_name) {
-	String lang = omega.i18n.T.lang;
+        String lang = omega.i18n.T.lang;
 
-	return base_name + "." + lang + ".html";
+        return base_name + "." + lang + ".html";
     }
 
     public void showManualL(String more) {
-	if (omega.lesson.appl.ApplLesson.is_editor)
-	    show(mkFileName(base()), 800, 600);
-	else if (more != null)
-	    show(mkFileName(base() + '-' + more), 800, 600);
-	else
-	    show(mkFileName(base()), 800, 600);
+        if (omega.lesson.appl.ApplLesson.is_editor)
+            show(mkFileName(base()), 800, 600);
+        else if (more != null)
+            show(mkFileName(base() + '-' + more), 800, 600);
+        else
+            show(mkFileName(base()), 800, 600);
     }
 
     public void showManualA() {
-	show(mkFileName("editor_manual"), 800, 600);
+        show(mkFileName("editor_manual"), 800, 600);
     }
 
     public void showAboutLE() {
-	show(mkFileName("aboutLessonEditor"), 400, 320);
+        show(mkFileName("aboutLessonEditor"), 400, 320);
     }
 
     public void showAboutAE() {
-	show(mkFileName("aboutAnimEditor"), 400, 320);
+        show(mkFileName("aboutAnimEditor"), 400, 320);
     }
 
     public void showAbout() {
-	show(mkFileName("about"), 400, 320);
+        show(mkFileName("about"), 400, 320);
     }
 
 }

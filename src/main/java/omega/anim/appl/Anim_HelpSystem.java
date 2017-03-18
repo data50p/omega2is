@@ -7,10 +7,10 @@ public class Anim_HelpSystem extends HelpSystem {
     HtmlFrame html_fr;
 
     void showManualL() {
-	show(mkFileName("lesson_manual"), 800, 600);
+        show(mkFileName("lesson_manual"), 800, 600);
     }
 
     public void showManualAE() {
-	show(mkFileName("editor_manual"), 800, 600);
+        show(mkFileName("editor_manual"), 800, 600);
     }
 }

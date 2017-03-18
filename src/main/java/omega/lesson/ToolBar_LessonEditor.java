@@ -10,12 +10,12 @@ public class ToolBar_LessonEditor extends ToolBar implements ActionListener {
     ToolExecute texec;
 
     public ToolBar_LessonEditor(ToolExecute texec) {
-	this.texec = texec;
+        this.texec = texec;
     }
 
     public ToolBar_LessonEditor(ToolExecute texec, int orientation) {
-	super(orientation);
-	this.texec = texec;
+        super(orientation);
+        this.texec = texec;
     }
 
     public void populateRest() {

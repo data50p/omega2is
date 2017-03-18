@@ -9,21 +9,21 @@ public class FilenameFilterExt implements FilenameFilter {
     boolean dir_only;
 
     FilenameFilterExt(String ext) {
-	this(ext, false);
+        this(ext, false);
     }
 
     FilenameFilterExt(String ext, boolean dir_only) {
-	this.dir_only = dir_only;
-	this.ext = ext;
+        this.dir_only = dir_only;
+        this.ext = ext;
     }
 
     public boolean accept(File dir, String fname) {
-	if (fname.endsWith(ext))
-	    return true;
-	return false;
+        if (fname.endsWith(ext))
+            return true;
+        return false;
     }
 
     public String toString() {
-	return "FilenameFilterExt{" + ext + "}";
+        return "FilenameFilterExt{" + ext + "}";
     }
 }

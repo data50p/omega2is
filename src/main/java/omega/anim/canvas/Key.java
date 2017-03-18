@@ -7,12 +7,12 @@ public class Key extends KeyAdapter {
     AnimCanvas anim_canvas;
 
     Key(AnimCanvas anim_canvas) {
-	this.anim_canvas = anim_canvas;
-	anim_canvas.addKeyListener(this);
+        this.anim_canvas = anim_canvas;
+        anim_canvas.addKeyListener(this);
     }
 
     public void keyTyped(KeyEvent k) {
-	omega.Context.sout_log.getLogger().info("ERR: " + "key " + k);
+        omega.Context.sout_log.getLogger().info("ERR: " + "key " + k);
     }
 }
 

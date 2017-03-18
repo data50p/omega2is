@@ -9,9 +9,9 @@ import java.io.File;
 
 public class ChoosePImageFile extends JFileChooser {
     ChoosePImageFile() {
-	super(new File("media"));
-	ExtensionFileFilter fi = new ExtensionFileFilter(new String[]{"jpg"});
-	setFileFilter(fi);
-	setApproveButtonText(T.t("Select"));
+        super(new File("media"));
+        ExtensionFileFilter fi = new ExtensionFileFilter(new String[]{"jpg"});
+        setFileFilter(fi);
+        setApproveButtonText(T.t("Select"));
     }
 }

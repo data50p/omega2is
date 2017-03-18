@@ -8,6 +8,6 @@ public class ColorChooser {
     }
 
     public static Color select(Color col) {
-	return JColorChooser.showDialog(null, "Select color", col);
+        return JColorChooser.showDialog(null, "Select color", col);
     }
 }

@@ -10,16 +10,16 @@ public class Probe {
     public double dist;
 
     public Probe() {
-	dist = 999999999.99;
+        dist = 999999999.99;
     }
 
     public String toString() {
-	return "Probe" +
-		"{seg=" + seg +
-		", p=" + p +
-		", pa=" + pa +
-		", sel=" + sel +
-		", dist=" + dist +
-		"}";
+        return "Probe" +
+                "{seg=" + seg +
+                ", p=" + p +
+                ", pa=" + pa +
+                ", sel=" + sel +
+                ", dist=" + dist +
+                "}";
     }
 }
