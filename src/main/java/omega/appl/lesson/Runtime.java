@@ -2,6 +2,8 @@ package omega.appl.lesson;
 
 import fpdo.sundry.S;
 import omega.LicenseShow;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.appl.OmegaAppl;
 import omega.i18n.T;
 import omega.swing.filechooser.ChooseLessonFile;
@@ -25,7 +27,7 @@ public class Runtime extends OmegaAppl {
         super("Lesson runtime");
         this.ask = ask;
 
-        omega.Context.lesson_log.getLogger().info("Runtime...");
+        OmegaContext.lesson_log.getLogger().info("Runtime...");
 
         if (ask) {
             ChooseLessonFile choose_f = new ChooseLessonFile();
@@ -54,13 +56,13 @@ public class Runtime extends OmegaAppl {
     static long last_logged = S.ct();
 
     public static void main(String[] argv) {
-        omega.Context.lesson_log.getLogger().info("started");
+        OmegaContext.lesson_log.getLogger().info("started");
 
         HashMap flag = S.flagAsMap(argv);
         java.util.List argl = S.argAsList(argv);
 
-        omega.Context.omega_lang = (String) flag.get("omega_lang");
-        omega.Context.sout_log.getLogger().info("ERR: " + "param omega_lang is " + omega.Context.omega_lang);
+        OmegaContext.omega_lang = (String) flag.get("omega_lang");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "param omega_lang is " + OmegaContext.omega_lang);
 
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.MetalLookAndFeel");
@@ -68,29 +70,29 @@ public class Runtime extends OmegaAppl {
         } catch (Exception e) {
         }
 
-        omega.Config.T = !false;
+        OmegaConfig.T = !false;
 
         boolean few = flag.get("few") != null;
         if (few) {
-            omega.Context.CACHE_FEW = true;
+            OmegaContext.CACHE_FEW = true;
         }
         boolean demo = flag.get("demo") != null;
         if (demo) {
-            omega.Context.DEMO = true;
+            OmegaContext.DEMO = true;
         }
-        omega.Context.sout_log.getLogger().info("ERR: " + "Omega demo: " + omega.Context.DEMO);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "Omega demo: " + OmegaContext.DEMO);
 
         boolean ask = flag.get("ask") != null;
         String fn = argl.size() > 0 ? (String) argl.get(0) : null;
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "start " + ask + ' ' + fn);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "start " + ask + ' ' + fn);
         String t_steps = (String) flag.get("T");
         if (t_steps != null) {
-            omega.Config.t_step = Integer.parseInt(t_steps);
+            OmegaConfig.t_step = Integer.parseInt(t_steps);
         }
         boolean with_frame = flag.get("small") != null;
         boolean logon = flag.get("log") != null;
 
-        omega.Context.setLogon(logon);
+        OmegaContext.setLogon(logon);
 
         boolean b_p = flag.get("pupil") != null;
         boolean b_a = flag.get("admin") != null;

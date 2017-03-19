@@ -2,7 +2,7 @@ package omega.graphic.render;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
-import omega.Context;
+import omega.OmegaContext;
 import omega.anim.tool.timeline.TimeLine;
 import omega.connect.httpd.Server;
 import omega.graphic.util.LoadImage;
@@ -54,12 +54,12 @@ public class Canvas extends JPanel implements java.awt.image.ImageObserver {
 
         String imn = im_name;
         bg = LoadImage.loadAndWait(this, imn);
-//	omega.Context.sout_log.getLogger().info("ERR: " + "bg " + bg + ' ' + imn);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "bg " + bg + ' ' + imn);
         im_size = new Dimension(bg.getWidth(null), bg.getHeight(null));
 
         updWings();
 
-        Server httpd = ((omega.subsystem.Httpd) (Context.getSubsystem("Httpd"))).httpd;
+        Server httpd = ((omega.subsystem.Httpd) (OmegaContext.getSubsystem("Httpd"))).httpd;
         httpd.getHashMap().put("lesson:background", imn);
 
         repaint();
@@ -152,7 +152,7 @@ public class Canvas extends JPanel implements java.awt.image.ImageObserver {
     Image createWithWings(Image bg, Dimension im_size, java.util.List wings) {
         try {
             Image im = createImage(im_size.width, im_size.height);
-//	omega.Context.sout_log.getLogger().info("ERR: " + "withW im is " + im + ' ' + im_size);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "withW im is " + im + ' ' + im_size);
             if (im == null)
                 return bg;
 
@@ -170,7 +170,7 @@ public class Canvas extends JPanel implements java.awt.image.ImageObserver {
             }
             return im;
         } catch (IllegalArgumentException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "createWithWings: " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "createWithWings: " + ex);
             return null;
         }
     }

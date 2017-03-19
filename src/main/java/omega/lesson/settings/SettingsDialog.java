@@ -78,7 +78,7 @@ public class SettingsDialog extends JDialog implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         String cmd = e.getActionCommand();
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "" + cmd);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + cmd);
         if ("OK".equals(cmd)) {
             save();
             setVisible(false);

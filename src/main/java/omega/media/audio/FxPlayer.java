@@ -6,6 +6,7 @@ import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import omega.OmegaContext;
 import omega.util.Log;
 import omega.util.MilliTimer;
 
@@ -29,14 +30,14 @@ public class FxPlayer {
             File file2 = new File(fn);
             if (file3.exists() && !file2.exists()) {
                 fname = fn3;
-                omega.Context.sout_log.getLogger().info(": " + "FxPlayer: fn -> " + fname + " (" + realy_name + ")");
+                OmegaContext.sout_log.getLogger().info(": " + "FxPlayer: fn -> " + fname + " (" + realy_name + ")");
             } else {
                 fname = fn;
-                omega.Context.sout_log.getLogger().info(": " + "FxPlayer: fn => " + fname);
+                OmegaContext.sout_log.getLogger().info(": " + "FxPlayer: fn => " + fname);
             }
         } else {
             fname = fn;
-            omega.Context.sout_log.getLogger().info(": " + "FxPlayer: fn => " + fname);
+            OmegaContext.sout_log.getLogger().info(": " + "FxPlayer: fn => " + fname);
         }
     }
 

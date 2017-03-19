@@ -18,6 +18,8 @@ package omega.swing;
  * @author Philip Milne
  */
 
+import omega.OmegaContext;
+
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
 import javax.swing.table.JTableHeader;
@@ -171,7 +173,7 @@ public class TableSorter extends TableMap {
     }
 
     public void tableChanged(TableModelEvent e) {
-        //omega.Context.sout_log.getLogger().info("Sorter: tableChanged");
+        //omega.OmegaContext.sout_log.getLogger().info("Sorter: tableChanged");
         reallocateIndexes();
 
         super.tableChanged(e);
@@ -179,7 +181,7 @@ public class TableSorter extends TableMap {
 
     public void checkModel() {
         if (indexes.length != model.getRowCount()) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "Sorter not informed of a change in model.");
+            OmegaContext.sout_log.getLogger().info("ERR: " + "Sorter not informed of a change in model.");
         }
     }
 
@@ -190,7 +192,7 @@ public class TableSorter extends TableMap {
         // n2sort();
         // qsort(0, indexes.length-1);
         shuttlesort((int[]) indexes.clone(), indexes, 0, indexes.length);
-        //omega.Context.sout_log.getLogger().info("Compares: "+compares);
+        //omega.OmegaContext.sout_log.getLogger().info("Compares: "+compares);
     }
 
     public void n2sort() {
@@ -298,7 +300,7 @@ public class TableSorter extends TableMap {
                 int viewColumn = columnModel.getColumnIndexAtX(e.getX());
                 int column = tableView.convertColumnIndexToModel(viewColumn);
                 if (e.getClickCount() == 1 && column != -1) {
-                    //omega.Context.sout_log.getLogger().info("Sorting ...");
+                    //omega.OmegaContext.sout_log.getLogger().info("Sorting ...");
                     int shiftPressed = e.getModifiers() & InputEvent.SHIFT_MASK;
                     boolean ascending = (shiftPressed == 0);
                     sorter.sortByColumn(column, ascending);

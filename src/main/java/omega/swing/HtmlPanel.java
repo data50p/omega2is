@@ -14,6 +14,8 @@ package omega.swing;
  * you entered into with Sun.
  */
 
+import omega.OmegaContext;
+
 import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
@@ -42,7 +44,7 @@ public class HtmlPanel extends JPanel implements HyperlinkListener {
             try {
                 url = new URL(s);
             } catch (java.net.MalformedURLException exc) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "Attempted to open example.html "
+                OmegaContext.sout_log.getLogger().info("ERR: " + "Attempted to open example.html "
                         + "with a bad URL: " + url);
                 url = null;
             }
@@ -59,9 +61,9 @@ public class HtmlPanel extends JPanel implements HyperlinkListener {
                 add(scroller, BorderLayout.CENTER);
             }
         } catch (MalformedURLException e) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "Malformed URL: " + e);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "Malformed URL: " + e);
         } catch (IOException e) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "IOException: " + e);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "IOException: " + e);
         }
     }
 
@@ -99,7 +101,7 @@ public class HtmlPanel extends JPanel implements HyperlinkListener {
         try {
             url = new URL(s);
         } catch (java.net.MalformedURLException exc) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "Attempted to open example.html "
+            OmegaContext.sout_log.getLogger().info("ERR: " + "Attempted to open example.html "
                     + "with a bad URL: " + url);
             url = null;
         }

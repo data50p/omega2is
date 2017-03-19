@@ -1,7 +1,7 @@
 package omega.swing.filechooser;
 
-import omega.Config;
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.util.ExtensionFileFilter;
 
 import javax.swing.*;
@@ -9,9 +9,9 @@ import java.io.File;
 
 public class ChooseOmegaBundleFile extends JFileChooser {
     public ChooseOmegaBundleFile() {
-        super(new File(Context.omegaAssets("..")));
+        super(new File(OmegaContext.omegaAssets("..")));
         ExtensionFileFilter fi = new ExtensionFileFilter();
-        fi.addExtension(Config.OMEGA_BUNDLE);
+        fi.addExtension(OmegaConfig.OMEGA_BUNDLE);
         setFileFilter(fi);
     }
 }

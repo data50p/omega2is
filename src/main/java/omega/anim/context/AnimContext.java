@@ -1,7 +1,7 @@
 package omega.anim.context;
 
 import fpdo.xml.Element;
-import omega.Context;
+import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
 import omega.anim.appl.AnimRuntime;
 import omega.anim.canvas.AnimCanvas;
@@ -12,7 +12,7 @@ import javax.swing.*;
 
 //import omega.anim.config.*;
 
-public class AnimContext extends Context {
+public class AnimContext extends OmegaContext {
     public AnimCanvas anim_canvas;
     public TimeLinePlayer tl_player;
     public MasterTimeLine mtl;

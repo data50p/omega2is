@@ -1,6 +1,6 @@
 package omega.swing.filechooser;
 
-import omega.Context;
+import omega.OmegaContext;
 import omega.i18n.T;
 import omega.util.ExtensionFileFilter;
 
@@ -9,7 +9,7 @@ import java.io.File;
 
 public class ChooseImageFile extends JFileChooser {
     public ChooseImageFile() {
-        super(new File(Context.omegaAssets("media")));
+        super(new File(OmegaContext.omegaAssets("media")));
         ExtensionFileFilter fi = new ExtensionFileFilter(new String[]{"gif",
                 "jpg",
                 "jpeg",

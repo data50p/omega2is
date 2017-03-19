@@ -1,6 +1,6 @@
 package omega.lesson.repository;
 
-import omega.Context;
+import omega.OmegaContext;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -11,10 +11,10 @@ public class Locator {
     static String lang = null;
 
     static String getLessonBase() {
-        if (omega.Context.DEMO)
-            return Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/demo");    // LESSON-DIR-A
+        if (OmegaContext.DEMO)
+            return OmegaContext.omegaAssets("lesson-" + OmegaContext.getLessonLang() + "/demo");    // LESSON-DIR-A
         else
-            return Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active");    // LESSON-DIR-A
+            return OmegaContext.omegaAssets("lesson-" + OmegaContext.getLessonLang() + "/active");    // LESSON-DIR-A
     }
 
     static FilenameFilter fnf_dir = new FilenameFilter() {
@@ -42,7 +42,7 @@ public class Locator {
 // 	if ( lang != null )
 // 	    fbase = "lesson-" + lang + "/active";
 // 	else
-// 	    fbase = "lesson-" + omega.Context.getLessonLang() + "/active";
+// 	    fbase = "lesson-" + omega.OmegaContext.getLessonLang() + "/active";
     }
 
     static FilenameFilter fnf_le = new FilenameFilter() {
@@ -56,7 +56,7 @@ public class Locator {
     static String[] scanDirLes(String dir) {
         File df = new File(dir);
         File[] fa = df.listFiles(fnf_le);
-//	omega.Context.sout_log.getLogger().info("ERR: " + "# " + S.a2s(fa));
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "# " + S.a2s(fa));
         int N = 0;
         if (fa != null) {
             for (int i = 0; i < fa.length; i++)
@@ -78,7 +78,7 @@ public class Locator {
     static String[] scanDirSel(String dir) {
         File df = new File(dir);
         File[] fa = df.listFiles(fnf_se);
-//	omega.Context.sout_log.getLogger().info("ERR: " + "scan sel " + dir);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "scan sel " + dir);
         if (fa != null) {
             String[] sa = new String[fa.length];
             for (int i = 0; i < fa.length; i++)
@@ -92,7 +92,7 @@ public class Locator {
     static String[] scanDirDir(String dir) {
         File df = new File(dir);
         File[] fa = df.listFiles(fnf_dir);
-//	omega.Context.sout_log.getLogger().info("ERR: " + "scan dirdir " + dir);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "scan dirdir " + dir);
         if (fa != null) {
             String[] sa = new String[fa.length];
             for (int i = 0; i < fa.length; i++)
@@ -104,7 +104,7 @@ public class Locator {
     }
 
     static String[] scanDir(String dir) {
-//	omega.Context.sout_log.getLogger().info("ERR: " + "SCAN in " + dir + ' ' + omega.util.StackTrace.trace());
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "SCAN in " + dir + ' ' + omega.util.StackTrace.trace());
         File df = new File(dir);
         File[] fa = df.listFiles(fnf_dir);
         int N = 0;
@@ -128,7 +128,7 @@ public class Locator {
     static String[] scanDirExt(String dir, String ext) {
         File df = new File(dir);
         File[] fa = df.listFiles(fnf_le);
-//	omega.Context.sout_log.getLogger().info("ERR: " + "scan sel " + dir);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "scan sel " + dir);
         if (fa != null) {
             String[] sa = new String[fa.length];
             for (int i = 0; i < fa.length; i++)
@@ -140,7 +140,7 @@ public class Locator {
     }
 
     static String[] scanDir(String dir, FilenameFilter fnf) {
-//	omega.Context.sout_log.getLogger().info("ERR: " + "scan " + dir + ' ' + fnf);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "scan " + dir + ' ' + fnf);
         File df = new File(dir);
         File[] fa = df.listFiles(fnf);
         if (fa != null) {
@@ -162,7 +162,7 @@ public class Locator {
     }
 
     public String[] getAllActiveFiles(String fbase, String ext) {
-        if (omega.Context.DEMO)
+        if (OmegaContext.DEMO)
             fbase = fbase.replaceAll("active", "demo");               // DIR
 
         FilenameFilterExt fnf_ext = new FilenameFilterExt(ext);
@@ -170,11 +170,11 @@ public class Locator {
         String[] sa = new String[1000];
         int ix = 0;
 
-//	omega.Context.sout_log.getLogger().info("ERR: " + "FILES dirs " + S.a2s(dirs));
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILES dirs " + S.a2s(dirs));
         if (dirs != null)
             for (int i = 0; i < dirs.length; i++) {
                 String[] files = scanDir(dirs[i], fnf_ext);
-//	    omega.Context.sout_log.getLogger().info("ERR: " + "FILES " + S.a2s(files));
+//	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILES " + S.a2s(files));
                 if (files != null) {
                     System.arraycopy(files, 0, sa, ix, files.length);
                     ix += files.length;

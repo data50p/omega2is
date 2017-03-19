@@ -4,8 +4,8 @@ import fpdo.sundry.S;
 import fpdo.xml.Element;
 import fpdo.xml.SAX_node;
 import fpdo.xml.XML_PW;
-import omega.Config;
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.anim.context.AnimContext;
 import omega.i18n.T;
 import omega.lesson.pupil.Pupil;
@@ -51,7 +51,7 @@ public class PupilSettingsDialog extends SettingsDialog {
     boolean active = false;
 
     void updColors(String fname) {
-        File file = new File(Context.omegaAssets(fname));
+        File file = new File(OmegaContext.omegaAssets(fname));
         if (file.canWrite()) {
             col_lesson.setEnabled(true);
             col_login.setEnabled(true);
@@ -208,7 +208,7 @@ public class PupilSettingsDialog extends SettingsDialog {
                         pupim_jl.setIcon(imc2);
                     }
                 } catch (Exception ex) {
-                    omega.Context.sout_log.getLogger().info("ERR: " + "ex " + ex);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "ex " + ex);
                     ex.printStackTrace();
                 }
             }
@@ -342,7 +342,7 @@ public class PupilSettingsDialog extends SettingsDialog {
         cp_anim.add(new JLabel(T.t("Sound after each word")), show_sound_word = new JCheckBox(), Y, ++X);
         jcomponent_hm.put("showSoundWord", show_sound_word);
 
-        if (Config.LIU_Mode) {
+        if (OmegaConfig.LIU_Mode) {
             Y++;
             X = 0;
             cp_anim.add(new JLabel(T.t("Show Sign after each word")), show_sign_word = new JCheckBox(), Y, ++X);
@@ -451,7 +451,7 @@ public class PupilSettingsDialog extends SettingsDialog {
             jcomponent_hm.put("image_wrong_on", chb);
         }
 
-        if (Config.LIU_Mode) {
+        if (OmegaConfig.LIU_Mode) {
             Y++;
             X = 0;
             JLabel jl;
@@ -824,7 +824,7 @@ public class PupilSettingsDialog extends SettingsDialog {
         }
 
         Locale inlocale = new Locale(T.lang);
-        File dot = new File(Context.omegaAssets("."));
+        File dot = new File(OmegaContext.omegaAssets("."));
         String[] scanned_lang = dot.list(new java.io.FilenameFilter() {
 
             public boolean accept(File dir, String name) {
@@ -864,14 +864,14 @@ public class PupilSettingsDialog extends SettingsDialog {
                 dn = "bokmål (bergen)";
                 la = "nb_NO_BN";
             }
-            Context.lesson_log.getLogger().info("Lang: DN LA " + dn + ' ' + la);
+            OmegaContext.lesson_log.getLogger().info("Lang: DN LA " + dn + ' ' + la);
             v.add(new MultiString(dn, new String[]{la}));
         }
         return v;
     }
 
     Vector getThemes() {
-        File dot = new File(Context.omegaAssets("."));
+        File dot = new File(OmegaContext.omegaAssets("."));
         String[] scanned_themes = dot.list(new java.io.FilenameFilter() {
 
             public boolean accept(File dir, String name) {

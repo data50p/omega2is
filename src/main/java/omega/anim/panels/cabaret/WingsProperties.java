@@ -145,7 +145,7 @@ public class WingsProperties extends OmegaProperties implements ActionListener {
     }
 
     public void updPos(Wing w, int dx, int dy) {
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "updPOS " + w + ' ' + bound_wing);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "updPOS " + w + ' ' + bound_wing);
         if (w == bound_wing)
             position.setText("" + (bound_wing.pos.getX() + dx) + ' ' + (bound_wing.pos.getY() + dy));
     }
@@ -295,7 +295,7 @@ public class WingsProperties extends OmegaProperties implements ActionListener {
                     T.t("Are you sure to delete the Wing?"),
                     "Omega",
                     JOptionPane.YES_NO_OPTION);
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "*******) " + rsp);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "*******) " + rsp);
             if (rsp == 0) {
                 wings_pan.removeWing(bound_wing_ixx);
                 setDirty();

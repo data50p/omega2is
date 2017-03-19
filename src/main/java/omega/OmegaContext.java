@@ -12,7 +12,7 @@ import java.util.Stack;
 import java.util.logging.Level;
 
 
-public class Context {
+public class OmegaContext {
     public static final String OMEGA_ASSETS_SUFFIX = ".omega_assets";
     public static final String defaultOmegaAssets = "default" + OMEGA_ASSETS_SUFFIX;
     public static final String developerOmegaAssets = "developer" + OMEGA_ASSETS_SUFFIX;
@@ -110,16 +110,16 @@ public class Context {
     public static void setOmegaAssets(String omega_assets_name) throws IllegalArgumentException {
         if (SundryUtils.empty(omega_assets_name)) {
             currentOmegaAssets = getDefaultOmegaAssets();
-            Context.sout_log.getLogger().info("setOmegaAssets: " + currentOmegaAssets);
+            OmegaContext.sout_log.getLogger().info("setOmegaAssets: " + currentOmegaAssets);
         } else {
             if (!omega_assets_name.endsWith(OMEGA_ASSETS_SUFFIX))
                 omega_assets_name = omega_assets_name + OMEGA_ASSETS_SUFFIX;
             if ((new File(omega_assets_name)).exists()) {
-                Context.sout_log.getLogger().info("setOmegaAssets: " + currentOmegaAssets + " -> " + omega_assets_name);
+                OmegaContext.sout_log.getLogger().info("setOmegaAssets: " + currentOmegaAssets + " -> " + omega_assets_name);
                 currentOmegaAssets = omega_assets_name;
                 return;
             }
-            Context.sout_log.getLogger().info("setOmegaAssets: unable to set omega assets, keep old! " + currentOmegaAssets);
+            OmegaContext.sout_log.getLogger().info("setOmegaAssets: unable to set omega assets, keep old! " + currentOmegaAssets);
         }
     }
 
@@ -155,13 +155,13 @@ public class Context {
 
         public void push(String s) {
             stack.push(s);
-            //	    omega.Context.sout_log.getLogger().info("ERR: " + "H push " + stack);
+            //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "H push " + stack);
         }
 
         public String get() {
             if (stack.empty())
                 return null;
-            //	    omega.Context.sout_log.getLogger().info("ERR: " + "H get " + (String)stack.peek());
+            //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "H get " + (String)stack.peek());
             return (String) stack.peek();
         }
 
@@ -171,7 +171,7 @@ public class Context {
             if (s.length() == 0 || s.equals(get()))
                 if (!stack.empty())
                     stack.pop();
-            //	    omega.Context.sout_log.getLogger().info("ERR: " + "H pop " + stack);
+            //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "H pop " + stack);
         }
     }
 
@@ -187,7 +187,7 @@ public class Context {
     }
 
     public static void setLessonLang(String s) {
-        omega.Context.lesson_log.getLogger().info("old, new: " + lesson_lang + ' ' + s);
+        OmegaContext.lesson_log.getLogger().info("old, new: " + lesson_lang + ' ' + s);
         lesson_lang = s;
     }
 
@@ -200,11 +200,11 @@ public class Context {
 //    }
 //
 //    public static void setEditorLessonLang(String s) {
-//        omega.Context.lesson_log.getLogger().info("EditorLessonLang: old, new: " + lesson_lang_editor + ' ' + s);
+//        omega.OmegaContext.lesson_log.getLogger().info("EditorLessonLang: old, new: " + lesson_lang_editor + ' ' + s);
 //	lesson_lang_editor = s;
 //    }
 
-    public Context() {
+    public OmegaContext() {
     }
 
     public static void init(String s, Object arg) {
@@ -217,7 +217,7 @@ public class Context {
                 ss.init(arg);
                 subsystems.put(s, ss);
             } catch (Exception ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "Can't start subsystem " + s + '\n' + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "Can't start subsystem " + s + '\n' + ex);
             }
         }
     }

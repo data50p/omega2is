@@ -1,7 +1,7 @@
 package omega.util;
 
 import fpdo.sundry.S;
-import omega.Context;
+import omega.OmegaContext;
 import omega.appl.Omega_IS;
 
 import java.io.File;
@@ -74,7 +74,7 @@ public class Log {
             }
             fh.setFormatter(my_formatter);
             logger.addHandler(fh);
-            if (Context.isDeveloper()) {
+            if (OmegaContext.isDeveloper()) {
                 h2 = new MyHandler(System.out, my_formatter);
                 logger.addHandler(h2);
             }

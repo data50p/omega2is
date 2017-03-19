@@ -1,6 +1,7 @@
 package omega.anim.tool.timeline;
 
 import fpdo.xml.Element;
+import omega.OmegaConfig;
 import omega.anim.context.AnimContext;
 
 import javax.swing.event.EventListenerList;
@@ -44,7 +45,7 @@ public class MasterTimeLine implements PlayCtrlListener {
     }
 
     static public int getMaxTimeLineIndex() {
-        return omega.Config.TIMELINES_N;
+        return OmegaConfig.TIMELINES_N;
     }
 
     public TimeLine getTimeLine(int nid) {
@@ -166,11 +167,11 @@ public class MasterTimeLine implements PlayCtrlListener {
 
     public void playBegin(boolean dry) {
         this.dry = dry;
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "PLAY BEGIN");
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "PLAY BEGIN");
     }
 
     public void playEnd(int when) {
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "PLAY END");
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "PLAY END");
         dry = false;
     }
 

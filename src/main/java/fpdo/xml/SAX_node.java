@@ -2,6 +2,7 @@ package fpdo.xml;
 
 
 import fpdo.sundry.S;
+import omega.OmegaContext;
 import omega.util.Log;
 import org.xml.sax.*;
 import org.xml.sax.helpers.DefaultHandler;
@@ -26,10 +27,10 @@ public class SAX_node extends DefaultHandler {
         // dump warnings too
         public void warning(SAXParseException err)
                 throws SAXParseException {
-            omega.Context.sout_log.getLogger().info("** Warning"
+            OmegaContext.sout_log.getLogger().info("** Warning"
                     + ", line " + err.getLineNumber()
                     + ", uri " + err.getSystemId());
-            omega.Context.sout_log.getLogger().info("   " + err.getMessage());
+            OmegaContext.sout_log.getLogger().info("   " + err.getMessage());
         }
     }
 
@@ -88,21 +89,21 @@ public class SAX_node extends DefaultHandler {
 
     public void ignorableWhitespace(char buf[], int offset, int len)
             throws SAXException {
-//	omega.Context.sout_log.getLogger().info("ERR: " + "iW " + new String(buf, offset, len));
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "iW " + new String(buf, offset, len));
     }
 
     public void processingInstruction(String target, String data)
             throws SAXException {
-        omega.Context.sout_log.getLogger().info("ERR: " + "pI " + target);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "pI " + target);
     }
 
     public void notationDecl(String name, String publicId, String systemId) {
-        omega.Context.sout_log.getLogger().info("ERR: " + "nD " + name);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "nD " + name);
     }
 
     public void unparsedEntityDecl(String name, String publicId,
                                    String systemId, String notationName) {
-        omega.Context.sout_log.getLogger().info("ERR: " + "UeD " + name);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "UeD " + name);
     }
 
     /**
@@ -144,10 +145,10 @@ public class SAX_node extends DefaultHandler {
             return el;
 
         } catch (SAXParseException err) {
-            omega.Context.sout_log.getLogger().info("** Parsing error"
+            OmegaContext.sout_log.getLogger().info("** Parsing error"
                     + ", line " + err.getLineNumber()
                     + ", uri " + err.getSystemId());
-            omega.Context.sout_log.getLogger().info("   " + err.getMessage());
+            OmegaContext.sout_log.getLogger().info("   " + err.getMessage());
 
         } catch (SAXException e) {
             Exception x = e;
@@ -177,7 +178,7 @@ public class SAX_node extends DefaultHandler {
         HashMap flag = S.flagAsMap(argv);
         List argl = S.argAsList(argv);
 
-        omega.Context.sout_log.getLogger().info("ERR: " + "argl " + argl + ' ' + flag);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "argl " + argl + ' ' + flag);
 
         String file = (String) argl.get(0);
 
@@ -189,8 +190,8 @@ public class SAX_node extends DefaultHandler {
 
         List li = el.find((String) argl.get(1));
 
-        omega.Context.sout_log.getLogger().info("<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>");
-        omega.Context.sout_log.getLogger().info("<!DOCTYPE start SYSTEM \"x.dtd\">");
+        OmegaContext.sout_log.getLogger().info("<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>");
+        OmegaContext.sout_log.getLogger().info("<!DOCTYPE start SYSTEM \"x.dtd\">");
 
         Iterator it = li.iterator();
         while (it.hasNext()) {

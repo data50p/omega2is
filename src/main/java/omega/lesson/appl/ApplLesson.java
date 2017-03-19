@@ -1,6 +1,7 @@
 package omega.lesson.appl;
 
-import omega.Config;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.connect.httpd.Server;
 import omega.help.HelpSystem;
 
@@ -21,10 +22,10 @@ public class ApplLesson extends JFrame {
         super(title);
         this.is_editor = is_editor;
         TOP_JFRAME = this;
-        omega.Context.init("Httpd", null);
-        httpd = ((omega.subsystem.Httpd) (omega.Context.getSubsystem("Httpd"))).httpd;
+        OmegaContext.init("Httpd", null);
+        httpd = ((omega.subsystem.Httpd) (OmegaContext.getSubsystem("Httpd"))).httpd;
 
-        if (Config.fullScreen) {
+        if (OmegaConfig.fullScreen) {
             try {
                 Class util = Class.forName("com.apple.eawt.FullScreenUtilities");
                 Class params[] = new Class[]{Window.class, Boolean.TYPE};

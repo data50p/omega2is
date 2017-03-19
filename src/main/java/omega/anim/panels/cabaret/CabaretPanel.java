@@ -1,5 +1,6 @@
 package omega.anim.panels.cabaret;
 
+import omega.OmegaConfig;
 import omega.anim.cabaret.Actor;
 import omega.anim.cabaret.Cabaret;
 import omega.anim.cabaret.GImAE;
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class CabaretPanel extends JPanel {
     final int IMSIZE = 64;
-    final int ACT_N = omega.Config.CABARET_ACTOR_N;
+    final int ACT_N = OmegaConfig.CABARET_ACTOR_N;
     final int EMPTY = -1;
 
     omega.anim.appl.AnimEditor ae;
@@ -260,7 +261,7 @@ public class CabaretPanel extends JPanel {
 
                         g2.drawImage(im, at, null);
 
-                        if (tl_nid < omega.Config.TIMELINES_N) {
+                        if (tl_nid < OmegaConfig.TIMELINES_N) {
 
                             int ww = getGImAE(i).imw;
                             int hh = getGImAE(i).imh;
@@ -298,7 +299,7 @@ public class CabaretPanel extends JPanel {
                 g2.setColor(Color.white);
 
 
-                if (tl_nid >= 0 && tl_nid < omega.Config.TIMELINES_N) {
+                if (tl_nid >= 0 && tl_nid < OmegaConfig.TIMELINES_N) {
                     GImAE gimae = getGImAE(i);
 
                     // ae.ae_ctxt.mtl;

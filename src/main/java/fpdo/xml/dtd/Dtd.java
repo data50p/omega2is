@@ -1,5 +1,7 @@
 package fpdo.xml.dtd;
 
+import omega.OmegaContext;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -37,6 +39,6 @@ public class Dtd extends Item {
 
         StringBuffer sb = new StringBuffer();
         d.render(sb);
-        omega.Context.sout_log.getLogger().info("" + sb.toString());
+        OmegaContext.sout_log.getLogger().info("" + sb.toString());
     }
 }

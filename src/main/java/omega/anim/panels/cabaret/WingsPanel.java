@@ -1,5 +1,7 @@
 package omega.anim.panels.cabaret;
 
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.graphic.render.Wing;
 
 import javax.swing.*;
@@ -16,7 +18,7 @@ import java.util.List;
 
 public class WingsPanel extends JPanel {
     final int IMSIZE = 64;
-    final int WING_N = omega.Config.WINGS_N;
+    final int WING_N = OmegaConfig.WINGS_N;
     final int EMPTY = -1;
 
     public omega.anim.appl.AnimEditor ae;
@@ -263,7 +265,7 @@ public class WingsPanel extends JPanel {
                 wingA.arr[ix].nid = nid;
                 repaint();
             } else {
-                omega.Context.sout_log.getLogger().info("ERR: " + "NO SLOT");
+                OmegaContext.sout_log.getLogger().info("ERR: " + "NO SLOT");
             }
         }
         setPropTarget(ix);
@@ -356,7 +358,7 @@ public class WingsPanel extends JPanel {
 
                         g2.drawImage(im, at, null);
 
-                        if (nid < omega.Config.TIMELINES_N) {
+                        if (nid < OmegaConfig.TIMELINES_N) {
 
                             int ww = wingA.getIm(i).getWidth(null);
                             int hh = wingA.getIm(i).getHeight(null);
@@ -392,7 +394,7 @@ public class WingsPanel extends JPanel {
                 g2.setColor(Color.white);
 
 
-                if (nid >= 0 && nid < omega.Config.TIMELINES_N) {
+                if (nid >= 0 && nid < OmegaConfig.TIMELINES_N) {
                     Image im = wingA.getIm(i);
 
                     String ID = "";

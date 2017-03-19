@@ -23,7 +23,7 @@ public class LicenseShow {
         PreferenceUtil pu = new PreferenceUtil(LicenseShow.class);
         String answer = (String) pu.getObject(licShow, no);
 
-        if (Context.isDeveloper() || yes.equals(answer))
+        if (OmegaContext.isDeveloper() || yes.equals(answer))
             return true;
 
         ShowLicense dialog = new ShowLicense();

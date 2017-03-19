@@ -4,8 +4,8 @@
  */
 package omega.lesson.managers.movie;
 
-import omega.Config;
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.lesson.EachWordMovie;
 import omega.lesson.canvas.LessonCanvas;
 import omega.lesson.machine.Item;
@@ -36,10 +36,10 @@ public class LiuMovieManager extends Manager {
     }
 
     public boolean prepare(String prefix, String movieNameBase, boolean init) {
-        if (!Config.LIU_Mode)
+        if (!OmegaConfig.LIU_Mode)
             return false;
 
-        omega.Context.sout_log.getLogger().info("prepare play movie: (~A) " + prefix + ' ' + movieNameBase + ' ' + init);
+        OmegaContext.sout_log.getLogger().info("prepare play movie: (~A) " + prefix + ' ' + movieNameBase + ' ' + init);
 
         if (init)
             return prepare(prefix + movieNameBase);
@@ -63,10 +63,10 @@ public class LiuMovieManager extends Manager {
                 eWmovie = null;
                 return false;
             }
-            omega.Context.sout_log.getLogger().info("LiuMovieManager: movie loaded");
+            OmegaContext.sout_log.getLogger().info("LiuMovieManager: movie loaded");
             return true;
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "" + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
             ex.printStackTrace();
         }
         return false;
@@ -83,11 +83,11 @@ public class LiuMovieManager extends Manager {
                     eWmovie = null;
                     return false;
                 }
-                omega.Context.sout_log.getLogger().info("LiuMovieManager: movie loaded");
+                OmegaContext.sout_log.getLogger().info("LiuMovieManager: movie loaded");
                 return true;
             }
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "" + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
             ex.printStackTrace();
         }
         return false;
@@ -106,14 +106,14 @@ public class LiuMovieManager extends Manager {
             if (eWmovie != null) {
                 eWmovie.perform(x, y, scale);
                 Rectangle r = getRectangle();
-                omega.Context.sout_log.getLogger().info("rect: " + r);
+                OmegaContext.sout_log.getLogger().info("rect: " + r);
                 Thread.sleep(500);
                 r = getRectangle();
-                omega.Context.sout_log.getLogger().info("rect: " + r);
+                OmegaContext.sout_log.getLogger().info("rect: " + r);
                 return r;
             }
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "" + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
             ex.printStackTrace();
         }
         return null;
@@ -133,7 +133,7 @@ public class LiuMovieManager extends Manager {
                 }
             }
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "" + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
             ex.printStackTrace();
         }
         //jrp.setContentPane(cop);
@@ -158,7 +158,7 @@ public class LiuMovieManager extends Manager {
                 return sfn;
         }
         sfn = "sign-"
-                + omega.Context.getLessonLang()
+                + OmegaContext.getLessonLang()
                 + "/"
                 + sitm.getTextD()
                 + ".mpg";
@@ -168,12 +168,12 @@ public class LiuMovieManager extends Manager {
     }
 
     private boolean mediaFileExist(String sfn) {
-        String smFn = VideoUtil.findSupportedFname(Context.getMediaFile(sfn));
+        String smFn = VideoUtil.findSupportedFname(OmegaContext.getMediaFile(sfn));
         if (smFn == null)
             return false;
         File f = new File(smFn);
         boolean exist = f.exists() && f.canRead();
-        omega.Context.sout_log.getLogger().info("mediaFileExist: " + sfn + ' ' + exist);
+        OmegaContext.sout_log.getLogger().info("mediaFileExist: " + sfn + ' ' + exist);
         return exist;
     }
 

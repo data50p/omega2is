@@ -1,6 +1,7 @@
 package omega.lesson.remote;
 
 import fpdo.sundry.S;
+import omega.OmegaContext;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -16,18 +17,18 @@ public class Server implements Runnable {
     }
 
     public void run() {
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "Server started");
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "Server started");
         for (; ; ) {
             try {
                 ServerSocket sso = new ServerSocket(port);
                 for (; ; ) {
                     Socket so = sso.accept();
-//log		    omega.Context.sout_log.getLogger().info("ERR: " + "lessond: Connection accepted");
+//log		    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "lessond: Connection accepted");
                     Connection con = new Connection(so, this);
                     con.start();
                 }
             } catch (IOException ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "lessond: Exception: " + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "lessond: Exception: " + ex);
                 S.m_sleep(3000);
             }
         }

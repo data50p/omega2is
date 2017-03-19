@@ -2,6 +2,7 @@ package omega.lesson.canvas;
 
 
 import fpdo.sundry.S;
+import omega.OmegaContext;
 import omega.i18n.T;
 import omega.value.Value;
 import omega.value.Values;
@@ -94,7 +95,7 @@ public class TargetProperty extends Property_B {
         while (it.hasNext()) {
             Value v = (Value) it.next();
 
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "V " + v);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "V " + v);
 
             if (v.getId().equals("pathlist")) {         // banor
                 JComboBox cb = (JComboBox) guimap.get("Slid");
@@ -112,7 +113,7 @@ public class TargetProperty extends Property_B {
                     pack();
                     continue;
                 } else
-                    omega.Context.sout_log.getLogger().info("ERR: " + "ss is null " + v);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "ss is null " + v);
             }
 
             Object gui = guimap.get(v.id);
@@ -168,7 +169,7 @@ public class TargetProperty extends Property_B {
             cbg = (JComboBox) guimap.get("type");
             if (cb == cbg) {
                 String s = (String) cb.getSelectedItem();
-//log  		omega.Context.sout_log.getLogger().info("ERR: " + "CB type " + cb);
+//log  		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "CB type " + cb);
 /*
                   if ( s.equals("action") )
   		    setLabel("Llid", "Path id");
@@ -177,7 +178,7 @@ public class TargetProperty extends Property_B {
   		else
   		    setLabel("Llid", "Path id");
 */
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "=0= " + cb);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "=0= " + cb);
                 fireValueChanged(new Value("type", s));
             }
 
@@ -188,7 +189,7 @@ public class TargetProperty extends Property_B {
             }
 
         } catch (ClassCastException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "CCE " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "CCE " + ex);
         }
     }
 }

@@ -1,6 +1,7 @@
 package omega.anim.tool.timeline;
 
 import fpdo.sundry.S;
+import omega.OmegaConfig;
 
 import javax.swing.event.EventListenerList;
 import java.awt.event.ActionEvent;
@@ -19,7 +20,7 @@ public class TimeLinePlayer implements ActionListener {
     long ct0;
     double speed = 1.0;
 
-    boolean MODE = omega.Config.RUN_MODE;
+    boolean MODE = OmegaConfig.RUN_MODE;
 
     int state = NULL;
 
@@ -34,7 +35,7 @@ public class TimeLinePlayer implements ActionListener {
 
     public TimeLinePlayer() {
         playctrl_listeners = new EventListenerList();
-        timer = new javax.swing.Timer(omega.Config.t_step, this);
+        timer = new javax.swing.Timer(OmegaConfig.t_step, this);
         timer.setCoalesce(true);
         self = this;
     }

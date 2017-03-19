@@ -1,6 +1,8 @@
 package omega.util;
 
 
+import omega.OmegaContext;
+
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
@@ -581,7 +583,7 @@ public class InvokeExternBrowser {
                         throw new IOException("Unable to launch URL: " + result);
                     }
                 } else {
-                    throw new IOException("Unable to create an Internet Config instance: " + result);
+                    throw new IOException("Unable to create an Internet OmegaConfig instance: " + result);
                 }
                 break;
             case MRJ_3_1:
@@ -648,12 +650,12 @@ public class InvokeExternBrowser {
                                           int[] selectionStart, int[] selectionEnd);
 
     public static boolean show_if(String url_s) {
-        if (omega.Context.extern_help_browser) {
+        if (OmegaContext.extern_help_browser) {
             try {
                 omega.util.InvokeExternBrowser.openURL(url_s);
-                omega.Context.sout_log.getLogger().info("ERR: " + "done...");
+                OmegaContext.sout_log.getLogger().info("ERR: " + "done...");
             } catch (IOException ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "Can't open url " + url_s + ' ' + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "Can't open url " + url_s + ' ' + ex);
                 return false;
             }
             return true;

@@ -61,7 +61,7 @@ public class GIm {
     public void setAttribName(String an) {
         if (an != null && an.length() == 0)
             an = null;
-//	omega.Context.sout_log.getLogger().info("ERR: " + "ATTR dep_set " + an);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "ATTR dep_set " + an);
         xim.setAttrib(an);
         initIm();
     }
@@ -78,7 +78,7 @@ public class GIm {
     public void setAttribNameUncommited(String an) {
         if (an == null)
             an = "@@@ null @@@";
-//	omega.Context.sout_log.getLogger().info("ERR: " + "ATTR dep_set delayed " + an);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "ATTR dep_set delayed " + an);
         delayed_id_attrib = an;
     }
 
@@ -158,7 +158,7 @@ public class GIm {
     }
 
     synchronized void render(AffineTransform at) {
-//	omega.Context.sout_log.getLogger().info("ERR: " + "GIm.render " + this + ' ' + at);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "GIm.render " + this + ' ' + at);
         ca.drawImage(xim.getImage(ca), at, acomp);
     }
 
@@ -168,7 +168,7 @@ public class GIm {
 
     public Rectangle2D getPrevBoundingRect() {
         if (prev_bounding_rect == null) {
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "======================= pbr null ====");
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "======================= pbr null ====");
             return bounding_rect;
         } else
             return prev_bounding_rect;

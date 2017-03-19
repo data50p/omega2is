@@ -2,7 +2,8 @@ package omega.anim.appl;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.anim.context.AnimContext;
 import omega.anim.panels.cabaret.CabaretPanel;
 import omega.anim.panels.cabaret.WingsPanel;
@@ -39,7 +40,7 @@ public class AnimEditor extends JFrame {
     public TimeLineComponent tlc;
     public AnimRuntime arun;
 
-    static Context context;
+    static OmegaContext context;
 
     Server httpd;
 
@@ -60,12 +61,12 @@ public class AnimEditor extends JFrame {
     public AnimEditor(boolean verbose) {
         super("Omega - " + T.t("Animator editor"));
         if (verbose)
-            omega.Config.T = true;
+            OmegaConfig.T = true;
 //	setVisible(true);
 
         AnimContext.top_frame = this;
-        Context.init("Httpd", null);
-        httpd = ((omega.subsystem.Httpd) (Context.getSubsystem("Httpd"))).httpd;
+        OmegaContext.init("Httpd", null);
+        httpd = ((omega.subsystem.Httpd) (OmegaContext.getSubsystem("Httpd"))).httpd;
         init(true, null);
     }
 
@@ -73,8 +74,8 @@ public class AnimEditor extends JFrame {
         super("Omega - " + T.t("Animator editor") + ": " + fname);
 
         AnimContext.top_frame = this;
-        Context.init("Httpd", null);
-        httpd = ((omega.subsystem.Httpd) (Context.getSubsystem("Httpd"))).httpd;
+        OmegaContext.init("Httpd", null);
+        httpd = ((omega.subsystem.Httpd) (OmegaContext.getSubsystem("Httpd"))).httpd;
         init(false, fname);
     }
 
@@ -130,7 +131,7 @@ public class AnimEditor extends JFrame {
 
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent ev) {
-//log		    omega.Context.sout_log.getLogger().info("ERR: " + "closing");
+//log		    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "closing");
                 if (false && exit_on_close) {
                     System.exit(0);
                 } else
@@ -140,8 +141,8 @@ public class AnimEditor extends JFrame {
 
         ToolExecute ae_texec = new ToolExecute() {
             public void execute(String cmd) {
-                if (omega.Config.T)
-                    omega.Context.sout_log.getLogger().info("ERR: " + "AnimEditor.texec: execute " + cmd);
+                if (OmegaConfig.T)
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "AnimEditor.texec: execute " + cmd);
 
                 if ("exit".equals(cmd)) {
                     String s = "";
@@ -152,14 +153,14 @@ public class AnimEditor extends JFrame {
                         int sel = JOptionPane.showConfirmDialog(AnimEditor.this,
                                 T.t("Are you sure to exit Omega?") +
                                         s);
-//log			    omega.Context.sout_log.getLogger().info("ERR: " + "" + sel);
+//log			    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + sel);
                         if (sel == 0)
                             System.exit(0);
                     } else {
                         int sel = JOptionPane.showConfirmDialog(AnimEditor.this,
                                 T.t("Are you sure to close Anim Editor?") +
                                         s);
-//log			    omega.Context.sout_log.getLogger().info("ERR: " + "" + sel);
+//log			    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + sel);
                         if (sel == 0) {
                             try {
                                 a_ctxt.arun.clean();
@@ -272,7 +273,7 @@ public class AnimEditor extends JFrame {
                 if (gel != null)
                     gel.execute(cmd);
                 else
-                    omega.Context.sout_log.getLogger().info("ERR: " + "! missed " + cmd);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "! missed " + cmd);
             }
         };
 
@@ -498,7 +499,7 @@ public class AnimEditor extends JFrame {
             ap = APlayer.createAPlayer("audio/greeting.mp3", (String) null, (String) null);
             ap.play();
         } catch (NoClassDefFoundError ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "WARNING!! No audio");
+            OmegaContext.sout_log.getLogger().info("ERR: " + "WARNING!! No audio");
         }
 
         SwingUtilities.invokeLater(new Runnable() {
@@ -560,7 +561,7 @@ public class AnimEditor extends JFrame {
             a_ctxt.anim_canvas.loadActor(ix, ua[1]);
             a_ctxt.ae.setDirty(true);
         } else {
-            omega.Context.sout_log.getLogger().info("ERR: " + "ERROR file: " + url_s);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "ERROR file: " + url_s);
         }
     }
 
@@ -571,7 +572,7 @@ public class AnimEditor extends JFrame {
             omega.media.images.xImage.invalidateCache();
             a_ctxt.anim_canvas.loadActor(cab_ixx, ua[1]);
         } else {
-            omega.Context.sout_log.getLogger().info("ERR: " + "ERROR file: " + url_s);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "ERROR file: " + url_s);
         }
         a_ctxt.ae.setDirty(true);
     }
@@ -589,7 +590,7 @@ public class AnimEditor extends JFrame {
                 wings_panel.removeAllWings();
             }
         } else {
-            omega.Context.sout_log.getLogger().info("ERR: " + "ERROR file: " + url_s);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "ERROR file: " + url_s);
         }
         a_ctxt.ae.setDirty(true);
     }
@@ -625,7 +626,7 @@ public class AnimEditor extends JFrame {
 
         if (fn == null)
             fn = "";
-        String tit = "Omega - " + T.t("Animator editor: ") + Context.antiOmegaAssets(fn);
+        String tit = "Omega - " + T.t("Animator editor: ") + OmegaContext.antiOmegaAssets(fn);
         if (is_dirty)
             tit += T.t(" (not saved)");
         setTitle(tit);
@@ -656,7 +657,7 @@ public class AnimEditor extends JFrame {
         }
 
         wings_panel.removeAllWings();
-        Element el = anim_repository.open(a_ctxt, Context.omegaAssets(fn));
+        Element el = anim_repository.open(a_ctxt, OmegaContext.omegaAssets(fn));
         anim_repository.load(a_ctxt, el);
         httpd.getHashMap().put("lesson:loaded resource ", anim_repository.getName());
         a_ctxt.anim_canvas.getToolExecute().execute("fit");
@@ -699,12 +700,12 @@ public class AnimEditor extends JFrame {
         if (flag.get("v") != null)
             verbose = true;
         if (flag.get("R") != null)
-            omega.Config.RUN_MODE = true;
+            OmegaConfig.RUN_MODE = true;
 
         String s = null;
         if ((s = (String) flag.get("t")) != null)
-            omega.Config.t_step = Integer.parseInt(s);
-        omega.Context.sout_log.getLogger().info("ERR: " + "" + omega.Config.t_step);
+            OmegaConfig.t_step = Integer.parseInt(s);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "" + OmegaConfig.t_step);
 
         JOptionPane.showMessageDialog(AnimContext.top_frame,
                 "Please change\nomega.anim.editor.appl.AnimEditor to\nomega.appl.animator.Editor",
@@ -713,6 +714,6 @@ public class AnimEditor extends JFrame {
 
         AnimEditor ae = new AnimEditor(verbose);
 
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "--------ok-------");
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "--------ok-------");
     }
 }

@@ -1,6 +1,7 @@
 package fpdo.xml;
 
 import fpdo.sundry.S;
+import omega.OmegaContext;
 
 import java.io.IOException;
 import java.util.*;
@@ -15,14 +16,14 @@ public class XML_cmd {
         List argl = S.argAsList(argv);
 
         if (argl.size() == 0 || ((String) argl.get(0)).equals("help")) {
-            omega.Context.sout_log.getLogger().info("xmlfile extract element");
-            omega.Context.sout_log.getLogger().info("xmlfile remove  element[,element2]*");
-            omega.Context.sout_log.getLogger().info("xmlfile sort    element");
-            omega.Context.sout_log.getLogger().info("xmlfile sort    element attr");
+            OmegaContext.sout_log.getLogger().info("xmlfile extract element");
+            OmegaContext.sout_log.getLogger().info("xmlfile remove  element[,element2]*");
+            OmegaContext.sout_log.getLogger().info("xmlfile sort    element");
+            OmegaContext.sout_log.getLogger().info("xmlfile sort    element attr");
             return;
         }
 
-        omega.Context.sout_log.getLogger().info("ERR: " + "argl " + argl + ' ' + flag);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "argl " + argl + ' ' + flag);
 
         String file = (String) argl.get(0);
         String cmd = (String) argl.get(1);

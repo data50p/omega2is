@@ -1,6 +1,7 @@
 package omega.anim.tool.timeline;
 
 import fpdo.xml.Element;
+import omega.OmegaContext;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,11 +68,11 @@ public class TriggerEventFactory {
             te.name = name;
             return te;
         } catch (IllegalAccessException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
         } catch (InstantiationException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
         } catch (ClassNotFoundException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
         }
         return null;
     }
@@ -104,9 +105,9 @@ public class TriggerEventFactory {
                 te.name = s;
                 l.add(s);
             } catch (IllegalAccessException ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
             } catch (InstantiationException ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
             }
         }
         return (String[]) l.toArray(new String[0]);
@@ -119,9 +120,9 @@ public class TriggerEventFactory {
                 TriggerEvent te = (TriggerEvent) cl.newInstance();
                 return te;
             } catch (IllegalAccessException ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
             } catch (InstantiationException ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "TriggerEventFactory: " + ex);
             }
         return null;
     }

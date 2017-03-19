@@ -2,7 +2,7 @@ package omega.media.video;
 
 import fpdo.sundry.S;
 import javafx.embed.swing.JFXPanel;
-import omega.Context;
+import omega.OmegaContext;
 import omega.util.Log;
 
 import javax.swing.*;
@@ -116,10 +116,10 @@ public class MpgPlayer {
     static public MpgPlayer createMpgPlayer(String fn, JComponent jcomp, int winW, int winH) {
         URL url = null;
 
-        omega.Context.lesson_log.getLogger().info("create mpgPlayer jcomp: " + fn);
+        OmegaContext.lesson_log.getLogger().info("create mpgPlayer jcomp: " + fn);
 
         try {
-            if (Context.omegaAssetsExist(fn)) {
+            if (OmegaContext.omegaAssetsExist(fn)) {
                 url = new URL("file:" + fn);
 
                 try {
@@ -131,13 +131,13 @@ public class MpgPlayer {
                     return mp;
                 } catch (Exception e) {
                     e.printStackTrace();
-                    omega.Context.lesson_log.getLogger().info("NoPlayerEx: " + e);
+                    OmegaContext.lesson_log.getLogger().info("NoPlayerEx: " + e);
                 }
             }
         } catch (MalformedURLException e) {
-            omega.Context.lesson_log.getLogger().info("ERR: " + "MUE Error:" + e);
+            OmegaContext.lesson_log.getLogger().info("ERR: " + "MUE Error:" + e);
         } catch (Exception e) {
-            omega.Context.lesson_log.getLogger().info("ERR: " + "Exception:" + e);
+            OmegaContext.lesson_log.getLogger().info("ERR: " + "Exception:" + e);
         }
         return null;
     }

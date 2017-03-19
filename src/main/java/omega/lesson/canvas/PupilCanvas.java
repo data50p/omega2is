@@ -2,7 +2,8 @@ package omega.lesson.canvas;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
@@ -117,13 +118,13 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
     public boolean ownKeyCode(int kc, boolean is_shift) {
         if (Lesson.skip_F)
             return true;
-        omega.Context.def_log.getLogger().info("pupil own " + kc);
-        if (omega.Config.isKeyNext(kc))
+        OmegaContext.def_log.getLogger().info("pupil own " + kc);
+        if (OmegaConfig.isKeyNext(kc))
             if (is_shift)
                 setPrevRed();
             else
                 setNextRed();
-        if (omega.Config.isKeySelect(kc)) {
+        if (OmegaConfig.isKeySelect(kc)) {
             MyButton mb = focus_list.get();
             if (mb != null)
                 mb.doClick();
@@ -132,7 +133,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
             int ix = names.getSelectedIndex();
             ix++;
             int lix = names.getModel().getSize();
-            omega.Context.def_log.getLogger().info("++ " + lix + ' ' + ix);
+            OmegaContext.def_log.getLogger().info("++ " + lix + ' ' + ix);
             if (ix >= lix)
                 ix = 0;
             names.setSelectedIndex(ix);
@@ -141,7 +142,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
             int ix = names.getSelectedIndex();
             ix--;
             int lix = names.getModel().getSize();
-            omega.Context.def_log.getLogger().info("-- " + lix + ' ' + ix);
+            OmegaContext.def_log.getLogger().info("-- " + lix + ' ' + ix);
             if (ix < 0)
                 ix = lix - 1;
             names.setSelectedIndex(ix);
@@ -172,7 +173,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
     }
 
     public void enter() {
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "ENTER pupil");
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "ENTER pupil");
         super.enter();
         if (buttons[0] == null) {
             return;
@@ -211,7 +212,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
                         PupilSettingsDialog pupil_settings_dialog = new PupilSettingsDialog(omega.lesson.Lesson.static_lesson);
                         pupil_settings_dialog.setPupil(new Pupil(pn));
                         pupil_settings_dialog.setVisible(true);
-                        omega.Context.def_log.getLogger().info("hidden +++++++++++++?");
+                        OmegaContext.def_log.getLogger().info("hidden +++++++++++++?");
                         pupil_settings_dialog = null;
                         mkList(pn);
                     }
@@ -261,7 +262,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
     }
 
     public void mkList(String selected_name) {
-        omega.Context.def_log.getLogger().info("________-" + selected_name);
+        OmegaContext.def_log.getLogger().info("________-" + selected_name);
         boolean new_pupil = behaviour == BH_ADMINISTRATOR;
         omega.adm.register.data.RegLocator loc = new omega.adm.register.data.RegLocator();
         String[] sa = loc.getAllPupilsName();
@@ -278,7 +279,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
         names.setListData(pA);
         if (selected_name != null && selected_pupil != null) {
             names.setSelectedValue(selected_pupil, true);
-            omega.Context.def_log.getLogger().info("selected value 1 " + names.getSelectedValue() + ' ' + selected_name);
+            OmegaContext.def_log.getLogger().info("selected value 1 " + names.getSelectedValue() + ' ' + selected_name);
         } else {
             names.setSelectedValue(T.t("Guest"), true);
         }
@@ -307,7 +308,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
             welcome = new JLabel(T.t("Welcome"));
             welcome.setFont(getFont1());
             Color color = getColor("bg_tx");
-            omega.Context.def_log.getLogger().info("color bg_tx " + color);
+            OmegaContext.def_log.getLogger().info("color bg_tx " + color);
             welcome.setForeground(color);
             add(welcome);
         }
@@ -368,7 +369,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
                     false);
             if (imic == null)
                 imic = omega.swing.ScaledImageIcon.createImageIcon(this,
-                        Context.omegaAssets("media/default/pupil.jpg"),
+                        OmegaContext.omegaAssets("media/default/pupil.jpg"),
                         w,
                         h,
                         false);
@@ -392,7 +393,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
             welcome.setText(T.t("Welcome") + ' ' + name);
         }
         setSelectedPupil(name2);
-        omega.Context.def_log.getLogger().info("selected value 2 " + names.getSelectedValue() + ' ' + name + ' ' + name2);
+        OmegaContext.def_log.getLogger().info("selected value 2 " + names.getSelectedValue() + ' ' + name + ' ' + name2);
     }
 
     private void setSelectedPupil(String name) {

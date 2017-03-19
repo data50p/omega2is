@@ -1,6 +1,8 @@
 package omega.connect.httpd;
 
 import fpdo.sundry.S;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 
 import java.io.*;
 import java.net.Socket;
@@ -38,7 +40,7 @@ public class ServerConnection extends Thread {
 
     String getLsData(String fn, char t) throws IOException {
         File f = new File(fn);
-//	omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + f);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + f);
         if (f.isDirectory()) {
             StringBuffer sb = new StringBuffer();
             String[] l = f.list();
@@ -255,18 +257,18 @@ public class ServerConnection extends Thread {
 
     void serve(List sL, BufferedReader rd, DataOutputStream dos) {
         try {
-//	    omega.Context.sout_log.getLogger().info("ERR: " + "WEB(" + sL.get(0) + ")");
+//	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "WEB(" + sL.get(0) + ")");
             String[] sa = S.split((String) (sL.get(0)), " ");
             String q = fixQ(sa[1]);
             sa[1] = fixFN(sa[1], q);
-            if (omega.Config.T)
-                omega.Context.sout_log.getLogger().info("ERR: " + "serve " + S.arrToString(sa) + ' ' + sL + ' ' + rd + ' ' + dos);
+            if (OmegaConfig.T)
+                OmegaContext.sout_log.getLogger().info("ERR: " + "serve " + S.arrToString(sa) + ' ' + sL + ' ' + rd + ' ' + dos);
             if ("GET".equals(sa[0]))
                 doGet(sa, q, sL, rd, dos);
             if ("POST".equals(sa[0]))
                 doPost(sa, q, sL, rd, dos);
         } catch (IOException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "serve(): Exception " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "serve(): Exception " + ex);
         }
     }
 
@@ -284,19 +286,19 @@ public class ServerConnection extends Thread {
             dos.flush();
         } else {
             try {
-                if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "doPost " + sL + ' ' + rd);
+                if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "doPost " + sL + ' ' + rd);
                 dos.writeBytes("HTTP/0.9 200 OK ERROR\r\n");
                 dos.writeBytes("Server: Omega 0.9\r\n");
                 dos.writeBytes("\r\n");
                 dos.flush();
             } catch (Exception ex) {
             }
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "httpd: io done");
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "httpd: io done");
         }
     }
 
     void doGet(String[] sa, String q, List sL, BufferedReader rd, DataOutputStream dos) throws IOException {
-        if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "GET " + S.arrToString(sa) + ',' + q);
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "GET " + S.arrToString(sa) + ',' + q);
         String fn = sa[1];
         if (fn == null) {
             String cmd = sa[0];
@@ -368,7 +370,7 @@ public class ServerConnection extends Thread {
                 dos.writeBytes("\r\n");
                 dos.flush();
             }
-            if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "httpd: io done");
+            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "httpd: io done");
         }
     }
 
@@ -377,7 +379,7 @@ public class ServerConnection extends Thread {
     public void run() {
         long ct0 = S.ct();
 
-        if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "httpd Connection established");
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "httpd Connection established");
         try {
             BufferedReader rd = new BufferedReader(new InputStreamReader(so.getInputStream()));
             DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(so.getOutputStream()));

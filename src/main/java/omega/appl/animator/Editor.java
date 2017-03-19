@@ -2,6 +2,8 @@ package omega.appl.animator;
 
 import fpdo.sundry.S;
 import omega.LicenseShow;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
 import omega.appl.OmegaAppl;
 
@@ -44,8 +46,8 @@ public class Editor extends OmegaAppl {
         HashMap flag = S.flagAsMap(argv);
         java.util.List argl = S.argAsList(argv);
 
-        omega.Context.omega_lang = (String) flag.get("omega_lang");
-        omega.Context.sout_log.getLogger().info("ERR: " + "param omega_lang is " + omega.Context.omega_lang);
+        OmegaContext.omega_lang = (String) flag.get("omega_lang");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "param omega_lang is " + OmegaContext.omega_lang);
 
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.MetalLookAndFeel");
@@ -58,14 +60,14 @@ public class Editor extends OmegaAppl {
         if (flag.get("v") != null)
             verbose = true;
         if (flag.get("R") != null)
-            omega.Config.RUN_MODE = true;
+            OmegaConfig.RUN_MODE = true;
         if (flag.get("T") != null)
-            omega.Config.T = true;
+            OmegaConfig.T = true;
 
         String s = null;
         if ((s = (String) flag.get("t")) != null)
-            omega.Config.t_step = Integer.parseInt(s);
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "" + omega.Config.t_step);
+            OmegaConfig.t_step = Integer.parseInt(s);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + omega.OmegaConfig.t_step);
 
         if (LicenseShow.showAndAccepted()) {
             Editor e = new Editor(verbose);
@@ -75,6 +77,6 @@ public class Editor extends OmegaAppl {
             System.exit(1);
         }
 
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "--------ok-------");
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "--------ok-------");
     }
 }

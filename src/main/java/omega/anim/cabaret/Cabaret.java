@@ -1,12 +1,13 @@
 package omega.anim.cabaret;
 
 import fpdo.xml.Element;
+import omega.OmegaConfig;
 import omega.anim.context.AnimContext;
 
 import java.util.ArrayList;
 
 public class Cabaret {
-    final int ACT_N = omega.Config.CABARET_ACTOR_N;
+    final int ACT_N = OmegaConfig.CABARET_ACTOR_N;
     final int EMPTY = -1;
 
     AnimContext a_ctxt;

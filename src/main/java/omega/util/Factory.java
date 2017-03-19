@@ -1,5 +1,7 @@
 package omega.util;
 
+import omega.OmegaContext;
+
 public class Factory {
     static public Object createObject(String clazz_name) {
         try {
@@ -7,11 +9,11 @@ public class Factory {
             Object o = clazz.newInstance();
             return o;
         } catch (ClassNotFoundException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "Can't load class " + clazz_name + ": " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "Can't load class " + clazz_name + ": " + ex);
         } catch (IllegalAccessException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "Can't access class " + clazz_name + ": " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "Can't access class " + clazz_name + ": " + ex);
         } catch (InstantiationException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "Can't instantiate class " + clazz_name + ": " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "Can't instantiate class " + clazz_name + ": " + ex);
         }
         return null;
     }

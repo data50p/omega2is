@@ -1,15 +1,15 @@
 package omega.swing.filechooser;
 
 
-import omega.Context;
+import omega.OmegaContext;
 import omega.util.ExtensionFileFilter;
 
 import javax.swing.*;
 import java.io.File;
 
-public class ChooseActionFile2 extends JFileChooser {
-    public ChooseActionFile2() {
-        super(new File(Context.omegaAssets("anim")));
+public class ChooseActionMovieFile extends JFileChooser {
+    public ChooseActionMovieFile() {
+        super(new File(OmegaContext.omegaAssets("anim")));
         ExtensionFileFilter fi = new ExtensionFileFilter();
         fi.addExtension("omega_anim");
         fi.addExtension("mpeg");

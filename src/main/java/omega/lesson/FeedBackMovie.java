@@ -1,6 +1,6 @@
 package omega.lesson;
 
-import omega.Context;
+import omega.OmegaContext;
 import omega.media.video.MpgPlayer;
 
 import javax.swing.*;
@@ -23,16 +23,16 @@ public class FeedBackMovie extends FeedBack {
     }
 
     public JPanel prepare(String rsrs, JPanel canvas) {
-        omega.Context.lesson_log.getLogger().info(": " + "+++++++ prepare " + rsrs);
+        OmegaContext.lesson_log.getLogger().info(": " + "+++++++ prepare " + rsrs);
         if (rsrs == null) {
             return null;
         }
         rsrs = random(rsrs);
-        omega.Context.lesson_log.getLogger().info(": " + "+++++++ prepare random " + rsrs);
+        OmegaContext.lesson_log.getLogger().info(": " + "+++++++ prepare random " + rsrs);
         if (canvas == null)
             my_own = canvas = new JPanel();
         if (mp == null) {
-            omega.Context.lesson_log.getLogger().info(": " + "+++++++ prepare new  " + rsrs);
+            OmegaContext.lesson_log.getLogger().info(": " + "+++++++ prepare new  " + rsrs);
             mp = MpgPlayer.createMpgPlayer(rsrs, canvas);
             this.canvas = canvas;
             my_own = null;
@@ -48,16 +48,16 @@ public class FeedBackMovie extends FeedBack {
 
     @Deprecated
     public JComponent prepareAlt(String rsrs, JComponent canvas) {
-        omega.Context.lesson_log.getLogger().info(": " + "+++++++ prepare " + rsrs);
+        OmegaContext.lesson_log.getLogger().info(": " + "+++++++ prepare " + rsrs);
         if (rsrs == null) {
             return null;
         }
         rsrs = random(rsrs);
-        omega.Context.lesson_log.getLogger().info(": " + "+++++++ prepare random " + rsrs);
+        OmegaContext.lesson_log.getLogger().info(": " + "+++++++ prepare random " + rsrs);
         if (canvas == null)
             return null;
         if (mp == null) {
-            omega.Context.lesson_log.getLogger().info(": " + "+++++++ prepare new  " + rsrs);
+            OmegaContext.lesson_log.getLogger().info(": " + "+++++++ prepare new  " + rsrs);
             mp = MpgPlayer.createMpgPlayer(rsrs, canvas);
             this.comp = canvas;
             my_own = null;
@@ -74,8 +74,8 @@ public class FeedBackMovie extends FeedBack {
     static int fix = 0;
 
     String random(String rsrs) {
-        File f = new File(Context.omegaAssets(rsrs));
-        omega.Context.lesson_log.getLogger().info(": " + "+++++++ random  " + f + ' ' + f.exists() + ' ' + f.isDirectory());
+        File f = new File(OmegaContext.omegaAssets(rsrs));
+        OmegaContext.lesson_log.getLogger().info(": " + "+++++++ random  " + f + ' ' + f.exists() + ' ' + f.isDirectory());
         if (f.exists() && f.isDirectory()) {
             return randomDir(rsrs);
         }
@@ -96,12 +96,12 @@ public class FeedBackMovie extends FeedBack {
         });
         fix++;
         rsrs = path + "/" + other[fix % other.length].getName();
-        omega.Context.sout_log.getLogger().info(": " + "fb " + rsrs + " -> " + rsrs + ' ' + other.length);
+        OmegaContext.sout_log.getLogger().info(": " + "fb " + rsrs + " -> " + rsrs + ' ' + other.length);
         return rsrs;
     }
 
     String randomDir(String rsrs) {
-        File mpg_dir = new File(Context.omegaAssets(rsrs));
+        File mpg_dir = new File(OmegaContext.omegaAssets(rsrs));
         File[] other = mpg_dir.listFiles(new FileFilter() {
             public boolean accept(File f) {
                 String name = f.getName();
@@ -118,7 +118,7 @@ public class FeedBackMovie extends FeedBack {
         if (rr < 0)
             rr = -rr;
         rsrs = rsrs + "" + other[rr % other.length].getName();
-        omega.Context.sout_log.getLogger().info(": " + "fb " + rsrs + " -> " + rsrs + ' ' + other.length);
+        OmegaContext.sout_log.getLogger().info(": " + "fb " + rsrs + " -> " + rsrs + ' ' + other.length);
         return rsrs;
     }
 
@@ -129,13 +129,13 @@ public class FeedBackMovie extends FeedBack {
         if (canvas != null) {
             w = canvas.getWidth();
             h = canvas.getHeight();
-            omega.Context.sout_log.getLogger().info(": " + "" + vw + ' ' + vh + ' ' + w + ' ' + h);
+            OmegaContext.sout_log.getLogger().info(": " + "" + vw + ' ' + vh + ' ' + w + ' ' + h);
             mp.setSize(w / 2, w * vh / (2 * vw));
         }
         if (comp != null) {
             w = comp.getWidth();
             h = comp.getHeight();
-            omega.Context.sout_log.getLogger().info(": " + "" + vw + ' ' + vh + ' ' + w + ' ' + h);
+            OmegaContext.sout_log.getLogger().info(": " + "" + vw + ' ' + vh + ' ' + w + ' ' + h);
             int ww = w / 5;
             mp.setSize(ww, (int) (ww * ((double) vh / vw)));
         }
@@ -150,13 +150,13 @@ public class FeedBackMovie extends FeedBack {
         if (canvas != null) {
             w = canvas.getWidth();
             h = canvas.getHeight();
-            omega.Context.sout_log.getLogger().info(": " + "" + vw + ' ' + vh + ' ' + w + ' ' + h);
+            OmegaContext.sout_log.getLogger().info(": " + "" + vw + ' ' + vh + ' ' + w + ' ' + h);
             mp.setSize(w / 2, w * vh / (2 * vw));
         }
         if (comp != null) {
             w = comp.getWidth();
             h = comp.getHeight();
-            omega.Context.sout_log.getLogger().info(": " + "" + vw + ' ' + vh + ' ' + w + ' ' + h);
+            OmegaContext.sout_log.getLogger().info(": " + "" + vw + ' ' + vh + ' ' + w + ' ' + h);
             int ww = w / 5;
             mp.setSize(ww, (int) (ww * ((double) vh / vw)));
         }
@@ -179,6 +179,6 @@ public class FeedBackMovie extends FeedBack {
         if (my_own == canvas)
             canvas = my_own = null;
         mp = null;
-        omega.Context.sout_log.getLogger().info(": " + "+++++ disposed");
+        OmegaContext.sout_log.getLogger().info(": " + "+++++ disposed");
     }
 }

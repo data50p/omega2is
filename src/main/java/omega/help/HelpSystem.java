@@ -1,5 +1,6 @@
 package omega.help;
 
+import omega.OmegaContext;
 import omega.swing.HtmlFrame;
 
 import java.io.File;
@@ -21,18 +22,18 @@ public class HelpSystem {
     }
 
     protected void show(String doc, int w, int h) {
-        omega.Context.sout_log.getLogger().info("ERR: " + "--SHOW MANUAL " + doc);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "--SHOW MANUAL " + doc);
 
-        String file_s = omega.Context.URL_BASE_AS_FILE + "webroot/" + doc;
+        String file_s = OmegaContext.URL_BASE_AS_FILE + "webroot/" + doc;
         File file = new File(file_s);
         if (!file.exists())
             doc = rmLang(doc);
-        file_s = omega.Context.URL_BASE_AS_FILE + "webroot/" + doc;
+        file_s = OmegaContext.URL_BASE_AS_FILE + "webroot/" + doc;
         file = new File(file_s);
         if (!file.exists())
             return;
 
-        String url_s = omega.Context.URL_BASE + "webroot/" + doc;
+        String url_s = OmegaContext.URL_BASE + "webroot/" + doc;
         if (true || omega.util.InvokeExternBrowser.show_if(url_s) == false) {
             if (html_fr == null)
                 html_fr = new HtmlFrame(url_s);

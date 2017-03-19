@@ -2,10 +2,10 @@ package omega.lesson.canvas;
 
 
 import fpdo.sundry.S;
-import omega.Context;
+import omega.OmegaContext;
 import omega.i18n.T;
 import omega.lesson.repository.Locator;
-import omega.swing.filechooser.ChooseActionFile2;
+import omega.swing.filechooser.ChooseActionMovieFile;
 import omega.swing.filechooser.ChooseAudioFile;
 import omega.swing.filechooser.ChooseSignFile;
 import omega.util.Files;
@@ -44,18 +44,18 @@ public class ItemProperty extends Property_B implements ActionListener {
         String fn = null;
         try {
             String url_s = null;
-            ChooseActionFile2 choose_af = new ChooseActionFile2();
+            ChooseActionMovieFile choose_af = new ChooseActionMovieFile();
             int rv = choose_af.showDialog(this, T.t("Select"));
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_af.getSelectedFile();
                 url_s = toURL(file);
                 String aFname = omega.util.Files.mkRelFname(url_s);
-                String fname = Context.antiOmegaAssets(aFname);
-                Context.sout_log.getLogger().info("getFName: (~A) " + fname);
+                String fname = OmegaContext.antiOmegaAssets(aFname);
+                OmegaContext.sout_log.getLogger().info("getFName: (~A) " + fname);
                 return fname;
             }
         } catch (Exception ex) {
-            Context.exc_log.getLogger().throwing(ItemProperty.class.getName(), "getFName", ex);
+            OmegaContext.exc_log.getLogger().throwing(ItemProperty.class.getName(), "getFName", ex);
         }
         return null;
     }
@@ -174,8 +174,8 @@ public class ItemProperty extends Property_B implements ActionListener {
         cb.addItem(T.t("(Select in list)"));
         cb.addItem(T.t("<Select file...>"));
         Locator loc = new Locator();
-        String[] sa = loc.getAllActiveFiles(Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active"), "omega_anim"); // LESSON-DIR-A
-        sa = Context.antiOmegaAssets(sa);
+        String[] sa = loc.getAllActiveFiles(OmegaContext.omegaAssets("lesson-" + OmegaContext.getLessonLang() + "/active"), "omega_anim"); // LESSON-DIR-A
+        sa = OmegaContext.antiOmegaAssets(sa);
         for (int i = 0; i < sa.length; i++)
             cb.addItem(sa[i]);
         cb.addItemListener(myiteml);
@@ -219,7 +219,7 @@ public class ItemProperty extends Property_B implements ActionListener {
                 JTextField tf = (JTextField) o;
                 if (doc == tf.getDocument()) {
                     String txt = tf.getText();
-                    omega.Context.sout_log.getLogger().info("ERR: " + "updTrigger: " + txt + ' ' + tf);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "updTrigger: " + txt + ' ' + tf);
                     fireValueChanged(new Value(key, txt));
                     if (!skip_dirty)
                         omega.lesson.appl.LessonEditor.setDirty();
@@ -237,11 +237,11 @@ public class ItemProperty extends Property_B implements ActionListener {
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
                 String url_s = omega.util.Files.toURL(file);
-// 		if ( ! url_s.endsWith("." + ChooseAudioFile2.ext) )
-// 		    url_s = url_s + "." + ChooseAudioFile2.ext;
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
+// 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
+// 		    url_s = url_s + "." + ChooseAudioFile.ext;
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
                 String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + fn);
 
                 JTextField tf = (JTextField) guimap.get("sound");
                 tf.setText(fn);
@@ -256,11 +256,11 @@ public class ItemProperty extends Property_B implements ActionListener {
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
                 String url_s = omega.util.Files.toURL(file);
-// 		if ( ! url_s.endsWith("." + ChooseAudioFile2.ext) )
-// 		    url_s = url_s + "." + ChooseAudioFile2.ext;
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
+// 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
+// 		    url_s = url_s + "." + ChooseAudioFile.ext;
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
                 String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + fn);
 
                 JTextField tf = (JTextField) guimap.get("sign");
                 tf.setText(fn);
@@ -275,11 +275,11 @@ public class ItemProperty extends Property_B implements ActionListener {
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
                 String url_s = omega.util.Files.toURL(file);
-// 		if ( ! url_s.endsWith("." + ChooseAudioFile2.ext) )
-// 		    url_s = url_s + "." + ChooseAudioFile2.ext;
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
+// 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
+// 		    url_s = url_s + "." + ChooseAudioFile.ext;
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
                 String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + fn);
 
                 JTextField tf = (JTextField) guimap.get("dummysound");
                 tf.setText(fn);
@@ -294,11 +294,11 @@ public class ItemProperty extends Property_B implements ActionListener {
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
                 String url_s = omega.util.Files.toURL(file);
-// 		if ( ! url_s.endsWith("." + ChooseAudioFile2.ext) )
-// 		    url_s = url_s + "." + ChooseAudioFile2.ext;
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
+// 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
+// 		    url_s = url_s + "." + ChooseAudioFile.ext;
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
                 String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + fn);
 
                 JTextField tf = (JTextField) guimap.get("dummysign");
                 tf.setText(fn);
@@ -347,7 +347,7 @@ public class ItemProperty extends Property_B implements ActionListener {
             }
 
         } catch (ClassCastException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "CCE " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "CCE " + ex);
         }
     }
 
@@ -386,7 +386,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 
             Object gui = guimap.get(v.id);
             if (gui instanceof JTextField) {
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "VVV " + v);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "VVV " + v);
                 JTextField tf = (JTextField) gui;
                 tf.setText(v.getStr());
             }
@@ -416,7 +416,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 //  	    }
         }
         long ct1 = S.ct();
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "iprop " + (ct1-ct0));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "iprop " + (ct1-ct0));
         skip_dirty = false;
     }
 }

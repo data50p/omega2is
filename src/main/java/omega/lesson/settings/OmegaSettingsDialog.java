@@ -4,8 +4,8 @@ import fpdo.sundry.S;
 import fpdo.xml.Element;
 import fpdo.xml.SAX_node;
 import fpdo.xml.XML_PW;
-import omega.Config;
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.i18n.T;
 import org.hs.jfc.FormPanel;
 
@@ -75,7 +75,7 @@ public class OmegaSettingsDialog extends SettingsDialog {
         el.add(fel);
         el.add(ael);
         el.add(anel);
-        if (Config.LIU_Mode) {
+        if (OmegaConfig.LIU_Mode) {
             Element swel = new Element("signWord_background");
             swel.addAttr("color", "" + signWord_background.color.getRGB());
             Element ssel = new Element("signSentence_background");
@@ -228,10 +228,10 @@ public class OmegaSettingsDialog extends SettingsDialog {
 
     Element loadElement() {
         try {
-            Element el = SAX_node.parse(Context.omegaAssets(fname), false);
+            Element el = SAX_node.parse(OmegaContext.omegaAssets(fname), false);
             return el;
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "Exception! omega.lesson.repository.Restore.restore(): " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "Exception! omega.lesson.repository.Restore.restore(): " + ex);
             return null;
         }
     }
@@ -286,7 +286,7 @@ public class OmegaSettingsDialog extends SettingsDialog {
         top.add(new JLabel(T.t("Animation Background")),
                 anim_background = new ColorButton(new Color(30, 30, 80)), Y, ++X);
 
-        if (Config.LIU_Mode) {
+        if (OmegaConfig.LIU_Mode) {
             X = 0;
             Y++;
             top.add(new JLabel(T.t("Sign Word Background")),

@@ -1,6 +1,6 @@
 package omega;
 
-public class Config {
+public class OmegaConfig {
     public static final String OMEGA_BUNDLE = "omega_bundle";
     public static final String OMEGA_BUNDLE_EXTENSION = "." + OMEGA_BUNDLE;
     static public int TIMELINES_N = 4;
@@ -19,7 +19,7 @@ public class Config {
     static public boolean LIU_Mode = false;
 
     public static boolean fullScreen = false;
-    public static boolean smaller = Context.isDeveloper();
+    public static boolean smaller = OmegaContext.isDeveloper();
 
     static public boolean isKeyNext(int kc) {
         return kc == key_next_1 ||

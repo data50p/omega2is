@@ -1,7 +1,7 @@
 package omega.swing.filechooser;
 
 
-import omega.Context;
+import omega.OmegaContext;
 
 import javax.swing.*;
 import java.io.File;
@@ -13,7 +13,7 @@ public class ChooseGenericFile extends JFileChooser {
     }
 
     ChooseGenericFile(boolean runtime) {
-        super(new File(Context.omegaAssets(runtime ? ".." : ".")));
+        super(new File(OmegaContext.omegaAssets(runtime ? ".." : ".")));
     }
 }
 

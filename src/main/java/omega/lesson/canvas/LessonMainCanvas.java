@@ -1,6 +1,7 @@
 package omega.lesson.canvas;
 
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
@@ -93,9 +94,9 @@ public class LessonMainCanvas extends BaseCanvas {
     }
 
     public void addLessonBase(String bs, int ord) {
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "add " + this.bs + ' ' + bs);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "add " + this.bs + ' ' + bs);
         bs_hm.put("" + this.bs, new Integer(ord));
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "<!add> LBhm: " + bs_hm);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "<!add> LBhm: " + bs_hm);
         if (this.bs != null)
             this.bs = this.bs + '/' + bs;
         else
@@ -107,7 +108,7 @@ public class LessonMainCanvas extends BaseCanvas {
 
     public void tellLessonBase(String bs, int ord) {
         bs_hm.put("" + this.bs, new Integer(ord));
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "<!tell> LBhm: " + bs_hm);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "<!tell> LBhm: " + bs_hm);
     }
 
     public String getLessonBase() {
@@ -118,9 +119,9 @@ public class LessonMainCanvas extends BaseCanvas {
         String lb = getLessonBase();
         File file;
         if (lb == null)
-            file = new File(/*Locator.fbase + */ Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active/" + "story"));      // LESSON-DIR-A
+            file = new File(/*Locator.fbase + */ OmegaContext.omegaAssets("lesson-" + OmegaContext.getLessonLang() + "/active/" + "story"));      // LESSON-DIR-A
         else
-            file = new File(/*Locator.fbase + */ Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active/" + lb + "/story")); // LESSON-DIR-A
+            file = new File(/*Locator.fbase + */ OmegaContext.omegaAssets("lesson-" + OmegaContext.getLessonLang() + "/active/" + lb + "/story")); // LESSON-DIR-A
         return file.exists();
     }
 
@@ -178,7 +179,7 @@ public class LessonMainCanvas extends BaseCanvas {
 
         mkButtons();
 
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "base is " + bs);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "base is " + bs);
         String[] lessons_name;
         if (bs == null)
             lessons_name = locator.getAllLessonsInDir();
@@ -238,7 +239,7 @@ public class LessonMainCanvas extends BaseCanvas {
                                 w / 5,
                                 h);
                     }
-                    omega.Context.sout_log.getLogger().info("ERR: " + "PARENT " + i + ' ' + imn + ' ' + imicp);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "PARENT " + i + ' ' + imn + ' ' + imicp);
                     if (imicp != null) {
                         parent.setSize(imicp.getImage().getWidth(null), imicp.getImage().getHeight(null));
                         parent.setLocation(gX(l25) + w + 10, v0);
@@ -249,7 +250,7 @@ public class LessonMainCanvas extends BaseCanvas {
                     }
 
                 }
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "recreate le " + i + ' ' + litm);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "recreate le " + i + ' ' + litm);
                 ImageAreaJB l;
                 if (lesson[i] == null) {
                     lesson[i] = new ImageAreaJB("",
@@ -317,19 +318,19 @@ public class LessonMainCanvas extends BaseCanvas {
     public boolean ownKeyCode(int kc, boolean is_shift) {
         if (Lesson.skip_F)
             return true;
-        if (omega.Config.isKeyESC(kc)) {
+        if (OmegaConfig.isKeyESC(kc)) {
             om_msg_mgr.fire("button main:quit");
             return true;
         }
 
-        if (omega.Config.isKeyNext(kc)) {
+        if (OmegaConfig.isKeyNext(kc)) {
             if (is_shift)
                 setPrevRed();
             else
                 setNextRed();
             return true;
         }
-        if (omega.Config.isKeySelect(kc)) {
+        if (OmegaConfig.isKeySelect(kc)) {
             if (last_focus_ord >= 0 && last_focus_ord <= 9)
                 lesson[last_focus_ord].doClick();
             else
@@ -340,7 +341,7 @@ public class LessonMainCanvas extends BaseCanvas {
     }
 
     public void paintComponent(Graphics g) {
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "++++++++++ repaint LMC ");
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "++++++++++ repaint LMC ");
         //S.m_sleep(100);
         if (title == null)
             populate(false);
@@ -358,7 +359,7 @@ public class LessonMainCanvas extends BaseCanvas {
     }
 
     public void enter() {
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "LeMa-Enter");
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "LeMa-Enter");
         super.enter();
 
         Integer I = (Integer) bs_hm.get("" + bs);
@@ -367,7 +368,7 @@ public class LessonMainCanvas extends BaseCanvas {
     }
 
     public void leave() {
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "LeMa-Leave");
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "LeMa-Leave");
         super.leave();
     }
 

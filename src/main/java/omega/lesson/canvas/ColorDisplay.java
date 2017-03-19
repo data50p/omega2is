@@ -1,6 +1,6 @@
 package omega.lesson.canvas;
 
-import omega.Context;
+import omega.OmegaContext;
 import omega.i18n.T;
 
 import javax.swing.*;
@@ -40,7 +40,7 @@ public class ColorDisplay extends JDialog implements ActionListener {
             if (ie.getStateChange() == ItemEvent.SELECTED)
                 if (cb == color_file) {
                     String fn = (String) cb.getSelectedItem();
-//log		    omega.Context.sout_log.getLogger().info("ERR: " + "FILE sel " + fn);
+//log		    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE sel " + fn);
                     HashMap hm = omega.lesson.Lesson.getColors(fn, who);
                     if (hm != null) {
                         colors = hm;
@@ -256,7 +256,7 @@ public class ColorDisplay extends JDialog implements ActionListener {
     }
 
     private void fillColorFiles() {
-        File dir = new File(Context.omegaAssets("."));
+        File dir = new File(OmegaContext.omegaAssets("."));
         String[] sa = dir.list(fnf);
         for (int i = 0; i < sa.length; i++)
             color_file.addItem(sa[i]);

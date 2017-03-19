@@ -9,6 +9,6 @@ public class Save {
         XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false);
         xmlpw.put(el);
         xmlpw.close();
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "# saved " + el + " " + fname);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "# saved " + el + " " + fname);
     }
 }

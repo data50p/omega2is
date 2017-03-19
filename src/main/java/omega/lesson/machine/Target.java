@@ -4,7 +4,7 @@ package omega.lesson.machine;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
-import omega.Context;
+import omega.OmegaContext;
 import omega.adm.assets.TargetCombinations;
 import omega.anim.appl.Anim_Repository;
 import omega.lesson.Lesson;
@@ -248,7 +248,7 @@ public class Target {
                 ty = "passive";
             String tid = ti_el.findAttr("Tid");
             String lid = ti_el.findAttr("Lid");
-            //log		omega.Context.sout_log.getLogger().info("ERR: " + "tg_load add " + ty + ' ' + tid + ' ' + lid);
+            //log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "tg_load add " + ty + ' ' + tid + ' ' + lid);
             t_items.add(new T_Item(i, ty, tid, lid));
         }
 
@@ -257,12 +257,12 @@ public class Target {
 
         story_next = null;
         Element story_el = el.findElement("story", 0);
-        //log	    omega.Context.sout_log.getLogger().info("ERR: " + "FSt " + story_el);
+        //log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FSt " + story_el);
         if (story_el != null) {
             Element ell = story_el.findElement("link", 0);
-            //log		omega.Context.sout_log.getLogger().info("ERR: " + "FSt story/link " + ell);
+            //log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FSt story/link " + ell);
             String next = ell.findAttr("next");
-            omega.Context.sout_log.getLogger().info("ERR: " + "FSt story/link[next] " + next);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "FSt story/link[next] " + next);
             story_next = next;
         }
     }
@@ -408,7 +408,7 @@ public class Target {
         T_Item t_itm = getT_Item(tg_ix);
         String tg_tid = t_itm.tid;
         ItemEntry[] it_ent = findItemEntryMatchTidAll(tg_tid);
-        //	omega.Context.sout_log.getLogger().info("ERR: " + "match " + tg_tid + " " + S.a2s(it_ent));
+        //	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "match " + tg_tid + " " + S.a2s(it_ent));
         int len = it_ent.length;
         int[] ia = new int[len];
         for (int i = 0; i < len; i++)
@@ -555,7 +555,7 @@ public class Target {
 
         if (hasVar(s))
             s = apply(ix, s);
-//	omega.Context.sout_log.getLogger().info("ERR: " + " " + s );
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + " " + s );
         return s;
     }
 
@@ -650,7 +650,7 @@ public class Target {
             T_Item titm = (T_Item) it.next();
             titm.clearText();
         }
-        omega.Context.sout_log.getLogger().info("ERR: " + "target released");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "target released");
     }
 
     public Item pickNextItem() {
@@ -659,7 +659,7 @@ public class Target {
 
     public Item pickItemAtEx(int ix, int iy, int tg_ix) { // pick at ix,iy -> target[tg_ix]
         Item ret = pickItemAt(ix, iy, tg_ix, false, true);
-        if (Tr) omega.Context.sout_log.getLogger().info("ERR: " + "pick  " + ret);
+        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "pick  " + ret);
         return ret;
     }
 
@@ -688,10 +688,10 @@ public class Target {
             }
             T_Item t_itm = (T_Item) t_items.get(tg_ix);
             String tg_tid = t_itm.tid;
-            //   omega.Context.sout_log.getLogger().info("ERR: " + "pick it tg_tid " + tg_tid + ' ' + ix + ' ' + iy);
+            //   omega.OmegaContext.sout_log.getLogger().info("ERR: " + "pick it tg_tid " + tg_tid + ' ' + ix + ' ' + iy);
             //ItemEntry it_ent = items.getItemEntryTid(tg_tid);
             ItemEntry it_ent_ix = items.getItemEntryAt(ix);
-            //	    omega.Context.sout_log.getLogger().info("ERR: " + "tid.. " + it_ent_ix.tid);
+            //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "tid.. " + it_ent_ix.tid);
 
             if (it_ent_ix == null) {
                 ret = null;
@@ -711,8 +711,8 @@ public class Target {
             ex.printStackTrace();
         } finally {
 //	    if ( ret == null )
-// 		omega.Context.sout_log.getLogger().info("ERR: " + "pickItem -> NULL " + ix + ' ' + iy);
-// 	    omega.Context.sout_log.getLogger().info("ERR: " + "pickItem -> " + ix + ' ' + iy + ' ' + ret.getText());
+// 		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "pickItem -> NULL " + ix + ' ' + iy);
+// 	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "pickItem -> " + ix + ' ' + iy + ' ' + ret.getText());
         }
         return ret;
     }
@@ -820,7 +820,7 @@ public class Target {
 
     public String getAllText() {
         String s = getTextUpto(t_items.size(), 1);
-        if (Tr) omega.Context.sout_log.getLogger().info("ERR: " + "getAllText " + s + '.');
+        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "getAllText " + s + '.');
         return s;
     }
 
@@ -978,7 +978,7 @@ public class Target {
         }
         String[] sa = (String[]) li.toArray(new String[0]);
 
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "[] get sounds " + S.a2s(sa));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "[] get sounds " + S.a2s(sa));
         return sa;
     }
 
@@ -997,7 +997,7 @@ public class Target {
         }
         String[] sa = (String[]) li.toArray(new String[0]);
 
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "[] get sounds " + S.a2s(sa));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "[] get sounds " + S.a2s(sa));
         return sa;
     }
 
@@ -1100,7 +1100,7 @@ public class Target {
             T_Item titm = (T_Item) it.next();
             if (titm != null) {
                 String sx = titm.getTextVarsOrNull(); // text:v1:v2:v3:sound : is paragraph_
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "tvvv = " + sx);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "tvvv = " + sx);
                 String s = titm.getLIDOrNull();
                 if (s != null && s.length() > 0) {
                     String[] sa = S.split(sx, ",");
@@ -1490,7 +1490,7 @@ public class Target {
             List<TargetCombinations.TCItem> l = expandVariants(fn);
             boolean oneExist = false;
             for (TargetCombinations.TCItem f : l) {
-                if (Context.omegaAssetsExist(f.fn)) {
+                if (OmegaContext.omegaAssetsExist(f.fn)) {
                     tc.dep_set.add(f);
                     oneExist = true;
                 } else {
@@ -1509,7 +1509,7 @@ public class Target {
                 if (eb != null) {
                     String val = eb.findAttr("val");
                     if (!SundryUtils.empty(val)) {
-                        tc.dep_set.add(Context.media() + val);
+                        tc.dep_set.add(OmegaContext.media() + val);
                     }
                 }
             }
@@ -1525,7 +1525,7 @@ public class Target {
                     continue;
                 ;
                 Anim_Repository ar = new Anim_Repository();
-                Element anim_el_root = ar.open(null, Context.omegaAssets(af));
+                Element anim_el_root = ar.open(null, OmegaContext.omegaAssets(af));
                 if (anim_el_root == null)
                     continue;
                 ;
@@ -1578,7 +1578,7 @@ public class Target {
                                                 List<TargetCombinations.TCItem> l = expandVariants(fn);
                                                 boolean oneExist = false;
                                                 for (TargetCombinations.TCItem f : l) {
-                                                    if (Context.omegaAssetsExist(f.fn)) {
+                                                    if (OmegaContext.omegaAssetsExist(f.fn)) {
                                                         tc.dep_set.add(f);
                                                         oneExist = true;
                                                     } else {
@@ -1617,7 +1617,7 @@ public class Target {
 
     private List<TargetCombinations.TCItem> attributedImages(String ms) {
         List<TargetCombinations.TCItem> li = new ArrayList<>();
-        String fName = Context.omegaAssets(ms);
+        String fName = OmegaContext.omegaAssets(ms);
         File fBase = new File(fName);
         String fn = fBase.getName();
         int ix = fn.lastIndexOf('.');
@@ -1629,7 +1629,7 @@ public class Target {
         for (File f : files) {
             if (f.getName().startsWith(fnNEx)) {
                 String fn2 = f.getPath();
-                li.add(new TargetCombinations.TCItem(Context.antiOmegaAssets(fn2)));
+                li.add(new TargetCombinations.TCItem(OmegaContext.antiOmegaAssets(fn2)));
             }
         }
         return li;
@@ -1831,52 +1831,52 @@ public class Target {
 
     private boolean eq(String s1, String s2) {
         if (Tr)
-            omega.Context.sout_log.getLogger().info("ERR: " + "eq ." + s1 + '.' + s2 + '.' + s1.equalsIgnoreCase(s2));
+            OmegaContext.sout_log.getLogger().info("ERR: " + "eq ." + s1 + '.' + s2 + '.' + s1.equalsIgnoreCase(s2));
         return s1.equalsIgnoreCase(s2);
     }
 
     private int A_howManyItems(ItemEntry[] it_entA) {
         int n = 0;
-        if (Tr) omega.Context.sout_log.getLogger().info("ERR: " + "howMany( " + S.a2s(it_entA));
+        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "howMany( " + S.a2s(it_entA));
         for (int i = 0; i < it_entA.length; i++) {
-            if (Tr) omega.Context.sout_log.getLogger().info("ERR: " + "howMany " + i + ' ' + it_entA[i].howManyItems());
+            if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "howMany " + i + ' ' + it_entA[i].howManyItems());
             n += it_entA[i].howManyItems();
         }
-        if (Tr) omega.Context.sout_log.getLogger().info("ERR: " + "howMany) " + n);
+        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "howMany) " + n);
         return n;
     }
 
     private int A_getX(ItemEntry[] it_entA, int in) {
-        if (Tr) omega.Context.sout_log.getLogger().info("ERR: " + "getX( " + in);
+        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "getX( " + in);
         for (int i = 0; i < it_entA.length; i++) {
             if (in < it_entA[i].howManyItems()) {
                 if (Tr)
-                    omega.Context.sout_log.getLogger().info("ERR: " + "getX) " + it_entA[i].howManyItems() + ' ' + i);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "getX) " + it_entA[i].howManyItems() + ' ' + i);
                 return it_entA[0].ord + i;
             } else {
                 in -= it_entA[i].howManyItems();
                 if (Tr)
-                    omega.Context.sout_log.getLogger().info("ERR: " + "getX) - " + it_entA[i].howManyItems() + ' ' + i + ' ' + in);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "getX) - " + it_entA[i].howManyItems() + ' ' + i + ' ' + in);
             }
         }
-        if (Tr) omega.Context.sout_log.getLogger().info("ERR: " + "getX) -1");
+        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "getX) -1");
         return -1;
     }
 
     private int A_getY(ItemEntry[] it_entA, int in) {
-        if (Tr) omega.Context.sout_log.getLogger().info("ERR: " + "getY( " + in);
+        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "getY( " + in);
         for (int i = 0; i < it_entA.length; i++) {
             if (in < it_entA[i].howManyItems()) {
                 if (Tr)
-                    omega.Context.sout_log.getLogger().info("ERR: " + "getY) " + it_entA[i].howManyItems() + ' ' + i + ' ' + in);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "getY) " + it_entA[i].howManyItems() + ' ' + i + ' ' + in);
                 return in;
             } else {
                 in -= it_entA[i].howManyItems();
                 if (Tr)
-                    omega.Context.sout_log.getLogger().info("ERR: " + "getX) - " + it_entA[i].howManyItems() + ' ' + i + ' ' + in);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "getX) - " + it_entA[i].howManyItems() + ' ' + i + ' ' + in);
             }
         }
-        if (Tr) omega.Context.sout_log.getLogger().info("ERR: " + "getY) -1");
+        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "getY) -1");
         return -1;
     }
 
@@ -1884,7 +1884,7 @@ public class Target {
         String s = story_next;
         if (s == null)
             return null;
-        s = s.replaceAll("lesson-[a-zA-Z]*/active", Context.omegaAssets("lesson-" + omega.Context.getLessonLang() + "/active"));   // LESSON-DIR-A
+        s = s.replaceAll("lesson-[a-zA-Z]*/active", OmegaContext.omegaAssets("lesson-" + OmegaContext.getLessonLang() + "/active"));   // LESSON-DIR-A
         return s;
     }
 

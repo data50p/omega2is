@@ -1,5 +1,6 @@
 package omega.anim.panels.timeline;
 
+import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
 import omega.anim.context.AnimContext;
 import omega.anim.tool.timeline.TimeMarker;
@@ -8,7 +9,7 @@ import omega.anim.tool.timeline.TriggerEventFactory;
 import omega.anim.tool.timeline.TriggerEventSelections;
 import omega.i18n.T;
 import omega.swing.GBC_Factory;
-import omega.swing.filechooser.ChooseAudioFile2;
+import omega.swing.filechooser.ChooseAudioFile;
 import omega.swing.properties.OmegaProperties;
 
 import javax.swing.*;
@@ -62,7 +63,7 @@ public class TimeMarkerProperties extends OmegaProperties implements ActionListe
             buildProperties(tm);
             pack();
         } else {
-            omega.Context.sout_log.getLogger().info("ERR: " + "tm null");
+            OmegaContext.sout_log.getLogger().info("ERR: " + "tm null");
         }
         skipDirty = false;
     }
@@ -286,7 +287,7 @@ public class TimeMarkerProperties extends OmegaProperties implements ActionListe
                                 try {
                                     te.setArg(doc.getText(0, doc.getLength()));
                                 } catch (BadLocationException ex) {
-                                    omega.Context.sout_log.getLogger().info("ERR: " + "" + ex);
+                                    OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
                                 }
                             }
                         }
@@ -321,18 +322,18 @@ public class TimeMarkerProperties extends OmegaProperties implements ActionListe
 
     public void actionPerformed(ActionEvent ev) {
         if (ev.getActionCommand().equals("set_file")) {
-            ChooseAudioFile2 choose_f = new ChooseAudioFile2();
+            ChooseAudioFile choose_f = new ChooseAudioFile();
 
             String url_s = null;
             int rv = choose_f.showDialog(null, T.t("Load"));
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
                 url_s = omega.util.Files.toURL(file);
-// 		if ( ! url_s.endsWith("." + ChooseAudioFile2.ext) )
-// 		    url_s = url_s + "." + ChooseAudioFile2.ext;
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
+// 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
+// 		    url_s = url_s + "." + ChooseAudioFile.ext;
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
                 String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE " + fn);
                 TriggerEvent te = bound_tm.findTEvent("PlaySound");
                 te.setArg(fn);
                 refresh();

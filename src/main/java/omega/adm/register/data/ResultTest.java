@@ -2,6 +2,7 @@ package omega.adm.register.data;
 
 import fpdo.xml.Element;
 import fpdo.xml.SAX_node;
+import omega.OmegaContext;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -135,12 +136,12 @@ public class ResultTest extends Result {
     }
 
     public void dump() {
-        omega.Context.sout_log.getLogger().info("ERR: " + "sl-" + session_length);
-        omega.Context.sout_log.getLogger().info("ERR: " + "ty-" + type);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "sl-" + session_length);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "ty-" + type);
         Iterator it = entries.iterator();
         while (it.hasNext()) {
             Entry e = (Entry) it.next();
-            omega.Context.sout_log.getLogger().info("ERR: " + "==  " + e);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "==  " + e);
         }
     }
 }

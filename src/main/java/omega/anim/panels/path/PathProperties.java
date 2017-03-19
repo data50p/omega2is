@@ -1,5 +1,6 @@
 package omega.anim.panels.path;
 
+import omega.OmegaContext;
 import omega.anim.tool.path.Path;
 import omega.i18n.T;
 import omega.swing.GBC_Factory;
@@ -36,7 +37,7 @@ public class PathProperties extends OmegaProperties implements ActionListener {
             }
             pack();
         } else {
-            omega.Context.sout_log.getLogger().info("ERR: " + "pa null");
+            OmegaContext.sout_log.getLogger().info("ERR: " + "pa null");
         }
     }
 

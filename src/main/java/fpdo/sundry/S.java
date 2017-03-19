@@ -478,7 +478,7 @@ public class S {
                         picked = ia;
                         max = picked.length;
                         taken = 0;
-//			omega.Context.sout_log.getLogger().info("<" + max + ">");
+//			omega.OmegaContext.sout_log.getLogger().info("<" + max + ">");
                         return getNext();
                     }
                 }

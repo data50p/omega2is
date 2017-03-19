@@ -16,7 +16,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import omega.Context;
+import omega.OmegaContext;
 import omega.lesson.canvas.MsgItem;
 import omega.util.Log;
 
@@ -41,8 +41,8 @@ public class FxMoviePlayer {
     public int mediaW;
     public int mediaH;
 
-    private static final String MEDIA_FN = Context.getMediaFile("feedback/film1/feedback1.mp4");
-    private static final String MEDIA_FN2 = Context.getMediaFile("feedback/film1/feedback2.mp4");
+    private static final String MEDIA_FN = OmegaContext.getMediaFile("feedback/film1/feedback1.mp4");
+    private static final String MEDIA_FN2 = OmegaContext.getMediaFile("feedback/film1/feedback2.mp4");
 
     boolean ready = false;
     int winW;
@@ -148,7 +148,7 @@ public class FxMoviePlayer {
     }
 
     private void initFX2(JFXPanel fxPanel, String fn_) throws URISyntaxException {
-        String fn = Context.omegaAssets(fn_);
+        String fn = OmegaContext.omegaAssets(fn_);
         File file = new File(fn);
         String uu = file.toURI().toString();
         Log.getLogger().info("UU is " + uu);

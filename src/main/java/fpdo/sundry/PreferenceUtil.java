@@ -1,5 +1,7 @@
 package fpdo.sundry;
 
+import omega.OmegaContext;
+
 import java.io.*;
 import java.util.HashMap;
 import java.util.prefs.Preferences;
@@ -98,9 +100,9 @@ public class PreferenceUtil {
     static public void main(String[] args) {
         PreferenceUtil pu = new PreferenceUtil(PreferenceUtil.class);
         HashMap hm = (HashMap) pu.getObject("test_obj", new HashMap());
-        omega.Context.sout_log.getLogger().info("ERR: " + "get " + hm);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "get " + hm);
         hm.put(args[0], args[1]);
         pu.save("test_obj", hm);
-        omega.Context.sout_log.getLogger().info("ERR: " + "saved " + hm);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "saved " + hm);
     }
 }

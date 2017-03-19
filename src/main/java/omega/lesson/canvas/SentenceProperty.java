@@ -2,7 +2,7 @@ package omega.lesson.canvas;
 
 
 import fpdo.sundry.S;
-import omega.Context;
+import omega.OmegaContext;
 import omega.i18n.T;
 import omega.lesson.LessonContext;
 import omega.swing.filechooser.ChooseSignFileAlt;
@@ -104,7 +104,7 @@ public class SentenceProperty extends Property_B {
                 int row = table.getSelectedRow();
                 String ss = (String) tmod.getValueAt(row, COL_ACT);
                 String fn = setActionField(ss);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
                 if (fn != null) {
                     tmod.setValueAt(fn, row, COL_ACT);
                 }
@@ -116,7 +116,7 @@ public class SentenceProperty extends Property_B {
                 int row = table.getSelectedRow();
                 String ss = (String) tmod.getValueAt(row, COL_ACT);
                 String fn = "";//setActionField(ss);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
                 if (fn != null) {
                     tmod.setValueAt(fn, row, COL_ACT);
                 }
@@ -129,7 +129,7 @@ public class SentenceProperty extends Property_B {
                 String ss = (String) tmod.getValueAt(row, COL_ACT);
                 if (ss == null || ss.length() == 0) {
                     String fn = setActionField(ss);
-                    //log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
+                    //log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
                     if (fn != null) {
                         tmod.setValueAt(fn, row, COL_ACT);
                     }
@@ -141,7 +141,7 @@ public class SentenceProperty extends Property_B {
                 int row = table.getSelectedRow();
                 String ss = (String) tmod.getValueAt(row, COL_SIGN);
                 String fn = setSignField(ss);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
                 if (fn != null) {
                     tmod.setValueAt(fn, row, COL_SIGN);
                 }
@@ -153,7 +153,7 @@ public class SentenceProperty extends Property_B {
                 int row = table.getSelectedRow();
                 String ss = (String) tmod.getValueAt(row, COL_SIGN);
                 String fn = "";//setActionField(ss);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
                 if (fn != null) {
                     tmod.setValueAt(fn, row, COL_SIGN);
                 }
@@ -166,7 +166,7 @@ public class SentenceProperty extends Property_B {
                 String ss = (String) tmod.getValueAt(row, COL_SIGN);
                 if (ss == null || ss.length() == 0) {
                     String fn = setSignField(ss);
-                    //log		omega.Context.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
+                    //log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "NEW FILE " + fn);
                     if (fn != null) {
                         tmod.setValueAt(fn, row, COL_SIGN);
                     }
@@ -177,7 +177,7 @@ public class SentenceProperty extends Property_B {
 
                 String url_s = null;
                 int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Save"));
-                omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
                 if (rv == JFileChooser.APPROVE_OPTION) {
                     File file = choose_f.getSelectedFile();
                     url_s = omega.util.Files.toURL(file);
@@ -207,13 +207,13 @@ public class SentenceProperty extends Property_B {
         }
 
         public void valueChanged(ListSelectionEvent ev) {
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "" + ev);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + ev);
             if (ev.getValueIsAdjusting() == false) {
                 MyListSelectionModel lselmod_ = (MyListSelectionModel) ev.getSource();
                 int ix = lselmod_.getMinSelectionIndex();
                 TableModel tmod = (TableModel) table.getModel();
                 String s = (String) tmod.getValueAt(ix, COL_SENT);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "SEL " + lselmod_ + ' ' + ix + ' ' + s);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "SEL " + lselmod_ + ' ' + ix + ' ' + s);
                 JTextField tf2 = (JTextField) guimap.get("sentence");
                 tf2.setText(s);
 
@@ -346,7 +346,7 @@ public class SentenceProperty extends Property_B {
 
         String sa[] = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx(" ", false, '{');
         tmm = l_ctxt.getLesson().getTestMatrix(sa);
-        omega.Context.sout_log.getLogger().info("ERR: " + "Got sa sent " + S.a2s(sa));
+        OmegaContext.sout_log.getLogger().info("ERR: " + "Got sa sent " + S.a2s(sa));
         SenProp_TableModel tmod = new SenProp_TableModel(this, sa, tmm);
 
         TableSorter tsort = new TableSorter(tmod);
@@ -391,13 +391,13 @@ public class SentenceProperty extends Property_B {
 
         String url_s = null;
         int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Select"));
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
         if (rv == JFileChooser.APPROVE_OPTION) {
             File file = choose_f.getSelectedFile();
             url_s = omega.util.Files.toURL(file);
 
             String tfn = omega.util.Files.mkRelativeCWD(url_s);
-            tfn = Context.antiOmegaAssets(tfn);
+            tfn = OmegaContext.antiOmegaAssets(tfn);
             return tfn;
         }
         return null;
@@ -408,13 +408,13 @@ public class SentenceProperty extends Property_B {
 
         String url_s = null;
         int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Select"));
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
         if (rv == JFileChooser.APPROVE_OPTION) {
             File file = choose_f.getSelectedFile();
             url_s = omega.util.Files.toURL(file);
 
             String tfn = omega.util.Files.mkRelativeCWD(url_s);
-            tfn = Context.antiOmegaAssets(tfn);
+            tfn = OmegaContext.antiOmegaAssets(tfn);
             return tfn;
         }
         return null;
@@ -463,7 +463,7 @@ public class SentenceProperty extends Property_B {
 //  	    cbg = (JComboBox)guimap.get("type");
 //  	    if ( cb == cbg ) {
 //  		String s = (String)cb.getSelectedItem();
-//  		omega.Context.sout_log.getLogger().info("ERR: " + "CB type " + cb);
+//  		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "CB type " + cb);
 //  		if ( s.equals("action") )
 //  		    setLabel("Llid", "Path id");
 //  		if ( s.equals("actor") )
@@ -479,7 +479,7 @@ public class SentenceProperty extends Property_B {
             }
 
         } catch (ClassCastException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "CCE " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "CCE " + ex);
         }
     }
 
@@ -489,7 +489,7 @@ public class SentenceProperty extends Property_B {
 
             chg = (JCheckBox) guimap.get("Slid");
         } catch (ClassCastException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "CCE " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "CCE " + ex);
         }
     }
 

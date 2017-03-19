@@ -1,5 +1,7 @@
 package omega.anim.tool.path;
 
+import omega.OmegaContext;
+
 import java.awt.*;
 import java.awt.geom.*;
 
@@ -65,7 +67,7 @@ public class Segment_Q {
                 pc.setLocation(p.getX(), p.getY());
                 break;
             default:
-                omega.Context.sout_log.getLogger().info("ERR: " + "active_nr " + who);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "active_nr " + who);
         }
         q.setCurve(p1, pc, p2);
     }

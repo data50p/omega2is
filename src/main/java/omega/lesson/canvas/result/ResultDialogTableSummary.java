@@ -4,6 +4,7 @@ package omega.lesson.canvas.result;
 
 
 import fpdo.sundry.S;
+import omega.OmegaContext;
 import omega.adm.register.data.*;
 import omega.i18n.T;
 import omega.lesson.Lesson;
@@ -230,9 +231,9 @@ public class ResultDialogTableSummary extends JDialog
                     cur_ix,
                     tmod.mode,
                     register);
-            omega.Context.HELP_STACK.push("result_detail");
+            OmegaContext.HELP_STACK.push("result_detail");
             rdt.setVisible(true);
-            omega.Context.HELP_STACK.pop("result_detail");
+            OmegaContext.HELP_STACK.pop("result_detail");
         }
 
         String cmd = ae.getActionCommand();
@@ -601,7 +602,7 @@ public class ResultDialogTableSummary extends JDialog
                 int i2_l = rt.howManyTestEntries();
                 for (int i2 = 0; i2 < i2_l; i2++) {
                     Entry ent = rt.getEntry(i2);
-                    //		    omega.Context.sout_log.getLogger().info("ERR: " + "ent " + ent);
+                    //		    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "ent " + ent);
 
 		    /*
                     if ( "select".equals(ent.type) ) {
@@ -715,7 +716,7 @@ public class ResultDialogTableSummary extends JDialog
             //	    table.doLayout();
         } catch (NullPointerException ex) {
             tmod.setData(new String[0][1]);
-            omega.Context.sout_log.getLogger().info("ERR: " + "npe " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "npe " + ex);
             ex.printStackTrace();
         }
     }
@@ -761,7 +762,7 @@ public class ResultDialogTableSummary extends JDialog
             }
             pw.close();
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "Can't export " + fn + ' ' + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "Can't export " + fn + ' ' + ex);
             ex.printStackTrace();
         }
     }

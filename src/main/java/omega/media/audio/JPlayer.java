@@ -2,6 +2,7 @@ package omega.media.audio;
 
 //åäö
 
+import omega.OmegaContext;
 import omega.util.Log;
 
 import javax.sound.sampled.*;
@@ -61,12 +62,12 @@ public class JPlayer implements LineListener {
             o = false;
         o = true;
 
-        omega.Context.sout_log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
+        OmegaContext.sout_log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
         Log.getLogger().info("STATIC: " + "" + omega.appl.Settings.getSettings().getSettingsHashMap());
     }
 
     JPlayer(String fn) {
-        omega.Context.sout_log.getLogger().info("INIT: " + "JPlayer: fn = " + fn);
+        OmegaContext.sout_log.getLogger().info("INIT: " + "JPlayer: fn = " + fn);
 
         this.fn = fn;
         realy_name = fn;
@@ -77,13 +78,13 @@ public class JPlayer implements LineListener {
             sdataline = getSourceDataLine(aformat);
             sdataline.addLineListener(this);
 
-            omega.Context.sout_log.getLogger().info("<init>: " + "JPlayer0: " + ais + ' ' + aformat + ' ' + sdataline);
+            OmegaContext.sout_log.getLogger().info("<init>: " + "JPlayer0: " + ais + ' ' + aformat + ' ' + sdataline);
         } catch (Exception ex) {
             ais = null;
             aformat = null;
             sdataline = null;
             done = true;
-            omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer1: " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "JPlayer1: " + ex);
         }
     }
 
@@ -155,7 +156,7 @@ public class JPlayer implements LineListener {
                         s_pe(">C>");
                         sdataline.close();
                     } catch (Exception ex) {
-                        omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer2: " + ex);
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "JPlayer2: " + ex);
                         ex.printStackTrace();
                     } finally {
                         //			    sdataline.removeLineListener(JPlayer.this);
@@ -168,7 +169,7 @@ public class JPlayer implements LineListener {
             });
             th.start();
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer3: " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "JPlayer3: " + ex);
         }
     }
 

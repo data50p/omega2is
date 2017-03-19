@@ -1,5 +1,7 @@
 package omega.lesson.pupil;
 
+import omega.OmegaContext;
+
 import java.awt.*;
 import java.util.HashMap;
 
@@ -9,8 +11,8 @@ public class Pupil {
 
     public Pupil(String name) {
         this.name = name;
-        omega.Context.def_log.getLogger().info("new Pupil " + name);
-        omega.Context.lesson_log.getLogger().info("created Pupil: " + name);
+        OmegaContext.def_log.getLogger().info("new Pupil " + name);
+        OmegaContext.lesson_log.getLogger().info("created Pupil: " + name);
     }
 
     public String getName() {
@@ -63,20 +65,20 @@ public class Pupil {
             return def;
         String s = (String) params.get(key);
 
-        omega.Context.lesson_log.getLogger().info("param String, " + key + ' ' + def + ' ' + s);
+        OmegaContext.lesson_log.getLogger().info("param String, " + key + ' ' + def + ' ' + s);
 
         return s == null ? def : s;
     }
 
     public String getStringNo0(String key, String def) {
         if (params == null) {
-            omega.Context.lesson_log.getLogger().info("param NULL, " + key + ' ' + def);
+            OmegaContext.lesson_log.getLogger().info("param NULL, " + key + ' ' + def);
             return def;
         }
         String s = (String) params.get(key);
         String ret = s == null || s.length() == 0 ? def : s;
-        omega.Context.sout_log.getLogger().info("ERR: " + "Pupil -> " + ret + ' ' + (def));
-        omega.Context.lesson_log.getLogger().info("OK " + ret);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "Pupil -> " + ret + ' ' + (def));
+        OmegaContext.lesson_log.getLogger().info("OK " + ret);
 
         return ret;
     }

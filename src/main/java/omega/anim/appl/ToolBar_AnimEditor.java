@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ToolBar_AnimEditor extends ToolBar_ implements ActionListener {
+public class ToolBar_AnimEditor extends ToolBar_Base implements ActionListener {
     ToolExecute texec;
 
     ToolBar_AnimEditor(ToolExecute texec) {

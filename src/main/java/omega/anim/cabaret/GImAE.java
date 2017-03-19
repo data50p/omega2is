@@ -1,6 +1,7 @@
 package omega.anim.cabaret;
 
 import fpdo.sundry.S;
+import omega.OmegaContext;
 import omega.anim.canvas.AnimCanvas;
 import omega.anim.tool.path.AllPath;
 import omega.anim.tool.path.Path;
@@ -256,7 +257,7 @@ public class GImAE extends GIm {
 //  	    use_alt_hotspot = true;
 //  	else
 //  	    use_alt_hotspot = false;
-//  	omega.Context.sout_log.getLogger().info("ERR: " + "alt hs " + use_alt_hotspot);
+//  	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "alt hs " + use_alt_hotspot);
 //      }
 
     public void setPrimScale(double a) {
@@ -341,15 +342,15 @@ public class GImAE extends GIm {
 
                 if (ii == -1) {
                     po = pa.getPointAt(0);
-                    //omega.Context.sout_log.getLogger().info("ERR: " + "po1: " + po);
+                    //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "po1: " + po);
                 } else if (ii == da.length - 1) {
                     po = pa.getPointAt(da[ii]);
-                    //omega.Context.sout_log.getLogger().info("ERR: " + "po2: " + po);
+                    //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "po2: " + po);
                     if (len == 0)
                         where = da[ii] / 1;
                     else
                         where = da[ii] / len;
-                    //omega.Context.sout_log.getLogger().info("ERR: " + "wh2: " + where + ' ' + da[ii] + ' ' + len);
+                    //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "wh2: " + where + ' ' + da[ii] + ' ' + len);
                 } else {
                     int len2 = (int) da[ii];
                     double difft = dt - dat[ii];
@@ -358,18 +359,18 @@ public class GImAE extends GIm {
                         fact = difft / (dat[ii + 1] - dat[ii]);
                     double dlen = da[ii + 1] - da[ii];
                     len2 += fact * dlen;
-                    //omega.Context.sout_log.getLogger().info("ERR: " + "da3: " + da[ii+1] + ' ' + da[ii] + ' ' + ii);
-                    //omega.Context.sout_log.getLogger().info("ERR: " + "f3: " + fact + ' ' + dlen);
+                    //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "da3: " + da[ii+1] + ' ' + da[ii] + ' ' + ii);
+                    //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "f3: " + fact + ' ' + dlen);
                     po = pa.getPointAt(len2);
-                    //omega.Context.sout_log.getLogger().info("ERR: " + "po3: " + po);
+                    //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "po3: " + po);
                     if (len == 0)
                         where = (double) len2 / 1;
                     else
                         where = (double) len2 / len;
-                    //omega.Context.sout_log.getLogger().info("ERR: " + "wh3: " + where + ' ' + len2 + ' ' + len);
+                    //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "wh3: " + where + ' ' + len2 + ' ' + len);
                 }
 
-                //omega.Context.sout_log.getLogger().info("ERR: " + "-------- where " + where);
+                //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "-------- where " + where);
 
                 double hotsp_x = hotspot.getX(where);
                 if (prim_mirror_x ^ mirror_x) {
@@ -415,11 +416,11 @@ public class GImAE extends GIm {
                 return at;
             }
         } catch (NullPointerException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "GImAE.getAffineTransformAtTime(): " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "GImAE.getAffineTransformAtTime(): " + ex);
             ex.printStackTrace();
             return null;
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "GImAE.getAffineTransformAtTime(): " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "GImAE.getAffineTransformAtTime(): " + ex);
             ex.printStackTrace();
             return null;
         }
@@ -473,7 +474,7 @@ public class GImAE extends GIm {
                 gb.setComposite(AlphaComposite.DstOut);
                 gb.drawImage(mask.buffered_image, iat, null);
             } catch (NoninvertibleTransformException ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "AFFTRAINV " + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "AFFTRAINV " + ex);
             }
         }
         if (buffered_image != null)

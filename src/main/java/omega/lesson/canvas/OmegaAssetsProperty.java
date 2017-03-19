@@ -2,8 +2,8 @@ package omega.lesson.canvas;
 
 
 import fpdo.sundry.S;
-import omega.Config;
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.Version;
 import omega.adm.assets.TargetCombinations;
 import omega.i18n.T;
@@ -118,11 +118,11 @@ public class OmegaAssetsProperty extends Property_B {
 
                 String url_s = null;
                 int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Save"));
-                omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
                 if (rv == JFileChooser.APPROVE_OPTION) {
                     File file = choose_f.getSelectedFile();
-                    if (!file.getName().endsWith(Config.OMEGA_BUNDLE_EXTENSION))
-                        file = new File(file.getPath() + Config.OMEGA_BUNDLE_EXTENSION);
+                    if (!file.getName().endsWith(OmegaConfig.OMEGA_BUNDLE_EXTENSION))
+                        file = new File(file.getPath() + OmegaConfig.OMEGA_BUNDLE_EXTENSION);
                     try {
                         java.util.List<String> manifest = new ArrayList<>();
                         for (TargetCombinations.TCItem s2 : targetCombinationsBuilder.asOne().src_set) {
@@ -201,7 +201,7 @@ public class OmegaAssetsProperty extends Property_B {
         ChooseDir choose_f = new ChooseDir();
 
         int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Scan"));
-        omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
         if (rv == JFileChooser.APPROVE_OPTION) {
             File dir = choose_f.getSelectedFile();
 
@@ -250,7 +250,7 @@ public class OmegaAssetsProperty extends Property_B {
     }
 
     private String manifestInfo(String fName, Boolean exist) {
-        File f = new File(Context.omegaAssets(fName));
+        File f = new File(OmegaContext.omegaAssets(fName));
         if (exist == null)
             if (f.exists() && f.canRead())
                 return "entry: " + f.length() + ", " + fName;
@@ -267,7 +267,7 @@ public class OmegaAssetsProperty extends Property_B {
 
         String url_s = null;
         int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t(unpack ? "Import" : "List"));
-        omega.Context.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "choose file -> " + rv);
         if (rv == JFileChooser.APPROVE_OPTION) {
             File file = choose_f.getSelectedFile();
             if (!file.getName().endsWith(".omega_bundle"))
@@ -284,7 +284,7 @@ public class OmegaAssetsProperty extends Property_B {
 
                     String name = zent.getName();
                     if (zent.isDirectory()) {
-                        File dir = new File(Context.omegaAssets(name));
+                        File dir = new File(OmegaContext.omegaAssets(name));
                         if (unpack) {
                             if (dir.mkdirs()) {
                                 System.err.println("Created dir: T " + dir);
@@ -294,12 +294,12 @@ public class OmegaAssetsProperty extends Property_B {
                         }
                     } else {
                         try {
-                            System.err.println("Got: " + name + ' ' + Context.omegaAssets("."));
+                            System.err.println("Got: " + name + ' ' + OmegaContext.omegaAssets("."));
                             FileOutputStream output = null;
                             boolean obManifest = OMEGA_BUNDLE_MANIFEST.equals(name);
                             if (obManifest)
                                 name = rmExt(file.getName()) + "-" + name;
-                            File entFile = new File(Context.omegaAssets(name));
+                            File entFile = new File(OmegaContext.omegaAssets(name));
                             long time = zent.getTime();
                             try {
                                 if (unpack) {
@@ -360,7 +360,7 @@ public class OmegaAssetsProperty extends Property_B {
     }
 
     private void print(PrintWriter pw, String prfx, String s2) {
-        File f = new File(Context.omegaAssets(s2));
+        File f = new File(OmegaContext.omegaAssets(s2));
         String stat = f.exists() && f.canRead() ? "OK" : "??";
         pw.println(prfx + ", " + stat + ", " + s2);
     }
@@ -369,7 +369,7 @@ public class OmegaAssetsProperty extends Property_B {
         byte[] data = fileAsBytaArray(s2);
         if (data != null) {
             ZipEntry e = new ZipEntry(s2);
-            File f = new File(Context.omegaAssets(s2));
+            File f = new File(OmegaContext.omegaAssets(s2));
             e.setTime(f.lastModified());
             out.putNextEntry(e);
 
@@ -387,7 +387,7 @@ public class OmegaAssetsProperty extends Property_B {
 
 
     private byte[] fileAsBytaArray(String fn) {
-        File f = new File(Context.omegaAssets(fn));
+        File f = new File(OmegaContext.omegaAssets(fn));
         try {
             long fileSize = f.length();
             if (fileSize > Integer.MAX_VALUE) {
@@ -422,7 +422,7 @@ public class OmegaAssetsProperty extends Property_B {
         }
 
         public void valueChanged(ListSelectionEvent ev) {
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "" + ev);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + ev);
             if (ev.getValueIsAdjusting() == false) {
                 OmegaAssetsProperty.MyListSelectionModel lselmod_ = (OmegaAssetsProperty.MyListSelectionModel) ev.getSource();
                 int ix = lselmod_.getMinSelectionIndex();
@@ -588,7 +588,7 @@ public class OmegaAssetsProperty extends Property_B {
 //  	    cbg = (JComboBox)guimap.get("type");
 //  	    if ( cb == cbg ) {
 //  		String s = (String)cb.getSelectedItem();
-//  		omega.Context.sout_log.getLogger().info("ERR: " + "CB type " + cb);
+//  		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "CB type " + cb);
 //  		if ( s.equals("action") )
 //  		    setLabel("Llid", "Path id");
 //  		if ( s.equals("actor") )
@@ -604,7 +604,7 @@ public class OmegaAssetsProperty extends Property_B {
             }
 
         } catch (ClassCastException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "CCE " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "CCE " + ex);
         }
     }
 
@@ -614,7 +614,7 @@ public class OmegaAssetsProperty extends Property_B {
 
             chg = (JCheckBox) guimap.get("Slid");
         } catch (ClassCastException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "CCE " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "CCE " + ex);
         }
     }
 

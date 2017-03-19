@@ -1,6 +1,7 @@
 package omega.media.audio;
 
 import fpdo.sundry.S;
+import omega.OmegaContext;
 import omega.util.Log;
 
 import java.io.File;
@@ -89,8 +90,8 @@ public class APlayer {
                 base = name.substring(ix + 1);
             }
 
-            omega.Context.sout_log.getLogger().info("ERR: " + "audio: dir " + dir);
-            omega.Context.sout_log.getLogger().info("ERR: " + "audio: base " + base);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "audio: dir " + dir);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "audio: base " + base);
 
 
             String[] list = (String[]) dir_cache.get(dir);
@@ -100,9 +101,9 @@ public class APlayer {
                     list = omega.util.ListFilesURL.getMediaList(dir);
                     long ct1a = System.nanoTime();
                     dir_cache.put(dir, list);
-                    omega.Context.sout_log.getLogger().info("ERR: " + "===== " + dir + ' ' + (ct1a - ct0a));
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "===== " + dir + ' ' + (ct1a - ct0a));
                 } catch (Exception ex) {
-                    omega.Context.sout_log.getLogger().info("ERR: " + "Can't get file list " + lang + ' ' + name + ' ' + attr + ' ' + id);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "Can't get file list " + lang + ' ' + name + ' ' + attr + ' ' + id);
                 }
             }
 
@@ -110,7 +111,7 @@ public class APlayer {
             boolean isTL = id != null && id.startsWith("TL");
 
             if (attr != null && attr.length() > 0) {
-                String nnname = splice(base, attr + (isTL ? omega.Context.SPEED : ""));
+                String nnname = splice(base, attr + (isTL ? OmegaContext.SPEED : ""));
                 if (isIn(nnname, list))
                     nname = nnname;
                 else {
@@ -119,8 +120,8 @@ public class APlayer {
                         nname = nnname;
                 }
             }
-            if (nname == null && isIn(isTL ? splice(base, omega.Context.SPEED) : base, list))
-                nname = isTL ? splice(base, omega.Context.SPEED) : base;
+            if (nname == null && isIn(isTL ? splice(base, OmegaContext.SPEED) : base, list))
+                nname = isTL ? splice(base, OmegaContext.SPEED) : base;
             if (nname == null && isIn(base, list))
                 nname = base;
 
@@ -130,7 +131,7 @@ public class APlayer {
             nname = dir + '/' + nname;
 
             String lang_id = "";
-            String ffname = omega.Context.getMediaFile(nname);
+            String ffname = OmegaContext.getMediaFile(nname);
             if (ffname.indexOf("words-") != -1) {
                 String alname = ffname.replaceAll("words\\-[a-zA-Z]*", "words-" + lang);
                 File fffile = new File(alname);
@@ -139,7 +140,7 @@ public class APlayer {
                     ffname = alname;
                     lang_id = ":" + lang;
                 }
-                omega.Context.sout_log.getLogger().info("ERR: " + "NAME IS " + ffname);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "NAME IS " + ffname);
             }
 
 
@@ -150,19 +151,19 @@ public class APlayer {
                 ffname = maybeeTheMp3(ffname);
                 if (ffname.endsWith(".mp3") || alwaysFxPlayer) {
                     apl.fxplayer = new FxPlayer(ffname);
-                    omega.Context.sout_log.getLogger().info("ERR: " + "FxPlayer created: " + nname + ' ' + apl.fxplayer.realy_name);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "FxPlayer created: " + nname + ' ' + apl.fxplayer.realy_name);
                 } else {
                     apl.jplayer = new JPlayer(ffname);
-                    omega.Context.sout_log.getLogger().info("ERR: " + "JPlayer created: " + nname + ' ' + apl.jplayer.realy_name);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "JPlayer created: " + nname + ' ' + apl.jplayer.realy_name);
                 }
             } catch (Exception ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "" + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
                 ex.printStackTrace();
                 return null;
             }
             return apl;
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "" + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
             ex.printStackTrace();
         } finally {
         }

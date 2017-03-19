@@ -1,6 +1,7 @@
 package omega.util;
 
 import fpdo.sundry.S;
+import omega.OmegaContext;
 
 import java.io.File;
 import java.util.HashSet;
@@ -8,11 +9,11 @@ import java.util.Set;
 
 public class ListFilesURL {
     public static String[] getMediaList(String n) {
-        String name = omega.Context.getMediaFile(n);
+        String name = OmegaContext.getMediaFile(n);
         File dir = new File(name);
         String[] names = dir.list();
-// 	omega.Context.sout_log.getLogger().info("ERR: " + "FILE dir[] name " + name + ' ' + names);
-// 	omega.Context.sout_log.getLogger().info("ERR: " + "FILE dir[] names " + S.a2s(names));
+// 	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE dir[] name " + name + ' ' + names);
+// 	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE dir[] names " + S.a2s(names));
         Set li = new HashSet();
         for (int i = 0; i < names.length; i++) {
             li.add(names[i]);
@@ -21,7 +22,7 @@ public class ListFilesURL {
         }
         String[] sa = (String[]) li.toArray(new String[li.size()]);
 
-        //	omega.Context.sout_log.getLogger().info("ERR: " + "FILE dir[] " + dir + ' ' + S.a2s(names));
+        //	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE dir[] " + dir + ' ' + S.a2s(names));
 //	return names;
 
         return sa;
@@ -31,9 +32,9 @@ public class ListFilesURL {
     static public void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             long ct0 = S.ct();
-            omega.Context.sout_log.getLogger().info("ERR: " + "" + S.a2s(getMediaList("actor")));
+            OmegaContext.sout_log.getLogger().info("ERR: " + "" + S.a2s(getMediaList("actor")));
             long ct1 = S.ct();
-            omega.Context.sout_log.getLogger().info("ERR: " + "" + (ct1 - ct0));
+            OmegaContext.sout_log.getLogger().info("ERR: " + "" + (ct1 - ct0));
             S.m_sleep(200);
             System.gc();
         }

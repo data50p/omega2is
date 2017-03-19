@@ -1,6 +1,8 @@
 package omega.lesson.canvas;
 
 import fpdo.sundry.S;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
 
@@ -59,17 +61,17 @@ public class SentenceCanvas extends BaseCanvas {
         if (Lesson.skip_F)
             return true;
         if (ignore_press) {
-            if (omega.Config.isKeySelect(kc)) {
+            if (OmegaConfig.isKeySelect(kc)) {
             }
             return true;
         }
-        omega.Context.sout_log.getLogger().info("ERR: " + "pupil own " + kc);
-        if (omega.Config.isKeyNext(kc))
+        OmegaContext.sout_log.getLogger().info("ERR: " + "pupil own " + kc);
+        if (OmegaConfig.isKeyNext(kc))
             if (is_shift)
                 setMyPrevRed();
             else
                 setMyNextRed();
-        if (omega.Config.isKeySelect(kc))
+        if (OmegaConfig.isKeySelect(kc))
             if (story_list_sp.isVisible()) {
                 enableStoryList(false);
                 focus_list.set(1);
@@ -78,7 +80,7 @@ public class SentenceCanvas extends BaseCanvas {
                 if (mb != null)
                     mb.doClick();
             }
-        if (omega.Config.isKeyESC(kc)) {
+        if (OmegaConfig.isKeyESC(kc)) {
             hideMsg();
             om_msg_mgr.fire("exit create");
             return false;
@@ -186,7 +188,7 @@ public class SentenceCanvas extends BaseCanvas {
                 String filename = (String) l.getSelectedValue();
                 if (e.getValueIsAdjusting())
                     selected_index = story_list.getSelectedIndex();
-                omega.Context.sout_log.getLogger().info("ERR: " + "Selected " + filename + ' ' + e);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "Selected " + filename + ' ' + e);
             }
         }
     };
@@ -216,7 +218,7 @@ public class SentenceCanvas extends BaseCanvas {
                     if (0 == selected_index)
                         story_list_sp.setVisible(false);
                     selected_index = 0;
-                    omega.Context.sout_log.getLogger().info("ERR: " + "Clicked on Item " + index + ' ' + ix);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "Clicked on Item " + index + ' ' + ix);
                 }
             };
             story_list.addMouseListener(mouseListener);
@@ -467,7 +469,7 @@ public class SentenceCanvas extends BaseCanvas {
 
     void drawList(Graphics2D g2) {
         if (story_list_sp.isVisible()) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "story is visible");
+            OmegaContext.sout_log.getLogger().info("ERR: " + "story is visible");
             story_list_x = gX(0.5 - 0.25);
             story_list_y = gY(0.07);
             story_list_w = gX(0.5);

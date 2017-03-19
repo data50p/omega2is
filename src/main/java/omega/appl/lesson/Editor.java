@@ -1,7 +1,8 @@
 package omega.appl.lesson;
 
 import fpdo.sundry.S;
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.LicenseShow;
 import omega.appl.OmegaAppl;
 import omega.lesson.appl.LessonEditor;
@@ -14,7 +15,7 @@ public class Editor extends OmegaAppl {
 
     public Editor(String fn) {
         super("Lesson editor");
-        le = new LessonEditor("Omega - Lesson Editor:", Context.antiOmegaAssets(fn));
+        le = new LessonEditor("Omega - Lesson Editor:", OmegaContext.antiOmegaAssets(fn));
     }
 
     public static void main(String[] argv) {
@@ -31,10 +32,10 @@ public class Editor extends OmegaAppl {
             System.exit(1);
         }
 
-        Context.setOmegaAssets((String) flag.get("omega_assets"));
+        OmegaContext.setOmegaAssets((String) flag.get("omega_assets"));
 
-        omega.Context.omega_lang = (String) flag.get("omega_lang");
-        omega.Context.sout_log.getLogger().info("ERR: " + "param omega_lang is " + omega.Context.omega_lang);
+        OmegaContext.omega_lang = (String) flag.get("omega_lang");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "param omega_lang is " + OmegaContext.omega_lang);
 
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.MetalLookAndFeel");
@@ -44,7 +45,7 @@ public class Editor extends OmegaAppl {
 
         String t_steps = (String) flag.get("T");
         if (t_steps != null)
-            omega.Config.t_step = Integer.parseInt(t_steps);
+            OmegaConfig.t_step = Integer.parseInt(t_steps);
 
         String fn = argl.size() > 0 ? (String) argl.get(0) : null;
 

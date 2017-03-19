@@ -1,6 +1,7 @@
 package omega.lesson.canvas;
 
 
+import omega.OmegaContext;
 import omega.i18n.T;
 import omega.lesson.LessonContext;
 import omega.value.Value;
@@ -242,7 +243,7 @@ public class TestProperty extends Property_B {
 //  	    cbg = (JComboBox)guimap.get("type");
 //  	    if ( cb == cbg ) {
 //  		String s = (String)cb.getSelectedItem();
-//  		omega.Context.sout_log.getLogger().info("ERR: " + "CB type " + cb);
+//  		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "CB type " + cb);
 //  		if ( s.equals("action") )
 //  		    setLabel("Llid", "Path id");
 //  		if ( s.equals("actor") )
@@ -258,7 +259,7 @@ public class TestProperty extends Property_B {
             }
 
         } catch (ClassCastException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "CCE " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "CCE " + ex);
         }
     }
 
@@ -268,7 +269,7 @@ public class TestProperty extends Property_B {
 
             chg = (JCheckBox) guimap.get("Slid");
         } catch (ClassCastException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "CCE " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "CCE " + ex);
         }
     }
 

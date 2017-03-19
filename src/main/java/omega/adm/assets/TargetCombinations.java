@@ -1,6 +1,6 @@
 package omega.adm.assets;
 
-import omega.Context;
+import omega.OmegaContext;
 import omega.util.SundryUtils;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class TargetCombinations {
         public TCItem(String fn, String originalExtention) {
             this.fn = fn;
             this.originalExtention = originalExtention;
-            this.exist = Context.omegaAssetsExist(fn);
+            this.exist = OmegaContext.omegaAssetsExist(fn);
 
             if (fn.contains("{"))
                 System.err.println("MORE using var");

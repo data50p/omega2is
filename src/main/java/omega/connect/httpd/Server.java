@@ -1,5 +1,7 @@
 package omega.connect.httpd;
 
+import omega.OmegaContext;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -27,18 +29,18 @@ public class Server extends Thread {
     }
 
     public void run() {
-        omega.Context.sout_log.getLogger().info("ERR: " + "httpd: Server started");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "httpd: Server started");
         try {
             sso = new ServerSocket(port);
             for (; ; ) {
                 Socket so = sso.accept();
-//		omega.Context.sout_log.getLogger().info("ERR: " + "httpd: Connection accepted");
+//		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "httpd: Connection accepted");
                 connection_cnt++;
                 ServerConnection con = new ServerConnection(so, this);
                 con.start();
             }
         } catch (IOException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "httpd: Exception: " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "httpd: Exception: " + ex);
         }
     }
 

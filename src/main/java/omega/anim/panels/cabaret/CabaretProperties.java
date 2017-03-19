@@ -224,7 +224,7 @@ public class CabaretProperties extends OmegaProperties implements ActionListener
 //      class OnOffItemEvent implements ItemListener {
 //          public void itemStateChanged(ItemEvent ie) {
 //  	    JCheckBox cb = (JCheckBox)ie.getItemSelectable();
-//  	    omega.Context.sout_log.getLogger().info("ERR: " + "+++++++++++++ toggle is " + cb.isSelected());
+//  	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "+++++++++++++ toggle is " + cb.isSelected());
 //  	}
 //      };
 //      OnOffItemEvent onoff_listener = new OnOffItemEvent();
@@ -460,7 +460,7 @@ public class CabaretProperties extends OmegaProperties implements ActionListener
                     T.t("Are you sure to delete the Actor?"),
                     "Omega",
                     JOptionPane.YES_NO_OPTION);
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "*******) " + rsp);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "*******) " + rsp);
             if (rsp == 0)
                 cabp.deleteActor(bound_act_ixx);
             repaint();

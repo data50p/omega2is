@@ -1,5 +1,7 @@
 package omega.adm.login;
 
+import omega.OmegaContext;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -39,7 +41,7 @@ public class LoginSimple extends Login {
                 public void actionPerformed(ActionEvent e) {
                     synchronized (o) {
                         if (tf.getText().length() > 0) {
-                            omega.Context.sout_log.getLogger().info("ERR: " + "action " + tf.getText());
+                            OmegaContext.sout_log.getLogger().info("ERR: " + "action " + tf.getText());
                             LoginSimple.this.setName(tf.getText());
                             ready = true;
                             o.notify();

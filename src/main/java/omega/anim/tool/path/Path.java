@@ -2,6 +2,7 @@ package omega.anim.tool.path;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
+import omega.OmegaContext;
 
 import javax.swing.*;
 import java.awt.*;
@@ -342,7 +343,7 @@ public class Path {
                     cnt++;
                     break;
                 default:
-                    omega.Context.sout_log.getLogger().info("ERR: " + "pi ?");
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "pi ?");
             }
             pi.next();
         }
@@ -372,7 +373,7 @@ public class Path {
                     y = yy;
                     break;
                 default:
-                    omega.Context.sout_log.getLogger().info("ERR: " + "pi ?");
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "pi ?");
             }
             cnt2++;
             pi.next();
@@ -430,7 +431,7 @@ public class Path {
         int i = ix;
 // 	for(int i = 0; i < lenA.length; i++) {
 // 	    if ( lenA[i] >= l ) {
-//		omega.Context.sout_log.getLogger().info("ERR: " + "bin " + ix + ' ' + i);
+//		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "bin " + ix + ' ' + i);
 
         double prev = 0;
         if (i != 0)
@@ -678,10 +679,10 @@ public class Path {
         pa2.extendSegment(new Point2D.Double(350, 300));
         pa2.draw((Graphics2D) ca.getGraphics());
 
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(0.0));
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(10.0));
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(100.0));
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(100.2));
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(pa.getLength()));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(0.0));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(10.0));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(100.0));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(100.2));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(pa.getLength()));
     }
 }

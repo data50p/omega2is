@@ -1,5 +1,7 @@
 package omega.adm.login;
 
+import omega.OmegaContext;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,7 +14,7 @@ public class LoginAppl {
 
     void start() {
         if (l != null) {
-            omega.Context.sout_log.getLogger().info("Loaded " + l);
+            OmegaContext.sout_log.getLogger().info("Loaded " + l);
 
             JFrame f = new JFrame("LoginAppl");
             Container c = f.getContentPane();
@@ -26,8 +28,8 @@ public class LoginAppl {
 
             l.waitDone();
 
-//log	    omega.Context.sout_log.getLogger().info("Login user name is " + l.user);
-//log	    omega.Context.sout_log.getLogger().info("Login teacher name is " + l.teacher);
+//log	    omega.OmegaContext.sout_log.getLogger().info("Login user name is " + l.user);
+//log	    omega.OmegaContext.sout_log.getLogger().info("Login teacher name is " + l.teacher);
 
             f.setVisible(false);
             f.dispose();

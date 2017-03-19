@@ -2,6 +2,7 @@ package omega.appl;
 
 import fpdo.sundry.PreferenceUtil;
 import fpdo.sundry.S;
+import omega.OmegaContext;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,15 +23,15 @@ public class Settings {
     public static Settings getSettings() {
         if (default_settings == null) {
             default_settings = new Settings();
-            omega.Context.sout_log.getLogger().info("ERR: " + "Settings created");
+            OmegaContext.sout_log.getLogger().info("ERR: " + "Settings created");
         }
 
         return default_settings;
     }
 
     Settings() {
-        omega.Context.sout_log.getLogger().info("ERR: " + "" + flags);
-        omega.Context.sout_log.getLogger().info("ERR: " + "" + args);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "" + flags);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "" + args);
 
         settings.put("audio-cache", new Boolean(false));
         settings.put("audio-jmf", new Boolean(false));
@@ -45,7 +46,7 @@ public class Settings {
     }
 
     void list() {
-        omega.Context.sout_log.getLogger().info("ERR: " + "list: " + settings);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "list: " + settings);
     }
 
     class MyActionListener implements ActionListener {
@@ -64,7 +65,7 @@ public class Settings {
             Component comp = cA[i];
             if (comp instanceof JTextField) {
                 JTextField tf = (JTextField) comp;
-                omega.Context.sout_log.getLogger().info("ERR: " + "" + tf.getText());
+                OmegaContext.sout_log.getLogger().info("ERR: " + "" + tf.getText());
             }
             if (comp instanceof JLabel) {
                 JLabel la = (JLabel) comp;

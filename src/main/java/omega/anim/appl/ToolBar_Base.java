@@ -4,16 +4,16 @@ import omega.swing.ToolBar;
 
 import java.util.HashMap;
 
-public abstract class ToolBar_ extends ToolBar {
+public abstract class ToolBar_Base extends ToolBar {
     HashMap jb;
 
-    ToolBar_(Object o) {
+    ToolBar_Base(Object o) {
         super();
         jb = new HashMap();
         init(o);
     }
 
-    ToolBar_(Object o, int orientation) {
+    ToolBar_Base(Object o, int orientation) {
         super(orientation);
         jb = new HashMap();
         init(o);

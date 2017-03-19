@@ -2,7 +2,8 @@ package omega.lesson.canvas;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.i18n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
@@ -45,7 +46,7 @@ public class BaseCanvas extends JPanel {
     ActionListener act_li = new ActionListener() {
         public void actionPerformed(ActionEvent ae) {
             String ac = ae.getActionCommand();
-            omega.Context.def_log.getLogger().info("Fire... " + ac);
+            OmegaContext.def_log.getLogger().info("Fire... " + ac);
             if (!ignore_press) {
                 MyButton mb = (MyButton) ae.getSource();
                 MyButton ob = focus_list.get();
@@ -57,7 +58,7 @@ public class BaseCanvas extends JPanel {
                 om_msg_mgr.fire("button " + ac);
                 mb.setBorder(BorderFactory.createLineBorder(new Color(242, 80, 80), 5));
             }
-            omega.Context.def_log.getLogger().info("Fired " + ac);
+            OmegaContext.def_log.getLogger().info("Fired " + ac);
         }
     };
 
@@ -475,7 +476,7 @@ public class BaseCanvas extends JPanel {
             b.setIcon(imic);
             setJBROIcon(b, fn.replaceAll("\\.png", "-over.png"));
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "ImageIco size 0,0");
+            OmegaContext.sout_log.getLogger().info("ERR: " + "ImageIco size 0,0");
         }
     }
 
@@ -493,7 +494,7 @@ public class BaseCanvas extends JPanel {
     }
 
     Image getImage(String fn) {
-        Image image = Toolkit.getDefaultToolkit().getImage(Context.omegaAssets(fn));
+        Image image = Toolkit.getDefaultToolkit().getImage(OmegaContext.omegaAssets(fn));
         return image;
     }
 
@@ -934,13 +935,13 @@ public class BaseCanvas extends JPanel {
             return true;
         if (ignore_press)
             return true;
-        if (omega.Config.isKeyNext(kc))
+        if (OmegaConfig.isKeyNext(kc))
             if (buttons_enabled)
                 if (is_shift)
                     setPrevRed();
                 else
                     setNextRed();
-        if (omega.Config.isKeySelect(kc)) {
+        if (OmegaConfig.isKeySelect(kc)) {
             MyButton b = focus_list.get();
             if (b != null) {
                 if (buttons_enabled)
@@ -1039,7 +1040,7 @@ public class BaseCanvas extends JPanel {
                     String c = el.findAttr("color_" + k);
 
                     if (c != null) {
-//			omega.Context.sout_log.getLogger().info("ERR: " + "col " + k + ' ' + col + ' ' + c);
+//			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "col " + k + ' ' + col + ' ' + c);
                         if (c.charAt(0) == '#') {
                             int rgb;
                             if (c.length() == 9)

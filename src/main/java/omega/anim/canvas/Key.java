@@ -1,5 +1,7 @@
 package omega.anim.canvas;
 
+import omega.OmegaContext;
+
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -12,7 +14,7 @@ public class Key extends KeyAdapter {
     }
 
     public void keyTyped(KeyEvent k) {
-        omega.Context.sout_log.getLogger().info("ERR: " + "key " + k);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "key " + k);
     }
 }
 

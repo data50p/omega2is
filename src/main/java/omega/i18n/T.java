@@ -1,7 +1,7 @@
 package omega.i18n;
 
 import fpdo.sundry.S;
-import omega.Context;
+import omega.OmegaContext;
 
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
@@ -17,33 +17,33 @@ public class T {
     static T tt = new T();
 
     public T() {
-        String la = omega.Context.omega_lang;
-        omega.Context.lesson_log.getLogger().info("T lang p is from omega_lang " + la);
+        String la = OmegaContext.omega_lang;
+        OmegaContext.lesson_log.getLogger().info("T lang p is from omega_lang " + la);
         if (la == null) {
             la = System.getProperty("lang");
-            omega.Context.lesson_log.getLogger().info("T lang p is from -Domega_lang " + la);
+            OmegaContext.lesson_log.getLogger().info("T lang p is from -Domega_lang " + la);
         }
 
-        omega.Context.lesson_log.getLogger().info("omega gui lang is now " + la);
+        OmegaContext.lesson_log.getLogger().info("omega gui lang is now " + la);
         Locale loc;
         if (la != null) {
             lang = before_(la);
             lang_country = la;
         } else {
             loc = Locale.getDefault();
-            omega.Context.sout_log.getLogger().info("ERR: " + "locale " + loc);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "locale " + loc);
             lang = loc.getLanguage();
             lang_country = loc.getLanguage() + '_' + loc.getCountry();
             if ("no".equals(lang)) {
-                omega.Context.lesson_log.getLogger().info("no -> nb " + loc);
+                OmegaContext.lesson_log.getLogger().info("no -> nb " + loc);
                 lang = "nb";
                 lang_country = "nb_NO";
             }
         }
 
-        omega.Context.lesson_log.getLogger().info("FINALLY omega lang " + omega.Context.omega_lang);
-        omega.Context.lesson_log.getLogger().info("FINALLY lang " + lang);
-        omega.Context.lesson_log.getLogger().info("FINALLY lang_country " + lang_country);
+        OmegaContext.lesson_log.getLogger().info("FINALLY omega lang " + OmegaContext.omega_lang);
+        OmegaContext.lesson_log.getLogger().info("FINALLY lang " + lang);
+        OmegaContext.lesson_log.getLogger().info("FINALLY lang_country " + lang_country);
     }
 
     private String before_(String s) {
@@ -58,13 +58,13 @@ public class T {
         FileInputStream in = null;
         try {
             in = new FileInputStream(fn);
-            omega.Context.sout_log.getLogger().info("ERR: " + "T file is " + fn);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "T file is " + fn);
             who[0] = 0;
         } catch (FileNotFoundException ex) {
             try {
                 if (fn2 != null) {
                     in = new FileInputStream(fn2);
-                    omega.Context.sout_log.getLogger().info("ERR: " + "T file is " + fn2);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "T file is " + fn2);
                     who[0] = 1;
                 }
             } catch (FileNotFoundException ex2) {
@@ -78,7 +78,7 @@ public class T {
         int[] who = new int[1];
 
         try {
-            FileInputStream in = fopen(Context.t9n(fn), fn2, who);
+            FileInputStream in = fopen(OmegaContext.t9n(fn), fn2, who);
             if (in == null)
                 return -1;
             InputStreamReader ir = new InputStreamReader(in);
@@ -86,7 +86,7 @@ public class T {
 
             String enc = br.readLine();
             if ("utf-8".equals(enc))
-                omega.Context.sout_log.getLogger().info("ERR: " + "T_ enc is " + fn + ' ' + fn2 + ' ' + enc);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "T_ enc is " + fn + ' ' + fn2 + ' ' + enc);
             else
                 enc = null;
 
@@ -104,23 +104,23 @@ public class T {
                 for (; ; ) {
                     String s = br.readLine();
                     if (s == null) {
-                        omega.Context.sout_log.getLogger().info("ERR: " + "rL: null");
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "rL: null");
                         break;
                     }
                     String sa[] = s.split("[\\]\\[]+");
                     if (cnt < 10)
-                        omega.Context.sout_log.getLogger().info("ERR: " + "got T_ " + sa.length + ' ' + S.a2s(sa));
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "got T_ " + sa.length + ' ' + S.a2s(sa));
                     if (sa.length == 3)
                         hm_.put(sa[1], sa[2]);
                     else
-                        omega.Context.sout_log.getLogger().info("ERR: " + "i18n.T.t strange " + S.a2s(sa));
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "i18n.T.t strange " + S.a2s(sa));
                     cnt++;
                 }
                 br.close();
             } catch (IOException ex) {
             }
         } catch (IOException ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "T_ " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "T_ " + ex);
         }
         return who[0];
     }
@@ -129,7 +129,7 @@ public class T {
         try {
             int[] who = new int[1];
 
-            FileInputStream in = fopen(Context.t9n(fn + ".xml"), Context.t9n(fn2 + ".xml"), who);
+            FileInputStream in = fopen(OmegaContext.t9n(fn + ".xml"), OmegaContext.t9n(fn2 + ".xml"), who);
             if (in == null)
                 return -1;
             InputStreamReader ir = new InputStreamReader(in);
@@ -140,12 +140,12 @@ public class T {
             if (!(result instanceof HashMap)) {
                 return -1;
             }
-            omega.Context.sout_log.getLogger().info("ERR: " + "T_xml " + ((HashMap) result).size());
+            OmegaContext.sout_log.getLogger().info("ERR: " + "T_xml " + ((HashMap) result).size());
 
             hm_.putAll((HashMap) result);
             return who[0];
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "T_ " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "T_ " + ex);
         }
         return -1;
     }
@@ -163,21 +163,21 @@ public class T {
     }
 
     static private void putEncoding() {
-        File f = new File(Context.t9n("T_new"));
+        File f = new File(OmegaContext.t9n("T_new"));
         if (f.exists() && f.length() > 0)
             return;
-        PrintWriter pw = S.createPrintWriter(Context.t9n("T_new"));
+        PrintWriter pw = S.createPrintWriter(OmegaContext.t9n("T_new"));
         pw.println("utf-8");
         pw.close();
     }
 
     synchronized static private void putXML(HashMap hm, String fn) {
         try {
-            XMLEncoder e = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(Context.t9n(fn + ".xml"))));
+            XMLEncoder e = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(OmegaContext.t9n(fn + ".xml"))));
             e.writeObject(hm);
             e.close();
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "" + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
         }
     }
 
@@ -218,10 +218,10 @@ public class T {
 // 		pw.println("[" + s + "][" + s + "]");
 // 		pw.flush();
 // 		pw.close();
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "T.t " + s);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "T.t " + s);
             }
         } else {
-            //	    omega.Context.sout_log.getLogger().info("ERR: " + "Tt " + s + ' ' + ss);
+            //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "Tt " + s + ' ' + ss);
         }
         return ss;
     }

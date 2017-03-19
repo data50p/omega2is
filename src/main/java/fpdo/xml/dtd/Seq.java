@@ -1,5 +1,7 @@
 package fpdo.xml.dtd;
 
+import omega.OmegaContext;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -41,6 +43,6 @@ public class Seq extends SeqItem {
         s.add(new SeqItem("PC"));
         s.add(new SeqItem("f5_drag", '*'));
 
-        omega.Context.sout_log.getLogger().info("" + s.toString());
+        OmegaContext.sout_log.getLogger().info("" + s.toString());
     }
 }

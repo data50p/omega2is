@@ -44,7 +44,7 @@ public class Property_B extends JDialog {
     }
 
     void fireValueChanged(Value v) {
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "fireValueChanged " + v);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "fireValueChanged " + v);
         Object[] lia = lc_listeners.getListenerList();
         for (int i = 0; i < lia.length; i += 2) {
             ((ValuesListener) lia[i + 1]).changed(v);

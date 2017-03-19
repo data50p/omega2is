@@ -72,7 +72,7 @@ public class LessonItem {
 //      public String getOmegaLessonFile() {
 //  	String[] sa = Locator.scanDirLes(getLessonDirName());
 //  	if ( sa != null ) {
-//  	    omega.Context.sout_log.getLogger().info("ERR: " + "FOUND >>>>>>>> " + S.a2s(sa));
+//  	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FOUND >>>>>>>> " + S.a2s(sa));
 //  	    if ( sa.length > 0 )
 //  		return sa[0];
 //  	}
@@ -82,7 +82,7 @@ public class LessonItem {
     public String getOmegaSelectorFile() {
         String[] sa = Locator.scanDirSel(getLessonDirName());
         if (sa != null) {
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "FOUND >>>>>>>> " + S.a2s(sa));
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FOUND >>>>>>>> " + S.a2s(sa));
             if (sa.length > 0)
                 return sa[0];
         }
@@ -92,7 +92,7 @@ public class LessonItem {
     public String getOmegaLessonFile() {
         String[] sa = Locator.scanDirLes(getLessonDirName());
         if (sa != null) {
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "FOUND >>>>>>>> " + S.a2s(sa));
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FOUND >>>>>>>> " + S.a2s(sa));
             if (sa.length > 0)
                 return sa[0];
         }

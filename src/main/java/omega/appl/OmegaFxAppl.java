@@ -12,7 +12,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
-import omega.Context;
+import omega.OmegaContext;
 import omega.util.Log;
 
 public class OmegaFxAppl extends Application {
@@ -106,7 +106,7 @@ public class OmegaFxAppl extends Application {
         Scene scene = new Scene(root, 700, 330 + 22 * 3);
         stage.setTitle("Omega IS");
 
-        String aImname = Context.getMediaFile("default/omega_splash.gif");
+        String aImname = OmegaContext.getMediaFile("default/omega_splash.gif");
         Image im = new Image("file:" + aImname);
         ImageView imView = new ImageView();
         imView.setImage(im);

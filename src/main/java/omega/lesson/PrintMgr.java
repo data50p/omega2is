@@ -1,6 +1,7 @@
 package omega.lesson;
 
 import fpdo.sundry.S;
+import omega.OmegaContext;
 
 import javax.print.*;
 import javax.print.attribute.DocAttributeSet;
@@ -69,7 +70,7 @@ public class PrintMgr implements Printable {
 // 		int width = image2.getWidth();
 // 		int height = image2.getHeight();
 
-// 		omega.Context.sout_log.getLogger().info("ERR: " + "wh = " + width + ' ' + height);
+// 		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "wh = " + width + ' ' + height);
 
 // 		PrinterJob pj = PrinterJob.getPrinterJob();
 // 		pj.setPrintable(this);
@@ -77,7 +78,7 @@ public class PrintMgr implements Printable {
 // 		    try {
 // 			pj.print();
 // 		    } catch (PrinterException ex) {
-// 			omega.Context.sout_log.getLogger().info("ERR: " + "" + ex);
+// 			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
 // 		    }
 // 		}
 // 	    }
@@ -169,7 +170,7 @@ public class PrintMgr implements Printable {
 
     void listPrinters() {
         String s = getPrinterList("\nPrintServer: ");
-        omega.Context.sout_log.getLogger().info("PrintServer: " + s);
+        OmegaContext.sout_log.getLogger().info("PrintServer: " + s);
     }
 
     int getStringWidth(Graphics2D g2, Font fo, String s) {
@@ -208,7 +209,7 @@ public class PrintMgr implements Printable {
             HH += sh + gap;
             WW = sw > WW ? sw : WW;
         }
-        omega.Context.sout_log.getLogger().info("ERR: " + "bounding is " + WW + ' ' + HH);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "bounding is " + WW + ' ' + HH);
         return new int[]{WW, HH};
     }
 
@@ -224,16 +225,16 @@ public class PrintMgr implements Printable {
 // 	    double scaleX = pfW / imW;
 // 	    double scaleY = pfH / imH;
 
-            omega.Context.sout_log.getLogger().info("ERR: " + "print..." + pageIndex);
-            omega.Context.sout_log.getLogger().info("ERR: " + "size " + /* imW + ' ' + imH + ' ' + */ pfW + ' ' + pfH);
-            omega.Context.sout_log.getLogger().info("ERR: " + "po " + pfX + ' ' + pfY);
-//	    omega.Context.sout_log.getLogger().info("ERR: " + "scale " + scaleX + ' ' + scaleY);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "print..." + pageIndex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "size " + /* imW + ' ' + imH + ' ' + */ pfW + ' ' + pfH);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "po " + pfX + ' ' + pfY);
+//	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "scale " + scaleX + ' ' + scaleY);
 
             if (pageIndex == 0) {
                 Graphics2D g2 = (Graphics2D) g;
                 //AffineTransform at = new AffineTransform();
                 AffineTransform at = g2.getTransform();
-                omega.Context.sout_log.getLogger().info("ERR: " + "at " + at);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "at " + at);
                 at.translate(pfX, pfY);
                 g2.setTransform(at);
 
@@ -248,7 +249,7 @@ public class PrintMgr implements Printable {
                     int size = getItemFont().getSize();
                     setItemFont(new Font("Arial", Font.PLAIN, (int) (size * 0.9)));
                     bounding = getBounding(g2, sentences);
-                    omega.Context.sout_log.getLogger().info("ERR: " + "font size is " + getItemFont().getSize());
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "font size is " + getItemFont().getSize());
 
                 }
 
@@ -297,7 +298,7 @@ public class PrintMgr implements Printable {
                     aset);
             return ps;
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "PM: selectPrinter: " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "PM: selectPrinter: " + ex);
             ex.printStackTrace();
         }
         return null;
@@ -316,7 +317,7 @@ public class PrintMgr implements Printable {
                     "<p>Found printers are:<ul><li>" +
                     s +
                     "</li></ul></html>";
-            omega.Context.sout_log.getLogger().info("ERR: " + "---\n" + text + "\n---");
+            OmegaContext.sout_log.getLogger().info("ERR: " + "---\n" + text + "\n---");
             JOptionPane.showMessageDialog(null,
                     text,
                     "Print Spooler",

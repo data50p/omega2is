@@ -4,8 +4,7 @@ import fpdo.sundry.S;
 import fpdo.xml.Element;
 import fpdo.xml.SAX_node;
 import fpdo.xml.XML_PW;
-import omega.Context;
-import omega.adm.persistence.xml.XML_Repository;
+import omega.OmegaContext;
 import omega.anim.context.AnimContext;
 import omega.i18n.T;
 import omega.swing.filechooser.ChooseAnimatorFile;
@@ -18,7 +17,7 @@ import java.io.File;
 import java.io.PrintWriter;
 
 
-public class Anim_Repository extends XML_Repository {
+public class Anim_Repository {
     private String saved_file = null;
 
     public Anim_Repository() {
@@ -61,13 +60,13 @@ public class Anim_Repository extends XML_Repository {
                     return null;
             }
         } catch (Exception ex) {
-            Context.exc_log.getLogger().throwing(this.getClass().getName(), "getName", ex);
+            OmegaContext.exc_log.getLogger().throwing(this.getClass().getName(), "getName", ex);
             return null;
         }
         if (fn.startsWith("/")) {
             File file = new File(fn);
             String url_s = omega.util.Files.toURL(file);
-            String fnr = omega.util.Files.mkRelFnameAlt(url_s, Context.omegaAssets("."));
+            String fnr = omega.util.Files.mkRelFnameAlt(url_s, OmegaContext.omegaAssets("."));
             fn = fnr;
         }
         return fn;
@@ -93,7 +92,7 @@ public class Anim_Repository extends XML_Repository {
         StringBuffer sbl = new StringBuffer();
         el.render(sbu, sbl);
 
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "EEEEEE " + sbu + ' ' + sbl);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "EEEEEE " + sbu + ' ' + sbl);
 
         PrintWriter ppw = S.createPrintWriterUTF8("SAVED-omega_anim.dump");
         ppw.println("<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>\n" +
@@ -112,7 +111,7 @@ public class Anim_Repository extends XML_Repository {
         } else {
             boolean err = false;
 
-            XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(Context.omegaAssets(fn + ".tmp")), false);
+            XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(OmegaContext.omegaAssets(fn + ".tmp")), false);
             xmlpw.put(el);
             xmlpw.popAll();
             xmlpw.flush();
@@ -137,13 +136,13 @@ public class Anim_Repository extends XML_Repository {
             }
 
             if (err == false) {
-                File file = new File(Context.omegaAssets(fn));
-                File filet = new File(Context.omegaAssets(fn + ".tmp"));
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "SAVED " + file + ' ' + filet);
+                File file = new File(OmegaContext.omegaAssets(fn));
+                File filet = new File(OmegaContext.omegaAssets(fn + ".tmp"));
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "SAVED " + file + ' ' + filet);
                 if (file.exists()) {
-                    File filep = new File(Context.omegaAssets(fn + ".prev"));
+                    File filep = new File(OmegaContext.omegaAssets(fn + ".prev"));
                     if (filep.exists()) {
-                        File filepp = new File(Context.omegaAssets(fn + ".prevprev"));
+                        File filepp = new File(OmegaContext.omegaAssets(fn + ".prevprev"));
                         if (filepp.exists()) {
                             filepp.delete();
                         }
@@ -165,7 +164,7 @@ public class Anim_Repository extends XML_Repository {
 
     public Element open(AnimContext a_ctxt, String fn) {
         try {
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "** PARSING " + fn);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "** PARSING " + fn);
             Element el = SAX_node.parse(fn, false);
 //  	if ( el == null ) {
 //  	    JOptionPane.showMessageDialog(null, // a_ctxt.
@@ -208,7 +207,7 @@ public class Anim_Repository extends XML_Repository {
         int rv = choose_if.showDialog(c, T.t("Select"));
         if (rv == JFileChooser.APPROVE_OPTION) {
             File file = choose_if.getSelectedFile();
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "got file " + file);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "got file " + file);
             url_s = Files.toURL(file);
             return url_s;
         }

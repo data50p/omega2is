@@ -1,7 +1,7 @@
 package omega.adm.register.data;
 
 import fpdo.sundry.S;
-import omega.Context;
+import omega.OmegaContext;
 import omega.i18n.T;
 import omega.lesson.appl.ApplContext;
 
@@ -27,7 +27,7 @@ public class RegLocator {
     }
 
     static String[] scanDir(String dir, FilenameFilter fnf) {
-        omega.Context.sout_log.getLogger().info("ERR: " + "scan " + dir + ' ' + fnf);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "scan " + dir + ' ' + fnf);
         File df = new File(dir);
         File[] fa = df.listFiles(fnf);
         if (fa != null) {
@@ -112,7 +112,7 @@ public class RegLocator {
         } else {
             f.mkdir();
             File ft = new File(aRegisterFbase(name + ".p/id.png"));
-            File ff = new File(Context.getMediaFile("default/pupil.png"));
+            File ff = new File(OmegaContext.getMediaFile("default/pupil.png"));
             omega.util.Files.fileCopy(ff, ft);
             ft = new File(aRegisterFbase(name + ".p/pupil_settings.xml"));
             ff = new File(aRegisterFbase("Guest" + ".p/pupil_settings.xml"));
@@ -123,8 +123,8 @@ public class RegLocator {
     public static void main(String[] args) {
         RegLocator l = new RegLocator();
         String sa[] = l.getAllPupilsName();
-        omega.Context.sout_log.getLogger().info("ERR: " + "" + S.a2s(sa));
+        OmegaContext.sout_log.getLogger().info("ERR: " + "" + S.a2s(sa));
         sa = l.getAllResultsFName("Lars", new String[]{"test"});
-        omega.Context.sout_log.getLogger().info("ERR: " + "" + S.a2s(sa));
+        OmegaContext.sout_log.getLogger().info("ERR: " + "" + S.a2s(sa));
     }
 }

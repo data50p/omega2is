@@ -1,5 +1,7 @@
 package omega.lesson.appl;
 
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.appl.Omega_IS;
 import omega.i18n.T;
 import omega.lesson.Lesson;
@@ -27,7 +29,7 @@ public class LessonEditor extends ApplLesson {
         ApplContext.top_frame = this;
 
         if (fn == null)
-            fn = "lesson-" + omega.Context.getLessonLang() + "/new.omega_lesson";  // LESSON-DIR
+            fn = "lesson-" + OmegaContext.getLessonLang() + "/new.omega_lesson";  // LESSON-DIR
 
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent ev) {
@@ -85,7 +87,7 @@ public class LessonEditor extends ApplLesson {
 
     ToolExecute ae_texec = new ToolExecute() {
         public void execute(String cmd) {
-            if (omega.Config.T) omega.Context.sout_log.getLogger().info("ERR: " + "AnimEditor.texec: execute " + cmd);
+            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "AnimEditor.texec: execute " + cmd);
 
             if ("exit".equals(cmd)) {
                 int sel = JOptionPane.showConfirmDialog(LessonEditor.this,

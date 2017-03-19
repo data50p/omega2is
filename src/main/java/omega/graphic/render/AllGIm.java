@@ -2,13 +2,15 @@ package omega.graphic.render;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.anim.tool.timeline.TimeLine;
 
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
 
 public class AllGIm {
-    GIm[] arr = new GIm[omega.Config.TIMELINES_N];
+    GIm[] arr = new GIm[OmegaConfig.TIMELINES_N];
     Canvas ca;
 
     AllGIm(Canvas ca) {
@@ -103,7 +105,7 @@ public class AllGIm {
                     if (gim.xim.setInnerAnimIndex((int) ((dt / an_sp) % 1000)))
                         gim.initIm();
                 } catch (NullPointerException ex) {
-                    omega.Context.sout_log.getLogger().info("ERR: " + "---1 " + ii + ' ' + ex);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "---1 " + ii + ' ' + ex);
                     ex.printStackTrace();
                 }
             }
@@ -129,7 +131,7 @@ public class AllGIm {
                             }
                         }
                     } catch (NullPointerException ex) {
-                        omega.Context.sout_log.getLogger().info("ERR: " + "---2 " + ii + ' ' + ex);
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "---2 " + ii + ' ' + ex);
                     }
                 }
             }

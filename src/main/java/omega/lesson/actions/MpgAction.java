@@ -2,7 +2,7 @@ package omega.lesson.actions;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
-import omega.Context;
+import omega.OmegaContext;
 import omega.lesson.canvas.MsgItem;
 import omega.media.video.MpgPlayer;
 import omega.util.Log;
@@ -64,7 +64,7 @@ public class MpgAction implements ActionI {
             hideMsg();
             return false;
         }
-        omega.Context.sout_log.getLogger().info("ERR: " + "own kk " + kc);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "own kk " + kc);
         if (kc == 'l') {
             again_play = true;
         }
@@ -119,7 +119,7 @@ public class MpgAction implements ActionI {
     public void dispose() {
         if (mpg_player != null)
             mpg_player.dispose(jpan);
-        omega.Context.sout_log.getLogger().info("ERR: " + "mpg disposed");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "mpg disposed");
         jpan.setVisible(false);
         mpg_player = null;
     }
@@ -188,7 +188,7 @@ public class MpgAction implements ActionI {
 
     class MsgDialog {
         MsgItem msg_item;
-        String cont_image_fn = Context.media() + "default/continue.png";
+        String cont_image_fn = OmegaContext.media() + "default/continue.png";
 
         void show(MsgItem msg) {
             set(msg);
@@ -231,10 +231,10 @@ public class MpgAction implements ActionI {
             int x = gX(0.5) - w / 2;
             int y = gY(0.92);
             int r = gX(0.02);
-            Color col = omega.Context.COLOR_WARP;
+            Color col = OmegaContext.COLOR_WARP;
             RoundRectangle2D fr = new RoundRectangle2D.Double(x, y, w, h, r, r);
 
-            omega.Context.sout_log.getLogger().info("ERR: " + "MPG draw: " + w + ' ' + sw + ' ' + text);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "MPG draw: " + w + ' ' + sw + ' ' + text);
 
             g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.95f));
             g2.setColor(col);
@@ -257,11 +257,11 @@ public class MpgAction implements ActionI {
 
 
             g2.setClip(0, 0, 10000, 10000);//	    g2.setClip(fr);
-            g2.setColor(omega.Context.COLOR_TEXT_WARP);
+            g2.setColor(OmegaContext.COLOR_TEXT_WARP);
 
             g2.setFont(item_fo);
             g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1.0f));
-            omega.Context.sout_log.getLogger().info("ERR: " + "MPG text: " + x + ' ' + y + ' ' + h + ' ' + item_fo + ' ' + text);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "MPG text: " + x + ' ' + y + ' ' + h + ' ' + item_fo + ' ' + text);
             g2.drawString(text,
                     x + 5,
                     y + 2 * h / 3);
@@ -332,7 +332,7 @@ public class MpgAction implements ActionI {
             mpg_player = MpgPlayer.createMpgPlayer(action_s, jpan, window.getWidth(), window.getHeight());
         else
             Log.getLogger().info("already created MpgPayer ... ");
-        omega.Context.sout_log.getLogger().info("ERR: " + "mpg created " + mpg_player.getOrigW() + ' ' + mpg_player.getOrigH());
+        OmegaContext.sout_log.getLogger().info("ERR: " + "mpg created " + mpg_player.getOrigW() + ' ' + mpg_player.getOrigH());
         mpg_player.fxp.waitReady();
         again_play2 = true;
         again_audio2 = true;
@@ -345,7 +345,7 @@ public class MpgAction implements ActionI {
 
         mpg_player.start();
         mpg_player.wait4();
-        omega.Context.sout_log.getLogger().info("ERR: " + "mp_waited");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "mp_waited");
         if (ord == 0) {
 //	    dispose();
             if (show_sentence) {
@@ -371,7 +371,7 @@ public class MpgAction implements ActionI {
 // may play twice	mpg_player.stop();
 // 	mpg_player.dispose(jpan);
 // 	mpg_player = null;
-        omega.Context.sout_log.getLogger().info("ERR: " + "mp_shown");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "mp_shown");
     }
 
     private void showMsgFx(MsgItem mi) {

@@ -3,11 +3,12 @@ package omega.adm.register.data;
 import fpdo.sundry.S;
 import fpdo.xml.Element;
 import fpdo.xml.XML_PW;
+import omega.OmegaContext;
 
 public class SaveRestore {
     public boolean save(String fname, Result rslt) {
         Element el = rslt.getElement();
-        omega.Context.sout_log.getLogger().info("ERR: " + "saving SaveRestore el " + el);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "saving SaveRestore el " + el);
         try {
             XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false);
             xmlpw.put(el);

@@ -1,6 +1,6 @@
 package omega.swing.filechooser;
 
-import omega.Context;
+import omega.OmegaContext;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
@@ -12,7 +12,7 @@ import java.io.File;
 
 public class ChooseDir extends JFileChooser {
     public ChooseDir() {
-        super(new File(Context.omegaAssets(".")));
+        super(new File(OmegaContext.omegaAssets(".")));
         FileFilter fi = new FileFilter() {
             @Override
             public boolean accept(File f) {

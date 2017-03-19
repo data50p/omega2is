@@ -1,6 +1,7 @@
 package omega.lesson.actions;
 
 import fpdo.xml.Element;
+import omega.OmegaContext;
 import omega.anim.appl.AnimRuntime;
 
 import javax.swing.*;
@@ -17,7 +18,7 @@ public class AnimAction implements ActionI {
             rt.prefetch(action_s);
             el = getElementRoot();
         } catch (Exception ex) {
-            omega.Context.sout_log.getLogger().info("ERR: " + "exception " + ex);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "exception " + ex);
             ex.printStackTrace();
         }
         return el;
@@ -50,7 +51,7 @@ public class AnimAction implements ActionI {
                         }
                     }
                 }
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FIND all tl " + s);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FIND all tl " + s);
                 return s;
             }
         }
@@ -84,7 +85,7 @@ public class AnimAction implements ActionI {
                         }
                     }
                 }
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "FIND all act " + s);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FIND all act " + s);
                 return s;
             }
         }

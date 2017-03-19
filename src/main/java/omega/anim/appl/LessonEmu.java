@@ -81,7 +81,7 @@ public class LessonEmu extends JPanel {
 
         public void mousePressed(MouseEvent e) {
             mpress_p = new Point((int) e.getX(), (int) e.getY());
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "" + mpress_p);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + mpress_p);
             for (int i = 0; i < subjobj.length; i++)
                 if (subjobj[i].r.contains(mpress_p)) {
                     String s = subjobj[i].text;
@@ -130,14 +130,14 @@ public class LessonEmu extends JPanel {
             verb_s = "$1 " + verb_s + " $2";
         }
         verb = new Verb(verb_s);
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "VERB " + verb);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "VERB " + verb);
         ArrayList li = new ArrayList();
 
         this.el = el;
         Element aact = el.findElement("AllActors", 0);
         for (int i = 0; i < 10; i++) {
             Element act = aact.findElement("Actor", i);
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "++ found " + act);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "++ found " + act);
             if (act != null) {
                 String id = act.findAttr("lesson_id");
                 if (id != null)
@@ -219,9 +219,9 @@ public class LessonEmu extends JPanel {
             return;
 
         int W = getWidth();
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "W is " + W);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "W is " + W);
         int H = getWidth();
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "H is " + H);
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "H is " + H);
 
         int wc = W / 3;
         int wg = (W - 2 * wc) / 3;

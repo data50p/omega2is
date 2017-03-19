@@ -1,6 +1,7 @@
 package fpdo.xml;
 
 import fpdo.sundry.S;
+import omega.OmegaContext;
 import org.xml.sax.*;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -29,10 +30,10 @@ public class SAX_base extends DefaultHandler {
         // dump warnings too
         public void warning(SAXParseException err)
                 throws SAXParseException {
-            omega.Context.sout_log.getLogger().info("** Warning"
+            OmegaContext.sout_log.getLogger().info("** Warning"
                     + ", line " + err.getLineNumber()
                     + ", uri " + err.getSystemId());
-            omega.Context.sout_log.getLogger().info("   " + err.getMessage());
+            OmegaContext.sout_log.getLogger().info("   " + err.getMessage());
         }
     }
 
@@ -103,28 +104,28 @@ public class SAX_base extends DefaultHandler {
 
     public void ignorableWhitespace(char buf[], int offset, int len)
             throws SAXException {
-//	omega.Context.sout_log.getLogger().info("ERR: " + "iW " + new String(buf, offset, len));
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "iW " + new String(buf, offset, len));
     }
 
     public void processingInstruction(String target, String data)
             throws SAXException {
-        omega.Context.sout_log.getLogger().info("ERR: " + "pI " + target);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "pI " + target);
     }
 
     public void notationDecl(String name, String publicId, String systemId) {
-        omega.Context.sout_log.getLogger().info("ERR: " + "nD " + name);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "nD " + name);
     }
 
     public void unparsedEntityDecl(String name, String publicId,
                                    String systemId, String notationName) {
-        omega.Context.sout_log.getLogger().info("ERR: " + "UeD " + name);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "UeD " + name);
     }
 
     /**
      * Called for every scanned element
      */
     public void startElementHook(String name, HashMap attr, HashMap allAttr) {
-        omega.Context.sout_log.getLogger().info("" + depth + " <" + name + "  " + attr + " " + allAttr);
+        OmegaContext.sout_log.getLogger().info("" + depth + " <" + name + "  " + attr + " " + allAttr);
     }
 
     /**
@@ -134,9 +135,9 @@ public class SAX_base extends DefaultHandler {
      */
     public void endElementHook(String name, HashMap elem_pcdata) {
         if (flag.get("L") != null)
-            omega.Context.sout_log.getLogger().info("" + depth + "  " + name + "> " + elem_pcdata + "");
+            OmegaContext.sout_log.getLogger().info("" + depth + "  " + name + "> " + elem_pcdata + "");
         else
-            omega.Context.sout_log.getLogger().info("" + depth + "  " + name + "> " + elem_pcdata.get(name) + "");
+            OmegaContext.sout_log.getLogger().info("" + depth + "  " + name + "> " + elem_pcdata.get(name) + "");
     }
 
     public static void start(String file, SAX_base sb) throws IOException {
@@ -165,10 +166,10 @@ public class SAX_base extends DefaultHandler {
 //	    parser.setErrorHandler(new MyErrorHandler());
 //	    parser.parse(uri);
         } catch (SAXParseException err) {
-            omega.Context.sout_log.getLogger().info("** Parsing error"
+            OmegaContext.sout_log.getLogger().info("** Parsing error"
                     + ", line " + err.getLineNumber()
                     + ", uri " + err.getSystemId());
-            omega.Context.sout_log.getLogger().info("   " + err.getMessage());
+            OmegaContext.sout_log.getLogger().info("   " + err.getMessage());
             err.printStackTrace();
         } catch (SAXException e) {
             Exception x = e;
@@ -185,7 +186,7 @@ public class SAX_base extends DefaultHandler {
         HashMap flag = S.flagAsMap(argv);
         List argl = S.argAsList(argv);
 
-        omega.Context.sout_log.getLogger().info("ERR: " + "argl " + argl + ' ' + flag);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "argl " + argl + ' ' + flag);
 
         String file = (String) argl.get(0);
 

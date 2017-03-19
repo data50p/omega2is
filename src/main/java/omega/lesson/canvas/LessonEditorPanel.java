@@ -1,7 +1,7 @@
 package omega.lesson.canvas;
 
-import omega.Config;
-import omega.Context;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
 import omega.anim.appl.EditStateListener;
 import omega.i18n.T;
@@ -27,7 +27,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
-import static omega.Context.OMEGA_ASSETS_SUFFIX;
+import static omega.OmegaContext.OMEGA_ASSETS_SUFFIX;
 
 public class LessonEditorPanel extends JPanel {
     GBC_Factory gbcf = new GBC_Factory();
@@ -89,7 +89,7 @@ public class LessonEditorPanel extends JPanel {
 
     ValuesListener mvl_tg = new ValuesListener() {
         public void changed(Value v) {
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "=00= val list " + v);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "=00= val list " + v);
             Target.T_Item tit = le_canvas.getTarget().getT_Item(active_target_ix);
             if (tit == null)
                 return;
@@ -135,7 +135,7 @@ public class LessonEditorPanel extends JPanel {
             } else if (v.id.equals("dummysign")) {
                 itm.setDummySign_Krull(v.getStr(), true);
             } else if (v.id.equals("fname")) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "FNAME " + itm.it_ent.type);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "FNAME " + itm.it_ent.type);
                 if (true || itm.it_ent.type.equals("action")) { // isAction ) {
                     ((Item) (itm)).setAction_Fname(v.getStr(), "omega_anim");
                 }
@@ -178,7 +178,7 @@ public class LessonEditorPanel extends JPanel {
             }
             if (s.equals("editanim")) {
                 String fn = le_canvas.l_ctxt.getTarget().getActionFileName(0); // main default, first
-                omega.Context.sout_log.getLogger().info("ERR: " + "MANY? " + fn);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "MANY? " + fn);
                 if (fn == null || fn.length() == 0) {
                     JOptionPane.showMessageDialog(omega.lesson.appl.LessonEditor.TOP_JFRAME,
                             //le_canvas.l_ctxt.top_frame,
@@ -215,18 +215,18 @@ public class LessonEditorPanel extends JPanel {
                     try {
                         File file = choose_af.getSelectedFile();
                         String fname_s = file.getName();
-//log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fname_s);
+//log			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "--> " + fname_s);
 //                        fname_s = file.toURI().toURL().toString(); // getCanonicalPath();
                         fname_s = Files.toURL(file);
-//log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fname_s);
+//log			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "--> " + fname_s);
                         String fn = omega.util.Files.mkRelativeCWD(fname_s);
-//log			omega.Context.sout_log.getLogger().info("ERR: " + "--> " + fn);
+//log			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "--> " + fn);
                         lesson_link_next.setText(fn);
                         enable_LLN.setSelected(true);
                         lesson_link_next.setEnabled(true);
                         //			omega.lesson.appl.LessonEditor.setDirty();
                     } catch (Exception ex) {
-                        omega.Context.sout_log.getLogger().info("ERR: " + "can't " + ex);
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "can't " + ex);
                     }
                 }
             }
@@ -248,7 +248,7 @@ public class LessonEditorPanel extends JPanel {
                         url_s = rmDuplicate(url_s);
                         String oa = omega.util.Files.mkRelativeCWD(url_s);
                         System.err.println("setOmegaAssets: " + url_s);
-                        omega.Context.setOmegaAssets(oa);
+                        OmegaContext.setOmegaAssets(oa);
                     } catch (IOException e) {
                     }
                 }
@@ -267,7 +267,7 @@ public class LessonEditorPanel extends JPanel {
 
         private void playSign() {
             // LIU
-            omega.Context.setLessonLang(editorLessonLang.getText());
+            OmegaContext.setLessonLang(editorLessonLang.getText());
             le_canvas.l_ctxt.getLesson().sendMsg("playSign:", "media/sign-sv/M.mpg");
         }
     }
@@ -347,7 +347,7 @@ public class LessonEditorPanel extends JPanel {
         b.addActionListener(myactl);
 
         add(editorLessonLang = new JTextField(T.t("Lesson Lang")), gbcf.createL(X++, Y, 1));
-        editorLessonLang.setText(Context.getLessonLang());
+        editorLessonLang.setText(OmegaContext.getLessonLang());
         editorLessonLang.setMinimumSize(new Dimension(50, 20));
 
         Y++;
@@ -365,7 +365,7 @@ public class LessonEditorPanel extends JPanel {
         redraw.setActionCommand("listen");
         redraw.addActionListener(myactl);
 
-        if (Config.LIU_Mode) {
+        if (OmegaConfig.LIU_Mode) {
             add(playSign = new JButton(T.t("Play Sign Moview")), gbcf.createL(X++, Y, 1));
             playSign.setActionCommand("playSign");
             playSign.addActionListener(myactl);

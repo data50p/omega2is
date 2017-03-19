@@ -11,6 +11,8 @@ package omega.lesson.canvas;
 
 import fpdo.sundry.S;
 import fpdo.xml.Element;
+import omega.OmegaConfig;
+import omega.OmegaContext;
 import omega.adm.assets.TargetCombinations;
 import omega.i18n.T;
 import omega.lesson.Lesson;
@@ -95,13 +97,13 @@ public class LessonCanvas extends BaseCanvas {
     };
 
     void actionQuit() {
-        omega.Context.sout_log.getLogger().info("ERR: " + "enter quitAction");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "enter quitAction");
         MsgItem msgitem = l_ctxt.getLesson().getResultSummary_MsgItem();
-        omega.Context.sout_log.getLogger().info("ERR: " + "enter quitAction");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "enter quitAction");
         if (msgitem != null) {
             showMsg(msgitem);
         }
-        omega.Context.sout_log.getLogger().info("ERR: " + "exited quitAction");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "exited quitAction");
         hideMsg();
         fireExit(1);
         S.m_sleep(300);
@@ -109,7 +111,7 @@ public class LessonCanvas extends BaseCanvas {
 
     public LessonCanvas(LessonContext l_ctxt) {
         super(l_ctxt);
-        omega.Context.lesson_log.getLogger().info("XXX");
+        OmegaContext.lesson_log.getLogger().info("XXX");
 
 //	focus_list = new CycleList(-1);
         requestFocus();
@@ -125,8 +127,8 @@ public class LessonCanvas extends BaseCanvas {
         if (edit) {
             return true;
         }
-        omega.Context.sout_log.getLogger().info("ERR: " + "ownKey " + kc);
-        if (omega.Config.isKeyNext(kc)) {
+        OmegaContext.sout_log.getLogger().info("ERR: " + "ownKey " + kc);
+        if (OmegaConfig.isKeyNext(kc)) {
             if (isMsg()) {
                 hideMsg();
                 return true;
@@ -150,7 +152,7 @@ public class LessonCanvas extends BaseCanvas {
             }
             return false;
         }
-        if (omega.Config.isKeyESC(kc)) {
+        if (OmegaConfig.isKeyESC(kc)) {
             if (!quit_disabled) {
                 setQuitState("Esc", 0);
                 hideMsg();
@@ -165,7 +167,7 @@ public class LessonCanvas extends BaseCanvas {
                 repaint();
             }
         }
-        if (omega.Config.isKeySelect(kc)) {
+        if (OmegaConfig.isKeySelect(kc)) {
             if (anim_action_patch != null) {
                 anim_action_patch.rt.a_ctxt.anim_canvas.setBigButtonText("");
             } else {
@@ -445,12 +447,12 @@ public class LessonCanvas extends BaseCanvas {
 
             int sw = getStringWidth(getItemFont(), ss) + (int) (gB / 2);
             if (ss.length() > 1)
-                ;//omega.Context.sout_log.getLogger().info("ERR: " + "calc:   box:w=" + w + " string:w=" + sw + " string=" + ss + ' ' + ss.length());
+                ;//omega.OmegaContext.sout_log.getLogger().info("ERR: " + "calc:   box:w=" + w + " string:w=" + sw + " string=" + ss + ' ' + ss.length());
 
             double d = wantRP;
             if (sw > w - gB / 2) {
                 d = (double) sw / w;
-                ;//omega.Context.sout_log.getLogger().info("ERR: " + "this wRP " + d + " sw=" + sw + "  w = " + w + "   w-gB/2=" + (w-gB/2));
+                ;//omega.OmegaContext.sout_log.getLogger().info("ERR: " + "this wRP " + d + " sw=" + sw + "  w = " + w + "   w-gB/2=" + (w-gB/2));
                 if (d > wantRP) {
                     wantRP = d;
                 }
@@ -458,13 +460,13 @@ public class LessonCanvas extends BaseCanvas {
 
             if (wantRP >= 0.95 && wantRP <= 1.005) {
                 if (ss.length() > 1)
-                    ;//omega.Context.sout_log.getLogger().info("ERR: " + "wantRP t' OK   " + wantRP + ' ' + d + ' ' + ss);
+                    ;//omega.OmegaContext.sout_log.getLogger().info("ERR: " + "wantRP t' OK   " + wantRP + ' ' + d + ' ' + ss);
                 g2.setFont(getItemFont());
                 if (ink) {
                     g2.drawString(ss, (int) (x + 0.01 * getCaW()), y + (int) (h * 0.75));
                 }
             } else if (ss.length() > 1)
-                ;//omega.Context.sout_log.getLogger().info("ERR: " + "wantRP t' ELS  " + wantRP + ' ' + d + ' ' + ss);
+                ;//omega.OmegaContext.sout_log.getLogger().info("ERR: " + "wantRP t' ELS  " + wantRP + ' ' + d + ' ' + ss);
 
 
             if (edit) {
@@ -488,7 +490,7 @@ public class LessonCanvas extends BaseCanvas {
             try {
                 draw(g2, true);
             } catch (Exception ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "Box:draw(): " + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "Box:draw(): " + ex);
             }
         }
 
@@ -496,7 +498,7 @@ public class LessonCanvas extends BaseCanvas {
             try {
                 draw(g2, false);
             } catch (Exception ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "Box:draw(): " + ex);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "Box:draw(): " + ex);
             }
 // 	    String s = "";
 // 	    Item itm = getItem();
@@ -593,7 +595,7 @@ public class LessonCanvas extends BaseCanvas {
 
         AllBox() {
             all = new HashMap();
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "AllBox CREATED " + new Date());
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "AllBox CREATED " + new Date());
         }
 
         Rectangle2D getBound(int ix, int iy) {
@@ -896,7 +898,7 @@ public class LessonCanvas extends BaseCanvas {
             }
             mpress_p = new Point2D.Double(e.getX(), e.getY());
 
-            omega.Context.sout_log.getLogger().info("ERR: " + "release " + mode);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "release " + mode);
 
             if (mode == NORM && !Lesson.mistNoMouse) {
                 int ix;
@@ -940,7 +942,7 @@ public class LessonCanvas extends BaseCanvas {
                     }
                 }
             }
-            omega.Context.sout_log.getLogger().info("ERR: " + "" + isMsg());
+            OmegaContext.sout_log.getLogger().info("ERR: " + "" + isMsg());
 
             if (isMsg()) {
                 hideMsg();
@@ -949,12 +951,12 @@ public class LessonCanvas extends BaseCanvas {
     }
 
     void fireExit(int where) {
-        omega.Context.sout_log.getLogger().info("ERR: " + "fireExit " + where);
+        OmegaContext.sout_log.getLogger().info("ERR: " + "fireExit " + where);
         om_msg_mgr.fire("show_result");
     }
 
     public void fireRealExit() {
-        omega.Context.sout_log.getLogger().info("ERR: " + "fireRealExit");
+        OmegaContext.sout_log.getLogger().info("ERR: " + "fireRealExit");
         om_msg_mgr.fire("exit create");
     }
 
@@ -1160,7 +1162,7 @@ public class LessonCanvas extends BaseCanvas {
             }
             if (bx != null) {
                 setQuitState("z3", 0);
-//log		omega.Context.sout_log.getLogger().info("ERR: " + "move " + current_ix + ' ' + current_iy + ' ' + nix + ' ' + niy);
+//log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "move " + current_ix + ' ' + current_iy + ' ' + nix + ' ' + niy);
                 current_iy = niy;
                 current_ix = nix;
                 int[] where = new int[1];
@@ -1426,7 +1428,7 @@ public class LessonCanvas extends BaseCanvas {
                 int sww = (int) ((WW - (gB * (nx - 1))) * ratio);
                 int hm_bx = getTarget().getMaxItemsInBox(xi);
 
-                //omega.Context.sout_log.getLogger().info("ERR: " + "ratio " + xi + ' ' + ratio + ' ' + bx_w + ' ' + max_bxw + ' ' + sww + ' ' + gB);
+                //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "ratio " + xi + ' ' + ratio + ' ' + bx_w + ' ' + max_bxw + ' ' + sww + ' ' + gB);
 
                 if (hm_bx > 0 && rndA == null) {
                     rndA = S.createUniq(hm_bx).asIntArray();
@@ -1576,7 +1578,7 @@ public class LessonCanvas extends BaseCanvas {
         if (show) {
             anim_action.rt.a_ctxt.anim_canvas.setBigButtonText(text);
             end_code_s = anim_action.rt.a_ctxt.anim_canvas.waitBigButtonText(myra);
-            omega.Context.sout_log.getLogger().info("ERR: " + "LessonCanvas: end_ " + end_code_s);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "LessonCanvas: end_ " + end_code_s);
 
             if (end_code_s.equals("normal")) {
                 anim_action.rt.a_ctxt.anim_canvas.setBigButtonText("");
@@ -1678,7 +1680,7 @@ public class LessonCanvas extends BaseCanvas {
             hh *= asp;
         }
 
-//	omega.Context.sout_log.getLogger().info("ERR: " + "      >>>>>>>>     " + asp + ' ' + hh);
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "      >>>>>>>>     " + asp + ' ' + hh);
         return hh;
     }
 
@@ -2211,7 +2213,7 @@ public class LessonCanvas extends BaseCanvas {
                     }
                     bx.drawNull(g2);
                 }
-                //omega.Context.sout_log.getLogger().info("ERR: " + "wantRP is' " + wantRP);
+                //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "wantRP is' " + wantRP);
 
                 if (wantRP >= 1.005 || wantRP <= 0.95) {
                     int fs = item_fo.getSize();
@@ -2453,11 +2455,11 @@ public class LessonCanvas extends BaseCanvas {
             if (msg == null) {
                 m.mode = m.NORM;
                 show_msg = false;
-                omega.Context.sout_log.getLogger().info("ERR: " + "MSGITEM null");
+                OmegaContext.sout_log.getLogger().info("ERR: " + "MSGITEM null");
             } else {
                 m.mode = m.MSG;
                 show_msg = true;
-                omega.Context.sout_log.getLogger().info("ERR: " + "MSGITEM " + msg);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "MSGITEM " + msg);
             }
 
             msg_item = msg;
@@ -2708,7 +2710,7 @@ public class LessonCanvas extends BaseCanvas {
             try {
                 msg_dlg.draw(g2);
             } catch (Exception ex) {
-                omega.Context.sout_log.getLogger().info("ERR: " + "Can't show msg");
+                OmegaContext.sout_log.getLogger().info("ERR: " + "Can't show msg");
             }
         }
 
@@ -2750,14 +2752,14 @@ public class LessonCanvas extends BaseCanvas {
         }
 
         lesson_name = "-noname-";
-//log	omega.Context.sout_log.getLogger().info("ERR: " + "=-= dep_set lesson_name ");
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "=-= dep_set lesson_name ");
         Element lesson_el = el.findElement("lesson", 0);
         if (lesson_el != null) {
             String nm = lesson_el.findAttr("name");
             if (nm != null) {
                 lesson_name = nm;
             }
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "=-= lesson_name is " + lesson_name);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "=-= lesson_name is " + lesson_name);
         }
 
         lesson_link_next = null;
@@ -2770,7 +2772,7 @@ public class LessonCanvas extends BaseCanvas {
                     lesson_link_next = nm;
                 }
             }
-//log	    omega.Context.sout_log.getLogger().info("ERR: " + "=-= lesson_link_next is " + lesson_link_next);
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "=-= lesson_link_next is " + lesson_link_next);
         }
 
         lesson_is_first = false;
