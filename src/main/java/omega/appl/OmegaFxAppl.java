@@ -143,10 +143,10 @@ public class OmegaFxAppl extends Application {
 //    public void paint(Graphics g) {
 //	g.drawImage(im, 0, 0, null);
 //	g.setColor(Color.yellow);
-//	g.drawString(omega.Version.getVersion(), 5, 12);
-//	g.drawString(omega.Version.getCWD(), 5, 322 + 20 * 0);
-//	g.drawString(omega.Version.getJavaVersion(), 5, 322 + 20 * 1);
-//	g.drawString(omega.Version.getJavaVendor(), 5, 322 + 20 * 2);
-//	g.drawString(omega.Version.getJavaHome(), 5, 322 + 20 * 3);
+//	g.drawString(omega.OmegaVersion.getVersion(), 5, 12);
+//	g.drawString(omega.OmegaVersion.getCWD(), 5, 322 + 20 * 0);
+//	g.drawString(omega.OmegaVersion.getJavaVersion(), 5, 322 + 20 * 1);
+//	g.drawString(omega.OmegaVersion.getJavaVendor(), 5, 322 + 20 * 2);
+//	g.drawString(omega.OmegaVersion.getJavaHome(), 5, 322 + 20 * 3);
 //    }
 }

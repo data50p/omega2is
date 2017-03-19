@@ -4,7 +4,7 @@ package omega;
 
 import java.io.*;
 
-public class Version {
+public class OmegaVersion {
     static public String getOmegaVersion() {
         return getOmegaVersion(null);
     }
@@ -31,7 +31,7 @@ public class Version {
 
     static public String get(String item) {
         try {
-            InputStream ins = Version.class.getClassLoader().getResourceAsStream("version");
+            InputStream ins = OmegaVersion.class.getClassLoader().getResourceAsStream("version");
             if (ins != null) {
                 Reader r = new InputStreamReader(ins);
                 BufferedReader br = new BufferedReader(r);

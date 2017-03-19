@@ -3,7 +3,7 @@ package omega.lesson.canvas;
 
 import omega.OmegaContext;
 import omega.adm.assets.TargetCombinations;
-import omega.i18n.T;
+import omega.t9n.T;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;

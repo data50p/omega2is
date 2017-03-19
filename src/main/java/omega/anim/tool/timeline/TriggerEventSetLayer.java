@@ -1,6 +1,6 @@
 package omega.anim.tool.timeline;
 
-import omega.i18n.T;
+import omega.t9n.T;
 
 public class TriggerEventSetLayer extends TriggerEventSelections {
     public static String[] st_selections_cmd = new String[]{

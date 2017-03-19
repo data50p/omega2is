@@ -1,6 +1,6 @@
 package omega.anim.panels.timeline;
 
-import omega.i18n.T;
+import omega.t9n.T;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;

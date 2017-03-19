@@ -14,7 +14,7 @@ import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.adm.assets.TargetCombinations;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
 import omega.lesson.machine.Item;

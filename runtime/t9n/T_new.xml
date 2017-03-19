@@ -70,6 +70,10 @@
    <string>LessonsInEnglish</string>
   </void>
   <void method="put">
+   <string>Omega Assets:</string>
+   <string>Omega Assets:</string>
+  </void>
+  <void method="put">
    <string>Nynorsk</string>
    <string>Nynorsk</string>
   </void>
@@ -264,6 +268,10 @@
   <void method="put">
    <string>Actor Image Name</string>
    <string>Actor Image Name</string>
+  </void>
+  <void method="put">
+   <string>Lesson lang:</string>
+   <string>Lesson lang:</string>
   </void>
   <void method="put">
    <string>Scan</string>

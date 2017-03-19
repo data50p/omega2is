@@ -1,6 +1,7 @@
 package omega.appl;
 
 import omega.OmegaContext;
+import omega.OmegaVersion;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,10 +26,10 @@ public class Splash extends JWindow {
         g.setColor(Color.yellow);
         int line = 0;
         int yoff = 324;
-        g.drawString(omega.Version.getOmegaVersion(), 5, yoff + 20 * line++);
-        g.drawString(omega.Version.getCWD(), 5, yoff + 20 * line++);
-        g.drawString(omega.Version.getJavaVersion(), 5, yoff + 20 * line++);
-        g.drawString(omega.Version.getJavaVendor(), 5, yoff + 20 * line++);
-        g.drawString(omega.Version.getJavaHome(), 5, yoff + 20 * line++);
+        g.drawString(OmegaVersion.getOmegaVersion(), 5, yoff + 20 * line++);
+        g.drawString(OmegaVersion.getCWD(), 5, yoff + 20 * line++);
+        g.drawString(OmegaVersion.getJavaVersion(), 5, yoff + 20 * line++);
+        g.drawString(OmegaVersion.getJavaVendor(), 5, yoff + 20 * line++);
+        g.drawString(OmegaVersion.getJavaHome(), 5, yoff + 20 * line++);
     }
 }

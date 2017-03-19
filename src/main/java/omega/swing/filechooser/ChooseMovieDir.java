@@ -1,6 +1,6 @@
 package omega.swing.filechooser;
 
-import omega.i18n.T;
+import omega.t9n.T;
 
 import javax.swing.*;
 import java.io.File;

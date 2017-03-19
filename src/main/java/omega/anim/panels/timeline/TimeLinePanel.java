@@ -3,7 +3,7 @@ package omega.anim.panels.timeline;
 import omega.anim.tool.timeline.MasterTimeLine;
 import omega.anim.tool.timeline.TimeLine;
 import omega.anim.tool.timeline.TimeMarker;
-import omega.i18n.T;
+import omega.t9n.T;
 
 import javax.swing.*;
 import javax.swing.event.EventListenerList;

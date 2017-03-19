@@ -1,4 +1,4 @@
-package omega.connect.httpd;
+package omega.servers.httpd;
 
 import fpdo.sundry.S;
 import omega.OmegaConfig;
@@ -278,7 +278,7 @@ public class ServerConnection extends Thread {
             String cmd = sa[0];
             dos.writeBytes("HTTP/0.9 200 OK\r\n");
             dos.writeBytes("Server: Omega 0.9\r\n");
-            dos.writeBytes("MIME-Version: 1.0\r\n");
+            dos.writeBytes("MIME-OmegaVersion: 1.0\r\n");
             String mime = "text/plain";
             dos.writeBytes("Content-type: " + mime + "\r\n");
             dos.writeBytes("\r\n");
@@ -304,7 +304,7 @@ public class ServerConnection extends Thread {
             String cmd = sa[0];
             dos.writeBytes("HTTP/0.9 200 OK\r\n");
             dos.writeBytes("Server: Omega 0.9\r\n");
-            dos.writeBytes("MIME-Version: 1.0\r\n");
+            dos.writeBytes("MIME-OmegaVersion: 1.0\r\n");
             String mime = "text/plain";
             dos.writeBytes("Content-type: " + mime + "\r\n");
             dos.writeBytes("\r\n");
@@ -318,7 +318,7 @@ public class ServerConnection extends Thread {
                         throw new IOException("");
                     dos.writeBytes("HTTP/1.0 200 OK\r\n");
                     dos.writeBytes("Server: Omega 0.9\r\n");
-                    dos.writeBytes("MIME-Version: 1.0\r\n");
+                    dos.writeBytes("MIME-OmegaVersion: 1.0\r\n");
                     String mime = "text/plain";
                     dos.writeBytes("Content-type: " + mime + "\r\n");
                     //dos.writeBytes("Content-length: " + data.length() + "\r\n");
@@ -331,7 +331,7 @@ public class ServerConnection extends Thread {
                         throw new IOException("");
                     dos.writeBytes("HTTP/1.0 200 OK\r\n");
                     dos.writeBytes("Server: Omega 0.9\r\n");
-                    dos.writeBytes("MIME-Version: 1.0\r\n");
+                    dos.writeBytes("MIME-OmegaVersion: 1.0\r\n");
                     String mime = "text/html";
                     dos.writeBytes("Content-type: " + mime + "\r\n");
                     //dos.writeBytes("Content-length: " + data.length() + "\r\n");
@@ -344,7 +344,7 @@ public class ServerConnection extends Thread {
                         throw new IOException("");
                     dos.writeBytes("HTTP/1.0 200 OK\r\n");
                     dos.writeBytes("Server: Omega 0.9\r\n");
-                    dos.writeBytes("MIME-Version: 1.0\r\n");
+                    dos.writeBytes("MIME-OmegaVersion: 1.0\r\n");
                     String mime = "text/html";
                     dos.writeBytes("Content-type: " + mime + "\r\n");
                     //dos.writeBytes("Content-length: " + data.length() + "\r\n");
@@ -355,7 +355,7 @@ public class ServerConnection extends Thread {
                     byte[] data = getData(fn);
                     dos.writeBytes("HTTP/1.0 200 OK\r\n");
                     dos.writeBytes("Server: Omega 0.9\r\n");
-                    dos.writeBytes("MIME-Version: 1.0\r\n");
+                    dos.writeBytes("MIME-OmegaVersion: 1.0\r\n");
                     String mime = getMime(fn);
                     dos.writeBytes("Content-type: " + mime + "\r\n");
                     dos.writeBytes("\r\n");

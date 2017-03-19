@@ -2,7 +2,7 @@ package omega.adm.register.data;
 
 import fpdo.sundry.S;
 import omega.OmegaContext;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.lesson.appl.ApplContext;
 
 import javax.swing.*;

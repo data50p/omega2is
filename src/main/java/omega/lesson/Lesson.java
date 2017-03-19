@@ -7,7 +7,7 @@ import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.adm.register.data.*;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.lesson.actions.ActionI;
 import omega.lesson.actions.AnimAction;
 import omega.lesson.actions.MpgAction;

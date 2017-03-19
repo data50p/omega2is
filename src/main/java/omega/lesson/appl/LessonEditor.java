@@ -3,7 +3,7 @@ package omega.lesson.appl;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.appl.Omega_IS;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.lesson.ToolBar_LessonEditor;
 import omega.swing.ToolAction;

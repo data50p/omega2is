@@ -7,7 +7,7 @@ import fpdo.xml.XML_PW;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.anim.context.AnimContext;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.lesson.pupil.Pupil;
 import omega.swing.filechooser.*;
 import omega.util.Files;
@@ -191,7 +191,7 @@ public class PupilSettingsDialog extends SettingsDialog {
             }
             if ("pupim".equals(cmd)) {
                 try {
-                    ChoosePImageFile choose_pif = new ChoosePImageFile();
+                    ChoosePupilImageFile choose_pif = new ChoosePupilImageFile();
                     int rv = choose_pif.showDialog(PupilSettingsDialog.this, T.t("Select"));
                     if (rv == JFileChooser.APPROVE_OPTION) {
                         File file = choose_pif.getSelectedFile();

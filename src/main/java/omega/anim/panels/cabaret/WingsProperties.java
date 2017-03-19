@@ -2,7 +2,7 @@ package omega.anim.panels.cabaret;
 
 import fpdo.sundry.S;
 import omega.graphic.render.Wing;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.swing.GBC_Factory;
 import omega.swing.properties.OmegaProperties;
 

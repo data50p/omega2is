@@ -8,10 +8,11 @@ import javax.swing.*;
 import java.io.File;
 
 public class ChooseActionMovieFile extends JFileChooser {
-    public ChooseActionMovieFile() {
+    public ChooseActionMovieFile(boolean omega_anim) {
         super(new File(OmegaContext.omegaAssets("anim")));
         ExtensionFileFilter fi = new ExtensionFileFilter();
-        fi.addExtension("omega_anim");
+        if ( omega_anim )
+            fi.addExtension("omega_anim");
         fi.addExtension("mpeg");
         fi.addExtension("mpg");
         fi.addExtension("mov");

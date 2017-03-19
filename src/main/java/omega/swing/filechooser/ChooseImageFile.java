@@ -1,7 +1,7 @@
 package omega.swing.filechooser;
 
 import omega.OmegaContext;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.util.ExtensionFileFilter;
 
 import javax.swing.*;

@@ -3,7 +3,7 @@ package omega.lesson.canvas;
 
 import fpdo.sundry.S;
 import omega.OmegaContext;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.value.Value;
 import omega.value.Values;
 

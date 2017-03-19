@@ -1,4 +1,4 @@
-package omega.connect.httpd;
+package omega.servers.httpd;
 
 import omega.OmegaContext;
 

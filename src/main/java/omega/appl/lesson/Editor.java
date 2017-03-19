@@ -3,7 +3,7 @@ package omega.appl.lesson;
 import fpdo.sundry.S;
 import omega.OmegaConfig;
 import omega.OmegaContext;
-import omega.LicenseShow;
+import omega.LicenseShowManager;
 import omega.appl.OmegaAppl;
 import omega.lesson.appl.LessonEditor;
 
@@ -49,7 +49,7 @@ public class Editor extends OmegaAppl {
 
         String fn = argl.size() > 0 ? (String) argl.get(0) : null;
 
-        if (LicenseShow.showAndAccepted()) {
+        if (LicenseShowManager.showAndAccepted()) {
             Editor e = new Editor(fn);
         } else {
             System.exit(1);

@@ -1,6 +1,6 @@
 package omega.subsystem;
 
-import omega.connect.httpd.Server;
+import omega.servers.httpd.Server;
 
 public class Httpd extends Subsystem {
     public static Server httpd;

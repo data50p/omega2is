@@ -19,7 +19,7 @@ import omega.anim.tool.path.Probe;
 import omega.anim.tool.timeline.TimeLine;
 import omega.anim.tool.timeline.TimeMarker;
 import omega.graphic.render.Wing;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.swing.ToolExecute;
 import omega.util.GenericEvent;
 import omega.util.GenericEventListener;

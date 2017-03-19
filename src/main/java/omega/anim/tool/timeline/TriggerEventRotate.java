@@ -1,7 +1,7 @@
 package omega.anim.tool.timeline;
 
 import fpdo.sundry.S;
-import omega.i18n.T;
+import omega.t9n.T;
 
 public class TriggerEventRotate extends TriggerEvent {
     public String getCmd() {

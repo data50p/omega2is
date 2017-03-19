@@ -1,4 +1,4 @@
-package omega.i18n;
+package omega.t9n;
 
 import fpdo.sundry.S;
 import omega.OmegaContext;
@@ -113,7 +113,7 @@ public class T {
                     if (sa.length == 3)
                         hm_.put(sa[1], sa[2]);
                     else
-                        OmegaContext.sout_log.getLogger().info("ERR: " + "i18n.T.t strange " + S.a2s(sa));
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "t9n.T.t strange " + S.a2s(sa));
                     cnt++;
                 }
                 br.close();

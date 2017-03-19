@@ -1,7 +1,7 @@
 package omega.appl.animator;
 
 import fpdo.sundry.S;
-import omega.LicenseShow;
+import omega.LicenseShowManager;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
@@ -69,7 +69,7 @@ public class Editor extends OmegaAppl {
             OmegaConfig.t_step = Integer.parseInt(s);
 //log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + omega.OmegaConfig.t_step);
 
-        if (LicenseShow.showAndAccepted()) {
+        if (LicenseShowManager.showAndAccepted()) {
             Editor e = new Editor(verbose);
             S.m_sleep(3000);
             omega.appl.OmegaAppl.closeSplash();

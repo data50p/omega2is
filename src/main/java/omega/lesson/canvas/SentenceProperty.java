@@ -3,12 +3,12 @@ package omega.lesson.canvas;
 
 import fpdo.sundry.S;
 import omega.OmegaContext;
-import omega.i18n.T;
+import omega.swing.filechooser.ChooseActionMovieFile;
+import omega.t9n.T;
 import omega.lesson.LessonContext;
 import omega.swing.filechooser.ChooseSignFileAlt;
 import omega.swing.TableSorter;
 import omega.swing.filechooser.ChooseGenericFile;
-import omega.swing.filechooser.ChooseSpecificActionFile;
 import omega.value.Value;
 import omega.value.Values;
 import org.hs.jfc.FormPanel;
@@ -387,7 +387,7 @@ public class SentenceProperty extends Property_B {
     }
 
     String setActionField(String current) {
-        ChooseSpecificActionFile choose_f = new ChooseSpecificActionFile();
+        ChooseActionMovieFile choose_f = new ChooseActionMovieFile(false);
 
         String url_s = null;
         int rv = choose_f.showDialog(omega.lesson.appl.ApplContext.top_frame, T.t("Select"));

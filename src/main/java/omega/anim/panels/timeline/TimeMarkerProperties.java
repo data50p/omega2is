@@ -7,7 +7,7 @@ import omega.anim.tool.timeline.TimeMarker;
 import omega.anim.tool.timeline.TriggerEvent;
 import omega.anim.tool.timeline.TriggerEventFactory;
 import omega.anim.tool.timeline.TriggerEventSelections;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.swing.GBC_Factory;
 import omega.swing.filechooser.ChooseAudioFile;
 import omega.swing.properties.OmegaProperties;

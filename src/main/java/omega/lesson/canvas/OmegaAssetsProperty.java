@@ -4,9 +4,9 @@ package omega.lesson.canvas;
 import fpdo.sundry.S;
 import omega.OmegaConfig;
 import omega.OmegaContext;
-import omega.Version;
+import omega.OmegaVersion;
 import omega.adm.assets.TargetCombinations;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.lesson.LessonContext;
 import omega.swing.filechooser.ChooseDir;
 import omega.swing.filechooser.ChooseOmegaBundleFile;
@@ -63,7 +63,7 @@ public class OmegaAssetsProperty extends Property_B {
     private JTextField infoTF;
 
     OmegaAssetsProperty(JFrame owner, LessonContext l_ctxt) {
-        super(owner, T.t("Omega - Assets Dialog"));
+        super(owner, T.t("Omega - Assets Bundle Dialog"));
         this.owner = owner;
         this.l_ctxt = l_ctxt;
         build(getContentPane());
@@ -137,7 +137,7 @@ public class OmegaAssetsProperty extends Property_B {
                         ZipOutputStream out = new ZipOutputStream(new FileOutputStream(file));
                         StringBuilder sb = new StringBuilder();
                         sb.append("type: omega-assets\n");
-                        sb.append("version: " + Version.getVersion() + "\n");
+                        sb.append("version: " + OmegaVersion.getVersion() + "\n");
                         sb.append("saved: " + new Date() + "\n");
                         sb.append("user: " + System.getProperty("user.name") + "\n");
                         sb.append("info: " + infoTF.getText() + "\n");

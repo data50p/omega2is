@@ -1,7 +1,7 @@
 package omega.lesson.canvas.result;
 
 import omega.adm.register.data.*;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.swing.GBC_Factory;
 

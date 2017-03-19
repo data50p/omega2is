@@ -49,7 +49,7 @@ public class HelpSystem {
     }
 
     protected String mkFileName(String base_name) {
-        String lang = omega.i18n.T.lang;
+        String lang = omega.t9n.T.lang;
 
         return base_name + "." + lang + ".html";
     }

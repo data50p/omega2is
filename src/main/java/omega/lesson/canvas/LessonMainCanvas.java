@@ -2,7 +2,7 @@ package omega.lesson.canvas;
 
 import omega.OmegaConfig;
 import omega.OmegaContext;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
 import omega.lesson.repository.LessonItem;

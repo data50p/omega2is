@@ -10,17 +10,17 @@ import fpdo.sundry.PreferenceUtil;
 /**
  * @author lars
  */
-public class LicenseShow {
+public class LicenseShowManager {
     private static String licShow = "licShow";
     private static String yes = "yes";
     private static String no = "no";
 
 
-    LicenseShow() {
+    LicenseShowManager() {
     }
 
     public static boolean showAndAccepted() {
-        PreferenceUtil pu = new PreferenceUtil(LicenseShow.class);
+        PreferenceUtil pu = new PreferenceUtil(LicenseShowManager.class);
         String answer = (String) pu.getObject(licShow, no);
 
         if (OmegaContext.isDeveloper() || yes.equals(answer))

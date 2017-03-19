@@ -2,7 +2,7 @@ package omega.lesson.appl;
 
 import omega.OmegaConfig;
 import omega.OmegaContext;
-import omega.connect.httpd.Server;
+import omega.servers.httpd.Server;
 import omega.help.HelpSystem;
 
 import javax.swing.*;

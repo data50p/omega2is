@@ -33,8 +33,8 @@ public class OmegaContext {
     public static Log lesson_log = def_log;
     public static Log audio_log = def_log;
 
-    private static String lesson_lang = omega.i18n.T.lang;
-    private static String lesson_lang_editor = omega.i18n.T.lang;
+    private static String lesson_lang = omega.t9n.T.lang;
+    private static String lesson_lang_editor = omega.t9n.T.lang;
 
     public static String SPEED = "";
 
@@ -100,6 +100,10 @@ public class OmegaContext {
             asa[ix++] = antiOmegaAssets(s);
         }
         return asa;
+    }
+
+    public static String omegaAssetsName() {
+        return currentOmegaAssets;
     }
 
     /**

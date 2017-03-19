@@ -1,11 +1,11 @@
 package omega.appl.lesson;
 
 import fpdo.sundry.S;
-import omega.LicenseShow;
+import omega.LicenseShowManager;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.appl.OmegaAppl;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.swing.filechooser.ChooseLessonFile;
 import omega.lesson.appl.LessonRuntime;
 import omega.util.Files;
@@ -109,7 +109,7 @@ public class Runtime extends OmegaAppl {
             ch = 'a';
         }
 
-        if (LicenseShow.showAndAccepted()) {
+        if (LicenseShowManager.showAndAccepted()) {
             Runtime rt = new Runtime(fn, ask, with_frame, ch);
         } else {
             System.exit(1);

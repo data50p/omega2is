@@ -4,7 +4,7 @@ import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
 import omega.anim.appl.EditStateListener;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.lesson.machine.Item;
 import omega.lesson.machine.Target;
 import omega.swing.filechooser.ChooseActionFile;
@@ -54,6 +54,7 @@ public class LessonEditorPanel extends JPanel {
 
     AnimEditor anim_editor;
 
+    JTextField omega_assets_name;
     JTextField lesson_name;
     JTextField lesson_link_next;
     JCheckBox enable_LLN;
@@ -249,6 +250,7 @@ public class LessonEditorPanel extends JPanel {
                         String oa = omega.util.Files.mkRelativeCWD(url_s);
                         System.err.println("setOmegaAssets: " + url_s);
                         OmegaContext.setOmegaAssets(oa);
+                        omega_assets_name.setText(OmegaContext.omegaAssetsName());
                     } catch (IOException e) {
                     }
                 }
@@ -296,6 +298,26 @@ public class LessonEditorPanel extends JPanel {
 
         int Y = 0;
         int X = 0;
+        add(new JLabel(T.t("Omega Assets:")), gbcf.createL(X++, Y, 1));
+        add(omega_assets_name = new JTextField(T.t("")), gbcf.createL(X++, Y, 2));
+        omega_assets_name.addActionListener(myactl);
+        omega_assets_name.setActionCommand("omega_assets_name");
+        omega_assets_name.setEditable(false);
+        omega_assets_name.setText(OmegaContext.omegaAssetsName());
+        Document doc3 = omega_assets_name.getDocument();
+        doc3.addDocumentListener(mydocl);
+
+        X++;
+        add(setAssets = new JButton(T.t("Set Assets")), gbcf.createL(X++, Y, 1));
+        setAssets.setActionCommand("setassets");
+        setAssets.addActionListener(myactl);
+
+        add(b = getOmegaAssetsDependenciec = new JButton("Assets Bundle..."), gbcf.createL(X++, Y, 1));
+        b.setActionCommand("getOmegaAssetsDependenciec");
+        b.addActionListener(myactl);
+
+        Y++;
+        X = 0;
         add(new JLabel(T.t("Lesson name:")), gbcf.createL(X++, Y, 1));
         add(lesson_name = new JTextField(T.t("")), gbcf.createL(X++, Y, 1));
         lesson_name.addActionListener(myactl);
@@ -315,7 +337,6 @@ public class LessonEditorPanel extends JPanel {
         jplln.add(lesson_link_next);
         add(jplln, gbcf.createL(X++, Y, 2));
 
-        X++;
         jplln.add(b = getFiles_LLN = new JButton("..."), gbcf.createL(X++, Y, 1));
         b.setActionCommand("getFiles_LLN");
         b.addActionListener(myactl);
@@ -324,7 +345,7 @@ public class LessonEditorPanel extends JPanel {
         first_LLN = new JCheckBox();
         first_LLN.setActionCommand("firstLLN");
         first_LLN.addChangeListener(mychtl);
-        add(first_LLN);
+        add(first_LLN, gbcf.createL(X++, Y, 1));
 
         Y++;
         X = 0;
@@ -342,13 +363,11 @@ public class LessonEditorPanel extends JPanel {
         b.setActionCommand("snt_prop");
         b.addActionListener(myactl);
 
-        add(b = getOmegaAssetsDependenciec = new JButton("Assets"), gbcf.createL(X++, Y, 1));
-        b.setActionCommand("getOmegaAssetsDependenciec");
-        b.addActionListener(myactl);
-
-        add(editorLessonLang = new JTextField(T.t("Lesson Lang")), gbcf.createL(X++, Y, 1));
+        JPanel jplln2 = new JPanel();
+        add(jplln2, gbcf.createL(X++, Y, 1));
+        jplln2.add(new JLabel(T.t("Lesson lang:")));
+        jplln2.add(editorLessonLang = new JTextField(T.t("Lesson Lang"), 8));
         editorLessonLang.setText(OmegaContext.getLessonLang());
-        editorLessonLang.setMinimumSize(new Dimension(50, 20));
 
         Y++;
         X = 0;
@@ -374,10 +393,6 @@ public class LessonEditorPanel extends JPanel {
         add(editanim = new JButton(T.t("Edit anim")), gbcf.createL(X++, Y, 1));
         editanim.setActionCommand("editanim");
         editanim.addActionListener(myactl);
-
-        add(setAssets = new JButton(T.t("Set Assets")), gbcf.createL(X++, Y, 1));
-        setAssets.setActionCommand("setassets");
-        setAssets.addActionListener(myactl);
     }
 
     void destroyAllPopups() {

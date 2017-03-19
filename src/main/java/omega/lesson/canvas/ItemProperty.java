@@ -3,7 +3,7 @@ package omega.lesson.canvas;
 
 import fpdo.sundry.S;
 import omega.OmegaContext;
-import omega.i18n.T;
+import omega.t9n.T;
 import omega.lesson.repository.Locator;
 import omega.swing.filechooser.ChooseActionMovieFile;
 import omega.swing.filechooser.ChooseAudioFile;
@@ -44,7 +44,7 @@ public class ItemProperty extends Property_B implements ActionListener {
         String fn = null;
         try {
             String url_s = null;
-            ChooseActionMovieFile choose_af = new ChooseActionMovieFile();
+            ChooseActionMovieFile choose_af = new ChooseActionMovieFile(true);
             int rv = choose_af.showDialog(this, T.t("Select"));
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_af.getSelectedFile();
