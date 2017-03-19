@@ -1,4 +1,4 @@
-package omega.lesson.settings;
+package omega.swing.filechooser;
 
 import darrylbu.util.SwingUtils;
 import omega.util.ExtensionFileFilter;

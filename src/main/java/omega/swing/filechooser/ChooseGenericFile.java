@@ -1,4 +1,4 @@
-package omega.lesson.canvas;
+package omega.swing.filechooser;
 
 
 import omega.Context;
@@ -8,7 +8,7 @@ import java.io.File;
 
 
 public class ChooseGenericFile extends JFileChooser {
-    ChooseGenericFile() {
+    public ChooseGenericFile() {
         this(false);
     }
 

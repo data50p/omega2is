@@ -8,6 +8,7 @@ import omega.anim.tool.timeline.TriggerEventFactory;
 import omega.anim.tool.timeline.TriggerEventSelections;
 import omega.i18n.T;
 import omega.swing.GBC_Factory;
+import omega.swing.filechooser.ChooseAudioFile2;
 import omega.swing.properties.OmegaProperties;
 
 import javax.swing.*;
@@ -320,15 +321,15 @@ public class TimeMarkerProperties extends OmegaProperties implements ActionListe
 
     public void actionPerformed(ActionEvent ev) {
         if (ev.getActionCommand().equals("set_file")) {
-            ChooseAudioFile choose_f = new ChooseAudioFile();
+            ChooseAudioFile2 choose_f = new ChooseAudioFile2();
 
             String url_s = null;
             int rv = choose_f.showDialog(null, T.t("Load"));
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
                 url_s = omega.util.Files.toURL(file);
-// 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
-// 		    url_s = url_s + "." + ChooseAudioFile.ext;
+// 		if ( ! url_s.endsWith("." + ChooseAudioFile2.ext) )
+// 		    url_s = url_s + "." + ChooseAudioFile2.ext;
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
                 String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);

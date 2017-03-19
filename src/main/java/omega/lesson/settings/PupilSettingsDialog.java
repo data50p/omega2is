@@ -9,6 +9,7 @@ import omega.Context;
 import omega.anim.context.AnimContext;
 import omega.i18n.T;
 import omega.lesson.pupil.Pupil;
+import omega.swing.filechooser.*;
 import omega.util.Files;
 import org.hs.jfc.FormPanel;
 

@@ -1,4 +1,4 @@
-package omega.anim.appl;
+package omega.swing.filechooser;
 
 import omega.Context;
 import omega.util.ExtensionFileFilter;
@@ -8,9 +8,9 @@ import java.io.File;
 
 
 public class ChooseAnimatorFile extends JFileChooser {
-    static String ext = "omega_anim";
+    public static String ext = "omega_anim";
 
-    ChooseAnimatorFile() {
+    public ChooseAnimatorFile() {
         super(new File(Context.omegaAssets("anim")));
         ExtensionFileFilter fi = new ExtensionFileFilter();
         fi.addExtension(ext);

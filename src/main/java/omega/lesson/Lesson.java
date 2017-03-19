@@ -28,6 +28,8 @@ import omega.lesson.settings.OmegaSettingsDialog;
 import omega.lesson.settings.PupilSettingsDialog;
 import omega.media.audio.APlayer;
 import omega.media.video.VideoUtil;
+import omega.swing.filechooser.ChooseColorFile;
+import omega.swing.filechooser.ChooseLessonFile;
 import omega.util.Log;
 import omega.value.Values;
 

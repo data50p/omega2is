@@ -1,4 +1,4 @@
-package omega.lesson.settings;
+package omega.swing.filechooser;
 
 import omega.i18n.T;
 import omega.util.ExtensionFileFilter;
@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.io.File;
 
 public class ChooseMovieFile extends JFileChooser {
-    ChooseMovieFile() {
+    public ChooseMovieFile() {
         super(new File("media"));
         ExtensionFileFilter fi = new ExtensionFileFilter(new String[]{"mpg",
                 "mpeg",

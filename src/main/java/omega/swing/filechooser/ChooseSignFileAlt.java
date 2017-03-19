@@ -1,4 +1,4 @@
-package omega.lesson.canvas.result;
+package omega.swing.filechooser;
 
 
 import omega.Context;

@@ -1,4 +1,4 @@
-package omega.lesson.settings;
+package omega.swing.filechooser;
 
 import omega.i18n.T;
 import omega.util.ExtensionFileFilter;
@@ -8,7 +8,7 @@ import java.io.File;
 
 
 public class ChoosePImageFile extends JFileChooser {
-    ChoosePImageFile() {
+    public ChoosePImageFile() {
         super(new File("media"));
         ExtensionFileFilter fi = new ExtensionFileFilter(new String[]{"jpg"});
         setFileFilter(fi);

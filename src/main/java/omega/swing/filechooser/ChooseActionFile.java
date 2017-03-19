@@ -1,4 +1,4 @@
-package omega.lesson.canvas;
+package omega.swing.filechooser;
 
 import omega.Context;
 import omega.util.ExtensionFileFilter;
@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.io.File;
 
 public class ChooseActionFile extends JFileChooser {
-    ChooseActionFile() {
+    public ChooseActionFile() {
         super(new File(Context.omegaAssets(".")));
         ExtensionFileFilter fi = new ExtensionFileFilter();
         fi.addExtension("omega_lesson");

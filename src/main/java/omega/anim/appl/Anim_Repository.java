@@ -8,6 +8,8 @@ import omega.Context;
 import omega.adm.persistence.xml.XML_Repository;
 import omega.anim.context.AnimContext;
 import omega.i18n.T;
+import omega.swing.filechooser.ChooseAnimatorFile;
+import omega.swing.filechooser.ChooseImageFile2;
 import omega.util.Files;
 
 import javax.swing.*;
@@ -202,7 +204,7 @@ public class Anim_Repository extends XML_Repository {
 
     public String getImageURL_Dlg(Component c) {
         String url_s = null;
-        ChooseImageFile choose_if = new ChooseImageFile();
+        ChooseImageFile2 choose_if = new ChooseImageFile2();
         int rv = choose_if.showDialog(c, T.t("Select"));
         if (rv == JFileChooser.APPROVE_OPTION) {
             File file = choose_if.getSelectedFile();

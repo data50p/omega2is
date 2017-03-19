@@ -5,6 +5,9 @@ import fpdo.sundry.S;
 import omega.Context;
 import omega.i18n.T;
 import omega.lesson.repository.Locator;
+import omega.swing.filechooser.ChooseActionFile2;
+import omega.swing.filechooser.ChooseAudioFile;
+import omega.swing.filechooser.ChooseSignFile;
 import omega.util.Files;
 import omega.value.Value;
 import omega.value.Values;
@@ -234,8 +237,8 @@ public class ItemProperty extends Property_B implements ActionListener {
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
                 String url_s = omega.util.Files.toURL(file);
-// 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
-// 		    url_s = url_s + "." + ChooseAudioFile.ext;
+// 		if ( ! url_s.endsWith("." + ChooseAudioFile2.ext) )
+// 		    url_s = url_s + "." + ChooseAudioFile2.ext;
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
                 String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
@@ -253,8 +256,8 @@ public class ItemProperty extends Property_B implements ActionListener {
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
                 String url_s = omega.util.Files.toURL(file);
-// 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
-// 		    url_s = url_s + "." + ChooseAudioFile.ext;
+// 		if ( ! url_s.endsWith("." + ChooseAudioFile2.ext) )
+// 		    url_s = url_s + "." + ChooseAudioFile2.ext;
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
                 String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
@@ -272,8 +275,8 @@ public class ItemProperty extends Property_B implements ActionListener {
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
                 String url_s = omega.util.Files.toURL(file);
-// 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
-// 		    url_s = url_s + "." + ChooseAudioFile.ext;
+// 		if ( ! url_s.endsWith("." + ChooseAudioFile2.ext) )
+// 		    url_s = url_s + "." + ChooseAudioFile2.ext;
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
                 String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);
@@ -291,8 +294,8 @@ public class ItemProperty extends Property_B implements ActionListener {
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
                 String url_s = omega.util.Files.toURL(file);
-// 		if ( ! url_s.endsWith("." + ChooseAudioFile.ext) )
-// 		    url_s = url_s + "." + ChooseAudioFile.ext;
+// 		if ( ! url_s.endsWith("." + ChooseAudioFile2.ext) )
+// 		    url_s = url_s + "." + ChooseAudioFile2.ext;
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + url_s);
                 String fn = omega.util.Files.mkRelFnameAlt(url_s, "media");
 //log		omega.Context.sout_log.getLogger().info("ERR: " + "FILE " + fn);

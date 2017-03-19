@@ -4,7 +4,7 @@ import fpdo.sundry.S;
 import omega.LicenseShow;
 import omega.appl.OmegaAppl;
 import omega.i18n.T;
-import omega.lesson.ChooseLessonFile;
+import omega.swing.filechooser.ChooseLessonFile;
 import omega.lesson.appl.LessonRuntime;
 import omega.util.Files;
 

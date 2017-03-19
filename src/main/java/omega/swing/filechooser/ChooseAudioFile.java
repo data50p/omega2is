@@ -1,4 +1,4 @@
-package omega.lesson.canvas;
+package omega.swing.filechooser;
 
 
 import omega.Context;
@@ -9,7 +9,7 @@ import java.io.File;
 
 
 public class ChooseAudioFile extends JFileChooser {
-    ChooseAudioFile() {
+    public ChooseAudioFile() {
         super(new File(Context.omegaAssets("media/audio")));
         ExtensionFileFilter fi = new ExtensionFileFilter();
         fi.addExtension("mp3");

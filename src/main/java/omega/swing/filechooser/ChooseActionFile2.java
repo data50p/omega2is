@@ -1,4 +1,4 @@
-package omega.lesson.canvas;
+package omega.swing.filechooser;
 
 
 import omega.Context;
@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.io.File;
 
 public class ChooseActionFile2 extends JFileChooser {
-    ChooseActionFile2() {
+    public ChooseActionFile2() {
         super(new File(Context.omegaAssets("anim")));
         ExtensionFileFilter fi = new ExtensionFileFilter();
         fi.addExtension("omega_anim");

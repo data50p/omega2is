@@ -1,5 +1,6 @@
-package omega.lesson;
+package omega.swing.filechooser;
 
+import omega.Context;
 import omega.util.ExtensionFileFilter;
 
 import javax.swing.*;
@@ -7,11 +8,11 @@ import java.io.File;
 
 //import omega.lesson.test.*;
 
-public class ChooseStoryFile extends JFileChooser {
-    static String ext = "omega_story_replay";
+public class ChooseColorFile extends JFileChooser {
+    public static String ext = "omega_colors";
 
-    public ChooseStoryFile(String dir) {
-        super(new File(dir));
+    public ChooseColorFile() {
+        super(new File(Context.omegaAssets(".")));
         ExtensionFileFilter fi = new ExtensionFileFilter();
         fi.addExtension(ext);
         setFileFilter(fi);
