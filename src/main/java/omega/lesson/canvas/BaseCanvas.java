@@ -4,10 +4,10 @@ import fpdo.sundry.S;
 import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
-import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
 import omega.lesson.appl.ApplContext;
+import omega.t9n.T;
 import omega.util.SundryUtils;
 
 import javax.swing.*;
@@ -788,7 +788,39 @@ public class BaseCanvas extends JPanel {
         repaint(100);
     }
 
+    public void setColor(String id, HashMap<String, Color> col) {
+        colors.put(id, col);
+        repaint(100);
+    }
+
     public Color getColor(String id) {
+        Color col = (Color) colors.get(id);
+        if (col == null)
+            col = Color.black;
+        return col;
+    }
+
+    public Color getColor(String id, String mod) {
+        if (SundryUtils.empty(mod))
+            return getColor(id);
+
+
+        String idMod = id.replace("hi", "bg").replace("hs", "bg");
+        HashMap<String, Color> cols = (HashMap<String, Color>) colors.get(":" + idMod);
+        if (cols != null) {
+            Color col = cols.get(mod);
+            if (col != null) {
+                switch (id) {
+                    case "bt_hi":
+                        col = col.brighter();
+                        break;
+                    case "bt_hs":
+                        col = col.brighter().brighter();
+                }
+                return col;
+            }
+        }
+
         Color col = (Color) colors.get(id);
         if (col == null)
             col = Color.black;
@@ -1014,8 +1046,11 @@ public class BaseCanvas extends JPanel {
         Iterator it = colors.keySet().iterator();
         while (it.hasNext()) {
             String k = (String) it.next();
-            Color col = (Color) colors.get(k);
-            el.addAttr("color_" + k, "#" + Integer.toHexString(0xffffff & col.getRGB()));
+            if (colors.get(k) instanceof Color) {
+                Color col = (Color) colors.get(k);
+                el.addAttr("color_" + k, "#" + Integer.toHexString(0xffffff & col.getRGB()));
+            } else {
+            }
         }
     }
 
@@ -1023,8 +1058,11 @@ public class BaseCanvas extends JPanel {
         Iterator it = colors.keySet().iterator();
         while (it.hasNext()) {
             String k = (String) it.next();
-            Color col = (Color) colors.get(k);
-            el.addAttr("color_" + k, "#" + Integer.toHexString(0xffffff & col.getRGB()));
+            if (colors.get(k) instanceof Color) {
+                Color col = (Color) colors.get(k);
+                el.addAttr("color_" + k, "#" + Integer.toHexString(0xffffff & col.getRGB()));
+            } else {
+            }
         }
     }
 
@@ -1036,6 +1074,9 @@ public class BaseCanvas extends JPanel {
                 Iterator it = colors.keySet().iterator();
                 while (it.hasNext()) {
                     String k = (String) it.next();
+                    if (!(colors.get(k) instanceof Color))
+                        continue;
+
                     Color col = (Color) colors.get(k);
                     String c = el.findAttr("color_" + k);
 
@@ -1049,6 +1090,26 @@ public class BaseCanvas extends JPanel {
                                 rgb = Integer.parseInt(c.substring(1), 16);
                             setColor(k, new Color(rgb));
                         }
+                    }
+
+                    c = el.findAttr("colorTid_" + k);
+                    // s#123456,v#123456,o#123456
+                    if (c != null) {
+//			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "col " + k + ' ' + col + ' ' + c);
+                        HashMap<String, Color> cols = new HashMap<>();
+                        String[] ca = c.split(",");
+                        for (String c1 : ca) {
+                            String[] ca2 = c1.split("#");
+                            if (ca2.length == 2) {
+                                int rgb;
+                                if (ca2[1].length() == 9)
+                                    rgb = Integer.parseInt(ca2[1].substring(3), 16);
+                                else
+                                    rgb = Integer.parseInt(ca2[1].substring(0), 16);
+                                cols.put(ca2[0], new Color(rgb));
+                            }
+                        }
+                        setColor(":" + k, cols);
                     }
                 }
                 repaint();

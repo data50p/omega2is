@@ -362,24 +362,26 @@ public class LessonCanvas extends BaseCanvas {
         void draw(Graphics2D g2, boolean ink) {
             String s = "";
             Item itm = getItem();
+            String colorModifier = "";
             if (itm != null) {
                 s = itm.getDefaultFilledText();
+                colorModifier = itm.it_ent.tid;
             }
 
             g2.setStroke(stroke);
             if (s.length() > 0) {
                 if (state[SELECTED]) {
-                    g2.setColor(getColor("bt_hs"));
+                    g2.setColor(getColor("bt_hs", colorModifier));
                     if (ink) {
                         g2.fill(r);
                     }
                 } else if (state[MARKED]) {
-                    g2.setColor(getColor("bt_hi"));
+                    g2.setColor(getColor("bt_hi", colorModifier));
                     if (ink) {
                         g2.fill(r);
                     }
                 } else {
-                    g2.setColor(getColor("bt_bg"));
+                    g2.setColor(getColor("bt_bg", colorModifier));
                     if (ink) {
                         g2.fill(r);
                     }
