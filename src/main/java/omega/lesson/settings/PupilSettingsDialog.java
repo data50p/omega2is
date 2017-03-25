@@ -924,7 +924,7 @@ public class PupilSettingsDialog extends SettingsDialog {
     }
 
     private int freeOption() {
-	for (int i = 1; i < 99; i++) {
+	for (int i = 1; i <= 9; i++) {
 	    if (OmegaContext.omegaAssetsExist("option" + i + ".omega_colors"))
 		continue;
 	    return i;

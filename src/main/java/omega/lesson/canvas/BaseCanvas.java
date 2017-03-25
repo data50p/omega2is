@@ -815,7 +815,7 @@ public class BaseCanvas extends JPanel {
                         col = col.brighter();
                         break;
                     case "bt_hs":
-                        col = col.brighter().brighter();
+                        col = moreGray(moreGray(col.brighter()));
                 }
                 return col;
             }

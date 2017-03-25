@@ -58,6 +58,10 @@
    <string>+</string>
   </void>
   <void method="put">
+   <string>Omega - Assets Bundle Dialog</string>
+   <string>Omega - Assets Bundle Dialog</string>
+  </void>
+  <void method="put">
    <string>Import Omega Bundle</string>
    <string>Import Omega Bundle</string>
   </void>
