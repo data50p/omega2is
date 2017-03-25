@@ -1071,51 +1071,61 @@ public class BaseCanvas extends JPanel {
             if (el != null) {
                 initColors();
 
-                Iterator it = colors.keySet().iterator();
-                while (it.hasNext()) {
-                    String k = (String) it.next();
+                HashMap<String,Object> newColors = new HashMap<>();
+
+                for(Object o : colors.keySet()) {
+                    System.err.println("o is " + o);
+                    String k = (String)o;
+/*
                     if (!(colors.get(k) instanceof Color))
                         continue;
+*/
 
-                    Color col = (Color) colors.get(k);
-                    String c = el.findAttr("color_" + k);
+                    try {
+                        Color col = (Color) colors.get(k);
+                        String c = el.findAttr("color_" + k);
 
-                    if (c != null) {
+                        if (c != null) {
 //			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "col " + k + ' ' + col + ' ' + c);
-                        if (c.charAt(0) == '#') {
-                            int rgb;
-                            if (c.length() == 9)
-                                rgb = Integer.parseInt(c.substring(3), 16);
-                            else
-                                rgb = Integer.parseInt(c.substring(1), 16);
-                            setColor(k, new Color(rgb));
-                        }
-                    }
-
-                    c = el.findAttr("colorTid_" + k);
-                    // s#123456,v#123456,o#123456
-                    if (c != null) {
-//			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "col " + k + ' ' + col + ' ' + c);
-                        HashMap<String, Color> cols = new HashMap<>();
-                        String[] ca = c.split(",");
-                        for (String c1 : ca) {
-                            String[] ca2 = c1.split("#");
-                            if (ca2.length == 2) {
+                            if (c.charAt(0) == '#') {
                                 int rgb;
-                                if (ca2[1].length() == 9)
-                                    rgb = Integer.parseInt(ca2[1].substring(3), 16);
+                                if (c.length() == 9)
+                                    rgb = Integer.parseInt(c.substring(3), 16);
                                 else
-                                    rgb = Integer.parseInt(ca2[1].substring(0), 16);
-                                cols.put(ca2[0], new Color(rgb));
+                                    rgb = Integer.parseInt(c.substring(1), 16);
+                                newColors.put(k, new Color(rgb));
                             }
                         }
-                        setColor(":" + k, cols);
+
+                        c = el.findAttr("colorTid_" + k);
+                        // s#123456,v#123456,o#123456
+                        if (c != null) {
+//			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "col " + k + ' ' + col + ' ' + c);
+                            HashMap<String, Color> cols = new HashMap<>();
+                            String[] ca = c.split(",");
+                            for (String c1 : ca) {
+                                String[] ca2 = c1.split("#");
+                                if (ca2.length == 2) {
+                                    int rgb;
+                                    if (ca2[1].length() == 9)
+                                        rgb = Integer.parseInt(ca2[1].substring(3), 16);
+                                    else
+                                        rgb = Integer.parseInt(ca2[1].substring(0), 16);
+                                    cols.put(ca2[0], new Color(rgb));
+                                }
+                            }
+                            newColors.put(":" + k, cols);
+                        }
+                    } catch (ClassCastException ex) {
+                        ex.printStackTrace();
                     }
                 }
+                colors.putAll(newColors);
                 repaint();
             } else {
             }
         } catch (Exception ex) {
+            ex.printStackTrace();
             Lesson.global_skipF(true);
             JOptionPane.showMessageDialog(ApplContext.top_frame,
                     "Can't create from file\n" + ex);
