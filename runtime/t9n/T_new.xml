@@ -390,6 +390,10 @@
    <string>Croatian</string>
   </void>
   <void method="put">
+   <string>English</string>
+   <string>English</string>
+  </void>
+  <void method="put">
    <string>default.omega_assets/register/Nynorsk</string>
    <string>default.omega_assets/register/Nynorsk</string>
   </void>

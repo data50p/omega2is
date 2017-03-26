@@ -5,7 +5,7 @@
 <values>
 <value key="speed" val="0"/>
 <value key="speech" val="feedback/AudioPos/cheering.wav"/>
-<value key="theme" val="option3.omega_colors"/>
+<value key="theme" val="default.omega_colors"/>
 <value key="pingSentence" val="true"/>
 <value key="image_wrong_on" val="true"/>
 <value key="space_key" val="next"/>
