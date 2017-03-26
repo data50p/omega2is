@@ -262,8 +262,10 @@ public class Target {
             Element ell = story_el.findElement("link", 0);
             //log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FSt story/link " + ell);
             String next = ell.findAttr("next");
-            OmegaContext.sout_log.getLogger().info("ERR: " + "FSt story/link[next] " + next);
-            story_next = next;
+            if ( next != null ) {
+                OmegaContext.sout_log.getLogger().info("ERR: " + "FSt story/link[next] " + next);
+                story_next = next;
+            }
         }
     }
 
