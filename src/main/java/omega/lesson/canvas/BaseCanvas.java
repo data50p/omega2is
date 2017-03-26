@@ -1082,6 +1082,9 @@ public class BaseCanvas extends JPanel {
 */
 
                     try {
+                        if ( ! (colors.get(k) instanceof Color) )
+                            continue;
+                        
                         Color col = (Color) colors.get(k);
                         String c = el.findAttr("color_" + k);
 
