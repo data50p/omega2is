@@ -183,6 +183,7 @@ public class OmegaContext {
     static public HelpStack HELP_STACK = new HelpStack();
 
     public static void setLogon(boolean b) {
+        b |= OmegaContext.isDeveloper();
         Log.getLogger().setLevel(b ? Level.ALL : Level.OFF);
     }
 

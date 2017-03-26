@@ -92,7 +92,7 @@ public class Runtime extends OmegaAppl {
         boolean with_frame = flag.get("small") != null;
         boolean logon = flag.get("log") != null;
 
-        OmegaContext.setLogon(logon);
+        OmegaContext.setLogon(OmegaContext.isDeveloper() || logon);
 
         boolean b_p = flag.get("pupil") != null;
         boolean b_a = flag.get("admin") != null;

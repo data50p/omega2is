@@ -17,6 +17,8 @@ import java.awt.geom.Rectangle2D;
 import java.awt.image.RenderedImage;
 import java.awt.print.PageFormat;
 import java.awt.print.Printable;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
@@ -97,6 +99,26 @@ public class PrintMgr implements Printable {
         item_fo = fo;
     }
 
+    public PrinterJob getPrintJob() throws PrinterException {
+	PrinterJob job = PrinterJob.getPrinterJob();
+	boolean doPrint = job.printDialog();
+	if (doPrint) {
+	    job.setPrintable(this);
+	    job.print();
+	    return job;
+	} else {
+	    return null;
+	}
+    }
+
+    public void doThePrint(PrinterJob job) {
+	try {
+	    job.print();
+	} catch (PrinterException e) {
+	    e.printStackTrace();
+	}
+    }
+
     public PrintService getPrintService(int nid) {
         DocFlavor flavor = DocFlavor.SERVICE_FORMATTED.PRINTABLE;
         PrintRequestAttributeSet aset = new HashPrintRequestAttributeSet();
@@ -120,27 +142,34 @@ public class PrintMgr implements Printable {
     String lesson_name;
 
     void print(PrintService print_service,
-               String title,
-               ArrayList sentences,
-               String lesson_name) throws Exception {
-        this.sentences = sentences;
-        this.lesson_name = lesson_name;
+	       String title,
+	       ArrayList sentences,
+	       String lesson_name) throws Exception {
+	this.sentences = sentences;
+	this.lesson_name = lesson_name;
 
-        try {
-            PrintRequestAttributeSet aset = new HashPrintRequestAttributeSet();
-            aset.add(OrientationRequested.PORTRAIT);
-            aset.add(new JobName("Omega sentences", null));
-            DocPrintJob pj = print_service.createPrintJob();
+	try {
+	    PrintRequestAttributeSet aset = new HashPrintRequestAttributeSet();
+	    aset.add(OrientationRequested.PORTRAIT);
+	    aset.add(new JobName("Omega sentences", null));
+	    DocPrintJob pj = print_service.createPrintJob();
 
-            try {
-                Doc doc = new PrintableDoc(this);
-                pj.print(doc, aset);
-            } catch (PrintException ex) {
-                throw new Exception("warning" + ex);
-            }
-        } finally {
-            System.gc();
-        }
+	    try {
+		Doc doc = new PrintableDoc(this);
+		pj.print(doc, aset);
+	    } catch (PrintException ex) {
+		throw new Exception("warning" + ex);
+	    }
+	} finally {
+	    System.gc();
+	}
+    }
+
+    void prepare(String title,
+	       ArrayList sentences,
+	       String lesson_name) throws Exception {
+	this.sentences = sentences;
+	this.lesson_name = lesson_name;
     }
 
     String getPrinterList(String delim) {
@@ -155,21 +184,34 @@ public class PrintMgr implements Printable {
 //		aset.add(new MediaPrintableArea(50, 50, 100, 200, MediaPrintableArea.MM));
         aset.add(new JobName("Omega sentences", null));
 
-//	PrintService[] service = new PrintService[] {PrintServiceLookup.lookupDefaultPrintService()};
+        PrintService ps = PrintServiceLookup.lookupDefaultPrintService();
+
+	PrintService[] serviceD = new PrintService[] {ps};
         PrintService[] service = PrintServiceLookup.lookupPrintServices(null /*flavor*/, aset);
+        if ( service.length == 0 )
+            service = serviceD;
 
         for (int i = 0; i < service.length; i++) {
-            PrintService ps = service[i];
+            PrintService ps2 = service[i];
             if (i > 0)
                 sb.append(delim);
-            sb.append(i + ":  \"" + ps + "\"");
+            sb.append(i + ":  \"" + ps2 + "\"");
         }
 
         return sb.toString();
     }
 
     void listPrinters() {
-        String s = getPrinterList("\nPrintServer: ");
+	PrinterJob job = PrinterJob.getPrinterJob();
+	boolean doPrint = job.printDialog();
+	job.setPrintable(this);
+	try {
+	    job.print();
+	} catch (PrinterException e) {
+	    e.printStackTrace();
+	}
+
+	String s = getPrinterList("\nPrintServer: ");
         OmegaContext.sout_log.getLogger().info("PrintServer: " + s);
     }
 
@@ -288,7 +330,10 @@ public class PrintMgr implements Printable {
             aset.add(new JobName("Omega sentences", null));
 
             PrintService[] services = PrintServiceLookup.lookupPrintServices(flavor, aset);
-
+            if ( services.length == 0 )
+                services = new PrintService[] {PrintServiceLookup.lookupDefaultPrintService()};
+            if ( true )
+                return services[0];
             PrintService ps = ServiceUI.printDialog(null,
                     50,
                     50,
@@ -330,7 +375,7 @@ public class PrintMgr implements Printable {
         flags = S.flagAsMap(args);
         argl = S.argAsList(args);
 
-        PrintMgr pm = new PrintMgr();
+	PrintMgr pm = new PrintMgr();
         pm.listPrinters();
     }
 

@@ -39,6 +39,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.print.PrinterJob;
 import java.io.*;
 import java.lang.reflect.Method;
 import java.text.DateFormat;
@@ -3634,13 +3635,11 @@ public class Lesson implements LessonCanvasListener {
             ArrayList ss_li = sent_li.sentence_list;
             OmegaContext.story_log.getLogger().info("printed 2402 " + ss_li);
             global_skipF(true);
-            if (print_service == null) {
-                print_service = pm.getPrintService(-1);
+            pm.prepare("Omega", ss_li, sent_li.lesson_name);
+            PrinterJob job = pm.getPrintJob();
+            if (job != null) {
+                pm.doThePrint(job);
             }
-            pm.print(print_service,
-                    "Omega",
-                    ss_li,
-                    sent_li.lesson_name);
         } catch (Exception ex) {
             OmegaContext.sout_log.getLogger().info("ERR: " + "PRINTER " + ex);
             ex.printStackTrace();

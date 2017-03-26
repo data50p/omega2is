@@ -78,7 +78,7 @@ public class Log {
                 h2 = new MyHandler(System.out, my_formatter);
                 logger.addHandler(h2);
             }
-            logger.setUseParentHandlers(false);
+            logger.setUseParentHandlers(!false);
             return logger;
         } catch (IOException ex) {
         } catch (NoClassDefFoundError ex) {
