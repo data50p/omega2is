@@ -2266,10 +2266,10 @@ public class Lesson implements LessonCanvasListener {
                     fOs.close();
 
                     global_skipF(true);
-                    JOptionPane.showMessageDialog(ApplContext.top_frame,
-                            T.t("Saved in file") + ' ' + fullname);
+                    JOptionPane.showMessageDialog(ApplContext.top_frame,T.t("Saved in file") + ' ' + fullname);
                     global_skipF(false);
                 } catch (Exception ex) {
+                    ex.printStackTrace();
                     global_skipF(true);
                     JOptionPane.showMessageDialog(ApplContext.top_frame,T.t("File") + ' ' + fullname + ' ' + T.t("not saved") + '.');
                     global_skipF(false);

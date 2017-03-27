@@ -119,7 +119,7 @@ public class LessonMainCanvas extends BaseCanvas {
         String lb = getLessonBase();
         File file;
         if (lb == null)
-            file = new File(/*Locator.fbase + */ OmegaContext.omegaAssets("lesson-" + OmegaContext.getLessonLang() + "/active/" + "story"));      // LESSON-DIR-A
+            file = new File(/*Locator.fbase + */ OmegaContext.omegaAssets("lesson-" + OmegaContext.getLessonLang() + "/active/story"));      // LESSON-DIR-A
         else
             file = new File(/*Locator.fbase + */ OmegaContext.omegaAssets("lesson-" + OmegaContext.getLessonLang() + "/active/" + lb + "/story")); // LESSON-DIR-A
         return file.exists();
