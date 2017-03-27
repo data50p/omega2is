@@ -2271,10 +2271,7 @@ public class Lesson implements LessonCanvasListener {
                     global_skipF(false);
                 } catch (Exception ex) {
                     global_skipF(true);
-                    JOptionPane.showMessageDialog(ApplContext.top_frame,
-                            T.t("File "
-                                    + fullname
-                                    + " not saved."));
+                    JOptionPane.showMessageDialog(ApplContext.top_frame,T.t("File") + ' ' + fullname + ' ' + T.t("not saved") + '.');
                     global_skipF(false);
                     OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
                 }
