@@ -7,11 +7,13 @@ import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.adm.register.data.*;
+import omega.appl.OmegaStartManager;
 import omega.lesson.actions.ActionI;
 import omega.lesson.actions.AnimAction;
 import omega.lesson.actions.MpgAction;
 import omega.lesson.appl.ApplContext;
 import omega.lesson.appl.ApplLesson;
+import omega.lesson.appl.LessonRuntime;
 import omega.lesson.canvas.*;
 import omega.lesson.canvas.result.ResultDialogTableSummary;
 import omega.lesson.machine.Item;
@@ -1029,9 +1031,9 @@ public class Lesson implements LessonCanvasListener {
                     act_pupil_test_p();
                 }
                 if (submsg.equals("quit")) {
-//		    System.exit(0);
-                    sendMsg("exitLesson", "", "");
-                    globalExit = true;
+		    globalExit = true;
+		    if ( ApplContext.top_frame instanceof LessonRuntime )
+			System.exit(0);
                     return;
                 }
             }
@@ -3809,6 +3811,11 @@ public class Lesson implements LessonCanvasListener {
                             showHelp("");
 
 //				showHelp(omega.OmegaContext.HELP_STACK.get());
+                        }
+
+                        if (e.getKeyCode() == KeyEvent.VK_F9) {
+                            OmegaStartManager.nextStart(0);
+                            OmegaStartManager.enableStarter();
                         }
 
                         if (e.getKeyCode() == KeyEvent.VK_F2 && (e.isShiftDown() || e.isControlDown())) {

@@ -21,7 +21,7 @@ public class LessonRuntime extends ApplLesson {
 
         f.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent ev) {
-                //System.exit(0);
+                maybeClose();
             }
         });
 
@@ -31,5 +31,11 @@ public class LessonRuntime extends ApplLesson {
                 fn,
                 false,
                 with_frame);
+    }
+
+    private void maybeClose() {
+        System.err.println("LessonRuntime want to close " + (ApplContext.top_frame == this) + ' ' + ApplContext.top_frame + '\n'+ this);
+        if ( ApplContext.top_frame == this )
+	    System.exit(0);
     }
 }

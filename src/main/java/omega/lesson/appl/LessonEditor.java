@@ -2,6 +2,7 @@ package omega.lesson.appl;
 
 import omega.OmegaConfig;
 import omega.OmegaContext;
+import omega.appl.OmegaStartManager;
 import omega.appl.Omega_IS;
 import omega.t9n.T;
 import omega.lesson.Lesson;
@@ -34,7 +35,7 @@ public class LessonEditor extends ApplLesson {
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent ev) {
                 globalExit2 = true;
-                //System.exit(0);
+                maybeClose();
             }
         });
 
@@ -44,6 +45,12 @@ public class LessonEditor extends ApplLesson {
         le.mact_New();
         le.runLessons(this, mpan, fn, true, false);
         Log.getLogger().info("LessonEditor done " + globalExit2);
+    }
+
+    public void maybeClose() {
+        System.err.println("LessonEditor want to close " + (ApplContext.top_frame == LessonEditor.this) + ' ' + ApplContext.top_frame + '\n' + this);
+        if (ApplContext.top_frame == LessonEditor.this)
+            System.exit(0);
     }
 
     public void processEvent(AWTEvent e) {
@@ -98,6 +105,7 @@ public class LessonEditor extends ApplLesson {
                     le.sendMsg("exitLesson", "");
                     globalExit2 = true;//System.exit(0);
                     setVisible(false);
+                    maybeClose();
                 }
             } else if ("new".equals(cmd)) {
                 boolean do_open = false;
@@ -117,7 +125,7 @@ public class LessonEditor extends ApplLesson {
                 le.mact_Save();
                 unsetDirty();
             } else if ("resetstarter".equals(cmd)) {
-                Omega_IS.enableStarter();
+                OmegaStartManager.enableStarter();
             } else if ("saveas".equals(cmd)) {
                 le.mact_SaveAs();
                 unsetDirty();

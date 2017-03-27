@@ -6,6 +6,7 @@ import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
 import omega.appl.OmegaAppl;
+import omega.lesson.appl.ApplContext;
 
 import javax.swing.*;
 import java.awt.*;
@@ -51,7 +52,7 @@ public class Editor extends OmegaAppl {
 
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.MetalLookAndFeel");
-// UIManager.getSystemLookAndFeelClassName());
+            // UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
         }
 

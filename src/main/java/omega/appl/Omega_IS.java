@@ -4,6 +4,7 @@ import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import fpdo.sundry.PreferenceUtil;
+import fpdo.sundry.S;
 import javafx.embed.swing.JFXPanel;
 import omega.appl.lesson.Editor;
 import omega.appl.lesson.Runtime;
@@ -28,13 +29,10 @@ public class Omega_IS extends JDialog {
     String[] args;
     private static Integer selection = null;
 
-    private static PreferenceUtil pu = new PreferenceUtil(Omega_IS.class);
 
     public Omega_IS() {
         super((Frame) null, "Omega_IS");
         initFx();
-
-        HashMap settings = (HashMap) pu.getObject("settings", new HashMap());
 
         setTitle("Omega_IS - Selection");
         setContentPane(contentPane);
@@ -46,7 +44,8 @@ public class Omega_IS extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
                 selection = 1;
-                savePref(settings);
+                if ( rememberSelectionCheckBox.isSelected() )
+                    OmegaStartManager.savePref(selection);
             }
         });
         lessonRuntimeButton.addActionListener(new ActionListener() {
@@ -54,7 +53,8 @@ public class Omega_IS extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
                 selection = 2;
-                //savePref(settings);
+                if ( rememberSelectionCheckBox.isSelected() )
+                    OmegaStartManager.savePref(selection);
             }
         });
         animEditorButton.addActionListener(new ActionListener() {
@@ -62,7 +62,8 @@ public class Omega_IS extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
                 selection = 3;
-                savePref(settings);
+                if ( rememberSelectionCheckBox.isSelected() )
+                    OmegaStartManager.savePref(selection);
             }
         });
         settingsButton.addActionListener(new ActionListener() {
@@ -74,57 +75,30 @@ public class Omega_IS extends JDialog {
         });
     }
 
-    public static void enableStarter() {
-        HashMap settings = (HashMap) pu.getObject("settings", new HashMap());
-        settings.put("selection", 0);
-        pu.save("settings", settings);
-    }
-
-    private void savePref(HashMap settings) {
-        if (rememberSelectionCheckBox.isSelected()) {
-            settings.put("selection", selection);
-        } else {
-            settings.put("selection", 0);
-        }
-        pu.save("settings", settings);
-    }
-
     public static void initFx() {
         SwingUtilities.invokeLater(() -> {
             new JFXPanel();
         });
     }
 
-    public static void main(String[] args) {
-        HashMap settings = (HashMap) pu.getObject("settings", new HashMap());
-        Integer setting_selection = (Integer) settings.get("selection");
-        if (false && setting_selection != null && setting_selection > 0) {
-            selection = setting_selection;
-        } else {
-            Omega_IS ss = new Omega_IS();
-            ss.args = args;
-            ss.pack();
-            ss.setVisible(true);
-        }
-        while (selection == null || selection == 0) {
-            try {
-                Thread.sleep(200);
-            } catch (InterruptedException e) {
-            }
-        }
+    public static void main(String[] argv) {
+
+        Integer selection = OmegaStartManager.fromAutoStart();
+        if ( selection == null )
+            selection = OmegaStartManager.fromPU(argv, selection);
 
         switch (selection) {
             case 1:
-                Editor.main(args);
+                Editor.main(argv);
                 break;
             case 2:
-                Runtime.main(args);
+                Runtime.main(argv);
                 break;
             case 3:
-                omega.appl.animator.Editor.main(args);
+                omega.appl.animator.Editor.main(argv);
                 break;
             case 4:
-                Settings.main(args);
+                Settings.main(argv);
                 break;
         }
     }
@@ -180,5 +154,15 @@ public class Omega_IS extends JDialog {
      */
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
+    }
+
+    public Integer waitForSelection() {
+        while (selection == null || selection == 0) {
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+            }
+        }
+        return selection;
     }
 }
