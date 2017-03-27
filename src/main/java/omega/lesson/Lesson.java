@@ -2164,7 +2164,7 @@ public class Lesson implements LessonCanvasListener {
                 sentence_canvas.showMsg(null);
                 sentence_canvas.setRead(true);
                 card_show("sent");
-
+                sendMsg("sent_select", "");
             } else if ("sent_quit".equals(msg)) {
                 sentence_canvas.hidePopup(3);
                 play_data_list = new ArrayList();
@@ -2196,21 +2196,15 @@ public class Lesson implements LessonCanvasListener {
                     card_panel.add(action.getCanvas(), "anim1");
                 }
                 card_show("anim1");
+                hit_key = 0;
                 playFromDataList(play_data_list);
                 card_show("sent");
 
             } else if ("sent_print".equals(msg)) {
-                sentence_canvas.togglePopup(3);
-
+                // not anymore                sentence_canvas.togglePopup(3);
+                sendMsg("sent_print_print", "");
             } else if ("sent_print_select".equals(msg)) {
-                sentence_canvas.setBusy(true);
-                PrintMgr pm = new PrintMgr();
-                global_skipF(true);
-                print_service = pm.selectPrinter();
-                global_skipF(false);
-                sentence_canvas.hidePopup(3);
-                sentence_canvas.setBusy(false);
-
+                //not anymore
             } else if ("sent_print_print".equals(msg)) {
                 sentence_canvas.setBusy(true);
                 SentenceList sent_li = (SentenceList) story_hm.get("sentence_list");
@@ -2221,7 +2215,6 @@ public class Lesson implements LessonCanvasListener {
                 printFromDataList(play_data_list_is_last);
                 sentence_canvas.setBusy(false);
                 sentence_canvas.hidePopup(3);
-
             } else if ("sent_save".equals(msg)) {
                 sentence_canvas.hidePopup(3);
                 SentenceList sent_li = (SentenceList) story_hm.get("sentence_list");

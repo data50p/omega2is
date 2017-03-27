@@ -28,11 +28,6 @@ import java.util.Iterator;
 import java.util.List;
 
 public class PrintMgr implements Printable {
-    static HashMap flags;
-    static List argl;
-
-    int selected_printer_nid = 0;
-
     class PrintableDoc implements Doc {
         private Printable printable;
 
@@ -62,31 +57,8 @@ public class PrintMgr implements Printable {
     }
 
     RenderedImage image2;
-
-//     void test2() {
-//  	Tiff t = new Tiff();
-// 	for(int i = 0; i < 5; i++) {
-// 	    int page = i;
-// 	    image2 = t.getIm((String)argl.get(0), page);
-// 	    if ( image2 != null ) {
-// 		int width = image2.getWidth();
-// 		int height = image2.getHeight();
-
-// 		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "wh = " + width + ' ' + height);
-
-// 		PrinterJob pj = PrinterJob.getPrinterJob();
-// 		pj.setPrintable(this);
-// 		if ( pj.printDialog()) {
-// 		    try {
-// 			pj.print();
-// 		    } catch (PrinterException ex) {
-// 			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
-// 		    }
-// 		}
-// 	    }
-// 	}
-//     }
-
+    ArrayList sentences;
+    String lesson_name;
     Font item_fo;
 
     Font getItemFont() {
@@ -104,7 +76,6 @@ public class PrintMgr implements Printable {
 	boolean doPrint = job.printDialog();
 	if (doPrint) {
 	    job.setPrintable(this);
-	    job.print();
 	    return job;
 	} else {
 	    return null;
@@ -119,27 +90,6 @@ public class PrintMgr implements Printable {
 	}
     }
 
-    public PrintService getPrintService(int nid) {
-        DocFlavor flavor = DocFlavor.SERVICE_FORMATTED.PRINTABLE;
-        PrintRequestAttributeSet aset = new HashPrintRequestAttributeSet();
-        aset.add(OrientationRequested.PORTRAIT);
-//		    aset.add(MediaSizeName.ISO_A4);
-//		aset.add(new MediaPrintableArea(50, 50, 100, 200, MediaPrintableArea.MM));
-        aset.add(new JobName("Omega sentences", null));
-
-        flavor = null;
-        if (nid == -1) {
-            return PrintServiceLookup.lookupDefaultPrintService();
-        }
-
-        PrintService[] service = PrintServiceLookup.lookupPrintServices(flavor, aset);
-        if (service == null || service.length == 0 || nid >= service.length)
-            return PrintServiceLookup.lookupDefaultPrintService();
-        return service[nid];
-    }
-
-    ArrayList sentences;
-    String lesson_name;
 
     void print(PrintService print_service,
 	       String title,
@@ -170,49 +120,6 @@ public class PrintMgr implements Printable {
 	       String lesson_name) throws Exception {
 	this.sentences = sentences;
 	this.lesson_name = lesson_name;
-    }
-
-    String getPrinterList(String delim) {
-        StringBuffer sb = new StringBuffer();
-
-        DocFlavor flavor = DocFlavor.SERVICE_FORMATTED.PRINTABLE;
-
-        PrintRequestAttributeSet aset = new HashPrintRequestAttributeSet();
-
-        aset.add(OrientationRequested.PORTRAIT);
-//	aset.add(MediaSizeName.ISO_A4);
-//		aset.add(new MediaPrintableArea(50, 50, 100, 200, MediaPrintableArea.MM));
-        aset.add(new JobName("Omega sentences", null));
-
-        PrintService ps = PrintServiceLookup.lookupDefaultPrintService();
-
-	PrintService[] serviceD = new PrintService[] {ps};
-        PrintService[] service = PrintServiceLookup.lookupPrintServices(null /*flavor*/, aset);
-        if ( service.length == 0 )
-            service = serviceD;
-
-        for (int i = 0; i < service.length; i++) {
-            PrintService ps2 = service[i];
-            if (i > 0)
-                sb.append(delim);
-            sb.append(i + ":  \"" + ps2 + "\"");
-        }
-
-        return sb.toString();
-    }
-
-    void listPrinters() {
-	PrinterJob job = PrinterJob.getPrinterJob();
-	boolean doPrint = job.printDialog();
-	job.setPrintable(this);
-	try {
-	    job.print();
-	} catch (PrinterException e) {
-	    e.printStackTrace();
-	}
-
-	String s = getPrinterList("\nPrintServer: ");
-        OmegaContext.sout_log.getLogger().info("PrintServer: " + s);
     }
 
     int getStringWidth(Graphics2D g2, Font fo, String s) {
@@ -321,62 +228,4 @@ public class PrintMgr implements Printable {
             System.gc();
         }
     }
-
-    static public PrintService selectPrinter() {
-        try {
-            DocFlavor flavor = DocFlavor.SERVICE_FORMATTED.PRINTABLE;
-            PrintRequestAttributeSet aset = new HashPrintRequestAttributeSet();
-            aset.add(OrientationRequested.PORTRAIT);
-            aset.add(new JobName("Omega sentences", null));
-
-            PrintService[] services = PrintServiceLookup.lookupPrintServices(flavor, aset);
-            if ( services.length == 0 )
-                services = new PrintService[] {PrintServiceLookup.lookupDefaultPrintService()};
-            if ( true )
-                return services[0];
-            PrintService ps = ServiceUI.printDialog(null,
-                    50,
-                    50,
-                    services,
-                    null,
-                    flavor,
-                    aset);
-            return ps;
-        } catch (Exception ex) {
-            OmegaContext.sout_log.getLogger().info("ERR: " + "PM: selectPrinter: " + ex);
-            ex.printStackTrace();
-        }
-        return null;
-    }
-
-    static public void list(boolean gui) {
-        PrintMgr pm = new PrintMgr();
-        if (gui) {
-            String s = pm.getPrinterList("</li><li>");
-            String text = "<html><h2 color=\"#600000\">" +
-                    "Print Spooler - Printer list" +
-                    "</h2>" +
-                    "Make sure that the printer name in<br>" +
-                    "<em>Remote.settings.tundra</em> is correct.<p>" +
-                    "Use full name as in the list or index number<p>" +
-                    "<p>Found printers are:<ul><li>" +
-                    s +
-                    "</li></ul></html>";
-            OmegaContext.sout_log.getLogger().info("ERR: " + "---\n" + text + "\n---");
-            JOptionPane.showMessageDialog(null,
-                    text,
-                    "Print Spooler",
-                    JOptionPane.ERROR_MESSAGE);
-        } else
-            pm.listPrinters();
-    }
-
-    static public void main(String[] args) {
-        flags = S.flagAsMap(args);
-        argl = S.argAsList(args);
-
-	PrintMgr pm = new PrintMgr();
-        pm.listPrinters();
-    }
-
 }
