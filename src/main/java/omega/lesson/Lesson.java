@@ -102,6 +102,28 @@ public class Lesson implements LessonCanvasListener {
     private Pupil current_pupil;
     long session_length_start = S.ct();
 
+    public class PlayDataList {
+    	int ord;
+    	Date date;
+    	public ArrayList<Object> arr = new ArrayList<>();
+
+	public int nextOrd() {
+	    if ( ord != 0 )
+	        return ord;
+	    Preferences prefs = Preferences.userNodeForPackage(this.getClass());
+	    String ordinal = prefs.get("story_ordinal", "0");
+	    ord = Integer.parseInt(ordinal);
+	    ord++;
+	    prefs.put("story_ordinal", "" + ord);
+	    return ord;
+	}
+
+	public void add(PlayData play_data) {
+	    arr.add(play_data);
+	    date = new Date();
+	}
+    }
+
     private LiuMovieManager signMoviePrepare(Target tg, int tg_ix) {
 	Rectangle tgr = le_canvas.getTargetRectangle(tg_ix);
 	LiuMovieManager lmm = new LiuMovieManager(window, le_canvas);
@@ -1052,8 +1074,8 @@ public class Lesson implements LessonCanvasListener {
 	    }
 	    if ("playList".equals(msg)) {
 		playFromDataList(play_data_list);
-		play_data_list = new ArrayList();
-		play_data_list_is_last = new ArrayList();
+		play_data_list = new PlayDataList();
+		play_data_list_is_last = new PlayDataList();
 	    }
 	    // 		omega.OmegaContext.sout_log.getLogger().info("ERR: " + ">>>>>>> msg DONE " + msg);
 	}
@@ -2167,8 +2189,8 @@ public class Lesson implements LessonCanvasListener {
 		sendMsg("sent_select", "");
 	    } else if ("sent_quit".equals(msg)) {
 		sentence_canvas.hidePopup(3);
-		play_data_list = new ArrayList();
-		play_data_list_is_last = new ArrayList();
+		play_data_list = new PlayDataList();
+		play_data_list_is_last = new PlayDataList();
 		sentence_canvas.showMsg(null);
 		//		sentence_canvas.setRead(false);
 		card_show("main");
@@ -2221,15 +2243,13 @@ public class Lesson implements LessonCanvasListener {
 		ArrayList ss_li = sent_li.sentence_list;
 		String lname = sent_li.lesson_name;
 		DateFormat df = new SimpleDateFormat("yyyyMMdd_HHmmss");
-		Date d = new Date();
+		Date d = play_data_list.date;
 		String date = df.format(d);
 
-		Preferences prefs = Preferences.userNodeForPackage(this.getClass());
-		String ordinal = prefs.get("story_ordinal", "0");
-		int ord = Integer.parseInt(ordinal);
-		ord++;
-		prefs.put("story_ordinal", "" + ord);
-
+		int ord = play_data_list.nextOrd();
+		if (register == null) { // null after windows resize
+		    register = new RegisterProxy(getCurrentPupil());
+		}
 		String dir = register.rl.getDirPath(getCurrentPupil().getName());
 
 		String fname =
@@ -2250,8 +2270,8 @@ public class Lesson implements LessonCanvasListener {
 		    }
 		    try (ObjectOutput oo = new ObjectOutputStream(new FileOutputStream(fullname_2))) {
 			oo.writeObject(sent_li);
-			oo.writeObject(play_data_list);
-			oo.writeObject(play_data_list_is_last);
+			oo.writeObject(play_data_list.arr);
+			oo.writeObject(play_data_list_is_last.arr);
 		    }
 		    global_skipF(true);
 		    JOptionPane.showMessageDialog(ApplContext.top_frame, T.t("Saved in file") + ' ' + fullname);
@@ -2298,8 +2318,8 @@ public class Lesson implements LessonCanvasListener {
 			    try (ObjectInput in = new ObjectInputStream(new FileInputStream(file))) {
 				SentenceList sent_li = (SentenceList) in.readObject();
 				story_hm.put("sentence_list", sent_li);
-				play_data_list = (ArrayList) in.readObject();
-				play_data_list_is_last = (ArrayList) in.readObject();
+				play_data_list.arr = (ArrayList) in.readObject();
+				play_data_list_is_last.arr = (ArrayList) in.readObject();
 			    }
 			} else {
 			    global_skipF(true);
@@ -2458,8 +2478,8 @@ public class Lesson implements LessonCanvasListener {
 		le_canvas.setFrom(el, dummy);
 
 		if (le_canvas.getLessonIsFirst()) {
-		    play_data_list = new ArrayList();
-		    play_data_list_is_last = new ArrayList();
+		    play_data_list = new PlayDataList();
+		    play_data_list_is_last = new PlayDataList();
 		    story_hm.clear();
 		    story_hm.put("sentence_list", new SentenceList());
 		    OmegaContext.story_log.getLogger().info("lesson Is First " + fn);
@@ -3506,10 +3526,11 @@ public class Lesson implements LessonCanvasListener {
 
     }
 
-    ArrayList play_data_list = new ArrayList();
-    ArrayList play_data_list_is_last = new ArrayList();
+    PlayDataList play_data_list = new PlayDataList();
+    PlayDataList play_data_list_is_last = new PlayDataList();
 
-    public void playFromDataList(ArrayList al) {
+    public void playFromDataList(PlayDataList playDataList) {
+	ArrayList al = playDataList.arr;
 	card_show("anim1");
 	action.show();
 	action.getHm().put("speed", new Integer(getCurrentPupil().getSpeed(1000)));
@@ -3613,8 +3634,9 @@ public class Lesson implements LessonCanvasListener {
 
     PrintService print_service;
 
-    public void printFromDataList(ArrayList al) {
+    public void printFromDataList(PlayDataList playDataList) {
 	try {
+	    ArrayList al = playDataList.arr;
 	    PrintMgr pm = new PrintMgr();
 	    //	    pm.list(true);
 	    SentenceList sent_li = (SentenceList) story_hm.get("sentence_list");
@@ -3641,14 +3663,14 @@ public class Lesson implements LessonCanvasListener {
 	return hit_key;
     }
 
-    public void listenFromDataList(ArrayList al/*
+    public void listenFromDataList(PlayDataList playDataList/*
 	     * , ListenListener lili
              */) {
 	// 	lili.init();
 	sentence_canvas.buttonsEnable(false);
 	try {
-	    OmegaContext.story_log.getLogger().info("listened 2411 " + al);
-	    Iterator it = al.iterator();
+	    OmegaContext.story_log.getLogger().info("listened 2411 " + playDataList.arr);
+	    Iterator it = playDataList.arr.iterator();
 	    while (it.hasNext()) {
 		sentence_canvas.showMsgMore();
 		int key = waitHitKey(1);

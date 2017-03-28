@@ -18,18 +18,7 @@ public class Save {
             String isfirst = sel.findAttr("isfirst");
             if ( isfirst != null ) {
                 if ( fname.contains("active") ) {
-                    Log.getLogger().fine("ADD story file");
-                    File file = new File(OmegaContext.omegaAssets(fname));
-                    File dir = file.getParentFile().getParentFile();
-                    File storyFile = new File(dir, "story");
-                    if ( ! storyFile.exists() ) {
-                        try {
-                            boolean b = storyFile.createNewFile();
-                            Log.getLogger().info("ADDED story file " + storyFile + ' ' + b);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
+                    addStoryFileIndicator(fname);
                 }
             }
         }
@@ -37,5 +26,20 @@ public class Save {
         xmlpw.put(el);
         xmlpw.close();
 //log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "# saved " + el + " " + fname);
+    }
+
+    private static void addStoryFileIndicator(String fname) {
+        Log.getLogger().fine("ADD story file");
+        File file = new File(OmegaContext.omegaAssets(fname));
+        File dir = file.getParentFile().getParentFile();
+        File storyFile = new File(dir, "story");
+        if ( ! storyFile.exists() ) {
+	    try {
+		boolean b = storyFile.createNewFile();
+		Log.getLogger().info("ADDED story file " + storyFile + ' ' + b);
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
+	}
     }
 }

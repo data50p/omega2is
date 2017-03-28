@@ -572,7 +572,8 @@ public class SentenceCanvas extends BaseCanvas {
         super.leave();
     }
 
-    public void setStoryData(ArrayList story_list) {
+    public void setStoryData(Lesson.PlayDataList playDataList) {
+        ArrayList story_list = playDataList.arr;
         Lesson.PlayData pd = null;
     }
 
