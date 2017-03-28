@@ -24,20 +24,17 @@ public class S {
     }
 
     public static PrintWriter createPrintWriter(String fn, boolean append) {
-        try {
-            PrintWriter pw =
-                    new PrintWriter(
-                            new BufferedWriter(
-                                    new FileWriter(fn, append)));
-            return pw;
-        } catch (IOException ex) {
-            return null;
-
-        }
+        return createPrintWriterUTF8(fn, append);
     }
 
     public static PrintWriter createPrintWriter(OutputStream os) {
-        PrintWriter pw = new PrintWriter(new OutputStreamWriter(new BufferedOutputStream(os)));
+        PrintWriter pw = null;
+        try {
+            pw = new PrintWriter(new OutputStreamWriter(new BufferedOutputStream(os), "utf-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            return null;
+        }
         return pw;
     }
 
@@ -50,6 +47,7 @@ public class S {
             PrintWriter pw = new PrintWriter(new OutputStreamWriter(new BufferedOutputStream(new FileOutputStream(fn, append)), "UTF-8"));
             return pw;
         } catch (IOException ex) {
+            ex.printStackTrace();
             return null;
         }
     }
