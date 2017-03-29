@@ -94,7 +94,7 @@ public class LessonEditor extends ApplLesson {
 
     ToolExecute ae_texec = new ToolExecute() {
         public void execute(String cmd) {
-            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "AnimEditor.texec: execute " + cmd);
+            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "LessonEditor.texec: execute " + cmd);
 
             if ("exit".equals(cmd)) {
                 int sel = JOptionPane.showConfirmDialog(LessonEditor.this,
