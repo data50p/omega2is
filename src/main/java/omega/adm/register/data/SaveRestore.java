@@ -9,10 +9,8 @@ public class SaveRestore {
     public boolean save(String fname, Result rslt) {
         Element el = rslt.getElement();
         OmegaContext.sout_log.getLogger().info("ERR: " + "saving SaveRestore el " + el);
-        try {
-            XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false);
+        try (XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false)) {
             xmlpw.put(el);
-            xmlpw.close();
         } catch (Exception ex) {
             ex.printStackTrace();
             return false;

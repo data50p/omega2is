@@ -95,9 +95,11 @@ public class OmegaSettingsDialog extends SettingsDialog {
             el.add(smwel);
             el.add(smsel);
         }
-        XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false);
-        xmlpw.put(el);
-        xmlpw.close();
+        try (XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false)) {
+            xmlpw.put(el);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 
     void load() {

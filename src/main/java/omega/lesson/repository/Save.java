@@ -12,20 +12,22 @@ import java.util.List;
 
 public class Save {
     public static void save(String fname, Element el) {
-        List stories = el.find("story");
-        if ( stories != null && stories.size() > 0 ) {
-            Element sel = (Element) stories.get(0);
-            String isfirst = sel.findAttr("isfirst");
-            if ( isfirst != null ) {
-                if ( fname.contains("active") ) {
-                    addStoryFileIndicator(fname);
-                }
-            }
-        }
-        XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false);
-        xmlpw.put(el);
-        xmlpw.close();
-//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "# saved " + el + " " + fname);
+	List stories = el.find("story");
+	if (stories != null && stories.size() > 0) {
+	    Element sel = (Element) stories.get(0);
+	    String isfirst = sel.findAttr("isfirst");
+	    if (isfirst != null) {
+		if (fname.contains("active")) {
+		    addStoryFileIndicator(fname);
+		}
+	    }
+	}
+
+	try (XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false)) {
+	    xmlpw.put(el);
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
     }
 
     private static void addStoryFileIndicator(String fname) {

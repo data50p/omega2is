@@ -12,133 +12,137 @@ import java.util.*;
 
 public class XML_cmd {
     public static void main(String argv[]) throws IOException {
-        HashMap flag = S.flagAsMap(argv);
-        List argl = S.argAsList(argv);
+	HashMap flag = S.flagAsMap(argv);
+	List argl = S.argAsList(argv);
 
-        if (argl.size() == 0 || ((String) argl.get(0)).equals("help")) {
-            OmegaContext.sout_log.getLogger().info("xmlfile extract element");
-            OmegaContext.sout_log.getLogger().info("xmlfile remove  element[,element2]*");
-            OmegaContext.sout_log.getLogger().info("xmlfile sort    element");
-            OmegaContext.sout_log.getLogger().info("xmlfile sort    element attr");
-            return;
-        }
+	if (argl.size() == 0 || ((String) argl.get(0)).equals("help")) {
+	    OmegaContext.sout_log.getLogger().info("xmlfile extract element");
+	    OmegaContext.sout_log.getLogger().info("xmlfile remove  element[,element2]*");
+	    OmegaContext.sout_log.getLogger().info("xmlfile sort    element");
+	    OmegaContext.sout_log.getLogger().info("xmlfile sort    element attr");
+	    return;
+	}
 
-        OmegaContext.sout_log.getLogger().info("ERR: " + "argl " + argl + ' ' + flag);
+	OmegaContext.sout_log.getLogger().info("ERR: " + "argl " + argl + ' ' + flag);
 
-        String file = (String) argl.get(0);
-        String cmd = (String) argl.get(1);
+	String file = (String) argl.get(0);
+	String cmd = (String) argl.get(1);
 
-        boolean validating = true;
-        if (flag.get("n") != null)
-            validating = false;
+	boolean validating = true;
+	if (flag.get("n") != null)
+	    validating = false;
 
-        Element el = SAX_node.parse(file, validating);
+	Element el = SAX_node.parse(file, validating);
 
-        if (cmd.equals("extract")) {
-            String tag = (String) argl.get(2);
+	if (cmd.equals("extract")) {
+	    String tag = (String) argl.get(2);
 
-            List li = el.find(tag);
+	    List li = el.find(tag);
 
-            Element eel = new Element("extract");
-            eel.addAttr("found_tag", tag);
-            eel.addAttr("found_items", "" + li.size());
+	    Element eel = new Element("extract");
+	    eel.addAttr("found_tag", tag);
+	    eel.addAttr("found_items", "" + li.size());
 
-            XML_PW xmlpw = new XML_PW(System.out);
+	    try (XML_PW xmlpw = new XML_PW(System.out)) {
+		xmlpw.push(eel);
+		xmlpw.put("\n");
 
-            xmlpw.push(eel);
-            xmlpw.put("\n");
+		Iterator it = li.iterator();
+		while (it.hasNext()) {
+		    Element ell = (Element) it.next();
+		    xmlpw.put(ell);
+		}
 
-            Iterator it = li.iterator();
-            while (it.hasNext()) {
-                Element ell = (Element) it.next();
-                xmlpw.put(ell);
-            }
+		xmlpw.pop();
+	    } catch (Exception ex) {
+		ex.printStackTrace();
+	    }
+	}
 
-            xmlpw.pop();
-            xmlpw.close();
-        }
+	if (cmd.equals("insert")) {
+	}
 
-        if (cmd.equals("insert")) {
-        }
+	if (cmd.equals("remove")) {
+	    String tag = (String) argl.get(2);
+	    String[] tags = S.split(tag, ",");
 
-        if (cmd.equals("remove")) {
-            String tag = (String) argl.get(2);
-            String[] tags = S.split(tag, ",");
+	    Element rel = el.remove(tags);
 
-            Element rel = el.remove(tags);
+	    Element eel = new Element("remove");
+	    eel.addAttr("removed_tag", tag);
 
-            Element eel = new Element("remove");
-            eel.addAttr("removed_tag", tag);
+	    try (XML_PW xmlpw = new XML_PW(System.out)) {
 
-            XML_PW xmlpw = new XML_PW(System.out);
+		xmlpw.push(eel);
+		xmlpw.put("\n");
 
-            xmlpw.push(eel);
-            xmlpw.put("\n");
+		xmlpw.put(rel);
 
-            xmlpw.put(rel);
+		xmlpw.pop();
+	    } catch (Exception ex) {
+		ex.printStackTrace();
+	    }
+	}
 
-            xmlpw.pop();
-            xmlpw.close();
-        }
+	// sort findElement sortElement
+	// sort findElement sortElement sortAttrib
+	if (cmd.equals("--sort")) {
+	}
 
-        // sort findElement sortElement
-        // sort findElement sortElement sortAttrib
-        if (cmd.equals("--sort")) {
-        }
+	// sort findElement sortAttr
+	if (cmd.equals("sort")) {
+	    String tag = (String) argl.get(2);
+	    String a = null;
+	    if (argl.size() > 3)
+		a = (String) argl.get(3);
+	    final String fa = a;
+	    List li = el.find(tag);
 
-        // sort findElement sortAttr
-        if (cmd.equals("sort")) {
-            String tag = (String) argl.get(2);
-            String a = null;
-            if (argl.size() > 3)
-                a = (String) argl.get(3);
-            final String fa = a;
-            List li = el.find(tag);
-
-            Object oa[] = li.toArray();
-            Arrays.sort(oa, new Comparator() {
-                public int compare(Object o1, Object o2) {
-                    Element e1 = (Element) o1;
-                    Element e2 = (Element) o2;
-                    String s1;
-                    String s2;
-                    if (fa != null) {
-                        s1 = (String) e1.attr.get(fa);
-                        s2 = (String) e2.attr.get(fa);
-                    } else {
-                        StringBuffer sb1 = new StringBuffer();
-                        StringBuffer sb2 = new StringBuffer();
-                        e1.render(sb1);
-                        e2.render(sb2);
-                        s1 = sb1.toString();
-                        s2 = sb2.toString();
-                    }
-                    return s1.compareTo(s2);
+	    Object oa[] = li.toArray();
+	    Arrays.sort(oa, new Comparator() {
+		public int compare(Object o1, Object o2) {
+		    Element e1 = (Element) o1;
+		    Element e2 = (Element) o2;
+		    String s1;
+		    String s2;
+		    if (fa != null) {
+			s1 = (String) e1.attr.get(fa);
+			s2 = (String) e2.attr.get(fa);
+		    } else {
+			StringBuffer sb1 = new StringBuffer();
+			StringBuffer sb2 = new StringBuffer();
+			e1.render(sb1);
+			e2.render(sb2);
+			s1 = sb1.toString();
+			s2 = sb2.toString();
+		    }
+		    return s1.compareTo(s2);
 //  		    int i1 = Integer.parseInt(s1);
 //  		    int i2 = Integer.parseInt(s2);
 //  		    return i1 - i2; // s1.compareTo(s2);
-                }
-            });
-            List sli = Arrays.asList(oa);
+		}
+	    });
+	    List sli = Arrays.asList(oa);
 
-            Element eel = new Element("sort");
-            eel.addAttr("sorted_tag", tag);
-            eel.addAttr("sorted_attr", a);
-            eel.addAttr("sorted_items", "" + sli.size());
+	    Element eel = new Element("sort");
+	    eel.addAttr("sorted_tag", tag);
+	    eel.addAttr("sorted_attr", a);
+	    eel.addAttr("sorted_items", "" + sli.size());
 
-            XML_PW xmlpw = new XML_PW(System.out);
+	    try (XML_PW xmlpw = new XML_PW(System.out)) {
+		xmlpw.push(eel);
+		xmlpw.put("\n");
 
-            xmlpw.push(eel);
-            xmlpw.put("\n");
+		Iterator it = sli.iterator();
+		while (it.hasNext()) {
+		    Element ell = (Element) it.next();
+		    xmlpw.put(ell);
+		}
 
-            Iterator it = sli.iterator();
-            while (it.hasNext()) {
-                Element ell = (Element) it.next();
-                xmlpw.put(ell);
-            }
-
-            xmlpw.pop();
-            xmlpw.close();
-        }
+		xmlpw.pop();
+	    } catch (Exception ex) {
+		ex.printStackTrace();
+	    }
+	}
     }
 }

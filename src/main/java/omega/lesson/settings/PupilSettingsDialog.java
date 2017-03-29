@@ -976,9 +976,11 @@ public class PupilSettingsDialog extends SettingsDialog {
 	Element pel = new Element("pupil_settings");
 	Element el = getElements();
 	pel.add(el);
-	XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false);
-	xmlpw.put(pel);
-	xmlpw.close();
+	try (XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false) ) {
+	    xmlpw.put(pel);
+	} catch (Exception ex) {
+	    ex.printStackTrace();
+    	}
     }
 
     void load() {

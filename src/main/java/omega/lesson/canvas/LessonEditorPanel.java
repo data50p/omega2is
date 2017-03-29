@@ -4,10 +4,10 @@ import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
 import omega.anim.appl.EditStateListener;
+import omega.swing.filechooser.ChooseLessonFile;
 import omega.t9n.T;
 import omega.lesson.machine.Item;
 import omega.lesson.machine.Target;
-import omega.swing.filechooser.ChooseActionFile;
 import omega.swing.filechooser.ChooseOmegaAssetsDir;
 import omega.swing.GBC_Factory;
 import omega.util.Files;
@@ -209,7 +209,7 @@ public class LessonEditorPanel extends JPanel {
                 first_LLN.setEnabled(b);
             }
             if (s.equals("getFiles_LLN")) {
-                ChooseActionFile choose_af = new ChooseActionFile();
+                ChooseLessonFile choose_af = new ChooseLessonFile();
 
                 int rv = choose_af.showDialog(LessonEditorPanel.this, T.t("Select"));
                 if (rv == JFileChooser.APPROVE_OPTION) {
@@ -221,6 +221,7 @@ public class LessonEditorPanel extends JPanel {
                         fname_s = Files.toURL(file);
 //log			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "--> " + fname_s);
                         String fn = omega.util.Files.mkRelativeCWD(fname_s);
+                        fn = OmegaContext.antiOmegaAssets(fn);
 //log			omega.OmegaContext.sout_log.getLogger().info("ERR: " + "--> " + fn);
                         lesson_link_next.setText(fn);
                         enable_LLN.setSelected(true);
