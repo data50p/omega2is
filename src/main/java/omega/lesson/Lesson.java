@@ -1322,7 +1322,7 @@ public class Lesson implements LessonCanvasListener {
 
     public void mact_Save() {
 	if (saved_name != null) {
-	    save(saved_name);
+	    save(OmegaContext.omegaAssets(saved_name));
 	} else {
 	    mact_SaveAs();
 	}

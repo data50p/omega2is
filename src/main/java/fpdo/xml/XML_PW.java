@@ -2,10 +2,7 @@ package fpdo.xml;
 
 import fpdo.sundry.S;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Stack;
 
 public class XML_PW implements AutoCloseable {
@@ -50,8 +47,20 @@ public class XML_PW implements AutoCloseable {
     }
 
     void ensurePW(String tag) {
-	if (pw == null)
+	if (pw == null) {
 	    pw = S.createPrintWriter(tag + ".xml");
+	    try {
+	        throw new Exception("trace");
+	    } catch (Exception ex) {
+		try {
+		    try (PrintWriter pw = new PrintWriter(new File("logs/stack_trace"))) {
+			ex.printStackTrace(pw);
+		    }
+		} catch (FileNotFoundException e) {
+		    e.printStackTrace();
+		}
+	    }
+	}
     }
 
     StringBuffer dtd_sb;
