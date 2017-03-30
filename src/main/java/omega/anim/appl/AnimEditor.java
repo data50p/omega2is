@@ -1,7 +1,5 @@
 package omega.anim.appl;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.anim.context.AnimContext;
@@ -15,15 +13,15 @@ import omega.anim.tool.path.Path;
 import omega.anim.tool.timeline.TimeLine;
 import omega.anim.tool.timeline.TimeMarker;
 import omega.appl.OmegaStartManager;
-import omega.appl.Omega_IS;
-import omega.lesson.appl.ApplContext;
-import omega.lesson.appl.LessonRuntime;
-import omega.servers.httpd.Server;
 import omega.graphic.render.Wing;
-import omega.t9n.T;
+import omega.lesson.appl.ApplContext;
 import omega.media.audio.APlayer;
+import omega.servers.httpd.Server;
 import omega.swing.ToolAction;
 import omega.swing.ToolExecute;
+import omega.t9n.T;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import javax.swing.*;
 import javax.swing.event.EventListenerList;
@@ -557,7 +555,7 @@ public class AnimEditor extends JFrame {
     }
 
     Point2D decode2D(String s) {
-	String[] sa = S.split(s, ",");
+	String[] sa = SundryUtils.split(s, ",");
 	float a = Float.parseFloat(sa[0]);
 	float b = Float.parseFloat(sa[1]);
 	return new Point2D.Float(a, b);
@@ -707,8 +705,8 @@ public class AnimEditor extends JFrame {
     // - - - - -
 
     public static void main(String[] argv) {
-	HashMap flag = S.flagAsMap(argv);
-	java.util.List argl = S.argAsList(argv);
+	HashMap flag = SundryUtils.flagAsMap(argv);
+	java.util.List argl = SundryUtils.argAsList(argv);
 
 	try {
 	    UIManager.setLookAndFeel("javax.swing.plaf.MetalLookAndFeel");

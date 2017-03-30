@@ -1,4 +1,4 @@
-package fpdo.xml;
+package omega.xml;
 
 import omega.util.Log;
 

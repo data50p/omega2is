@@ -1,4 +1,4 @@
-package fpdo.sundry;
+package omega.util;
 
 import omega.OmegaContext;
 

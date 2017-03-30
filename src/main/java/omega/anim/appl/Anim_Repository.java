@@ -1,15 +1,15 @@
 package omega.anim.appl;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
-import fpdo.xml.SAX_node;
-import fpdo.xml.XML_PW;
 import omega.OmegaContext;
 import omega.anim.context.AnimContext;
+import omega.swing.filechooser.ChooseAnimatorFile;
 import omega.swing.filechooser.ChooseImageFile;
 import omega.t9n.T;
-import omega.swing.filechooser.ChooseAnimatorFile;
 import omega.util.Files;
+import omega.util.SundryUtils;
+import omega.xml.Element;
+import omega.xml.SAX_node;
+import omega.xml.XML_PW;
 
 import javax.swing.*;
 import java.awt.*;
@@ -94,7 +94,7 @@ public class Anim_Repository {
 
 //log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "EEEEEE " + sbu + ' ' + sbl);
 
-	PrintWriter ppw = S.createPrintWriterUTF8("SAVED-omega_anim.dump");
+	PrintWriter ppw = SundryUtils.createPrintWriterUTF8("SAVED-omega_anim.dump");
 	ppw.println("<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>\n" +
 		"<!DOCTYPE omega >\n\n" +
 		sbu + ' ' + sbl);
@@ -111,7 +111,7 @@ public class Anim_Repository {
 	} else {
 	    boolean err = false;
 
-	    try (XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(OmegaContext.omegaAssets(fn + ".tmp")), false)) {
+	    try (XML_PW xmlpw = new XML_PW(SundryUtils.createPrintWriterUTF8(OmegaContext.omegaAssets(fn + ".tmp")), false)) {
 		xmlpw.put(el);
 		xmlpw.popAll();
 		xmlpw.flush();

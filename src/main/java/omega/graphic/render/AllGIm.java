@@ -1,10 +1,10 @@
 package omega.graphic.render;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.anim.tool.timeline.TimeLine;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
@@ -99,7 +99,7 @@ public class AllGIm {
                     gim.commitAttribName();
 
                     int an_sp = (int) (1000 * ((omega.anim.cabaret.GImAE) gim).anim_speed);
-                    long ct = S.ct();
+                    long ct = SundryUtils.ct();
 
 //		    if ( gim.xim.setInnerAnimIndex((int)((ct / an_sp) % 1000)) )
                     if (gim.xim.setInnerAnimIndex((int) ((dt / an_sp) % 1000)))

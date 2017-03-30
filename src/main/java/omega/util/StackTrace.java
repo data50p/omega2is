@@ -17,7 +17,7 @@ public class StackTrace {
 
     public static String trace1() {
         String s = trace();
-        String[] sa = fpdo.sundry.S.split(s, "\n");
+        String[] sa = SundryUtils.split(s, "\n");
         return sa[3];
     }
 }

@@ -207,7 +207,7 @@ public class InvokeExternBrowser {
     private static final int OTHER = -1;
 
     /**
-     * The file type of the Finder on a Macintosh.  Hardcoding "Finder" would keep non-U.S. English
+     * The file type of the Finder on a Macintosh.  Hardcoding "Finder" would keep non-U.SundryUtils. English
      * systems from working properly.
      */
     private static final String FINDER_TYPE = "FNDR";

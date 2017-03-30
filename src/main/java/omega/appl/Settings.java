@@ -1,8 +1,8 @@
 package omega.appl;
 
-import fpdo.sundry.PreferenceUtil;
-import fpdo.sundry.S;
 import omega.OmegaContext;
+import omega.util.PreferenceUtil;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -144,8 +144,8 @@ public class Settings {
     }
 
     public static void main(String[] argv) {
-        flags = S.flagAsMap(argv);
-        args = S.argAsList(argv);
+        flags = SundryUtils.flagAsMap(argv);
+        args = SundryUtils.argAsList(argv);
         Settings s = Settings.getSettings();
         s.main();
     }

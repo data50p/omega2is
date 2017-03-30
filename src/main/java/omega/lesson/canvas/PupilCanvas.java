@@ -1,15 +1,15 @@
 package omega.lesson.canvas;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
-import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
 import omega.lesson.appl.ApplContext;
 import omega.lesson.pupil.Pupil;
 import omega.lesson.settings.PupilSettingsDialog;
+import omega.t9n.T;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -243,7 +243,7 @@ public class PupilCanvas extends BaseCanvas implements ListSelectionListener {
         mkButtons();
         mkList();
 
-        S.m_sleep(200);
+        SundryUtils.m_sleep(200);
         repaint();
     }
 

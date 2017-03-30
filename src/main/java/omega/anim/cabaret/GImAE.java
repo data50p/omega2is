@@ -1,12 +1,12 @@
 package omega.anim.cabaret;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
 import omega.anim.canvas.AnimCanvas;
 import omega.anim.tool.path.AllPath;
 import omega.anim.tool.path.Path;
 import omega.anim.tool.timeline.TimeLine;
 import omega.graphic.render.GIm;
+import omega.util.SundryUtils;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -220,9 +220,9 @@ public class GImAE extends GIm {
     }
 
     public void setHotSpotIx(int ix, String s) {
-        String[] sa = S.split(s, " ,;");
-        double x = S.tD(sa[0]);
-        double y = S.tD(sa[1]);
+        String[] sa = SundryUtils.split(s, " ,;");
+        double x = SundryUtils.tD(sa[0]);
+        double y = SundryUtils.tD(sa[1]);
         hotspot.set(ix, x, y);
     }
 
@@ -486,7 +486,7 @@ public class GImAE extends GIm {
     public String toString() {
         return "GImAE{fid=" + fid +
                 ",lesson_id=" + lesson_id +
-                ",var=" + S.a2s(variable) +
+                ",var=" + SundryUtils.a2s(variable) +
                 ",nid=" + nid +
                 ",im=" + xim.getImage(null) +
                 ",layer=" + layer +

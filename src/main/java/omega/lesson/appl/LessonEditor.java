@@ -3,12 +3,11 @@ package omega.lesson.appl;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.appl.OmegaStartManager;
-import omega.appl.Omega_IS;
-import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.lesson.ToolBar_LessonEditor;
 import omega.swing.ToolAction;
 import omega.swing.ToolExecute;
+import omega.t9n.T;
 import omega.util.Log;
 
 import javax.swing.*;

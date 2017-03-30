@@ -1,7 +1,5 @@
 package omega.anim.canvas;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
@@ -19,11 +17,13 @@ import omega.anim.tool.path.Probe;
 import omega.anim.tool.timeline.TimeLine;
 import omega.anim.tool.timeline.TimeMarker;
 import omega.graphic.render.Wing;
-import omega.t9n.T;
 import omega.swing.ToolExecute;
+import omega.t9n.T;
 import omega.util.GenericEvent;
 import omega.util.GenericEventListener;
 import omega.util.GenericEventManager;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -931,7 +931,7 @@ public class AnimCanvas extends omega.graphic.render.Canvas {
             a = a_ctxt.ae.cabaret_panel.getActorInPanel(nid);
         else
             a = actA_animated[nid];
-//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "getAnimatedActor -> " + nid + ' ' + a + ' ' + S.a2s(actA_animated));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "getAnimatedActor -> " + nid + ' ' + a + ' ' + SundryUtils.a2s(actA_animated));
         return a;
     }
 
@@ -1114,7 +1114,7 @@ public class AnimCanvas extends omega.graphic.render.Canvas {
         void show(MsgItem2 msg) {
             set(msg);
             while (show_msg)
-                S.m_sleep(200);
+                SundryUtils.m_sleep(200);
         }
 
         void set(MsgItem2 msg) {
@@ -1143,7 +1143,7 @@ public class AnimCanvas extends omega.graphic.render.Canvas {
             Font fo = new Font("Arial", Font.PLAIN, txtH);
             int sw = getStringWidth(g2, fo, msg_item.text);
 
-            long ct0 = S.ct();
+            long ct0 = SundryUtils.ct();
             while (sw > gX(0.94)) {
                 txtH = (int) (txtH * 0.98);
                 fo = new Font("Arial", Font.PLAIN, txtH);
@@ -1151,7 +1151,7 @@ public class AnimCanvas extends omega.graphic.render.Canvas {
                 sw = getStringWidth(g2, fo, msg_item.text);
                 //		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "recalc sw " + o_sw + ' ' + sw + ' ' + txtH);
             }
-            long ct1 = S.ct();
+            long ct1 = SundryUtils.ct();
             OmegaContext.sout_log.getLogger().info("ERR: " + "--> " + (ct1 - ct0));
 
             int w = sw + 10 + gX(0.03);
@@ -1231,8 +1231,8 @@ public class AnimCanvas extends omega.graphic.render.Canvas {
         showMsg(new MsgItem2("", big_button_text));
         repaint();
         while (big_button_text != null) {
-            S.m_sleep(200);
-            //	    S.pe_("E");
+            SundryUtils.m_sleep(200);
+            //	    SundryUtils.pe_("E");
             if ("up".equals(getEndCode())) {
                 if (myra != null)
                     myra.run();
@@ -1450,7 +1450,7 @@ public class AnimCanvas extends omega.graphic.render.Canvas {
                     act.gimae.setVariable(1, var1);
                     act.gimae.setVariable(2, var2);
                     act.gimae.setVariable(3, var3);
-                    double scd = S.tD(sc);
+                    double scd = SundryUtils.tD(sc);
                     act.gimae.setPrimScale(scd);
                     act.gimae.setPrimMirror(Integer.parseInt(mi));
                 }
@@ -1474,14 +1474,14 @@ public class AnimCanvas extends omega.graphic.render.Canvas {
                         po = "0.5 0.5";
                     if (la == null)
                         la = "1";
-                    String[] sa = S.split(po, " ,;");
-                    double d1 = S.tD(sa[0]);
-                    double d2 = S.tD(sa[1]);
+                    String[] sa = SundryUtils.split(po, " ,;");
+                    double d1 = SundryUtils.tD(sa[0]);
+                    double d2 = SundryUtils.tD(sa[1]);
                     double[] da = new double[]{d1, d2};
 
                     double sc_d = 1.0;
                     if (sc != null)
-                        sc_d = S.tD(sc);
+                        sc_d = SundryUtils.tD(sc);
                     Wing w = createWing(fn, (int) d1, (int) d2,
                             Integer.parseInt(la),
                             sc_d,

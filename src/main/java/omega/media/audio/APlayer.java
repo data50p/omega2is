@@ -1,8 +1,8 @@
 package omega.media.audio;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
 import omega.util.Log;
+import omega.util.SundryUtils;
 
 import java.io.File;
 import java.util.HashMap;
@@ -74,7 +74,7 @@ public class APlayer {
         if (name == null)
             return new APlayer();
 
-        long ct0 = S.ct();
+        long ct0 = SundryUtils.ct();
 
         APlayer apl = null;
         try {

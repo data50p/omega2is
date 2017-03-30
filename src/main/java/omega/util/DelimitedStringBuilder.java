@@ -1,4 +1,4 @@
-package fpdo.sundry;
+package omega.util;
 
 public class DelimitedStringBuilder {
     StringBuilder sb = new StringBuilder();

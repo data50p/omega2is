@@ -1,6 +1,6 @@
 package omega.adm.register.data;
 
-import fpdo.xml.Element;
+import omega.xml.Element;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

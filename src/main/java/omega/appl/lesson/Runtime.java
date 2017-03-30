@@ -1,14 +1,14 @@
 package omega.appl.lesson;
 
-import fpdo.sundry.S;
 import omega.LicenseShowManager;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.appl.OmegaAppl;
-import omega.t9n.T;
-import omega.swing.filechooser.ChooseLessonFile;
 import omega.lesson.appl.LessonRuntime;
+import omega.swing.filechooser.ChooseLessonFile;
+import omega.t9n.T;
 import omega.util.Files;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import java.io.File;
@@ -53,13 +53,13 @@ public class Runtime extends OmegaAppl {
         le_rt = new LessonRuntime(name, fn, with_frame, run_mode);
     }
 
-    static long last_logged = S.ct();
+    static long last_logged = SundryUtils.ct();
 
     public static void main(String[] argv) {
         OmegaContext.lesson_log.getLogger().info("started");
 
-        HashMap flag = S.flagAsMap(argv);
-        java.util.List argl = S.argAsList(argv);
+        HashMap flag = SundryUtils.flagAsMap(argv);
+        java.util.List argl = SundryUtils.argAsList(argv);
 
         OmegaContext.omega_lang = (String) flag.get("omega_lang");
         OmegaContext.sout_log.getLogger().info("ERR: " + "param omega_lang is " + OmegaContext.omega_lang);

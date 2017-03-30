@@ -1,7 +1,7 @@
 package omega.anim.tool.timeline;
 
-import fpdo.sundry.S;
 import omega.OmegaConfig;
+import omega.util.SundryUtils;
 
 import javax.swing.event.EventListenerList;
 import java.awt.event.ActionEvent;
@@ -111,7 +111,7 @@ public class TimeLinePlayer implements ActionListener {
         this.after = after;
         state = INIT_PLAY;
         is_running = true;
-        ct0 = S.ct();
+        ct0 = SundryUtils.ct();
         timer.start();
         return true;
     }
@@ -191,7 +191,7 @@ public class TimeLinePlayer implements ActionListener {
                 after.run();
             after = null;
         }
-        long delta = S.ct() - ct0;
+        long delta = SundryUtils.ct() - ct0;
         delta *= speed;
         if (callPlay_playAt((int) delta)) {
             return;

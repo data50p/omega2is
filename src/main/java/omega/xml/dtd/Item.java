@@ -1,4 +1,4 @@
-package fpdo.xml.dtd;
+package omega.xml.dtd;
 
 abstract class Item {
     String name;

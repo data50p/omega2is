@@ -1,12 +1,11 @@
 package omega.appl.animator;
 
-import fpdo.sundry.S;
 import omega.LicenseShowManager;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
 import omega.appl.OmegaAppl;
-import omega.lesson.appl.ApplContext;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -44,8 +43,8 @@ public class Editor extends OmegaAppl {
     }
 
     public static void main(String[] argv) {
-        HashMap flag = S.flagAsMap(argv);
-        java.util.List argl = S.argAsList(argv);
+        HashMap flag = SundryUtils.flagAsMap(argv);
+        java.util.List argl = SundryUtils.argAsList(argv);
 
         OmegaContext.omega_lang = (String) flag.get("omega_lang");
         OmegaContext.sout_log.getLogger().info("ERR: " + "param omega_lang is " + OmegaContext.omega_lang);
@@ -72,7 +71,7 @@ public class Editor extends OmegaAppl {
 
         if (LicenseShowManager.showAndAccepted()) {
             Editor e = new Editor(verbose);
-            S.m_sleep(3000);
+            SundryUtils.m_sleep(3000);
             omega.appl.OmegaAppl.closeSplash();
         } else {
             System.exit(1);

@@ -1,10 +1,9 @@
 package omega.lesson.repository;
 
-import fpdo.sundry.S;
 import omega.util.Log;
+import omega.util.SundryUtils;
 
 import java.io.File;
-import java.util.Arrays;
 
 public class LessonItem {
     String fname;
@@ -76,7 +75,7 @@ public class LessonItem {
 //      public String getOmegaLessonFile() {
 //  	String[] sa = Locator.scanDirLes(getLessonDirName());
 //  	if ( sa != null ) {
-//  	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FOUND >>>>>>>> " + S.a2s(sa));
+//  	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FOUND >>>>>>>> " + SundryUtils.a2s(sa));
 //  	    if ( sa.length > 0 )
 //  		return sa[0];
 //  	}
@@ -86,7 +85,7 @@ public class LessonItem {
     public String getOmegaSelectorFile() {
         String[] sa = Locator.scanDirSel(getLessonDirName());
         if (sa != null) {
-//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FOUND >>>>>>>> " + S.a2s(sa));
+//log	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FOUND >>>>>>>> " + SundryUtils.a2s(sa));
             if (sa.length > 0)
                 return sa[0];
         }
@@ -96,7 +95,7 @@ public class LessonItem {
     public String getOmegaLessonFile() {
         String[] sa = Locator.scanDirLes(getLessonDirName());
         if (sa != null) {
-            Log.getLogger().info("Scanned Lesson files: " + S.a2s(sa));
+            Log.getLogger().info("Scanned Lesson files: " + SundryUtils.a2s(sa));
             if (sa.length > 0)
                 return sa[0];
         }

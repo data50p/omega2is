@@ -1,7 +1,7 @@
 package omega.anim.cabaret;
 
-import fpdo.xml.Element;
 import omega.anim.context.AnimContext;
+import omega.xml.Element;
 
 public class Actor {
     final public GImAE gimae;

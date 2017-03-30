@@ -1,8 +1,8 @@
 package omega.lesson.actions;
 
-import fpdo.xml.Element;
 import omega.OmegaContext;
 import omega.anim.appl.AnimRuntime;
+import omega.xml.Element;
 
 import javax.swing.*;
 import java.awt.*;

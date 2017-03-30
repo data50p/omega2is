@@ -1,8 +1,8 @@
 package omega.lesson.canvas;
 
 
-import fpdo.sundry.S;
 import omega.swing.GBC_Factory;
+import omega.util.SundryUtils;
 import omega.value.Value;
 import omega.value.ValuesListener;
 
@@ -92,7 +92,7 @@ public class Property_B extends JDialog {
         if (false) {
             String s = (String) cb.getSelectedItem();
             if (s != null && s.length() > 0) {
-                String[] sa = S.split(s, " ");
+                String[] sa = SundryUtils.split(s, " ");
                 if (sa[0].equals("+")) {
                     String ss = tf.getText();
                     if (ss.length() > 0)

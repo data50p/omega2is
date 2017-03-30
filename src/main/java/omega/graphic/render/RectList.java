@@ -1,6 +1,6 @@
 package omega.graphic.render;
 
-import fpdo.sundry.S;
+import omega.util.SundryUtils;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
@@ -51,8 +51,8 @@ public class RectList {
     }
 
     public static void main(String[] argv) {
-        HashMap flag = S.flagAsMap(argv);
-        java.util.List argl = S.argAsList(argv);
+        HashMap flag = SundryUtils.flagAsMap(argv);
+        java.util.List argl = SundryUtils.argAsList(argv);
 
         RectList rl = new RectList();
         rl.add(new Rectangle2D.Double(100, 100, 100, 100));

@@ -1,8 +1,8 @@
 package omega.servers.httpd;
 
-import fpdo.sundry.S;
 import omega.OmegaConfig;
 import omega.OmegaContext;
+import omega.util.SundryUtils;
 
 import java.io.*;
 import java.net.Socket;
@@ -146,7 +146,7 @@ public class ServerConnection extends Thread {
     String[] whatFile(List li) {
         String s[] = new String[3];
 
-        String[] sa = S.split((String) (li.get(0)), " ");
+        String[] sa = SundryUtils.split((String) (li.get(0)), " ");
         String fn = sa[1];
         String q = null;
         int ix = fn.indexOf('?');
@@ -258,11 +258,11 @@ public class ServerConnection extends Thread {
     void serve(List sL, BufferedReader rd, DataOutputStream dos) {
         try {
 //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "WEB(" + sL.get(0) + ")");
-            String[] sa = S.split((String) (sL.get(0)), " ");
+            String[] sa = SundryUtils.split((String) (sL.get(0)), " ");
             String q = fixQ(sa[1]);
             sa[1] = fixFN(sa[1], q);
             if (OmegaConfig.T)
-                OmegaContext.sout_log.getLogger().info("ERR: " + "serve " + S.arrToString(sa) + ' ' + sL + ' ' + rd + ' ' + dos);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "serve " + SundryUtils.arrToString(sa) + ' ' + sL + ' ' + rd + ' ' + dos);
             if ("GET".equals(sa[0]))
                 doGet(sa, q, sL, rd, dos);
             if ("POST".equals(sa[0]))
@@ -298,7 +298,7 @@ public class ServerConnection extends Thread {
     }
 
     void doGet(String[] sa, String q, List sL, BufferedReader rd, DataOutputStream dos) throws IOException {
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "GET " + S.arrToString(sa) + ',' + q);
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "GET " + SundryUtils.arrToString(sa) + ',' + q);
         String fn = sa[1];
         if (fn == null) {
             String cmd = sa[0];
@@ -377,7 +377,7 @@ public class ServerConnection extends Thread {
     static int r_cnt = 0;
 
     public void run() {
-        long ct0 = S.ct();
+        long ct0 = SundryUtils.ct();
 
         if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "httpd Connection established");
         try {

@@ -1,6 +1,5 @@
 package omega.lesson;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
 
 import javax.print.*;
@@ -9,7 +8,6 @@ import javax.print.attribute.HashPrintRequestAttributeSet;
 import javax.print.attribute.PrintRequestAttributeSet;
 import javax.print.attribute.standard.JobName;
 import javax.print.attribute.standard.OrientationRequested;
-import javax.swing.*;
 import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.AffineTransform;
@@ -23,9 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 
 public class PrintMgr implements Printable {
     class PrintableDoc implements Doc {

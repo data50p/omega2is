@@ -1,9 +1,9 @@
 package omega.lesson.machine;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaContext;
+import omega.util.SundryUtils;
 import omega.value.Values;
+import omega.xml.Element;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -142,7 +142,7 @@ public class Item {
             String s1 = s.substring(0, ix);
             String s2 = s.substring(ix2 + 1);
             String ks = s.substring(ix + 1, ix2);
-            String[] sa = S.split(ks, ":");
+            String[] sa = SundryUtils.split(ks, ":");
             HashMap story_hm = omega.lesson.Lesson.story_hm;
             if (story_hm == null)
                 return s;
@@ -518,7 +518,7 @@ public class Item {
                 action_fname.length() == 0 ||
                 action_type.length() == 0)
             return null;
-        String[] sa = S.split(action_fname, " ,");
+        String[] sa = SundryUtils.split(action_fname, " ,");
         String ss = "";
         for (int i = 0; i < sa.length; i++) {
             if (i > 0)

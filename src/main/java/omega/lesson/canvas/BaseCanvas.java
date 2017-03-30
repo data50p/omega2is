@@ -1,7 +1,5 @@
 package omega.lesson.canvas;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.lesson.Lesson;
@@ -9,6 +7,7 @@ import omega.lesson.LessonContext;
 import omega.lesson.appl.ApplContext;
 import omega.t9n.T;
 import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -716,8 +715,8 @@ public class BaseCanvas extends JPanel {
         MyButton b;
         for (int i = 0; i < 5; i++) {
             if (buttons[i] == null) {
-                String[] textA = S.split(text[i], "§");
-                String[] cmdA = S.split(cmd[i], "§");
+                String[] textA = SundryUtils.split(text[i], "§");
+                String[] cmdA = SundryUtils.split(cmd[i], "§");
                 if (cmdA.length > 1) {
                     b = buttons[i] = new MyButton(T.t(textA[0]));
                     b.setRequestFocusEnabled(false);

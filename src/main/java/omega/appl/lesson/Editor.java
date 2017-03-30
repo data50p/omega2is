@@ -1,11 +1,11 @@
 package omega.appl.lesson;
 
-import fpdo.sundry.S;
+import omega.LicenseShowManager;
 import omega.OmegaConfig;
 import omega.OmegaContext;
-import omega.LicenseShowManager;
 import omega.appl.OmegaAppl;
 import omega.lesson.appl.LessonEditor;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import java.util.HashMap;
@@ -19,8 +19,8 @@ public class Editor extends OmegaAppl {
     }
 
     public static void main(String[] argv) {
-        HashMap flag = S.flagAsMap(argv);
-        java.util.List argl = S.argAsList(argv);
+        HashMap flag = SundryUtils.flagAsMap(argv);
+        java.util.List argl = SundryUtils.argAsList(argv);
 
         if (flag.get("help") != null) {
             System.err.println("-help");

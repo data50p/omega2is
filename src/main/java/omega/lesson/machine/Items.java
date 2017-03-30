@@ -1,6 +1,6 @@
 package omega.lesson.machine;
 
-import fpdo.xml.Element;
+import omega.xml.Element;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -2,8 +2,6 @@ package omega.lesson.machine;
 
 // has UTF-8
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaContext;
 import omega.adm.assets.TargetCombinations;
 import omega.anim.appl.Anim_Repository;
@@ -12,6 +10,7 @@ import omega.lesson.managers.movie.LiuMovieManager;
 import omega.util.Log;
 import omega.util.SundryUtils;
 import omega.value.Values;
+import omega.xml.Element;
 
 import java.awt.*;
 import java.io.File;
@@ -166,7 +165,7 @@ public class Target {
 
         int[][] test_index = tg2.getAllTargetCombinationsIndexes(test_txt);
 
-        String lid = S.a2s(tg2.getAll_Lid_Target_KeepVar());
+        String lid = SundryUtils.a2s(tg2.getAll_Lid_Target_KeepVar());
         String lid_orig = lid;
 
         if (lid.contains("++"))
@@ -188,8 +187,8 @@ public class Target {
         int five = 5;
         if (sa.length < 5)
             five = sa.length;
-        S.scrambleArr(sa);
-        S.scrambleArr(saD);
+        SundryUtils.scrambleArr(sa);
+        SundryUtils.scrambleArr(saD);
 
         // first find the correct sentence
         String[] riktig = null;
@@ -209,7 +208,7 @@ public class Target {
             if (sa5[i][0].equals(test_txt))
                 finns = true;                   // test finns redan
         if (finns == false)                   // put  test
-            sa5[S.rand(5)] = riktig;
+            sa5[SundryUtils.rand(5)] = riktig;
 
         items = new Items(sa5, this);
 
@@ -282,8 +281,8 @@ public class Target {
         int five = 5;
         if (sa.length < 5)
             five = sa.length;
-        S.scrambleArr(sa);
-        S.scrambleArr(saD);
+        SundryUtils.scrambleArr(sa);
+        SundryUtils.scrambleArr(saD);
 
         String[] riktig = null;
         for (int i = 0; i < sa.length; i++) {
@@ -302,7 +301,7 @@ public class Target {
             if (sa5[i][0].equals(test_txt))
                 finns = true;                   // test finns redan
         if (finns == false)                   // put test
-            sa5[S.rand(5)] = riktig;
+            sa5[SundryUtils.rand(5)] = riktig;
 
         items = new Items(sa5, this);
     }
@@ -325,7 +324,7 @@ public class Target {
     boolean matchTid2(String ent_tid, String tg_tid) { // ent_tid is a comma list
         if (ent_tid == null)
             return false;
-        String sa[] = S.split(ent_tid, ",");
+        String sa[] = SundryUtils.split(ent_tid, ",");
         for (int i = 0; i < sa.length; i++)
             if (sa[i].equals(tg_tid)) {
                 return true;
@@ -410,7 +409,7 @@ public class Target {
         T_Item t_itm = getT_Item(tg_ix);
         String tg_tid = t_itm.tid;
         ItemEntry[] it_ent = findItemEntryMatchTidAll(tg_tid);
-        //	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "match " + tg_tid + " " + S.a2s(it_ent));
+        //	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "match " + tg_tid + " " + SundryUtils.a2s(it_ent));
         int len = it_ent.length;
         int[] ia = new int[len];
         for (int i = 0; i < len; i++)
@@ -492,7 +491,7 @@ public class Target {
     }
 
     String apply(int ord, String txt) {
-        String[] sa = S.split(txt, "{}");
+        String[] sa = SundryUtils.split(txt, "{}");
         StringBuffer sb = new StringBuffer();
 
         for (int i = 0; i < sa.length; i++) {
@@ -551,7 +550,7 @@ public class Target {
     }
 
     public String fillVarHere(int ix, String s) {
-// 	S.pe_("fillV " + ix + ' ' + s );
+// 	SundryUtils.pe_("fillV " + ix + ' ' + s );
         if (s == null)
             return null;
 
@@ -589,7 +588,7 @@ public class Target {
                 String ss = fillActionLid(ix, (Item) getT_Item(ix).item);
                 if (ss == null)
                     return null;
-                String[] sa = S.split(ss, ",");
+                String[] sa = SundryUtils.split(ss, ",");
                 return sa[0];
             } else
                 return null;
@@ -731,7 +730,7 @@ public class Target {
                 return null;
             }
             Item item = it_ent_ix.getItemAt(iy);
-            item.setDummy(dummy ? S.rand(100) < 25 : false);
+            item.setDummy(dummy ? SundryUtils.rand(100) < 25 : false);
 
             String ent_tid = it_ent_ix.tid;
             if (any_id || matchTid2(ent_tid, tg_tid)) {
@@ -944,7 +943,7 @@ public class Target {
             T_Item titm = (T_Item) it.next();
             String s = titm.getLID4TgOrNull();
             if (s != null && s.length() > 0) {
-                String[] sa = S.split(s, ",");
+                String[] sa = SundryUtils.split(s, ",");
                 addSA(li, sa);
             }
         }
@@ -958,7 +957,7 @@ public class Target {
             T_Item titm = (T_Item) it.next();
             String s = titm.getLID4TgOrNull_KeepVar();
             if (s != null && s.length() > 0) {
-                String[] sa = S.split(s, ",");
+                String[] sa = SundryUtils.split(s, ",");
                 addSA(li, sa);
             }
         }
@@ -980,7 +979,7 @@ public class Target {
         }
         String[] sa = (String[]) li.toArray(new String[0]);
 
-//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "[] get sounds " + S.a2s(sa));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "[] get sounds " + SundryUtils.a2s(sa));
         return sa;
     }
 
@@ -999,7 +998,7 @@ public class Target {
         }
         String[] sa = (String[]) li.toArray(new String[0]);
 
-//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "[] get sounds " + S.a2s(sa));
+//log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "[] get sounds " + SundryUtils.a2s(sa));
         return sa;
     }
 
@@ -1011,7 +1010,7 @@ public class Target {
             if (titm != null) {
                 String s = titm.getLIDOrNull();
                 if (s != null && s.length() > 0) {
-                    String[] sa = S.split(s, ",");
+                    String[] sa = SundryUtils.split(s, ",");
                     addSA(li, sa);
                 }
             }
@@ -1043,7 +1042,7 @@ public class Target {
                 String sx = titm.getTextOrNull();
                 String s = titm.getLIDOrNull();
                 if (s != null && s.length() > 0) {
-                    String[] sa = S.split(sx, ",");
+                    String[] sa = SundryUtils.split(sx, ",");
                     addSA(li, sa);
                 }
             }
@@ -1057,7 +1056,7 @@ public class Target {
         for (Iterator it = t_items.iterator(); it.hasNext(); ) {
             T_Item titm = (T_Item) it.next();
             String snd = titm.item.getSound();
-            snd = fillVarHere(ix, snd);          // WHY-S
+            snd = fillVarHere(ix, snd);          // WHY-SundryUtil
             if (s.length() != 0)
                 s += ',';
             s += snd;
@@ -1072,11 +1071,11 @@ public class Target {
         for (Iterator it = t_items.iterator(); it.hasNext(); ) {
             T_Item titm = (T_Item) it.next();
             String snd = titm.item.getSound();
-            snd = fillVarHere(ix, snd);          // WHY-S
+            snd = fillVarHere(ix, snd);          // WHY-SundryUtil
             if (!SundryUtils.empty(snd))
                 fillHavingComma(li, snd);
             String sndD = titm.item.getDummySound();
-            sndD = fillVarHere(ix, sndD);          // WHY-S
+            sndD = fillVarHere(ix, sndD);          // WHY-SundryUtil
             if (!SundryUtils.empty(sndD))
                 li.add(sndD);
             ix++;
@@ -1089,7 +1088,7 @@ public class Target {
             li.add(snd);
             return;
         }
-        String[] sa = S.split(snd, ",");
+        String[] sa = SundryUtils.split(snd, ",");
         for (String s : sa) {
             li.add(s);
         }
@@ -1105,7 +1104,7 @@ public class Target {
 //log		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "tvvv = " + sx);
                 String s = titm.getLIDOrNull();
                 if (s != null && s.length() > 0) {
-                    String[] sa = S.split(sx, ",");
+                    String[] sa = SundryUtils.split(sx, ",");
                     addSA(li, sa);
                 }
             }
@@ -1639,12 +1638,12 @@ public class Target {
 
     String[] gDta(Target tg2) {
         String[] sndA = tg2.getAllSounds();
-        String snd = S.a2s(sndA);
+        String snd = SundryUtils.a2s(sndA);
         return new String[]{tg2.getAllText(),
-                S.a2s(tg2.getAll_Lid_Item()),
+                SundryUtils.a2s(tg2.getAll_Lid_Item()),
                 tg2.getActionFileName(99),         // all
                 snd,
-                S.a2s(tg2.getAll_Lid_Target())
+                SundryUtils.a2s(tg2.getAll_Lid_Target())
 
         };
     }
@@ -1839,7 +1838,7 @@ public class Target {
 
     private int A_howManyItems(ItemEntry[] it_entA) {
         int n = 0;
-        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "howMany( " + S.a2s(it_entA));
+        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "howMany( " + SundryUtils.a2s(it_entA));
         for (int i = 0; i < it_entA.length; i++) {
             if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "howMany " + i + ' ' + it_entA[i].howManyItems());
             n += it_entA[i].howManyItems();

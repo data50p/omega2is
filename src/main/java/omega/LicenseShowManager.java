@@ -1,6 +1,6 @@
 package omega;
 
-import fpdo.sundry.PreferenceUtil;
+import omega.util.PreferenceUtil;
 
 /*
  * To change this template, choose Tools | Templates

@@ -9,18 +9,18 @@ package omega.lesson.canvas;
  kvittera med TAB Enter
  */
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.adm.assets.TargetCombinations;
-import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
 import omega.lesson.machine.Item;
 import omega.lesson.machine.ItemEntry;
 import omega.lesson.machine.Target;
 import omega.lesson.managers.movie.LiuMovieManager;
+import omega.t9n.T;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import javax.swing.*;
 import javax.swing.event.EventListenerList;
@@ -106,7 +106,7 @@ public class LessonCanvas extends BaseCanvas {
         OmegaContext.sout_log.getLogger().info("ERR: " + "exited quitAction");
         hideMsg();
         fireExit(1);
-        S.m_sleep(300);
+        SundryUtils.m_sleep(300);
     }
 
     public LessonCanvas(LessonContext l_ctxt) {
@@ -194,7 +194,7 @@ public class LessonCanvas extends BaseCanvas {
                         if (skip_keycode) {
                             return false;
                         }
-                        selectBox(false, S.ct());
+                        selectBox(false, SundryUtils.ct());
                     }
                 }
             }
@@ -1433,7 +1433,7 @@ public class LessonCanvas extends BaseCanvas {
                 //omega.OmegaContext.sout_log.getLogger().info("ERR: " + "ratio " + xi + ' ' + ratio + ' ' + bx_w + ' ' + max_bxw + ' ' + sww + ' ' + gB);
 
                 if (hm_bx > 0 && rndA == null) {
-                    rndA = S.createUniq(hm_bx).asIntArray();
+                    rndA = SundryUtils.createUniq(hm_bx).asIntArray();
                 }
                 for (int yi = 0; yi < ny; yi++) {
                     int yi_rnd;
@@ -2440,10 +2440,10 @@ public class LessonCanvas extends BaseCanvas {
 
         void show(MsgItem msg) {
             set(msg);
-            long ct0 = S.ct();
+            long ct0 = SundryUtils.ct();
             while (show_msg) {
-                S.m_sleep(200);
-                if ((S.ct() - ct0) > 1000 * 30) {
+                SundryUtils.m_sleep(200);
+                if ((SundryUtils.ct() - ct0) > 1000 * 30) {
                     return;
                 }
             }
@@ -2660,7 +2660,7 @@ public class LessonCanvas extends BaseCanvas {
 
     public void showMsgNoWait(MsgItem mi) {
         msg_dlg.showNoWait(mi);
-        S.m_sleep(3000);
+        SundryUtils.m_sleep(3000);
     }
 
     public boolean isMsg() {
@@ -2691,7 +2691,7 @@ public class LessonCanvas extends BaseCanvas {
     }
 
     public void paintComponent(Graphics g) {
-        long ct0 = S.ct();
+        long ct0 = SundryUtils.ct();
         Graphics2D g2 = (Graphics2D) g;
 
         RenderingHints rh = g2.getRenderingHints();
@@ -2725,7 +2725,7 @@ public class LessonCanvas extends BaseCanvas {
             drawMist(g2, LiuMovieManager.repeat_mode == LiuMovieManager.RepeatMode.DO_REPEAT ? 2 : 1, mist_blueSky, mistBgCol, mistAlpha, signMovieRectangle);
         }
 
-        long ct1 = S.ct();
+        long ct1 = SundryUtils.ct();
     }
 
     public Element getElement() {

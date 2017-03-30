@@ -1,7 +1,6 @@
 package omega.appl;
 
 import de.codecentric.centerdevice.MenuToolkit;
-import fpdo.sundry.S;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Group;
@@ -14,6 +13,7 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import omega.OmegaContext;
 import omega.util.Log;
+import omega.util.SundryUtils;
 
 public class OmegaFxAppl extends Application {
 
@@ -120,15 +120,15 @@ public class OmegaFxAppl extends Application {
         stage.show();
         Log.getLogger().info("started");
         new Thread(() -> {
-            S.m_sleep(500);
+            SundryUtils.m_sleep(500);
             Platform.runLater(() -> {
 //	        stage.setIconified(true);
                 stage.hide();
                 new Thread(() -> {
-                    S.m_sleep(500);
+                    SundryUtils.m_sleep(500);
                     omega.appl.lesson.Editor.main(args);
                     Platform.runLater(() -> stage.show());
-                    S.m_sleep(500);
+                    SundryUtils.m_sleep(500);
                 }).start();
             });
         }).start();

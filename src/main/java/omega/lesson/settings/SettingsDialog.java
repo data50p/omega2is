@@ -1,8 +1,8 @@
 package omega.lesson.settings;
 
-import omega.t9n.T;
 import omega.lesson.appl.ApplContext;
 import omega.swing.GBC_Factory;
+import omega.t9n.T;
 
 import javax.swing.*;
 import java.awt.*;

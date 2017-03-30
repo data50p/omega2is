@@ -1,4 +1,4 @@
-package fpdo.xml.dtd;
+package omega.xml.dtd;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -1,9 +1,7 @@
-package fpdo.xml;
+package omega.xml;
 
-
-import fpdo.sundry.S;
 import omega.OmegaContext;
-import omega.util.Log;
+import omega.util.SundryUtils;
 import org.xml.sax.*;
 import org.xml.sax.helpers.DefaultHandler;
 
@@ -12,11 +10,16 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 
-public class SAX_node extends DefaultHandler {
+
+@Deprecated
+public class SAX_base extends DefaultHandler {
+    int depth;
+    HashMap flag;
+    HashMap allAttr = new HashMap();
+
     static class MyErrorHandler extends DefaultHandler {
         // treat validation errors as fatal
         public void error(SAXParseException e)
@@ -47,44 +50,56 @@ public class SAX_node extends DefaultHandler {
             throws SAXException {
     }
 
-    static Element el;
-    Stack stack = new Stack();
+    private Stack pcdataS = new Stack();
+    private Stack elemS = new Stack();
 
     public void startElement(String namespaceURI,
                              String localName,
                              String qName,
                              Attributes attrs)
             throws SAXException {
+        while (pcdataS.size() <= depth)
+            pcdataS.push(new StringBuffer());
+        while (elemS.size() <= depth + 1)
+            elemS.push(new HashMap());
 
-        Element el1 = new Element(qName);
-
+        HashMap attr = null;
         if (attrs != null) {
+            boolean b = false;
+            attr = new HashMap();
             for (int i = 0; i < attrs.getLength(); i++) {
                 String n = attrs.getQName(i);
                 String v = attrs.getValue(i);
-                el1.addAttr(n, v);
+                attr.put(n, v);
             }
+            allAttr.put(qName, attr);
         }
-        stack.push(el1);
+        startElementHook(qName, attr, allAttr);
+
+        depth++;
     }
 
     public void endElement(String uri, String localName, String qName)
             throws SAXException {
-        Element e = (Element) stack.pop();
-        if (!stack.isEmpty()) {
-            Element e1 = (Element) stack.peek();
-            e1.add(e);
-        } else {
-            el = e;
-        }
+        depth--;
+
+        StringBuffer sb = (StringBuffer) pcdataS.get(depth);
+        HashMap ht = (HashMap) elemS.get(depth);
+        ht.put(qName, sb.toString());
+        pcdataS.set(depth, new StringBuffer());
+
+
+        HashMap ht1 = (HashMap) elemS.get(depth + 1);
+        ht.putAll(ht1);
+        endElementHook(qName, ht);
+
+        elemS.set(depth + 1, new HashMap());
     }
 
     public void characters(char buf[], int offset, int len)
             throws SAXException {
-        Element e = (Element) stack.peek();
-        if (buf[offset + len - 1] == '\n')
-            len--;
-        e.add(new PCDATA(new String(buf, offset, len)));
+        StringBuffer sb = (StringBuffer) pcdataS.get(depth - 1);
+        sb.append(new String(buf, offset, len));
     }
 
     public void ignorableWhitespace(char buf[], int offset, int len)
@@ -109,11 +124,27 @@ public class SAX_node extends DefaultHandler {
     /**
      * Called for every scanned element
      */
-    private static Element element(String file, SAX_node sn) throws IOException {
-        return element(file, sn, true);
+    public void startElementHook(String name, HashMap attr, HashMap allAttr) {
+        OmegaContext.sout_log.getLogger().info("" + depth + " <" + name + "  " + attr + " " + allAttr);
     }
 
-    private static Element element(String file, SAX_node sn, boolean validating) throws IOException {
+    /**
+     * Called for every scanned element.
+     * "name_pcdata" contains all pcdata for last occurence of name (=key).
+     * Only last piece kept if broken by other elements.
+     */
+    public void endElementHook(String name, HashMap elem_pcdata) {
+        if (flag.get("L") != null)
+            OmegaContext.sout_log.getLogger().info("" + depth + "  " + name + "> " + elem_pcdata + "");
+        else
+            OmegaContext.sout_log.getLogger().info("" + depth + "  " + name + "> " + elem_pcdata.get(name) + "");
+    }
+
+    public static void start(String file, SAX_base sb) throws IOException {
+        start(file, sb, true);
+    }
+
+    public static void start(String file, SAX_base sb, boolean validating) throws IOException {
         InputSource input;
 
         try {
@@ -123,33 +154,23 @@ public class SAX_node extends DefaultHandler {
             if (validating)
                 spf.setValidating(true);
 
-            spf.setNamespaceAware(!true);
+            spf.setNamespaceAware(true);
 
             SAXParser sp = spf.newSAXParser();
             XMLReader xmlr = sp.getXMLReader();
 //	    Parser parser = sp.getParser();
-            xmlr.setContentHandler(sn);
+            xmlr.setContentHandler(sb);
             xmlr.setErrorHandler(new MyErrorHandler());
             xmlr.parse(uri);
-
-//	    SAXParserFactory spf = SAXParserFactory.newInstance();
-//	    if (validating)
-//		spf.setValidating(true);
-
-//	    SAXParser sp = spf.newSAXParser();
-//	    Parser parser = sp.getParser();
-//	    parser.setDocumentHandler(sn);
+//	    parser.setDocumentHandler(sb);
 //	    parser.setErrorHandler(new MyErrorHandler());
 //	    parser.parse(uri);
-
-            return el;
-
         } catch (SAXParseException err) {
             OmegaContext.sout_log.getLogger().info("** Parsing error"
                     + ", line " + err.getLineNumber()
                     + ", uri " + err.getSystemId());
             OmegaContext.sout_log.getLogger().info("   " + err.getMessage());
-
+            err.printStackTrace();
         } catch (SAXException e) {
             Exception x = e;
             if (e.getException() != null)
@@ -157,52 +178,25 @@ public class SAX_node extends DefaultHandler {
             x.printStackTrace();
 
         } catch (Throwable t) {
-//            t.printStackTrace ();
+            t.printStackTrace();
         }
-        return null;
-    }
-
-    public static Element parse(String file, boolean validating) {
-        try {
-            SAX_node sn = new SAX_node();
-            Log.getLogger().info("Loading xml: (A) " + file);
-            Element el = element(file, sn, validating);
-            Log.getLogger().info("           : " + el);
-            return el;
-        } catch (IOException ex) {
-        }
-        return null;
     }
 
     public static void main(String argv[]) throws IOException {
-        HashMap flag = S.flagAsMap(argv);
-        List argl = S.argAsList(argv);
+        HashMap flag = SundryUtils.flagAsMap(argv);
+        List argl = SundryUtils.argAsList(argv);
 
         OmegaContext.sout_log.getLogger().info("ERR: " + "argl " + argl + ' ' + flag);
 
         String file = (String) argl.get(0);
 
+        SAX_base sb = new SAX_base();
+
         boolean validating = true;
         if (flag.get("n") != null)
             validating = false;
 
-        Element el = SAX_node.parse(file, validating);
-
-        List li = el.find((String) argl.get(1));
-
-        OmegaContext.sout_log.getLogger().info("<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>");
-        OmegaContext.sout_log.getLogger().info("<!DOCTYPE start SYSTEM \"x.dtd\">");
-
-        Iterator it = li.iterator();
-        while (it.hasNext()) {
-            Element ell = (Element) it.next();
-            StringBuffer sbu = new StringBuffer();
-            StringBuffer sbl = new StringBuffer();
-
-            ell.render(sbu, sbl);
-
-            Log.getLogger().info(sbu.toString());
-            Log.getLogger().info(sbl.toString());
-        }
+        sb.flag = flag;
+        start(file, sb, validating);
     }
 }

@@ -1,12 +1,12 @@
 package omega.lesson.canvas.result;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
 import omega.adm.register.data.*;
-import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.swing.GBC_Factory;
 import omega.swing.filechooser.ChooseExportFile;
+import omega.t9n.T;
+import omega.util.SundryUtils;
 import org.hs.jfc.FormPanel;
 
 import javax.swing.*;
@@ -519,7 +519,7 @@ public class ResultDialogTableDetail extends JDialog
 
     String[] parseCCS(String ccw) {  // s +1; w +2 -3
         try {
-            String[] sa = S.split(ccw, " ;+-");
+            String[] sa = SundryUtils.split(ccw, " ;+-");
             String ss = sa[4];
             return sa;
         } catch (Exception ex) {
@@ -693,7 +693,7 @@ public class ResultDialogTableDetail extends JDialog
             return;
 
         try {
-            PrintWriter pw = S.createPrintWriter(fn);
+            PrintWriter pw = SundryUtils.createPrintWriter(fn);
 
             pw.println("Pupil:," + register.pupil.getName() + ',' +
                     "Lesson Name:," + lesson_name.getText()

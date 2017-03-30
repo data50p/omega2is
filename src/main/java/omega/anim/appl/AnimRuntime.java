@@ -1,18 +1,18 @@
 package omega.anim.appl;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaContext;
 import omega.anim.cabaret.Actor;
 import omega.anim.cabaret.GImAE;
 import omega.anim.canvas.AnimCanvas;
 import omega.anim.context.AnimContext;
 import omega.anim.tool.timeline.*;
-import omega.servers.httpd.Server;
-import omega.t9n.T;
 import omega.media.audio.APlayer;
+import omega.servers.httpd.Server;
 import omega.swing.ToolExecute;
+import omega.t9n.T;
 import omega.util.Files;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import javax.swing.*;
 import java.awt.*;
@@ -93,7 +93,7 @@ public class AnimRuntime {
     }
 
     String composeVar(String anam) {
-        String[] sa = S.split(anam, "${}");
+        String[] sa = SundryUtils.split(anam, "${}");
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < sa.length; i++) {
             String s1 = sa[i];
@@ -358,7 +358,7 @@ public class AnimRuntime {
     }
 
     Point2D decode2D(String s) {
-        String[] sa = S.split(s, ",");
+        String[] sa = SundryUtils.split(s, ",");
         float a = Float.parseFloat(sa[0]);
         float b = Float.parseFloat(sa[1]);
         return new Point2D.Float(a, b);
@@ -461,14 +461,14 @@ public class AnimRuntime {
             String[] lid_timelines = getLessonId_TimeLines();
             String[] lid_actors = getLessonId_Actors();
 
-            OmegaContext.sout_log.getLogger().info("ERR: " + "anim: TL   " + S.arrToString(lid_timelines));
-            OmegaContext.sout_log.getLogger().info("ERR: " + "anim: Act  " + S.arrToString(lid_actors));
+            OmegaContext.sout_log.getLogger().info("ERR: " + "anim: TL   " + SundryUtils.arrToString(lid_timelines));
+            OmegaContext.sout_log.getLogger().info("ERR: " + "anim: Act  " + SundryUtils.arrToString(lid_actors));
 
             String[] aaid = actA;
-            OmegaContext.sout_log.getLogger().info("ERR: " + "less: act  " + S.arrToString(aaid) + ' ' + aaid.length);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "less: act  " + SundryUtils.arrToString(aaid) + ' ' + aaid.length);
 
             String[] v_pa = pathA;
-            OmegaContext.sout_log.getLogger().info("ERR: " + "less: path " + S.arrToString(v_pa) + ' ' + v_pa.length);
+            OmegaContext.sout_log.getLogger().info("ERR: " + "less: path " + SundryUtils.arrToString(v_pa) + ' ' + v_pa.length);
 
             for (int i = 0; i < v_pa.length; i++)
                 try {
@@ -483,7 +483,7 @@ public class AnimRuntime {
                     System.exit(1);
                 }
 
-            OmegaContext.sout_log.getLogger().info("ERR: " + "nVt " + S.arrToString(v_pa));
+            OmegaContext.sout_log.getLogger().info("ERR: " + "nVt " + SundryUtils.arrToString(v_pa));
 
             fa_ctxt.anim_canvas.bindAllStatistActor();
 
@@ -513,7 +513,7 @@ public class AnimRuntime {
             }
 
             if (ok) {
-                //		S.m_sleep(100);
+                //		SundryUtils.m_sleep(100);
 // 		if ( hook != null )
 // 		    hook.run();
 //  		fa_ctxt.anim_canvas.centerBackground();
@@ -523,10 +523,10 @@ public class AnimRuntime {
 //   		a_ctxt.anim_canvas.requestFocus();
 //   		a_ctxt.anim_canvas.repaint();
 
-                final long drct0 = S.ct();
+                final long drct0 = SundryUtils.ct();
                 dry_playAnimation(new Runnable() {
                     public void run() {
-                        OmegaContext.sout_log.getLogger().info("ERR: " + "Dry Running done " + (S.ct() - drct0));
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "Dry Running done " + (SundryUtils.ct() - drct0));
                     }
                 });
 
@@ -536,11 +536,11 @@ public class AnimRuntime {
 // 		fa_ctxt.anim_canvas.HIDDEN = false;
 //   		fa_ctxt.anim_canvas.repaint();
                 fa_ctxt.anim_canvas.centerBackground();
-                final long rct0 = S.ct();
+                final long rct0 = SundryUtils.ct();
                 getAC().HIDDEN = false;
                 playAnimation(new Runnable() {
                     public void run() {
-                        OmegaContext.sout_log.getLogger().info("ERR: " + "Running done " + (S.ct() - rct0));
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "Running done " + (SundryUtils.ct() - rct0));
                         //fa_ctxt.anim_canvas.hideActors(); // LAST
                         String end_code_s = fa_ctxt.anim_canvas.getEndCode();
                         end_code[0] = end_code_s;
@@ -549,7 +549,7 @@ public class AnimRuntime {
                 });
 
                 while (end_code[0] == null)
-                    S.m_sleep(200);
+                    SundryUtils.m_sleep(200);
 
                 clean();
 

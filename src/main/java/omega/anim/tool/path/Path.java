@@ -1,8 +1,8 @@
 package omega.anim.tool.path;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaContext;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import javax.swing.*;
 import java.awt.*;
@@ -155,7 +155,7 @@ public class Path {
     }
 
     Point2D decode2D(String s) {
-        String[] sa = S.split(s, ",");
+        String[] sa = SundryUtils.split(s, ",");
         float a = Float.parseFloat(sa[0]);
         float b = Float.parseFloat(sa[1]);
         return new Point2D.Float(a, b);
@@ -641,8 +641,8 @@ public class Path {
 
 
     public static void main(String[] argv) {
-        HashMap flag = S.flagAsMap(argv);
-        java.util.List argl = S.argAsList(argv);
+        HashMap flag = SundryUtils.flagAsMap(argv);
+        java.util.List argl = SundryUtils.argAsList(argv);
 
         JFrame f = new JFrame("Path - test");
         Container c = f.getContentPane();
@@ -661,7 +661,7 @@ public class Path {
         f.setVisible(true);
         ca.setBackground("bg.jpg");
 
-        S.m_sleep(300);
+        SundryUtils.m_sleep(300);
 
 
         Point2D sp = new Point2D.Double(100, 100);

@@ -1,6 +1,5 @@
 package omega.util;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
 import omega.appl.Omega_IS;
 
@@ -30,7 +29,7 @@ public class Log {
 
     private static class MyFormatter extends Formatter {
         static DateFormat dformat = new SimpleDateFormat("dd/MM HH:mm:ss.SSS");
-        long last = S.ct();
+        long last = SundryUtils.ct();
 
         public String format(LogRecord record) {
             String s = record.getSourceClassName();
@@ -41,11 +40,11 @@ public class Log {
             int lt = (int) (ms - last);
             last = ms;
             return "" +
-                    S.padRight("" + record.getLevel(), 10, ' ') +
+                    SundryUtils.padRight("" + record.getLevel(), 10, ' ') +
                     d + ' ' +
-                    S.padLeft("" + lt, 5, ' ') + ' ' +
-                    S.padRight("" + s, 23, ' ') + ' ' +
-                    S.padRight("" + record.getSourceMethodName(), 22, ' ') + ' ' +
+                    SundryUtils.padLeft("" + lt, 5, ' ') + ' ' +
+                    SundryUtils.padRight("" + s, 23, ' ') + ' ' +
+                    SundryUtils.padRight("" + record.getSourceMethodName(), 22, ' ') + ' ' +
                     record.getMessage() + '\n';
         }
     }

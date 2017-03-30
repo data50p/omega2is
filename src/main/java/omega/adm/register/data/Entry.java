@@ -1,6 +1,6 @@
 package omega.adm.register.data;
 
-import fpdo.xml.Element;
+import omega.xml.Element;
 
 abstract public class Entry {
     public int ord;

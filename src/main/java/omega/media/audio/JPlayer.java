@@ -151,7 +151,7 @@ public class JPlayer implements LineListener {
                         ais.close();
                         ais = null;
 
-                        s_pe(">S>");
+                        s_pe(">SundryUtil>");
                         sdataline.stop();
                         s_pe(">C>");
                         sdataline.close();
@@ -223,7 +223,7 @@ public class JPlayer implements LineListener {
             eom = true;
             s_pe("+C+");
         } else if (t == LineEvent.Type.STOP) {
-            s_pe("+S+");
+            s_pe("+SundryUtil+");
         }
 
         notifyAll();

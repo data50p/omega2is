@@ -1,9 +1,9 @@
 package omega.lesson.canvas.result;
 
 import omega.adm.register.data.*;
-import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.swing.GBC_Factory;
+import omega.t9n.T;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;

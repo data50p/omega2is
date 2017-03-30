@@ -3,13 +3,13 @@ package omega.lesson.canvas.result;
 // has UTF-8
 
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
 import omega.adm.register.data.*;
-import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.swing.GBC_Factory;
 import omega.swing.filechooser.ChooseExportFile;
+import omega.t9n.T;
+import omega.util.SundryUtils;
 import org.hs.jfc.FormPanel;
 
 import javax.swing.*;
@@ -510,7 +510,7 @@ public class ResultDialogTableSummary extends JDialog
 
     int asNoHMS(String s) {  // 1h 12m 7s
         s = s.replace('m', ' ').replace('s', ' ').replace('h', ' ');
-        String[] sa = S.split(s, " ");
+        String[] sa = SundryUtils.split(s, " ");
         if (sa.length == 2)
             return Integer.parseInt(sa[1]) + Integer.parseInt(sa[0]) * 60;
         return Integer.parseInt(sa[2]) + Integer.parseInt(sa[1]) * 60 + Integer.parseInt(sa[0]) * 60 * 60;
@@ -560,7 +560,7 @@ public class ResultDialogTableSummary extends JDialog
                 }
                 data[i][map(CO_fn)] = testName;
                 try {
-                    String[] tname = S.split(testName, "-"); // pupil-date_clock-TID-type.omegaresult
+                    String[] tname = SundryUtils.split(testName, "-"); // pupil-date_clock-TID-type.omegaresult
                     data[i][map(CO_dat)] = tname[1].substring(0, 8);
                     data[i][map(CO_l)] = tname[2];
                     data[i][map(CO_t)] = tname[3];
@@ -620,7 +620,7 @@ public class ResultDialogTableSummary extends JDialog
                             if (ccw == null)
                                 continue;
                             String s = ccw.replace(';', ' ');
-                            String sat[] = S.split(s, " ");
+                            String sat[] = SundryUtils.split(s, " ");
                             if (sat.length > 3) {
                                 if (sat[1].equals("1")) {
                                     correct_sent.add("1");
@@ -735,7 +735,7 @@ public class ResultDialogTableSummary extends JDialog
             return;
 
         try {
-            PrintWriter pw = S.createPrintWriter(fn);
+            PrintWriter pw = SundryUtils.createPrintWriter(fn);
 
             pw.println("Pupil:," + register.pupil.getName() + ',' +
                     "Lesson Name:," + lesson_name.getText()

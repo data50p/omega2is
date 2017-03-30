@@ -1,9 +1,9 @@
 package omega.media.video;
 
-import fpdo.sundry.S;
 import javafx.embed.swing.JFXPanel;
 import omega.OmegaContext;
 import omega.util.Log;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -29,7 +29,7 @@ public class MpgPlayer {
         if (false) {
             for (int i = 0; i < 100; i++)
                 if (prefetch_done == false)
-                    S.m_sleep(100);
+                    SundryUtils.m_sleep(100);
         }
     }
 
@@ -49,11 +49,11 @@ public class MpgPlayer {
         if (fxp != null)
             fxp.wait4done();
 //	if ( true ) {
-//	    S.m_sleep(4000);
+//	    SundryUtils.m_sleep(4000);
 //	    return;
 //	}
 //	while (ready == false)
-//	    S.m_sleep(200);
+//	    SundryUtils.m_sleep(200);
     }
 
     public void dispose(JComponent jcomp) {

@@ -1,6 +1,6 @@
 package omega.anim.tool.timeline;
 
-import fpdo.xml.Element;
+import omega.xml.Element;
 
 import java.io.Serializable;
 import java.util.*;

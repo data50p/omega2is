@@ -1,6 +1,5 @@
 package omega.util;
 
-import fpdo.sundry.S;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 
@@ -33,7 +32,7 @@ public class Files {
         if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "+++ " + name);
         sa[0] = cdu;
         sa[1] = name;
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "" + S.arrToString(sa));
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "" + SundryUtils.arrToString(sa));
         return sa;
     }
 
@@ -55,7 +54,7 @@ public class Files {
             if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "+++ " + name);
             sa[0] = cdu;
             sa[1] = name;
-            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "" + S.arrToString(sa));
+            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "" + SundryUtils.arrToString(sa));
             return sa[1];
         } catch (StringIndexOutOfBoundsException ex) {
         }
@@ -79,7 +78,7 @@ public class Files {
         if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info(". " + "+++ " + url_s);
         sa[0] = cdu;
         sa[1] = name;
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info(". " + "=== " + S.arrToString(sa));
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info(". " + "=== " + SundryUtils.arrToString(sa));
         return sa[1];
     }
 
@@ -100,7 +99,7 @@ public class Files {
         if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "+++ " + name);
         sa[0] = cdu;
         sa[1] = name;
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "" + S.arrToString(sa));
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "" + SundryUtils.arrToString(sa));
         return sa[1];
     }
 
@@ -119,7 +118,7 @@ public class Files {
         if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("+++ " + url_s + ' ' + prefix);
         sa[0] = cdu;
         sa[1] = name;
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("=== " + S.arrToString(sa));
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("=== " + SundryUtils.arrToString(sa));
         return sa[1];
     }
 

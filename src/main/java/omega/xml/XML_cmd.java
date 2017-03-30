@@ -1,7 +1,7 @@
-package fpdo.xml;
+package omega.xml;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
+import omega.util.SundryUtils;
 
 import java.io.IOException;
 import java.util.*;
@@ -12,8 +12,8 @@ import java.util.*;
 
 public class XML_cmd {
     public static void main(String argv[]) throws IOException {
-	HashMap flag = S.flagAsMap(argv);
-	List argl = S.argAsList(argv);
+	HashMap flag = SundryUtils.flagAsMap(argv);
+	List argl = SundryUtils.argAsList(argv);
 
 	if (argl.size() == 0 || ((String) argl.get(0)).equals("help")) {
 	    OmegaContext.sout_log.getLogger().info("xmlfile extract element");
@@ -64,7 +64,7 @@ public class XML_cmd {
 
 	if (cmd.equals("remove")) {
 	    String tag = (String) argl.get(2);
-	    String[] tags = S.split(tag, ",");
+	    String[] tags = SundryUtils.split(tag, ",");
 
 	    Element rel = el.remove(tags);
 

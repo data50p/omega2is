@@ -2,11 +2,11 @@ package omega.lesson.canvas;
 
 import omega.OmegaConfig;
 import omega.OmegaContext;
-import omega.t9n.T;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
 import omega.lesson.repository.LessonItem;
 import omega.lesson.repository.Locator;
+import omega.t9n.T;
 
 import javax.swing.*;
 import java.awt.*;
@@ -342,7 +342,7 @@ public class LessonMainCanvas extends BaseCanvas {
 
     public void paintComponent(Graphics g) {
 //log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "++++++++++ repaint LMC ");
-        //S.m_sleep(100);
+        //SundryUtils.m_sleep(100);
         if (title == null)
             populate(false);
 

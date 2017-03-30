@@ -1,11 +1,11 @@
 package omega.lesson.actions;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaContext;
 import omega.lesson.canvas.MsgItem;
 import omega.media.video.MpgPlayer;
 import omega.util.Log;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
@@ -351,7 +351,7 @@ public class MpgAction implements ActionI {
             if (show_sentence) {
                 showMsgFx(new MsgItem("", sentence));
                 while (show_msg && mpg_player.fxp.messageShown) {
-                    S.m_sleep(200);
+                    SundryUtils.m_sleep(200);
                     if (again_audio && again_audio2) {
                         hook.run();
                         again_audio2 = false;

@@ -1,8 +1,8 @@
 package omega.adm.register.data;
 
-import fpdo.xml.Element;
-import fpdo.xml.SAX_node;
 import omega.OmegaContext;
+import omega.xml.Element;
+import omega.xml.SAX_node;
 
 import java.text.DateFormat;
 import java.util.ArrayList;

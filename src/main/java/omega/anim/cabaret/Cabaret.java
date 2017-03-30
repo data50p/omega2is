@@ -1,8 +1,8 @@
 package omega.anim.cabaret;
 
-import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.anim.context.AnimContext;
+import omega.xml.Element;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,8 @@
 package omega.media.images;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
 import omega.t9n.T;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,7 +30,7 @@ public class xImage {
 
     int max_seq = 1;
 
-    static long checkNow = S.ct() + 40 * 1000;
+    static long checkNow = SundryUtils.ct() + 40 * 1000;
 
     static private HashMap cache_dir = new HashMap();
     static private HashMap cache_imf = new HashMap();
@@ -43,18 +43,18 @@ public class xImage {
 
         Entry(Image im) {
             this.im = im;
-            time_stamp = S.ct();
+            time_stamp = SundryUtils.ct();
         }
 
         Image getIm() {
-            time_stamp = S.ct();
+            time_stamp = SundryUtils.ct();
             return im;
         }
 
         int to = 60 * 2;
 
         boolean isOld() {
-            return S.ct() > time_stamp + 1000 * to;
+            return SundryUtils.ct() > time_stamp + 1000 * to;
         }
     }
 
@@ -90,7 +90,7 @@ public class xImage {
     }
 
     void removeOldEntry() {
-        if (S.ct() < checkNow)
+        if (SundryUtils.ct() < checkNow)
             return;
 
         synchronized (cache_imf) {
@@ -111,7 +111,7 @@ public class xImage {
             }
         }
 
-        checkNow = S.ct() + 10 * 1000;
+        checkNow = SundryUtils.ct() + 10 * 1000;
     }
 
     Image getEntry(String key) {
@@ -278,7 +278,7 @@ public class xImage {
             }
 //	    list_hm.put(dir, list);
         }
-//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "scanDir -> " + S.arrToString(list));
+//	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "scanDir -> " + SundryUtils.arrToString(list));
         cache_dir.put(dir, list);
         return list;
     }
@@ -351,13 +351,13 @@ public class xImage {
 
         if (attr == null) {
             if (last_seq != seq || last_fn_an == null) {
-                last_fn_an = dir + '/' + base + '-' + S.pL(seq, 2, '0') + '.' + ext;
+                last_fn_an = dir + '/' + base + '-' + SundryUtils.pL(seq, 2, '0') + '.' + ext;
                 last_seq = seq;
             }
             return last_fn_an;
         } else {
             if (last_seq != seq || last_attr != attr || last_fn == null) {
-                last_fn = dir + '/' + base + '-' + attr + '-' + S.pL(seq, 2, '0') + '.' + ext;
+                last_fn = dir + '/' + base + '-' + attr + '-' + SundryUtils.pL(seq, 2, '0') + '.' + ext;
                 last_seq = seq;
                 last_attr = attr;
             }
@@ -398,11 +398,11 @@ public class xImage {
             String[] list = scanDir(dir);
             for (int i = 0; i < list.length; i++) {
                 String[] file = splitFile(list[i]);
-                //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "try " + S.arrToString(file));
+                //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "try " + SundryUtils.arrToString(file));
                 if (file[BASE].equals(base) && ((attr == null && file[ATTR] == null) ||
                         (attr != null && attr.equals(file[ATTR])))) {
                     if (file[SEQ] != null) {
-                        //		    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FOund seq " + S.arrToString(file));
+                        //		    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FOund seq " + SundryUtils.arrToString(file));
                         int v = Integer.parseInt(file[SEQ]);
                         if (v > max)
                             max = v;
@@ -431,7 +431,7 @@ public class xImage {
             for (int i = 0; i < list.length; i++) {
                 String[] file = splitFile(list[i]);
                 if (file[BASE].equals(base) && a != null && a.equals(file[ATTR])) {
-//		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "found attr " + S.arrToString(file));
+//		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "found attr " + SundryUtils.arrToString(file));
                     cache_attr.put(key, new Boolean(true));
                     return true;
                 }

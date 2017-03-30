@@ -1,9 +1,9 @@
 package omega.lesson.repository;
 
-import fpdo.xml.Element;
-import fpdo.xml.SAX_node;
 import omega.OmegaContext;
 import omega.util.Log;
+import omega.xml.Element;
+import omega.xml.SAX_node;
 
 public class Restore {
     public static Element restore(String fname) {

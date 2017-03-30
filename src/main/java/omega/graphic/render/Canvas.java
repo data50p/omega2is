@@ -1,11 +1,11 @@
 package omega.graphic.render;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaContext;
 import omega.anim.tool.timeline.TimeLine;
-import omega.servers.httpd.Server;
 import omega.graphic.util.LoadImage;
+import omega.servers.httpd.Server;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import javax.swing.*;
 import java.awt.*;
@@ -215,7 +215,7 @@ public class Canvas extends JPanel implements java.awt.image.ImageObserver {
     }
 
     synchronized void off_upd(Rectangle2D[] ra) {
-        int a = S.rand(255);
+        int a = SundryUtils.rand(255);
         for (int i = 0; i < ra.length; i++) {
             off_upd((int) ra[i].getX(),
                     (int) ra[i].getY(),

@@ -1,12 +1,12 @@
 package omega.anim.context;
 
-import fpdo.xml.Element;
 import omega.OmegaContext;
 import omega.anim.appl.AnimEditor;
 import omega.anim.appl.AnimRuntime;
 import omega.anim.canvas.AnimCanvas;
 import omega.anim.tool.timeline.MasterTimeLine;
 import omega.anim.tool.timeline.TimeLinePlayer;
+import omega.xml.Element;
 
 import javax.swing.*;
 

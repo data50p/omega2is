@@ -1,6 +1,6 @@
 package omega.adm.register.data;
 
-import fpdo.xml.Element;
+import omega.xml.Element;
 
 public class TestEntry extends Entry {
     public String extra;

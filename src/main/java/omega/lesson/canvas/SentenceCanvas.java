@@ -1,10 +1,10 @@
 package omega.lesson.canvas;
 
-import fpdo.sundry.S;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.lesson.Lesson;
 import omega.lesson.LessonContext;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -91,7 +91,7 @@ public class SentenceCanvas extends BaseCanvas {
 
     public String waitDone() {
         while (story_list_sp.isVisible())
-            S.m_sleep(100);
+            SundryUtils.m_sleep(100);
         setRed(1);
         String filename = (String) story_list.getSelectedValue();
         return filename;
@@ -543,7 +543,7 @@ public class SentenceCanvas extends BaseCanvas {
         if (buttons[0] == null)
             populate();
 
-        long ct0 = S.ct();
+        long ct0 = SundryUtils.ct();
         Graphics2D g2 = (Graphics2D) g;
 
         RenderingHints rh = g2.getRenderingHints();
@@ -560,7 +560,7 @@ public class SentenceCanvas extends BaseCanvas {
 
         drawList(g2);
 
-        long ct1 = S.ct();
+        long ct1 = SundryUtils.ct();
     }
 
     public void enter() {

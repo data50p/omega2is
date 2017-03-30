@@ -1,4 +1,4 @@
-package fpdo.xml.dtd;
+package omega.xml.dtd;
 
 public class Attrib extends Item {
     String type;

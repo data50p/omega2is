@@ -1,7 +1,7 @@
 package omega.lesson.remote;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
+import omega.util.SundryUtils;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -29,7 +29,7 @@ public class Server implements Runnable {
                 }
             } catch (IOException ex) {
                 OmegaContext.sout_log.getLogger().info("ERR: " + "lessond: Exception: " + ex);
-                S.m_sleep(3000);
+                SundryUtils.m_sleep(3000);
             }
         }
     }

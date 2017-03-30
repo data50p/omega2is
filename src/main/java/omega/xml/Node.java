@@ -1,4 +1,4 @@
-package fpdo.xml;
+package omega.xml;
 
 public abstract class Node {
     public abstract void render(StringBuffer sbu,

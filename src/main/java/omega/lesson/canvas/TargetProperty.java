@@ -1,9 +1,9 @@
 package omega.lesson.canvas;
 
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
 import omega.t9n.T;
+import omega.util.SundryUtils;
 import omega.value.Value;
 import omega.value.Values;
 
@@ -101,7 +101,7 @@ public class TargetProperty extends Property_B {
                 JComboBox cb = (JComboBox) guimap.get("Slid");
                 String ss = v.getStr();
                 if (ss != null) {
-                    String[] sa = S.split(ss, ",");
+                    String[] sa = SundryUtils.split(ss, ",");
                     cb.removeAllItems();
                     cb.addItem(T.t("(Select in list)"));
                     cb.addItem(T.t("(Clear data)"));

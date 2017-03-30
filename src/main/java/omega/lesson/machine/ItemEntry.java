@@ -1,8 +1,8 @@
 package omega.lesson.machine;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaContext;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import java.awt.*;
 import java.awt.font.FontRenderContext;
@@ -120,7 +120,7 @@ public class ItemEntry {
         }
         // no free empty speces, I must use another word
         if (free.size() > 0 && !"action".equals(type)) {
-            int fix = S.rand(free.size());
+            int fix = SundryUtils.rand(free.size());
             Item itm = (Item) free.get(fix);
             itm.allocateDummySpace(src_itm);
             if (Tr)
@@ -245,7 +245,7 @@ public class ItemEntry {
         while (it.hasNext()) {
             Item itm = (Item) it.next();
             if (itm != null) {
-                String extras[] = S.split(tid, ",");
+                String extras[] = SundryUtils.split(tid, ",");
                 ArrayList free_1 = new ArrayList();
                 for (int jj = 0; jj < extras.length; jj++) {
                     String extra = has_krull ? "{" + extras[jj] + '}' : "";
@@ -274,7 +274,7 @@ public class ItemEntry {
         while (it.hasNext()) {
             Item itm = (Item) it.next();
             if (itm != null) {
-                String extras[] = S.split(tid, ",");
+                String extras[] = SundryUtils.split(tid, ",");
                 for (int jj = 0; jj < extras.length; jj++) {
                     String extra = has_krull ? "{" + extras[jj] + '}' : "";
                     String s = itm.getText() + extra; // current item + {tid}
@@ -312,7 +312,7 @@ public class ItemEntry {
 
     public void mixList() {
         Item[] iA = (Item[]) items.toArray(new Item[0]);
-        fpdo.sundry.S.scrambleArr(iA);
+        SundryUtils.scrambleArr(iA);
         items = new ArrayList(Arrays.asList(iA));
         reOrdItem();
         OmegaContext.def_log.getLogger().info("mixList " + items);

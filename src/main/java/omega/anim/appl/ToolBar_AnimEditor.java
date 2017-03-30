@@ -1,7 +1,7 @@
 package omega.anim.appl;
 
-import omega.t9n.T;
 import omega.swing.ToolExecute;
+import omega.t9n.T;
 
 import javax.swing.*;
 import java.awt.*;

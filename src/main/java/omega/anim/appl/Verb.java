@@ -1,6 +1,6 @@
 package omega.anim.appl;
 
-import fpdo.sundry.S;
+import omega.util.SundryUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public class Verb {
     Verb(String s) {
         all = s;
 
-        String[] sa = S.split(s, " ");
+        String[] sa = SundryUtils.split(s, " ");
 
         List li = new ArrayList();
 
@@ -55,6 +55,6 @@ public class Verb {
     }
 
     public String toString() {
-        return "[" + S.arrToString(part) + "]";
+        return "[" + SundryUtils.arrToString(part) + "]";
     }
 }

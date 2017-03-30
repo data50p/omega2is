@@ -1,6 +1,6 @@
 package omega.lesson.actions;
 
-import fpdo.xml.Element;
+import omega.xml.Element;
 
 import javax.swing.*;
 import java.awt.*;

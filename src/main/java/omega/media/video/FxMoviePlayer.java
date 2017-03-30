@@ -1,6 +1,5 @@
 package omega.media.video;
 
-import fpdo.sundry.S;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.event.EventHandler;
@@ -19,6 +18,7 @@ import javafx.stage.Stage;
 import omega.OmegaContext;
 import omega.lesson.canvas.MsgItem;
 import omega.util.Log;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -116,7 +116,7 @@ public class FxMoviePlayer {
 
     public void waitReady() {
         while (!ready)
-            S.m_sleep(100);
+            SundryUtils.m_sleep(100);
 
     }
 
@@ -209,7 +209,7 @@ public class FxMoviePlayer {
             if (initDone)
                 break;
             else
-                S.m_sleep(100);
+                SundryUtils.m_sleep(100);
 
         if (player != null) {
             Log.getLogger().info("Play the movie...");
@@ -230,7 +230,7 @@ public class FxMoviePlayer {
 
     public void wait4done() {
         while (stopped == false)
-            S.m_sleep(200);
+            SundryUtils.m_sleep(200);
     }
 
 
@@ -241,11 +241,11 @@ public class FxMoviePlayer {
 
         (new Thread(() -> initGUI())).start();
         while (stopped == false)
-            S.m_sleep(200);
+            SundryUtils.m_sleep(200);
 
         (new Thread(() -> initGUI(jcomp, MEDIA_FN2))).start();
         while (stopped == false)
-            S.m_sleep(200);
+            SundryUtils.m_sleep(200);
 
         dispose();
     }

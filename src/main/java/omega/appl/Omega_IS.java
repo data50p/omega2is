@@ -3,8 +3,6 @@ package omega.appl;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
-import fpdo.sundry.PreferenceUtil;
-import fpdo.sundry.S;
 import javafx.embed.swing.JFXPanel;
 import omega.appl.lesson.Editor;
 import omega.appl.lesson.Runtime;
@@ -13,7 +11,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
 
 /**
  * Created by lars on 2016-12-10.

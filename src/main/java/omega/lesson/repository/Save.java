@@ -1,10 +1,10 @@
 package omega.lesson.repository;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
-import fpdo.xml.XML_PW;
 import omega.OmegaContext;
 import omega.util.Log;
+import omega.util.SundryUtils;
+import omega.xml.Element;
+import omega.xml.XML_PW;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class Save {
 	    }
 	}
 
-	try (XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false)) {
+	try (XML_PW xmlpw = new XML_PW(SundryUtils.createPrintWriterUTF8(fname), false)) {
 	    xmlpw.put(el);
 	} catch (Exception e) {
 	    e.printStackTrace();

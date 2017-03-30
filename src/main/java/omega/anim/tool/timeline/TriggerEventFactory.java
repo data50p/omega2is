@@ -1,7 +1,7 @@
 package omega.anim.tool.timeline;
 
-import fpdo.xml.Element;
 import omega.OmegaContext;
+import omega.xml.Element;
 
 import java.util.ArrayList;
 import java.util.List;

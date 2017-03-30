@@ -1,9 +1,9 @@
 package omega.adm.register.data;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
-import omega.t9n.T;
 import omega.lesson.appl.ApplContext;
+import omega.t9n.T;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import java.io.File;
@@ -123,8 +123,8 @@ public class RegLocator {
     public static void main(String[] args) {
         RegLocator l = new RegLocator();
         String sa[] = l.getAllPupilsName();
-        OmegaContext.sout_log.getLogger().info("ERR: " + "" + S.a2s(sa));
+        OmegaContext.sout_log.getLogger().info("ERR: " + "" + SundryUtils.a2s(sa));
         sa = l.getAllResultsFName("Lars", new String[]{"test"});
-        OmegaContext.sout_log.getLogger().info("ERR: " + "" + S.a2s(sa));
+        OmegaContext.sout_log.getLogger().info("ERR: " + "" + SundryUtils.a2s(sa));
     }
 }

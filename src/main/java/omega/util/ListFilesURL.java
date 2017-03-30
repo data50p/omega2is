@@ -1,6 +1,5 @@
 package omega.util;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
 
 import java.io.File;
@@ -13,7 +12,7 @@ public class ListFilesURL {
         File dir = new File(name);
         String[] names = dir.list();
 // 	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE dir[] name " + name + ' ' + names);
-// 	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE dir[] names " + S.a2s(names));
+// 	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE dir[] names " + SundryUtils.a2s(names));
         Set li = new HashSet();
         for (int i = 0; i < names.length; i++) {
             li.add(names[i]);
@@ -22,7 +21,7 @@ public class ListFilesURL {
         }
         String[] sa = (String[]) li.toArray(new String[li.size()]);
 
-        //	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE dir[] " + dir + ' ' + S.a2s(names));
+        //	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "FILE dir[] " + dir + ' ' + SundryUtils.a2s(names));
 //	return names;
 
         return sa;
@@ -31,11 +30,11 @@ public class ListFilesURL {
 
     static public void main(String[] args) {
         for (int i = 0; i < 10; i++) {
-            long ct0 = S.ct();
-            OmegaContext.sout_log.getLogger().info("ERR: " + "" + S.a2s(getMediaList("actor")));
-            long ct1 = S.ct();
+            long ct0 = SundryUtils.ct();
+            OmegaContext.sout_log.getLogger().info("ERR: " + "" + SundryUtils.a2s(getMediaList("actor")));
+            long ct1 = SundryUtils.ct();
             OmegaContext.sout_log.getLogger().info("ERR: " + "" + (ct1 - ct0));
-            S.m_sleep(200);
+            SundryUtils.m_sleep(200);
             System.gc();
         }
     }

@@ -4,7 +4,7 @@ package omega.swing;
  * @(#)HtmlPanel.java	1.14 98/08/26
  *
  * Copyright 1997, 1998 by Sun Microsystems, Inc.,
- * 901 San Antonio Road, Palo Alto, California, 94303, U.S.A.
+ * 901 San Antonio Road, Palo Alto, California, 94303, U.SundryUtils.A.
  * All rights reserved.
  *
  * This software is the confidential and proprietary information

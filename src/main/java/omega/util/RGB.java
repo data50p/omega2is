@@ -1,4 +1,4 @@
-package fpdo.sundry;
+package omega.util;
 
 import java.awt.*;
 import java.util.HashMap;

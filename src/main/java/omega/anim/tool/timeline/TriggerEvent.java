@@ -1,6 +1,6 @@
 package omega.anim.tool.timeline;
 
-import fpdo.xml.Element;
+import omega.xml.Element;
 
 public class TriggerEvent {
     public String name;

@@ -1,7 +1,7 @@
 package omega.anim.tool.path;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
+import omega.util.SundryUtils;
+import omega.xml.Element;
 
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
@@ -157,8 +157,8 @@ public class AllPath {
     }
 
     public static void main(String[] argv) {
-        HashMap flag = S.flagAsMap(argv);
-        java.util.List argl = S.argAsList(argv);
+        HashMap flag = SundryUtils.flagAsMap(argv);
+        java.util.List argl = SundryUtils.argAsList(argv);
 
         JFrame f = new JFrame("Path - test");
         Container c = f.getContentPane();
@@ -179,7 +179,7 @@ public class AllPath {
         f.setVisible(true);
         ca.setBackground("bg.jpg");
 
-        S.m_sleep(300);
+        SundryUtils.m_sleep(300);
 
         Point2D sp = new Point2D.Double(100, 100);
         Point2D ep = new Point2D.Double(200, 300);
@@ -269,10 +269,10 @@ public class AllPath {
         }
 
         Mouse m = new Mouse();
-        S.m_sleep(200);
+        SundryUtils.m_sleep(200);
 
         for (; ; ) {
-            S.m_sleep(200);
+            SundryUtils.m_sleep(200);
         }
     }
 }

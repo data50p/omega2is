@@ -1,7 +1,7 @@
 package omega.anim.tool.timeline;
 
-import fpdo.sundry.S;
 import omega.t9n.T;
+import omega.util.SundryUtils;
 
 public class TriggerEventScale extends TriggerEvent {
     public String getCmd() {
@@ -26,22 +26,22 @@ public class TriggerEventScale extends TriggerEvent {
 
     public double getArgDouble() {
         String s = getArgString();
-        String sa[] = S.split(s, " ");
+        String sa[] = SundryUtils.split(s, " ");
         if (sa.length == 1) {
-            double d = S.tD(s);
+            double d = SundryUtils.tD(s);
             return d;
         }
-        double d = S.tD(sa[0]);
+        double d = SundryUtils.tD(sa[0]);
         return d;
     }
 
     public double getArgDouble2nd() {
         String s = getArgString();
-        String sa[] = S.split(s, " ");
+        String sa[] = SundryUtils.split(s, " ");
         if (sa.length == 1) {
             return 1.0;
         }
-        double d = S.tD(sa[1]);
+        double d = SundryUtils.tD(sa[1]);
         return d;
     }
 }

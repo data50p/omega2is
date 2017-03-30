@@ -1,6 +1,6 @@
 package omega.appl;
 
-import fpdo.sundry.PreferenceUtil;
+import omega.util.PreferenceUtil;
 
 import java.util.HashMap;
 

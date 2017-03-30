@@ -1,14 +1,14 @@
 package omega.lesson.canvas;
 
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
-import omega.swing.filechooser.ChooseActionMovieFile;
-import omega.t9n.T;
 import omega.lesson.LessonContext;
-import omega.swing.filechooser.ChooseSignFileAlt;
 import omega.swing.TableSorter;
+import omega.swing.filechooser.ChooseActionMovieFile;
 import omega.swing.filechooser.ChooseGenericFile;
+import omega.swing.filechooser.ChooseSignFileAlt;
+import omega.t9n.T;
+import omega.util.SundryUtils;
 import omega.value.Value;
 import omega.value.Values;
 import org.hs.jfc.FormPanel;
@@ -183,7 +183,7 @@ public class SentenceProperty extends Property_B {
                     url_s = omega.util.Files.toURL(file);
                     String tfn = omega.util.Files.mkRelativeCWD(url_s);
 
-                    PrintWriter pw = S.createPrintWriter(tfn);
+                    PrintWriter pw = SundryUtils.createPrintWriter(tfn);
                     String sa[] = l_ctxt.getLessonCanvas().getAllTargetCombinations("; ", false);
                     for (int i = 0; i < sa.length; i++) {
                         pw.println(sa[i]);
@@ -346,7 +346,7 @@ public class SentenceProperty extends Property_B {
 
         String sa[] = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx(" ", false, '{');
         tmm = l_ctxt.getLesson().getTestMatrix(sa);
-        OmegaContext.sout_log.getLogger().info("ERR: " + "Got sa sent " + S.a2s(sa));
+        OmegaContext.sout_log.getLogger().info("ERR: " + "Got sa sent " + SundryUtils.a2s(sa));
         SenProp_TableModel tmod = new SenProp_TableModel(this, sa, tmm);
 
         TableSorter tsort = new TableSorter(tmod);
@@ -493,28 +493,28 @@ public class SentenceProperty extends Property_B {
         }
     }
 
-    public fpdo.xml.Element getElement() {
-        fpdo.xml.Element el = new fpdo.xml.Element("test_prop");
+    public omega.xml.Element getElement() {
+        omega.xml.Element el = new omega.xml.Element("test_prop");
 
-        fpdo.xml.Element pel = new fpdo.xml.Element("test");
+        omega.xml.Element pel = new omega.xml.Element("test");
         pel.addAttr("kind", "pre");
         pel.addAttr("ord", "1");
         pel.addAttr("text", ((JTextField) (guimap.get("pret1"))).getText());
         el.add(pel);
 
-        pel = new fpdo.xml.Element("test");
+        pel = new omega.xml.Element("test");
         pel.addAttr("kind", "pre");
         pel.addAttr("ord", "2");
         pel.addAttr("text", ((JTextField) (guimap.get("pret2"))).getText());
         el.add(pel);
 
-        pel = new fpdo.xml.Element("test");
+        pel = new omega.xml.Element("test");
         pel.addAttr("kind", "post");
         pel.addAttr("ord", "1");
         pel.addAttr("text", ((JTextField) (guimap.get("postt1"))).getText());
         el.add(pel);
 
-        pel = new fpdo.xml.Element("test");
+        pel = new omega.xml.Element("test");
         pel.addAttr("kind", "post");
         pel.addAttr("ord", "2");
         pel.addAttr("text", ((JTextField) (guimap.get("postt2"))).getText());

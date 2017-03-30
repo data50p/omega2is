@@ -1,12 +1,12 @@
 package omega.lesson.settings;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
-import fpdo.xml.SAX_node;
-import fpdo.xml.XML_PW;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.t9n.T;
+import omega.util.SundryUtils;
+import omega.xml.Element;
+import omega.xml.SAX_node;
+import omega.xml.XML_PW;
 import org.hs.jfc.FormPanel;
 
 import javax.swing.*;
@@ -95,7 +95,7 @@ public class OmegaSettingsDialog extends SettingsDialog {
             el.add(smwel);
             el.add(smsel);
         }
-        try (XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false)) {
+        try (XML_PW xmlpw = new XML_PW(SundryUtils.createPrintWriterUTF8(fname), false)) {
             xmlpw.put(el);
         } catch (Exception ex) {
             ex.printStackTrace();

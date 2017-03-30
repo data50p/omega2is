@@ -1,6 +1,6 @@
 package omega.anim.tool.timeline;
 
-import fpdo.xml.Element;
+import omega.xml.Element;
 
 import java.io.Serializable;
 import java.util.Comparator;
@@ -63,7 +63,7 @@ public class TimeMarker implements Serializable {
         if (type == TRIGGER || type == START || type == STOP || type == BEGIN || type == END) {
             t_event = new TriggerEvent[TriggerEventFactory.getSize()];
             String[] sa = TriggerEventFactory.getAllAsStringA();
-//	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "Trigger " + S.arrToString(sa));
+//	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "Trigger " + SundryUtils.arrToString(sa));
             for (int i = 0; i < sa.length; i++) {
                 t_event[i] = TriggerEventFactory.get(i);
             }

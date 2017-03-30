@@ -1,6 +1,6 @@
-package fpdo.xml;
+package omega.xml;
 
-import fpdo.sundry.S;
+import omega.util.SundryUtils;
 
 import java.io.*;
 import java.util.Stack;
@@ -21,7 +21,7 @@ public class XML_PW implements AutoCloseable {
     }
 
     public XML_PW(OutputStream os) {
-	pw = S.createPrintWriter(os);
+	pw = SundryUtils.createPrintWriter(os);
 	st = new Stack();
     }
 
@@ -48,7 +48,7 @@ public class XML_PW implements AutoCloseable {
 
     void ensurePW(String tag) {
 	if (pw == null) {
-	    pw = S.createPrintWriter(tag + ".xml");
+	    pw = SundryUtils.createPrintWriter(tag + ".xml");
 	    try {
 	        throw new Exception("trace");
 	    } catch (Exception ex) {

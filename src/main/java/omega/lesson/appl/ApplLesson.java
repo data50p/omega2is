@@ -2,8 +2,8 @@ package omega.lesson.appl;
 
 import omega.OmegaConfig;
 import omega.OmegaContext;
-import omega.servers.httpd.Server;
 import omega.help.HelpSystem;
+import omega.servers.httpd.Server;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,7 +1,7 @@
 package omega.graphic.render;
 
-import fpdo.xml.Element;
 import omega.graphic.util.LoadImage;
+import omega.xml.Element;
 
 import java.awt.*;
 

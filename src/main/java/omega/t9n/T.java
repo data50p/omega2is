@@ -1,7 +1,7 @@
 package omega.t9n;
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
+import omega.util.SundryUtils;
 
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
@@ -109,11 +109,11 @@ public class T {
                     }
                     String sa[] = s.split("[\\]\\[]+");
                     if (cnt < 10)
-                        OmegaContext.sout_log.getLogger().info("ERR: " + "got T_ " + sa.length + ' ' + S.a2s(sa));
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "got T_ " + sa.length + ' ' + SundryUtils.a2s(sa));
                     if (sa.length == 3)
                         hm_.put(sa[1], sa[2]);
                     else
-                        OmegaContext.sout_log.getLogger().info("ERR: " + "t9n.T.t strange " + S.a2s(sa));
+                        OmegaContext.sout_log.getLogger().info("ERR: " + "t9n.T.t strange " + SundryUtils.a2s(sa));
                     cnt++;
                 }
                 br.close();
@@ -166,7 +166,7 @@ public class T {
         File f = new File(OmegaContext.t9n("T_new"));
         if (f.exists() && f.length() > 0)
             return;
-        PrintWriter pw = S.createPrintWriter(OmegaContext.t9n("T_new"));
+        PrintWriter pw = SundryUtils.createPrintWriter(OmegaContext.t9n("T_new"));
         pw.println("utf-8");
         pw.close();
     }
@@ -183,7 +183,7 @@ public class T {
 
     static class MyThread extends Thread {
         public void run() {
-            S.m_sleep(5000);
+            SundryUtils.m_sleep(5000);
             putXML(hm_new, "T_new");
             mythread = null;
         }
@@ -214,7 +214,7 @@ public class T {
                     mythread = new MyThread();
                     mythread.start();
                 }
-// 		PrintWriter pw = S.createPrintWriter("T_new", true);
+// 		PrintWriter pw = SundryUtils.createPrintWriter("T_new", true);
 // 		pw.println("[" + s + "][" + s + "]");
 // 		pw.flush();
 // 		pw.close();

@@ -1,10 +1,10 @@
 package omega.anim.panels.cabaret;
 
-import fpdo.sundry.S;
 import omega.graphic.render.Wing;
-import omega.t9n.T;
 import omega.swing.GBC_Factory;
 import omega.swing.properties.OmegaProperties;
+import omega.t9n.T;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -105,7 +105,7 @@ public class WingsProperties extends OmegaProperties implements ActionListener {
                             public void actionPerformed(ActionEvent ae) {
                                 Wing fbound_wing = getBoundWing();
                                 if (fbound_wing != null) {
-                                    fbound_wing.scale = S.tD(scale.getText());
+                                    fbound_wing.scale = SundryUtils.tD(scale.getText());
                                     if (fbound_wing.scale == 0) {
                                         fbound_wing.scale = 1.0;
                                         scale.setForeground(Color.red);

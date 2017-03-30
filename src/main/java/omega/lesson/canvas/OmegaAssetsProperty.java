@@ -1,16 +1,16 @@
 package omega.lesson.canvas;
 
 
-import fpdo.sundry.S;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.OmegaVersion;
 import omega.adm.assets.TargetCombinations;
-import omega.t9n.T;
 import omega.lesson.LessonContext;
+import omega.swing.TableSorter;
 import omega.swing.filechooser.ChooseDir;
 import omega.swing.filechooser.ChooseOmegaBundleFile;
-import omega.swing.TableSorter;
+import omega.t9n.T;
+import omega.util.SundryUtils;
 import omega.value.Value;
 import org.hs.jfc.FormPanel;
 
@@ -217,7 +217,7 @@ public class OmegaAssetsProperty extends Property_B {
                         String fn = omega.util.Files.mkRelFname1(url_s);
                         System.err.println("scanned: " + fn);
                         l_ctxt.getLesson().sendMsgWait("load", (String) fn);
-                        S.m_sleep(200);
+                        SundryUtils.m_sleep(200);
                         latestTargetCombinations = l_ctxt.getLessonCanvas().getAllTargetCombinationsEx2(false);
                         latestTargetCombinations.src_set.add(new TargetCombinations.TCItem(l_ctxt.getLesson().getLoadedFName()));
 
@@ -618,28 +618,28 @@ public class OmegaAssetsProperty extends Property_B {
         }
     }
 
-    public fpdo.xml.Element getElement() {
-        fpdo.xml.Element el = new fpdo.xml.Element("test_prop");
+    public omega.xml.Element getElement() {
+        omega.xml.Element el = new omega.xml.Element("test_prop");
 
-        fpdo.xml.Element pel = new fpdo.xml.Element("test");
+        omega.xml.Element pel = new omega.xml.Element("test");
         pel.addAttr("kind", "pre");
         pel.addAttr("ord", "1");
         pel.addAttr("text", ((JTextField) (guimap.get("pret1"))).getText());
         el.add(pel);
 
-        pel = new fpdo.xml.Element("test");
+        pel = new omega.xml.Element("test");
         pel.addAttr("kind", "pre");
         pel.addAttr("ord", "2");
         pel.addAttr("text", ((JTextField) (guimap.get("pret2"))).getText());
         el.add(pel);
 
-        pel = new fpdo.xml.Element("test");
+        pel = new omega.xml.Element("test");
         pel.addAttr("kind", "post");
         pel.addAttr("ord", "1");
         pel.addAttr("text", ((JTextField) (guimap.get("postt1"))).getText());
         el.add(pel);
 
-        pel = new fpdo.xml.Element("test");
+        pel = new omega.xml.Element("test");
         pel.addAttr("kind", "post");
         pel.addAttr("ord", "2");
         pel.addAttr("text", ((JTextField) (guimap.get("postt2"))).getText());

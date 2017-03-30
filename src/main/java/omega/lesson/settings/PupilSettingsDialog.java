@@ -1,9 +1,5 @@
 package omega.lesson.settings;
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
-import fpdo.xml.SAX_node;
-import fpdo.xml.XML_PW;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.anim.context.AnimContext;
@@ -12,6 +8,9 @@ import omega.swing.filechooser.*;
 import omega.t9n.T;
 import omega.util.Files;
 import omega.util.SundryUtils;
+import omega.xml.Element;
+import omega.xml.SAX_node;
+import omega.xml.XML_PW;
 import org.hs.jfc.FormPanel;
 
 import javax.swing.*;
@@ -976,7 +975,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	Element pel = new Element("pupil_settings");
 	Element el = getElements();
 	pel.add(el);
-	try (XML_PW xmlpw = new XML_PW(S.createPrintWriterUTF8(fname), false) ) {
+	try (XML_PW xmlpw = new XML_PW(SundryUtils.createPrintWriterUTF8(fname), false) ) {
 	    xmlpw.put(pel);
 	} catch (Exception ex) {
 	    ex.printStackTrace();
@@ -1056,7 +1055,7 @@ public class PupilSettingsDialog extends SettingsDialog {
 	File file = new File("register/" + pupil.getName() + ".p");
 	File file2 = new File("register/" + pupil.getName() + ".deleted");
 	if (file2.exists()) {
-	    File file3 = new File("register/" + pupil.getName() + ".deleted_" + S.ct());
+	    File file3 = new File("register/" + pupil.getName() + ".deleted_" + SundryUtils.ct());
 	    file2.renameTo(file3);
 	}
 	file.renameTo(file2);

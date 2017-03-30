@@ -2,9 +2,9 @@ package omega.anim.panels.path;
 
 import omega.OmegaContext;
 import omega.anim.tool.path.Path;
-import omega.t9n.T;
 import omega.swing.GBC_Factory;
 import omega.swing.properties.OmegaProperties;
+import omega.t9n.T;
 
 import javax.swing.*;
 import java.awt.*;

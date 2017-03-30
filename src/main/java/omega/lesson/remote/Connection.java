@@ -1,8 +1,8 @@
 package omega.lesson.remote;
 
-import fpdo.sundry.S;
 import omega.OmegaConfig;
 import omega.OmegaContext;
+import omega.util.SundryUtils;
 
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
@@ -44,7 +44,7 @@ public class Connection extends Thread {
                             omega.lesson.Lesson.le_canvas.gotoBoxRel(0, 1);
                             break;
                         case ' ':
-                            omega.lesson.Lesson.le_canvas.selectBox(false, S.ct());
+                            omega.lesson.Lesson.le_canvas.selectBox(false, SundryUtils.ct());
                             break;
                         case 'Q':
                             break LOOP;
@@ -58,7 +58,7 @@ public class Connection extends Thread {
     }
 
     public void run() {
-        long ct0 = S.ct();
+        long ct0 = SundryUtils.ct();
 
         if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "lessond Connection established");
         try {

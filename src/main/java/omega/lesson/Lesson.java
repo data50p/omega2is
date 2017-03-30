@@ -2,8 +2,6 @@ package omega.lesson;
 
 // has UTF-8 ¬ß
 
-import fpdo.sundry.S;
-import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.OmegaContext;
 import omega.adm.register.data.*;
@@ -33,7 +31,9 @@ import omega.swing.filechooser.ChooseColorFile;
 import omega.swing.filechooser.ChooseLessonFile;
 import omega.t9n.T;
 import omega.util.Log;
+import omega.util.SundryUtils;
 import omega.value.Values;
+import omega.xml.Element;
 
 import javax.print.PrintService;
 import javax.swing.*;
@@ -100,7 +100,7 @@ public class Lesson implements LessonCanvasListener {
     private int current_test_mode_group = mkTestModeGroup(current_test_mode);
     LessonItem litm = null;
     private Pupil current_pupil;
-    long session_length_start = S.ct();
+    long session_length_start = SundryUtils.ct();
 
     public class PlayDataList {
     	int ord;
@@ -280,11 +280,11 @@ public class Lesson implements LessonCanvasListener {
 	    this.test_mode = getTestModeString(test_mode);
 	    rl = new RegLocator();
 	    rt = new ResultTest(pupil.getName(), fix(lesson_name), this.test_mode);
-	    started = S.ct();
+	    started = SundryUtils.ct();
 	}
 
 	void setStarted() {
-	    last_ct = started = S.ct();
+	    last_ct = started = SundryUtils.ct();
 	    register_log.getLogger().info("started " + started);
 	    //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + " STARTED ");
 	}
@@ -326,7 +326,7 @@ public class Lesson implements LessonCanvasListener {
 	void word(String mode, long when_ct, String word, String l_id) {
 	    //log omega.OmegaContext.sout_log.getLogger().info("ERR: " + "PUPIL REG " + mode + ' ' + word);
 	    int when = (int) (when_ct - last_ct);
-	    //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "WHEN " + (when_ct - S.ct()));
+	    //	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "WHEN " + (when_ct - SundryUtils.ct()));
 	    last_ct = when_ct;
 	    rt.add(new SelectEntry(mode, word, when, l_id));
 	    register_log.getLogger().info("word: " + mode + ' ' + word + ' ' + l_id);
@@ -374,7 +374,7 @@ public class Lesson implements LessonCanvasListener {
 	    int cnt = rt.howManyTestEntries();
 	    if (cnt > 0) {
 		SaveRestore sr = new SaveRestore();
-		rt.session_length = S.ct() - session_length_start;
+		rt.session_length = SundryUtils.ct() - session_length_start;
 		if (sr.save(rl.mkResultsFName(pupil.getName(), rt.mkFname(getCurrentPupil().getName())), rt) == false) {
 		    register_log.getLogger().info("failed saved: " + rl.mkResultsFName(pupil.getName(), rt.mkFname(getCurrentPupil().getName())));
 		} else {
@@ -501,13 +501,13 @@ public class Lesson implements LessonCanvasListener {
 // 	    while(it.hasNext()) {
 // 		String id = (String)it.next();
 // 		String[] afn = (String[])prfHM.get(id);
-// 		//		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "PC " + id + ' ' + S.a2s(afn));
+// 		//		omega.OmegaContext.sout_log.getLogger().info("ERR: " + "PC " + id + ' ' + SundryUtils.a2s(afn));
 // 	    }
 // 	}
 //     }
 //     private AudioPrefetch audio_prefetch = new AudioPrefetch();
     String genSeqKey(int a) {
-	return S.pL(a, 6, '0');
+	return SundryUtils.pL(a, 6, '0');
     }
 
     class ListAndIterator {
@@ -572,8 +572,8 @@ public class Lesson implements LessonCanvasListener {
 		String sa[] = l_ctxt.getLessonCanvas().getAllTargetCombinations();
 
 		if (rand_map == null || rand_map.length != sa.length) {
-		    rand_map = S.upTo(sa.length);
-		    S.scrambleArr(rand_map);
+		    rand_map = SundryUtils.upTo(sa.length);
+		    SundryUtils.scrambleArr(rand_map);
 		}
 		try {
 		    return sa[rand_map[index]];
@@ -679,7 +679,7 @@ public class Lesson implements LessonCanvasListener {
 
 		while (it.hasNext()) {
 		    String s = (String) it.next();
-		    String[] sa = S.split(s, ":");
+		    String[] sa = SundryUtils.split(s, ":");
 		    int ord = 1 + Integer.parseInt(sa[0]);
 		    String txt = sa[1];
 		    int ix2 = where(txt, all_sentence);
@@ -778,7 +778,7 @@ public class Lesson implements LessonCanvasListener {
 
 			for (int ii = 0; ii < sa.length; ii++) {
 			    String s = sa[ii];
-			    String[] sa2 = S.split(s, ":");
+			    String[] sa2 = SundryUtils.split(s, ":");
 			    int ord = Integer.parseInt(sa2[0]);
 			    String txt = sa2[1];
 
@@ -901,7 +901,7 @@ public class Lesson implements LessonCanvasListener {
     }
 
     void prepareTest(String mode) {
-	session_length_start = S.ct();
+	session_length_start = SundryUtils.ct();
 	//log 	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "prepare test " + mode);
 	try {
 	    if ("create".equals(mode)) {
@@ -1272,7 +1272,7 @@ public class Lesson implements LessonCanvasListener {
 	    ap.play();
 	}
 
-	S.m_sleep(5000);
+	SundryUtils.m_sleep(5000);
 
 	machine = new Machine(l_ctxt);
 
@@ -1731,7 +1731,7 @@ public class Lesson implements LessonCanvasListener {
 	OmegaContext.HELP_STACK.pop("");
 	OmegaContext.HELP_STACK.push(name);
 
-	S.m_sleep(200);
+	SundryUtils.m_sleep(200);
 
 	if (name.equals("anim1")) {
 	    if (action != null) {
@@ -1779,9 +1779,9 @@ public class Lesson implements LessonCanvasListener {
     }
 
     private void sendMsg(String msg, Object o, String id) {
-	OmegaContext.sout_log.getLogger().info("ERR: " + "!!!!!!!! sendMsg " + msg + ' ' + S.ct() + ' ' + o + ' ' + id);
+	OmegaContext.sout_log.getLogger().info("ERR: " + "!!!!!!!! sendMsg " + msg + ' ' + SundryUtils.ct() + ' ' + o + ' ' + id);
 	synchronized (msg_list) {
-	    msg_list.add(new Object[]{msg, o, new Long(S.ct()), id});
+	    msg_list.add(new Object[]{msg, o, new Long(SundryUtils.ct()), id});
 	    //log 	    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "%%%%% inserted sendMsg >>> " + msg + ' ' + o);
 	    msg_list.notify();
 	}
@@ -2049,7 +2049,7 @@ public class Lesson implements LessonCanvasListener {
 
     String wait_id[] = new String[]{""};
 
-    private long last_msg_time = S.ct();
+    private long last_msg_time = SundryUtils.ct();
 
     void execLesson(String fn) {
 	Target tg = new Target(machine);
@@ -2385,7 +2385,7 @@ public class Lesson implements LessonCanvasListener {
 	    } catch (Exception ex) {
 	    }
 	    le_canvas.removeDummy();
-	    S.m_sleep(100);
+	    SundryUtils.m_sleep(100);
 	    //log 	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "Loading Restoring " + fn + ' ' + last_lesson_fn);
 
 	    final Element el;
@@ -2547,7 +2547,7 @@ public class Lesson implements LessonCanvasListener {
 	    if (test_txt != null) {
 		test_index = le_canvas.getTarget().getAllTargetCombinationsIndexes(test_txt);
 
-		OmegaContext.sout_log.getLogger().info("ERR: " + "ET  [][] " + S.a2s(test_index) + ' ' + test_index.length);
+		OmegaContext.sout_log.getLogger().info("ERR: " + "ET  [][] " + SundryUtils.a2s(test_index) + ' ' + test_index.length);
 
 		if (test_index == null || test_index.length == 0) {
 		    global_skipF(true);
@@ -2587,7 +2587,7 @@ public class Lesson implements LessonCanvasListener {
 
 	    if (hBox != null) {
 
-		long exec_hbox_time = hBox.when_hit; // S.ct();
+		long exec_hbox_time = hBox.when_hit; // SundryUtils.ct();
 
 		try {
 		    if (tg != null) {
@@ -2613,7 +2613,7 @@ public class Lesson implements LessonCanvasListener {
 
 			    if (current_test_mode_group != TMG_CREATE) {
 				int next_i_x = tg.findEntryIxMatchTargetIx(tg_ix);
-				OmegaContext.sout_log.getLogger().info("ERR: " + "!!! using test index: " + S.a2s(test_index) + ' ' + tg_ix);
+				OmegaContext.sout_log.getLogger().info("ERR: " + "!!! using test index: " + SundryUtils.a2s(test_index) + ' ' + tg_ix);
 				int next_i_y = test_index[tg_ix][0];
 				int next_i_x_ = test_index[tg_ix][1];
 				int next_i_y_ = test_index[tg_ix][2];
@@ -2671,7 +2671,7 @@ public class Lesson implements LessonCanvasListener {
 
 				le_canvas.renderTg();
 
-				long ct0 = S.ct();
+				long ct0 = SundryUtils.ct();
 
 				System.gc();
 				System.gc();
@@ -2691,7 +2691,7 @@ public class Lesson implements LessonCanvasListener {
 					}
 
 					String[] sndA;
-					sndA = S.split(sfn, ",");
+					sndA = SundryUtils.split(sfn, ",");
 					APlayer[] aplayerA = new APlayer[sndA.length];
 					for (int i = 0; i < sndA.length; i++) {
 					    String s = sndA[i];
@@ -2761,7 +2761,7 @@ public class Lesson implements LessonCanvasListener {
 				    }
 				}
 
-				long ct1 = S.ct();
+				long ct1 = SundryUtils.ct();
 
 				//				    omega.OmegaContext.sout_log.getLogger().info("ERR: " + "time prefetch " + (ct1-ct0));
 
@@ -2780,27 +2780,22 @@ public class Lesson implements LessonCanvasListener {
 
 					le_canvas.enableQuitButton(false);
 					le_canvas.resetHboxFocus();
-					if (!true) {
-					    fpdo.sundry.Timer tm = new fpdo.sundry.Timer();
-					    System.gc();
-					    OmegaContext.sout_log.getLogger().info("ERR: " + "GC startAction| " + tm.get());
-					}
 
 					if (do_repeat_whole) {
 					    waitSayAll();
 					    //					    waitBoxPlay();
-					    S.m_sleep(getCurrentPupil().getSpeed(500));
+					    SundryUtils.m_sleep(getCurrentPupil().getSpeed(500));
 					    le_canvas.setMarkTargetAll();
 					    sayPingSentence();
 					    le_canvas.eraseHilitedBox();
-					    S.m_sleep(getCurrentPupil().getSpeed(300));
+					    SundryUtils.m_sleep(getCurrentPupil().getSpeed(300));
 					    sayAll(tg);
 					    waitSayAll();
-					    S.m_sleep(getCurrentPupil().getSpeed(400));
+					    SundryUtils.m_sleep(getCurrentPupil().getSpeed(400));
 					} else {
 					    waitSayAll();
 					    //					    waitBoxPlay();
-					    S.m_sleep(getCurrentPupil().getSpeed(500));
+					    SundryUtils.m_sleep(getCurrentPupil().getSpeed(500));
 					}
 
 					le_canvas.setMarkTargetAll();
@@ -2815,20 +2810,20 @@ public class Lesson implements LessonCanvasListener {
 					le_canvas.eraseHilitedBox();
 
 					sayPingAnim();
-					S.m_sleep(300);
+					SundryUtils.m_sleep(300);
 					le_canvas.startAction();
 				    } else {  // current_test_mode == TM_PRE/POST/RAND
 					le_canvas.enableQuitButton(false);
 					le_canvas.resetHboxFocus();
 					waitSayAll();
 					//					waitBoxPlay();
-					S.m_sleep(getCurrentPupil().getSpeed(500));
+					SundryUtils.m_sleep(getCurrentPupil().getSpeed(500));
 					le_canvas.setMarkTargetAll();
 					sayPingSentence();
-					S.m_sleep(getCurrentPupil().getSpeed(300));
+					SundryUtils.m_sleep(getCurrentPupil().getSpeed(300));
 					sayAll(tg);
 					waitSayAll();
-					S.m_sleep(getCurrentPupil().getSpeed(500));
+					SundryUtils.m_sleep(getCurrentPupil().getSpeed(500));
 					le_canvas.setMarkTargetAll();
 
 					String all_text = tg.getAllText();
@@ -2853,10 +2848,10 @@ public class Lesson implements LessonCanvasListener {
 							    do_it = false;
 							    break;
 							case 1:
-							    do_it = S.rand(10) < 2;
+							    do_it = SundryUtils.rand(10) < 2;
 							    break;
 							case 2:
-							    do_it = S.rand(10) < 7;
+							    do_it = SundryUtils.rand(10) < 7;
 							    break;
 							case 3:
 							    do_it = true;
@@ -2921,7 +2916,7 @@ public class Lesson implements LessonCanvasListener {
 							    card_show("feedback_movie");
 							    feedback_movie.perform();
 							    feedback_movie.waitEnd();
-							    S.m_sleep(200);
+							    SundryUtils.m_sleep(200);
 							    card_show("words");
 							    card_panel.remove(m_pan);
 							    le_canvas.requestFocus();
@@ -2977,7 +2972,7 @@ public class Lesson implements LessonCanvasListener {
 						}
 					    }
 					    mistNoMouse = false;
-					    S.m_sleep(getCurrentPupil().getSpeed(500));
+					    SundryUtils.m_sleep(getCurrentPupil().getSpeed(500));
 					    sayPingAnim();
 					    waitSayAll();
 					    //					    waitBoxPlay();
@@ -3030,7 +3025,7 @@ public class Lesson implements LessonCanvasListener {
 						    card_show("feedback_movie");
 						    feedback_movie.perform();
 						    feedback_movie.waitEnd();
-						    S.m_sleep(200);
+						    SundryUtils.m_sleep(200);
 						    card_show("words");
 						    card_panel.remove(m_pan);
 						    le_canvas.requestFocus();
@@ -3065,7 +3060,7 @@ public class Lesson implements LessonCanvasListener {
 					} else {
 					    le_canvas.showMsg(getResultSummary_MsgItem());
 
-// 							      new MsgItem('S',
+// 							      new MsgItem('SundryUtil',
 // 									  T.t("Test Statistics"),
 
 // 									  T.t("Correct") + ": " +
@@ -3138,7 +3133,7 @@ public class Lesson implements LessonCanvasListener {
 	if (tg.isTargetFilled()) {
 	    le_canvas.removeHilitedBox();
 	    String actions = tg.getActionFileName(999); // all actions from all target boxes
-	    String[] action_sa = S.split(actions, ",");
+	    String[] action_sa = SundryUtils.split(actions, ",");
 
 
 	    int larglen = tg.getLessonArgLength();
@@ -3149,11 +3144,11 @@ public class Lesson implements LessonCanvasListener {
 	    String[] pathA = tg.getAll_Lid_Target();
 
 	    lesson_log.getLogger().info("ANIMDATA is actA="
-		    + S.a2s(actA) + " actTextA="
-		    + S.a2s(actTextA) + " pathA="
-		    + S.a2s(pathA) + " sound="
+		    + SundryUtils.a2s(actA) + " actTextA="
+		    + SundryUtils.a2s(actTextA) + " pathA="
+		    + SundryUtils.a2s(pathA) + " sound="
 		    + sound_list + " action_A="
-		    + S.a2s(action_sa));
+		    + SundryUtils.a2s(action_sa));
 	    if (action == null) {
 		action = new AnimAction();
 		card_panel.add(action.getCanvas(), "anim1");
@@ -3177,10 +3172,8 @@ public class Lesson implements LessonCanvasListener {
 			    ; // JOptionPane.showMessageDialog(ApplContext.top_frame,
 			//			      T.t("Can't find animation: " + action_s));
 
-			if (true) {
-			    fpdo.sundry.Timer tm = new fpdo.sundry.Timer();
+			if (!true) {
 			    System.gc();
-			    lesson_log.getLogger().info("GC show anim " + tm.get());
 			}
 			boolean anim_twice = getCurrentPupil().getBool("repeatanim", false);
 			startProgress();
@@ -3224,10 +3217,8 @@ public class Lesson implements LessonCanvasListener {
 				    T.t("Can't find animation: " + action_s));
 			    continue;
 			}
-			if (true) {
-			    fpdo.sundry.Timer tm = new fpdo.sundry.Timer();
+			if (!true) {
 			    System.gc();
-			    lesson_log.getLogger().info("GC show anim " + tm.get());
 			}
 
 			action.show();
@@ -3255,7 +3246,7 @@ public class Lesson implements LessonCanvasListener {
 				});
 
 			if (anim_twice) {
-			    S.m_sleep(getCurrentPupil().getSpeed(800));
+			    SundryUtils.m_sleep(getCurrentPupil().getSpeed(800));
 			    action.perform(window,
 				    action_s,
 				    actA,
@@ -3428,7 +3419,7 @@ public class Lesson implements LessonCanvasListener {
 		    anim_twice ? 1 : 0,
 		    myra);
 
-	    S.m_sleep(getCurrentPupil().getSpeed(400));
+	    SundryUtils.m_sleep(getCurrentPupil().getSpeed(400));
 	    if (anim_twice) {
 		mpg_action.reset();
 		mpg_action.perform(window,
@@ -3518,10 +3509,10 @@ public class Lesson implements LessonCanvasListener {
 	public String toString() {
 	    return lesson_name + ','
 		    + action_s + ','
-		    + S.a2s(actA) + ','
-		    + S.a2s(actTextA) + ','
+		    + SundryUtils.a2s(actA) + ','
+		    + SundryUtils.a2s(actTextA) + ','
 		    + sound_list + ','
-		    + S.a2s(pathA);
+		    + SundryUtils.a2s(pathA);
 	}
 
     }
@@ -3604,13 +3595,13 @@ public class Lesson implements LessonCanvasListener {
 		"XX",
 		"YY",
 		null));
-	S.m_sleep(2000);
+	SundryUtils.m_sleep(2000);
     }
 
     void TEST_words() {
 	card_show("words");
 	le_canvas.showMsg(getResultSummary_MsgItem());
-	// new MsgItem('S',
+	// new MsgItem('SundryUtil',
 // 				       T.t("Test Statistics"),
 
 // 				       T.t("Correct") + ": " +
@@ -3658,7 +3649,7 @@ public class Lesson implements LessonCanvasListener {
     int waitHitKey(int a) {
 	int start_cnt_hit_keyOrButton = cnt_hit_keyOrButton;
 	while (cnt_hit_keyOrButton < start_cnt_hit_keyOrButton + a) {
-	    S.m_sleep(100);
+	    SundryUtils.m_sleep(100);
 	}
 	return hit_key;
     }
@@ -3680,19 +3671,19 @@ public class Lesson implements LessonCanvasListener {
 		}
 		PlayData pd = (PlayData) it.next();
 		OmegaContext.story_log.getLogger().info("PD is " + pd);
-		String[] soundA = S.split(pd.sound_list, ",");
+		String[] soundA = SundryUtils.split(pd.sound_list, ",");
 		for (int i = 0; i < soundA.length; i++) {
 		    String sound = soundA[i];
 		    APlayer ap = APlayer.createAPlayer(getCurrentPupil().getStringNo0("languageSuffix", null),
 			    sound,
 			    null,
 			    "SA_" + i);
-		    S.m_sleep(50);
+		    SundryUtils.m_sleep(50);
 		    ap.playWait();
-		    S.m_sleep(50);
+		    SundryUtils.m_sleep(50);
 		}
 		//		APlayer.unloadAll("SA_[0-9]*");
-		S.m_sleep(500);
+		SundryUtils.m_sleep(500);
 	    }
 	    sentence_canvas.showMsgMore();
 	} finally {

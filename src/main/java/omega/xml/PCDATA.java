@@ -1,4 +1,4 @@
-package fpdo.xml;
+package omega.xml;
 
 public class PCDATA extends Node {
     StringBuffer pcdata;

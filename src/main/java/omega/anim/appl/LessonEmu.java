@@ -1,6 +1,6 @@
 package omega.anim.appl;
 
-import fpdo.xml.Element;
+import omega.xml.Element;
 
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;

@@ -1,11 +1,11 @@
 package omega.anim.panels.cabaret;
 
-import fpdo.sundry.S;
 import omega.anim.cabaret.Actor;
 import omega.anim.cabaret.GImAE;
-import omega.t9n.T;
 import omega.swing.GBC_Factory;
 import omega.swing.properties.OmegaProperties;
+import omega.t9n.T;
+import omega.util.SundryUtils;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -414,7 +414,7 @@ public class CabaretProperties extends OmegaProperties implements ActionListener
         setDirty();
         if (doc == prim_scale.getDocument()) {
             try {
-                double d = S.tD(prim_scale.getText());
+                double d = SundryUtils.tD(prim_scale.getText());
                 if (d == 0)
                     prim_scale.setForeground(Color.red);
                 else {

@@ -1,14 +1,14 @@
 package omega.lesson.canvas;
 
 
-import fpdo.sundry.S;
 import omega.OmegaContext;
-import omega.t9n.T;
 import omega.lesson.repository.Locator;
 import omega.swing.filechooser.ChooseActionMovieFile;
 import omega.swing.filechooser.ChooseAudioFile;
 import omega.swing.filechooser.ChooseSignFile;
+import omega.t9n.T;
 import omega.util.Files;
+import omega.util.SundryUtils;
 import omega.value.Value;
 import omega.value.Values;
 import org.hs.jfc.FormPanel;
@@ -353,7 +353,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 
     public synchronized void updValues(Values vs) {
         skip_dirty = true;
-        long ct0 = S.ct();
+        long ct0 = SundryUtils.ct();
 
         Iterator it = vs.iterator();
         while (it.hasNext()) {
@@ -366,14 +366,14 @@ public class ItemProperty extends Property_B implements ActionListener {
                 cb.addItem(T.t("(Select item in list)"));
                 cb.addItem(T.t("(Clear data)"));
                 if (sc != null) {
-                    String[] sa = S.split(sc, ",");
+                    String[] sa = SundryUtils.split(sc, ",");
                     for (int i = 0; i < sa.length; i++)
                         cb.addItem("" + sa[i]);
 //  		    for(int i = 0; i < sa.length; i++)
 //  			cb.addItem("+ " + sa[i]);
                     cb.setSelectedIndex(0);
                     pack();
-//  		    String[] sa = S.split(sc, ",");
+//  		    String[] sa = SundryUtils.split(sc, ",");
 //  		    for(int i = 0; i < sa.length; i++)
 //  			cb.addItem("= " + sa[i]);
 //  		    for(int i = 0; i < sa.length; i++)
@@ -415,7 +415,7 @@ public class ItemProperty extends Property_B implements ActionListener {
 //  		}
 //  	    }
         }
-        long ct1 = S.ct();
+        long ct1 = SundryUtils.ct();
 //log	omega.OmegaContext.sout_log.getLogger().info("ERR: " + "iprop " + (ct1-ct0));
         skip_dirty = false;
     }

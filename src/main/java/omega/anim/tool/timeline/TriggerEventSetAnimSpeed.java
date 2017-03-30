@@ -1,7 +1,7 @@
 package omega.anim.tool.timeline;
 
-import fpdo.sundry.S;
 import omega.t9n.T;
+import omega.util.SundryUtils;
 
 public class TriggerEventSetAnimSpeed extends TriggerEvent {
     public String getCmd() {
@@ -26,7 +26,7 @@ public class TriggerEventSetAnimSpeed extends TriggerEvent {
 
     public double getArgDouble() {
         String s = getArgString();
-        double d = S.tD(s.trim());
+        double d = SundryUtils.tD(s.trim());
         return d;
     }
 }

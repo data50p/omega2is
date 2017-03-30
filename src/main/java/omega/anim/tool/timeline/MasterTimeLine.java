@@ -1,8 +1,8 @@
 package omega.anim.tool.timeline;
 
-import fpdo.xml.Element;
 import omega.OmegaConfig;
 import omega.anim.context.AnimContext;
+import omega.xml.Element;
 
 import javax.swing.event.EventListenerList;
 import java.beans.PropertyChangeSupport;

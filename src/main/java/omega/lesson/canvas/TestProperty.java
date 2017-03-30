@@ -2,8 +2,8 @@ package omega.lesson.canvas;
 
 
 import omega.OmegaContext;
-import omega.t9n.T;
 import omega.lesson.LessonContext;
+import omega.t9n.T;
 import omega.value.Value;
 import omega.value.Values;
 
@@ -178,7 +178,7 @@ public class TestProperty extends Property_B {
 
 //  	    if ( v.getId().equals("pathlist") ) {         // banor
 //  		JComboBox cb = (JComboBox)guimap.get("Slid");
-//  		String[] sa = S.split(v.getStr(), ",");
+//  		String[] sa = SundryUtils.split(v.getStr(), ",");
 //  		cb.removeAllItems();
 //  		cb.addItem("");
 //  		for(int i = 0; i < sa.length; i++)
@@ -273,28 +273,28 @@ public class TestProperty extends Property_B {
         }
     }
 
-    public fpdo.xml.Element getElement() {
-        fpdo.xml.Element el = new fpdo.xml.Element("test_prop");
+    public omega.xml.Element getElement() {
+        omega.xml.Element el = new omega.xml.Element("test_prop");
 
-        fpdo.xml.Element pel = new fpdo.xml.Element("test");
+        omega.xml.Element pel = new omega.xml.Element("test");
         pel.addAttr("kind", "pre");
         pel.addAttr("ord", "1");
         pel.addAttr("text", ((JTextField) (guimap.get("pret1"))).getText());
         el.add(pel);
 
-        pel = new fpdo.xml.Element("test");
+        pel = new omega.xml.Element("test");
         pel.addAttr("kind", "pre");
         pel.addAttr("ord", "2");
         pel.addAttr("text", ((JTextField) (guimap.get("pret2"))).getText());
         el.add(pel);
 
-        pel = new fpdo.xml.Element("test");
+        pel = new omega.xml.Element("test");
         pel.addAttr("kind", "post");
         pel.addAttr("ord", "1");
         pel.addAttr("text", ((JTextField) (guimap.get("postt1"))).getText());
         el.add(pel);
 
-        pel = new fpdo.xml.Element("test");
+        pel = new omega.xml.Element("test");
         pel.addAttr("kind", "post");
         pel.addAttr("ord", "2");
         pel.addAttr("text", ((JTextField) (guimap.get("postt2"))).getText());
