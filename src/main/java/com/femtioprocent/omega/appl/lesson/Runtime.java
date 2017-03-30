@@ -36,6 +36,7 @@ public class Runtime extends OmegaAppl {
             int rv = choose_f.showDialog(null, T.t("Select"));
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_f.getSelectedFile();
+                choose_f.lastFile = file;
                 url_s = toURL(file);
                 if (url_s.startsWith("file:")) {
                     fn = url_s.substring(5);

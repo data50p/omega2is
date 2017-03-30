@@ -210,7 +210,7 @@ public class LessonEditorPanel extends JPanel {
                 first_LLN.setEnabled(b);
             }
             if (s.equals("getFiles_LLN")) {
-                ChooseLessonFile choose_af = new ChooseLessonFile();
+                ChooseLessonFile choose_af = new ChooseLessonFile(1);
 
                 int rv = choose_af.showDialog(LessonEditorPanel.this, T.t("Select"));
                 if (rv == JFileChooser.APPROVE_OPTION) {
