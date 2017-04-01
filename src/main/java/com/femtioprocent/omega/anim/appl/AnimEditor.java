@@ -729,7 +729,7 @@ public class AnimEditor extends JFrame {
 	OmegaContext.sout_log.getLogger().info("ERR: " + "" + OmegaConfig.t_step);
 
 	JOptionPane.showMessageDialog(AnimContext.top_frame,
-		"Please change\nomega.anim.editor.appl.AnimEditor to\nEditor",
+		"Please change\ncom.femtioprocent.omega.anim.editor.appl.AnimEditor to\nEditor",
 		"Omega",
 		JOptionPane.INFORMATION_MESSAGE);
 

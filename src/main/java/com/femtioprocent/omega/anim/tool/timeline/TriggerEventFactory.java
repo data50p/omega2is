@@ -63,7 +63,7 @@ public class TriggerEventFactory {
 
     public static TriggerEvent createTriggerEvent(String name) {
         try {
-            Class cl = Class.forName("TriggerEvent" + name);
+            Class cl = Class.forName("com.femtioprocent.omega.anim.tool.timeline." + "TriggerEvent" + name);
             TriggerEvent te = (TriggerEvent) cl.newInstance();
             te.name = name;
             return te;

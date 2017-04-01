@@ -218,7 +218,7 @@ public class OmegaContext {
             try {
                 if (subsystems.get(s) != null)
                     return;
-                Class cl = Class.forName("omega.subsystem." + s);
+                Class cl = Class.forName("com.femtioprocent.omega.subsystem." + s);
                 Subsystem ss = (Subsystem) cl.newInstance();
                 ss.init(arg);
                 subsystems.put(s, ss);
