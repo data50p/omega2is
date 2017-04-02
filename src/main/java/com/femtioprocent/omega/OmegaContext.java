@@ -70,12 +70,19 @@ public class OmegaContext {
                 return antiOmegaAssets(path);
             return path;
         }
-        if (noAssets)
+        if (noAssets) {
+            sout_log.getLogger().warning("currentOmegaAssets(): noAssets omega_assets: " + path);
             return path;
-        if (".".equals(path))
+        }
+        if (".".equals(path)) {
+            sout_log.getLogger().warning("currentOmegaAssets(): .: " + currentOmegaAssets);
             return currentOmegaAssets;
-        if (path.startsWith("/"))
+        }
+        if (path.startsWith("/")) {
+            sout_log.getLogger().warning("currentOmegaAssets(): /: " + currentOmegaAssets);
             return path;
+        }
+        sout_log.getLogger().warning("currentOmegaAssets():+: " + currentOmegaAssets + '/' + path);
         return currentOmegaAssets + '/' + path;
     }
 

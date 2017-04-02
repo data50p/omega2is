@@ -18,7 +18,7 @@ public class ChooseLessonFile extends JFileChooser {
     }
 
     public ChooseLessonFile(int dirStep) {
-        super(new File(OmegaContext.omegaAssets(getDir(dirStep))));
+        super(new File(getDir(dirStep)));
         ExtensionFileFilter fi = new ExtensionFileFilter();
         fi.addExtension(ext);
         setFileFilter(fi);
@@ -27,9 +27,9 @@ public class ChooseLessonFile extends JFileChooser {
     private static String getDir(int dirStep) {
         OmegaContext.sout_log.getLogger().info("getDir " + dirStep + ' ' + lastFile);
         if ( dirStep == -1 )
-            return ".";
+            return OmegaContext.omegaAssets(".");
         if ( lastFile == null )
-            return ".";
+            return OmegaContext.omegaAssets(".");
         File f = lastFile;
         OmegaContext.sout_log.getLogger().info("getDir file " + f);
         while(dirStep-- > 0 ) {
