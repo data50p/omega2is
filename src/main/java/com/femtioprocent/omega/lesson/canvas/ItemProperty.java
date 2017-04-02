@@ -5,6 +5,7 @@ import com.femtioprocent.omega.OmegaContext;
 import com.femtioprocent.omega.lesson.appl.LessonEditor;
 import com.femtioprocent.omega.lesson.repository.Locator;
 import com.femtioprocent.omega.swing.filechooser.ChooseActionMovieFile;
+import com.femtioprocent.omega.swing.filechooser.ChooseAnimatorFile;
 import com.femtioprocent.omega.swing.filechooser.ChooseAudioFile;
 import com.femtioprocent.omega.swing.filechooser.ChooseSignFile;
 import com.femtioprocent.omega.t9n.T;
@@ -45,7 +46,7 @@ public class ItemProperty extends Property_B implements ActionListener {
         String fn = null;
         try {
             String url_s = null;
-            ChooseActionMovieFile choose_af = new ChooseActionMovieFile(true);
+            ChooseAnimatorFile choose_af = new ChooseAnimatorFile();
             int rv = choose_af.showDialog(this, T.t("Select"));
             if (rv == JFileChooser.APPROVE_OPTION) {
                 File file = choose_af.getSelectedFile();

@@ -90,7 +90,7 @@ public class Files {
         } catch (MalformedURLException ex) {
             return null;
         }
-        cdu = cdu.substring(0, cdu.length() - 2);
+        cdu = cdu.substring(0, cdu.length());
 //log	OmegaContext.sout_log.getLogger().info("ERR: " + "mkRelativeCWD\n" + url_s + '\n' + cdu);
         int len_cd = cdu.length();
 
