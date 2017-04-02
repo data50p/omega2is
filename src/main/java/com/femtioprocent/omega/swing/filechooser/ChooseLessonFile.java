@@ -1,9 +1,7 @@
 package com.femtioprocent.omega.swing.filechooser;
 
-import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.OmegaContext;
 import com.femtioprocent.omega.util.ExtensionFileFilter;
-import com.femtioprocent.omega.util.LoggerFactory;
 
 import javax.swing.*;
 import java.io.File;
@@ -27,23 +25,23 @@ public class ChooseLessonFile extends JFileChooser {
     }
 
     private static String getDir(int dirStep) {
-        LoggerFactory.getLogger(ChooseLessonFile.class).info("getDir " + dirStep + ' ' + lastFile);
+        OmegaContext.sout_log.getLogger().info("getDir " + dirStep + ' ' + lastFile);
         if ( dirStep == -1 )
             return ".";
         if ( lastFile == null )
             return ".";
         File f = lastFile;
-        LoggerFactory.getLogger(ChooseLessonFile.class).info("getDir file " + f);
+        OmegaContext.sout_log.getLogger().info("getDir file " + f);
         while(dirStep-- > 0 ) {
             f = f.getParentFile();
-            LoggerFactory.getLogger(ChooseLessonFile.class).info("getDir parent " + f);
+            OmegaContext.sout_log.getLogger().info("getDir parent " + f);
         }
-        LoggerFactory.getLogger(ChooseLessonFile.class).info("getDir return " + f.getPath());
+        OmegaContext.sout_log.getLogger().info("getDir return " + f.getPath());
         return f.getPath();
     }
 
     public void setLastFile(File lastFile) {
-        LoggerFactory.getLogger(ChooseLessonFile.class).info("getDir setLast<>File " + lastFile + " -> " + ChooseLessonFile.lastFile);
+        OmegaContext.sout_log.getLogger().info("getDir setLastFile " + lastFile + " -> " + ChooseLessonFile.lastFile);
         ChooseLessonFile.lastFile = lastFile;
     }
 }

@@ -1,5 +1,7 @@
 package com.femtioprocent.omega.util;
 
+import com.femtioprocent.omega.OmegaContext;
+
 import java.io.*;
 import java.nio.channels.FileChannel;
 import java.text.ParseException;
@@ -8,8 +10,6 @@ import java.util.*;
 import java.util.logging.Logger;
 
 public class SundryUtils {
-    private static final Logger logger = LoggerFactory.getLogger(SundryUtils.class);
-
     private static int count = 0;
 
     public static void gcStat() {
@@ -24,7 +24,8 @@ public class SundryUtils {
         // System.gc();
         long free2 = Runtime.getRuntime().freeMemory();
         long ctg = System.currentTimeMillis();
-        logger.info("count (max total free) used -> used [freed] gc: " + count + " (" + Runtime.getRuntime().maxMemory() * 0.000001 + ' '
+        OmegaContext.sout_log.getLogger().info
+                ("count (max total free) used -> used [freed] gc: " + count + " (" + Runtime.getRuntime().maxMemory() * 0.000001 + ' '
                 + Runtime.getRuntime().totalMemory() * 0.000001 + ' ' + free2 * 0.000001 + ") "
                 + (Runtime.getRuntime().totalMemory() - free1) * 0.000001 + " -> " + (Runtime.getRuntime().totalMemory() - free2)
                 * 0.000001 + " [" + (free1 - free2) * 0.000001 + "] " + (ctg - ct) + " ms " + msg);
@@ -95,7 +96,7 @@ public class SundryUtils {
         } catch (Exception ex) {
             StackTraceElement[] stack = ex.getStackTrace();
             int i = 1;
-            logger.info("STACK: " + i + "java:" + (stack[i].getLineNumber()) + " = jsp+" + (stack[i].getLineNumber() - jsp_line) + " jsp:"
+            OmegaContext.sout_log.getLogger().info("STACK: " + i + "java:" + (stack[i].getLineNumber()) + " = jsp+" + (stack[i].getLineNumber() - jsp_line) + " jsp:"
                     + jsp_line + " file: " + stack[i].getFileName());
         }
     }
@@ -162,7 +163,7 @@ public class SundryUtils {
                 int a = Integer.parseInt(s1.trim());
                 set.add(a);
             } catch (Exception ex) {
-                logger.severe("Not an integer string value: " + s1);
+                OmegaContext.sout_log.getLogger().info("Not an integer string value: " + s1);
             }
         }
         return set;
