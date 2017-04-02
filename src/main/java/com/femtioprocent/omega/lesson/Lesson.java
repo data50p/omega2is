@@ -1364,12 +1364,11 @@ public class Lesson implements LessonCanvasListener {
 	String url_s = null;
 	try {
 	    ChooseLessonFile choose_f = new ChooseLessonFile(2);
-	    OmegaContext.sout_log.getLogger().info("mact_Open " + "null");
 	    global_skipF(true);
 	    int rv = choose_f.showDialog(null, T.t("Open"));
 	    if (rv == JFileChooser.APPROVE_OPTION) {
 		File file = choose_f.getSelectedFile();
-		choose_f.lastFile = file;
+		choose_f.setLastFile(file);
 		String s = "!";
 		try {
 		    s = file.getCanonicalPath();
