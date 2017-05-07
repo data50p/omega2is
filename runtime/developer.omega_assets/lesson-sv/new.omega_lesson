@@ -11,7 +11,7 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="actor1" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/actor1.wav" text="aktör 1" var-1="v11" var-2="v12" var-3="v13"/>
+<item Lid="actor1" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/actor1.wav" text="aktör 1" var-1="v11" var-2="v12" var-3="v13" var-4="v14" var-5="v15"/>
 <item Lid="actor2" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/actor2.wav" text="aktör 2" var-1="v21" var-2="v22" var-3="v23"/>
 <item Lid="actor3" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/actor3.wav" text="aktör 3" var-1="" var-2="" var-3=""/>
 <item Lid="actor4" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/actor4.wav" text="aktör 4" var-1="" var-2="" var-3=""/>

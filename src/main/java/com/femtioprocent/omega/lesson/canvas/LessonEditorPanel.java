@@ -126,6 +126,10 @@ public class LessonEditorPanel extends JPanel {
                 itm.setVar(2, v.getStr());
             } else if (v.id.equals("v3")) {
                 itm.setVar(3, v.getStr());
+            } else if (v.id.equals("v4")) {
+                itm.setVar(4, v.getStr());
+            } else if (v.id.equals("v5")) {
+                itm.setVar(5, v.getStr());
             } else if (v.id.equals("lid")) {
                 itm.setLid_Krull(v.getStr());
             } else if (v.id.equals("sound")) {

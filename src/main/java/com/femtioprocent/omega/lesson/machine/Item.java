@@ -1,5 +1,6 @@
 package com.femtioprocent.omega.lesson.machine;
 
+import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.OmegaContext;
 import com.femtioprocent.omega.lesson.Lesson;
 import com.femtioprocent.omega.util.SundryUtils;
@@ -61,6 +62,8 @@ public class Item {
         var.add("");
         var.add("");
         var.add("");
+        var.add("");
+        var.add(""); // one more for index 0
         isAction = false;
     }
 
@@ -260,11 +263,17 @@ public class Item {
         if (v2 == null) v2 = "";
         String v3 = el.findAttr("var-3");
         if (v3 == null) v3 = "";
+        String v4 = el.findAttr("var-4");
+        if (v4 == null) v4 = "";
+        String v5 = el.findAttr("var-5");
+        if (v5 == null) v5 = "";
 
         var.add("");
         var.add(v1);
         var.add(v2);
         var.add(v3);
+        var.add(v4);
+        var.add(v5);
     }
 
     public String getDefaultFilledText() {    // DUMMY?
@@ -318,7 +327,7 @@ public class Item {
         vs.setStr("tid", it_ent.tid);
         vs.setStr("lid", lid_orig);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < OmegaConfig.VAR_NUM; i++) {
             vs.setStr("v" + (i + 1), getVar(i + 1));
         }
 
@@ -373,7 +382,7 @@ public class Item {
         el.addAttr("dummysign", dummysign_orig);
         if (lid != null && lid.length() > 0)
             el.addAttr("Lid", lid_orig);
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < OmegaConfig.VAR_NUM; i++)
             el.addAttr("var-" + (i + 1), getVar(i + 1));
         if (isAction) {
             el.addAttr("action-type", "" + action_type);

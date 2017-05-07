@@ -194,6 +194,12 @@ public class ItemProperty extends Property_B implements ActionListener {
         guimap.put("v2", tf);
         tf2.getDocument().addDocumentListener(mydocl);
         guimap.put("v3", tf2);
+
+        fpan.add(tf = new JTextField("", 10), tf2 = new JTextField("", 10), Y, X);
+        tf.getDocument().addDocumentListener(mydocl);
+        guimap.put("v4", tf);
+        tf2.getDocument().addDocumentListener(mydocl);
+        guimap.put("v5", tf2);
         guimap.put("LvN", jl);
 
         con.add(fpan);

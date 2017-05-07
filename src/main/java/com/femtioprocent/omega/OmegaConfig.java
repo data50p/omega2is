@@ -21,6 +21,8 @@ public class OmegaConfig {
     public static boolean fullScreen = false;
     public static boolean smaller = OmegaContext.isDeveloper();
 
+    public static final int VAR_NUM = 5;
+
     static public boolean isKeyNext(int kc) {
         return kc == key_next_1 ||
                 kc == key_next_2;
