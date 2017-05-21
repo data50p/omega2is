@@ -82,9 +82,9 @@ public class Anim_Repository {
 	    return;
 	}
 
-	Element el = new Element("com/femtioprocent/omega");
+	Element el = new Element("omega");
 	el.addAttr("class", "Animation");
-	el.addAttr("version", "0.0");
+	el.addAttr("version", "0.1");
 
 	a_ctxt.fillElement(el);
 

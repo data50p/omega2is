@@ -3,6 +3,8 @@ package com.femtioprocent.omega.anim.tool.path;
 import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.OmegaContext;
 import com.femtioprocent.omega.graphic.render.Canvas;
+import com.femtioprocent.omega.util.DelimitedStringBuilder;
+import com.femtioprocent.omega.util.Log;
 import com.femtioprocent.omega.util.SundryUtils;
 import com.femtioprocent.omega.xml.Element;
 
@@ -634,11 +636,35 @@ public class Path {
             eq.addAttr("pc", "" + encodePoint(qq.pc));
             el.add(eq);
         }
+        double[] lenArr = getLenA();
+        Point2D[] point2d = getPoint2D();
+        Element info = new Element("info");
+        info.addAttr("len", format(lenArr));
+        info.addAttr("seg", format(point2d));
+        el.add(info);
+
         for (int i = 0; i < marker.size(); i++) {
             Mark mk = (Mark) marker.get(i);
             el.add(mk.getElement());
         }
         return el;
+    }
+
+
+    public static String format(Point2D[] point2d) {
+        DelimitedStringBuilder sb = new DelimitedStringBuilder(";");
+        for(Point2D p : point2d) {
+            sb.append("" + p.getX() + "," + p.getY());
+        }
+        return sb.toString();
+    }
+
+    public static String format(double[] lenArr) {
+        DelimitedStringBuilder sb = new DelimitedStringBuilder(";");
+        for(double d : lenArr) {
+            sb.append("" + d);
+        }
+        return sb.toString();
     }
 
 

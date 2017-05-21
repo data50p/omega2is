@@ -68,31 +68,15 @@ public class PathHelper {
 	    Log.getLogger().info("fix: Path " + p);
 	    double[] lenArr = p.getLenA();
 	    Point2D[] point2d = p.getPoint2D();
-	    Log.getLogger().info("          " + format(lenArr));
-	    Log.getLogger().info("          " + format(point2d));
+	    Log.getLogger().info("          " + Path.format(lenArr));
+	    Log.getLogger().info("          " + Path.format(point2d));
 	    Element el_i = el_tp.findElement("info", 0);
 	    if ( el_i == null ) {
 		el_i = new Element("info");
 		el_tp.add(el_i);
 	    }
-	    el_i.addAttr("len", format(lenArr));
-	    el_i.addAttr("seg", format(point2d));
+	    el_i.addAttr("len", Path.format(lenArr));
+	    el_i.addAttr("seg", Path.format(point2d));
 	}
-    }
-
-    private String format(Point2D[] point2d) {
-	DelimitedStringBuilder sb = new DelimitedStringBuilder(";");
-	for(Point2D p : point2d) {
-	    sb.append("" + p.getX() + "," + p.getY());
-	}
-	return sb.toString();
-    }
-
-    private String format(double[] lenArr) {
-	DelimitedStringBuilder sb = new DelimitedStringBuilder(";");
-	for(double d : lenArr) {
-	    sb.append("" + d);
-	}
-	return sb.toString();
     }
 }
