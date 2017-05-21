@@ -1,5 +1,6 @@
 package com.femtioprocent.omega.anim.tool.path;
 
+import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.OmegaContext;
 import com.femtioprocent.omega.graphic.render.Canvas;
 import com.femtioprocent.omega.util.SundryUtils;
@@ -71,7 +72,7 @@ public class Path {
     Point2D[] pointA;
     double len = 0;
 
-    Path(Element el) {       // TPath
+    public Path(Element el) {       // TPath
         seg_l = new ArrayList();
         marker = new ArrayList();
         String nidp_s = el.findAttr("nid");
@@ -334,7 +335,7 @@ public class Path {
     Object[] getPathCoordinates(Shape shape) {
         double[] fa = new double[6];
         int cnt = 0;
-        PathIterator pi = shape.getPathIterator(null, 0.5);
+        PathIterator pi = shape.getPathIterator(null, OmegaConfig.FLATNESS);
         LOOP:
         while (!pi.isDone()) {
             int a = pi.currentSegment(fa);
@@ -348,7 +349,7 @@ public class Path {
             }
             pi.next();
         }
-        pi = shape.getPathIterator(null, 0.5);
+        pi = shape.getPathIterator(null, OmegaConfig.FLATNESS);
         Point2D[] pa = new Point2D[cnt];
         double[] lena = new double[cnt];
         double le = 0;
@@ -660,7 +661,7 @@ public class Path {
         f.setSize(870, 640);
 
         f.setVisible(true);
-        ca.setBackground("bg.jpg");
+        //ca.setBackground("developer.omega_assets/media/background/Barn1.jpg");
 
         SundryUtils.m_sleep(300);
 
@@ -685,5 +686,13 @@ public class Path {
 //log	OmegaContext.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(100.0));
 //log	OmegaContext.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(100.2));
 //log	OmegaContext.sout_log.getLogger().info("ERR: " + "" + pa.getPointAt(pa.getLength()));
+    }
+
+    public double[] getLenA() {
+        return lenA;
+    }
+
+    public Point2D[] getPoint2D() {
+        return pointA;
     }
 }
