@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_121" class="java.beans.XMLDecoder">
+<java version="1.8.0_131" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>Sign Word Movie Scale</string>
@@ -60,6 +60,10 @@
   <void method="put">
    <string>Omega - Assets Bundle Dialog</string>
    <string>Omega - Assets Bundle Dialog</string>
+  </void>
+  <void method="put">
+   <string>Add Path Helper Info</string>
+   <string>Add Path Helper Info</string>
   </void>
   <void method="put">
    <string>Import Omega Bundle</string>

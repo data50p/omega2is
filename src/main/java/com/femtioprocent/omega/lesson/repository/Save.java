@@ -11,7 +11,15 @@ import java.io.IOException;
 import java.util.List;
 
 public class Save {
+    public static void saveWithBackup(String fname, String extension, Element el) {
+        save(fname, el, extension);
+    }
+
     public static void save(String fname, Element el) {
+	save(fname, el, null);
+    }
+
+    private static void save(String fname, Element el, String extension) {
 	List stories = el.find("story");
 	if (stories != null && stories.size() > 0) {
 	    Element sel = (Element) stories.get(0);
@@ -23,11 +31,23 @@ public class Save {
 	    }
 	}
 
+	if ( extension != null )
+	    doBackup(fname, extension);
 	try (XML_PW xmlpw = new XML_PW(SundryUtils.createPrintWriterUTF8(fname), false)) {
 	    xmlpw.put(el);
 	} catch (Exception e) {
 	    e.printStackTrace();
 	}
+    }
+
+    private static void doBackup(String fname, String extension) {
+	File buFile = new File(fname + extension);
+	File theFile = new File(fname);
+
+	if ( theFile.exists() && buFile.exists() )
+	    buFile.delete();
+	if ( theFile.exists() )
+	    theFile.renameTo(buFile);
     }
 
     private static void addStoryFileIndicator(String fname) {

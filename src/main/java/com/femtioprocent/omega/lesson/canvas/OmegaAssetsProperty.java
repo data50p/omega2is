@@ -7,6 +7,7 @@ import com.femtioprocent.omega.OmegaVersion;
 import com.femtioprocent.omega.adm.assets.TargetCombinations;
 import com.femtioprocent.omega.lesson.LessonContext;
 import com.femtioprocent.omega.lesson.appl.ApplContext;
+import com.femtioprocent.omega.lesson.helper.PathHelper;
 import com.femtioprocent.omega.swing.TableSorter;
 import com.femtioprocent.omega.swing.filechooser.ChooseDir;
 import com.femtioprocent.omega.swing.filechooser.ChooseOmegaBundleFile;
@@ -197,6 +198,12 @@ public class OmegaAssetsProperty extends Property_B {
             if (s.equals("close")) {
                 setVisible(false);
             }
+
+            if (s.equals("add path helper")) {
+		PathHelper ph = new PathHelper(targetCombinationsBuilder.asOne().dep_set);
+                ph.perform();
+            }
+
         }
     }
 
@@ -509,6 +516,11 @@ public class OmegaAssetsProperty extends Property_B {
         jb.addActionListener(myactl);
         imBundle = jb;
 
+        Y++;
+        X = 0;
+        fpan.add(new JLabel(""), jb = new JButton(T.t("Add Path Helper Info")), Y, ++X);
+        jb.setActionCommand("add path helper");
+        jb.addActionListener(myactl);
 
         Y++;
         X = 0;
