@@ -17,3 +17,4 @@ SAVED-*
 *omega_bundle.manifest
 __*
 src/main/resources/version
+*.0.0
