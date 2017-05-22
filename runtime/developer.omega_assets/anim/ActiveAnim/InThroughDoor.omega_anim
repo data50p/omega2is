@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE omega >
 
-<omega class="Animation" version="0.0">
+<omega class="Animation" version="0.1">
 <AnimCanvas>
 <Canvas>
 <background height="600" name="background/RoomDoorCrnrVase.jpg" width="800"/>
@@ -9,6 +9,7 @@
 <AllPath>
 <TPath nid="0">
 <q ord="0" p1="643.5,387.5" p2="597.8245849609375,382.8807678222656" pc="605.5,377.5"/>
+<info len="0.0;17.575048671256738;31.05630370186291;36.30274867287948;40.59311345475804;43.99125670855938;46.626712583587484" seg="643.5,387.5;626.3952865600586,383.4612979888916;613.0811462402344,381.3451919555664;607.8455410003662,381.0081124305725;603.5575790405273,381.1516819000244;600.2172603607178,381.7759003639221;597.8245849609375,382.8807678222656"/>
 </TPath>
 </AllPath>
 <lesson verb="$jump hoppar över $standstill"/>

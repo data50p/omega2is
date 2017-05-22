@@ -25,28 +25,32 @@ public class PathHelper {
 
     public void perform() {
         for(TargetCombinations.TCItem tci : dep_set) {
-	    String aFname = OmegaContext.omegaAssets(tci.fn);
-            if ( !aFname.endsWith(".omega_anim") ) {
-		Log.getLogger().info("Skip: wrong file name " + aFname);
-		continue;
+            try {
+		String fname = tci.fn;
+		if (!fname.endsWith(".omega_anim")) {
+		    Log.getLogger().info("Skip: wrong file name " + fname);
+		    continue;
+		}
+		Log.getLogger().info("Fix path: " + fname);
+		Element el = Restore.restore(fname);
+		String version = el.findAttr("version");
+		String clazz = el.findAttr("class");
+		if (!"Animation".equals(clazz)) {
+		    Log.getLogger().info("Skip: class " + clazz);
+		    continue;
+		}
+		if ("0.1".equals(version)) {
+		    Log.getLogger().info("Skip: version " + version);
+		    continue;
+		}
+		Log.getLogger().info("Loaded: " + el);
+		fixIt(el);
+		el.addAttr("version", "0.1");
+		Save.saveWithBackup(fname, ".0.0", el);
+		Log.getLogger().info("Saved: " + el);
+	    } catch (Exception ex) {
+		Log.getLogger().info("***Exception: " + ex);
 	    }
-	    Log.getLogger().info("Fix path: " + aFname);
-	    Element el = Restore.restore(OmegaContext.omegaAssets(aFname));
-	    String version = el.findAttr("version");
-	    String clazz = el.findAttr("class");
-	    if ( !"Animation".equals(clazz) ) {
-		Log.getLogger().info("Skip: class " + clazz);
-		continue;
-	    }
-	    if ( false && "0.1".equals(version) ) {
-		Log.getLogger().info("Skip: version " + version);
-		continue;
-	    }
-	    Log.getLogger().info("Loaded: " + el);
-	    fixIt(el);
-	    el.addAttr("version", "0.1");
-	    Save.saveWithBackup(aFname, ".0.0", el);
-	    Log.getLogger().info("Saved: " + el);
 	}
     }
 

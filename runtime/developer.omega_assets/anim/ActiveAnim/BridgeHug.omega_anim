@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE omega >
 
-<omega class="Animation" version="0.0">
+<omega class="Animation" version="0.1">
 <AnimCanvas>
 <Canvas>
 <background height="420" name="background/bridgecrossrd.gif" width="832"/>
@@ -10,9 +10,11 @@
 <TPath nid="0">
 <q ord="0" p1="1037.5,281.5" p2="226.5,286.5" pc="484.3846130371094,281.6153869628906"/>
 <mark id="0" type="^" where="782.1"/>
+<info len="0.0;258.1060153057415;479.30998692661956;663.6145652491219;811.0243909947728" seg="1037.5,281.5;779.394229888916,281.855770111084;558.1923065185547,282.8076934814453;373.894229888916,284.355770111084;226.5,286.5"/>
 </TPath>
 <TPath nid="1">
 <q ord="0" p1="65.84615325927734,329.23077392578125" p2="65.84615325927734,330.30767822265625" pc="65.84615325927734,329.23077392578125"/>
+<info len="0.0;1.076904296875" seg="65.84615325927734,329.23077392578125;65.84615325927734,330.30767822265625"/>
 </TPath>
 </AllPath>
 <lesson verb="jagar"/>

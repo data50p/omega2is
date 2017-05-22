@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE omega >
 
-<omega class="Animation" version="0.0">
+<omega class="Animation" version="0.1">
 <AnimCanvas>
 <Canvas>
 <background height="600" name="background/RoomGirlBoy1.jpg" width="800"/>
@@ -9,6 +9,7 @@
 <AllPath>
 <TPath nid="0">
 <q ord="0" p1="141.84397888183594,450.4042663574219" p2="141.84397888183594,449.6950378417969" pc="141.0,450.5"/>
+<info len="0.0;0.44139537999654227;1.1584933191869784" seg="141.84397888183594,450.4042663574219;141.42198944091797,450.2748260498047;141.84397888183594,449.6950378417969"/>
 </TPath>
 </AllPath>
 <lesson verb="jagar"/>

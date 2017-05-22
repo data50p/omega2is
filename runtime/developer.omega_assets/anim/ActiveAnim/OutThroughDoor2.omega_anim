@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE omega >
 
-<omega class="Animation" version="0.0">
+<omega class="Animation" version="0.1">
 <AnimCanvas>
 <Canvas>
 <background height="600" name="background/BarnEmptyDoor.jpg" width="800"/>
@@ -9,9 +9,11 @@
 <AllPath>
 <TPath nid="0">
 <q ord="0" p1="248.22874450683594,361.5628967285156" p2="248.2106170654297,362.0321350097656" pc="248.599853515625,362.0321350097656"/>
+<info len="0.0;0.39575625735853853;0.6268888855643686" seg="248.22874450683594,361.5628967285156;248.4097671508789,361.9148254394531;248.2106170654297,362.0321350097656"/>
 </TPath>
 <TPath nid="1">
 <q ord="0" p1="287.4904479980469,309.0862121582031" p2="287.6012878417969,309.584716796875" pc="287.6012878417969,309.584716796875"/>
+<info len="0.0;0.5106783192381492" seg="287.4904479980469,309.0862121582031;287.6012878417969,309.584716796875"/>
 </TPath>
 </AllPath>
 <lesson verb="jagar"/>

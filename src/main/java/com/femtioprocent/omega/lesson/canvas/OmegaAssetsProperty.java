@@ -198,12 +198,6 @@ public class OmegaAssetsProperty extends Property_B {
             if (s.equals("close")) {
                 setVisible(false);
             }
-
-            if (s.equals("add path helper")) {
-		PathHelper ph = new PathHelper(targetCombinationsBuilder.asOne().dep_set);
-                ph.perform();
-            }
-
         }
     }
 
@@ -515,12 +509,6 @@ public class OmegaAssetsProperty extends Property_B {
         jb.setActionCommand("import bundle");
         jb.addActionListener(myactl);
         imBundle = jb;
-
-        Y++;
-        X = 0;
-        fpan.add(new JLabel(""), jb = new JButton(T.t("Add Path Helper Info")), Y, ++X);
-        jb.setActionCommand("add path helper");
-        jb.addActionListener(myactl);
 
         Y++;
         X = 0;
