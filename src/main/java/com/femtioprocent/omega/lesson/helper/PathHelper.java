@@ -1,5 +1,6 @@
 package com.femtioprocent.omega.lesson.helper;
 
+import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.OmegaContext;
 import com.femtioprocent.omega.adm.assets.TargetCombinations;
 import com.femtioprocent.omega.anim.tool.path.Path;
@@ -39,7 +40,7 @@ public class PathHelper {
 		    Log.getLogger().info("Skip: class " + clazz);
 		    continue;
 		}
-		if ("0.1".equals(version)) {
+		if (false && "0.1".equals(version)) {
 		    Log.getLogger().info("Skip: version " + version);
 		    continue;
 		}
@@ -74,13 +75,24 @@ public class PathHelper {
 	    Point2D[] point2d = p.getPoint2D();
 	    Log.getLogger().info("          " + Path.format(lenArr));
 	    Log.getLogger().info("          " + Path.format(point2d));
+
 	    Element el_i = el_tp.findElement("info", 0);
 	    if ( el_i == null ) {
 		el_i = new Element("info");
 		el_tp.add(el_i);
 	    }
-	    el_i.addAttr("len", Path.format(lenArr));
-	    el_i.addAttr("seg", Path.format(point2d));
+	    el_i.subAttr("len");
+	    el_i.subAttr("seg");
+	    el_i.addAttr("flatness", "" + OmegaConfig.FLATNESS);
+	    el_i.addAttr("size", "" + lenArr.length);
+
+	    Element el_h = el_tp.findElement("help", 0);
+	    if ( el_h == null ) {
+		el_h = new Element("help");
+		el_tp.add(el_h);
+	    }
+	    el_h.addAttr("len", Path.format(lenArr));
+	    el_h.addAttr("seg", Path.format(point2d));
 	}
     }
 }

@@ -55,6 +55,13 @@ public class Element extends Node implements Cloneable {
         attr.put(key, val);
     }
 
+    public void subAttr(String key) {
+        if (ro)
+            throw new RuntimeException("Element readonly");
+
+        attr.remove(key);
+    }
+
     public synchronized void addAttr_nx(String key, String val) {
         if (ro)
             throw new RuntimeException("Element readonly");

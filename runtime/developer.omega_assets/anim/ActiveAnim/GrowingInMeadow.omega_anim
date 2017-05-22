@@ -9,7 +9,8 @@
 <AllPath>
 <TPath nid="0">
 <q ord="0" p1="534.5,577.5" p2="533.5,577.5" pc="533.5,577.5"/>
-<info len="0.0;1.0" seg="534.5,577.5;533.5,577.5"/>
+<info flatness="0.3333333333333333" size="2"/>
+<help len="0.0;1.0" seg="534.5,577.5;533.5,577.5"/>
 </TPath>
 </AllPath>
 <lesson verb="jagar"/>
