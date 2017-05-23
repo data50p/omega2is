@@ -24,9 +24,17 @@ public class PathHelper {
         this.dep_set = dep_set;
     }
 
+    public void performStatus() {
+        perform(false);
+    }
+
     public void perform() {
-        for(TargetCombinations.TCItem tci : dep_set) {
-            try {
+	perform(true);
+    }
+
+    public void perform(boolean modify) {
+	for(TargetCombinations.TCItem tci : dep_set) {
+	    try {
 		String fname = tci.fn;
 		if (!fname.endsWith(".omega_anim")) {
 		    Log.getLogger().info("Skip: wrong file name " + fname);
@@ -34,6 +42,10 @@ public class PathHelper {
 		}
 		Log.getLogger().info("Fix path: " + fname);
 		Element el = Restore.restore(fname);
+		if ( el == null ) {
+		    System.out.println("status: " + (modify ? "upd" : "dry") + " error " + fname);
+		    continue;
+		}
 		String version = el.findAttr("version");
 		String clazz = el.findAttr("class");
 		if (!"Animation".equals(clazz)) {
@@ -45,23 +57,33 @@ public class PathHelper {
 		    continue;
 		}
 		Log.getLogger().info("Loaded: " + el);
-		fixIt(el);
-		el.addAttr("version", "0.1");
-		Save.saveWithBackup(fname, ".0.0", el);
-		Log.getLogger().info("Saved: " + el);
+		String status = fixIt(el, modify);
+		if ( modify ) {
+		    el.addAttr("version", "0.1");
+		    Save.saveWithBackup(fname, ".0.0", el);
+		    Log.getLogger().info("Saved: " + el);
+		}
+		System.out.println("status: " + (modify ? "upd" : "dry") + ' ' + version + ' ' + status + ' ' + fname);
 	    } catch (Exception ex) {
 		Log.getLogger().info("***Exception: " + ex);
 	    }
 	}
     }
 
-    private void fixIt(Element el) {
+    private String fixIt(Element el, boolean modify) {
+	int cntTpath = 0;
+	int cntInfoAdded = 0;
+	int cntInfoExist = 0;
+	int cntHelpAdded = 0;
+	int cntHelpExist = 0;
+	int size = 0;
 	Element el_ac = el.findFirstElement("AnimCanvas");
 	Element el_ap = el_ac.findFirstElement("AllPath");
 	for (int i = 0; i < 10; i++) {
 	    Element el_tp = el.findElement("TPath", i);
 	    if ( el_tp == null )
 	        continue;
+	    cntTpath++;
 	    Log.getLogger().info("fix: q " + el_tp.findAttr("nid"));
 	    for (int j = 0; j < 100; j++) {
 		Element el_q = el.findElement("q", j);
@@ -80,6 +102,9 @@ public class PathHelper {
 	    if ( el_i == null ) {
 		el_i = new Element("info");
 		el_tp.add(el_i);
+		cntInfoAdded++;
+	    } else {
+		cntInfoExist++;
 	    }
 	    el_i.subAttr("len");
 	    el_i.subAttr("seg");
@@ -90,9 +115,13 @@ public class PathHelper {
 	    if ( el_h == null ) {
 		el_h = new Element("help");
 		el_tp.add(el_h);
+		cntHelpAdded++;
+	    } else {
+	        cntHelpExist++;
 	    }
 	    el_h.addAttr("len", Path.format(lenArr));
 	    el_h.addAttr("seg", Path.format(point2d));
 	}
+	return "n:" + cntTpath + " +:" + cntInfoAdded + "," + cntHelpAdded + " =:" + cntInfoExist + "," + cntHelpExist + "" + size;
     }
 }

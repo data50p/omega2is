@@ -145,10 +145,10 @@ public class SAX_node extends DefaultHandler {
             return el;
 
         } catch (SAXParseException err) {
-            OmegaContext.sout_log.getLogger().info("** Parsing error"
+            Log.getLogger().info("** Parsing error"
                     + ", line " + err.getLineNumber()
                     + ", uri " + err.getSystemId());
-            OmegaContext.sout_log.getLogger().info("   " + err.getMessage());
+            Log.getLogger().info("   " + err.getMessage());
 
         } catch (SAXException e) {
             Exception x = e;
@@ -170,6 +170,7 @@ public class SAX_node extends DefaultHandler {
             Log.getLogger().info("           : " + el);
             return el;
         } catch (IOException ex) {
+            Log.getLogger().info("           : " + ex);
         }
         return null;
     }

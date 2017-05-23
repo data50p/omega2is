@@ -74,10 +74,10 @@ public class Log {
             fh.setFormatter(my_formatter);
             logger.addHandler(fh);
             if (OmegaContext.isDeveloper()) {
-                h2 = new MyHandler(System.out, my_formatter);
+                h2 = new MyHandler(System.err, my_formatter);
                 logger.addHandler(h2);
             }
-            logger.setUseParentHandlers(!false);
+            logger.setUseParentHandlers(false);
             return logger;
         } catch (IOException ex) {
         } catch (NoClassDefFoundError ex) {
