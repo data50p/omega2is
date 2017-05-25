@@ -10,7 +10,7 @@ public class GifButton extends JButton {
 
     public GifButton(String label, String im_fn) {
         super(label);
-        im = LoadImage.loadAndWait(this, "com/femtioprocent/omega/" + im_fn);
+        im = LoadImage.loadAndWait(this, "omega/" + im_fn);
     }
 
     public void paintComponent(Graphics g) {

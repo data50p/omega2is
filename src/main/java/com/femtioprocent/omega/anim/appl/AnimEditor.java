@@ -367,16 +367,16 @@ public class AnimEditor extends JFrame {
 
 
 	toolbar_cmd.addSeparator();
-	jmpa.add(tac = new ToolAction(T.t("Create new"), "com/femtioprocent/omega/PathNew", "path_create", ae_texec, true));
+	jmpa.add(tac = new ToolAction(T.t("Create new"), "omega/PathNew", "path_create", ae_texec, true));
 	toolbar_cmd.add(tac);
-	jmpa.add(tac = new ToolAction(T.t("Duplicate"), "com/femtioprocent/omega/PathDup", "path_duplicate", ae_texec, true));
+	jmpa.add(tac = new ToolAction(T.t("Duplicate"), "omega/PathDup", "path_duplicate", ae_texec, true));
 	toolbar_cmd.add(tac);
-	jmpa.add(tac = new ToolAction(T.t("Extend at end"), "com/femtioprocent/omega/PathExtend", "path_extend", ae_texec, true));
+	jmpa.add(tac = new ToolAction(T.t("Extend at end"), "omega/PathExtend", "path_extend", ae_texec, true));
 	toolbar_cmd.add(tac);
-	jmpa.add(tac = new ToolAction(T.t("Split in two"), "com/femtioprocent/omega/PathSplit", "path_split", ae_texec, true));
+	jmpa.add(tac = new ToolAction(T.t("Split in two"), "omega/PathSplit", "path_split", ae_texec, true));
 	toolbar_cmd.add(tac);
-	jmpa.add(tac = new ToolAction(T.t("Delete segment"), "com/femtioprocent/omega/PathDelete", "path_delete", ae_texec, true));
-	jmpa.add(tac = new ToolAction(T.t("Delete whole path and timeline"), "com/femtioprocent/omega/PathDeleteAll", "path_delete_all", ae_texec, true));
+	jmpa.add(tac = new ToolAction(T.t("Delete segment"), "omega/PathDelete", "path_delete", ae_texec, true));
+	jmpa.add(tac = new ToolAction(T.t("Delete whole path and timeline"), "omega/PathDeleteAll", "path_delete_all", ae_texec, true));
 	//toolbar_cmd.add(tac);
 
 	toolbar_cmd.addSeparator();
