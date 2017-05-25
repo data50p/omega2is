@@ -53,6 +53,8 @@ import java.util.*;
 import java.util.List;
 import java.util.prefs.Preferences;
 
+import static com.femtioprocent.omega.util.SundryUtils.empty;
+
 public class Lesson implements LessonCanvasListener {
 
     boolean globalExit = false;
@@ -1973,10 +1975,12 @@ public class Lesson implements LessonCanvasListener {
 	    while (it.hasNext()) {
 		String key = (String) it.next();
 		String val = (String) hm.get(key);
-		Element el1 = new Element("value");
-		el1.addAttr("key", key);
-		el1.addAttr("val", val);
-		el.add(el1);
+		if ( !SundryUtils.empty(val) ) {
+		    Element el1 = new Element("value");
+		    el1.addAttr("key", key);
+		    el1.addAttr("val", val);
+		    el.add(el1);
+		}
 	    }
 	    return el;
 	}
@@ -1987,10 +1991,12 @@ public class Lesson implements LessonCanvasListener {
 	    while (it.hasNext()) {
 		String key = (String) it.next();
 		String val = (String) hmSign.get(key);
-		Element el1 = new Element("value");
-		el1.addAttr("key", key);
-		el1.addAttr("val", val);
-		el.add(el1);
+		if ( !SundryUtils.empty(val) ) {
+		    Element el1 = new Element("value");
+		    el1.addAttr("key", key);
+		    el1.addAttr("val", val);
+		    el.add(el1);
+		}
 	    }
 	    return el;
 	}
@@ -2006,8 +2012,12 @@ public class Lesson implements LessonCanvasListener {
 		    }
 		    String key = (String) el1.findAttr("key");
 		    String val = (String) el1.findAttr("val");
-		    hm.put(key, val);
-		    lesson_log.getLogger().info("action_specific.fill:" + key + '<' + val + '>');
+		    if ( !SundryUtils.empty(val) ) {
+			hm.put(key, val);
+			lesson_log.getLogger().info("action_specific.fill:" + key + '<' + val + '>');
+		    } else {
+			lesson_log.getLogger().info("action_specific.fill: empty val, ignored " + key);
+		    }
 		}
 	    }
 	}
@@ -2023,11 +2033,11 @@ public class Lesson implements LessonCanvasListener {
 		    }
 		    String key = (String) el1.findAttr("key");
 		    String val = (String) el1.findAttr("val");
-		    if (val != null && val.length() > 0) {
+		    if ( !SundryUtils.empty(val) ) {
 			hmSign.put(key, val);
 			lesson_log.getLogger().info("sign_specific.fill:" + key + '<' + val + '>');
 		    } else {
-			lesson_log.getLogger().info("sign_specific.fill: empty val, ignored, " + key + '<' + val + '>');
+			lesson_log.getLogger().info("sign_specific.fill: empty val, ignored, " + key);
 		    }
 		}
 	    }
