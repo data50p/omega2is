@@ -95,8 +95,9 @@ public class PathHelper {
 	    Log.getLogger().info("fix: Path " + p);
 	    double[] lenArr = p.getLenA();
 	    Point2D[] point2d = p.getPoint2D();
-	    Log.getLogger().info("          " + Path.format(lenArr));
-	    Log.getLogger().info("          " + Path.format(point2d));
+	    Log.getLogger().info("          " + OmegaConfig.FLATNESS);
+	    Log.getLogger().info("          " + lenArr.length + ' ' + Path.format(lenArr));
+	    Log.getLogger().info("          " + point2d.length + ' ' + Path.format(point2d));
 
 	    Element el_i = el_tp.findElement("info", 0);
 	    if ( el_i == null ) {

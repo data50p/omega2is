@@ -3,7 +3,8 @@ package com.femtioprocent.omega;
 public class OmegaConfig {
     public static final String OMEGA_BUNDLE = "omega_bundle";
     public static final String OMEGA_BUNDLE_EXTENSION = "." + OMEGA_BUNDLE;
-    public static final double FLATNESS = 1.0/3;
+    private static final double DEFAULT_FLATNESS = 1.0/3;
+    public static double FLATNESS = DEFAULT_FLATNESS;
     static public int TIMELINES_N = 4;
     static public int CABARET_ACTOR_N = 12;
     static public int WINGS_N = 10;

@@ -1,5 +1,6 @@
 package com.femtioprocent.omega.appl;
 
+import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.adm.assets.TargetCombinations;
 import com.femtioprocent.omega.lesson.helper.PathHelper;
 import com.femtioprocent.omega.util.Log;
@@ -12,8 +13,18 @@ import java.util.*;
  * Created by lars on 2017-05-22.
  */
 public class ConvertAnimToVersion_0_1 {
-    static HashMap flags;
-    static List argl;
+    static HashMap<String,String> flags;
+    static List<String> argl;
+
+    static double flatness = OmegaConfig.FLATNESS;
+
+    ConvertAnimToVersion_0_1() {
+	String flatnessF = (String) flags.get("flatness");
+	if ( flatnessF != null) {
+	    double flatness = Double.valueOf(flatnessF);
+	    OmegaConfig.FLATNESS = flatness;
+	}
+    }
 
     public static void main(String[] args) {
 	Log.getLogger().info("Started");

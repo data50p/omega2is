@@ -1,0 +1,2 @@
+cd runtime/
+java -cp omega-is-2.0.0-SNAPSHOT.jar com.femtioprocent.omega.appl.ConvertAnimToVersion_0_1
