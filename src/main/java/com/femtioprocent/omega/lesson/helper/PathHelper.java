@@ -76,7 +76,7 @@ public class PathHelper {
 	int cntInfoExist = 0;
 	int cntHelpAdded = 0;
 	int cntHelpExist = 0;
-	int size = 0;
+
 	Element el_ac = el.findFirstElement("AnimCanvas");
 	Element el_ap = el_ac.findFirstElement("AllPath");
 	for (int i = 0; i < 10; i++) {
@@ -84,20 +84,19 @@ public class PathHelper {
 	    if ( el_tp == null )
 	        continue;
 	    cntTpath++;
-	    Log.getLogger().info("fix: q " + el_tp.findAttr("nid"));
+	    Log.getLogger().info("fix: TPath " + el_tp.findAttr("nid"));
 	    for (int j = 0; j < 100; j++) {
 		Element el_q = el.findElement("q", j);
 		if ( el_q == null )
-		    continue;
-		Log.getLogger().info("fix: q " + el_tp.findAttr("ord") + ' ' + el_q);
+		    break;
+		Log.getLogger().info("fix: q " + el_q.findAttr("ord"));
 	    }
 	    Path p = new Path(el_tp);
-	    Log.getLogger().info("fix: Path " + p);
 	    double[] lenArr = p.getLenA();
 	    Point2D[] point2d = p.getPoint2D();
-	    Log.getLogger().info("          " + OmegaConfig.FLATNESS);
-	    Log.getLogger().info("          " + lenArr.length + ' ' + Path.format(lenArr));
-	    Log.getLogger().info("          " + point2d.length + ' ' + Path.format(point2d));
+	    Log.getLogger().info("flatness: " + OmegaConfig.FLATNESS);
+	    Log.getLogger().info("len: " + lenArr.length + ' ' + Path.format(lenArr));
+	    Log.getLogger().info("seg: " + point2d.length + ' ' + Path.format(point2d));
 
 	    Element el_i = el_tp.findElement("info", 0);
 	    if ( el_i == null ) {
@@ -123,6 +122,6 @@ public class PathHelper {
 	    el_h.addAttr("len", Path.format(lenArr));
 	    el_h.addAttr("seg", Path.format(point2d));
 	}
-	return "n:" + cntTpath + " +:" + cntInfoAdded + "," + cntHelpAdded + " =:" + cntInfoExist + "," + cntHelpExist + "" + size;
+	return "n:" + cntTpath + " +:" + cntInfoAdded + "," + cntHelpAdded + " =:" + cntInfoExist + "," + cntHelpExist;
     }
 }

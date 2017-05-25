@@ -15,10 +15,12 @@ import java.util.*;
 public class ConvertAnimToVersion_0_1 {
     static HashMap<String,String> flags;
     static List<String> argl;
+    File baseDir = null;
 
     static double flatness = OmegaConfig.FLATNESS;
 
-    ConvertAnimToVersion_0_1() {
+    ConvertAnimToVersion_0_1(File baseDir) {
+        this.baseDir = baseDir;
 	String flatnessF = (String) flags.get("flatness");
 	if ( flatnessF != null) {
 	    double flatness = Double.valueOf(flatnessF);
@@ -30,7 +32,11 @@ public class ConvertAnimToVersion_0_1 {
 	Log.getLogger().info("Started");
 	flags = SundryUtils.flagAsMap(args);
 	argl = SundryUtils.argAsList(args);
-	ConvertAnimToVersion_0_1 c01 = new ConvertAnimToVersion_0_1();
+	String baseDir = ".";
+	String dir = flags.get("d");
+	if ( dir != null )
+	    baseDir = dir;
+	ConvertAnimToVersion_0_1 c01 = new ConvertAnimToVersion_0_1(new File(baseDir));
 	c01.start();
     }
 
@@ -57,8 +63,7 @@ public class ConvertAnimToVersion_0_1 {
     }
 
     private void fill(Set<TargetCombinations.TCItem> dep_set) {
-	File dir = new File(".");
-	fill(dep_set, dir);
+	fill(dep_set, baseDir);
     }
 
     private void fill(Set<TargetCombinations.TCItem> dep_set, File dir) {
