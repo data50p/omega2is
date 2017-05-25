@@ -1,1 +1,1 @@
-java -cp runtime/omega-is-2.0.0-SNAPSHOT.jar com.femtioprocent.omega.appl.ConvertAnimToVersion_0_1 -d=runtime -status
+java -cp runtime/omega-is-2.0.0-SNAPSHOT.jar com.femtioprocent.omega.appl.ConvertAnimToVersion_0_1 "$@"

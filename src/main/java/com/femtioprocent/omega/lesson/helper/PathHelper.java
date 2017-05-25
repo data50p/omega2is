@@ -25,14 +25,14 @@ public class PathHelper {
     }
 
     public void performStatus() {
-        perform(false);
+        perform(false, null);
     }
 
-    public void perform() {
-	perform(true);
+    public void perform(String doBackup) {
+	perform(true, doBackup);
     }
 
-    public void perform(boolean modify) {
+    public void perform(boolean modify, String doBackup) {
 	for(TargetCombinations.TCItem tci : dep_set) {
 	    try {
 		String fname = tci.fn;
@@ -60,7 +60,10 @@ public class PathHelper {
 		String status = fixIt(el, modify);
 		if ( modify ) {
 		    el.addAttr("version", "0.1");
-		    Save.saveWithBackup(fname, ".0.0", el);
+		    if ( doBackup != null )
+			Save.saveWithBackup(fname, doBackup, el);
+		    else
+			Save.save(fname, el);
 		    Log.getLogger().info("Saved: " + el);
 		}
 		System.out.println("status: " + (modify ? "upd" : "dry") + ' ' + version + ' ' + status + ' ' + fname);

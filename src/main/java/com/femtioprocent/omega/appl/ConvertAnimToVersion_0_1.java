@@ -7,6 +7,7 @@ import com.femtioprocent.omega.util.Log;
 import com.femtioprocent.omega.util.SundryUtils;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -29,6 +30,10 @@ public class ConvertAnimToVersion_0_1 {
     }
 
     public static void main(String[] args) {
+        if ( args.length == 0 ) {
+	    System.err.println("-b=<backupExt> -d=dir -status -flatness=value");
+	    System.exit(99);
+	}
 	Log.getLogger().info("Started");
 	flags = SundryUtils.flagAsMap(args);
 	argl = SundryUtils.argAsList(args);
@@ -46,10 +51,11 @@ public class ConvertAnimToVersion_0_1 {
 	keep(dep_set, ".omega_anim");
 
 	PathHelper ph = new PathHelper(dep_set);
+	String doBackup = flags.get("b");
 	if ( flags.get("status") != null )
 	    ph.performStatus();
 	else
-	    ph.perform();
+	    ph.perform(doBackup);
     }
 
     private void keep(Set<TargetCombinations.TCItem> dep_set, String s) {
@@ -74,7 +80,8 @@ public class ConvertAnimToVersion_0_1 {
 	    } else {
 	        if (f.getName().endsWith(".omega_anim") ) {
 		    TargetCombinations.TCItem tci = createTCI(f);
-		    dep_set.add(tci);
+		    if ( tci != null )
+		        dep_set.add(tci);
 		}
 	        else
 		    Log.getLogger().info("Ignore " + f.getAbsolutePath());
@@ -83,8 +90,13 @@ public class ConvertAnimToVersion_0_1 {
     }
 
     private TargetCombinations.TCItem createTCI(File f) {
-	Log.getLogger().info("convert " + f.getAbsolutePath());
-	TargetCombinations.TCItem tci = new TargetCombinations.TCItem(f.getAbsolutePath());
-	return tci;
+	try {
+	    Log.getLogger().info("convert " + f.getCanonicalPath());
+	    TargetCombinations.TCItem tci = new TargetCombinations.TCItem(f.getCanonicalPath());
+	    return tci;
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
+	return null;
     }
 }
