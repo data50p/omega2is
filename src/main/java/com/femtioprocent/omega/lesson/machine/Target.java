@@ -1404,6 +1404,14 @@ public class Target {
     public TargetCombinations getAllTargetCombinationsEx2(Lesson lesson) {
         TargetCombinations tc = new TargetCombinations();
 
+        // add lesson icons
+        String lln = lesson.getLoadedFName();
+        int ix = lln.lastIndexOf("/");
+        if ( ix != -1 ) {
+            String llnBase = lln.substring(0, ix);
+            addLessonIcon(tc, llnBase + "/image.png");
+            addLessonIcon(tc, llnBase + "/image_enter.png");
+        }
         List<String> media = lesson.action_specific.getMedia();
         for (String s : media)
             tc.dep_set.add(new TargetCombinations.TCItem(s));
@@ -1483,6 +1491,11 @@ public class Target {
         }
 
         return tc;
+    }
+
+    private void addLessonIcon(TargetCombinations tc, String fn) {
+        if (OmegaContext.omegaAssetsExist(fn))
+            tc.dep_set.add(new TargetCombinations.TCItem(fn));
     }
 
     private void update(TargetCombinations tc) {
