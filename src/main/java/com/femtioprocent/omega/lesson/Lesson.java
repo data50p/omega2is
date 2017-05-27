@@ -3823,11 +3823,6 @@ public class Lesson implements LessonCanvasListener {
 //				showHelp(OmegaContext.HELP_STACK.get());
 			}
 
-			if (e.getKeyCode() == KeyEvent.VK_F9) {
-			    OmegaStartManager.nextStart(0);
-			    OmegaStartManager.enableStarter();
-			}
-
 			if (e.getKeyCode() == KeyEvent.VK_F2 && (e.isShiftDown() || e.isControlDown())) {
 			    if (cc.equals("pupil")) {
 				pupil_canvas.changeBehaviour();

@@ -3,6 +3,7 @@ package com.femtioprocent.omega.lesson.settings;
 import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.OmegaContext;
 import com.femtioprocent.omega.anim.context.AnimContext;
+import com.femtioprocent.omega.appl.OmegaStartManager;
 import com.femtioprocent.omega.lesson.Lesson;
 import com.femtioprocent.omega.lesson.pupil.Pupil;
 import com.femtioprocent.omega.swing.ScaledImageIcon;
@@ -218,6 +219,9 @@ public class PupilSettingsDialog extends SettingsDialog {
 		    OmegaContext.sout_log.getLogger().info("ERR: " + "ex " + ex);
 		    ex.printStackTrace();
 		}
+	    }
+	    if ("resetStarter".equals(cmd)) {
+		OmegaStartManager.enableStarter();
 	    }
 	}
     };
@@ -627,6 +631,12 @@ public class PupilSettingsDialog extends SettingsDialog {
 	cp_admin.add(new JLabel(T.t("")), secure_delete_jb = new JButton(T.t("Delete pupil")), Y, ++X);
 	secure_delete_jb.setActionCommand("deletePupil");
 	secure_delete_jb.addActionListener(but_al);
+
+	X = 0;
+	Y++;
+	cp_admin.add(new JLabel(T.t("")), jb = new JButton(T.t("Reset Starter")), Y, ++X);
+	jb.setActionCommand("resetStarter");
+	jb.addActionListener(but_al);
 
 	// -----------
 
