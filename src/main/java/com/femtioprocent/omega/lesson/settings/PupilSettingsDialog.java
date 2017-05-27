@@ -982,16 +982,22 @@ public class PupilSettingsDialog extends SettingsDialog {
 	upd_jcomponent("sign_movie", "");
     }
 
-    void save() {
-	String fname = getPupilDir(pupil) + "/pupil_settings.xml";
+    boolean save() {
+        String dir = getPupilDir(pupil);
+        if ( SundryUtils.empty(dir) ) {
+            return false;
+	}
+	String fname = dir + "/pupil_settings.xml";
 	Element pel = new Element("pupil_settings");
 	Element el = getElements();
 	pel.add(el);
 	try (XML_PW xmlpw = new XML_PW(SundryUtils.createPrintWriterUTF8(fname), false) ) {
 	    xmlpw.put(pel);
+	    return true;
 	} catch (Exception ex) {
 	    ex.printStackTrace();
     	}
+    	return false;
     }
 
     void load() {

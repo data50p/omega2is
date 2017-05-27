@@ -66,7 +66,7 @@ public class OmegaSettingsDialog extends SettingsDialog {
         }
     }
 
-    void save() {
+    boolean save() {
         Element el = new Element("omega-settings");
         Element fel = new Element("feedback_movie_background");
         fel.addAttr("color", "" + feedback_movie_background.color.getRGB());
@@ -101,7 +101,9 @@ public class OmegaSettingsDialog extends SettingsDialog {
             xmlpw.put(el);
         } catch (Exception ex) {
             ex.printStackTrace();
+            return false;
         }
+        return true;
     }
 
     void load() {

@@ -70,7 +70,8 @@ public class SettingsDialog extends JDialog implements ActionListener {
         c.add(jpan, BorderLayout.SOUTH);
     }
 
-    void save() {
+    boolean save() {
+        return false;
     }
 
     void load() {
@@ -80,7 +81,9 @@ public class SettingsDialog extends JDialog implements ActionListener {
         String cmd = e.getActionCommand();
 //log	OmegaContext.sout_log.getLogger().info("ERR: " + "" + cmd);
         if ("OK".equals(cmd)) {
-            save();
+            if ( save() == false )
+                JOptionPane.showMessageDialog(ApplContext.top_frame,
+                        "Can't save");
             setVisible(false);
         }
         if ("cancel".equals(cmd)) {
