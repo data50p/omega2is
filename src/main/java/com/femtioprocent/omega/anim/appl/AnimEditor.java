@@ -704,37 +704,4 @@ public class AnimEditor extends JFrame {
     String getFileAsURLStringActor() {
 	return anim_repository.getImageURL_Dlg(AnimEditor.this);
     }
-
-    // - - - - -
-
-    public static void main(String[] argv) {
-	HashMap flag = SundryUtils.flagAsMap(argv);
-	java.util.List argl = SundryUtils.argAsList(argv);
-
-	try {
-	    UIManager.setLookAndFeel("javax.swing.plaf.MetalLookAndFeel");
-// UIManager.getSystemLookAndFeelClassName());
-	} catch (Exception e) {
-	}
-	boolean verbose = false;
-
-	if (flag.get("v") != null)
-	    verbose = true;
-	if (flag.get("R") != null)
-	    OmegaConfig.RUN_MODE = true;
-
-	String s = null;
-	if ((s = (String) flag.get("t")) != null)
-	    OmegaConfig.t_step = Integer.parseInt(s);
-	OmegaContext.sout_log.getLogger().info("ERR: " + "" + OmegaConfig.t_step);
-
-	JOptionPane.showMessageDialog(AnimContext.top_frame,
-		"Please change\ncom.femtioprocent.omega.anim.editor.appl.AnimEditor to\nEditor",
-		"Omega",
-		JOptionPane.INFORMATION_MESSAGE);
-
-	AnimEditor ae = new AnimEditor(verbose);
-
-//log	OmegaContext.sout_log.getLogger().info("ERR: " + "--------ok-------");
-    }
 }

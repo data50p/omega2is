@@ -1,7 +1,6 @@
 package com.femtioprocent.omega.appl;
 
 import com.femtioprocent.omega.OmegaContext;
-import com.femtioprocent.omega.appl.lesson.Editor;
 import com.femtioprocent.omega.util.Log;
 import com.femtioprocent.omega.util.SundryUtils;
 import de.codecentric.centerdevice.MenuToolkit;
@@ -51,7 +50,7 @@ public class OmegaFxAppl extends Application {
         // Application Menu
         // TBD: services menu
         Menu appMenu = new Menu(appName); // Name for appMenu can't be dep_set at
-        // Runtime
+        // LessonRuntimeAppl
         MenuItem aboutItem = tk.createAboutMenuItem(appName);
         MenuItem prefsItem = new MenuItem("Preferences...");
         prefsItem.setOnAction(event -> Log.getLogger().info("prefs clicked"));
@@ -127,7 +126,7 @@ public class OmegaFxAppl extends Application {
                 stage.hide();
                 new Thread(() -> {
                     SundryUtils.m_sleep(500);
-                    Editor.main(args);
+                    LessonEditorAppl.main(args);
                     Platform.runLater(() -> stage.show());
                     SundryUtils.m_sleep(500);
                 }).start();

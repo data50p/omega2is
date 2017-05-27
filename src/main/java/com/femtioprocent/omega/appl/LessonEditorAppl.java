@@ -1,19 +1,18 @@
-package com.femtioprocent.omega.appl.lesson;
+package com.femtioprocent.omega.appl;
 
 import com.femtioprocent.omega.LicenseShowManager;
 import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.OmegaContext;
-import com.femtioprocent.omega.appl.OmegaAppl;
 import com.femtioprocent.omega.lesson.appl.LessonEditor;
 import com.femtioprocent.omega.util.SundryUtils;
 
 import javax.swing.*;
 import java.util.HashMap;
 
-public class Editor extends OmegaAppl {
+public class LessonEditorAppl extends OmegaAppl {
     LessonEditor le;
 
-    public Editor(String fn) {
+    public LessonEditorAppl(String fn) {
         super("Lesson editor");
         le = new LessonEditor("Omega - Lesson Editor:", OmegaContext.antiOmegaAssets(fn));
     }
@@ -50,7 +49,7 @@ public class Editor extends OmegaAppl {
         String fn = argl.size() > 0 ? (String) argl.get(0) : null;
 
         if (LicenseShowManager.showAndAccepted()) {
-            Editor e = new Editor(fn);
+            LessonEditorAppl e = new LessonEditorAppl(fn);
         } else {
             System.exit(1);
         }

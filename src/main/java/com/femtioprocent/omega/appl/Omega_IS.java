@@ -1,6 +1,5 @@
 package com.femtioprocent.omega.appl;
 
-import com.femtioprocent.omega.appl.lesson.Runtime;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
@@ -85,13 +84,10 @@ public class Omega_IS extends JDialog {
 
         switch (selection) {
             case 1:
-                com.femtioprocent.omega.appl.lesson.Editor.main(argv);
+                LessonEditorAppl.main(argv);
                 break;
             case 2:
-                Runtime.main(argv);
-                break;
-            case 3:
-                com.femtioprocent.omega.appl.animator.Editor.main(argv);
+                LessonRuntimeAppl.main(argv);
                 break;
             case 4:
                 Settings.main(argv);
@@ -129,7 +125,7 @@ public class Omega_IS extends JDialog {
         animEditorButton.setText("Anim Editor");
         panel1.add(animEditorButton, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         lessonRuntimeButton = new JButton();
-        lessonRuntimeButton.setText("Lesson Runtime");
+        lessonRuntimeButton.setText("Lesson LessonRuntimeAppl");
         panel1.add(lessonRuntimeButton, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer1 = new Spacer();
         contentPane.add(spacer1, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));

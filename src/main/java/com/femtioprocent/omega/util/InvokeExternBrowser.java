@@ -28,7 +28,7 @@ import java.lang.reflect.Method;
  * found, will not cause this to do anything other than returning an error when opening the
  * browser.
  * <p>
- * There are certain system requirements for this class, as it's running through Runtime.exec(),
+ * There are certain system requirements for this class, as it's running through LessonRuntimeAppl.exec(),
  * which is Java's way of making a native system call.  Currently, this requires that a Macintosh
  * have a Finder which supports the GURL event, which is true for Mac OS 8.0 and 8.1 systems that
  * have the Internet Scripting AppleScript dictionary installed in the Scripting Additions folder
@@ -224,18 +224,18 @@ public class InvokeExternBrowser {
     private static final String GURL_EVENT = "GURL";
 
     /**
-     * The first parameter that needs to be passed into Runtime.exec() to open the default web
+     * The first parameter that needs to be passed into LessonRuntimeAppl.exec() to open the default web
      * browser on Windows.
      */
     private static final String FIRST_WINDOWS_PARAMETER = "/c";
 
     /**
-     * The second parameter for Runtime.exec() on Windows.
+     * The second parameter for LessonRuntimeAppl.exec() on Windows.
      */
     private static final String SECOND_WINDOWS_PARAMETER = "start";
 
     /**
-     * The third parameter for Runtime.exec() on Windows.  This is a "title"
+     * The third parameter for LessonRuntimeAppl.exec() on Windows.  This is a "title"
      * parameter that the command line expects.  Setting this parameter allows
      * URLs containing spaces to work.
      */
@@ -270,7 +270,7 @@ public class InvokeExternBrowser {
                     jvm = MRJ_2_0;
                 } else if (version >= 2.1 && version < 3) {
                     // Assume that all 2.x versions of MRJ work the same.  MRJ 2.1 actually
-                    // works via Runtime.exec() and 2.2 supports that but has an openURL() method
+                    // works via LessonRuntimeAppl.exec() and 2.2 supports that but has an openURL() method
                     // as well that we currently ignore.
                     jvm = MRJ_2_1;
                 } else if (version == 3.0) {

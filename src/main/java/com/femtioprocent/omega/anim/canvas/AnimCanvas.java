@@ -785,7 +785,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
     }
 
     private void initBG() {
-        setBackground("default/omega_greeting.gif");
+        setBackground("default/omega_splash.gif");
         centerBackground();
         repaint();
     }

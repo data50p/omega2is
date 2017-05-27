@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_131" class="java.beans.XMLDecoder">
+<java version="1.8.0_121" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>Sign Word Movie Scale</string>
@@ -62,6 +62,10 @@
    <string>Omega - Assets Bundle Dialog</string>
   </void>
   <void method="put">
+   <string>About Anim AnimEditorAppl</string>
+   <string>About Anim AnimEditorAppl</string>
+  </void>
+  <void method="put">
    <string>Add Path Helper Info</string>
    <string>Add Path Helper Info</string>
   </void>
@@ -104,6 +108,10 @@
   <void method="put">
    <string>Description</string>
    <string>Description</string>
+  </void>
+  <void method="put">
+   <string>About Lesson AnimEditorAppl</string>
+   <string>About Lesson AnimEditorAppl</string>
   </void>
   <void method="put">
    <string>specified</string>
@@ -192,6 +200,10 @@
   <void method="put">
    <string>Default, as dep_set in word prop</string>
    <string>Default, as dep_set in word prop</string>
+  </void>
+  <void method="put">
+   <string>Are you sure to close Anim AnimEditorAppl?</string>
+   <string>Are you sure to close Anim AnimEditorAppl?</string>
   </void>
   <void method="put">
    <string>Sign Word Background</string>

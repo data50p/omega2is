@@ -1,9 +1,8 @@
-package com.femtioprocent.omega.appl.lesson;
+package com.femtioprocent.omega.appl;
 
 import com.femtioprocent.omega.LicenseShowManager;
 import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.OmegaContext;
-import com.femtioprocent.omega.appl.OmegaAppl;
 import com.femtioprocent.omega.lesson.appl.LessonRuntime;
 import com.femtioprocent.omega.swing.filechooser.ChooseLessonFile;
 import com.femtioprocent.omega.t9n.T;
@@ -14,7 +13,7 @@ import javax.swing.*;
 import java.io.File;
 import java.util.HashMap;
 
-public class Runtime extends OmegaAppl {
+public class LessonRuntimeAppl extends OmegaAppl {
 
     LessonRuntime le_rt;
     boolean ask;
@@ -23,11 +22,11 @@ public class Runtime extends OmegaAppl {
         return Files.toURL(file);
     }
 
-    public Runtime(String fn, boolean ask, boolean with_frame, char run_mode) {
+    public LessonRuntimeAppl(String fn, boolean ask, boolean with_frame, char run_mode) {
         super("Lesson runtime");
         this.ask = ask;
 
-        OmegaContext.lesson_log.getLogger().info("Runtime...");
+        OmegaContext.lesson_log.getLogger().info("LessonRuntimeAppl...");
 
         if (ask) {
             ChooseLessonFile choose_f = new ChooseLessonFile();
@@ -111,7 +110,7 @@ public class Runtime extends OmegaAppl {
         }
 
         if (LicenseShowManager.showAndAccepted()) {
-            Runtime rt = new Runtime(fn, ask, with_frame, ch);
+            LessonRuntimeAppl rt = new LessonRuntimeAppl(fn, ask, with_frame, ch);
         } else {
             System.exit(1);
         }
