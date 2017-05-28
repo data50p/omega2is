@@ -875,7 +875,12 @@ public class Lesson implements LessonCanvasListener {
 		lemain_canvas.setRedPush(ord);
 		lemain_canvas.tellLessonBase(litm.getLessonName(), ord);
 		String lesson_name = litm.getDefaultLessonFile();
-		//log 		    OmegaContext.sout_log.getLogger().info("ERR: " + "LF Found lesson " + lesson_name);
+		Log.getLogger().info("Found lesson: " + lesson_name);
+		if ( lesson_name == null ) {
+		    JOptionPane.showMessageDialog(ApplContext.top_frame,
+			    T.t("Can't find lesson file"));
+		    return;
+		}
 		loadTest(lesson_name);
 		last_ord = ord;
 		//		    }
