@@ -346,7 +346,10 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
         public void updCursor() {
             switch (m_tool) {
                 case M_TOOL_IMAGE:
-                    setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+                    if ( m_tool_sub == MT_EXTEND )
+                        setCursor(Cursor.getPredefinedCursor(Cursor.SW_RESIZE_CURSOR));
+                    else
+                        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
                     break;
                 case M_TOOL_MARKER:
                     setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
