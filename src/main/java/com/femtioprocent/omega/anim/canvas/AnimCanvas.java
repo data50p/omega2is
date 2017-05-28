@@ -133,7 +133,12 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
         }
 
         void setM_Tool(int mt) {
+            setM_Tool(mt, m_tool_sub);
+       }
+
+        void setM_Tool(int mt, int mts) {
             m_tool = mt;
+            m_tool_sub = mts;
             updCursor();
         }
 
@@ -162,7 +167,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
                             }
 
                             if (!e.isShiftDown() && was_shift) {
-                                m_tool_sub = MT_VOID;
+                                setM_Tool(m_tool, MT_VOID);
                                 was_shift = false;
                             } else {
 
@@ -173,12 +178,11 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
                                 repaint();
 
                                 if (e.isShiftDown()) {
-                                    setM_Tool(M_TOOL_PATH);
-                                    m_tool_sub = m.MT_EXTEND;
+                                    setM_Tool(M_TOOL_MARKER, m.MT_EXTEND);
                                     stack = new Stack();
                                     was_shift = true;
                                 } else {
-                                    m_tool_sub = MT_VOID;
+                                    setM_Tool(m_tool, m.MT_VOID);
                                     was_shift = false;
                                 }
                                 Probe prb = ap.findNearest(p_p);
@@ -651,8 +655,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
                             "Omega",
                             JOptionPane.INFORMATION_MESSAGE);
                 } else {
-                    m.setM_Tool(m.M_TOOL_IMAGE);
-                    m.m_tool_sub = m.MT_VOID;
+                    m.setM_Tool(m.M_TOOL_IMAGE, m.MT_VOID);
 
                     if (selected_prb != null) {
                         int nid = a_ctxt.mtl.getFreeTLIndex();
@@ -680,8 +683,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
                     }
                 }
             } else if (cmd.equals("path_delete_all")) {
-                m.setM_Tool(m.M_TOOL_IMAGE);
-                m.m_tool_sub = m.MT_VOID;
+                m.setM_Tool(m.M_TOOL_IMAGE, m.MT_VOID);
 
                 if (selected_prb != null) {
                     Path pa_src = selected_prb.seg.path;
@@ -692,8 +694,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
                 }
             } else if (cmd.equals("path_extend")) {
                 if (selected_prb != null) {
-                    m.setM_Tool(m.M_TOOL_PATH);
-                    m.m_tool_sub = m.MT_EXTEND;
+                    m.setM_Tool(m.M_TOOL_PATH, m.MT_EXTEND);
                     m.stack = new Stack();
                     ae.setDirty(true);
                 }
