@@ -207,8 +207,8 @@ public class BaseCanvas extends JPanel {
         int w, h;
         public Object o;
 
-        ImageAreaJB(String txt, int ord, int w, int h) {
-            super(txt);
+        ImageAreaJB(String txt, int ord, int w, int h, String dispName) {
+            super(dispName != null ? dispName : txt);
             this.w = w;
             this.h = h;
             this.ord = ord;
@@ -223,8 +223,12 @@ public class BaseCanvas extends JPanel {
             setFocusable(false);
         }
 
-        void setNew(String txt, String im_n, String im_enter_n, Object o) {
-            setText(SundryUtils.formatDisplayText(txt));
+        void setNew(String txt, String im_n, String im_enter_n, Object o, String dispName) {
+            if ( dispName != null ) {
+                setText(dispName);
+            } else {
+                setText(SundryUtils.formatDisplayText(txt));
+            }
             this.im_n = im_n;
             this.im_enter_n = im_enter_n;
             this.o = o;

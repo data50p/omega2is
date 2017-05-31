@@ -251,25 +251,29 @@ public class LessonMainCanvas extends BaseCanvas {
                     }
 
                 }
+                String dispName = litm.getLessonDisplayName("");
 //log		OmegaContext.sout_log.getLogger().info("ERR: " + "recreate le " + i + ' ' + litm);
                 ImageAreaJB l;
                 if (lesson[i] == null) {
                     lesson[i] = new ImageAreaJB("",
                             i,
                             bw,
-                            bh - 20);
+                            bh - 20,
+                            dispName);
                     add(lesson[i]);
                 }
                 if (litm.isDir()) {
                     lesson[i].setNew(/*T.t("Lesson") + ' ' + */litm.getLessonShortName(),
                             litm.getLessonImageFileName(),
                             litm.getLessonImageFileName("_enter"),
-                            litm);
+                            litm,
+                            dispName);
                 } else {
                     lesson[i].setNew(/*T.t("Lesson") + ' ' + */litm.getLessonShortName(),
                             litm.getLessonImageFileName(),
                             litm.getLessonImageFileName("_enter"),
-                            litm);
+                            litm,
+                            dispName);
                 }
                 lesson[i].setEnabled(!(modeIsTest && litm.isStory()));
             }

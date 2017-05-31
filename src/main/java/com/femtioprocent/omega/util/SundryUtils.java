@@ -4,10 +4,13 @@ import com.femtioprocent.omega.OmegaContext;
 
 import java.io.*;
 import java.nio.channels.FileChannel;
+import java.nio.charset.Charset;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.logging.Logger;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class SundryUtils {
     private static int count = 0;
@@ -824,6 +827,18 @@ public class SundryUtils {
         int c = ia[a];
         ia[a] = ia[b];
         ia[b] = c;
+    }
+
+    public static String getFileContent(String fn) {
+        File f = new File(OmegaContext.omegaAssets(fn));
+        if ( !f.exists() || !f.canRead() )
+            return null;
+        try {
+	    return new String(Files.readAllBytes(f.toPath()), Charset.forName("UTF-8"));
+	} catch (IOException ex) {
+
+	}
+	return null;
     }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - -

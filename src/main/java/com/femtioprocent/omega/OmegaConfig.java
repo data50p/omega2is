@@ -20,7 +20,7 @@ public class OmegaConfig {
 
     static public boolean LIU_Mode = false;
 
-    public static boolean fullScreen = false;
+    public static boolean fullScreen = !false;
     public static boolean smaller = OmegaContext.isDeveloper();
 
     public static final int VAR_NUM = 5;

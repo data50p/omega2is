@@ -1,5 +1,6 @@
 package com.femtioprocent.omega.lesson.repository;
 
+import com.femtioprocent.omega.OmegaContext;
 import com.femtioprocent.omega.util.Log;
 import com.femtioprocent.omega.util.SundryUtils;
 
@@ -51,6 +52,13 @@ public class LessonItem {
 
     public String getLessonParentImage(String more) {
         return getLessonFileNameBase() + '/' + getLessonName() + "/../" + "image" + more + ".png";
+    }
+
+    public String getLessonDisplayName(String more) {
+        String fn = getLessonFileNameBase() + '/' + getLessonName() +  "/display" + more + "";
+        if ( !OmegaContext.omegaAssetsExist(fn) )
+            return null;
+        return SundryUtils.getFileContent(fn);
     }
 
     public String getLessonDirName() {
