@@ -89,6 +89,9 @@ public class Omega_IS extends JDialog {
             case 2:
                 LessonRuntimeAppl.main(argv);
                 break;
+            case 3:
+                AnimEditorAppl.main(argv);
+                break;
             case 4:
                 Settings.main(argv);
                 break;

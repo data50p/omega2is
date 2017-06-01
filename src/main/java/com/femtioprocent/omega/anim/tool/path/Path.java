@@ -638,9 +638,13 @@ public class Path {
         }
         double[] lenArr = getLenA();
         Point2D[] point2d = getPoint2D();
+        Element help = new Element("help");
+        help.addAttr("len", format(lenArr));
+        help.addAttr("seg", format(point2d));
+        el.add(help);
         Element info = new Element("info");
-        info.addAttr("len", format(lenArr));
-        info.addAttr("seg", format(point2d));
+        info.addAttr("flatness", "" + OmegaConfig.FLATNESS);
+        info.addAttr("size", "" + point2d.length);
         el.add(info);
 
         for (int i = 0; i < marker.size(); i++) {
