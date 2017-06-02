@@ -5,8 +5,13 @@ import com.femtioprocent.omega.adm.assets.TargetCombinations;
 import com.femtioprocent.omega.lesson.helper.PathHelper;
 import com.femtioprocent.omega.util.Log;
 import com.femtioprocent.omega.util.SundryUtils;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.*;
 
@@ -38,6 +43,28 @@ public class ConvertAnimToVersion_0_1 {
 	flags = SundryUtils.flagAsMap(args);
 	argl = SundryUtils.argAsList(args);
 	String baseDir = ".";
+
+	if ( flags.get("X") != null ) {
+	    XSSFWorkbook wb = new XSSFWorkbook();
+	    System.err.println("WB: " + wb);
+	    XSSFSheet sheet = wb.createSheet("my sheet");
+	    System.err.println("sheet: " + sheet);
+	    XSSFRow row = sheet.createRow(0);
+	    System.err.println("row: " + row);
+	    XSSFCell cell = row.createCell(0);
+	    System.err.println("cell: " + cell);
+	    cell.setCellValue("hello world");
+	    sheet.autoSizeColumn(0);
+	    try {
+		FileOutputStream out = new FileOutputStream("ZZ-example.xls");
+		wb.write(out);
+		wb.close();
+	    } catch (IOException ex) {
+		System.err.println("" + ex);
+	    }
+	    System.exit(0);
+	}
+
 	String dir = flags.get("d");
 	if ( dir != null )
 	    baseDir = dir;
