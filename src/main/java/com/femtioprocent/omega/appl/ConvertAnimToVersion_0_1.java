@@ -5,11 +5,12 @@ import com.femtioprocent.omega.adm.assets.TargetCombinations;
 import com.femtioprocent.omega.lesson.helper.PathHelper;
 import com.femtioprocent.omega.util.Log;
 import com.femtioprocent.omega.util.SundryUtils;
+/**
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
+**/
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -44,6 +45,7 @@ public class ConvertAnimToVersion_0_1 {
 	argl = SundryUtils.argAsList(args);
 	String baseDir = ".";
 
+/**
 	if ( flags.get("X") != null ) {
 	    XSSFWorkbook wb = new XSSFWorkbook();
 	    System.err.println("WB: " + wb);
@@ -64,7 +66,7 @@ public class ConvertAnimToVersion_0_1 {
 	    }
 	    System.exit(0);
 	}
-
+**/
 	String dir = flags.get("d");
 	if ( dir != null )
 	    baseDir = dir;
