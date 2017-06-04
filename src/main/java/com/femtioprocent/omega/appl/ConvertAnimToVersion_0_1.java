@@ -56,7 +56,7 @@ public class ConvertAnimToVersion_0_1 {
 	    cell.setCellValue("hello world");
 	    sheet.autoSizeColumn(0);
 	    try {
-		FileOutputStream out = new FileOutputStream("ZZ-example.xls");
+		FileOutputStream out = new FileOutputStream("ZZ-example.xlsx");
 		wb.write(out);
 		wb.close();
 	    } catch (IOException ex) {
