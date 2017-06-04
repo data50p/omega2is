@@ -251,7 +251,7 @@ public class LessonMainCanvas extends BaseCanvas {
                     }
 
                 }
-                String dispName = litm.getLessonDisplayName("", OmegaContext.getLessonLang());
+                String dispName = litm.getLessonDisplayName("");
 //log		OmegaContext.sout_log.getLogger().info("ERR: " + "recreate le " + i + ' ' + litm);
                 ImageAreaJB l;
                 if (lesson[i] == null) {
