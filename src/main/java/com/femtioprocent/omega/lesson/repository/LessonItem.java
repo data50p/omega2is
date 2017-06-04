@@ -54,10 +54,14 @@ public class LessonItem {
         return getLessonFileNameBase() + '/' + getLessonName() + "/../" + "image" + more + ".png";
     }
 
-    public String getLessonDisplayName(String more, String lessonLang) {
-        String fn = getLessonFileNameBase() + '/' + getLessonName() +  "/display" + more + (lessonLang == null ? "" : "-" + lessonLang);
+    public String getLessonDisplayName(String lessonLang) {
+        return getLessonFileContent("display", lessonLang);
+    }
+
+    public String getLessonFileContent(String fName, String lessonLang) {
+        String fn = getLessonFileNameBase() + '/' + getLessonName() +  "/" + fName + (lessonLang == null ? "" : "-" + lessonLang);
         if ( !OmegaContext.omegaAssetsExist(fn) )
-            return lessonLang == null ? null : getLessonDisplayName(more, null);
+            return lessonLang == null ? null : getLessonFileContent(fName, null);
         return SundryUtils.getFileContent(fn);
     }
 
