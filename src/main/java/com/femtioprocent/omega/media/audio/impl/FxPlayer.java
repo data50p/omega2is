@@ -1,4 +1,4 @@
-package com.femtioprocent.omega.media.audio;
+package com.femtioprocent.omega.media.audio.impl;
 
 //åäö
 
@@ -21,7 +21,7 @@ public class FxPlayer {
     final String realy_name;
     final String fname;
 
-    FxPlayer(String fn) {
+    public FxPlayer(String fn) {
         realy_name = fn;
 
         if (fn.endsWith(".wav")) {
@@ -41,7 +41,7 @@ public class FxPlayer {
         }
     }
 
-    void play(boolean wait) {
+    public void play(boolean wait) {
         playFX(fname);
         if (wait) {
             synchronized (lock) {
@@ -102,5 +102,9 @@ public class FxPlayer {
                 Platform.setImplicitExit(false);
             });
         }
+    }
+
+    public String toString() {
+        return "" + realy_name;
     }
 }

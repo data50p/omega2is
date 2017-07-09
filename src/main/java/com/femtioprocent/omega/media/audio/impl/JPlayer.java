@@ -1,4 +1,4 @@
-package com.femtioprocent.omega.media.audio;
+package com.femtioprocent.omega.media.audio.impl;
 
 //åäö
 
@@ -67,7 +67,7 @@ public class JPlayer implements LineListener {
         Log.getLogger().info("STATIC: " + "" + Settings.getSettings().getSettingsHashMap());
     }
 
-    JPlayer(String fn) {
+    public JPlayer(String fn) {
         OmegaContext.sout_log.getLogger().info("INIT: " + "JPlayer: fn = " + fn);
 
         this.fn = fn;
@@ -97,7 +97,7 @@ public class JPlayer implements LineListener {
 
     Object w_w = new Object();
 
-    void waitAudio() {
+    public void waitAudio() {
         synchronized (lock) {
             try {
                 while (!done)
@@ -109,7 +109,7 @@ public class JPlayer implements LineListener {
 
     static final byte[] silent_buf = new byte[4096 * 4];
 
-    void play() {
+    public void play() {
         try {
             Thread th = new Thread(new Runnable() {
                 public void run() {

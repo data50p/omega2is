@@ -27,6 +27,7 @@ import com.femtioprocent.omega.lesson.repository.Save;
 import com.femtioprocent.omega.lesson.settings.OmegaSettingsDialog;
 import com.femtioprocent.omega.lesson.settings.PupilSettingsDialog;
 import com.femtioprocent.omega.media.audio.APlayer;
+import com.femtioprocent.omega.media.audio.TTS;
 import com.femtioprocent.omega.media.video.VideoUtil;
 import com.femtioprocent.omega.message.Listener;
 import com.femtioprocent.omega.swing.filechooser.ChooseColorFile;
@@ -106,6 +107,7 @@ public class Lesson implements LessonCanvasListener {
     LessonItem litm = null;
     private Pupil current_pupil;
     long session_length_start = SundryUtils.ct();
+    public String lessonLang = null;
 
     public class PlayDataList {
     	int ord;
@@ -1820,6 +1822,12 @@ public class Lesson implements LessonCanvasListener {
 
     void sayAll(Target tg) {
 	try {
+	    if ( OmegaConfig.tts ) {
+		String lang = OmegaContext.getLessonLang();
+		if ( TTS.say(lang, tg.getAllText(), true) )
+		    return;
+	    }
+
 	    say_all = true;
 	    String[] sa = tg.getAllSounds();
 
@@ -1887,7 +1895,6 @@ public class Lesson implements LessonCanvasListener {
 	    if (ap_s != null) {
 		ap_s.close();
 	    }
-
 	    ap_s = APlayer.createAPlayer(snd, null, "LE_");
 	    ap_s.play();
 	} catch (Exception ex) {
@@ -2699,6 +2706,13 @@ public class Lesson implements LessonCanvasListener {
 				    PLAYSND:
 				    for (; ; ) {
 					Item sitm = tg.getItemAt(i_x, i_y);
+
+					if ( OmegaConfig.tts ) {
+					    String lang = OmegaContext.getLessonLang();
+					    if ( TTS.say(lang, sitm.getDefaultFilledText(), true) )
+					        break PLAYSND;
+					}
+
 					String sfn = sitm.getSoundD();
 					if (sfn == null) {
 					    break PLAYSND;
@@ -3273,7 +3287,8 @@ public class Lesson implements LessonCanvasListener {
 				    null);
 			}
 
-			saveRecastAction(le_canvas.getLessonName(), action_s, actA, actTextA, sound_list, pathA, true, tg, is_last);
+			String allText = tg.getAllText();
+			saveRecastAction(le_canvas.getLessonName(), action_s, actA, actTextA, sound_list, pathA, true, tg, is_last, allText);
 			SentenceList sent_li = (SentenceList) story_hm.get("sentence_list");
 			ArrayList ss_li = sent_li.sentence_list;
 			//			OmegaContext.sout_log.getLogger().info("ERR: " + "ALL TEXT1 " + all_text);
@@ -3499,7 +3514,6 @@ public class Lesson implements LessonCanvasListener {
     }
 
     public static class PlayData implements Serializable {
-
 	String lesson_name;
 	String action_s;
 	String[] actA;
@@ -3507,6 +3521,7 @@ public class Lesson implements LessonCanvasListener {
 	String[] pathA;
 	String sound_list;
 	boolean is_last;
+	private final String allText;
 
 	PlayData(String lesson_name,
 		 String action_s,
@@ -3514,7 +3529,8 @@ public class Lesson implements LessonCanvasListener {
 		 String[] actTextA,
 		 String sound_list,
 		 String[] pathA,
-		 boolean is_last) {
+		 boolean is_last,
+		 String allText) {
 	    this.lesson_name = lesson_name;
 	    this.action_s = action_s;
 	    this.actA = actA;
@@ -3522,6 +3538,11 @@ public class Lesson implements LessonCanvasListener {
 	    this.pathA = pathA;
 	    this.sound_list = sound_list;
 	    this.is_last = is_last;
+	    this.allText = allText;
+	}
+
+	public String theWord() {
+	    return allText;
 	}
 
 	public String toString() {
@@ -3530,7 +3551,8 @@ public class Lesson implements LessonCanvasListener {
 		    + SundryUtils.a2s(actA) + ','
 		    + SundryUtils.a2s(actTextA) + ','
 		    + sound_list + ','
-		    + SundryUtils.a2s(pathA);
+		    + SundryUtils.a2s(pathA)+ ','
+		    + allText;
 	}
 
     }
@@ -3566,7 +3588,8 @@ public class Lesson implements LessonCanvasListener {
 		    pd.pathA,
 		    false,
 		    null,
-		    pd.is_last);
+		    pd.is_last,
+		    pd.allText);
 	}
     }
 
@@ -3688,6 +3711,13 @@ public class Lesson implements LessonCanvasListener {
 		    return;
 		}
 		PlayData pd = (PlayData) it.next();
+
+		if ( OmegaConfig.tts ) {
+		    String lang = OmegaContext.getLessonLang();
+		    if ( TTS.say(lang, pd.theWord(), true) )
+			continue;
+		}
+
 		OmegaContext.story_log.getLogger().info("PD is " + pd);
 		String[] soundA = SundryUtils.split(pd.sound_list, ",");
 		for (int i = 0; i < soundA.length; i++) {
@@ -3718,9 +3748,10 @@ public class Lesson implements LessonCanvasListener {
 				  String[] pathA,
 				  boolean add_in_playlist,
 				  Target tg,
-				  boolean is_last) {
+				  boolean is_last,
+				  String allText) {
 	if (add_in_playlist) {
-	    PlayData play_data = new PlayData(lesson_name, action_s, actA, actTextA, sound_list, pathA, is_last);
+	    PlayData play_data = new PlayData(lesson_name, action_s, actA, actTextA, sound_list, pathA, is_last, allText);
 	    play_data_list.add(play_data);
 	    if (is_last) {
 		play_data_list_is_last.add(play_data);

@@ -130,9 +130,9 @@ public class Files {
             URL url2 = file.toURL();
             String url0 = "file:" + slashify(file.getAbsolutePath(), file.isDirectory());
             Log.getLogger().warning("URL matter:      " + file);
-            Log.getLogger().warning("    matter: " + url);
-            Log.getLogger().warning("    matter: " + url2);
-            Log.getLogger().warning("    matter: " + url0);
+            Log.getLogger().warning("    matter: new " + url);
+            Log.getLogger().warning("    matter: old " + url2);
+            Log.getLogger().warning("    matter: alt " + url0);
             url_s = url0;//url2.toString();
         } catch (Exception ex) {
             OmegaContext.exc_log.getLogger().throwing(Files.class.getName(), "toURL", ex);

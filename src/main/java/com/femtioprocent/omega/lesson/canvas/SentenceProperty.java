@@ -44,7 +44,7 @@ public class SentenceProperty extends Property_B {
     JTable table;
     JButton set_act_b;
     JButton set_sgn_b;
-    SentencePropPanel sn_pan;
+    //SentencePropPanel sn_pan;
 
     JRadioButton rb_def, rb_act;
     JRadioButton rb_defSign, rb_actSign;

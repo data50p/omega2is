@@ -30,7 +30,7 @@ public class Splash extends JWindow {
         g.drawString(OmegaVersion.getOmegaVersion(), 5, yoff + 20 * line++);
         g.drawString(OmegaVersion.getCWD(), 5, yoff + 20 * line++);
         g.drawString(OmegaVersion.getJavaVersion(), 5, yoff + 20 * line++);
-        g.drawString(OmegaVersion.getJavaVendor(), 5, yoff + 20 * line++);
+        g.drawString(OmegaVersion.getJavaVendor() + ' ' + OmegaContext.isMacOS(), 5, yoff + 20 * line++);
         g.drawString(OmegaVersion.getJavaHome(), 5, yoff + 20 * line++);
     }
 }

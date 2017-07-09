@@ -238,5 +238,20 @@ public class OmegaContext {
     static public Subsystem getSubsystem(String s) {
         return (Subsystem) subsystems.get(s);
     }
+
+    public static boolean isMacOS() {
+        String s = System.getProperty("os.name").toLowerCase();
+        return  s.indexOf("mac") >= 0;
+    }
+
+    public static boolean isWINDOS() {
+        String s = System.getProperty("os.name").toLowerCase();
+        return  s.indexOf("win") >= 0;
+    }
+
+    public static boolean isLinux() {
+        String s = System.getProperty("os.name").toLowerCase();
+        return  s.indexOf("nux") >= 0;
+    }
 }
 

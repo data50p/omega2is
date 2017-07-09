@@ -1,6 +1,8 @@
 package com.femtioprocent.omega.media.audio;
 
 import com.femtioprocent.omega.OmegaContext;
+import com.femtioprocent.omega.media.audio.impl.FxPlayer;
+import com.femtioprocent.omega.media.audio.impl.JPlayer;
 import com.femtioprocent.omega.util.ListFilesURL;
 import com.femtioprocent.omega.util.Log;
 import com.femtioprocent.omega.util.SundryUtils;
@@ -152,10 +154,10 @@ public class APlayer {
                 ffname = maybeeTheMp3(ffname);
                 if (ffname.endsWith(".mp3") || alwaysFxPlayer) {
                     apl.fxplayer = new FxPlayer(ffname);
-                    OmegaContext.sout_log.getLogger().info("ERR: " + "FxPlayer created: " + nname + ' ' + apl.fxplayer.realy_name);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "FxPlayer created: " + nname + ' ' + apl.fxplayer);
                 } else {
                     apl.jplayer = new JPlayer(ffname);
-                    OmegaContext.sout_log.getLogger().info("ERR: " + "JPlayer created: " + nname + ' ' + apl.jplayer.realy_name);
+                    OmegaContext.sout_log.getLogger().info("ERR: " + "JPlayer created: " + nname + ' ' + apl.jplayer);
                 }
             } catch (Exception ex) {
                 OmegaContext.sout_log.getLogger().info("ERR: " + "" + ex);
