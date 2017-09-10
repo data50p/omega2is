@@ -1124,6 +1124,10 @@ public class Target {
                 hm.put(titm.getTid() + ':' + "2", s);
                 s = item.getVar(3);
                 hm.put(titm.getTid() + ':' + "3", s);
+                s = item.getVar(4);
+                hm.put(titm.getTid() + ':' + "4", s);
+                s = item.getVar(5);
+                hm.put(titm.getTid() + ':' + "5", s);
             }
         }
     }
