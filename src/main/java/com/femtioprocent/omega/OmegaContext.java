@@ -206,7 +206,7 @@ public class OmegaContext {
 
     public static boolean isDeveloper() {
         File f = new File("../.git");
-        return f.exists();
+        return false && f.exists();
     }
 //    public static String getEditorLessonLang() {
 //	return lesson_lang_editor;
