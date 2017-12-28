@@ -42,7 +42,7 @@ public class LessonEditor extends ApplLesson {
 
         le = new Lesson('e');
         le.mact_New();
-        le.runLessons(this, mpan, fn, true, false);
+        le.runLessons(this, mpan, fn, true, OmegaContext.small != null);
         Log.getLogger().info("LessonEditor done " + globalExit2);
     }
 

@@ -2,8 +2,10 @@ package com.femtioprocent.omega.lesson.canvas;
 
 import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.OmegaContext;
+import com.femtioprocent.omega.adm.assets.TargetCombinations;
 import com.femtioprocent.omega.anim.appl.AnimEditor;
 import com.femtioprocent.omega.anim.appl.EditStateListener;
+import com.femtioprocent.omega.lesson.Lesson;
 import com.femtioprocent.omega.lesson.appl.LessonEditor;
 import com.femtioprocent.omega.lesson.machine.Item;
 import com.femtioprocent.omega.lesson.machine.Target;
@@ -12,6 +14,8 @@ import com.femtioprocent.omega.swing.filechooser.ChooseLessonFile;
 import com.femtioprocent.omega.swing.filechooser.ChooseOmegaAssetsDir;
 import com.femtioprocent.omega.t9n.T;
 import com.femtioprocent.omega.util.Files;
+import com.femtioprocent.omega.util.Log;
+import com.femtioprocent.omega.util.ToString;
 import com.femtioprocent.omega.value.Value;
 import com.femtioprocent.omega.value.Values;
 import com.femtioprocent.omega.value.ValuesListener;
@@ -27,8 +31,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashMap;
 
 import static com.femtioprocent.omega.OmegaContext.OMEGA_ASSETS_SUFFIX;
+import static java.awt.event.ActionEvent.CTRL_MASK;
+import static java.awt.event.ActionEvent.SHIFT_MASK;
 
 public class LessonEditorPanel extends JPanel {
     GBC_Factory gbcf = new GBC_Factory();
@@ -62,6 +70,7 @@ public class LessonEditorPanel extends JPanel {
     JCheckBox first_LLN;
     JButton getFiles_LLN;
     JButton getOmegaAssetsDependenciec;
+    JButton jbPlayAll;
 
     JTextField editorLessonLang;
 
@@ -141,18 +150,54 @@ public class LessonEditorPanel extends JPanel {
             } else if (v.id.equals("dummysign")) {
                 itm.setDummySign_Krull(v.getStr(), true);
             } else if (v.id.equals("fname")) {
-                OmegaContext.sout_log.getLogger().info("ERR: " + "FNAME " + itm.it_ent.type);
+                Log.getLogger().info("ERR: " + "FNAME " + itm.it_ent.type);
                 if (true || itm.it_ent.type.equals("action")) { // isAction ) {
-                    ((Item) (itm)).setAction_Fname(v.getStr(), "omega_anim");
+                    itm.setAction_Fname(v.getStr(), "omega_anim");
                 }
             } else if (v.id.equals("ftype")) {
                 if (itm.isAction) {
-                    ((Item) (itm)).action_type = v.getStr();
+                    itm.action_type = v.getStr();
                 }
             }
             le_canvas.repaint(itm);
         }
     };
+
+    class AutoPlayNext {
+        int playNext = -1;
+        String[] allSentences = new String[0];
+
+        void reset() {
+            playNext = -1;
+            allSentences = new String[0];
+            jbPlayAll.setText(T.t("Play All"));
+        }
+        boolean firstTime() {
+            return playNext == -1;
+        }
+
+        void start(String[] allSentences) {
+            playNext = 0;
+            this.allSentences = allSentences;
+            jbPlayAll.setText(T.t("Play Next"));
+        }
+
+        public boolean done() {
+            return allSentences.length <= playNext;
+        }
+
+        public String nextSentence() {
+            return allSentences[playNext++];
+        }
+
+        public String prevSentence() {
+            if ( playNext > 0 )
+                return allSentences[--playNext];
+            return allSentences[playNext];
+        }
+    }
+    AutoPlayNext autoPlayNext = new AutoPlayNext();
+
 
     class myActionListener implements ActionListener {
         public void actionPerformed(ActionEvent ev) {
@@ -171,10 +216,54 @@ public class LessonEditorPanel extends JPanel {
                 popupItemProp();
             }
             if (s.equals("redraw")) {
+                autoPlayNext.reset();
                 le_canvas.reCreateBoxesKeep();
             }
             if (s.equals("play")) {
                 le_canvas.l_ctxt.getLesson().sendMsg("play&return", null);
+            }
+            if (s.equals("playAll")) {
+                Target target = le_canvas.getTarget();
+                try {
+                    if (autoPlayNext.firstTime()) {
+                        Target tg2 = new Target();
+                        HashMap story_hm = Lesson.story_hm;
+                        tg2.loadFromEl(le_canvas.l_ctxt.getLesson().getElement(), "", story_hm, false, false); // FIX nomix?
+                        String[] sa = tg2.getAllTargetCombinations(" ");
+                        autoPlayNext.start(sa);
+                    } else {
+                        if ( autoPlayNext.done() ) {
+                            autoPlayNext.reset();
+                            return;
+                        }
+                        String sentence = ((ev.getModifiers() & CTRL_MASK) == 0) ? autoPlayNext.nextSentence() : autoPlayNext.prevSentence();
+                        Target tg2 = new Target();
+                        HashMap story_hm = Lesson.story_hm;
+                        tg2.loadFromEl(le_canvas.l_ctxt.getLesson().getElement(), "", story_hm, false, false); // FIX nomix?
+                        int[][] allTargetCombinationsIndexes = tg2.getAllTargetCombinationsIndexes(sentence);
+                        int ixTg = 0;
+                        for (int[] ixArr : allTargetCombinationsIndexes) {
+                            System.out.println("Sentence: " + sentence + ' ' + Arrays.toString(ixArr));
+                            le_canvas.l_ctxt.getLesson().l_ctxt.getTarget().pickItemAt(ixArr[1], ixArr[2], ixTg);
+                            ixTg++;
+                        }
+                        le_canvas.reCreateBoxesKeep();
+                        Thread th = new Thread(() -> {
+                            try {
+                                Thread.sleep(1700);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            if ( (ev.getModifiers() & SHIFT_MASK) == 0 ) {
+                                le_canvas.l_ctxt.getLesson().sendMsg("playAll", null);
+                            } else {
+                            }
+                        });
+                        th.start();
+                    }
+                } catch(Exception ex){
+                    ex.printStackTrace();
+                }
             }
             if (s.equals("playSign")) {
                 playSign();
@@ -184,7 +273,7 @@ public class LessonEditorPanel extends JPanel {
             }
             if (s.equals("editanim")) {
                 String fn = le_canvas.l_ctxt.getTarget().getActionFileName(0); // main default, first
-                OmegaContext.sout_log.getLogger().info("ERR: " + "MANY? " + fn);
+                Log.getLogger().info("ERR: " + "MANY? " + fn);
                 if (fn == null || fn.length() == 0) {
                     JOptionPane.showMessageDialog(LessonEditor.TOP_JFRAME,
                             //le_canvas.l_ctxt.top_frame,
@@ -233,7 +322,7 @@ public class LessonEditorPanel extends JPanel {
                         lesson_link_next.setEnabled(true);
                         //			LessonEditor.setDirty();
                     } catch (Exception ex) {
-                        OmegaContext.sout_log.getLogger().info("ERR: " + "can't " + ex);
+                        Log.getLogger().info("ERR: " + "can't " + ex);
                     }
                 }
             }
@@ -280,7 +369,6 @@ public class LessonEditorPanel extends JPanel {
         }
     }
 
-    ;
     myActionListener myactl = new myActionListener();
 
     class myChangeListener implements ChangeListener {
@@ -293,7 +381,6 @@ public class LessonEditorPanel extends JPanel {
         }
     }
 
-    ;
     myChangeListener mychtl = new myChangeListener();
 
     public LessonEditorPanel(LessonCanvas le_canvas) {
@@ -386,6 +473,11 @@ public class LessonEditorPanel extends JPanel {
         redraw.setActionCommand("play");
         redraw.addActionListener(myactl);
 
+        add(redraw = new JButton(T.t("Play All")), gbcf.createL(X++, Y, 1));
+        redraw.setActionCommand("playAll");
+        redraw.addActionListener(myactl);
+        jbPlayAll = redraw;
+
         add(redraw = new JButton(T.t("Listen")), gbcf.createL(X++, Y, 1));
         redraw.setActionCommand("listen");
         redraw.addActionListener(myactl);
@@ -402,6 +494,8 @@ public class LessonEditorPanel extends JPanel {
     }
 
     void destroyAllPopups() {
+        autoPlayNext.reset();
+
         if (snt_prop != null) {
             snt_prop.destroy();
             snt_prop.removeAll();

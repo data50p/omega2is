@@ -50,6 +50,7 @@ public class OmegaContext {
 
     public static boolean DEMO = false;
     public static String omega_lang = null;
+    public static String small = null;
 
     /**
      * Get the full path for current omega assets

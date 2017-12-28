@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_144" class="java.beans.XMLDecoder">
+<java version="1.8.0_121" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>Sign Word Movie Scale</string>
@@ -18,6 +18,10 @@
    <string>Sign Sentence Movie Scale</string>
   </void>
   <void method="put">
+   <string>Play All</string>
+   <string>Play All</string>
+  </void>
+  <void method="put">
    <string>Can&apos;t find lesson file</string>
    <string>Can&apos;t find lesson file</string>
   </void>
@@ -156,6 +160,10 @@
   <void method="put">
    <string>(( Scan and Add to Bundle ))</string>
    <string>(( Scan and Add to Bundle ))</string>
+  </void>
+  <void method="put">
+   <string>Play Next</string>
+   <string>Play Next</string>
   </void>
   <void method="put">
    <string>Set sign file</string>

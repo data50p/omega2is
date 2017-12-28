@@ -26,6 +26,7 @@ public class LessonEditorAppl extends OmegaAppl {
             System.err.println("-omega_assets=<assets name>");
             System.err.println("-omega_lang=<lang>");
             System.err.println("-T=<step>");
+            System.err.println("-small");
             System.err.println("-");
             System.err.println("-");
             System.exit(1);
@@ -35,6 +36,7 @@ public class LessonEditorAppl extends OmegaAppl {
 
         OmegaContext.omega_lang = (String) flag.get("omega_lang");
         OmegaContext.sout_log.getLogger().info("ERR: " + "param omega_lang is " + OmegaContext.omega_lang);
+        OmegaContext.small = (String) flag.get("small");
 
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.MetalLookAndFeel");

@@ -2197,14 +2197,18 @@ public class Lesson implements LessonCanvasListener {
 		}
 
 	    } else if ("play".equals(msg)) {
-		exec_play(tg);
+		exec_play(tg, true);
 		//		OmegaContext.sout_log.getLogger().info("ERR: " + "exec_play done");
 		if (register != null) {
 		    register.setStarted();
 		}
 
+	    } else if ("playAll".equals(msg)) {
+		exec_play(tg, false);
+		card_show("words");
+
 	    } else if ("play&return".equals(msg)) {
-		exec_play(tg);
+		exec_play(tg, true);
 		card_show("words");
 
 	    } else if ("read_story".equals(msg)) {
@@ -3158,7 +3162,7 @@ public class Lesson implements LessonCanvasListener {
 	}
     }
 
-    private void exec_play(Target tg) {
+    private void exec_play(Target tg, boolean waiting) {
 	le_canvas.hideMsg();
 	//		le_canvas.init();
 
@@ -3325,25 +3329,27 @@ public class Lesson implements LessonCanvasListener {
 			}
 			MyRA myra = new MyRA();
 
-			OmegaContext.sout_log.getLogger().info("ERR: " + "waitReply? " + is_last + ' ' + current_test_mode);
-			if (is_last && current_test_mode == TM_CREATE) {
-			    String end_code_s = le_canvas.waitReplyAction((AnimAction) action,
-				    all_text,
-				    getCurrentPupil().getBool("showSentence", true),
-				    myra);
-			    OmegaContext.sout_log.getLogger().info("ERR: " + "Lesson: end_code_s " + end_code_s);
-			    if (end_code_s.equals("left")) {
-				action.perform(window,
-					action_s,
-					actA,
-					pathA,
-					0,
-					null);
-				end_code_s = le_canvas.waitReplyAction((AnimAction) action,
+			if ( waiting ) {
+			    OmegaContext.sout_log.getLogger().info("ERR: " + "waitReply? " + is_last + ' ' + current_test_mode);
+			    if (is_last && current_test_mode == TM_CREATE) {
+				String end_code_s = le_canvas.waitReplyAction((AnimAction) action,
 					all_text,
 					getCurrentPupil().getBool("showSentence", true),
 					myra);
-				OmegaContext.sout_log.getLogger().info("ERR: " + "Lesson: end_code_s2 " + end_code_s);
+				OmegaContext.sout_log.getLogger().info("ERR: " + "Lesson: end_code_s " + end_code_s);
+				if (end_code_s.equals("left")) {
+				    action.perform(window,
+					    action_s,
+					    actA,
+					    pathA,
+					    0,
+					    null);
+				    end_code_s = le_canvas.waitReplyAction((AnimAction) action,
+					    all_text,
+					    getCurrentPupil().getBool("showSentence", true),
+					    myra);
+				    OmegaContext.sout_log.getLogger().info("ERR: " + "Lesson: end_code_s2 " + end_code_s);
+				}
 			    }
 			}
 			if (!edit) {

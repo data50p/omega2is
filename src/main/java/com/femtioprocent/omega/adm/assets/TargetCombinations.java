@@ -1,6 +1,7 @@
 package com.femtioprocent.omega.adm.assets;
 
 import com.femtioprocent.omega.OmegaContext;
+import com.femtioprocent.omega.lesson.machine.Target;
 import com.femtioprocent.omega.util.SundryUtils;
 
 import java.util.ArrayList;
@@ -86,6 +87,7 @@ public class TargetCombinations {
 
     public Set<TCItem> src_set = new HashSet<>();
     public Set<TCItem> dep_set = new HashSet<>();
+    public Set<Target> tg_set = new HashSet<>();
 
     private void merge(TargetCombinations tc) {
         dep_set.addAll(tc.dep_set);

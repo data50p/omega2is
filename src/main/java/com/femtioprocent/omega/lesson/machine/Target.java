@@ -1503,6 +1503,9 @@ public class Target {
     }
 
     private void update(TargetCombinations tc) {
+        Target nTarget = new Target();
+        tc.tg_set.add(nTarget);     // not populated yet
+
         List<String> sound_list = getAll_Sound_Items();
         for (String s : sound_list) {
             String fn = "media" + File.separator + s;
