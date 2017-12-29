@@ -42,6 +42,7 @@ public class xImage {
     class Entry {
         long time_stamp;
         Image im;
+        public int cnt;
 
         Entry(Image im) {
             this.im = im;
@@ -53,7 +54,7 @@ public class xImage {
             return im;
         }
 
-        int to = 60 * 2;
+        int to = 60;
 
         boolean isOld() {
             return SundryUtils.ct() > time_stamp + 1000 * to;
@@ -108,12 +109,16 @@ public class xImage {
             it = li.iterator();
             while (it.hasNext()) {
                 String k = (String) it.next();
+                Entry ent = (Entry) cache_imf.get(k);
+                if ( ent != null ) {
+                    ent.im.flush();
+                }
                 cache_imf.remove(k);
-//		OmegaContext.sout_log.getLogger().info("ERR: " + "%%%%%%%% remove from cache " + k);
+		OmegaContext.sout_log.getLogger().info("ERR: " + "%%%%%%%% remove from cache " + k + ", cnt:" + ent.cnt);
             }
         }
 
-        checkNow = SundryUtils.ct() + 10 * 1000;
+        checkNow = SundryUtils.ct() + 20 * 1000;
     }
 
     Image getEntry(String key) {
@@ -123,6 +128,9 @@ public class xImage {
 
         removeOldEntry();
 
+        e.cnt++;
+
+        //OmegaContext.sout_log.getLogger().info("IMAGE: " + "=== loaded from cache " + key + ", cnt:" + e.cnt);
         return e.getIm();
     }
 
@@ -306,8 +314,9 @@ public class xImage {
         Image im = null;
         synchronized (cache_imf) {
             im = getEntry(key);
-            if (im != null)
+            if (im != null) {
                 return im;
+            }
             if (attr != null)
                 im = LoadImage.loadAndWaitOrNull(comp, key);
             else
@@ -326,8 +335,9 @@ public class xImage {
         Image im = null;
         synchronized (cache_imf) {
             im = getEntry(key);
-            if (im != null)
+            if (im != null) {
                 return im;
+            }
 //	    OmegaContext.sout_log.getLogger().info("ERR: " + "¤¤¤¤¤ loading " + key);
             im = LoadImage.loadAndWait(comp, key);
             putEntry(key, im);

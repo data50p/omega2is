@@ -14,14 +14,14 @@ public class LoadImage {
         Image im = null;
         try {
             String fn = OmegaContext.getMediaFile(im_name);
-            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "loading file name " + fn);
+            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE: " + "loading file name " + fn);
             File file = new File(OmegaContext.omegaAssets(fn));
             if (file != null && file.canRead())
                 im = tk.createImage(fn);
             else
                 im = tk.createImage(fn);
         } catch (Exception ex) {
-            OmegaContext.sout_log.getLogger().info("ERR: " + "Can't load image " + im_name + '\n' + ex);
+            OmegaContext.sout_log.getLogger().info("IMAGE: " + "Can't load image " + im_name + '\n' + ex);
             return null;
         }
         MediaTracker mt = new MediaTracker(comp);
@@ -38,7 +38,7 @@ public class LoadImage {
         Image im = null;
         try {
             String fn = OmegaContext.getMediaFile(im_name);
-            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "loading file name " + fn);
+            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE: " + "loading file name " + fn);
             File file = new File(OmegaContext.omegaAssets(fn));
             if (file != null && file.canRead())
                 im = tk.createImage(fn);
@@ -46,7 +46,7 @@ public class LoadImage {
                 im = null;
 
         } catch (Exception ex) {
-            OmegaContext.sout_log.getLogger().info("ERR: " + "Can't load image " + im_name + '\n' + ex);
+            OmegaContext.sout_log.getLogger().info("IMAGE: " + "Can't load image " + im_name + '\n' + ex);
             return null;
         }
 

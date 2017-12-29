@@ -66,7 +66,7 @@ public class OmegaContext {
         boolean noAssets = path != null && path.contains("toolbarButtonGraphics") || path.startsWith("register/");
 
         if (path != null && path.startsWith(currentOmegaAssets)) {
-            sout_log.getLogger().warning("currentOmegaAssets(): Already omega_assets: " + path);
+            //sout_log.getLogger().warning("currentOmegaAssets(): Already omega_assets: " + path);
             if (noAssets)
                 return antiOmegaAssets(path);
             return path;
@@ -83,7 +83,7 @@ public class OmegaContext {
             sout_log.getLogger().warning("currentOmegaAssets(): /: " + currentOmegaAssets);
             return path;
         }
-        sout_log.getLogger().warning("currentOmegaAssets():+: " + currentOmegaAssets + '/' + path);
+        //sout_log.getLogger().warning("currentOmegaAssets():+: " + currentOmegaAssets + '/' + path);
         return currentOmegaAssets + '/' + path;
     }
 
