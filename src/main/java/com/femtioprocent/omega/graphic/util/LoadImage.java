@@ -3,6 +3,7 @@ package com.femtioprocent.omega.graphic.util;
 import com.femtioprocent.omega.OmegaConfig;
 import com.femtioprocent.omega.OmegaContext;
 import com.femtioprocent.omega.swing.OmegaSwingUtils;
+import com.femtioprocent.omega.util.MilliTimer;
 
 import java.awt.*;
 import java.io.File;
@@ -36,14 +37,17 @@ public class LoadImage {
     public static Image loadAndWaitOrNull(Component comp, String im_name) {
         Toolkit tk = Toolkit.getDefaultToolkit();
         Image im = null;
+        MilliTimer mt1 = new MilliTimer();
         try {
             String fn = OmegaContext.getMediaFile(im_name);
-            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE: " + "loading file name " + fn);
+//            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE: " + "loading file name " + fn);
             File file = new File(OmegaContext.omegaAssets(fn));
             if (file != null && file.canRead())
                 im = tk.createImage(fn);
             else
                 im = null;
+            //if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE: " + "loading file name " + fn + ' ' + mt1.getString());
+
 
         } catch (Exception ex) {
             OmegaContext.sout_log.getLogger().info("IMAGE: " + "Can't load image " + im_name + '\n' + ex);
@@ -56,6 +60,7 @@ public class LoadImage {
             mt.waitForID(0);
         } catch (InterruptedException e) {
         }
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE: " + " loaded file name " + im_name + ' ' + mt1.getString());
         return im;
     }
 
