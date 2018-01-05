@@ -32,7 +32,7 @@ public class xImage {
 
     int max_seq = 1;
 
-    static long checkNow = SundryUtils.ct() + 40 * 1000;
+    static long checkNow = SundryUtils.ct() + 10 * 1000;
 
     static private HashMap cache_dir = new HashMap();
     static private HashMap cache_imf = new HashMap();
@@ -114,7 +114,33 @@ public class xImage {
                     ent.im.flush();
                 }
                 cache_imf.remove(k);
-		OmegaContext.sout_log.getLogger().info("ERR: " + "%%%%%%%% remove from cache " + k + ", cnt:" + ent.cnt);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "%%%%%%%% remove from cache " + k + ", cnt:" + ent.cnt);
+            }
+        }
+
+        checkNow = SundryUtils.ct() + 20 * 1000;
+    }
+
+    public static void removeAllEntry() {
+        synchronized (cache_imf) {
+            ArrayList li = new ArrayList();
+            Iterator it;
+            it = cache_imf.keySet().iterator();
+            while (it.hasNext()) {
+                String k = (String) it.next();
+                Entry e = (Entry) cache_imf.get(k);
+                if (true)
+                    li.add(k);
+            }
+            it = li.iterator();
+            while (it.hasNext()) {
+                String k = (String) it.next();
+                Entry ent = (Entry) cache_imf.get(k);
+                if ( ent != null ) {
+                    ent.im.flush();
+                }
+                cache_imf.remove(k);
+                OmegaContext.sout_log.getLogger().info("ERR: " + "%%%%%%%% remove from cache " + k + ", cnt:" + ent.cnt);
             }
         }
 

@@ -7,6 +7,7 @@ import com.femtioprocent.omega.anim.canvas.AnimCanvas;
 import com.femtioprocent.omega.anim.context.AnimContext;
 import com.femtioprocent.omega.anim.tool.timeline.*;
 import com.femtioprocent.omega.media.audio.APlayer;
+import com.femtioprocent.omega.media.images.xImage;
 import com.femtioprocent.omega.servers.httpd.Server;
 import com.femtioprocent.omega.subsystem.Httpd;
 import com.femtioprocent.omega.swing.ToolExecute;
@@ -437,6 +438,9 @@ public class AnimRuntime {
                           Runnable hook) {
         final Window win = window;
         final AnimContext fa_ctxt = a_ctxt;
+
+
+        xImage.removeAllEntry();
 
         getAC().HIDDEN = true;
         fa_ctxt.anim_canvas.repaint();
