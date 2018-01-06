@@ -10,47 +10,19 @@ import java.io.File;
 
 public class LoadImage {
 
-    public static Image loadAndWait(Component comp, String im_name) {
-        Toolkit tk = Toolkit.getDefaultToolkit();
-        Image im = null;
-        try {
-            String fn = OmegaContext.getMediaFile(im_name);
-            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE: " + "loading file name " + fn);
-            File file = new File(OmegaContext.omegaAssets(fn));
-            if (file != null && file.canRead())
-                im = tk.createImage(fn);
-            else
-                im = tk.createImage(fn);
-        } catch (Exception ex) {
-            OmegaContext.sout_log.getLogger().info("IMAGE: " + "Can't load image " + im_name + '\n' + ex);
-            return null;
-        }
-        MediaTracker mt = new MediaTracker(comp);
-        mt.addImage(im, 0);
-        try {
-            mt.waitForID(0);
-        } catch (InterruptedException e) {
-        }
-        return im;
-    }
-
-    public static Image loadAndWaitOrNull(Component comp, String im_name) {
+    public static Image loadAndWaitOrNull(Component comp, String im_name, boolean asNull) {
         Toolkit tk = Toolkit.getDefaultToolkit();
         Image im = null;
         MilliTimer mt1 = new MilliTimer();
         try {
             String fn = OmegaContext.getMediaFile(im_name);
-//            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE: " + "loading file name " + fn);
             File file = new File(OmegaContext.omegaAssets(fn));
             if (file != null && file.canRead())
                 im = tk.createImage(fn);
             else
-                im = null;
-            //if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE: " + "loading file name " + fn + ' ' + mt1.getString());
-
-
+                im = asNull ? null : tk.createImage(fn);
         } catch (Exception ex) {
-            OmegaContext.sout_log.getLogger().info("IMAGE: " + "Can't load image " + im_name + '\n' + ex);
+            OmegaContext.sout_log.getLogger().info("IMAGE3: " + "Can't load image " + im_name + '\n' + ex);
             return null;
         }
 
@@ -60,7 +32,7 @@ public class LoadImage {
             mt.waitForID(0);
         } catch (InterruptedException e) {
         }
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE: " + " loaded file name " + im_name + ' ' + mt1.getString());
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("IMAGE4: " + " loaded file name " + im_name + ' ' + mt1.getString() + ' ' + im);
         return im;
     }
 

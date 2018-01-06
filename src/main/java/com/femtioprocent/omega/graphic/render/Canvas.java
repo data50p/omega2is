@@ -54,7 +54,7 @@ public class Canvas extends JPanel implements java.awt.image.ImageObserver {
         this.wings = wings;
 
         String imn = im_name;
-        bg = LoadImage.loadAndWait(this, imn);
+        bg = LoadImage.loadAndWaitOrNull(this, imn, false);
 //	OmegaContext.sout_log.getLogger().info("ERR: " + "bg " + bg + ' ' + imn);
         im_size = new Dimension(bg.getWidth(null), bg.getHeight(null));
 

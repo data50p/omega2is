@@ -343,10 +343,7 @@ public class xImage {
             if (im != null) {
                 return im;
             }
-            if (attr != null)
-                im = LoadImage.loadAndWaitOrNull(comp, key);
-            else
-                im = LoadImage.loadAndWait(comp, key);
+            im = LoadImage.loadAndWaitOrNull(comp, key, attr != null);
             if (im == null && attr != null) {
                 setAttrib(null);
                 return getImage(comp);
@@ -365,7 +362,7 @@ public class xImage {
                 return im;
             }
 //	    OmegaContext.sout_log.getLogger().info("ERR: " + "¤¤¤¤¤ loading " + key);
-            im = LoadImage.loadAndWait(comp, key);
+            im = LoadImage.loadAndWaitOrNull(comp, key, false);
             putEntry(key, im);
         }
         return im;

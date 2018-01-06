@@ -20,7 +20,7 @@ public class Wing {
 
     public Wing(Component comp, String fn, int x, int y, int layer, int ord) {
         this.name = fn;
-        im = LoadImage.loadAndWait(comp, fn);
+        im = LoadImage.loadAndWaitOrNull(comp, fn, false);
         this.layer = layer;
         dim = new Dimension(im.getWidth(null), im.getHeight(null));
         pos = new Point(x, y);
