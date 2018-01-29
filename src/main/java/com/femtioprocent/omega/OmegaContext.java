@@ -137,7 +137,7 @@ public class OmegaContext {
     }
 
     private static String getDefaultOmegaAssets() {
-        return isDeveloper() ? developerOmegaAssets : defaultOmegaAssets;
+        return false && isDeveloper() ? developerOmegaAssets : defaultOmegaAssets;
     }
 
     public static String getMediaFile(String name) {
