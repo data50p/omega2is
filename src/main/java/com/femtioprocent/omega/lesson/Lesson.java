@@ -2864,7 +2864,18 @@ public class Lesson implements LessonCanvasListener {
 
 					String all_text = tg.getAllText();
 					String correct_text = seq.getTestText(current_test_mode, false);
-					if (all_text.equalsIgnoreCase(correct_text)) {
+
+					boolean correctBool = false;
+
+					Set<String> allCorrect = getMatchingSameActionSpecific(action_specific, correct_text);
+					for ( String correct : allCorrect ) {
+					     if ( correct.equalsIgnoreCase(all_text) ) {
+					         correctBool = true;
+					     }
+					}
+					OmegaContext.sout_log.getLogger().info("TestEval: " + "" + correct_text + " <- " + allCorrect + " -> " + correctBool + " | " + all_text.equalsIgnoreCase(correct_text));
+
+					if (correctBool || all_text.equalsIgnoreCase(correct_text)) {
 					    seq.cnt_sent_correct++;
 					    if (register != null) {
 						register.test(":correct",
@@ -3146,6 +3157,25 @@ public class Lesson implements LessonCanvasListener {
 
 
 	}
+    }
+
+    private Set<String> getMatchingSameActionSpecific(ActionSpecific action_specific, String correct_text) {
+        Set kset = action_specific.hm.keySet();
+        String val = null;
+        for (Object o : kset ) {
+            String k = (String) o;
+            if ( k.equals(correct_text)) {
+		val = (String) action_specific.hm.get(k);
+	    }
+	}
+	Set<String> ss = new HashSet<>();
+	for (Object o : kset ) {
+           String k = (String) o;
+           String v = (String) action_specific.hm.get(k);
+           if (v.equals(val))
+               ss.add(k);
+	}
+	return ss;
     }
 
     boolean last_story_flag = false;
