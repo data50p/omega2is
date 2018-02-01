@@ -50,6 +50,10 @@
    <string>Path for timeline</string>
   </void>
   <void method="put">
+   <string>Correct answer is one of :</string>
+   <string>Correct answer is one of :</string>
+  </void>
+  <void method="put">
    <string>Scan and Add to Bundle</string>
    <string>Scan and Add to Bundle</string>
   </void>
@@ -152,6 +156,10 @@
   <void method="put">
    <string>Import Omega Assets to Bundle</string>
    <string>Import Omega Assets to Bundle</string>
+  </void>
+  <void method="put">
+   <string>Correct answer is :</string>
+   <string>Correct answer is :</string>
   </void>
   <void method="put">
    <string>Play Sign Moview</string>

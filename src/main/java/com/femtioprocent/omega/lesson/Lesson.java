@@ -570,6 +570,22 @@ public class Lesson implements LessonCanvasListener {
 	    return s.replaceAll("\\{[^\\{\\}]*\\}", "");
 	}
 
+	Set<String> getTestTextSet(String txt, int test_mode, boolean full) {
+	    Set<String> set = new HashSet<>();
+
+	    String s = getTestText(test_mode);
+	    if (s == null) {
+		; //return s;
+	    }
+	    if (full) {
+		s = s;
+	    }
+	    s = s.replaceAll("\\{[^\\{\\}]*\\}", "");
+	    set.add(s);
+
+	    return set;
+	}
+
 	private String getTestText(int test_mode) {
 	    if (current != null) {
 		return current;
@@ -2096,7 +2112,7 @@ public class Lesson implements LessonCanvasListener {
 	    sendMsg("load", fn, "execLesson");
 	}
 
-	int[][] test_index = null;
+	Set<int[][]> test_index = null;
 
 	String last_id = "!";
 
@@ -2542,9 +2558,10 @@ public class Lesson implements LessonCanvasListener {
 
     FeedBackMovie feedback_movie;
 
-    int[][] exec_test_cont() {
+    Set<int[][]> exec_test_cont() {
 	if (!edit && current_test_mode > TM_CREATE) {
 	    String full_test_txt = seq.getTestText(current_test_mode, true);
+
 	    OmegaContext.sout_log.getLogger().info("ERR: " + "got this full_test_text: " + full_test_txt);
 	    le_canvas.removeDummy();
 	    if (current_test_mode == TM_POST_1
@@ -2559,7 +2576,11 @@ public class Lesson implements LessonCanvasListener {
 		card_show("main", 4);
 	    }
 	    String test_txt = full_test_txt.replaceAll("\\{[^\\{\\}]*\\}", "");
-	    OmegaContext.sout_log.getLogger().info("ERR: " + "got this test_text: " + test_txt);
+	    Set<String> allCorrect = getMatchingSameActionSpecific(action_specific, test_txt);
+
+
+	    OmegaContext.sout_log.getLogger().info("ERR: " + "got this test_text: " + test_txt + " -> " + allCorrect);
+
 	    try {
 		le_canvas.getTarget().reloadComposite(test_txt);
 	    } catch (Exception ex) {
@@ -2570,15 +2591,23 @@ public class Lesson implements LessonCanvasListener {
 		card_show("main", 4);
 	    }
 	    le_canvas.render();
-	    int[][] test_index = null;
+
+	    Set<int[][]> test_index = new HashSet<>();
 
 	    OmegaContext.sout_log.getLogger().info("ERR: " + "ET[][][] FOUND " + full_test_txt + ' ' + test_txt);
 	    if (test_txt != null) {
-		test_index = le_canvas.getTarget().getAllTargetCombinationsIndexes(test_txt);
+	        if (allCorrect.size() == 0 ) {
+		    int[][] test_index1 = le_canvas.getTarget().getAllTargetCombinationsIndexes(test_txt);
+		    test_index.add(test_index1);
+		} else {
+	            for ( String s : allCorrect ) {
+			int[][] test_index1 = le_canvas.getTarget().getAllTargetCombinationsIndexes(s);
+			test_index.add(test_index1);
+		    }
+		}
+		OmegaContext.sout_log.getLogger().info("ERR: " + "ET  [][] " + test_index.size());
 
-		OmegaContext.sout_log.getLogger().info("ERR: " + "ET  [][] " + SundryUtils.a2s(test_index) + ' ' + test_index.length);
-
-		if (test_index == null || test_index.length == 0) {
+		if (test_index.size() == 0) {
 		    global_skipF(true);
 		    JOptionPane.showMessageDialog(ApplContext.top_frame,
 			    T.t("Can't find sentence ") + test_txt);
@@ -2610,7 +2639,7 @@ public class Lesson implements LessonCanvasListener {
     static public boolean inExecHbox = false;
     static public boolean mistNoMouse = false;
 
-    private void exec_hbox(LessonCanvas.Box hBox, Target tg, int[][] test_index) {
+    private void exec_hbox(LessonCanvas.Box hBox, Target tg, Set<int[][]> test_index) {
 	try {
 	    inExecHbox = true;
 
@@ -2638,19 +2667,22 @@ public class Lesson implements LessonCanvasListener {
 			    }
 			    le_canvas.renderTg();
 			} else {
-			    boolean was_wrong = false;
+			    boolean was_wrong = true;
 
 			    if (current_test_mode_group != TMG_CREATE) {
 				int next_i_x = tg.findEntryIxMatchTargetIx(tg_ix);
-				OmegaContext.sout_log.getLogger().info("ERR: " + "!!! using test index: " + SundryUtils.a2s(test_index) + ' ' + tg_ix);
-				int next_i_y = test_index[tg_ix][0];
-				int next_i_x_ = test_index[tg_ix][1];
-				int next_i_y_ = test_index[tg_ix][2];
-				// next 0 8    i_ 1 0
-				OmegaContext.sout_log.getLogger().info("ERR: " + "HERE:  " + i_x + ' ' + i_y + "    next " + next_i_x + ' ' + next_i_y + "   next_  " + next_i_x_ + ' ' + next_i_y_);
-				if (next_i_x_ == i_x && next_i_y_ == i_y) {
-				} else {
-				    was_wrong = true;
+				for ( int[][] test_index1 : test_index ) {
+				    OmegaContext.sout_log.getLogger().info("ERR: " + "!!! using test index: " + SundryUtils.a2s(test_index) + ' ' + tg_ix);
+				    int next_i_y = test_index1[tg_ix][0];
+				    int next_i_x_ = test_index1[tg_ix][1];
+				    int next_i_y_ = test_index1[tg_ix][2];
+				    // next 0 8    i_ 1 0
+				    OmegaContext.sout_log.getLogger().info("ERR: " + "HERE:  " + i_x + ' ' + i_y + "    next " + next_i_x + ' ' + next_i_y + "   next_  " + next_i_x_ + ' ' + next_i_y_);
+				    if (next_i_x_ == i_x && next_i_y_ == i_y) {
+				        was_wrong = false;
+				    } else {
+//					was_wrong = true;
+				    }
 				}
 			    }
 
@@ -2695,8 +2727,19 @@ public class Lesson implements LessonCanvasListener {
 					    seq.cnt_word_correct++;
 					    seq.cnt_wordlast_correct++;
 					}
+					for ( int[][] test_index1 : test_index ) {
+					    if ( test_index1[tg_ix][1] == i_x && test_index1[tg_ix][2] == i_y ) { // choosen match ok word
+
+					    } else {                               // choosen do not match, -> invalidate it all
+						for ( int[] tix1  : test_index1 ) {
+						    tix1[1] = -1;
+						    tix1[2] = -1;
+						}
+					    }
+					}
 				    }
 				}
+
 
 				le_canvas.renderTg();
 
@@ -3083,13 +3126,13 @@ public class Lesson implements LessonCanvasListener {
 					    } else {
 						MsgItem msgitm = new MsgItem('W',
 							T.t("Sorry, wrong answer"),
-							correct_text,
+							allCorrect.size() == 1 ? correct_text : allCorrect.toString(), //correct_text,
 							"",
 							i_b
 								? getCurrentPupil().getImageNameWrongAnswer()
 								: null,
 							null,
-							T.t("Correct answer is:"));
+							T.t("Correct answer is" + (allCorrect.size() == 1 ? "" : " one of") + " :"));
 						if (t_b || i_b) {
 						    mistNoMouse = false;
 						    le_canvas.showMsg(msgitm);
