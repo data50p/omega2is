@@ -306,6 +306,10 @@
    <string>Norsk-bm-Bergen</string>
   </void>
   <void method="put">
+   <string>Turn off</string>
+   <string>Turn off</string>
+  </void>
+  <void method="put">
    <string>dep_set Layer</string>
    <string>dep_set Layer</string>
   </void>

@@ -46,7 +46,7 @@ public class SentenceProperty extends Property_B {
     JButton set_sgn_b;
     //SentencePropPanel sn_pan;
 
-    JRadioButton rb_def, rb_act;
+    JRadioButton rb_def, rb_act, rb_off;
     JRadioButton rb_defSign, rb_actSign;
 
     int[][] tmm;
@@ -139,6 +139,18 @@ public class SentenceProperty extends Property_B {
                     }
                 }
             }
+            if (s.equals("isOff")) {
+                LessonEditor.setDirty();
+                set_act_b.setEnabled(false);
+                TableModel tmod = (TableModel) table.getModel();
+                int row = table.getSelectedRow();
+                String ss = (String) tmod.getValueAt(row, COL_ACT);
+                String fn = "!off";
+                if (fn != null) {
+                    tmod.setValueAt(fn, row, COL_ACT);
+                }
+            }
+
             if (s.equals("dep_set sign file")) {
                 LessonEditor.setDirty();
                 TableModel tmod = (TableModel) table.getModel();
@@ -314,6 +326,13 @@ public class SentenceProperty extends Property_B {
         guimap.put("dep_set action file", jb);
         jb.setActionCommand("dep_set action file");
         jb.addActionListener(myactl);
+
+        Y++;
+        X = 0;
+        fpan.add(new JLabel(""), rb = rb_off = new JRadioButton(T.t("Turn off")), Y, ++X);
+        bgr.add(rb);
+        rb.setActionCommand("isOff");
+        rb.addActionListener(myactl);
 
         Y++;
         X = 0;

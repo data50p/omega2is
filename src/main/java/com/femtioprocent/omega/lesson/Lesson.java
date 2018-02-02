@@ -592,7 +592,8 @@ public class Lesson implements LessonCanvasListener {
 	    }
 
 	    if (test_mode == TM_RAND) {
-		String sa[] = l_ctxt.getLessonCanvas().getAllTargetCombinations();
+		String saAll[] = l_ctxt.getLessonCanvas().getAllTargetCombinations();
+		String sa[] = removeOff(action_specific, saAll);
 
 		if (rand_map == null || rand_map.length != sa.length) {
 		    rand_map = SundryUtils.upTo(sa.length);
@@ -626,6 +627,25 @@ public class Lesson implements LessonCanvasListener {
 		}
 		return test_text;
 	    }
+	}
+
+	private String[] removeOff(ActionSpecific action_specific, String[] saAll) {
+	    int n = 0;
+	    for(Object o : action_specific.hm.values()) {
+	        String s = (String)o;
+		if (s != null && s.length() > 0 && !s.equalsIgnoreCase("!off"))
+		    n++;
+	    }
+	    String[] sa = new String[n];
+	    int ix = 0;
+	    for(Object o : action_specific.hm.keySet()) {
+		String k = (String) o;
+		String v = (String) action_specific.hm.get(k);
+		if (v != null && v.length() > 0 && !v.equalsIgnoreCase("!off")) {
+		    sa[ix++] = k;
+		}
+	    }
+	    return sa;
 	}
 
 	ListIterator getIterator(int test_mode) {
