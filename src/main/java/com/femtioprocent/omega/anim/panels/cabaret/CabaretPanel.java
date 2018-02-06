@@ -218,7 +218,7 @@ public class CabaretPanel extends JPanel {
                 int fix = getCab().actA.findOrdTL(ix);
                 if (fix == -1) {
                     fix = getCab().actA.findFree();
-                    if (fix < 4) {
+                    if (fix < OmegaConfig.TIMELINES_N) {
                         ix = fix;
                         getCab().actA.arr[ix].tl_nid = ix;
                     }

@@ -395,6 +395,7 @@ public class AnimEditor extends JFrame {
 	jmac2.add(tac = new ToolAction("2", "dep_set actor1", ae_texec));
 	jmac2.add(tac = new ToolAction("3", "dep_set actor2", ae_texec));
 	jmac2.add(tac = new ToolAction("4", "dep_set actor3", ae_texec));
+	jmac2.add(tac = new ToolAction("5", "dep_set actor4", ae_texec));
 	jmac.add(tac = new ToolAction(T.t("Add a wing"), "add w", ae_texec));
 	jmac.addSeparator();
 	jmac.add(tac = new ToolAction(T.t("Show actor properties..."), "show prop act", ae_texec));

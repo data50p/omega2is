@@ -642,7 +642,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
             if (cmd.equals("path_create")) {
                 if (a_ctxt.mtl.getFreeTLIndex() == -1) {
                     JOptionPane.showMessageDialog(AnimCanvas.this,
-                            T.t("Can't create path, max is 4"),
+                            T.t("Can't create path, max is " + OmegaConfig.TIMELINES_N),
                             "Omega",
                             JOptionPane.INFORMATION_MESSAGE);
                 } else {
@@ -651,7 +651,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
             } else if (cmd.equals("path_duplicate")) {
                 if (a_ctxt.mtl.getFreeTLIndex() == -1) {
                     JOptionPane.showMessageDialog(AnimCanvas.this,
-                            T.t("Can't create path, max is 4"),
+                            T.t("Can't create path, max is " + OmegaConfig.TIMELINES_N),
                             "Omega",
                             JOptionPane.INFORMATION_MESSAGE);
                 } else {
@@ -770,7 +770,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
             a_ctxt.ae.cabaret_panel.addChangeListener(new ChangeListener() {
                 public void stateChanged(ChangeEvent ev) {
                     CabaretPanel cabp = (CabaretPanel) ev.getSource();
-                    for (int i = 0; i < 4; i++) {
+                    for (int i = 0; i < OmegaConfig.TIMELINES_N; i++) {
                         Actor act = cabp.getActorInPanel(i);
                         GImAE gim = null;
                         if (act != null)
@@ -833,7 +833,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
     }
 
     public void bindAllNoActor() {
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < OmegaConfig.TIMELINES_N; i++) {
             TimeLine tl = a_ctxt.mtl.getTimeLine(i);
             if (tl != null) {
                 String lid = tl.getLessonId();
@@ -857,7 +857,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
     }
 
     public void bindAllStatistActor() {
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < OmegaConfig.TIMELINES_N; i++) {
             TimeLine tl = a_ctxt.mtl.getTimeLine(i);
             if (tl != null) {
                 String lid = tl.getLessonId();
@@ -879,7 +879,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
         else
             nid = ix;
 
-        if (nid >= 0 && nid < 4) {
+        if (nid >= 0 && nid < OmegaConfig.TIMELINES_N) {
             allgim.set(null, nid);
         }
     }
@@ -893,7 +893,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
         else
             nid = ix;
 
-        if (nid >= 0 && nid < 4)
+        if (nid >= 0 && nid < OmegaConfig.TIMELINES_N)
             allgim.set(act.gimae, nid);
 
         return act;
@@ -902,7 +902,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
     public Actor bindActorOnTL(int tl_nid, GImAE gimae) {
         if (gimae == null)
             return null;
-        if (tl_nid < 4) {
+        if (tl_nid < OmegaConfig.TIMELINES_N) {
             GImAE gim = new GImAE(this, gimae, tl_nid); // make a ghost
 //	    OmegaContext.sout_log.getLogger().info("ERR: " + "bound actor " + tl_nid + ' ' + gim);
             Actor act = new Actor(a_ctxt, gim);
@@ -914,7 +914,7 @@ public class AnimCanvas extends com.femtioprocent.omega.graphic.render.Canvas {
     }
 
     public Actor bindNoActorOnTL(int tl_nid) {
-        if (tl_nid < 4) {
+        if (tl_nid < OmegaConfig.TIMELINES_N) {
 //	    OmegaContext.sout_log.getLogger().info("ERR: " + "bound no actor " + tl_nid);
             actA_animated[tl_nid] = null;
             allgim.set(null, tl_nid);
