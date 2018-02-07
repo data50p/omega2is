@@ -491,7 +491,7 @@ public class Target {
         return true;
     }
 
-    String apply(int ord, String txt) {
+    String apply(int max, int ord, String txt) {
         String[] sa = SundryUtils.split(txt, "{}");
         StringBuffer sb = new StringBuffer();
 
@@ -533,6 +533,15 @@ public class Target {
                     var_val = t_it.item.getVar(var_ix);               // the H4 bug, item is null
                     if (var_val == null)
                         var_val = def;
+                    if (var_val.contains("{")) {
+                        if ( max > 0 ) {
+                            String var_val2 = apply(max - 1, ord + a, var_val);
+                            //OmegaContext.sout_log.getLogger().info("apply: " + max + ',' + ord + ',' + txt + " -> " + var_val + " -> " + var_val2);
+                            var_val = var_val2;
+                        }
+                    } else {
+                        //OmegaContext.sout_log.getLogger().info("apply: " + max + ',' + ord + ',' + txt + " -> " + var_val);
+                    }
                 } catch (IndexOutOfBoundsException ex) {
                     var_val = def;
                 } catch (NullPointerException ex) {
@@ -556,7 +565,7 @@ public class Target {
             return null;
 
         if (hasVar(s))
-            s = apply(ix, s);
+            s = apply(4, ix, s);
 //	OmegaContext.sout_log.getLogger().info("ERR: " + " " + s );
         return s;
     }
