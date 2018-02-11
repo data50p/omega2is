@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_121" class="java.beans.XMLDecoder">
+<java version="1.8.0_144" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>Sign Word Movie Scale</string>
@@ -116,6 +116,10 @@
   <void method="put">
    <string>Show Sign after each word</string>
    <string>Show Sign after each word</string>
+  </void>
+  <void method="put">
+   <string>Test text empty (null)</string>
+   <string>Test text empty (null)</string>
   </void>
   <void method="put">
    <string>Description</string>

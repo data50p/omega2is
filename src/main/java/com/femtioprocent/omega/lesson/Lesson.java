@@ -630,18 +630,19 @@ public class Lesson implements LessonCanvasListener {
 	}
 
 	private String[] removeOff(ActionSpecific action_specific, String[] saAll) {
-	    int n = 0;
+	    int nOff = 0;
 	    for(Object o : action_specific.hm.values()) {
 	        String s = (String)o;
-		if (s != null && s.length() > 0 && !s.equalsIgnoreCase("!off"))
-		    n++;
+		if (s != null && s.length() > 0 && s.equalsIgnoreCase("!off"))
+		    nOff++;
 	    }
+	    int n = saAll.length - nOff;
 	    String[] sa = new String[n];
 	    int ix = 0;
-	    for(Object o : action_specific.hm.keySet()) {
-		String k = (String) o;
+	    for(String s : saAll) {
+		String k = s;
 		String v = (String) action_specific.hm.get(k);
-		if (v != null && v.length() > 0 && !v.equalsIgnoreCase("!off")) {
+		if (v == null || (v.length() > 0 && !v.equalsIgnoreCase("!off"))) {
 		    sa[ix++] = k;
 		}
 	    }
