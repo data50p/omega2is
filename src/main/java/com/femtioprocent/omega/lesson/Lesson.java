@@ -3147,13 +3147,13 @@ public class Lesson implements LessonCanvasListener {
 					    } else {
 						MsgItem msgitm = new MsgItem('W',
 							T.t("Sorry, wrong answer"),
-							allCorrect.size() == 1 ? correct_text : allCorrect.toString(), //correct_text,
+							allCorrect.size() == 0 ? correct_text : allCorrect.toString(), //correct_text,
 							"",
 							i_b
 								? getCurrentPupil().getImageNameWrongAnswer()
 								: null,
 							null,
-							T.t("Correct answer is" + (allCorrect.size() == 1 ? "" : " one of") + " :"));
+							T.t("Correct answer is" + (allCorrect.size() == 0 ? "" : " one of") + " :"));
 						if (t_b || i_b) {
 						    mistNoMouse = false;
 						    le_canvas.showMsg(msgitm);
