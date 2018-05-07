@@ -16,6 +16,8 @@ public class Item {
     int ord;
     private String text;
     private String text_orig;
+    private String tts;
+    private String tts_orig;
     private String dummytext_orig;
     private String lid;
     private String lid_orig;
@@ -46,6 +48,8 @@ public class Item {
         var = new ArrayList();
         text = txt;
         text_orig = new String(txt);
+        tts = "";
+        tts_orig = new String("");
         lid = "";
         lid_orig = "";
         sound = "";
@@ -209,6 +213,9 @@ public class Item {
         String raw_dummytext = fel(el, "dummytext");
         String dummytext = decode(raw_dummytext);
         this.dummytext_orig = new String(dummytext);
+        String raw_tts = fel(el, "tts");
+        String tts = decode(raw_tts);
+        this.tts_orig = new String(tts);
 
         String lid = el.findAttr("Lid");
         lid_orig = lid;
@@ -246,6 +253,7 @@ public class Item {
         this.sound = sound;
         this.sign = sign;
         this.text = text;
+        this.tts = tts;
         this.lid = lid;
         this.dummytext = dummytext;
         this.dummysound = dummysound;
@@ -323,6 +331,7 @@ public class Item {
     public Values getValues(boolean orig) {
         Values vs = new Values();
         vs.setStr("text", text_orig);
+        vs.setStr("tts", tts_orig);
 //	vs.setStr("text", text);
         vs.setStr("tid", it_ent.tid);
         vs.setStr("lid", lid_orig);
@@ -374,6 +383,8 @@ public class Item {
 
         String t = encode(text_orig);
         el.addAttr("text", t);
+        t = encode(tts_orig);
+        el.addAttr("tts", t);
         t = encode(dummytext_orig);
         el.addAttr("dummytext", t);
         el.addAttr("sound", sound_orig);
@@ -401,12 +412,26 @@ public class Item {
         return text;
     }
 
+    public String getTTS() {
+        return tts;
+    }
+
+    public String getTTSD() {              // DUMMY?
+        if (dummy_flag && dummytext.length() > 0)
+            return dummytext;
+        return tts;
+    }
+
     public String getDummyText() {
         return dummytext;
     }
 
     public String getText_Orig() {
         return text_orig;
+    }
+
+    public String getTTS_Orig() {
+        return tts_orig;
     }
 
     public String getLid() {
@@ -458,6 +483,11 @@ public class Item {
     public void setText_Krull(String s) {
         text_orig = s;
         text = krull(s);
+    }
+
+    public void setTTS_Krull(String s) {
+        tts_orig = s;
+        tts = krull(s);
     }
 
     public void setDummyText_Krull(String s, boolean saved) {

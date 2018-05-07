@@ -94,6 +94,14 @@ public class ItemProperty extends Property_B implements ActionListener {
 
         Y++;
         X = 0;
+        fpan.add(jl = new JLabelL(T.t("TTS")), tf = new JTextField("", WW), Y, ++X);
+        text_tf = tf;
+        tf.getDocument().addDocumentListener(mydocl);
+        guimap.put("Ltts", jl);
+        guimap.put("tts", tf);
+
+        Y++;
+        X = 0;
         fpan.add(jl = new JLabelL(T.t("Sound")), tf = new JTextField("Sound File", WW - 5), Y, ++X);
         tf.getDocument().addDocumentListener(mydocl);
         guimap.put("Lsound", jl);

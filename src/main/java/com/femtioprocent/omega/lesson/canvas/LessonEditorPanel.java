@@ -125,6 +125,8 @@ public class LessonEditorPanel extends JPanel {
 
             if (v.id.equals("text")) {
                 itm.setText_Krull(v.getStr());
+            } else if (v.id.equals("tts")) {
+                itm.setTTS_Krull(v.getStr());
             } else if (v.id.equals("dummytext")) {
                 itm.setDummyText_Krull(v.getStr(), true);
             } else if (v.id.equals("tid")) {
