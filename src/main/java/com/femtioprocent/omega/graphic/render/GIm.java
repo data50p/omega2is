@@ -127,6 +127,10 @@ public class GIm {
         return xim.getFNBase();
     }
 
+    public String getPeTaskNid() {
+        return xim.getPeTaskNid();
+    }
+
 //     public Image getImage() {
 // 	return xim.getImage(ca);
 //     }

@@ -32,6 +32,7 @@ public class CabaretProperties extends OmegaProperties implements ActionListener
     JTextField lesson_id;
     JTextField var1, var2, var3;
     JTextField image_name;
+    JTextField image_petasknid;
     JTextField prim_scale;
     JComboBox prim_mirror;
     JTextField hotspot;
@@ -163,6 +164,7 @@ public class CabaretProperties extends OmegaProperties implements ActionListener
         bound_act_ixx = ixx;
         if (act != null) {
             image_name.setText(act.gimae.getFNBase());
+            image_petasknid.setText(act.gimae.getPeTaskNid());
             lesson_id.setText(act.gimae.getLessonId());
             var1.setText(act.gimae.getVariable(1));
             var2.setText(act.gimae.getVariable(2));
@@ -173,6 +175,7 @@ public class CabaretProperties extends OmegaProperties implements ActionListener
             rhotspot.setText("" + act.gimae.getHotSpotAsString(1));
         } else {
             image_name.setText("");
+            image_petasknid.setText("");
             lesson_id.setText("");
             var1.setText("");
             var2.setText("");
@@ -358,7 +361,7 @@ public class CabaretProperties extends OmegaProperties implements ActionListener
         pan.add(new JLabel(T.t("Image name")), gbcf.createL(0, Y, 1));
         pan.add(image_name = new JTextField("            ", 20), gbcf.create(1, Y));
         pan.add(jb = new JButton(T.t("Set")), gbcf.create(2, Y));
-        image_name.setEditable(false);
+        //image_name.setEditable(false);
         jb.setActionCommand("setImName");
         jb.addActionListener(this);
 
@@ -368,6 +371,16 @@ public class CabaretProperties extends OmegaProperties implements ActionListener
         jb.addActionListener(this);
         delete = jb;
         Y++;
+
+
+        pan.add(new JLabel(T.t("PeTask Nid")), gbcf.create(0, Y));
+        pan.add(image_petasknid = new JTextField("", 2), gbcf.create(1, Y));
+        if (true) {
+            Document doc2 = image_petasknid.getDocument();
+            doc2.addDocumentListener(mydocl);
+        }
+        Y++;
+
 
         pan.add(new JLabel(T.t("Primary scale")), gbcf.createL(0, Y, 1));
         pan.add(prim_scale = new JTextField(20), gbcf.create(1, Y));
@@ -447,6 +460,11 @@ public class CabaretProperties extends OmegaProperties implements ActionListener
             String ss = var3.getText();
             if (bound_act != null)
                 bound_act.gimae.setVariable(3, ss);
+        }
+        if (doc == image_petasknid.getDocument()) {
+            String petnid = image_petasknid.getText();
+            if (bound_act != null)
+                bound_act.gimae.xim.setPeTaskNid(petnid);
         }
     }
 

@@ -26,6 +26,7 @@ public class xImage {
     String attr = null;
     int seq = -1;
     String ext = "gif";
+    String petask_nid = "";
 
     private boolean once = false;
     private boolean onceDone = false;
@@ -64,9 +65,15 @@ public class xImage {
     ;
 
     public xImage(String name) {
-        this.name = name;
+        if ( name.contains("{*") ) {
+            this.name = mkPeTaskDef(name);
+            this.petask_nid = mkPeTaskNid(name);
 
-        String[] file = splitFile(name);
+        } else {
+            this.name = name;
+            this.petask_nid = "";
+        }
+        String[] file = splitFile(this.name);
         dir = file[DIR];
         base = file[BASE];
         attr = null;
@@ -76,8 +83,24 @@ public class xImage {
         //	OmegaContext.sout_log.getLogger().info("ERR: " + "xImage created " + this);
     }
 
+    private String mkPeTaskNid(String name) {
+        String sa[] = name.split(":");
+        return sa[0].replace("{*", "");
+    }
+
+    private String mkPeTaskDef(String name) {
+        String sa[] = name.split(":");
+        return sa[1].replace("}", "");
+    }
+
+    public void setPeTaskNid(String petnid) {
+        this.petask_nid = petnid;
+    }
+
+
     public xImage(xImage xim) {
         this.name = xim.name;
+        this.petask_nid = xim.petask_nid;
         this.dir = xim.dir;
         this.base = xim.base;
         this.attr = xim.attr;
@@ -374,6 +397,10 @@ public class xImage {
         if (last_b == null)
             last_b = dir + '/' + base + '.' + ext;
         return last_b;
+    }
+
+    public String getPeTaskNid() {
+        return petask_nid;
     }
 
     int last_seq = -2;

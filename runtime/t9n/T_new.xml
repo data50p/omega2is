@@ -114,6 +114,10 @@
    <string>Tomas Croatia</string>
   </void>
   <void method="put">
+   <string>PeTask Nid</string>
+   <string>PeTask Nid</string>
+  </void>
+  <void method="put">
    <string>Show Sign after each word</string>
    <string>Show Sign after each word</string>
   </void>

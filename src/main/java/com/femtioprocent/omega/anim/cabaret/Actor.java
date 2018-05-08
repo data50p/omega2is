@@ -2,6 +2,7 @@ package com.femtioprocent.omega.anim.cabaret;
 
 import com.femtioprocent.omega.anim.context.AnimContext;
 import com.femtioprocent.omega.xml.Element;
+import com.sun.xml.internal.fastinfoset.stax.events.Util;
 
 public class Actor {
     final public GImAE gimae;
@@ -23,7 +24,12 @@ public class Actor {
 
     public Element getElement() {
         Element el = new Element("Actor");
-        el.addAttr("name", gimae.getFNBase());
+        String peTaskNid = gimae.getPeTaskNid();
+        if ( !Util.isEmptyString(peTaskNid) ) {
+            el.addAttr("name", "{*" + peTaskNid + ":" + gimae.getFNBase() + "}");
+        } else {
+            el.addAttr("name", gimae.getFNBase());
+        }
         String lid = gimae.getLessonId();
         if (lid != null && !(lid.startsWith("#") || lid.length() == 0))
             el.addAttr("lesson_id", lid);
