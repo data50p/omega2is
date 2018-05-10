@@ -6,7 +6,6 @@ import com.femtioprocent.omega.lesson.Lesson;
 import com.femtioprocent.omega.util.SundryUtils;
 import com.femtioprocent.omega.value.Values;
 import com.femtioprocent.omega.xml.Element;
-import com.sun.xml.internal.fastinfoset.stax.events.Util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -440,7 +439,7 @@ public class Item {
     public String getTTSD() {              // DUMMY?
         if (dummy_flag && dummytext.length() > 0)
             return dummytext;
-        if (Util.isEmptyString(tts) )
+        if (SundryUtils.empty(tts) )
             return text;
         return tts;
     }

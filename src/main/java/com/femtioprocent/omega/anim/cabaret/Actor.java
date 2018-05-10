@@ -1,8 +1,9 @@
 package com.femtioprocent.omega.anim.cabaret;
 
 import com.femtioprocent.omega.anim.context.AnimContext;
+import com.femtioprocent.omega.swing.OmegaSwingUtils;
+import com.femtioprocent.omega.util.SundryUtils;
 import com.femtioprocent.omega.xml.Element;
-import com.sun.xml.internal.fastinfoset.stax.events.Util;
 
 public class Actor {
     final public GImAE gimae;
@@ -25,7 +26,7 @@ public class Actor {
     public Element getElement() {
         Element el = new Element("Actor");
         String peTaskNid = gimae.getPeTaskNid();
-        if ( !Util.isEmptyString(peTaskNid) ) {
+        if ( !SundryUtils.empty(peTaskNid) ) {
             el.addAttr("name", "{*" + peTaskNid + ":" + gimae.getFNBase() + "}");
         } else {
             el.addAttr("name", gimae.getFNBase());
