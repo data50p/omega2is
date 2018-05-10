@@ -6,6 +6,7 @@ import com.femtioprocent.omega.lesson.Lesson;
 import com.femtioprocent.omega.util.SundryUtils;
 import com.femtioprocent.omega.value.Values;
 import com.femtioprocent.omega.xml.Element;
+import com.sun.xml.internal.fastinfoset.stax.events.Util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -293,6 +294,15 @@ public class Item {
         return getDefaultFilledText(s);
     }
 
+    public String getDefaultFilledTTS() {    // DUMMY?
+        String s = tts;
+        if (dummy_flag)
+            s = dummytext;
+        if (s == null || s.length() == 0)
+            s = text;
+        return getDefaultFilledTTS(s);
+    }
+
     public String getDefaultFilledText(String s) {
         try {
             int ix = s.indexOf('{');
@@ -303,6 +313,21 @@ public class Item {
             if (ix3 != -1 && ix3 < ix2 && ix2 > 0)
                 return s.substring(0, ix) + s.substring(ix3 + 1, ix2) + getDefaultFilledText(s.substring(ix2 + 1));
             return s.substring(0, ix) + getDefaultFilledText(s.substring(ix2 + 1));
+        } catch (Exception ex) {
+            return "";
+        }
+    }
+
+    public String getDefaultFilledTTS(String s) {
+        try {
+            int ix = s.indexOf('{');
+            if (ix == -1)
+                return s;
+            int ix2 = s.indexOf('}');
+            int ix3 = s.indexOf(':');
+            if (ix3 != -1 && ix3 < ix2 && ix2 > 0)
+                return s.substring(0, ix) + s.substring(ix3 + 1, ix2) + getDefaultFilledTTS(s.substring(ix2 + 1));
+            return s.substring(0, ix) + getDefaultFilledTTS(s.substring(ix2 + 1));
         } catch (Exception ex) {
             return "";
         }
@@ -412,13 +437,15 @@ public class Item {
         return text;
     }
 
-    public String getTTS() {
-        return tts;
-    }
-
     public String getTTSD() {              // DUMMY?
         if (dummy_flag && dummytext.length() > 0)
             return dummytext;
+        if (Util.isEmptyString(tts) )
+            return text;
+        return tts;
+    }
+
+    public String getTTS() {
         return tts;
     }
 

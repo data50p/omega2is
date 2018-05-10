@@ -1861,7 +1861,7 @@ public class Lesson implements LessonCanvasListener {
 	try {
 	    if ( OmegaConfig.tts ) {
 		String lang = OmegaContext.getLessonLang();
-		if ( TTS.say(lang, tg.getAllText(), true) )
+		if ( TTS.say(lang, tg.getAllTTS(), true) )
 		    return;
 	    }
 
@@ -2777,7 +2777,7 @@ public class Lesson implements LessonCanvasListener {
 
 					if ( OmegaConfig.tts ) {
 					    String lang = OmegaContext.getLessonLang();
-					    if ( TTS.say(lang, sitm.getDefaultFilledText(), true) )
+					    if ( TTS.say(lang, sitm.getDefaultFilledTTS(), true) )
 					        break PLAYSND;
 					}
 

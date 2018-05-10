@@ -68,6 +68,13 @@ public class Target {
                 return fillVarHere(ord, item.getTextD());
         }
 
+        String getFilledTTS() {
+            if (item == null)
+                return "               ";
+            else
+                return fillVarHere(ord, item.getTTSD());
+        }
+
         String getFilledActionText() {
             if (item == null)
                 return "               ";
@@ -835,6 +842,12 @@ public class Target {
         return s;
     }
 
+    public String getAllTTS() {
+        String s = getTTSUpto(t_items.size(), 1);
+        if (Tr) OmegaContext.sout_log.getLogger().info("ERR: " + "getAllTTS " + s + '.');
+        return s;
+    }
+
     public ArrayList<String> getAllSignMovies(LiuMovieManager lmm) {
         ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < t_items.size(); i++) {
@@ -871,6 +884,14 @@ public class Target {
         return txt;
     }
 
+    public String getTTSAt(int ix) {  // can be dummy text
+        T_Item titm = getT_Item(ix);
+        if (titm == null)
+            return "";
+        String txt = titm.getFilledTTS();
+        return txt;
+    }
+
     public String getTidAt(int ix) {
         T_Item titm = getT_Item(ix);
         if (titm == null)
@@ -883,6 +904,21 @@ public class Target {
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < ix; i++) {
             String txt = getTextAt(i);
+            if (sb.length() > 0 && txt.length() > 0) {
+                sb.append(sp);
+            }
+            if (i == 0)
+                txt = Upper1(txt);
+            sb.append(txt);
+        }
+        return sb.toString();
+    }
+
+    public String getTTSUpto(int ix, int space) {
+        String sp = "                                                     ".substring(0, space);
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < ix; i++) {
+            String txt = getTTSAt(i);
             if (sb.length() > 0 && txt.length() > 0) {
                 sb.append(sp);
             }
