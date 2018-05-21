@@ -7,6 +7,12 @@ import java.util.HashMap;
 
 /**
  * Created by lars on 2017-07-09.
+ *
+ *
+ * On DOS
+ *
+ * PowerShell -Command "Add-Type –AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('hello');
+ *
  */
 public class TTS_mac {
 
