@@ -18,4 +18,5 @@ SAVED-*
 __*
 src/main/resources/version
 *.0.0
+local.properties
 all.omega_assets
