@@ -24,15 +24,15 @@ public class Files {
         cdu = cdu.substring(0, cdu.length());
         cdu += "media/";
         if (OmegaConfig.T)
-            OmegaContext.sout_log.getLogger().info("ERR: " + "try loading url from\n" + url_s + '\n' + cdu);
+            OmegaContext.sout_log.getLogger().info("floppy: " + "try loading url from\n" + url_s + '\n' + cdu);
         int len_cd = cdu.length();
 
         String[] sa = new String[2];
         String name = url_s.substring(len_cd);
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "+++ " + name);
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("floppy: " + "+++ " + name);
         sa[0] = cdu;
         sa[1] = name;
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "" + SundryUtils.arrToString(sa));
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("floppy: " + "" + SundryUtils.arrToString(sa));
         return sa;
     }
 
@@ -45,16 +45,18 @@ public class Files {
             } catch (MalformedURLException ex) {
                 return null;
             }
-            cdu = cdu.substring(0, cdu.length() - 2); // -1 is to remove "./"
-            OmegaContext.sout_log.getLogger().info("ERR: " + "mkRelativeCWD " + fn + " -> " + cdu);
+            cdu = cdu.substring(0, cdu.length());
+            if ( cdu.endsWith("./") )
+                cdu = cdu.substring(0, cdu.length() - 2); // -1 is to remove "./"
+            OmegaContext.sout_log.getLogger().info("floppy: " + "mkRelativeCWD " + fn + " -> " + cdu);
             int len_cd = cdu.length();
 
             String[] sa = new String[2];
             String name = fn.substring(len_cd);
-            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "+++ " + name);
+            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("floppy: " + "+++ " + name);
             sa[0] = cdu;
             sa[1] = name;
-            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "" + SundryUtils.arrToString(sa));
+            if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("floppy: " + "" + SundryUtils.arrToString(sa));
             return sa[1];
         } catch (StringIndexOutOfBoundsException ex) {
         }
@@ -75,10 +77,10 @@ public class Files {
 
         String[] sa = new String[2];
         String name = url_s.substring(len_cd);
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info(". " + "+++ " + url_s);
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("floppy " + "+++ " + url_s);
         sa[0] = cdu;
         sa[1] = name;
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info(". " + "=== " + SundryUtils.arrToString(sa));
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("floppy " + "=== " + SundryUtils.arrToString(sa));
         return sa[1];
     }
 
@@ -96,10 +98,10 @@ public class Files {
 
         String[] sa = new String[2];
         String name = url_s.substring(len_cd);
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "+++ " + name);
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("floppy: " + "+++ " + name);
         sa[0] = cdu;
         sa[1] = name;
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("ERR: " + "" + SundryUtils.arrToString(sa));
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("floppy: " + "" + SundryUtils.arrToString(sa));
         return sa[1];
     }
 
@@ -115,13 +117,22 @@ public class Files {
 
         String[] sa = new String[2];
         String name = url_s.substring(len_cd);
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("+++ " + url_s + ' ' + prefix);
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("floppy +++ " + url_s + ' ' + prefix);
         sa[0] = cdu;
         sa[1] = name;
-        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("=== " + SundryUtils.arrToString(sa));
+        if (OmegaConfig.T) OmegaContext.sout_log.getLogger().info("floppy === " + SundryUtils.arrToString(sa));
         return sa[1];
     }
 
+    /*
+WARNING   29/05 09:27:32.391     0 Files                   toURL                  URL matter:      C:\Users\Mats L\Documents\Omega-IS\default.omega_assets\lesson-sv\active\F-b_3-ord\F-b1\SpraySoapDry.omega_lesson
+WARNING   29/05 09:27:32.391     0 Files                   toURL                      matter: new file:/C:/Users/Mats%20L/Documents/Omega-IS/default.omega_assets/lesson-sv/active/F-b_3-ord/F-b1/SpraySoapDry.omega_lesson
+WARNING   29/05 09:27:32.391     0 Files                   toURL                      matter: old file:/C:/Users/Mats L/Documents/Omega-IS/default.omega_assets/lesson-sv/active/F-b_3-ord/F-b1/SpraySoapDry.omega_lesson
+WARNING   29/05 09:27:32.391     0 Files                   toURL                      matter: alt file:/C:/Users/Mats L/Documents/Omega-IS/default.omega_assets/lesson-sv/active/F-b_3-ord/F-b1/SpraySoapDry.omega_lesson
+INFO      29/05 09:27:32.391     0 Files                   mkRelativeCWD          ERR: mkRelativeCWD file:/C:/Users/Mats L/Documents/Omega-IS/default.omega_assets/lesson-sv/active/F-b_3-ord/F-b1/SpraySoapDry.omega_lesson -> file:/C:/Users/Mats%20L/Documents/Omega-IS/
+INFO      29/05 09:27:32.391     0 Files                   mkRelativeCWD          ERR: +++ fault.omega_assets/lesson-sv/active/F-b_3-ord/F-b1/SpraySoapDry.omega_lesson
+
+     */
     public static String toURL(File file) {
         String url_s = null;
 //log	OmegaContext.sout_log.getLogger().info("ERR: " + "got file " + file);
