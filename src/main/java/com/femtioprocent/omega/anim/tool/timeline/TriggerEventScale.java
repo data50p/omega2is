@@ -35,11 +35,11 @@ public class TriggerEventScale extends TriggerEvent {
         return d;
     }
 
-    public double getArgDouble2nd() {
+    public double getArgDouble2nd(double dsp) {
         String s = getArgString();
         String sa[] = SundryUtils.split(s, " ");
         if (sa.length == 1) {
-            return 1.0;
+            return dsp >= 0.0 ? 100.0 : 0.001;
         }
         double d = SundryUtils.tD(sa[1]);
         return d;

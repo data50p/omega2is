@@ -185,7 +185,7 @@ public class AnimRuntime {
                     }
                     if (cmd.equals("Scale")) {
                         double d = ((TriggerEventScale) te).getArgDouble();
-                        double d2 = ((TriggerEventScale) te).getArgDouble2nd();
+                        double d2 = ((TriggerEventScale) te).getArgDouble2nd(d);
                         d /= 1000.0;
                         gimae.setScale(d, d2, tm.when);
                     }
