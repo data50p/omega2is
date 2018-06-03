@@ -18,6 +18,7 @@ public class Files {
         String cdu = null;
         try {
             cdu = fi.toURI().toURL().toString();
+            cdu = cdu.replace("%20", " ").replace("%20", " ").replace("%20", " ").replace("%20", " ");
         } catch (MalformedURLException ex) {
             return null;
         }
@@ -48,7 +49,9 @@ public class Files {
             cdu = cdu.substring(0, cdu.length());
             if ( cdu.endsWith("./") )
                 cdu = cdu.substring(0, cdu.length() - 2); // -1 is to remove "./"
-            OmegaContext.sout_log.getLogger().info("floppy: " + "mkRelativeCWD " + fn + " -> " + cdu);
+            OmegaContext.sout_log.getLogger().info("floppy: " + "mkRelativeCWD  " + fn + " -> " + cdu);
+            cdu = cdu.replace("%20", " ").replace("%20", " ").replace("%20", " ").replace("%20", " ");
+            OmegaContext.sout_log.getLogger().info("floppy: " + "mkRelativeCWD' " + fn + " -> " + cdu);
             int len_cd = cdu.length();
 
             String[] sa = new String[2];
@@ -68,6 +71,7 @@ public class Files {
         String cdu = null;
         try {
             cdu = fi.toURI().toURL().toString();
+            cdu = cdu.replace("%20", " ").replace("%20", " ").replace("%20", " ").replace("%20", " ");
         } catch (MalformedURLException ex) {
             return null;
         }
@@ -89,6 +93,7 @@ public class Files {
         String cdu = null;
         try {
             cdu = fi.toURI().toURL().toString();
+            cdu = cdu.replace("%20", " ").replace("%20", " ").replace("%20", " ").replace("%20", " ");
         } catch (MalformedURLException ex) {
             return null;
         }
@@ -110,6 +115,7 @@ public class Files {
         String cdu = null;
         try {
             cdu = fi.toURI().toURL().toString();
+            cdu = cdu.replace("%20", " ").replace("%20", " ").replace("%20", " ").replace("%20", " ");
         } catch (MalformedURLException ex) {
             return null;
         }
