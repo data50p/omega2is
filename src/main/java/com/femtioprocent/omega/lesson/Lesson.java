@@ -2722,8 +2722,9 @@ public class Lesson implements LessonCanvasListener {
 					+ "item pos (xy)" + i_x + ' ' + i_y + "\n"
 					+ "target pos " + tg_ix);
 			    } else {
-				String t_word = tg.getTextAt(tg_ix);
+				String t_word_ = tg.getTextAt(tg_ix);
 
+				String t_word = fixWithStar(t_word_);
 				if (current_test_mode == TM_CREATE) {
 				    if (register != null) {
 					register.word("create:build",
@@ -3221,6 +3222,17 @@ public class Lesson implements LessonCanvasListener {
 
 
 	}
+    }
+
+    private String fixWithStar(String t_word) {
+        if (t_word.contains("*")) {
+            if (t_word.contains(":")) {
+		String[] sa = t_word.split(":");
+		return sa[1];
+	    }
+	    return "";
+	}
+	return t_word;
     }
 
     private Set<String> getMatchingSameActionSpecific(ActionSpecific action_specific, String correct_text) {

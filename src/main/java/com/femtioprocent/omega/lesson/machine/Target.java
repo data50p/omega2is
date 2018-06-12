@@ -525,9 +525,13 @@ public class Target {
                 }
             }
 
-            if (isVar == false) // a == 0 )
+            if (isVar == false) { // a == 0 )
+                if ( sa[i].contains("*") ) {
+                    String ss = sa[i].replaceAll("\\*[0-9]+:?", "");
+                    sa[i] = ss;
+                }
                 sb.append(sa[i]);
-            else {
+            } else {
                 int var_ix = s.charAt(aa) - '0';
                 int ix = 0;
                 String def = "";

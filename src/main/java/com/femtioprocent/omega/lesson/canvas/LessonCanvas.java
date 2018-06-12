@@ -1039,7 +1039,7 @@ public class LessonCanvas extends BaseCanvas {
         box_state.setState(bx, SELECTED, true);
         bx.repaintBox();
 
-        if (bx.getItem().getText().length() > 0) {
+        if ( useThisText(bx.getItem().getText()) ) {
             bx.when_hit = when_hit;
             l_ctxt.getLesson().sendMsg("hBox" + (with_mouse ? "M" : "K"), bx);
         }
@@ -1054,6 +1054,15 @@ public class LessonCanvas extends BaseCanvas {
         }
 
         fireLessonEditorHitItem(bx.o_x, bx.o_y, 1, 'p');
+    }
+
+    private boolean useThisText(String text) {
+        if (text.length() == 0)
+            return false;
+        if ( text.matches("[{]\\*[0-9]*[}]")) {
+            return false;
+        }
+        return true;
     }
 
     public void ready() {
