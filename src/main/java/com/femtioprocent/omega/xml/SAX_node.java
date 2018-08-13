@@ -117,7 +117,7 @@ public class SAX_node extends DefaultHandler {
         InputSource input;
 
         try {
-            String uri = "file:" + new File(file).getAbsolutePath();
+            String uri = (new File(file)).toURI().toString();
 
             SAXParserFactory spf = SAXParserFactory.newInstance();
             if (validating)
