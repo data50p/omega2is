@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="{++1}" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="" Tid="a1" ord="2" type="passive"/>
+<t-item Lid="C" Tid="o" ord="3" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="car" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/car3.wav" text="Auto" var-1="" var-2="" var-3=""/>
+<item Lid="bus" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/bus2.wav" text="Autobus" var-1="" var-2="" var-3=""/>
+<item Lid="mc" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/motorcycle2.wav" text="Motocikl" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/DriveInRelationTo{++2}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/drives2.wav" text="prolazi" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/StopsInRelationTo{++2}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/stops2.wav" text="se zaustavlja" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="a1" ord="2" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/H1/between2.wav" dummytext="izmedu" ord="0" sound="audio/Words-hr/infrontof.wav" text="ispred" var-1="B" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/H1/in front of2.wav" dummytext="ispred" ord="1" sound="audio/Words-hr/behind.wav" text="iza" var-1="A" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="3" type="passive">
+<item Lid="house" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/Objektsform dummy-Revised/H4/boxob.wav" dummytext="kutije" ord="0" sound="audio/Words-hr/houseSINGLE.wav" text="ku{263}e" var-1="" var-2="2" var-3=""/>
+<item Lid="car" action-fname="" action-type="null" dummysound="audio/Words-hr/Objects/F7/aiirplaneob.wav" dummytext="aviona" ord="1" sound="audio/Words-hr/Objects/H4/carobauta.wav" text="auta" var-1="" var-2="1" var-3=""/>
+<item Lid="tree" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/Objektsform dummy-Revised/H4/popsicledukata.wav" dummytext="dukata" ord="2" sound="audio/Words-hr/Objects/H4/tree2.wav" text="drveta" var-1="" var-2="2" var-3=""/>
+<item Lid="mc2" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/Objektsform dummy-Revised/H4/tricycla.wav" dummytext="tricikla" ord="3" sound="audio/Words-hr/Objects/H4/motocycleob.wav" text="motocikla" var-1="" var-2="1" var-3=""/>
+<item Lid="bus2" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/Objektsform dummy-Revised/H4/circusob.wav" dummytext="cirkusa" ord="4" sound="audio/Words-hr/Objects/H4/autobusob.wav" text="autobusa" var-1="" var-2="1" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Auto{s} prolazi{v} ispred{a1} kuće{o}"/>
+<sentence ord="1" text="Autobus{s} prolazi{v} ispred{a1} kuće{o}"/>
+<sentence ord="2" text="Motocikl{s} prolazi{v} ispred{a1} kuće{o}"/>
+<sentence ord="3" text="Auto{s} prolazi{v} ispred{a1} auta{o}"/>
+<sentence ord="4" text="Autobus{s} prolazi{v} ispred{a1} auta{o}"/>
+<sentence ord="5" text="Motocikl{s} prolazi{v} ispred{a1} auta{o}"/>
+<sentence ord="6" text="Motocikl{s} se zaustavlja{v} iza{a1} autobusa{o}"/>
+<sentence ord="7" text="Auto{s} se zaustavlja{v} iza{a1} autobusa{o}"/>
+<sentence ord="8" text="Autobus{s} prolazi{v} iza{a1} kuće{o}"/>
+<sentence ord="9" text="Motocikl{s} prolazi{v} iza{a1} kuće{o}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Auto{s} prolazi{v} ispred{a1} drveta{o}"/>
+<sentence ord="1" text="Autobus{s} prolazi{v} ispred{a1} autobusa{o}"/>
+<sentence ord="2" text="Motocikl{s} prolazi{v} ispred{a1} motocikla{o}"/>
+<sentence ord="3" text="Motocikl{s} prolazi{v} iza{a1} drveta{o}"/>
+<sentence ord="4" text="Autobus{s} prolazi{v} iza{a1} motocikla{o}"/>
+<sentence ord="5" text="Auto{s} se zaustavlja{v} iza{a1} motocikla{o}"/>
+<sentence ord="6" text="Auto{s} prolazi{v} ispred{a1} autobusa{o}"/>
+<sentence ord="7" text="Autobus{s} prolazi{v} ispred{a1} motocikla{o}"/>
+<sentence ord="8" text="Autobus{s} se zaustavlja{v} iza{a1} motocikla{o}"/>
+<sentence ord="9" text="Motocikl{s} se zaustavlja{v} iza{a1} drveta{o}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Motocikl{s} se zaustavlja{v} iza{a1} motocikla{o}"/>
+<sentence ord="1" text="Motocikl{s} se zaustavlja{v} iza{a1} kuće{o}"/>
+<sentence ord="2" text="Autobus{s} se zaustavlja{v} iza{a1} autobusa{o}"/>
+<sentence ord="3" text="Auto{s} se zaustavlja{v} iza{a1} drveta{o}"/>
+<sentence ord="4" text="Auto{s} prolazi{v} ispred{a1} motocikla{o}"/>
+<sentence ord="5" text="Autobus{s} prolazi{v} ispred{a1} drveta{o}"/>
+<sentence ord="6" text="Motocikl{s} se zaustavlja{v} iza{a1} auta{o}"/>
+<sentence ord="7" text="Auto{s} se zaustavlja{v} ispred{a1} autobusa{o}"/>
+<sentence ord="8" text="Autobus{s} prolazi{v} iza{a1} auta{o}"/>
+<sentence ord="9" text="Auto{s} prolazi{v} ispred{a1} kuće{o}"/>
+<sentence ord="10" text="Auto{s} prolazi{v} iza{a1} motocikla{o}"/>
+<sentence ord="11" text="Autobus{s} prolazi{v} iza{a1} autobusa{o}"/>
+<sentence ord="12" text="Autobus{s} se zaustavlja{v} iza{a1} auta{o}"/>
+<sentence ord="13" text="Motocikl{s} prolazi{v} ispred{a1} drveta{o}"/>
+<sentence ord="14" text="Motocikl{s} se zaustavlja{v} ispred{a1} drveta{o}"/>
+<sentence ord="15" text="Auto{s} se zaustavlja{v} ispred{a1} auta{o}"/>
+<sentence ord="16" text="Auto{s} prolazi{v} iza{a1} kuće{o}"/>
+<sentence ord="17" text="Auto{s} se zaustavlja{v} iza{a1} auta{o}"/>
+<sentence ord="18" text="Autobus{s} prolazi{v} iza{a1} drveta{o}"/>
+<sentence ord="19" text="Motocikl{s} prolazi{v} ispred{a1} autobusa{o}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Motocikl{s} prolazi{v} iza{a1} motocikla{o}"/>
+<sentence ord="1" text="Autobus{s} se zaustavlja{v} ispred{a1} autobusa{o}"/>
+<sentence ord="2" text="Auto{s} se zaustavlja{v} iza{a1} kuće{o}"/>
+<sentence ord="3" text="Auto{s} prolazi{v} iza{a1} auta{o}"/>
+<sentence ord="4" text="Autobus{s} se zaustavlja{v} ispred{a1} kuće{o}"/>
+<sentence ord="5" text="Autobus{s} se zaustavlja{v} ispred{a1} drveta{o}"/>
+<sentence ord="6" text="Motocikl{s} prolazi{v} iza{a1} auta{o}"/>
+<sentence ord="7" text="Motocikl{s} se zaustavlja{v} ispred{a1} autobusa{o}"/>
+<sentence ord="8" text="Auto{s} prolazi{v} iza{a1} drveta{o}"/>
+<sentence ord="9" text="Auto{s} prolazi{v} iza{a1} autobusa{o}"/>
+<sentence ord="10" text="Auto{s} se zaustavlja{v} ispred{a1} drveta{o}"/>
+<sentence ord="11" text="Auto{s} se zaustavlja{v} ispred{a1} motocikla{o}"/>
+<sentence ord="12" text="Autobus{s} se zaustavlja{v} ispred{a1} auta{o}"/>
+<sentence ord="13" text="Autobus{s} se zaustavlja{v} ispred{a1} motocikla{o}"/>
+<sentence ord="14" text="Motocikl{s} se zaustavlja{v} ispred{a1} motocikla{o}"/>
+<sentence ord="15" text="Motocikl{s} prolazi{v} iza{a1} autobusa{o}"/>
+<sentence ord="16" text="Autobus{s} se zaustavlja{v} iza{a1} kuće{o}"/>
+<sentence ord="17" text="Autobus{s} se zaustavlja{v} iza{a1} drveta{o}"/>
+<sentence ord="18" text="Auto{s} prolazi{v} ispred{a1} drveta{o}"/>
+<sentence ord="19" text="Auto{s} se zaustavlja{v} ispred{a1} kuće{o}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

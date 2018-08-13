@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="L2-6" ord="0">
+<target>
+<t-item Lid="A" Tid="sv" ord="0" type="action"/>
+<t-item Lid="D" Tid="o" ord="1" type="passive"/>
+</target>
+<items>
+<item-entry Tid="sv" ord="0" type="action">
+<item Lid="{L2-1.A.Lid:mouse}" action-fname="anim/Stories/L2/L2-6" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/L2/L2-6.wav" text="They both got hungry, and ate some" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="1" type="passive">
+<item Lid="Apple" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/L2/L2-6-RedApples.wav" text="red apples." var-1="" var-2="" var-3=""/>
+<item Lid="Berries" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/L2/L2-6-PurpleBerries.wav" text="purple berries." var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<sign_specific/>
+<test_entries/>
+<story isfirst="no">
+<link next="lesson-en/active/L_Stories/L2/L2-7.omega_lesson"/>
+</story>
+</omega_lesson>

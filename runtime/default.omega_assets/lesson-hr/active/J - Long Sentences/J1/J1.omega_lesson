@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="B" Tid="o" ord="2" type="passive"/>
+<t-item Lid="C" Tid="av" ord="3" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="octopus" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/octopus2.wav" text="Hobotnica" var-1="" var-2="" var-3=""/>
+<item Lid="RedhBoy" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/redhaired boy2.wav" text="Crvenokosi dje{269}ak" var-1="" var-2="" var-3=""/>
+<item Lid="BlondGirl" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/blond girl2.wav" text="Plavokosa djevoj{269}ica" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/Kick{++1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/kicks2.wav" text="udara nogom" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Head{++1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/heads2.wav" text="udara glavom" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="2" type="passive">
+<item Lid="balloons" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/baloons2.wav" text="balone" var-1="Balloons" var-2="" var-3=""/>
+<item Lid="ball" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/football2.wav" text="nogometnu loptu" var-1="Ball" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="3" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/J1/intohouse2.wav" dummytext="u ku{263}u " ord="0" sound="audio/Words-hr/into the goal2.wav" text="u gol" var-1="IntoGoal" var-2="" var-3=""/>
+<item Lid="BlondGirl2" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/J1/todarkgirl2.wav" dummytext="u tamnoputu djevoj{269}icu" ord="1" sound="audio/Words-hr/toblondgirl2.wav" text="u plavokosu djevoj{269}icu" var-1="ToPerson" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/J1/overgoalintotractor.wav" dummytext="preko gola u traktor" ord="2" sound="audio/Words-hr/overgaolintohelicopter2.wav" text="preko gola u helikopter" var-1="OverGoalHeli" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Hobotnica{s} udara nogom{v} balone{o} u gol{av}"/>
+<sentence ord="1" text="Crvenokosi dječak{s} udara nogom{v} balone{o} u gol{av}"/>
+<sentence ord="2" text="Plavokosa djevojčica{s} udara nogom{v} balone{o} u gol{av}"/>
+<sentence ord="3" text="Hobotnica{s} udara nogom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="4" text="Crvenokosi dječak{s} udara nogom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="5" text="Plavokosa djevojčica{s} udara nogom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="6" text="Hobotnica{s} udara nogom{v} balone{o} preko gola u helikopter{av}"/>
+<sentence ord="7" text="Crvenokosi dječak{s} udara nogom{v} balone{o} preko gola u helikopter{av}"/>
+<sentence ord="8" text="Crvenokosi dječak{s} udara glavom{v} balone{o} u gol{av}"/>
+<sentence ord="9" text="Plavokosa djevojčica{s} udara nogom{v} nogometnu loptu{o} preko gola u helikopter{av}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Plavokosa djevojčica{s} udara glavom{v} nogometnu loptu{o} preko gola u helikopter{av}"/>
+<sentence ord="1" text="Plavokosa djevojčica{s} udara nogom{v} nogometnu loptu{o} u gol{av}"/>
+<sentence ord="2" text="Crvenokosi dječak{s} udara glavom{v} balone{o} preko gola u helikopter{av}"/>
+<sentence ord="3" text="Crvenokosi dječak{s} udara nogom{v} nogometnu loptu{o} u gol{av}"/>
+<sentence ord="4" text="Hobotnica{s} udara nogom{v} nogometnu loptu{o} u gol{av}"/>
+<sentence ord="5" text="Hobotnica{s} udara glavom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="6" text="Crvenokosi dječak{s} udara nogom{v} nogometnu loptu{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="7" text="Crvenokosi dječak{s} udara glavom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="8" text="Plavokosa djevojčica{s} udara nogom{v} balone{o} preko gola u helikopter{av}"/>
+<sentence ord="9" text="Crvenokosi dječak{s} udara glavom{v} nogometnu loptu{o} u gol{av}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Crvenokosi dječak{s} udara glavom{v} nogometnu loptu{o} preko gola u helikopter{av}"/>
+<sentence ord="1" text="Hobotnica{s} udara nogom{v} balone{o} u gol{av}"/>
+<sentence ord="2" text="Crvenokosi dječak{s} udara glavom{v} nogometnu loptu{o} u gol{av}"/>
+<sentence ord="3" text="Hobotnica{s} udara glavom{v} nogometnu loptu{o} preko gola u helikopter{av}"/>
+<sentence ord="4" text="Crvenokosi dječak{s} udara glavom{v} balone{o} preko gola u helikopter{av}"/>
+<sentence ord="5" text="Hobotnica{s} udara nogom{v} nogometnu loptu{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="6" text="Crvenokosi dječak{s} udara nogom{v} balone{o} preko gola u helikopter{av}"/>
+<sentence ord="7" text="Plavokosa djevojčica{s} udara nogom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="8" text="Hobotnica{s} udara glavom{v} balone{o} preko gola u helikopter{av}"/>
+<sentence ord="9" text="Plavokosa djevojčica{s} udara glavom{v} balone{o} u gol{av}"/>
+<sentence ord="10" text="Plavokosa djevojčica{s} udara nogom{v} balone{o} preko gola u helikopter{av}"/>
+<sentence ord="11" text="Plavokosa djevojčica{s} udara glavom{v} nogometnu loptu{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="12" text="Plavokosa djevojčica{s} udara glavom{v} nogometnu loptu{o} u gol{av}"/>
+<sentence ord="13" text="Crvenokosi dječak{s} udara nogom{v} balone{o} u gol{av}"/>
+<sentence ord="14" text="Hobotnica{s} udara nogom{v} nogometnu loptu{o} preko gola u helikopter{av}"/>
+<sentence ord="15" text="Hobotnica{s} udara nogom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="16" text="Hobotnica{s} udara glavom{v} nogometnu loptu{o} u gol{av}"/>
+<sentence ord="17" text="Crvenokosi dječak{s} udara glavom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="18" text="Plavokosa djevojčica{s} udara glavom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="19" text="Hobotnica{s} udara glavom{v} nogometnu loptu{o} u plavokosu djevojčicu{av}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Plavokosa djevojčica{s} udara glavom{v} nogometnu loptu{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="1" text="Crvenokosi dječak{s} udara nogom{v} nogometnu loptu{o} u gol{av}"/>
+<sentence ord="2" text="Crvenokosi dječak{s} udara glavom{v} nogometnu loptu{o} preko gola u helikopter{av}"/>
+<sentence ord="3" text="Plavokosa djevojčica{s} udara nogom{v} nogometnu loptu{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="4" text="Plavokosa djevojčica{s} udara glavom{v} balone{o} preko gola u helikopter{av}"/>
+<sentence ord="5" text="Hobotnica{s} udara glavom{v} nogometnu loptu{o} u gol{av}"/>
+<sentence ord="6" text="Plavokosa djevojčica{s} udara nogom{v} nogometnu loptu{o} u gol{av}"/>
+<sentence ord="7" text="Crvenokosi dječak{s} udara nogom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="8" text="Crvenokosi dječak{s} udara nogom{v} nogometnu loptu{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="9" text="Crvenokosi dječak{s} udara nogom{v} nogometnu loptu{o} preko gola u helikopter{av}"/>
+<sentence ord="10" text="Hobotnica{s} udara nogom{v} nogometnu loptu{o} preko gola u helikopter{av}"/>
+<sentence ord="11" text="Crvenokosi dječak{s} udara glavom{v} balone{o} u gol{av}"/>
+<sentence ord="12" text="Hobotnica{s} udara glavom{v} balone{o} u gol{av}"/>
+<sentence ord="13" text="Plavokosa djevojčica{s} udara nogom{v} balone{o} u gol{av}"/>
+<sentence ord="14" text="Plavokosa djevojčica{s} udara glavom{v} nogometnu loptu{o} preko gola u helikopter{av}"/>
+<sentence ord="15" text="Hobotnica{s} udara nogom{v} nogometnu loptu{o} u gol{av}"/>
+<sentence ord="16" text="Hobotnica{s} udara glavom{v} balone{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="17" text="Crvenokosi dječak{s} udara glavom{v} nogometnu loptu{o} u plavokosu djevojčicu{av}"/>
+<sentence ord="18" text="Plavokosa djevojčica{s} udara nogom{v} nogometnu loptu{o} preko gola u helikopter{av}"/>
+<sentence ord="19" text="Hobotnica{s} udara nogom{v} balone{o} preko gola u helikopter{av}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="" Tid="av" ord="2" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="boy" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/boy3.wav" text="Dje{269}ak" var-1="" var-2="" var-3=""/>
+<item Lid="girl" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/girlSENTENCE.wav" text="Djevoj{269}ica" var-1="" var-2="" var-3=""/>
+<item Lid="ghost" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/ghost2.wav" text="Duh" var-1="" var-2="" var-3=""/>
+<item Lid="gorilla" action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/Words-hr/gorilla2.wav" text="Gorila" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/OutOf{+1}" action-type="omega_anim" dummysound="audio/Words-hr/jumps over4.wav" dummytext="ska{269}e preko" ord="0" sound="audio/Words-hr/jumpsoutof.wav" text="iska{269}e iz" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/OutBehind{+1}" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/H5/looks under.wav" dummytext="proviruje ispod " ord="1" sound="audio/Words-hr/peaksoutof2.wav" text="proviruje iza" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="2" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/highgrass2.wav" text="visoke trave" var-1="Grass" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/longcurtain3.wav" text="duga{269}ke zavjese" var-1="Curtain" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/redbarn3.wav" text="crvene staje" var-1="Barn" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/Words-hr/hugebush2.wav" text="velikog grma" var-1="Bush" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Dječak{s} iskače iz{v} visoke trave{av}"/>
+<sentence ord="1" text="Djevojčica{s} iskače iz{v} visoke trave{av}"/>
+<sentence ord="2" text="Duh{s} iskače iz{v} visoke trave{av}"/>
+<sentence ord="3" text="Gorila{s} iskače iz{v} visoke trave{av}"/>
+<sentence ord="4" text="Dječak{s} iskače iz{v} velikog grma{av}"/>
+<sentence ord="5" text="Djevojčica{s} proviruje iza{v} visoke trave{av}"/>
+<sentence ord="6" text="Duh{s} iskače iz{v} velikog grma{av}"/>
+<sentence ord="7" text="Gorila{s} iskače iz{v} velikog grma{av}"/>
+<sentence ord="8" text="Dječak{s} iskače iz{v} crvene staje{av}"/>
+<sentence ord="9" text="Djevojčica{s} iskače iz{v} velikog grma{av}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Gorila{s} proviruje iza{v} velikog grma{av}"/>
+<sentence ord="1" text="Duh{s} proviruje iza{v} velikog grma{av}"/>
+<sentence ord="2" text="Djevojčica{s} proviruje iza{v} velikog grma{av}"/>
+<sentence ord="3" text="Dječak{s} proviruje iza{v} velikog grma{av}"/>
+<sentence ord="4" text="Djevojčica{s} proviruje iza{v} dugačke zavjese{av}"/>
+<sentence ord="5" text="Duh{s} iskače iz{v} crvene staje{av}"/>
+<sentence ord="6" text="Gorila{s} iskače iz{v} dugačke zavjese{av}"/>
+<sentence ord="7" text="Djevojčica{s} proviruje iza{v} crvene staje{av}"/>
+<sentence ord="8" text="Duh{s} proviruje iza{v} dugačke zavjese{av}"/>
+<sentence ord="9" text="Dječak{s} iskače iz{v} dugačke zavjese{av}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Dječak{s} proviruje iza{v} visoke trave{av}"/>
+<sentence ord="1" text="Dječak{s} proviruje iza{v} dugačke zavjese{av}"/>
+<sentence ord="2" text="Djevojčica{s} iskače iz{v} dugačke zavjese{av}"/>
+<sentence ord="3" text="Djevojčica{s} iskače iz{v} crvene staje{av}"/>
+<sentence ord="4" text="Duh{s} iskače iz{v} dugačke zavjese{av}"/>
+<sentence ord="5" text="Duh{s} proviruje iza{v} visoke trave{av}"/>
+<sentence ord="6" text="Gorila{s} proviruje iza{v} crvene staje{av}"/>
+<sentence ord="7" text="Gorila{s} proviruje iza{v} visoke trave{av}"/>
+<sentence ord="8" text="Dječak{s} proviruje iza{v} crvene staje{av}"/>
+<sentence ord="9" text="Gorila{s} proviruje iza{v} dugačke zavjese{av}"/>
+<sentence ord="10" text="Dječak{s} iskače iz{v} visoke trave{av}"/>
+<sentence ord="11" text="Djevojčica{s} iskače iz{v} velikog grma{av}"/>
+<sentence ord="12" text="Duh{s} iskače iz{v} visoke trave{av}"/>
+<sentence ord="13" text="Duh{s} iskače iz{v} crvene staje{av}"/>
+<sentence ord="14" text="Gorila{s} iskače iz{v} velikog grma{av}"/>
+<sentence ord="15" text="Djevojčica{s} proviruje iza{v} crvene staje{av}"/>
+<sentence ord="16" text="Dječak{s} proviruje iza{v} velikog grma{av}"/>
+<sentence ord="17" text="Dječak{s} iskače iz{v} dugačke zavjese{av}"/>
+<sentence ord="18" text="Djevojčica{s} proviruje iza{v} velikog grma{av}"/>
+<sentence ord="19" text="Dječak{s} iskače iz{v} crvene staje{av}"/>
+<sentence ord="22" text="Djevojčica{s} proviruje iza{v} dugačke zavjese{av}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Gorila{s} iskače iz{v} crvene staje{av}"/>
+<sentence ord="1" text="Gorila{s} iskače iz{v} velikog grma{av}"/>
+<sentence ord="2" text="Duh{s} proviruje iza{v} crvene staje{av}"/>
+<sentence ord="3" text="Djevojčica{s} proviruje iza{v} crvene staje{av}"/>
+<sentence ord="4" text="Gorila{s} proviruje iza{v} dugačke zavjese{av}"/>
+<sentence ord="5" text="Dječak{s} iskače iz{v} dugačke zavjese{av}"/>
+<sentence ord="6" text="Dječak{s} proviruje iza{v} velikog grma{av}"/>
+<sentence ord="7" text="Djevojčica{s} iskače iz{v} velikog grma{av}"/>
+<sentence ord="8" text="Djevojčica{s} proviruje iza{v} dugačke zavjese{av}"/>
+<sentence ord="9" text="Djevojčica{s} proviruje iza{v} velikog grma{av}"/>
+<sentence ord="10" text="Duh{s} iskače iz{v} dugačke zavjese{av}"/>
+<sentence ord="11" text="Duh{s} iskače iz{v} crvene staje{av}"/>
+<sentence ord="12" text="Duh{s} proviruje iza{v} dugačke zavjese{av}"/>
+<sentence ord="13" text="Duh{s} proviruje iza{v} visoke trave{av}"/>
+<sentence ord="14" text="Gorila{s} iskače iz{v} visoke trave{av}"/>
+<sentence ord="15" text="Duh{s} proviruje iza{v} velikog grma{av}"/>
+<sentence ord="16" text="Gorila{s} proviruje iza{v} velikog grma{av}"/>
+<sentence ord="17" text="Gorila{s} iskače iz{v} dugačke zavjese{av}"/>
+<sentence ord="18" text="Dječak{s} iskače iz{v} velikog grma{av}"/>
+<sentence ord="19" text="Gorila{s} proviruje iza{v} visoke trave{av}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

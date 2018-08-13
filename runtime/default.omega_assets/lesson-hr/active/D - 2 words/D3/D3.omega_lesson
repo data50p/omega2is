@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="dog" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/D3/log.wav" dummytext="Panj" ord="0" sound="audio/Words-hr/dog.wav" text="Pas" var-1="n" var-2="" var-3=""/>
+<item Lid="banana" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/D3/salami.wav" dummytext="Salama" ord="1" sound="audio/Words-hr/banana2.wav" text="Banana" var-1="n" var-2="" var-3=""/>
+<item Lid="mouse" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/D3/broom.wav" dummytext="Partvi{353}" ord="2" sound="audio/Words-hr/mouse.wav" text="Mi{353}" var-1="n" var-2="" var-3=""/>
+<item Lid="ball" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/D3/shovel.wav" dummytext="Lopata" ord="3" sound="audio/Words-hr/ball2.wav" text="Lopta" var-1="null" var-2="null" var-3="null"/>
+<item Lid="frog" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/D3/ditch.wav" dummytext="Graba" ord="4" sound="audio/Words-hr/frog5.wav" text="{381}aba" var-1="null" var-2="null" var-3="null"/>
+<item Lid="cat" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/D3/scarf.wav" dummytext="Marama" ord="5" sound="audio/Words-hr/cat3.wav" text="Ma{269}ka" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/RollingInMeadow" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/rolls.wav" text="se kotrlja" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/BouncingInMat" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/bounces2.wav" text="ska{269}e" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/GrowingInMeadow" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/grows3.wav" text="raste" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/ActiveAnim/FlyPlane" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/Words-hr/flies2.wav" text="leti" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/ActiveAnim/SleepingInGrassByTree" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/Words-hr/snores2.wav" text="hr{269}e" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/ActiveAnim/SingingInRoomByWindow" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/Words-hr/sings2.wav" text="pjeva" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Pas{s} se kotrlja{v}"/>
+<sentence ord="1" text="Banana{s} se kotrlja{v}"/>
+<sentence ord="2" text="Banana{s} hrče{v}"/>
+<sentence ord="3" text="Miš{s} raste{v}"/>
+<sentence ord="4" text="Lopta{s} leti{v}"/>
+<sentence ord="5" text="Žaba{s} skače{v}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Mačka{s} pjeva{v}"/>
+<sentence ord="1" text="Žaba{s} hrče{v}"/>
+<sentence ord="2" text="Lopta{s} raste{v}"/>
+<sentence ord="3" text="Miš{s} leti{v}"/>
+<sentence ord="4" text="Banana{s} pjeva{v}"/>
+<sentence ord="5" text="Pas{s} se kotrlja{v}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Mačka{s} pjeva{v}"/>
+<sentence ord="1" text="Pas{s} raste{v}"/>
+<sentence ord="2" text="Žaba{s} hrče{v}"/>
+<sentence ord="3" text="Žaba{s} skače{v}"/>
+<sentence ord="4" text="Lopta{s} leti{v}"/>
+<sentence ord="5" text="Miš{s} pjeva{v}"/>
+<sentence ord="6" text="Lopta{s} se kotrlja{v}"/>
+<sentence ord="7" text="Miš{s} leti{v}"/>
+<sentence ord="8" text="Banana{s} pjeva{v}"/>
+<sentence ord="9" text="Pas{s} pjeva{v}"/>
+<sentence ord="10" text="Banana{s} raste{v}"/>
+<sentence ord="11" text="Mačka{s} raste{v}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Pas{s} se kotrlja{v}"/>
+<sentence ord="1" text="Mačka{s} skače{v}"/>
+<sentence ord="2" text="Banana{s} skače{v}"/>
+<sentence ord="3" text="Miš{s} se kotrlja{v}"/>
+<sentence ord="4" text="Mačka{s} leti{v}"/>
+<sentence ord="5" text="Miš{s} hrče{v}"/>
+<sentence ord="6" text="Lopta{s} se kotrlja{v}"/>
+<sentence ord="7" text="Banana{s} pjeva{v}"/>
+<sentence ord="8" text="Lopta{s} pjeva{v}"/>
+<sentence ord="9" text="Žaba{s} se kotrlja{v}"/>
+<sentence ord="10" text="Žaba{s} pjeva{v}"/>
+<sentence ord="11" text="Pas{s} leti{v}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="B" Tid="o" ord="2" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s,o" ord="0" type="actor">
+<item Lid="hand" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nn/Leksjonsord/handa.wav" text="handa" var-1="n" var-2="" var-3=""/>
+<item Lid="cup" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-nn/Leksjonsord/koppen.wav" text="koppen" var-1="n" var-2="" var-3=""/>
+<item Lid="flower" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-nn/Leksjonsord/blomen2.wav" text="blomen" var-1="n" var-2="" var-3=""/>
+<item Lid="cat" action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/words-nn/Leksjonsord/katta.wav" text="katta" var-1="n" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/JumpRoomTable" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nn/Leksjonsord/hopparover.wav" text="hoppar over" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="1" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific>
+<value key="Koppen hoppar over handa" val="anim/ActiveVideo/CupJumpsHand.mpg"/>
+<value key="Koppen hoppar over koppen" val="anim/ActiveVideo/CupJumpsCup.mpg"/>
+</action_specific>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Handa{s} hoppar over{v} handa{o}"/>
+<sentence ord="1" text="Koppen{s} hoppar over{v} handa{o}"/>
+<sentence ord="2" text="Blomen{s} hoppar over{v} katta{o}"/>
+<sentence ord="3" text="Katta{s} hoppar over{v} blomen{o}"/>
+<sentence ord="4" text="Katta{s} hoppar over{v} koppen{o}"/>
+<sentence ord="5" text="Blomen{s} hoppar over{v} koppen{o}"/>
+<sentence ord="6" text="Koppen{s} hoppar over{v} blomen{o}"/>
+<sentence ord="7" text="Koppen{s} hoppar over{v} koppen{o}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Koppen{s} hoppar over{v} koppen{o}"/>
+<sentence ord="1" text="Koppen{s} hoppar over{v} blomen{o}"/>
+<sentence ord="2" text="Blomen{s} hoppar over{v} koppen{o}"/>
+<sentence ord="3" text="Katta{s} hoppar over{v} koppen{o}"/>
+<sentence ord="4" text="Katta{s} hoppar over{v} blomen{o}"/>
+<sentence ord="5" text="Blomen{s} hoppar over{v} katta{o}"/>
+<sentence ord="6" text="Koppen{s} hoppar over{v} handa{o}"/>
+<sentence ord="7" text="Handa{s} hoppar over{v} handa{o}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Koppen{s} hoppar over{v} handa{o}"/>
+<sentence ord="1" text="Blomen{s} hoppar over{v} katta{o}"/>
+<sentence ord="2" text="Katta{s} hoppar over{v} blomen{o}"/>
+<sentence ord="3" text="Koppen{s} hoppar over{v} koppen{o}"/>
+<sentence ord="4" text="Koppen{s} hoppar over{v} blomen{o}"/>
+<sentence ord="5" text="Handa{s} hoppar over{v} handa{o}"/>
+<sentence ord="6" text="Katta{s} hoppar over{v} koppen{o}"/>
+<sentence ord="7" text="Blomen{s} hoppar over{v} koppen{o}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Blomen{s} hoppar over{v} koppen{o}"/>
+<sentence ord="1" text="Katta{s} hoppar over{v} koppen{o}"/>
+<sentence ord="2" text="Handa{s} hoppar over{v} handa{o}"/>
+<sentence ord="3" text="Koppen{s} hoppar over{v} blomen{o}"/>
+<sentence ord="4" text="Koppen{s} hoppar over{v} koppen{o}"/>
+<sentence ord="5" text="Katta{s} hoppar over{v} blomen{o}"/>
+<sentence ord="6" text="Blomen{s} hoppar over{v} katta{o}"/>
+<sentence ord="7" text="Koppen{s} hoppar over{v} handa{o}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="v" ord="0" type="action"/>
+</target>
+<items>
+<item-entry Tid="v" ord="0" type="action">
+<item Lid="boy" action-fname="anim/ActiveAnim/B1" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/boy3.wav" text="dje{269}ak" var-1="" var-2="" var-3=""/>
+<item Lid="potato" action-fname="anim/ActiveAnim/ActorpresB4DownOnRoundTable" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/potato4.wav" text="krumpir" var-1="" var-2="" var-3=""/>
+<item Lid="girl" action-fname="anim/ActiveAnim/B1" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/girlSINGLE.wav" text="djevoj{269}ica" var-1="null" var-2="null" var-3="null"/>
+<item Lid="flag" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/Words-hr/flag2.wav" text="zastava" var-1="null" var-2="null" var-3="null"/>
+<item Lid="fish" action-fname="anim/ActiveAnim/ActorpresB5Water" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/Words-hr/fishSINGLE.wav" text="riba" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Dječak{v}"/>
+<sentence ord="1" text="Krumpir{v}"/>
+<sentence ord="2" text="Djevojčica{v}"/>
+<sentence ord="3" text="Zastava{v}"/>
+<sentence ord="4" text="Riba{v}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Riba{v}"/>
+<sentence ord="1" text="Zastava{v}"/>
+<sentence ord="2" text="Djevojčica{v}"/>
+<sentence ord="3" text="Krumpir{v}"/>
+<sentence ord="4" text="Dječak{v}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Djevojčica{v}"/>
+<sentence ord="1" text="Riba{v}"/>
+<sentence ord="2" text="Zastava{v}"/>
+<sentence ord="3" text="Dječak{v}"/>
+<sentence ord="4" text="Krumpir{v}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Dječak{v}"/>
+<sentence ord="1" text="Zastava{v}"/>
+<sentence ord="2" text="Krumpir{v}"/>
+<sentence ord="3" text="Riba{v}"/>
+<sentence ord="4" text="Djevojčica{v}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

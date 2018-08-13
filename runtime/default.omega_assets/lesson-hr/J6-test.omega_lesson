@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="" Tid="a" ord="0" type="passive"/>
+<t-item Lid="A" Tid="s" ord="1" type="passive"/>
+<t-item Lid="" Tid="v" ord="2" type="action"/>
+<t-item Lid="" Tid="v2" ord="3" type="passive"/>
+<t-item Lid="B" Tid="o" ord="4" type="passive"/>
+</target>
+<items>
+<item-entry Tid="a" ord="0" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/singingfox2.wav" text="Raspjevana" var-1="singing" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/cryingfox2.wav" text="Uplakana" var-1="crying" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="s" ord="1" type="actor">
+<item Lid="fox:{-1}" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/fox.wav" text="lisica" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="1" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="2" type="action">
+<item action-fname="anim/ActiveAnim/Bridge{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/runsoverbridge2.wav" text="tr{269}i preko mosta" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Lake{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/sailsacrosslake2.wav" text="plovi preko jezera" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v2" ord="3" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/J4/iguraandpushes.wav" dummytext="i gura" ord="0" sound="audio/Words-hr/andhugs2.wav" text="i grli" var-1="Hug" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/J4/iodmazeandharms.wav" dummytext="odma{382}e" ord="1" sound="audio/Words-hr/andhelps2.wav" text="i poma{382}e" var-1="Help" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="audio/Words-hr/Dummywords/J4/irazmazujeandpuzzlesat.wav" dummytext="i razmazuje" ord="2" sound="audio/Words-hr/andpointsat2.wav" text="i pokazuje" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="4" type="passive">
+<item Lid="bear" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/bearmedvjeda.wav" text="medvjeda" var-1="" var-2="" var-3=""/>
+<item Lid="cat" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/catmacku.wav" text="ma{269}ku" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/bearmedvjedu.wav" text="medvjedu" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/Words-hr/catmacki.wav" text="ma{269}ki" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Den stora bävern äter den gröna bananen"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Den lilla bananen hoppar över det stora äpplet"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Den lilla bävern gömmer den gröna bananen"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Det stora äpplet äter den gröna bananen"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

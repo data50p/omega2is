@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#33ff00" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="" Tid="a" ord="0" type="passive"/>
+<t-item Lid="A" Tid="s" ord="1" type="actor"/>
+<t-item Lid="" Tid="v" ord="2" type="action"/>
+<t-item Lid="" Tid="av" ord="3" type="passive"/>
+<t-item Lid="B" Tid="pf" ord="4" type="actor"/>
+</target>
+<items>
+<item-entry Tid="a" ord="0" type="passive">
+<item dummysound="" dummytext="" ord="0" sound="audio/words-nb_NO_BN/thebig.wav" text="Den store" var-1="big" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="1" sound="audio/words-nb_NO_BN/thesmall.wav" text="Den lille" var-1="small" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="s" ord="1" type="actor">
+<item Lid="blowfish:{-1}" dummysound="" dummytext="" ord="0" sound="audio/words-nb_NO_BN/blowfish.wav" text="kulefisken" var-1="n" var-2="" var-3=""/>
+<item Lid="frog:{-1}" dummysound="" dummytext="" ord="1" sound="audio/words-nb_NO_BN/frog.wav" text="frosken" var-1="n" var-2="" var-3=""/>
+<item Lid="beaver:{-1}" dummysound="" dummytext="" ord="2" sound="audio/words-nb_NO_BN/beaver.wav" text="beveren" var-1="n" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="2" type="action">
+<item action-fname="anim/ActiveAnim/Swim{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nb_NO_BN/swims.wav" text="svømmer" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Dive{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-nb_NO_BN/dives.wav" text="dykker" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="3" type="passive">
+<item dummysound="" dummytext="" ord="0" sound="audio/words-nb_NO_BN/UnderTheBoat.wav" text="under båten" var-1="UnderTheBoat" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="1" sound="audio/words-nb_NO_BN/ThroughTheSeaweed.wav" text="gjennom tangen" var-1="ThroughTheSeaweed" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="2" sound="audio/words-nb_NO_BN/BehindTheStone.wav" text="bak steinen" var-1="BehindTheStone" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="pf" ord="4" type="passive">
+<item Lid="bubbles" dummysound="audio/words-nb_NO_BN/dummy/andblowsball.wav" dummytext="og blåser boller" ord="0" sound="audio/words-nb_NO_BN/AndBlowsBubbles.wav" text="og blåser bobler" var-1="" var-2="" var-3=""/>
+<item Lid="fish" dummysound="audio/words-nb_NO_BN/dummy/andchasesthelittlebird.wav" dummytext="og jager den lillw fuglen" ord="1" sound="audio/words-nb_NO_BN/AndChasesTheLittleFish.wav" text="og jager den lille fisken" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Den store{a} kulefisken{s} svømmer{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="1" text="Den store{a} kulefisken{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="2" text="Den lille{a} frosken{s} svømmer{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="3" text="Den store{a} frosken{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="4" text="Den lille{a} kulefisken{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="5" text="Den lille{a} beveren{s} dykker{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="6" text="Den store{a} beveren{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="7" text="Den store{a} beveren{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="8" text="Den lille{a} kulefisken{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="9" text="Den lille{a} kulefisken{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="10" text="Den store{a} frosken{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="11" text="Den store{a} frosken{s} dykker{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="12" text="Den lille{a} beveren{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="13" text="Den store{a} beveren{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="14" text="Den store{a} frosken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="15" text="Den store{a} kulefisken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="16" text="Den store{a} kulefisken{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="17" text="Den store{a} frosken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="18" text="Den store{a} frosken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="19" text="Den store{a} kulefisken{s} dykker{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="20" text="Den lille{a} kulefisken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="21" text="Den lille{a} frosken{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="22" text="Den lille{a} frosken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="23" text="Den store{a} beveren{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="24" text="Den lille{a} beveren{s} dykker{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="25" text="Den lille{a} beveren{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="26" text="Den store{a} frosken{s} dykker{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="27" text="Den store{a} beveren{s} svømmer{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="28" text="Den store{a} kulefisken{s} svømmer{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="29" text="Den lille{a} kulefisken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="30" text="Den lille{a} kulefisken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="31" text="Den store{a} beveren{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="32" text="Den lille{a} frosken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="33" text="Den lille{a} frosken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="34" text="Den lille{a} beveren{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="35" text="Den store{a} kulefisken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Den store{a} kulefisken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="1" text="Den lille{a} beveren{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="2" text="Den lille{a} frosken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="3" text="Den lille{a} frosken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="4" text="Den store{a} beveren{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="5" text="Den lille{a} kulefisken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="6" text="Den lille{a} kulefisken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="7" text="Den store{a} kulefisken{s} svømmer{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="8" text="Den store{a} beveren{s} svømmer{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="9" text="Den store{a} frosken{s} dykker{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="10" text="Den lille{a} beveren{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="11" text="Den lille{a} beveren{s} dykker{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="12" text="Den store{a} beveren{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="13" text="Den lille{a} frosken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="14" text="Den lille{a} frosken{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="15" text="Den lille{a} kulefisken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="16" text="Den store{a} kulefisken{s} dykker{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="17" text="Den store{a} frosken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="18" text="Den store{a} frosken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="19" text="Den store{a} kulefisken{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="20" text="Den store{a} kulefisken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="21" text="Den store{a} frosken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="22" text="Den store{a} beveren{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="23" text="Den lille{a} beveren{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="24" text="Den store{a} frosken{s} dykker{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="25" text="Den store{a} frosken{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="26" text="Den lille{a} kulefisken{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="27" text="Den lille{a} kulefisken{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="28" text="Den store{a} beveren{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="29" text="Den store{a} beveren{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="30" text="Den lille{a} beveren{s} dykker{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="31" text="Den lille{a} kulefisken{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="32" text="Den store{a} frosken{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="33" text="Den lille{a} frosken{s} svømmer{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="34" text="Den store{a} kulefisken{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="35" text="Den store{a} kulefisken{s} svømmer{v} under båten{av} og blåser bobler{pf}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Den lille{a} kulefisken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="1" text="Den store{a} kulefisken{s} dykker{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="2" text="Den store{a} frosken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="3" text="Den store{a} frosken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="4" text="Den store{a} kulefisken{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="5" text="Den store{a} kulefisken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="6" text="Den store{a} frosken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="7" text="Den store{a} beveren{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="8" text="Den lille{a} beveren{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="9" text="Den store{a} frosken{s} dykker{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="10" text="Den store{a} frosken{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="11" text="Den lille{a} kulefisken{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="12" text="Den lille{a} kulefisken{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="13" text="Den store{a} beveren{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="14" text="Den store{a} beveren{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="15" text="Den lille{a} beveren{s} dykker{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="16" text="Den lille{a} kulefisken{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="17" text="Den store{a} frosken{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="18" text="Den lille{a} frosken{s} svømmer{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="19" text="Den store{a} kulefisken{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="20" text="Den store{a} kulefisken{s} svømmer{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="21" text="Den store{a} kulefisken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="22" text="Den lille{a} beveren{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="23" text="Den lille{a} frosken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="24" text="Den lille{a} frosken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="25" text="Den store{a} beveren{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="26" text="Den lille{a} kulefisken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="27" text="Den lille{a} kulefisken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="28" text="Den store{a} kulefisken{s} svømmer{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="29" text="Den store{a} beveren{s} svømmer{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="30" text="Den store{a} frosken{s} dykker{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="31" text="Den lille{a} beveren{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="32" text="Den lille{a} beveren{s} dykker{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="33" text="Den store{a} beveren{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="34" text="Den lille{a} frosken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="35" text="Den lille{a} frosken{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Den lille{a} frosken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="1" text="Den store{a} beveren{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="2" text="Den lille{a} kulefisken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="3" text="Den lille{a} kulefisken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="4" text="Den store{a} kulefisken{s} svømmer{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="5" text="Den store{a} beveren{s} svømmer{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="6" text="Den store{a} frosken{s} dykker{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="7" text="Den lille{a} beveren{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="8" text="Den lille{a} beveren{s} dykker{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="9" text="Den store{a} beveren{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="10" text="Den lille{a} frosken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="11" text="Den lille{a} frosken{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="12" text="Den lille{a} frosken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="13" text="Den lille{a} beveren{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="14" text="Den store{a} kulefisken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="15" text="Den store{a} kulefisken{s} svømmer{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="16" text="Den store{a} kulefisken{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="17" text="Den lille{a} frosken{s} svømmer{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="18" text="Den store{a} frosken{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="19" text="Den lille{a} kulefisken{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="20" text="Den lille{a} beveren{s} dykker{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="21" text="Den store{a} beveren{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="22" text="Den store{a} beveren{s} dykker{v} under båten{av} og blåser bobler{pf}"/>
+<sentence ord="23" text="Den lille{a} kulefisken{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="24" text="Den lille{a} kulefisken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="25" text="Den store{a} kulefisken{s} dykker{v} under båten{av} og jager den lille fisken{pf}"/>
+<sentence ord="26" text="Den store{a} frosken{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="27" text="Den store{a} frosken{s} dykker{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="28" text="Den store{a} kulefisken{s} svømmer{v} bak steinen{av} og blåser bobler{pf}"/>
+<sentence ord="29" text="Den store{a} kulefisken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="30" text="Den store{a} frosken{s} dykker{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="31" text="Den store{a} beveren{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="32" text="Den lille{a} beveren{s} svømmer{v} bak steinen{av} og jager den lille fisken{pf}"/>
+<sentence ord="33" text="Den store{a} frosken{s} dykker{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+<sentence ord="34" text="Den store{a} frosken{s} svømmer{v} gjennom tangen{av} og blåser bobler{pf}"/>
+<sentence ord="35" text="Den lille{a} kulefisken{s} svømmer{v} gjennom tangen{av} og jager den lille fisken{pf}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

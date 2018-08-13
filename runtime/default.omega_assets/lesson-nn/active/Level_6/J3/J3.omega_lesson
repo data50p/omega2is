@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="" Tid="a" ord="0" type="passive"/>
+<t-item Lid="A" Tid="s" ord="1" type="passive"/>
+<t-item Lid="" Tid="v" ord="2" type="action"/>
+<t-item Lid="" Tid="av" ord="3" type="passive"/>
+<t-item Lid="B" Tid="pf" ord="4" type="passive"/>
+</target>
+<items>
+<item-entry Tid="a" ord="0" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nn/Leksjonsord/denstore.wav" text="Den store" var-1="big" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-nn/Leksjonsord/denvesle.wav" text="Den vesle" var-1="small" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="s" ord="1" type="actor">
+<item Lid="blowfish:{-1}" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nn/Leksjonsord/blåsefisken.wav" text="blåsefisken" var-1="n" var-2="" var-3=""/>
+<item Lid="frog:{-1}" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-nn/Leksjonsord/frosken.wav" text="frosken" var-1="n" var-2="" var-3=""/>
+<item Lid="beaver:{-1}" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-nn/Leksjonsord/beveren.wav" text="beveren" var-1="n" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="2" type="action">
+<item action-fname="anim/ActiveAnim/Swim{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nn/Leksjonsord/sym.wav" text="sym" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Dive{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-nn/Leksjonsord/dykkar.wav" text="dykkar" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="3" type="passive">
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-nb/UnderTheBoat.wav" text="under båten" var-1="UnderTheBoat" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-nn/Leksjonsord/gjennomsjøgraset.wav" text="gjennom sjøgraset" var-1="ThroughTheSeaweed" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-nn/Leksjonsord/baksteinen.wav" text="bak steinen" var-1="BehindTheStone" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="pf" ord="4" type="passive">
+<item Lid="bubbles" action-fname="" action-type="null" dummysound="audio/words-nn/Dummyord/ogblesballar.wav" dummytext="og bles ballar" ord="0" sound="audio/words-nn/Leksjonsord/ogblesbobler.wav" text="og bles bobler" var-1="" var-2="" var-3=""/>
+<item Lid="fish" action-fname="" action-type="null" dummysound="audio/words-nn/Dummyord/ogjagardenveslefuglen.wav" dummytext="og jagar den vesle fuglen" ord="1" sound="audio/words-nn/Leksjonsord/ogjagardenveslefisken.wav" text="og jagar den vesle fisken" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Den store{a} blåsefisken{s} sym{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="1" text="Den store{a} blåsefisken{s} dykkar{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="2" text="Den store{a} frosken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="3" text="Den store{a} frosken{s} dykkar{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="4" text="Den store{a} frosken{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="5" text="Den store{a} beveren{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="6" text="Den store{a} beveren{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="7" text="Den vesle{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="8" text="Den vesle{a} blåsefisken{s} dykkar{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="9" text="Den vesle{a} frosken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="10" text="Den vesle{a} frosken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="11" text="Den vesle{a} beveren{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="12" text="Den vesle{a} beveren{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="13" text="Den vesle{a} beveren{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="14" text="Den store{a} blåsefisken{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="15" text="Den store{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="16" text="Den store{a} frosken{s} sym{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="17" text="Den store{a} beveren{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="18" text="Den vesle{a} blåsefisken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="19" text="Den vesle{a} blåsefisken{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="20" text="Den vesle{a} frosken{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="21" text="Den vesle{a} beveren{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="22" text="Den vesle{a} beveren{s} dykkar{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="23" text="Den store{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="24" text="Den store{a} blåsefisken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="25" text="Den store{a} blåsefisken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="26" text="Den store{a} frosken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="27" text="Den store{a} frosken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="28" text="Den store{a} frosken{s} dykkar{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="29" text="Den store{a} beveren{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="30" text="Den store{a} beveren{s} dykkar{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="31" text="Den store{a} beveren{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="32" text="Den vesle{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="33" text="Den vesle{a} blåsefisken{s} dykkar{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="34" text="Den vesle{a} frosken{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="35" text="Den vesle{a} beveren{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Den vesle{a} beveren{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="1" text="Den vesle{a} frosken{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="2" text="Den vesle{a} blåsefisken{s} dykkar{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="3" text="Den vesle{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="4" text="Den store{a} beveren{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="5" text="Den store{a} beveren{s} dykkar{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="6" text="Den store{a} beveren{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="7" text="Den store{a} frosken{s} dykkar{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="8" text="Den store{a} frosken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="9" text="Den store{a} frosken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="10" text="Den store{a} blåsefisken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="11" text="Den store{a} blåsefisken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="12" text="Den store{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="13" text="Den vesle{a} beveren{s} dykkar{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="14" text="Den vesle{a} beveren{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="15" text="Den vesle{a} frosken{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="16" text="Den vesle{a} blåsefisken{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="17" text="Den vesle{a} blåsefisken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="18" text="Den store{a} beveren{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="19" text="Den store{a} frosken{s} sym{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="20" text="Den store{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="21" text="Den store{a} blåsefisken{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="22" text="Den vesle{a} beveren{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="23" text="Den vesle{a} beveren{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="24" text="Den vesle{a} beveren{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="25" text="Den vesle{a} frosken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="26" text="Den vesle{a} frosken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="27" text="Den vesle{a} blåsefisken{s} dykkar{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="28" text="Den vesle{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="29" text="Den store{a} beveren{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="30" text="Den store{a} beveren{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="31" text="Den store{a} frosken{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="32" text="Den store{a} frosken{s} dykkar{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="33" text="Den store{a} frosken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="34" text="Den store{a} blåsefisken{s} dykkar{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="35" text="Den store{a} blåsefisken{s} sym{v} under båten{av} og bles bobler{pf}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Den store{a} blåsefisken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="1" text="Den store{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="2" text="Den vesle{a} beveren{s} dykkar{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="3" text="Den vesle{a} beveren{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="4" text="Den vesle{a} frosken{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="5" text="Den vesle{a} blåsefisken{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="6" text="Den vesle{a} blåsefisken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="7" text="Den store{a} beveren{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="8" text="Den store{a} frosken{s} sym{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="9" text="Den store{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="10" text="Den store{a} blåsefisken{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="11" text="Den vesle{a} beveren{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="12" text="Den vesle{a} beveren{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="13" text="Den vesle{a} beveren{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="14" text="Den vesle{a} frosken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="15" text="Den vesle{a} frosken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="16" text="Den vesle{a} blåsefisken{s} dykkar{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="17" text="Den vesle{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="18" text="Den store{a} beveren{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="19" text="Den store{a} beveren{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="20" text="Den store{a} frosken{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="21" text="Den store{a} frosken{s} dykkar{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="22" text="Den store{a} frosken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="23" text="Den store{a} blåsefisken{s} dykkar{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="24" text="Den store{a} blåsefisken{s} sym{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="25" text="Den vesle{a} beveren{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="26" text="Den vesle{a} frosken{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="27" text="Den vesle{a} blåsefisken{s} dykkar{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="28" text="Den vesle{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="29" text="Den store{a} beveren{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="30" text="Den store{a} beveren{s} dykkar{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="31" text="Den store{a} beveren{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="32" text="Den store{a} frosken{s} dykkar{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="33" text="Den store{a} frosken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="34" text="Den store{a} frosken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="35" text="Den store{a} blåsefisken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Den store{a} blåsefisken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="1" text="Den store{a} frosken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="2" text="Den store{a} frosken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="3" text="Den store{a} frosken{s} dykkar{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="4" text="Den store{a} beveren{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="5" text="Den store{a} beveren{s} dykkar{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="6" text="Den store{a} beveren{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="7" text="Den vesle{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="8" text="Den vesle{a} blåsefisken{s} dykkar{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="9" text="Den vesle{a} frosken{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="10" text="Den vesle{a} beveren{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="11" text="Den store{a} blåsefisken{s} sym{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="12" text="Den store{a} blåsefisken{s} dykkar{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="13" text="Den store{a} frosken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="14" text="Den store{a} frosken{s} dykkar{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="15" text="Den store{a} frosken{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="16" text="Den store{a} beveren{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="17" text="Den store{a} beveren{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="18" text="Den vesle{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="19" text="Den vesle{a} blåsefisken{s} dykkar{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="20" text="Den vesle{a} frosken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="21" text="Den vesle{a} frosken{s} sym{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="22" text="Den vesle{a} beveren{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="23" text="Den vesle{a} beveren{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="24" text="Den vesle{a} beveren{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="25" text="Den store{a} blåsefisken{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="26" text="Den store{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og bles bobler{pf}"/>
+<sentence ord="27" text="Den store{a} frosken{s} sym{v} under båten{av} og bles bobler{pf}"/>
+<sentence ord="28" text="Den store{a} beveren{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="29" text="Den vesle{a} blåsefisken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="30" text="Den vesle{a} blåsefisken{s} dykkar{v} bak steinen{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="31" text="Den vesle{a} frosken{s} dykkar{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="32" text="Den vesle{a} beveren{s} sym{v} under båten{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="33" text="Den vesle{a} beveren{s} dykkar{v} bak steinen{av} og bles bobler{pf}"/>
+<sentence ord="34" text="Den store{a} blåsefisken{s} sym{v} gjennom sjøgraset{av} og jagar den vesle fisken{pf}"/>
+<sentence ord="35" text="Den store{a} blåsefisken{s} sym{v} bak steinen{av} og bles bobler{pf}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

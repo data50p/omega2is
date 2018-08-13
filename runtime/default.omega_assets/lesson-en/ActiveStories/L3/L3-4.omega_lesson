@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="L3-4" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="" Tid="o" ord="2" type="passive"/>
+<t-item Lid="" Tid="av" ord="3" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="{L3-1.A.Lid:girl}{+3}" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/L3/{L3-1.A.Lid:girl}.wav" text="{L3-1.A.var-2:the girl}" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="1" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/Stories/L3/L3-4{++3}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/walks.wav" text="walks" var-1="walks" var-2="walks" var-3="Walks"/>
+<item action-fname="anim/Stories/L3/L3-4{++3}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/cycles.wav" text="cycles" var-1="cycles" var-2="rides" var-3="Rides"/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="2" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/L3/firstto.wav" text="first to" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="1" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="3" type="passive">
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-en/L3/beach.wav" text="the beach." var-1="" var-2="the beech" var-3="beech"/>
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/L3/town.wav" text="the town." var-1="" var-2="the town" var-3="town"/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-en/L3/meadow.wav" text="the meadow." var-1="" var-2="the meadow" var-3="meadow"/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Den stora bävern äter den gröna bananen"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Den lilla bananen hoppar över det stora äpplet"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Den lilla bävern gömmer den gröna bananen"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Det stora äpplet äter den gröna bananen"/>
+</test_entry>
+</test_entries>
+<story isfirst="no">
+<link next="lesson-en/ActiveStories/L3/L3-5.omega_lesson"/>
+</story>
+</omega_lesson>

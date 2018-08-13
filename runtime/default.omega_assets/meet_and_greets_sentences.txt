@@ -1,0 +1,48 @@
+﻿Kvinnan; hälsar på; kvinnan
+Kvinnan; hälsar på; mannen
+Kvinnan; hälsar på; flickan
+Kvinnan; hälsar på; pojken
+Kvinnan; möter; kvinnan
+Kvinnan; möter; mannen
+Kvinnan; möter; flickan
+Kvinnan; möter; pojken
+Kvinnan; kramar; kvinnan
+Kvinnan; kramar; mannen
+Kvinnan; kramar; flickan
+Kvinnan; kramar; pojken
+Mannen; hälsar på; kvinnan
+Mannen; hälsar på; mannen
+Mannen; hälsar på; flickan
+Mannen; hälsar på; pojken
+Mannen; möter; kvinnan
+Mannen; möter; mannen
+Mannen; möter; flickan
+Mannen; möter; pojken
+Mannen; kramar; kvinnan
+Mannen; kramar; mannen
+Mannen; kramar; flickan
+Mannen; kramar; pojken
+Flickan; hälsar på; kvinnan
+Flickan; hälsar på; mannen
+Flickan; hälsar på; flickan
+Flickan; hälsar på; pojken
+Flickan; möter; kvinnan
+Flickan; möter; mannen
+Flickan; möter; flickan
+Flickan; möter; pojken
+Flickan; kramar; kvinnan
+Flickan; kramar; mannen
+Flickan; kramar; flickan
+Flickan; kramar; pojken
+Pojken; hälsar på; kvinnan
+Pojken; hälsar på; mannen
+Pojken; hälsar på; flickan
+Pojken; hälsar på; pojken
+Pojken; möter; kvinnan
+Pojken; möter; mannen
+Pojken; möter; flickan
+Pojken; möter; pojken
+Pojken; kramar; kvinnan
+Pojken; kramar; mannen
+Pojken; kramar; flickan
+Pojken; kramar; pojken

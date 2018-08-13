@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="squirrel" action-fname="" action-type="omega_anim" dummysound="audio/words-sv/dummy/stag-beetle.wav" dummytext="Ekoxen" ord="0" sound="audio/words-sv/squirrel.wav" text="Ekorren" var-1="n" var-2="" var-3=""/>
+<item Lid="frog" action-fname="" action-type="omega_anim" dummysound="audio/words-sv/dummy/crops.wav" dummytext="Grödan" ord="1" sound="audio/words-sv/frog.wav" text="Grodan" var-1="n" var-2="" var-3=""/>
+<item Lid="cat" action-fname="" action-type="omega_anim" dummysound="audio/words-sv/hat.wav" dummytext="Hatten" ord="2" sound="audio/words-sv/cat.wav" text="Katten" var-1="n" var-2="" var-3=""/>
+<item Lid="girl" action-fname="" action-type="omega_anim" dummysound="audio/words-sv/boy.wav" dummytext="Pojken" ord="3" sound="audio/words-sv/girl.wav" text="Flickan" var-1="n" var-2="" var-3=""/>
+<item Lid="boy" action-fname="" action-type="null" dummysound="audio/words-sv/girl.wav" dummytext="Flickan" ord="4" sound="audio/words-sv/boy.wav" text="Pojken" var-1="n" var-2="" var-3=""/>
+<item Lid="bee" action-fname="" action-type="omega_anim" dummysound="audio/words-sv/car.wav" dummytext="Bilen" ord="5" sound="audio/words-sv/bee.wav" text="Biet" var-1="t" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/HidingBehindStone" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-sv/hidesitself.wav" text="gömmer sig" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/DancingAroundStone" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-sv/dances.wav" text="dansar" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Swing" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-sv/swings.wav" text="gungar" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/ThrowOnBarn" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-sv/throws.wav" text="kastar" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/JumpingByStone" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/words-sv/jumps.wav" text="hoppar" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/DiveIntoPond" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/words-sv/dives.wav" text="dyker" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Ekorren{s} gömmer sig{v}"/>
+<sentence ord="1" text="Ekorren{s} dansar{v}"/>
+<sentence ord="2" text="Ekorren{s} gungar{v}"/>
+<sentence ord="3" text="Ekorren{s} kastar{v}"/>
+<sentence ord="4" text="Ekorren{s} hoppar{v}"/>
+<sentence ord="5" text="Ekorren{s} dyker{v}"/>
+<sentence ord="6" text="Grodan{s} gömmer sig{v}"/>
+<sentence ord="7" text="Grodan{s} dansar{v}"/>
+<sentence ord="8" text="Grodan{s} gungar{v}"/>
+<sentence ord="9" text="Grodan{s} kastar{v}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Grodan{s} hoppar{v}"/>
+<sentence ord="1" text="Grodan{s} dyker{v}"/>
+<sentence ord="2" text="Katten{s} gömmer sig{v}"/>
+<sentence ord="3" text="Katten{s} dansar{v}"/>
+<sentence ord="4" text="Katten{s} gungar{v}"/>
+<sentence ord="5" text="Katten{s} kastar{v}"/>
+<sentence ord="6" text="Katten{s} hoppar{v}"/>
+<sentence ord="7" text="Katten{s} dyker{v}"/>
+<sentence ord="8" text="Flickan{s} gömmer sig{v}"/>
+<sentence ord="9" text="Flickan{s} dansar{v}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Biet{s} dyker{v}"/>
+<sentence ord="1" text="Biet{s} hoppar{v}"/>
+<sentence ord="2" text="Biet{s} kastar{v}"/>
+<sentence ord="3" text="Biet{s} gungar{v}"/>
+<sentence ord="4" text="Biet{s} dansar{v}"/>
+<sentence ord="5" text="Biet{s} gömmer sig{v}"/>
+<sentence ord="6" text="Pojken{s} dyker{v}"/>
+<sentence ord="7" text="Pojken{s} hoppar{v}"/>
+<sentence ord="8" text="Pojken{s} kastar{v}"/>
+<sentence ord="9" text="Pojken{s} gungar{v}"/>
+<sentence ord="10" text="Pojken{s} dansar{v}"/>
+<sentence ord="11" text="Pojken{s} gömmer sig{v}"/>
+<sentence ord="12" text="Flickan{s} dyker{v}"/>
+<sentence ord="13" text="Flickan{s} hoppar{v}"/>
+<sentence ord="14" text="Flickan{s} kastar{v}"/>
+<sentence ord="15" text="Flickan{s} gungar{v}"/>
+<sentence ord="16" text="Flickan{s} dansar{v}"/>
+<sentence ord="17" text="Flickan{s} gömmer sig{v}"/>
+<sentence ord="18" text="Katten{s} dyker{v}"/>
+<sentence ord="19" text="Katten{s} hoppar{v}"/>
+<sentence ord="20" text="Katten{s} kastar{v}"/>
+<sentence ord="21" text="Katten{s} gungar{v}"/>
+<sentence ord="22" text="Katten{s} dansar{v}"/>
+<sentence ord="23" text="Katten{s} gömmer sig{v}"/>
+<sentence ord="24" text="Grodan{s} dyker{v}"/>
+<sentence ord="25" text="Grodan{s} hoppar{v}"/>
+<sentence ord="26" text="Grodan{s} kastar{v}"/>
+<sentence ord="27" text="Grodan{s} gungar{v}"/>
+<sentence ord="28" text="Grodan{s} dansar{v}"/>
+<sentence ord="29" text="Grodan{s} gömmer sig{v}"/>
+<sentence ord="30" text="Ekorren{s} dyker{v}"/>
+<sentence ord="31" text="Ekorren{s} hoppar{v}"/>
+<sentence ord="32" text="Ekorren{s} kastar{v}"/>
+<sentence ord="33" text="Ekorren{s} gungar{v}"/>
+<sentence ord="34" text="Ekorren{s} dansar{v}"/>
+<sentence ord="35" text="Ekorren{s} gömmer sig{v}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Grodan{s} gömmer sig{v}"/>
+<sentence ord="1" text="Grodan{s} hoppar{v}"/>
+<sentence ord="2" text="Katten{s} gungar{v}"/>
+<sentence ord="3" text="Flickan{s} gömmer sig{v}"/>
+<sentence ord="4" text="Ekorren{s} gömmer sig{v}"/>
+<sentence ord="5" text="Flickan{s} hoppar{v}"/>
+<sentence ord="6" text="Pojken{s} gungar{v}"/>
+<sentence ord="7" text="Pojken{s} dyker{v}"/>
+<sentence ord="8" text="Biet{s} gungar{v}"/>
+<sentence ord="9" text="Biet{s} dyker{v}"/>
+<sentence ord="10" text="Grodan{s} dansar{v}"/>
+<sentence ord="11" text="Grodan{s} dyker{v}"/>
+<sentence ord="12" text="Katten{s} kastar{v}"/>
+<sentence ord="13" text="Flickan{s} dansar{v}"/>
+<sentence ord="14" text="Ekorren{s} dansar{v}"/>
+<sentence ord="15" text="Flickan{s} dyker{v}"/>
+<sentence ord="16" text="Pojken{s} kastar{v}"/>
+<sentence ord="17" text="Biet{s} gömmer sig{v}"/>
+<sentence ord="18" text="Biet{s} kastar{v}"/>
+<sentence ord="19" text="Ekorren{s} gungar{v}"/>
+<sentence ord="20" text="Grodan{s} gungar{v}"/>
+<sentence ord="21" text="Katten{s} gömmer sig{v}"/>
+<sentence ord="22" text="Katten{s} hoppar{v}"/>
+<sentence ord="23" text="Flickan{s} gungar{v}"/>
+<sentence ord="24" text="Ekorren{s} kastar{v}"/>
+<sentence ord="25" text="Pojken{s} gömmer sig{v}"/>
+<sentence ord="26" text="Pojken{s} hoppar{v}"/>
+<sentence ord="27" text="Biet{s} dansar{v}"/>
+<sentence ord="28" text="Biet{s} hoppar{v}"/>
+<sentence ord="29" text="Ekorren{s} hoppar{v}"/>
+<sentence ord="30" text="Grodan{s} kastar{v}"/>
+<sentence ord="31" text="Katten{s} dansar{v}"/>
+<sentence ord="32" text="Katten{s} dyker{v}"/>
+<sentence ord="33" text="Flickan{s} kastar{v}"/>
+<sentence ord="34" text="Ekorren{s} dyker{v}"/>
+<sentence ord="35" text="Pojken{s} dansar{v}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

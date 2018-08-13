@@ -1,0 +1,192 @@
+Kvinnan; hälsar på; kvinnan; på gatan
+Kvinnan; hälsar på; kvinnan; på busshållplatsen
+Kvinnan; hälsar på; kvinnan; på stationen
+Kvinnan; hälsar på; kvinnan; på flygplatsen
+Kvinnan; hälsar på; mannen; på gatan
+Kvinnan; hälsar på; mannen; på busshållplatsen
+Kvinnan; hälsar på; mannen; på stationen
+Kvinnan; hälsar på; mannen; på flygplatsen
+Kvinnan; hälsar på; flickan; på gatan
+Kvinnan; hälsar på; flickan; på busshållplatsen
+Kvinnan; hälsar på; flickan; på stationen
+Kvinnan; hälsar på; flickan; på flygplatsen
+Kvinnan; hälsar på; pojken; på gatan
+Kvinnan; hälsar på; pojken; på busshållplatsen
+Kvinnan; hälsar på; pojken; på stationen
+Kvinnan; hälsar på; pojken; på flygplatsen
+Kvinnan; möter; kvinnan; på gatan
+Kvinnan; möter; kvinnan; på busshållplatsen
+Kvinnan; möter; kvinnan; på stationen
+Kvinnan; möter; kvinnan; på flygplatsen
+Kvinnan; möter; mannen; på gatan
+Kvinnan; möter; mannen; på busshållplatsen
+Kvinnan; möter; mannen; på stationen
+Kvinnan; möter; mannen; på flygplatsen
+Kvinnan; möter; flickan; på gatan
+Kvinnan; möter; flickan; på busshållplatsen
+Kvinnan; möter; flickan; på stationen
+Kvinnan; möter; flickan; på flygplatsen
+Kvinnan; möter; pojken; på gatan
+Kvinnan; möter; pojken; på busshållplatsen
+Kvinnan; möter; pojken; på stationen
+Kvinnan; möter; pojken; på flygplatsen
+Kvinnan; kramar; kvinnan; på gatan
+Kvinnan; kramar; kvinnan; på busshållplatsen
+Kvinnan; kramar; kvinnan; på stationen
+Kvinnan; kramar; kvinnan; på flygplatsen
+Kvinnan; kramar; mannen; på gatan
+Kvinnan; kramar; mannen; på busshållplatsen
+Kvinnan; kramar; mannen; på stationen
+Kvinnan; kramar; mannen; på flygplatsen
+Kvinnan; kramar; flickan; på gatan
+Kvinnan; kramar; flickan; på busshållplatsen
+Kvinnan; kramar; flickan; på stationen
+Kvinnan; kramar; flickan; på flygplatsen
+Kvinnan; kramar; pojken; på gatan
+Kvinnan; kramar; pojken; på busshållplatsen
+Kvinnan; kramar; pojken; på stationen
+Kvinnan; kramar; pojken; på flygplatsen
+Mannen; hälsar på; kvinnan; på gatan
+Mannen; hälsar på; kvinnan; på busshållplatsen
+Mannen; hälsar på; kvinnan; på stationen
+Mannen; hälsar på; kvinnan; på flygplatsen
+Mannen; hälsar på; mannen; på gatan
+Mannen; hälsar på; mannen; på busshållplatsen
+Mannen; hälsar på; mannen; på stationen
+Mannen; hälsar på; mannen; på flygplatsen
+Mannen; hälsar på; flickan; på gatan
+Mannen; hälsar på; flickan; på busshållplatsen
+Mannen; hälsar på; flickan; på stationen
+Mannen; hälsar på; flickan; på flygplatsen
+Mannen; hälsar på; pojken; på gatan
+Mannen; hälsar på; pojken; på busshållplatsen
+Mannen; hälsar på; pojken; på stationen
+Mannen; hälsar på; pojken; på flygplatsen
+Mannen; möter; kvinnan; på gatan
+Mannen; möter; kvinnan; på busshållplatsen
+Mannen; möter; kvinnan; på stationen
+Mannen; möter; kvinnan; på flygplatsen
+Mannen; möter; mannen; på gatan
+Mannen; möter; mannen; på busshållplatsen
+Mannen; möter; mannen; på stationen
+Mannen; möter; mannen; på flygplatsen
+Mannen; möter; flickan; på gatan
+Mannen; möter; flickan; på busshållplatsen
+Mannen; möter; flickan; på stationen
+Mannen; möter; flickan; på flygplatsen
+Mannen; möter; pojken; på gatan
+Mannen; möter; pojken; på busshållplatsen
+Mannen; möter; pojken; på stationen
+Mannen; möter; pojken; på flygplatsen
+Mannen; kramar; kvinnan; på gatan
+Mannen; kramar; kvinnan; på busshållplatsen
+Mannen; kramar; kvinnan; på stationen
+Mannen; kramar; kvinnan; på flygplatsen
+Mannen; kramar; mannen; på gatan
+Mannen; kramar; mannen; på busshållplatsen
+Mannen; kramar; mannen; på stationen
+Mannen; kramar; mannen; på flygplatsen
+Mannen; kramar; flickan; på gatan
+Mannen; kramar; flickan; på busshållplatsen
+Mannen; kramar; flickan; på stationen
+Mannen; kramar; flickan; på flygplatsen
+Mannen; kramar; pojken; på gatan
+Mannen; kramar; pojken; på busshållplatsen
+Mannen; kramar; pojken; på stationen
+Mannen; kramar; pojken; på flygplatsen
+Flickan; hälsar på; kvinnan; på gatan
+Flickan; hälsar på; kvinnan; på busshållplatsen
+Flickan; hälsar på; kvinnan; på stationen
+Flickan; hälsar på; kvinnan; på flygplatsen
+Flickan; hälsar på; mannen; på gatan
+Flickan; hälsar på; mannen; på busshållplatsen
+Flickan; hälsar på; mannen; på stationen
+Flickan; hälsar på; mannen; på flygplatsen
+Flickan; hälsar på; flickan; på gatan
+Flickan; hälsar på; flickan; på busshållplatsen
+Flickan; hälsar på; flickan; på stationen
+Flickan; hälsar på; flickan; på flygplatsen
+Flickan; hälsar på; pojken; på gatan
+Flickan; hälsar på; pojken; på busshållplatsen
+Flickan; hälsar på; pojken; på stationen
+Flickan; hälsar på; pojken; på flygplatsen
+Flickan; möter; kvinnan; på gatan
+Flickan; möter; kvinnan; på busshållplatsen
+Flickan; möter; kvinnan; på stationen
+Flickan; möter; kvinnan; på flygplatsen
+Flickan; möter; mannen; på gatan
+Flickan; möter; mannen; på busshållplatsen
+Flickan; möter; mannen; på stationen
+Flickan; möter; mannen; på flygplatsen
+Flickan; möter; flickan; på gatan
+Flickan; möter; flickan; på busshållplatsen
+Flickan; möter; flickan; på stationen
+Flickan; möter; flickan; på flygplatsen
+Flickan; möter; pojken; på gatan
+Flickan; möter; pojken; på busshållplatsen
+Flickan; möter; pojken; på stationen
+Flickan; möter; pojken; på flygplatsen
+Flickan; kramar; kvinnan; på gatan
+Flickan; kramar; kvinnan; på busshållplatsen
+Flickan; kramar; kvinnan; på stationen
+Flickan; kramar; kvinnan; på flygplatsen
+Flickan; kramar; mannen; på gatan
+Flickan; kramar; mannen; på busshållplatsen
+Flickan; kramar; mannen; på stationen
+Flickan; kramar; mannen; på flygplatsen
+Flickan; kramar; flickan; på gatan
+Flickan; kramar; flickan; på busshållplatsen
+Flickan; kramar; flickan; på stationen
+Flickan; kramar; flickan; på flygplatsen
+Flickan; kramar; pojken; på gatan
+Flickan; kramar; pojken; på busshållplatsen
+Flickan; kramar; pojken; på stationen
+Flickan; kramar; pojken; på flygplatsen
+Pojken; hälsar på; kvinnan; på gatan
+Pojken; hälsar på; kvinnan; på busshållplatsen
+Pojken; hälsar på; kvinnan; på stationen
+Pojken; hälsar på; kvinnan; på flygplatsen
+Pojken; hälsar på; mannen; på gatan
+Pojken; hälsar på; mannen; på busshållplatsen
+Pojken; hälsar på; mannen; på stationen
+Pojken; hälsar på; mannen; på flygplatsen
+Pojken; hälsar på; flickan; på gatan
+Pojken; hälsar på; flickan; på busshållplatsen
+Pojken; hälsar på; flickan; på stationen
+Pojken; hälsar på; flickan; på flygplatsen
+Pojken; hälsar på; pojken; på gatan
+Pojken; hälsar på; pojken; på busshållplatsen
+Pojken; hälsar på; pojken; på stationen
+Pojken; hälsar på; pojken; på flygplatsen
+Pojken; möter; kvinnan; på gatan
+Pojken; möter; kvinnan; på busshållplatsen
+Pojken; möter; kvinnan; på stationen
+Pojken; möter; kvinnan; på flygplatsen
+Pojken; möter; mannen; på gatan
+Pojken; möter; mannen; på busshållplatsen
+Pojken; möter; mannen; på stationen
+Pojken; möter; mannen; på flygplatsen
+Pojken; möter; flickan; på gatan
+Pojken; möter; flickan; på busshållplatsen
+Pojken; möter; flickan; på stationen
+Pojken; möter; flickan; på flygplatsen
+Pojken; möter; pojken; på gatan
+Pojken; möter; pojken; på busshållplatsen
+Pojken; möter; pojken; på stationen
+Pojken; möter; pojken; på flygplatsen
+Pojken; kramar; kvinnan; på gatan
+Pojken; kramar; kvinnan; på busshållplatsen
+Pojken; kramar; kvinnan; på stationen
+Pojken; kramar; kvinnan; på flygplatsen
+Pojken; kramar; mannen; på gatan
+Pojken; kramar; mannen; på busshållplatsen
+Pojken; kramar; mannen; på stationen
+Pojken; kramar; mannen; på flygplatsen
+Pojken; kramar; flickan; på gatan
+Pojken; kramar; flickan; på busshållplatsen
+Pojken; kramar; flickan; på stationen
+Pojken; kramar; flickan; på flygplatsen
+Pojken; kramar; pojken; på gatan
+Pojken; kramar; pojken; på busshållplatsen
+Pojken; kramar; pojken; på stationen
+Pojken; kramar; pojken; på flygplatsen

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="squirrel" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/D2/hanger.wav" dummytext="vje{353}alica" ord="0" sound="audio/Words-hr/squirrel4.wav" text="vjeverica" var-1="" var-2="" var-3=""/>
+<item Lid="frog" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/D2/bulb.wav" dummytext="{382}arulja" ord="1" sound="audio/Words-hr/frog5.wav" text="{382}aba" var-1="" var-2="" var-3=""/>
+<item Lid="cat" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/D2/hen.wav" dummytext="kvo{269}ka" ord="2" sound="audio/Words-hr/cat3.wav" text="ma{269}ka" var-1="" var-2="" var-3=""/>
+<item Lid="girl" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/D2/forget-me-not-flower.wav" dummytext="poto{269}nica" ord="3" sound="audio/Words-hr/girlSENTENCE.wav" text="djevoj{269}ica" var-1="" var-2="" var-3=""/>
+<item Lid="boy" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/D2/cricket.wav" dummytext="cvr{269}ak" ord="4" sound="audio/Words-hr/boy3.wav" text="dje{269}ak" var-1="" var-2="" var-3=""/>
+<item Lid="bee" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/D2/bowl.wav" dummytext="zdjela" ord="5" sound="audio/Words-hr/beeSENTENCE.wav" text="p{269}ela" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/HidingBehindStone" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/hides2.wav" text="se skriva" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/DancingAroundStone" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/dances3.wav" text="ple{353}e" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Swing" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/swings2.wav" text="se nji{353}e" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/ThrowOnBarn" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/Words-hr/throws2.wav" text="baca loptu" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/JumpingByStone" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/Words-hr/jumps.wav" text="ska{269}e" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/DiveIntoPond" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/Words-hr/divesEND OF SENTENCE.wav" text="roni" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Vjeverica{s} se skriva{v}"/>
+<sentence ord="1" text="Vjeverica{s} pleše{v}"/>
+<sentence ord="2" text="Žaba{s} baca loptu{v}"/>
+<sentence ord="3" text="Mačka{s} se skriva{v}"/>
+<sentence ord="4" text="Mačka{s} roni{v}"/>
+<sentence ord="5" text="Djevojčica{s} pleše{v}"/>
+<sentence ord="6" text="Dječak{s} baca loptu{v}"/>
+<sentence ord="7" text="Pčela{s} skače{v}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Pčela{s} roni{v}"/>
+<sentence ord="1" text="Pčela{s} se njiše{v}"/>
+<sentence ord="2" text="Dječak{s} se njiše{v}"/>
+<sentence ord="3" text="Djevojčica{s} skače{v}"/>
+<sentence ord="4" text="Mačka{s} skače{v}"/>
+<sentence ord="5" text="Žaba{s} roni{v}"/>
+<sentence ord="6" text="Žaba{s} baca loptu{v}"/>
+<sentence ord="7" text="Vjeverica{s} se njiše{v}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Djevojčica{s} se skriva{v}"/>
+<sentence ord="1" text="Pčela{s} roni{v}"/>
+<sentence ord="2" text="Mačka{s} skače{v}"/>
+<sentence ord="3" text="Vjeverica{s} baca loptu{v}"/>
+<sentence ord="4" text="Mačka{s} se njiše{v}"/>
+<sentence ord="5" text="Mačka{s} pleše{v}"/>
+<sentence ord="6" text="Pčela{s} se skriva{v}"/>
+<sentence ord="7" text="Žaba{s} roni{v}"/>
+<sentence ord="8" text="Djevojčica{s} roni{v}"/>
+<sentence ord="9" text="Dječak{s} pleše{v}"/>
+<sentence ord="10" text="Žaba{s} se njiše{v}"/>
+<sentence ord="11" text="Dječak{s} skače{v}"/>
+<sentence ord="12" text="Žaba{s} se skriva{v}"/>
+<sentence ord="13" text="Vjeverica{s} roni{v}"/>
+<sentence ord="14" text="Pčela{s} baca loptu{v}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Žaba{s} skače{v}"/>
+<sentence ord="1" text="Dječak{s} pleše{v}"/>
+<sentence ord="2" text="Mačka{s} se skriva{v}"/>
+<sentence ord="3" text="Dječak{s} baca loptu{v}"/>
+<sentence ord="4" text="Mačka{s} baca loptu{v}"/>
+<sentence ord="5" text="Dječak{s} se skriva{v}"/>
+<sentence ord="6" text="Pčela{s} pleše{v}"/>
+<sentence ord="7" text="Djevojčica{s} baca loptu{v}"/>
+<sentence ord="8" text="Djevojčica{s} se skriva{v}"/>
+<sentence ord="9" text="Djevojčica{s} se njiše{v}"/>
+<sentence ord="10" text="Dječak{s} roni{v}"/>
+<sentence ord="11" text="Pčela{s} skače{v}"/>
+<sentence ord="12" text="Vjeverica{s} baca loptu{v}"/>
+<sentence ord="13" text="Vjeverica{s} skače{v}"/>
+<sentence ord="14" text="Žaba{s} pleše{v}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

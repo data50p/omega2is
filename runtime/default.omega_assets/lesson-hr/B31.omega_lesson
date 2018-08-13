@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#0" color_bt_hi="#fce27a" color_bt_hs="#fff0b4" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#f0dc8c" color_sn_fr="#0" color_sn_hi="#fce27a" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="sv" ord="0" type="action"/>
+</target>
+<items>
+<item-entry Tid="sv" ord="0" type="action">
+<item Lid="dog" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" ord="0" sound="audio/words1/dog.wav" text="Pas" var-1="" var-2="" var-3=""/>
+<item Lid="house" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" ord="1" sound="audio/words1/house.wav" text="Ku{263}a" var-1="" var-2="" var-3=""/>
+<item Lid="hand" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" ord="2" sound="audio/words1/hand.wav" text="Ruka" var-1="" var-2="" var-3=""/>
+<item Lid="helicopter" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" ord="3" sound="audio/words1/helicopter.wav" text="Helikopter" var-1="" var-2="" var-3=""/>
+<item Lid="car" action-fname="anim/ActiveAnim/ActorpresB2" action-type="omega_anim" ord="4" sound="audio/words1/car.wav" text="Auto" var-1="null" var-2="null" var-3="null"/>
+<item Lid="bus" action-fname="anim/ActiveAnim/ActorPresB2" action-type="omega_anim" ord="5" sound="audio/words1/bus.wav" text="Autobus" var-1="null" var-2="null" var-3="null"/>
+<item Lid="bee" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" ord="6" sound="audio/words1/bee.wav" text="P{269}ela" var-1="null" var-2="null" var-3="null"/>
+<item Lid="carrot" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" ord="7" sound="audio/words1/carrot.wav" text="Mrkva" var-1="null" var-2="null" var-3="null"/>
+</item-entry>
+<item-entry Tid="sv" ord="1" type="action">
+<item Lid="mouse" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" ord="0" sound="audio/words1/mouse.wav" text="Mi{353}" var-1="null" var-2="null" var-3="null"/>
+<item Lid="mc" action-fname="anim/ActiveAnim/ActorPresB2" action-type="omega_anim" ord="1" sound="audio/words1/mc.wav" text="Motocikl" var-1="null" var-2="null" var-3="null"/>
+<item Lid="astronaut" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" ord="2" sound="audio/words1/astronaut.wav" text="Astronaut" var-1="null" var-2="null" var-3="null"/>
+<item Lid="box" action-fname="anim/ActiveAnim/ActorpresB4DownOnRoundTable" action-type="omega_anim" ord="3" sound="audio/words1/box.wav" text="Kutija" var-1="null" var-2="null" var-3="null"/>
+<item Lid="lion" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" ord="4" sound="audio/words1/lion.wav" text="Lav" var-1="null" var-2="null" var-3="null"/>
+<item Lid="lemure" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" ord="5" sound="audio/words1/lemure.wav" text="Lemur" var-1="null" var-2="null" var-3="null"/>
+<item Lid="candle" action-fname="anim/ActiveAnim/ActorpresB4DownOnRoundTable" action-type="omega_anim" ord="6" sound="audio/words1/candle.wav" text="Svije{263}a" var-1="null" var-2="null" var-3="null"/>
+<item Lid="leopard" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" ord="7" sound="audio/words1/leopard.wav" text="Leopard" var-1="null" var-2="null" var-3="null"/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries/>
+</omega_lesson>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#0" color_bt_hi="#fce27a" color_bt_hs="#fff0b4" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#f0dc8c" color_sn_fr="#0" color_sn_hi="#fce27a" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="actor"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="squirrel" ord="0" sound="audio/words1/squirrel.wav" text="Vjeverica" var-1="n" var-2="" var-3=""/>
+<item Lid="frog" ord="1" sound="audio/words1/frog.wav" text="{381}aba" var-1="n" var-2="" var-3=""/>
+<item Lid="cat" ord="2" sound="audio/words1/cat.wav" text="Ma{269}ka" var-1="n" var-2="" var-3=""/>
+<item Lid="girl" ord="3" sound="audio/words1/girl.wav" text="Djevoj{269}ica" var-1="null" var-2="null" var-3="null"/>
+<item Lid="boy" ord="4" sound="audio/words1/boy.wav" text="Dje{269}ak" var-1="null" var-2="null" var-3="null"/>
+<item Lid="bee" ord="5" sound="audio/words1/bee.wav" text="P{269}ela" var-1="null" var-2="null" var-3="null"/>
+<item ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/HidingBehindStone" action-type="omega_anim" ord="0" sound="audio/words1/hidesitself.wav" text="se skriva" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/DancingAroundStone" action-type="omega_anim" ord="1" sound="audio/words1/dances.wav" text="ple{353}e" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/SwingOnBranch" action-type="omega_anim" ord="2" sound="audio/words1/rocks.wav" text="se nji{353}e" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/ThrowOnBarn" action-type="omega_anim" ord="3" sound="audio/words1/throws.wav" text="baca loptu" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/ActiveAnim/JumpingByStone" action-type="omega_anim" ord="4" sound="audio/words1/jumps.wav" text="ska{269}e" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="anim/ActiveAnim/DiveIntoPond" action-type="omega_anim" ord="5" sound="audio/words1/dives.wav" text="roni" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries/>
+</omega_lesson>

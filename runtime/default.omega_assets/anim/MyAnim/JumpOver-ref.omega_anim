@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega >
+
+<omega class="Animation" version="0.1">
+<AnimCanvas>
+<Canvas>
+<background height="600" name="background/schoolyard1.jpg" width="800"/>
+</Canvas>
+<AllPath>
+<TPath nid="0">
+<q ord="0" p1="-122.40499877929688,622.5007934570312" p2="30.62832260131836,586.4291381835938" pc="-42.0,562.0"/>
+<q ord="1" p1="30.62832260131836,586.4291381835938" p2="147.0,573.0" pc="83.0,542.0"/>
+<q ord="2" p1="147.0,573.0" p2="275.8000793457031,575.06591796875" pc="221.0,536.0"/>
+<q ord="3" p1="275.8000793457031,575.06591796875" p2="519.800048828125,549.0659790039062" pc="430.9700012207031,142.2899932861328"/>
+<q ord="4" p1="519.800048828125,549.0659790039062" p2="627.7149047851562,549.1807861328125" pc="536.7999877929688,531.06591796875"/>
+<q ord="5" p1="627.7149047851562,549.1807861328125" p2="744.7449340820312,563.2807006835938" pc="662.9649047851562,529.4407348632812"/>
+<q ord="6" p1="744.7449340820312,563.2807006835938" p2="1011.2349243164062,625.3207397460938" pc="830.7549438476562,552.0007934570312"/>
+<info flatness="0.3333333333333333" size="127"/>
+<help len="0.0;12.356796706493759;24.286644037090717;35.812266657046735;46.95886179567478;57.75428103495793;68.22917754422413;78.41709804687548;88.3544960170387;98.08064220281128;107.63741193934814;117.06893689175692;126.42112193158509;135.74104435996486;145.0762695893528;154.474130678789;163.9810251764592;172.41369797638015;180.56630688309554;188.47396932239474;196.17515431917747;203.71149343629259;211.1273950034904;218.46945307008824;225.78567265980405;233.12456585628183;240.53419941310463;248.06128499626368;255.75039399137663;263.64335343216766;271.77884678917667;280.1922127875523;288.9154137204684;299.05992296703675;308.8267253910254;318.24060305623567;327.32922545859435;336.12333274816973;344.6568484503446;352.9668880909699;361.09362967595087;369.0800181037791;376.971290043209;384.81432815957163;392.6568801892489;400.546702693746;408.5307040300146;416.65416123082537;424.96007104372757;452.90182603302634;479.26342888021634;504.0532992559488;527.2815660358858;548.9605470482836;569.1054023134263;587.7350374508321;604.8733732169981;620.5511580125773;634.8085930953968;647.6991753152499;659.2953341868094;669.6965757936451;679.040658901942;683.3767716086103;687.5249301320237;691.5187704959037;695.3959471175322;699.1975825872743;702.9672724844216;706.749717141368;710.5891714296001;714.5279690718179;718.6053506442993;722.8567210228049;727.3133403344821;736.9417423939303;747.6712006581075;759.6272685254593;772.900737508223;787.5579382848285;803.6480975803959;821.2083952284827;840.2674092796802;860.8474752538153;882.9663212946338;906.6382185704496;931.874803657933;935.0800585351515;938.5849587071925;942.4735482115614;946.8076072998151;951.6318320828177;956.9786402954686;969.3253296314058;983.9810358754934;1001.0208979975707;1020.4924738053323;1042.4275100580257;1047.5411512982992;1052.8233642102155;1058.3250865759917;1064.091441920924;1070.1616551106442;1076.5693732383365;1083.3432158900328;1090.5074162059507;1098.0824619017822;1106.0856861053112;1123.4303839114418;1142.6385667090517;1163.778710948807;1174.9512607851677;1186.8169674180883;1199.4156664535874;1212.7806408385836;1226.9397708497145;1241.916502284463;1257.7306448695363;1274.3990229060898;1291.9360023060283;1310.3539165748655;1329.6634112598797;1349.8737230685315;1370.9929067945004;1393.0280205572092;1415.9852776942405;1439.8701719040128" seg="-122.40499877929688,622.5007934570312;-112.384751573205,615.2699518203735;-102.42525964975357,608.7026252746582;-92.5265230089426,602.7988138198853;-82.6885416507721,597.5585174560547;-72.91131557524204,592.9817361831665;-63.19484478235245,589.0684700012207;-53.53912927210331,585.8187189102173;-43.94416904449463,583.2324829101562;-34.409964099526405,581.3097620010376;-24.93651443719864,580.0505561828613;-15.52382005751133,579.4548654556274;-6.1718809604644775,579.5226898193359;3.1193028539419174,580.2540292739868;12.349731385707855,581.6488838195801;21.519404634833336,583.7072534561157;30.62832260131836,586.4291381835938;37.220205411314964,581.1701409816742;43.90293449163437,576.500433921814;50.67650984227657,572.4200170040131;57.54093146324158,568.9288902282715;64.49619935452938,566.0270535945892;71.54231351613998,563.7145071029663;78.67927394807339,561.9912507534027;85.90708065032959,560.8572845458984;93.22573362290859,560.3126084804535;100.6352328658104,560.3572225570679;108.135578379035,560.9911267757416;115.7267701625824,562.2143211364746;123.4088082164526,564.026805639267;131.1816925406456,566.4285802841187;139.0454231351614,569.4196450710297;147.0,573.0;156.17500030994415,568.6721324920654;165.2000012397766,564.9385299682617;174.07500278949738,561.7991924285889;182.80000495910645,559.2541198730469;191.37500774860382,557.3033123016357;199.8000111579895,555.9467697143555;208.0750151872635,555.184492111206;216.20001983642578,555.0164794921875;224.17502510547638,555.4427318572998;232.00003099441528,556.463249206543;239.6750375032425,558.078031539917;247.200044631958,560.2870788574219;254.57505238056183,563.0903911590576;261.80006074905396,566.4879684448242;268.8750697374344,570.4798107147217;275.8000793457031,575.06591796875;285.4334144294262,548.8372975885868;294.9371794462204,524.2484270334244;304.31137439608574,501.2993063032627;313.5559992790222,479.9899353981018;322.67105409502983,460.32031431794167;331.6565388441086,442.2904430627823;340.51245352625847,425.9003216326237;349.2387981414795,411.1499500274658;357.83557268977165,398.03932824730873;366.30277717113495,386.5684562921524;374.6404115855694,376.73733416199684;382.84847593307495,368.54596185684204;390.92697021365166,361.994339376688;398.8758944272995,357.08246672153473;402.8017677590251,355.2414365783334;406.6952485740185,353.8103438913822;410.55633687227964,352.78918866068125;414.3850326538086,352.17797088623047;418.1813359186053,351.9766905680299;421.94524666666985,352.1853477060795;425.67676489800215,352.8039423003793;429.37589061260223,353.83247435092926;433.0426238104701,355.27094385772943;436.67696449160576,357.1193508207798;440.2789126560092,359.37769524008036;443.8484683036804,362.0459771156311;450.8904020488262,368.61235323548317;457.80276572704315,376.818479180336;464.5855593383312,386.6643549501896;471.23878288269043,398.14998054504395;477.7624363601208,411.27535596489906;484.15651977062225,426.04048120975494;490.42103311419487,442.4453562796116;496.5559763908386,460.489981174469;502.5613496005535,480.17435589432716;508.43715274333954,501.4984804391861;514.1833858191967,524.4623548090458;519.800048828125,549.0659790039062;522.2137715816498,546.9570453166962;525.2049551010132,545.130259513855;528.7735993862152,543.5856215953827;532.9197044372559,542.3231315612793;537.6432702541351,541.3427894115448;542.944296836853,540.6445951461792;555.2787322998047,540.0946502685547;569.9230108261108,540.6732969284058;586.8771324157715,542.3805351257324;606.1410970687866,545.2163648605347;627.7149047851562,549.1807861328125;632.3029127120972,546.9225766658783;637.2544364929199,545.0829610824585;642.5694761276245,543.6619393825531;648.2480316162109,542.6595115661621;654.2901029586792,542.0756776332855;660.6956901550293,541.9104375839233;667.4647932052612,542.1637914180756;674.597412109375,542.8357391357422;682.0935468673706,543.9262807369232;689.953197479248,545.4354162216187;706.7630462646484,549.7094688415527;725.0269584655762,555.6578969955444;744.7449340820312,563.2807006835938;755.8652086257935,562.2011804580688;767.7235298156738,561.7825965881348;780.3198976516724,562.0249490737915;793.6543121337891,562.9282379150391;807.7267732620239,564.4924631118774;822.537281036377,566.7176246643066;838.0858354568481,569.6037225723267;854.3724365234375,573.1507568359375;871.397084236145,577.3587274551392;889.1597785949707,582.2276344299316;907.6605195999146,587.7574777603149;926.8993072509766,593.9482574462891;946.8761415481567,600.799973487854;967.5910224914551,608.3126258850098;989.0439500808716,616.4862146377563;1011.2349243164062,625.3207397460938"/>
+</TPath>
+<TPath nid="1">
+<q ord="0" p1="395.3326416015625,576.4013671875" p2="399.3326416015625,576.4013671875" pc="396.7326965332031,576.3314208984375"/>
+<info flatness="0.3333333333333333" size="2"/>
+<help len="0.0;4.0" seg="395.3326416015625,576.4013671875;399.3326416015625,576.4013671875"/>
+</TPath>
+</AllPath>
+<lesson verb="$A hoppar över $B"/>
+<AllActors>
+<Actor hotspot_begin="0.7333333333333333 0.6958823529411764" hotspot_end="0.7333333333333333 0.6958823529411764" hotspot_rotate="0.5 0.5" lesson_id="beaver" name="actor/ChaseRun/Beaver.png" nid="0" prim_mirror="0" prim_scale="0.7" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.29100000000000004 0.8900000000000001" hotspot_end="0.3071666666666667 0.8900000000000001" hotspot_rotate="0.6628333333333334 0.5700000000000001" lesson_id="banana" name="actor/puts/Banana.png" nid="1" prim_mirror="0" prim_scale="0.6" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.49764705882352944 0.86" hotspot_end="0.49764705882352944 0.85" hotspot_rotate="0.5 0.5" lesson_id="buzzard" name="actor/ChaseRun/Buzzard.png" nid="2" prim_mirror="0" prim_scale="0.8" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.4956962025316455 0.89" hotspot_end="0.4956962025316455 0.89" hotspot_rotate="0.5 0.5" lesson_id="apple" name="actor/quality/apple.png" nid="3" prim_mirror="0" prim_scale="0.6" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.91" hotspot_end="0.5 0.9" hotspot_rotate="0.3 0.82" lesson_id="boy2" name="actor/FlyJump/BoyBall.png" nid="4" prim_mirror="0" prim_scale="0.6" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.4909090909090909 0.9" hotspot_end="0.4909090909090909 0.9" hotspot_rotate="0.5 0.5" lesson_id="flower" name="actor/FlyJump/FlowerAmLG.png" nid="5" prim_mirror="0" prim_scale="0.6" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.4972413793103448 0.94" hotspot_end="0.4972413793103448 0.94" hotspot_rotate="0.5 0.5" lesson_id="icecream" name="actor/FlyJump/Icecream.png" nid="6" prim_mirror="0" prim_scale="0.2" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.4979245283018867 0.9099999999999999" hotspot_end="0.4979245283018867 0.9099999999999999" hotspot_rotate="0.5 0.5" lesson_id="plane" name="actor/FlyJump/plane.png" nid="7" prim_mirror="0" prim_scale="0.5" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.8178801843317972 0.84" hotspot_end="0.8178801843317972 0.84" hotspot_rotate="0.5 0.5" lesson_id="lemur" name="actor/ChaseRun/lemur.png" nid="8" prim_mirror="0" prim_scale="0.6" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.48698630136986293 0.93" hotspot_end="0.48698630136986293 0.94" hotspot_rotate="0.5 0.5" lesson_id="boy" name="actor/FlyJump/Boy.png" nid="9" prim_mirror="1" prim_scale="0.6" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.49923664122137407 0.91" hotspot_end="0.49923664122137407 0.91" hotspot_rotate="0.5 0.5" lesson_id="frog" name="actor/FlyJump/frog.png" nid="10" prim_mirror="0" prim_scale="0.4" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.6266666666666667 0.92" hotspot_end="0.6266666666666667 0.92" hotspot_rotate="0.5 0.5" lesson_id="squirrel" name="actor/FlyJump/Squirrel.png" nid="11" prim_mirror="0" prim_scale="0.4" var1="" var2="" var3=""/>
+</AllActors>
+<AllWings/>
+</AnimCanvas>
+<MTL>
+<TimeLine duration="3760" lesson_id="A" nid="0" offset="200">
+<TimeMarker duration="0" type="{" when="-199">
+<T_Event>
+<TriggerEvent arg="audio/RunRoomL.wav" cmd="PlaySound" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="100 1.2" cmd="Scale" isOn="true"/>
+<TriggerEvent arg="run" cmd="ImageAttrib" isOn="true"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="[" when="0">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="15" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Front" cmd="SetLayer" isOn="true"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="790">
+<T_Event>
+<TriggerEvent arg="audio/boing3.wav" cmd="PlaySound" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="1060">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="-0.2 0.9" cmd="Scale" isOn="true"/>
+<TriggerEvent arg="Jump" cmd="ImageAttrib" isOn="true"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.4" cmd="SetAnimSpeed" isOn="true"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="1694">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Back" cmd="SetLayer" isOn="true"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="eat" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="2230">
+<T_Event>
+<TriggerEvent arg="audio/RunRoomR.wav" cmd="PlaySound" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="run" cmd="ImageAttrib" isOn="true"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.1" cmd="SetAnimSpeed" isOn="true"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="]" when="3760">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="}" when="4800">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+</TimeLine>
+<TimeLine duration="3980" lesson_id="B" nid="1" offset="30">
+<TimeMarker duration="0" type="{" when="-29">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="sitting" cmd="ImageAttrib" isOn="true"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="[" when="0">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="1450">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="-9 -5" cmd="Rotate" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="2560">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="10 7" cmd="Rotate" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="3120">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="-8 -3" cmd="Rotate" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="3640">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="+7 2" cmd="Rotate" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="]" when="3980">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="}" when="4970">
+<T_Event>
+<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+</T_Event>
+</TimeMarker>
+</TimeLine>
+</MTL>
+</omega>

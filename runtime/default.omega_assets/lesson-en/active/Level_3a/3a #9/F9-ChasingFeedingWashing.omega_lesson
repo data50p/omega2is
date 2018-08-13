@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="actor"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="B" Tid="o" ord="2" type="actor"/>
+</target>
+<items>
+<item-entry Tid="s,o" ord="0" type="actor">
+<item Lid="astronaut" dummysound="audio/words-en/dummy/accident.wav" dummytext="the accident" ord="0" sound="audio/words-en/astronaut.wav" text="the astronaut" var-1="" var-2="" var-3=""/>
+<item Lid="buzzard" dummysound="audio/words-en/dummy/bridle.wav" dummytext="the bridle" ord="1" sound="audio/words-en/bird.wav" text="the buzzard" var-1="" var-2="" var-3=""/>
+<item Lid="penguin" dummysound="audio/words-en/dummy/pelican.wav" dummytext="the pelican" ord="2" sound="audio/words-en/penguin.wav" text="the penguin" var-1="null" var-2="null" var-3="null"/>
+<item Lid="swan" dummysound="audio/words-en/dummy/stork.wav" dummytext="the stork" ord="3" sound="audio/words-en/swan.wav" text="the swan" var-1="null" var-2="null" var-3="null"/>
+<item Lid="ghost" dummysound="audio/words-en/dummy/gazelle.wav" dummytext="the gazelle" ord="4" sound="audio/words-en/ghost.wav" text="the ghost" var-1="null" var-2="null" var-3="null"/>
+<item Lid="lion" dummysound="audio/words-en/dummy/piranha.wav" dummytext="the piranha" ord="5" sound="audio/words-en/lion.wav" text="the lion" var-1="null" var-2="null" var-3="null"/>
+<item Lid="tiger" dummysound="audio/words-en/dummy/towtruck.wav" dummytext="the towtruck" ord="6" sound="audio/words-en/tiger.wav" text="the tiger" var-1="null" var-2="null" var-3="null"/>
+<item Lid="dino" dummysound="audio/words-en/dummy/dinner.wav" dummytext="the dinner" ord="7" sound="audio/words-en/dino.wav" text="the dinosaur" var-1="null" var-2="null" var-3="null"/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/ChaseChased2" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/chases.wav" text="chases" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/FeedCarrotPolar" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/feeds.wav" text="feeds" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/WashBath" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-en/washes.wav" text="washes" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="The astronaut{s} chases{v} the ghost{o}"/>
+<sentence ord="1" text="The buzzard{s} feeds{v} the astronaut{o}"/>
+<sentence ord="2" text="The penguin{s} washes{v} the swan{o}"/>
+<sentence ord="3" text="The swan{s} chases{v} the lion{o}"/>
+<sentence ord="4" text="The swan{s} washes{v} the penguin{o}"/>
+<sentence ord="5" text="The ghost{s} chases{v} the swan{o}"/>
+<sentence ord="6" text="The ghost{s} feeds{v} the lion{o}"/>
+<sentence ord="7" text="The ghost{s} washes{v} the tiger{o}"/>
+<sentence ord="8" text="The lion{s} feeds{v} the swan{o}"/>
+<sentence ord="9" text="The tiger{s} chases{v} the tiger{o}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="The swan{s} washes{v} the lion{o}"/>
+<sentence ord="1" text="The ghost{s} chases{v} the astronaut{o}"/>
+<sentence ord="2" text="The tiger{s} feeds{v} the astronaut{o}"/>
+<sentence ord="3" text="The astronaut{s} feeds{v} the astronaut{o}"/>
+<sentence ord="4" text="The dinosaur{s} chases{v} the buzzard{o}"/>
+<sentence ord="4" text="The dinosaur{s} washes{v} the penguin{o}"/>
+<sentence ord="5" text="The ghost{s} chases{v} the tiger{o}"/>
+<sentence ord="6" text="The tiger{s} washes{v} the penguin{o}"/>
+<sentence ord="7" text="The penguin{s} feeds{v} the lion{o}"/>
+<sentence ord="8" text="The buzzard{s} washes{v} the buzzard{o}"/>
+<sentence ord="9" text="The buzzard{s} chases{v} the swan{o}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="The astronaut{s} chases{v} the astronaut{o}"/>
+<sentence ord="1" text="The astronaut{s} chases{v} the swan{o}"/>
+<sentence ord="2" text="The astronaut{s} chases{v} the dinosaur{o}"/>
+<sentence ord="3" text="The astronaut{s} feeds{v} the swan{o}"/>
+<sentence ord="4" text="The astronaut{s} feeds{v} the tiger{o}"/>
+<sentence ord="5" text="The astronaut{s} washes{v} the penguin{o}"/>
+<sentence ord="6" text="The astronaut{s} washes{v} the lion{o}"/>
+<sentence ord="7" text="The buzzard{s} chases{v} the buzzard{o}"/>
+<sentence ord="8" text="The buzzard{s} chases{v} the lion{o}"/>
+<sentence ord="9" text="The buzzard{s} feeds{v} the buzzard{o}"/>
+<sentence ord="10" text="The buzzard{s} feeds{v} the lion{o}"/>
+<sentence ord="11" text="The buzzard{s} washes{v} the buzzard{o}"/>
+<sentence ord="12" text="The buzzard{s} washes{v} the dinosaur{o}"/>
+<sentence ord="13" text="The penguin{s} chases{v} the swan{o}"/>
+<sentence ord="14" text="The penguin{s} feeds{v} the astronaut{o}"/>
+<sentence ord="15" text="The penguin{s} feeds{v} the lion{o}"/>
+<sentence ord="16" text="The penguin{s} washes{v} the penguin{o}"/>
+<sentence ord="17" text="The penguin{s} washes{v} the dinosaur{o}"/>
+<sentence ord="18" text="The swan{s} chases{v} the lion{o}"/>
+<sentence ord="19" text="The swan{s} feeds{v} the buzzard{o}"/>
+<sentence ord="20" text="The swan{s} feeds{v} the tiger{o}"/>
+<sentence ord="21" text="The swan{s} washes{v} the swan{o}"/>
+<sentence ord="22" text="The ghost{s} chases{v} the astronaut{o}"/>
+<sentence ord="23" text="The ghost{s} chases{v} the lion{o}"/>
+<sentence ord="24" text="The ghost{s} feeds{v} the swan{o}"/>
+<sentence ord="25" text="The ghost{s} feeds{v} the dinosaur{o}"/>
+<sentence ord="26" text="The ghost{s} washes{v} the lion{o}"/>
+<sentence ord="27" text="The lion{s} chases{v} the swan{o}"/>
+<sentence ord="28" text="The lion{s} feeds{v} the astronaut{o}"/>
+<sentence ord="29" text="The lion{s} feeds{v} the tiger{o}"/>
+<sentence ord="30" text="The lion{s} washes{v} the lion{o}"/>
+<sentence ord="31" text="The tiger{s} chases{v} the ghost{o}"/>
+<sentence ord="32" text="The tiger{s} feeds{v} the swan{o}"/>
+<sentence ord="33" text="The tiger{s} washes{v} the buzzard{o}"/>
+<sentence ord="34" text="The tiger{s} washes{v} the tiger{o}"/>
+<sentence ord="35" text="The dinosaur{s} chases{v} the ghost{o}"/>
+<sentence ord="36" text="The dinosaur{s} feeds{v} the penguin{o}"/>
+<sentence ord="37" text="The dinosaur{s} washes{v} the astronaut{o}"/>
+<sentence ord="38" text="The dinosaur{s} washes{v} the ghost{o}"/>
+<sentence ord="39" text="The dinosaur{s} washes{v} the tiger{o}"/>
+<sentence ord="40" text="The dinosaur{s} feeds{v} the lion{o}"/>
+<sentence ord="41" text="The dinosaur{s} chases{v} the dinosaur{o}"/>
+<sentence ord="42" text="The tiger{s} washes{v} the dinosaur{o}"/>
+<sentence ord="43" text="The tiger{s} washes{v} the penguin{o}"/>
+<sentence ord="44" text="The tiger{s} feeds{v} the lion{o}"/>
+<sentence ord="45" text="The tiger{s} chases{v} the astronaut{o}"/>
+<sentence ord="47" text="The lion{s} washes{v} the astronaut{o}"/>
+<sentence ord="48" text="The lion{s} feeds{v} the buzzard{o}"/>
+<sentence ord="49" text="The ghost{s} feeds{v} the astronaut{o}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="The astronaut{s} chases{v} the penguin{o}"/>
+<sentence ord="1" text="The astronaut{s} chases{v} the tiger{o}"/>
+<sentence ord="2" text="The astronaut{s} feeds{v} the buzzard{o}"/>
+<sentence ord="3" text="The astronaut{s} feeds{v} the lion{o}"/>
+<sentence ord="4" text="The astronaut{s} washes{v} the astronaut{o}"/>
+<sentence ord="6" text="The astronaut{s} washes{v} the ghost{o}"/>
+<sentence ord="7" text="The buzzard{s} chases{v} the astronaut{o}"/>
+<sentence ord="8" text="The buzzard{s} chases{v} the swan{o}"/>
+<sentence ord="9" text="The buzzard{s} chases{v} the dinosaur{o}"/>
+<sentence ord="10" text="The buzzard{s} feeds{v} the swan{o}"/>
+<sentence ord="11" text="The buzzard{s} washes{v} the astronaut{o}"/>
+<sentence ord="12" text="The buzzard{s} washes{v} the ghost{o}"/>
+<sentence ord="13" text="The penguin{s} chases{v} the buzzard{o}"/>
+<sentence ord="14" text="The penguin{s} chases{v} the ghost{o}"/>
+<sentence ord="15" text="The penguin{s} feeds{v} the penguin{o}"/>
+<sentence ord="16" text="The penguin{s} feeds{v} the dinosaur{o}"/>
+<sentence ord="17" text="The penguin{s} washes{v} the swan{o}"/>
+<sentence ord="18" text="The penguin{s} washes{v} the tiger{o}"/>
+<sentence ord="19" text="The swan{s} chases{v} the penguin{o}"/>
+<sentence ord="20" text="The swan{s} chases{v} the dinosaur{o}"/>
+<sentence ord="21" text="The swan{s} feeds{v} the penguin{o}"/>
+<sentence ord="22" text="The swan{s} feeds{v} the lion{o}"/>
+<sentence ord="23" text="The swan{s} washes{v} the buzzard{o}"/>
+<sentence ord="24" text="The swan{s} washes{v} the ghost{o}"/>
+<sentence ord="25" text="The swan{s} washes{v} the dinosaur{o}"/>
+<sentence ord="26" text="The ghost{s} chases{v} the swan{o}"/>
+<sentence ord="27" text="The ghost{s} chases{v} the dinosaur{o}"/>
+<sentence ord="28" text="The ghost{s} feeds{v} the penguin{o}"/>
+<sentence ord="29" text="The ghost{s} feeds{v} the lion{o}"/>
+<sentence ord="30" text="The ghost{s} washes{v} the astronaut{o}"/>
+<sentence ord="31" text="The ghost{s} washes{v} the swan{o}"/>
+<sentence ord="32" text="The ghost{s} washes{v} the dinosaur{o}"/>
+<sentence ord="33" text="The lion{s} chases{v} the penguin{o}"/>
+<sentence ord="34" text="The lion{s} chases{v} the tiger{o}"/>
+<sentence ord="35" text="The lion{s} feeds{v} the buzzard{o}"/>
+<sentence ord="36" text="The lion{s} feeds{v} the ghost{o}"/>
+<sentence ord="37" text="The lion{s} feeds{v} the dinosaur{o}"/>
+<sentence ord="38" text="The lion{s} washes{v} the swan{o}"/>
+<sentence ord="39" text="The lion{s} washes{v} the dinosaur{o}"/>
+<sentence ord="40" text="The tiger{s} chases{v} the swan{o}"/>
+<sentence ord="41" text="The tiger{s} chases{v} the dinosaur{o}"/>
+<sentence ord="42" text="The tiger{s} feeds{v} the swan{o}"/>
+<sentence ord="43" text="The tiger{s} feeds{v} the tiger{o}"/>
+<sentence ord="45" text="The tiger{s} washes{v} the penguin{o}"/>
+<sentence ord="46" text="The tiger{s} washes{v} the lion{o}"/>
+<sentence ord="47" text="The dinosaur{s} chases{v} the astronaut{o}"/>
+<sentence ord="48" text="The dinosaur{s} chases{v} the penguin{o}"/>
+<sentence ord="49" text="The dinosaur{s} chases{v} the tiger{o}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

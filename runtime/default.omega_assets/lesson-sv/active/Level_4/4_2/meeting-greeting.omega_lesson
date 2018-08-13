@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="" Tid="o" ord="2" type="passive"/>
+<t-item Lid="" Tid="aux" ord="3" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/girl.mp3" text="Flickan" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/boy.mp3" text="Pojken" var-1="s" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="Mannen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="Kvinnan" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="" text="säger hej till" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="kramar" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="hälsar på" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+<item-entry Tid="o" ord="2" type="passive">
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="" text="kvinnan" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="mannen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="pojken" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="flickan" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+<item-entry Tid="aux" ord="3" type="passive">
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="" text="i parken" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="på gatan" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="vid busshållplatsen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="på stationen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific>
+<value key="Pojken säger hej till flickan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHelloBoyBus_stop.mp4"/>
+<value key="Kvinnan hälsar på mannen i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManGreetWomanPark.mp4"/>
+<value key="Mannen kramar kvinnan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugWomanBus_stop.mp4"/>
+<value key="Pojken kramar mannen på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManHugBoyTrain.mp4"/>
+<value key="Flickan kramar flickan på stationen" val="!off"/>
+<value key="Flickan kramar kvinnan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugWomanPark.mp4"/>
+<value key="Flickan hälsar på pojken på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetBoyTrain.mp4"/>
+<value key="Pojken säger hej till flickan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloBoyTrain.mp4"/>
+<value key="Mannen säger hej till pojken på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManHelloBoyTrain.mp4"/>
+<value key="Mannen säger hej till flickan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloGirlBus_stop.mp4"/>
+<value key="Kvinnan hälsar på flickan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlGreetWomanBus_stop.mp4"/>
+<value key="Mannen hälsar på mannen på stationen" val="!off"/>
+<value key="Kvinnan kramar pojken på stationen" val="anim/ActiveVideo/meeting-greeting/Train/BoyHugWomanTrain.mp4"/>
+<value key="Pojken kramar flickan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugBoyPark.mp4"/>
+<value key="Mannen hälsar på kvinnan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetWomanStreet.mp4"/>
+<value key="Mannen säger hej till pojken vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloBoyBus_stop.mp4"/>
+<value key="Pojken säger hej till mannen på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManHelloBoyTrain.mp4"/>
+<value key="Mannen hälsar på flickan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetGirlBus_stop.mp4"/>
+<value key="Kvinnan hälsar på pojken på gatan" val="anim/ActiveVideo/meeting-greeting/Street/BoyGreetWomanStreet.mp4"/>
+<value key="Kvinnan säger hej till mannen vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloWomanBus_stop.mp4"/>
+<value key="Flickan kramar mannen vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugGirlBus_stop.mp4"/>
+<value key="Kvinnan hälsar på flickan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetWomanTrain.mp4"/>
+<value key="Pojken kramar flickan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlHugBoyTrain.mp4"/>
+<value key="Flickan kramar mannen i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugManPark.mp4"/>
+<value key="Mannen kramar pojken på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManHugBoyTrain.mp4"/>
+<value key="Pojken hälsar på flickan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetBoyPark.mp4"/>
+<value key="Flickan säger hej till flickan på gatan" val="!off"/>
+<value key="Mannen kramar kvinnan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManHugWomanTrain.mp4"/>
+<value key="Kvinnan kramar pojken i parken" val="anim/ActiveVideo/meeting-greeting/Park/WomanHugBoyPark.mp4"/>
+<value key="Kvinnan säger hej till pojken i parken" val="anim/ActiveVideo/meeting-greeting/Park/WomanHelloBoyPark.mp4"/>
+<value key="Mannen hälsar på pojken i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManGreetBoyPark.mp4"/>
+<value key="Pojken hälsar på mannen i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManGreetBoyPark.mp4"/>
+<value key="Flickan säger hej till pojken i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloBoyPark.mp4"/>
+<value key="Flickan hälsar på flickan i parken" val="!off"/>
+<value key="Flickan hälsar på pojken i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetBoyPark.mp4"/>
+<value key="Mannen kramar mannen på stationen" val="!off"/>
+<value key="Mannen hälsar på mannen vid busshållplatsen" val="!off"/>
+<value key="Kvinnan säger hej till kvinnan på gatan" val="!off"/>
+<value key="Kvinnan kramar flickan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugWomanPark.mp4"/>
+<value key="Kvinnan kramar flickan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHugWomanBus_stop.mp4"/>
+<value key="Mannen kramar pojken vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugBoyBus_stop.mp4"/>
+<value key="Flickan kramar flickan på gatan" val="!off"/>
+<value key="Kvinnan hälsar på mannen vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetWomanBus_stop.mp4"/>
+<value key="Kvinnan hälsar på pojken på stationen" val="anim/ActiveVideo/meeting-greeting/Train/BoyGreetWomanTrain.mp4"/>
+<value key="Mannen kramar flickan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugManPark.mp4"/>
+<value key="Flickan hälsar på flickan vid busshållplatsen" val="!off"/>
+<value key="Flickan säger hej till flickan i parken" val="!off"/>
+<value key="Pojken hälsar på pojken på gatan" val="!off"/>
+<value key="Flickan kramar flickan vid busshållplatsen" val="!off"/>
+<value key="Pojken hälsar på flickan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetBoyTrain.mp4"/>
+<value key="Flickan kramar mannen på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManHugGirlTrain.mp4"/>
+<value key="Mannen säger hej till kvinnan i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManHelloWomanPark.mp4"/>
+<value key="Flickan säger hej till mannen på gatan" val="anim/ActiveVideo/meeting-greeting/Street/GirlHelloManStreet.mp4"/>
+<value key="Mannen säger hej till mannen på stationen" val="!off"/>
+<value key="Kvinnan hälsar på pojken i parken" val="anim/ActiveVideo/meeting-greeting/Park/WomanGreetBoyPark.mp4"/>
+<value key="Flickan hälsar på mannen på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetManTrain.mp4"/>
+<value key="Pojken hälsar på mannen på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetBoyStreet.mp4"/>
+<value key="Pojken hälsar på flickan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlGreetBoyBus_stop.mp4"/>
+<value key="Pojken säger hej till pojken i parken" val="!off"/>
+<value key="Pojken säger hej till pojken på stationen" val="!off"/>
+<value key="Flickan säger hej till kvinnan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloWomanPark.mp4"/>
+<value key="Flickan säger hej till flickan vid busshållplatsen" val="!off"/>
+<value key="Mannen hälsar på pojken vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetBoyBus_stop.mp4"/>
+<value key="Mannen hälsar på kvinnan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManGreetWomanTrain.mp4"/>
+<value key="Flickan kramar pojken vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHugBoyBus_stop.mp4"/>
+<value key="Flickan säger hej till pojken vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHelloBoyBus_stop.mp4"/>
+<value key="Pojken kramar flickan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHugBoyBus_stop.mp4"/>
+<value key="Mannen kramar mannen i parken" val="!off"/>
+<value key="Mannen säger hej till kvinnan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloWomanBus_stop.mp4"/>
+<value key="Pojken hälsar på pojken på stationen" val="!off"/>
+<value key="Pojken kramar kvinnan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHugWomanBus_stop.mp4"/>
+<value key="Kvinnan hälsar på kvinnan i parken" val="!off"/>
+<value key="Pojken säger hej till mannen vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloBoyBus_stop.mp4"/>
+<value key="Mannen hälsar på flickan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetManPark.mp4"/>
+<value key="Pojken hälsar på kvinnan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/BoyGreetWomanTrain.mp4"/>
+<value key="Kvinnan kramar mannen på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManHugWomanTrain.mp4"/>
+<value key="Pojken kramar pojken i parken" val="!off"/>
+<value key="Mannen kramar flickan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugGirlBus_stop.mp4"/>
+<value key="Pojken säger hej till flickan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloBoyPark.mp4"/>
+<value key="Flickan hälsar på kvinnan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/WomanGreetGirlStreet.mp4"/>
+<value key="Kvinnan säger hej till mannen i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManHelloWomanPark.mp4"/>
+<value key="Mannen säger hej till mannen i parken" val="!off"/>
+<value key="Flickan hälsar på pojken vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlGreetBoyBus_stop.mp4"/>
+<value key="Pojken hälsar på kvinnan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyGreetWomanBus_stop.mp4"/>
+<value key="Pojken hälsar på kvinnan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/BoyGreetWomanStreet.mp4"/>
+<value key="Kvinnan hälsar på kvinnan vid busshållplatsen" val="!off"/>
+<value key="Kvinnan kramar mannen på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManHugWomanStreet.mp4"/>
+<value key="Pojken kramar pojken vid busshållplatsen" val="!off"/>
+<value key="Kvinnan kramar kvinnan på gatan" val="!off"/>
+<value key="Flickan säger hej till kvinnan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHelloWomanBus_stop.mp4"/>
+<value key="Kvinnan säger hej till mannen på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManHelloWomanTrain.mp4"/>
+<value key="Pojken hälsar på mannen vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetBoyBus_stop.mp4"/>
+<value key="Flickan kramar kvinnan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/WomanHugGirlStreet.mp4"/>
+<value key="Kvinnan kramar pojken vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHugWomanBus_stop.mp4"/>
+<value key="Flickan kramar pojken i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugBoyPark.mp4"/>
+<value key="Kvinnan säger hej till flickan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloWomanTrain.mp4"/>
+<value key="Mannen kramar mannen vid busshållplatsen" val="!off"/>
+<value key="Flickan hälsar på mannen på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetGirlStreet.mp4"/>
+<value key="Pojken kramar mannen i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManHugBoyPark.mp4"/>
+<value key="Mannen säger hej till pojken i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManHelloBoyPark.mp4"/>
+<value key="Mannen hälsar på mannen på gatan" val="!off"/>
+<value key="Flickan säger hej till kvinnan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloWomanTrain.mp4"/>
+<value key="Kvinnan säger hej till pojken på stationen" val="anim/ActiveVideo/meeting-greeting/Train/BoyHelloWomanTrain.mp4"/>
+<value key="Mannen kramar kvinnan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManHugWomanStreet.mp4"/>
+<value key="Kvinnan hälsar på kvinnan på stationen" val="!off"/>
+<value key="Mannen kramar pojken i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManHugBoyPark.mp4"/>
+<value key="Flickan kramar kvinnan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHugWomanBus_stop.mp4"/>
+<value key="Flickan säger hej till flickan på stationen" val="!off"/>
+<value key="Pojken säger hej till mannen i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManHelloBoyPark.mp4"/>
+<value key="Mannen kramar kvinnan i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManHugWomanPark.mp4"/>
+<value key="Kvinnan kramar flickan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/WomanHugGirlStreet.mp4"/>
+<value key="Flickan säger hej till pojken på gatan" val="anim/ActiveVideo/meeting-greeting/Street/GirlHelloBoyStreet.mp4"/>
+<value key="Pojken kramar kvinnan i parken" val="anim/ActiveVideo/meeting-greeting/Park/WomanHugBoyPark.mp4"/>
+<value key="Kvinnan säger hej till kvinnan på stationen" val="!off"/>
+<value key="Mannen hälsar på pojken på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetBoyStreet.mp4"/>
+<value key="Flickan säger hej till pojken på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloBoyTrain.mp4"/>
+<value key="Mannen säger hej till kvinnan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManHelloWomanTrain.mp4"/>
+<value key="Pojken hälsar på mannen på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManGreetBoyTrain.mp4"/>
+<value key="Kvinnan säger hej till pojken på gatan" val="anim/ActiveVideo/meeting-greeting/Street/BoyHelloWomanStreet.mp4"/>
+<value key="Kvinnan kramar kvinnan vid busshållplatsen" val="!off"/>
+<value key="Flickan säger hej till mannen vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloGirlBus_stop.mp4"/>
+<value key="Kvinnan kramar pojken på gatan" val="anim/ActiveVideo/meeting-greeting/Street/BoyHugWomanStreet.mp4"/>
+<value key="Pojken hälsar på kvinnan i parken" val="anim/ActiveVideo/meeting-greeting/Park/WomanGreetBoyPark.mp4"/>
+<value key="Flickan hälsar på flickan på gatan" val="!off"/>
+<value key="Kvinnan säger hej till flickan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/WomanHelloGirlStreet.mp4"/>
+<value key="Mannen hälsar på kvinnan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetWomanBus_stop.mp4"/>
+<value key="Flickan hälsar på pojken på gatan" val="anim/ActiveVideo/meeting-greeting/Street/GirlGreetBoyStreet.mp4"/>
+<value key="Kvinnan hälsar på flickan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetWomanPark.mp4"/>
+<value key="Mannen kramar flickan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManHugGirlTrain.mp4"/>
+<value key="Pojken säger hej till kvinnan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/BoyHelloWomanStreet.mp4"/>
+<value key="Mannen kramar mannen på gatan" val="!off"/>
+<value key="Kvinnan kramar mannen vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugWomanBus_stop.mp4"/>
+<value key="Pojken hälsar på pojken vid busshållplatsen" val="!off"/>
+<value key="Pojken kramar mannen vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugBoyBus_stop.mp4"/>
+<value key="Flickan kramar mannen på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManHugGirlStreet.mp4"/>
+<value key="Flickan säger hej till mannen i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloManPark.mp4"/>
+<value key="Mannen kramar flickan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManHugGirlStreet.mp4"/>
+<value key="Pojken hälsar på pojken i parken" val="!off"/>
+<value key="Flickan hälsar på kvinnan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlGreetWomanBus_stop.mp4"/>
+<value key="Pojken kramar flickan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/GirlHugBoyStreet.mp4"/>
+<value key="Mannen säger hej till flickan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloManTrain.mp4"/>
+<value key="Mannen säger hej till flickan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/GirlHelloManStreet.mp4"/>
+<value key="Flickan hälsar på mannen vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetGirlBus_stop.mp4"/>
+<value key="Flickan kramar flickan i parken" val="!off"/>
+<value key="Pojken säger hej till kvinnan i parken" val="anim/ActiveVideo/meeting-greeting/Park/WomanHelloBoyPark.mp4"/>
+<value key="Mannen hälsar på flickan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetManTrain.mp4"/>
+<value key="Kvinnan hälsar på flickan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/WomanGreetGirlStreet.mp4"/>
+<value key="Mannen säger hej till flickan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloManPark.mp4"/>
+<value key="Pojken hälsar på flickan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/GirlGreetBoyStreet.mp4"/>
+<value key="Kvinnan säger hej till kvinnan i parken" val="!off"/>
+<value key="Flickan hälsar på kvinnan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetWomanTrain.mp4"/>
+<value key="Flickan kramar kvinnan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlHugWomanTrain.mp4"/>
+<value key="Kvinnan kramar kvinnan på stationen" val="!off"/>
+<value key="Mannen hälsar på kvinnan i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManGreetWomanPark.mp4"/>
+<value key="Kvinnan hälsar på mannen på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManGreetWomanTrain.mp4"/>
+<value key="Pojken säger hej till kvinnan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/BoyHelloWomanTrain.mp4"/>
+<value key="Flickan kramar pojken på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlHugBoyTrain.mp4"/>
+<value key="Kvinnan säger hej till flickan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHelloWomanBus_stop.mp4"/>
+<value key="Pojken säger hej till pojken vid busshållplatsen" val="!off"/>
+<value key="Pojken kramar kvinnan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/BoyHugWomanStreet.mp4"/>
+<value key="Pojken kramar pojken på stationen" val="!off"/>
+<value key="Pojken säger hej till flickan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/GirlHelloBoyStreet.mp4"/>
+<value key="Kvinnan säger hej till kvinnan vid busshållplatsen" val="!off"/>
+<value key="Mannen säger hej till mannen på gatan" val="!off"/>
+<value key="Pojken säger hej till mannen på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManHelloBoyStreet.mp4"/>
+<value key="Mannen hälsar på pojken på stationen" val="anim/ActiveVideo/meeting-greeting/Train/ManGreetBoyTrain.mp4"/>
+<value key="Kvinnan hälsar på kvinnan på gatan" val="!off"/>
+<value key="Kvinnan säger hej till flickan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloWomanPark.mp4"/>
+<value key="Flickan hälsar på mannen i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetManPark.mp4"/>
+<value key="Kvinnan säger hej till pojken vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHelloWomanBus_stop.mp4"/>
+<value key="Mannen hälsar på flickan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetGirlStreet.mp4"/>
+<value key="Mannen säger hej till mannen vid busshållplatsen" val="!off"/>
+<value key="Mannen kramar pojken på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManHugBoyStreet.mp4"/>
+<value key="Kvinnan kramar mannen i parken" val="anim/ActiveVideo/meeting-greeting/Park/ManHugWomanPark.mp4"/>
+<value key="Flickan kramar pojken på gatan" val="anim/ActiveVideo/meeting-greeting/Street/GirlHugBoyStreet.mp4"/>
+<value key="Kvinnan kramar kvinnan i parken" val="!off"/>
+<value key="Mannen hälsar på mannen i parken" val="!off"/>
+<value key="Pojken säger hej till kvinnan vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHelloWomanBus_stop.mp4"/>
+<value key="Pojken kramar pojken på gatan" val="!off"/>
+<value key="Kvinnan kramar flickan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlHugWomanTrain.mp4"/>
+<value key="Kvinnan hälsar på pojken vid busshållplatsen" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyGreetWomanBus_stop.mp4"/>
+<value key="Flickan säger hej till kvinnan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/WomanHelloGirlStreet.mp4"/>
+<value key="Flickan hälsar på kvinnan i parken" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetWomanPark.mp4"/>
+<value key="Kvinnan säger hej till mannen på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManHelloWomanStreet.mp4"/>
+<value key="Pojken kramar mannen på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManHugBoyStreet.mp4"/>
+<value key="Mannen säger hej till pojken på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManHelloBoyStreet.mp4"/>
+<value key="Flickan hälsar på flickan på stationen" val="!off"/>
+<value key="Pojken säger hej till pojken på gatan" val="!off"/>
+<value key="Mannen säger hej till kvinnan på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManHelloWomanStreet.mp4"/>
+<value key="Kvinnan hälsar på mannen på gatan" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetWomanStreet.mp4"/>
+<value key="Flickan säger hej till mannen på stationen" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloManTrain.mp4"/>
+<value key="Pojken kramar kvinnan på stationen" val="anim/ActiveVideo/meeting-greeting/Train/BoyHugWomanTrain.mp4"/>
+</action_specific>
+<sign_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Handen hoppar över handen"/>
+<sentence ord="1" text="Handen hoppar över koppen"/>
+<sentence ord="2" text="Koppen hoppar över blomman"/>
+<sentence ord="3" text="Blomman hoppar över koppen"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Katten hoppar över blomman"/>
+<sentence ord="1" text="Blomman hoppar över handen"/>
+<sentence ord="2" text="Koppen hoppar över handen"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Katten hoppar över katten"/>
+<sentence ord="1" text="Koppen hoppar över blomman"/>
+<sentence ord="2" text="Blomman hoppar över handen"/>
+<sentence ord="3" text="Koppen hoppar över koppen"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Koppen hoppar över katten"/>
+<sentence ord="1" text="Handen hoppar över koppen"/>
+<sentence ord="2" text="Blomman hoppar över blomman"/>
+<sentence ord="3" text="Katten hoppar över koppen"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

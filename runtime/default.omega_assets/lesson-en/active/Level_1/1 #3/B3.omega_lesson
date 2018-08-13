@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="sv" ord="0" type="action"/>
+</target>
+<items>
+<item-entry Tid="sv" ord="0" type="action">
+<item Lid="dog" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/dog.wav" text="the dog" var-1="" var-2="" var-3=""/>
+<item Lid="house" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/house.wav" text="the house" var-1="" var-2="" var-3=""/>
+<item Lid="hand" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-en/hand.wav" text="the hand" var-1="" var-2="" var-3=""/>
+<item Lid="helicopter" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-en/helicopter.wav" text="the helicopter" var-1="" var-2="" var-3=""/>
+<item Lid="car" action-fname="anim/ActiveAnim/ActorpresB2" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/words-en/car.wav" text="the car" var-1="null" var-2="null" var-3="null"/>
+<item Lid="bus" action-fname="anim/ActiveAnim/ActorPresB2" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/words-en/bus.wav" text="the bus" var-1="null" var-2="null" var-3="null"/>
+<item Lid="bee" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="audio/words-en/bee.wav" text="the bee" var-1="null" var-2="null" var-3="null"/>
+<item Lid="carrot" action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="audio/words-en/carrot.wav" text="the carrot" var-1="null" var-2="null" var-3="null"/>
+</item-entry>
+<item-entry Tid="sv" ord="1" type="action">
+<item Lid="mouse" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/mouse.wav" text="the mouse" var-1="null" var-2="null" var-3="null"/>
+<item Lid="mc" action-fname="anim/ActiveAnim/ActorPresB2" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/mc.wav" text="the motorcycle" var-1="null" var-2="null" var-3="null"/>
+<item Lid="astronaut" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-en/astronaut.wav" text="the astronaut" var-1="null" var-2="null" var-3="null"/>
+<item Lid="box" action-fname="anim/ActiveAnim/ActorpresB4DownOnRoundTable" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-en/box.wav" text="the box" var-1="null" var-2="null" var-3="null"/>
+<item Lid="lion" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/words-en/lion.wav" text="the lion" var-1="null" var-2="null" var-3="null"/>
+<item Lid="lemur" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/words-en/lemur.wav" text="the lemur" var-1="null" var-2="null" var-3="null"/>
+<item Lid="candle" action-fname="anim/ActiveAnim/ActorpresB4DownOnRoundTable" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="audio/words-en/candle.wav" text="the candle" var-1="null" var-2="null" var-3="null"/>
+<item Lid="leopard" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="audio/words-en/leopard.wav" text="the leopard" var-1="null" var-2="null" var-3="null"/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="The dog{sv}"/>
+<sentence ord="1" text="The hand{sv}"/>
+<sentence ord="2" text="The car{sv}"/>
+<sentence ord="3" text="The bee{sv}"/>
+<sentence ord="4" text="The mouse{sv}"/>
+<sentence ord="5" text="The astronaut{sv}"/>
+<sentence ord="6" text="The lion{sv}"/>
+<sentence ord="7" text="The candle{sv}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="The leopard{sv}"/>
+<sentence ord="1" text="The lemur{sv}"/>
+<sentence ord="2" text="The box{sv}"/>
+<sentence ord="3" text="The motorcycle{sv}"/>
+<sentence ord="4" text="The carrot{sv}"/>
+<sentence ord="5" text="The bus{sv}"/>
+<sentence ord="6" text="The helicopter{sv}"/>
+<sentence ord="7" text="The house{sv}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="The lion{sv}"/>
+<sentence ord="1" text="The candle{sv}"/>
+<sentence ord="2" text="The motorcycle{sv}"/>
+<sentence ord="3" text="The mouse{sv}"/>
+<sentence ord="4" text="The house{sv}"/>
+<sentence ord="5" text="The car{sv}"/>
+<sentence ord="6" text="The dog{sv}"/>
+<sentence ord="7" text="The bus{sv}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="The mouse{sv}"/>
+<sentence ord="1" text="The carrot{sv}"/>
+<sentence ord="2" text="The bus{sv}"/>
+<sentence ord="3" text="The astronaut{sv}"/>
+<sentence ord="4" text="The hand{sv}"/>
+<sentence ord="5" text="The lemur{sv}"/>
+<sentence ord="6" text="The leopard{sv}"/>
+<sentence ord="7" text="The lion{sv}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

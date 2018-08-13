@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="B" Tid="o" ord="2" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="dino" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/F8/dynamite.wav" dummytext="Dinamit" ord="0" sound="audio/Words-hr/dinosaur2.wav" text="Dinosaur" var-1="" var-2="" var-3=""/>
+<item Lid="buzzard" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/F8/sausage.wav" dummytext="Kobasica" ord="1" sound="audio/Words-hr/buzzard2.wav" text="Ptica" var-1="" var-2="" var-3=""/>
+<item Lid="penguin" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/F8/bedouine2.wav" dummytext="Beduin" ord="2" sound="audio/Words-hr/penguin3.wav" text="Pingvin" var-1="null" var-2="null" var-3="null"/>
+<item Lid="lion" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/F8/head2.wav" dummytext="Glava" ord="3" sound="audio/Words-hr/lion2.wav" text="Lav" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/ChaseChased2" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/chases2.wav" text="lovi" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/FeedCarrotPolar" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/feeds3.wav" text="hrani" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="2" type="passive">
+<item Lid="lion" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/Objektsform dummy-Revised/F8/headob4.wav" dummytext="glavu" ord="0" sound="audio/Words-hr/Objects/F8/lionob.wav" text="lava" var-1="" var-2="" var-3=""/>
+<item Lid="penguin" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/Objektsform dummy-Revised/F8/bedouineob3.wav" dummytext="beduina" ord="1" sound="audio/Words-hr/Objects/F8/penguinob.wav" text="pingvina" var-1="" var-2="" var-3=""/>
+<item Lid="buzzard" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/Objektsform dummy-Revised/F8/sausageob3.wav" dummytext="kobasicu" ord="2" sound="audio/Words-hr/Objects/F6/buzzardob.wav" text="pticu" var-1="" var-2="" var-3=""/>
+<item Lid="dino" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/F8/dynamite.wav" dummytext="dinamit" ord="3" sound="audio/Words-hr/Objects/F8/dinosaurob.wav" text="dinosaura" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Dinosaur{s} lovi{v} lava{o}"/>
+<sentence ord="1" text="Ptica{s} lovi{v} lava{o}"/>
+<sentence ord="2" text="Ptica{s} hrani{v} dinosaura{o}"/>
+<sentence ord="3" text="Pingvin{s} hrani{v} pticu{o}"/>
+<sentence ord="4" text="Lav{s} lovi{v} dinosaura{o}"/>
+<sentence ord="5" text="Lav{s} hrani{v} pticu{o}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Lav{s} hrani{v} dinosaura{o}"/>
+<sentence ord="1" text="Pingvin{s} hrani{v} dinosaura{o}"/>
+<sentence ord="2" text="Pingvin{s} lovi{v} pingvina{o}"/>
+<sentence ord="3" text="Ptica{s} hrani{v} lava{o}"/>
+<sentence ord="4" text="Dinosaur{s} hrani{v} lava{o}"/>
+<sentence ord="5" text="Dinosaur{s} lovi{v} lava{o}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Pingvin{s} hrani{v} pticu{o}"/>
+<sentence ord="1" text="Lav{s} hrani{v} dinosaura{o}"/>
+<sentence ord="2" text="Pingvin{s} lovi{v} dinosaura{o}"/>
+<sentence ord="3" text="Lav{s} hrani{v} lava{o}"/>
+<sentence ord="4" text="Ptica{s} hrani{v} pingvina{o}"/>
+<sentence ord="5" text="Lav{s} lovi{v} pingvina{o}"/>
+<sentence ord="6" text="Ptica{s} lovi{v} lava{o}"/>
+<sentence ord="7" text="Pingvin{s} lovi{v} lava{o}"/>
+<sentence ord="8" text="Dinosaur{s} hrani{v} lava{o}"/>
+<sentence ord="9" text="Ptica{s} lovi{v} pticu{o}"/>
+<sentence ord="10" text="Dinosaur{s} lovi{v} pticu{o}"/>
+<sentence ord="11" text="Dinosaur{s} hrani{v} pingvina{o}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Dinosaur{s} lovi{v} pingvina{o}"/>
+<sentence ord="1" text="Ptica{s} lovi{v} pingvina{o}"/>
+<sentence ord="2" text="Pingvin{s} lovi{v} pingvina{o}"/>
+<sentence ord="3" text="Dinosaur{s} lovi{v} dinosaura{o}"/>
+<sentence ord="4" text="Ptica{s} lovi{v} dinosaura{o}"/>
+<sentence ord="5" text="Pingvin{s} hrani{v} lava{o}"/>
+<sentence ord="6" text="Dinosaur{s} hrani{v} pticu{o}"/>
+<sentence ord="7" text="Ptica{s} hrani{v} pticu{o}"/>
+<sentence ord="8" text="Lav{s} lovi{v} pticu{o}"/>
+<sentence ord="9" text="Pingvin{s} hrani{v} dinosaura{o}"/>
+<sentence ord="10" text="Lav{s} hrani{v} pingvina{o}"/>
+<sentence ord="11" text="Lav{s} hrani{v} dinosaura{o}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

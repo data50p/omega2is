@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="B" Tid="o" ord="2" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="woman" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/actor1.wav" text="Kvinnan" var-1="" var-2="" var-3=""/>
+<item Lid="women" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/actor2.wav" text="Kvinnorna" var-1="" var-2="" var-3=""/>
+<item Lid="man" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/actor3.wav" text="Mannen" var-1="" var-2="" var-3=""/>
+<item Lid="men" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/actor4.wav" text="Männen" var-1="" var-2="" var-3=""/>
+<item Lid="girl" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="Flickan" var-1="" var-2="" var-3=""/>
+<item Lid="girls" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="Flickorna" var-1="" var-2="" var-3=""/>
+<item Lid="boy" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="Pojken" var-1="" var-2="" var-3=""/>
+<item Lid="boys" action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="Pojkarna" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/acts-with.wav" text="bär på" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="tittar på" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="pekar på" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="köper" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="säljer" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="äter" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="2" type="passive">
+<item Lid="red" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/actor1.wav" text="något rött" var-1="" var-2="" var-3=""/>
+<item Lid="orange" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/actor2.wav" text="något orange" var-1="" var-2="" var-3=""/>
+<item Lid="yellow" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/actor3.wav" text="något gult" var-1="" var-2="" var-3=""/>
+<item Lid="green" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/actor4.wav" text="något grönt" var-1="" var-2="" var-3=""/>
+<item Lid="blue" action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="något blått" var-1="" var-2="" var-3=""/>
+<item Lid="violet" action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="något violett" var-1="" var-2="" var-3=""/>
+<item Lid="brown" action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="något brunt" var-1="" var-2="" var-3=""/>
+<item Lid="black" action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="något svart" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<sign_specific/>
+<test_entries/>
+</omega_lesson>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="" Tid="av" ord="2" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="boy" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/boy3.wav" text="Dje{269}ak" var-1="" var-2="" var-3=""/>
+<item Lid="girl" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/girlSENTENCE.wav" text="Djevoj{269}ica" var-1="" var-2="" var-3=""/>
+<item Lid="cat" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/cat3.wav" text="Ma{269}ka" var-1="" var-2="" var-3=""/>
+<item Lid="dino" action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/Words-hr/dinosaur2.wav" text="Dinosaur" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/InThrough{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/looks in through2.wav" text="gleda unutra kroz" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/OutThrough{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/looks out of2.wav" text="gleda van kroz" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="2" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/H3/binoculars.wav" dummytext="dalekozor " ord="0" sound="audio/Words-hr/window2.wav" text="prozor" var-1="Window" var-2="null" var-3="null"/>
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/H3/otvor pecnice.wav" dummytext="otvor pe{263}nice " ord="1" sound="audio/Words-hr/otvor pecine.wav" text="otvor pe{263}ine" var-1="Cave" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/H3/fire.wav" dummytext="vatru" ord="2" sound="audio/Words-hr/vrata.wav" text="vrata" var-1="Door" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Dječak{s} gleda unutra kroz{v} prozor{av}"/>
+<sentence ord="1" text="Mačka{s} gleda unutra kroz{v} prozor{av}"/>
+<sentence ord="2" text="Dječak{s} gleda van kroz{v} prozor{av}"/>
+<sentence ord="3" text="Mačka{s} gleda unutra kroz{v} vrata{av}"/>
+<sentence ord="4" text="Dinosaur{s} gleda unutra kroz{v} prozor{av}"/>
+<sentence ord="5" text="Dinosaur{s} gleda van kroz{v} vrata{av}"/>
+<sentence ord="6" text="Dječak{s} gleda unutra kroz{v} vrata{av}"/>
+<sentence ord="7" text="Djevojčica{s} gleda unutra kroz{v} otvor pećine{av}"/>
+<sentence ord="8" text="Mačka{s} gleda van kroz{v} otvor pećine{av}"/>
+<sentence ord="9" text="Dinosaur{s} gleda van kroz{v} prozor{av}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Dinosaur{s} gleda van kroz{v} otvor pećine{av}"/>
+<sentence ord="1" text="Dinosaur{s} gleda unutra kroz{v} otvor pećine{av}"/>
+<sentence ord="2" text="Mačka{s} gleda unutra kroz{v} otvor pećine{av}"/>
+<sentence ord="3" text="Dječak{s} gleda van kroz{v} vrata{av}"/>
+<sentence ord="4" text="Djevojčica{s} gleda van kroz{v} vrata{av}"/>
+<sentence ord="5" text="Dječak{s} gleda van kroz{v} otvor pećine{av}"/>
+<sentence ord="6" text="Dinosaur{s} gleda unutra kroz{v} vrata{av}"/>
+<sentence ord="7" text="Djevojčica{s} gleda unutra kroz{v} vrata{av}"/>
+<sentence ord="8" text="Dječak{s} gleda unutra kroz{v} otvor pećine{av}"/>
+<sentence ord="9" text="Mačka{s} gleda van kroz{v} prozor{av}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Dinosaur{s} gleda van kroz{v} vrata{av}"/>
+<sentence ord="1" text="Mačka{s} gleda van kroz{v} vrata{av}"/>
+<sentence ord="2" text="Djevojčica{s} gleda van kroz{v} otvor pećine{av}"/>
+<sentence ord="3" text="Djevojčica{s} gleda unutra kroz{v} prozor{av}"/>
+<sentence ord="4" text="Djevojčica{s} gleda van kroz{v} prozor{av}"/>
+<sentence ord="5" text="Mačka{s} gleda van kroz{v} otvor pećine{av}"/>
+<sentence ord="6" text="Djevojčica{s} gleda van kroz{v} vrata{av}"/>
+<sentence ord="7" text="Dječak{s} gleda unutra kroz{v} prozor{av}"/>
+<sentence ord="8" text="Dinosaur{s} gleda van kroz{v} otvor pećine{av}"/>
+<sentence ord="9" text="Dinosaur{s} gleda van kroz{v} prozor{av}"/>
+<sentence ord="10" text="Dinosaur{s} gleda unutra kroz{v} vrata{av}"/>
+<sentence ord="11" text="Dinosaur{s} gleda unutra kroz{v} prozor{av}"/>
+<sentence ord="12" text="Mačka{s} gleda unutra kroz{v} prozor{av}"/>
+<sentence ord="13" text="Mačka{s} gleda van kroz{v} prozor{av}"/>
+<sentence ord="14" text="Dječak{s} gleda unutra kroz{v} vrata{av}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Dječak{s} gleda unutra kroz{v} vrata{av}"/>
+<sentence ord="1" text="Mačka{s} gleda van kroz{v} prozor{av}"/>
+<sentence ord="2" text="Dinosaur{s} gleda unutra kroz{v} prozor{av}"/>
+<sentence ord="3" text="Dječak{s} gleda unutra kroz{v} prozor{av}"/>
+<sentence ord="4" text="Djevojčica{s} gleda unutra kroz{v} otvor pećine{av}"/>
+<sentence ord="5" text="Mačka{s} gleda unutra kroz{v} vrata{av}"/>
+<sentence ord="6" text="Mačka{s} gleda unutra kroz{v} prozor{av}"/>
+<sentence ord="7" text="Dječak{s} gleda van kroz{v} vrata{av}"/>
+<sentence ord="8" text="Dječak{s} gleda van kroz{v} prozor{av}"/>
+<sentence ord="9" text="Dječak{s} gleda van kroz{v} otvor pećine{av}"/>
+<sentence ord="10" text="Djevojčica{s} gleda van kroz{v} prozor{av}"/>
+<sentence ord="11" text="Mačka{s} gleda van kroz{v} otvor pećine{av}"/>
+<sentence ord="12" text="Dinosaur{s} gleda unutra kroz{v} otvor pećine{av}"/>
+<sentence ord="13" text="Dinosaur{s} gleda van kroz{v} vrata{av}"/>
+<sentence ord="14" text="Dinosaur{s} gleda van kroz{v} prozor{av}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

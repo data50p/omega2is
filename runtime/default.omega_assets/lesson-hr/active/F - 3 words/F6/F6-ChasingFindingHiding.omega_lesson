@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="B" Tid="o" ord="2" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="bee" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/F6/pipe.wav" dummytext="Lula" ord="0" sound="audio/Words-hr/beeSENTENCE.wav" text="P{269}ela" var-1="" var-2="" var-3=""/>
+<item Lid="carrot" action-fname="" action-type="null" dummysound="audio/Words-hr/Dummywords/F6/puddle.wav" dummytext="Lokva" ord="1" sound="audio/Words-hr/carrot2.wav" text="Mrkva" var-1="" var-2="" var-3=""/>
+<item Lid="buzzard" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/F6/fork.wav" dummytext="Vilica" ord="2" sound="audio/Words-hr/buzzard2.wav" text="Ptica" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/HidingInGrass" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/Words-hr/hides4.wav" text="skriva" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/FindingAmongMushrooms" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/Words-hr/finds2.wav" text="nalazi" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/ChaseChased1" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/Words-hr/chases2.wav" text="lovi" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="o" ord="2" type="passive">
+<item Lid="carrot" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/Objektsform dummy-Revised/F6/puddleob.wav" dummytext="lokvu" ord="0" sound="audio/Words-hr/Objects/F6/carrotob.wav" text="mrkvu" var-1="" var-2="" var-3=""/>
+<item Lid="buzzard" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/Objektsform dummy-Revised/F6/forkob.wav" dummytext="vilicu" ord="1" sound="audio/Words-hr/Objects/F6/buzzardob.wav" text="pticu" var-1="" var-2="" var-3=""/>
+<item Lid="bee" action-fname="" action-type="omega_anim" dummysound="audio/Words-hr/Dummywords/Objektsform dummy-Revised/F6/pipeob.wav" dummytext="lulu" ord="2" sound="audio/Words-hr/Objects/F6/beeob.wav" text="p{269}elu" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Pčela{s} skriva{v} mrkvu{o}"/>
+<sentence ord="1" text="Pčela{s} lovi{v} pticu{o}"/>
+<sentence ord="2" text="Mrkva{s} skriva{v} pčelu{o}"/>
+<sentence ord="3" text="Ptica{s} skriva{v} pticu{o}"/>
+<sentence ord="4" text="Ptica{s} nalazi{v} pčelu{o}"/>
+<sentence ord="5" text="Ptica{s} lovi{v} pticu{o}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Ptica{s} skriva{v} mrkvu{o}"/>
+<sentence ord="1" text="Mrkva{s} lovi{v} pčelu{o}"/>
+<sentence ord="2" text="Ptica{s} lovi{v} mrkvu{o}"/>
+<sentence ord="3" text="Pčela{s} nalazi{v} mrkvu{o}"/>
+<sentence ord="4" text="Mrkva{s} skriva{v} mrkvu{o}"/>
+<sentence ord="5" text="Pčela{s} skriva{v} pticu{o}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Ptica{s} lovi{v} pčelu{o}"/>
+<sentence ord="1" text="Mrkva{s} lovi{v} pticu{o}"/>
+<sentence ord="2" text="Ptica{s} lovi{v} mrkvu{o}"/>
+<sentence ord="3" text="Mrkva{s} nalazi{v} mrkvu{o}"/>
+<sentence ord="4" text="Ptica{s} nalazi{v} pticu{o}"/>
+<sentence ord="5" text="Pčela{s} lovi{v} mrkvu{o}"/>
+<sentence ord="6" text="Ptica{s} skriva{v} pčelu{o}"/>
+<sentence ord="7" text="Pčela{s} skriva{v} pčelu{o}"/>
+<sentence ord="8" text="Mrkva{s} nalazi{v} pčelu{o}"/>
+<sentence ord="9" text="Pčela{s} skriva{v} mrkvu{o}"/>
+<sentence ord="10" text="Mrkva{s} skriva{v} pticu{o}"/>
+<sentence ord="11" text="Pčela{s} nalazi{v} pticu{o}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Pčela{s} skriva{v} pticu{o}"/>
+<sentence ord="1" text="Mrkva{s} skriva{v} pčelu{o}"/>
+<sentence ord="2" text="Pčela{s} nalazi{v} mrkvu{o}"/>
+<sentence ord="3" text="Mrkva{s} lovi{v} mrkvu{o}"/>
+<sentence ord="4" text="Pčela{s} nalazi{v} pčelu{o}"/>
+<sentence ord="5" text="Ptica{s} nalazi{v} mrkvu{o}"/>
+<sentence ord="6" text="Pčela{s} lovi{v} pticu{o}"/>
+<sentence ord="7" text="Ptica{s} lovi{v} pticu{o}"/>
+<sentence ord="8" text="Mrkva{s} nalazi{v} pticu{o}"/>
+<sentence ord="9" text="Ptica{s} skriva{v} pticu{o}"/>
+<sentence ord="10" text="Mrkva{s} lovi{v} pčelu{o}"/>
+<sentence ord="11" text="Ptica{s} nalazi{v} pčelu{o}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>
