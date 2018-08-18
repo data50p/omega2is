@@ -1,6 +1,7 @@
 package com.femtioprocent.omega.lesson.machine;
 
 import com.femtioprocent.omega.OmegaContext;
+import com.femtioprocent.omega.lesson.Lesson;
 import com.femtioprocent.omega.lesson.canvas.LessonCanvas;
 import com.femtioprocent.omega.util.SundryUtils;
 import com.femtioprocent.omega.xml.Element;
@@ -55,7 +56,7 @@ public class ItemEntry {
             if (it_el == null)
                 break;
             String txt = it_el.findAttr("text");
-            if (txt == null || txt.length() == 0)
+            if (txt == null || txt.length() == 0 || (!Lesson.edit && isPeTask(txt)) )
                 continue;
             Item item = new Item(i, it_el, true);
             if ("action".equals(type)) {
@@ -86,6 +87,10 @@ public class ItemEntry {
         if (mix)
             mixList();
         all_items = items;
+    }
+
+    public static boolean isPeTask(String txt) {
+        return txt.matches("[{]\\*[0-9]*:[}]");
     }
 
     void load(String sa[][]) {

@@ -309,6 +309,9 @@ public class Item {
                 return s;
             int ix2 = s.indexOf('}');
             int ix3 = s.indexOf(':');
+            if ( ItemEntry.isPeTask(s) && Lesson.edit ) {
+                return s;
+            }
             if (ix3 != -1 && ix3 < ix2 && ix2 > 0)
                 return s.substring(0, ix) + s.substring(ix3 + 1, ix2) + getDefaultFilledText(s.substring(ix2 + 1));
             return s.substring(0, ix) + getDefaultFilledText(s.substring(ix2 + 1));

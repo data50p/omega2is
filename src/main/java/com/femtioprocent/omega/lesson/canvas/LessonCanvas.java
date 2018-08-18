@@ -1059,7 +1059,7 @@ public class LessonCanvas extends BaseCanvas {
     private boolean useThisText(String text) {
         if (text.length() == 0)
             return false;
-        if ( text.matches("[{]\\*[0-9]*[}]")) {
+        if ( text.matches("[{]\\*[0-9]*:[}]")) {
             return false;
         }
         return true;
