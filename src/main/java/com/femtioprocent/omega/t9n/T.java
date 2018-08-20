@@ -163,7 +163,7 @@ public class T {
     }
 
     static private void putEncoding() {
-        File f = new File(OmegaContext.t9n("T_new"));
+        File f = new File(OmegaContext.t9n("T_new_" + lang_country));
         if (f.exists() && f.length() > 0)
             return;
         PrintWriter pw = SundryUtils.createPrintWriter(OmegaContext.t9n("T_new"));
@@ -184,7 +184,7 @@ public class T {
     static class MyThread extends Thread {
         public void run() {
             SundryUtils.m_sleep(5000);
-            putXML(hm_new, "T_new");
+            putXML(hm_new, "T_new_" + lang_country);
             mythread = null;
         }
     }
@@ -203,7 +203,7 @@ public class T {
         if (ss == null) {
             if (hm_new == null) {
                 hm_new = new HashMap();
-                fillFromXML("T_new", null, hm_new);
+                fillFromXML("T_new_" + lang_country, null, hm_new);
             }
             ss = (String) hm_new.get(s);
             if (ss == null) {
