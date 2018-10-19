@@ -29,6 +29,8 @@ public class TriggerEventFactory {
                 return TriggerEventDinner.class;
             case 9:
                 return TriggerEventOption.class;
+            case 10:
+                return TriggerEventResetSequence.class;
         }
         return null;
     }
@@ -54,6 +56,8 @@ public class TriggerEventFactory {
             return 8;
         if ("Option".equals(name))
             return 9;
+        if ("ResetSequence".equals(name))
+            return 10;
         return -1;
     }
 

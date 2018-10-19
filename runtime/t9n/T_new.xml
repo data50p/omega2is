@@ -2,472 +2,52 @@
 <java version="1.8.0_121" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
-   <string>Sign Word Movie Scale</string>
-   <string>Sign Word Movie Scale</string>
-  </void>
-  <void method="put">
-   <string>Import</string>
-   <string>Import</string>
-  </void>
-  <void method="put">
-   <string>length = </string>
-   <string>length = </string>
-  </void>
-  <void method="put">
-   <string>Sign Sentence Movie Scale</string>
-   <string>Sign Sentence Movie Scale</string>
-  </void>
-  <void method="put">
-   <string>Play All</string>
-   <string>Play All</string>
-  </void>
-  <void method="put">
-   <string>Can&apos;t find lesson file</string>
-   <string>Can&apos;t find lesson file</string>
-  </void>
-  <void method="put">
-   <string>Add Omega Assets Bundle</string>
-   <string>Add Omega Assets Bundle</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/Tomas</string>
-   <string>default.omega_assets/register/Tomas</string>
-  </void>
-  <void method="put">
-   <string>Add Omega Assets to Bundle</string>
-   <string>Add Omega Assets to Bundle</string>
-  </void>
-  <void method="put">
-   <string>Sign movie</string>
-   <string>Sign movie</string>
-  </void>
-  <void method="put">
-   <string>Error while loading lesson: &quot;</string>
-   <string>Error while loading lesson: &quot;</string>
-  </void>
-  <void method="put">
-   <string>Path for timeline</string>
-   <string>Path for timeline</string>
-  </void>
-  <void method="put">
-   <string>Correct answer is one of :</string>
-   <string>Correct answer is one of :</string>
-  </void>
-  <void method="put">
-   <string>Scan and Add to Bundle</string>
-   <string>Scan and Add to Bundle</string>
-  </void>
-  <void method="put">
-   <string>Src File</string>
-   <string>Src File</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/test</string>
-   <string>default.omega_assets/register/test</string>
-  </void>
-  <void method="put">
-   <string>+</string>
-   <string>+</string>
-  </void>
-  <void method="put">
-   <string>Omega - Assets Bundle Dialog</string>
-   <string>Omega - Assets Bundle Dialog</string>
-  </void>
-  <void method="put">
-   <string>About Anim AnimEditorAppl</string>
-   <string>About Anim AnimEditorAppl</string>
-  </void>
-  <void method="put">
-   <string>Add Path Helper Info</string>
-   <string>Add Path Helper Info</string>
-  </void>
-  <void method="put">
-   <string>Import Omega Bundle</string>
-   <string>Import Omega Bundle</string>
-  </void>
-  <void method="put">
-   <string>Tomas</string>
-   <string>Tomas</string>
-  </void>
-  <void method="put">
-   <string>Dependent Files</string>
-   <string>Dependent Files</string>
-  </void>
-  <void method="put">
-   <string>LessonsInEnglish</string>
-   <string>LessonsInEnglish</string>
-  </void>
-  <void method="put">
-   <string>Omega Assets:</string>
-   <string>Omega Assets:</string>
-  </void>
-  <void method="put">
-   <string>Nynorsk</string>
-   <string>Nynorsk</string>
-  </void>
-  <void method="put">
-   <string>not found</string>
-   <string>not found</string>
-  </void>
-  <void method="put">
-   <string>Tomas Croatia</string>
-   <string>Tomas Croatia</string>
-  </void>
-  <void method="put">
-   <string>PeTask Nid</string>
-   <string>PeTask Nid</string>
-  </void>
-  <void method="put">
-   <string>Show Sign after each word</string>
-   <string>Show Sign after each word</string>
-  </void>
-  <void method="put">
-   <string>Test text empty (null)</string>
-   <string>Test text empty (null)</string>
-  </void>
-  <void method="put">
-   <string>Description</string>
-   <string>Description</string>
-  </void>
-  <void method="put">
-   <string>About Lesson AnimEditorAppl</string>
-   <string>About Lesson AnimEditorAppl</string>
-  </void>
-  <void method="put">
-   <string>specified</string>
-   <string>specified</string>
-  </void>
-  <void method="put">
-   <string>Dependent File</string>
-   <string>Dependent File</string>
-  </void>
-  <void method="put">
-   <string>Omega - Assets Dialog</string>
-   <string>Omega - Assets Dialog</string>
-  </void>
-  <void method="put">
-   <string>Sign Sentence Background</string>
-   <string>Sign Sentence Background</string>
-  </void>
-  <void method="put">
-   <string>Import Omega Assets Bundle</string>
-   <string>Import Omega Assets Bundle</string>
-  </void>
-  <void method="put">
-   <string>Set Assets</string>
-   <string>Set Assets</string>
-  </void>
-  <void method="put">
-   <string>&lt;Ny Elev&gt;</string>
-   <string>&lt;Ny Elev&gt;</string>
-  </void>
-  <void method="put">
-   <string>Import Omega Assets to Bundle</string>
-   <string>Import Omega Assets to Bundle</string>
-  </void>
-  <void method="put">
-   <string>Correct answer is :</string>
-   <string>Correct answer is :</string>
-  </void>
-  <void method="put">
-   <string>Play Sign Moview</string>
-   <string>Play Sign Moview</string>
-  </void>
-  <void method="put">
-   <string>(( Scan and Add to Bundle ))</string>
-   <string>(( Scan and Add to Bundle ))</string>
-  </void>
-  <void method="put">
-   <string>Play Next</string>
-   <string>Play Next</string>
-  </void>
-  <void method="put">
-   <string>Set sign file</string>
-   <string>Set sign file</string>
-  </void>
-  <void method="put">
-   <string>Save Omega Bundle</string>
-   <string>Save Omega Bundle</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/LessonsInEnglish</string>
-   <string>default.omega_assets/register/LessonsInEnglish</string>
-  </void>
-  <void method="put">
-   <string>Save Omega Assets list</string>
-   <string>Save Omega Assets list</string>
-  </void>
-  <void method="put">
-   <string>Item: Sign Movies, positive </string>
-   <string>Item: Sign Movies, positive </string>
-  </void>
-  <void method="put">
-   <string>Reset Starter</string>
-   <string>Reset Starter</string>
-  </void>
-  <void method="put">
-   <string>Foobar</string>
-   <string>Foobar</string>
-  </void>
-  <void method="put">
-   <string>Source Files</string>
-   <string>Source Files</string>
-  </void>
-  <void method="put">
-   <string>File is</string>
-   <string>File is</string>
-  </void>
-  <void method="put">
-   <string>(Post Test Dummy Sign):</string>
-   <string>(Post Test Dummy Sign):</string>
-  </void>
-  <void method="put">
-   <string>Omega - Assets Property</string>
-   <string>Omega - Assets Property</string>
-  </void>
-  <void method="put">
-   <string>Default, as dep_set in word prop</string>
-   <string>Default, as dep_set in word prop</string>
-  </void>
-  <void method="put">
-   <string>Are you sure to close Anim AnimEditorAppl?</string>
-   <string>Are you sure to close Anim AnimEditorAppl?</string>
-  </void>
-  <void method="put">
-   <string>Sign Word Background</string>
-   <string>Sign Word Background</string>
-  </void>
-  <void method="put">
-   <string>Norsk-bokmål</string>
-   <string>Norsk-bokmål</string>
-  </void>
-  <void method="put">
-   <string>Sign Word Transparence</string>
-   <string>Sign Word Transparence</string>
-  </void>
-  <void method="put">
-   <string>Sign Sentence Transparence</string>
-   <string>Sign Sentence Transparence</string>
-  </void>
-  <void method="put">
-   <string>New Omega Bundle</string>
-   <string>New Omega Bundle</string>
-  </void>
-  <void method="put">
-   <string>View &amp; Add Omega Bundle</string>
-   <string>View &amp; Add Omega Bundle</string>
-  </void>
-  <void method="put">
-   <string>Can&apos;t find animation: anim/ActiveAnim/ActorpresB1.omega_anim</string>
-   <string>Can&apos;t find animation: anim/ActiveAnim/ActorpresB1.omega_anim</string>
-  </void>
-  <void method="put">
-   <string>Can&apos;t find animation: anim/ActiveVideo/feedback1.omega_anim</string>
-   <string>Can&apos;t find animation: anim/ActiveVideo/feedback1.omega_anim</string>
-  </void>
-  <void method="put">
-   <string>Can&apos;t find animation: anim/ActiveAnim/SwimUnderTheBoat.omega_anim</string>
-   <string>Can&apos;t find animation: anim/ActiveAnim/SwimUnderTheBoat.omega_anim</string>
-  </void>
-  <void method="put">
-   <string>Alt 3</string>
-   <string>Alt 3</string>
-  </void>
-  <void method="put">
-   <string>Save Omega Assets</string>
-   <string>Save Omega Assets</string>
-  </void>
-  <void method="put">
-   <string>List</string>
-   <string>List</string>
-  </void>
-  <void method="put">
-   <string>Alt 4</string>
-   <string>Alt 4</string>
-  </void>
-  <void method="put">
-   <string>Alt 1</string>
-   <string>Alt 1</string>
-  </void>
-  <void method="put">
-   <string>Alt 2</string>
-   <string>Alt 2</string>
-  </void>
-  <void method="put">
-   <string>_?_</string>
-   <string>_?_</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/Croatian</string>
-   <string>default.omega_assets/register/Croatian</string>
-  </void>
-  <void method="put">
-   <string>--unknown--</string>
-   <string>--unknown--</string>
-  </void>
-  <void method="put">
-   <string>Omega - Message</string>
-   <string>Omega - Message</string>
-  </void>
-  <void method="put">
-   <string>Norsk-bm-Bergen</string>
-   <string>Norsk-bm-Bergen</string>
-  </void>
-  <void method="put">
-   <string>Turn off</string>
-   <string>Turn off</string>
-  </void>
-  <void method="put">
-   <string>dep_set Layer</string>
-   <string>dep_set Layer</string>
-  </void>
-  <void method="put">
-   <string>Actor Image Name</string>
-   <string>Actor Image Name</string>
-  </void>
-  <void method="put">
-   <string>Lesson lang:</string>
-   <string>Lesson lang:</string>
-  </void>
-  <void method="put">
-   <string>Scan</string>
-   <string>Scan</string>
-  </void>
-  <void method="put">
-   <string>Show Sign after sentence</string>
-   <string>Show Sign after sentence</string>
-  </void>
-  <void method="put">
-   <string>Are you sure to open an animation</string>
-   <string>Are you sure to open an animation</string>
-  </void>
-  <void method="put">
-   <string>Automatic, play each separate word</string>
-   <string>Automatic, play each separate word</string>
-  </void>
-  <void method="put">
-   <string>dep_set Image Attribute</string>
-   <string>dep_set Image Attribute</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/Norsk-bokmål</string>
-   <string>default.omega_assets/register/Norsk-bokmål</string>
-  </void>
-  <void method="put">
-   <string>What</string>
-   <string>What</string>
-  </void>
-  <void method="put">
-   <string>Depending Files</string>
-   <string>Depending Files</string>
-  </void>
-  <void method="put">
-   <string>dep_set Visibility</string>
-   <string>dep_set Visibility</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/Svenska</string>
-   <string>default.omega_assets/register/Svenska</string>
-  </void>
-  <void method="put">
-   <string>TTS</string>
-   <string>TTS</string>
-  </void>
-  <void method="put">
-   <string>Exist</string>
-   <string>Exist</string>
-  </void>
-  <void method="put">
-   <string>Can&apos;t find animation: s/anim/ActiveAnim/ActorpresB1.omega_anim</string>
-   <string>Can&apos;t find animation: s/anim/ActiveAnim/ActorpresB1.omega_anim</string>
-  </void>
-  <void method="put">
-   <string>Svenska</string>
-   <string>Svenska</string>
-  </void>
-  <void method="put">
-   <string>Save Omega Bundle list</string>
-   <string>Save Omega Bundle list</string>
-  </void>
-  <void method="put">
-   <string>Can&apos;t find test test </string>
-   <string>Can&apos;t find test test </string>
-  </void>
-  <void method="put">
-   <string>View Omega Bundle</string>
-   <string>View Omega Bundle</string>
-  </void>
-  <void method="put">
-   <string>Save Omega Assets Bundle</string>
-   <string>Save Omega Assets Bundle</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/Guest</string>
-   <string>default.omega_assets/register/Guest</string>
+   <string>English</string>
+   <string>English</string>
   </void>
   <void method="put">
    <string>Sound after each word</string>
    <string>Sound after each word</string>
   </void>
   <void method="put">
+   <string>Set Assets</string>
+   <string>Set Assets</string>
+  </void>
+  <void method="put">
    <string>Lesson Lang</string>
    <string>Lesson Lang</string>
   </void>
   <void method="put">
-   <string>Can&apos;t find animation: anim/ActiveAnim/StopsInRelationTo1.omega_anim</string>
-   <string>Can&apos;t find animation: anim/ActiveAnim/StopsInRelationTo1.omega_anim</string>
+   <string>Play All</string>
+   <string>Play All</string>
   </void>
   <void method="put">
-   <string>Can&apos;t find animation: anim/ActiveAnim/ActorPresB3.omega_anim</string>
-   <string>Can&apos;t find animation: anim/ActiveAnim/ActorPresB3.omega_anim</string>
+   <string>Lesson lang:</string>
+   <string>Lesson lang:</string>
   </void>
   <void method="put">
-   <string>Bundle</string>
-   <string>Bundle</string>
+   <string>Svenska</string>
+   <string>Svenska</string>
   </void>
   <void method="put">
-   <string>length</string>
-   <string>length</string>
+   <string>+</string>
+   <string>+</string>
   </void>
   <void method="put">
-   <string>Nu such directory</string>
-   <string>Nu such directory</string>
+   <string>Omega Assets:</string>
+   <string>Omega Assets:</string>
   </void>
   <void method="put">
-   <string>Info</string>
-   <string>Info</string>
+   <string>&lt;Ny Elev&gt;</string>
+   <string>&lt;Ny Elev&gt;</string>
   </void>
   <void method="put">
-   <string>View</string>
-   <string>View</string>
+   <string>Reset Starter</string>
+   <string>Reset Starter</string>
   </void>
   <void method="put">
-   <string>Croatian</string>
-   <string>Croatian</string>
-  </void>
-  <void method="put">
-   <string>English</string>
-   <string>English</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/Nynorsk</string>
-   <string>default.omega_assets/register/Nynorsk</string>
-  </void>
-  <void method="put">
-   <string>New Omega Assets Bundle</string>
-   <string>New Omega Assets Bundle</string>
-  </void>
-  <void method="put">
-   <string>default.omega_assets/register/Norsk-bm-Bergen</string>
-   <string>default.omega_assets/register/Norsk-bm-Bergen</string>
-  </void>
-  <void method="put">
-   <string>Sign</string>
-   <string>Sign</string>
-  </void>
-  <void method="put">
-   <string>Select Directory</string>
-   <string>Select Directory</string>
+   <string>Play Next</string>
+   <string>Play Next</string>
   </void>
  </object>
 </java>

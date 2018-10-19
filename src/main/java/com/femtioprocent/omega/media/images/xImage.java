@@ -191,15 +191,19 @@ public class xImage {
         return max_seq >= 0;
     }
 
-    public boolean setInnerAnimIndex(int ix) {
-//	OmegaContext.sout_log.getLogger().info("ERR: " + "ANIM setix " + ix + ' ' + seq + ' ' + max_seq);
+    public boolean setInnerAnimIndex(int dt, int ix) {
+        //OmegaContext.sout_log.getLogger().info("ERR: " + "ANIM setix " + ix + ' ' + seq + ' ' + max_seq + ' ' + ix_base0);
         if (hasInnerAnim()) {
-            if (seq == ix)
-                return false;
+            if (seq == (ix % (max_seq + 1))) {
+                System.err.println("ERR: " + "ANIM setix same  " + ix + ' ' + seq + ' ' + max_seq + ' ' + dt);
+                return false; // it has not been changed
+            }
             seq = ix;
             seq %= (max_seq + 1);
+            System.err.println("ERR: " + "ANIM setix true  " + ix + ' ' + seq + ' ' + max_seq + ' ' + dt);
             return true;
         }
+        System.err.println("ERR: " + "ANIM setix false " + ix + ' ' + seq + ' ' + max_seq + ' ' + dt);
         return false;
     }
 

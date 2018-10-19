@@ -183,6 +183,10 @@ public class AnimRuntime {
                         }
                         gimae.setRotation(d, d2, tm.when);
                     }
+                    if (cmd.equals("ResetSequence")) {
+                        String arg = ((TriggerEventResetSequence) te).getArgString();
+                        gimae.setResetSequence(arg, tm.when, tm.tl.getAllTimeMarkerType('[')[0].when);
+                    }
                     if (cmd.equals("Scale")) {
                         double d = ((TriggerEventScale) te).getArgDouble();
                         double d2 = ((TriggerEventScale) te).getArgDouble2nd(d);

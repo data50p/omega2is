@@ -11,6 +11,7 @@ public class GIm {
     protected final String fid;
     protected String delayed_id_attrib = null;
     protected int layer = 2;
+    protected int reset_sequence = 0;
     protected AlphaComposite acomp = AlphaComposite.getInstance(AlphaComposite.SRC_OVER,
             1.0f);
 

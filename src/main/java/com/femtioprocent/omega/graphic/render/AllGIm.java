@@ -100,10 +100,12 @@ public class AllGIm {
                     gim.commitAttribName();
 
                     int an_sp = (int) (1000 * ((GImAE) gim).anim_speed);
-                    long ct = SundryUtils.ct();
-
-//		    if ( gim.xim.setInnerAnimIndex((int)((ct / an_sp) % 1000)) )
-                    if (gim.xim.setInnerAnimIndex((int) ((dt / an_sp) % 1000)))
+                    int td1 = dt - gim.reset_sequence;
+                    if ( td1 < 0 )
+                        td1 = 0;
+                    int td2 = td1 / an_sp;
+                    int tm = td2 % 1000;              // why?
+                    if ( gim.xim.setInnerAnimIndex(dt, tm) )
                         gim.initIm();
                 } catch (NullPointerException ex) {
                     OmegaContext.sout_log.getLogger().info("ERR: " + "---1 " + ii + ' ' + ex);

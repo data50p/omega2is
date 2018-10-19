@@ -252,6 +252,16 @@ public class GImAE extends GIm {
     public void setOption(int arg) {
     }
 
+    public void setResetSequence(String arg, int when, int beginning) {
+        if ( arg == null || arg.equals("") ) {
+            reset_sequence = when;
+        } else if ( arg.equals("{") ) {
+            reset_sequence = 0;
+        } else if ( arg.equals("[") ) {
+            reset_sequence = beginning;
+        }
+    }
+
 //      public void setAlternative(int arg) {
 //  	if ( (arg & 1) == 1 )
 //  	    use_alt_hotspot = true;
@@ -490,6 +500,7 @@ public class GImAE extends GIm {
                 ",nid=" + nid +
                 ",im=" + xim.getImage(null) +
                 ",layer=" + layer +
+                ",reset_sequence=" + reset_sequence +
                 ",prim_scale=" + prim_scale +
                 ",prim_mirror=" + prim_mirror +
                 '}';
