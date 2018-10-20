@@ -4,7 +4,7 @@ import com.femtioprocent.omega.t9n.T;
 
 public class TriggerEventResetSequence extends TriggerEvent {
     public TriggerEventResetSequence() {
-        super("{");
+        super("");
     }
 
     public TriggerEventResetSequence(String arg) {
