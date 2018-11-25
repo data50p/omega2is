@@ -106,7 +106,7 @@
 <TimeMarker duration="0" type="t" when="2300">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
-<TriggerEvent arg="0.0" cmd="Rotate" isOn="true"/>
+<TriggerEvent arg="1440.0 0.0" cmd="Rotate" isOn="true"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
 <TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
@@ -206,7 +206,7 @@
 <TimeMarker duration="0" type="t" when="2300">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
-<TriggerEvent arg="0.0" cmd="Rotate" isOn="true"/>
+<TriggerEvent arg="1440.0 0.0" cmd="Rotate" isOn="true"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
 <TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
@@ -306,7 +306,7 @@
 <TimeMarker duration="0" type="t" when="2290">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
-<TriggerEvent arg="0.0" cmd="Rotate" isOn="true"/>
+<TriggerEvent arg="1440.0 0.0" cmd="Rotate" isOn="true"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
 <TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
@@ -406,7 +406,7 @@
 <TimeMarker duration="0" type="t" when="2280">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
-<TriggerEvent arg="0.0" cmd="Rotate" isOn="true"/>
+<TriggerEvent arg="1440.0 0.0" cmd="Rotate" isOn="true"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
 <TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>

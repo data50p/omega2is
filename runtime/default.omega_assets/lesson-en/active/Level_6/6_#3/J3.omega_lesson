@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="" Tid="a" ord="0" type="passive"/>
+<t-item Lid="A" Tid="s" ord="1" type="passive"/>
+<t-item Lid="" Tid="v" ord="2" type="action"/>
+<t-item Lid="" Tid="av" ord="3" type="passive"/>
+<t-item Lid="B" Tid="pf" ord="4" type="passive"/>
+</target>
+<items>
+<item-entry Tid="a" ord="0" type="passive">
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-en/thebig.wav" text="The big" var-1="big" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/thesmall.wav" text="The small" var-1="small" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="s" ord="1" type="actor">
+<item Lid="blowfish:{-1}" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/blowfishB.wav" text="blowfish" var-1="" var-2="" var-3=""/>
+<item Lid="frog:{-1}" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/frogB.wav" text="frog" var-1="" var-2="" var-3=""/>
+<item Lid="beaver:{-1}" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-en/beaver2.wav" text="beaver" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="2" type="action">
+<item action-fname="anim/ActiveAnim/Swim{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/swims.wav" text="swims" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Dive{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/dives.wav" text="dives" var-1="null" var-2="null" var-3="null"/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="3" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/UnderTheBone.wav" dummytext="unde the bone" ord="0" sound="audio/words-en/UnderTheBoat.wav" text="under the boat" var-1="UnderTheBoat" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="audio/words-en/dummy/ThroughTheSeeds.wav" dummytext="through the seeds" ord="1" sound="audio/words-en/ThroughTheSeaweed.wav" text="through the seaweed" var-1="ThroughTheSeaweed" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="audio/words-en/dummy/BeyondTheStone.wav" dummytext="beyond the stone" ord="2" sound="audio/words-en/BehindTheStone.wav" text="behind the stone" var-1="BehindTheStone" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="pf" ord="4" type="passive">
+<item Lid="bubbles" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-en/BlowingBubbles.wav" text="blowing bubbles" var-1="" var-2="" var-3=""/>
+<item Lid="fish" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/ChasingTheSmallFish.wav" text="chasing the small fish" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="The big{a} blowfish{s} dives{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="1" text="The small{a} frog{s} swims{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="2" text="The small{a} beaver{s} dives{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="3" text="The small{a} frog{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="4" text="The big{a} beaver{s} dives{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="5" text="The big{a} frog{s} swims{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="6" text="The big{a} blowfish{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="7" text="The big{a} blowfish{s} swims{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="8" text="The big{a} frog{s} dives{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="9" text="The big{a} beaver{s} dives{v} behind the stone{av} chasing the small fish{pf}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="The big{a} beaver{s} dives{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="1" text="The small{a} frog{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="2" text="The small{a} beaver{s} dives{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="3" text="The big{a} beaver{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="4" text="The big{a} blowfish{s} swims{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="5" text="The big{a} blowfish{s} dives{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="6" text="The big{a} frog{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="7" text="The big{a} beaver{s} swims{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="8" text="The big{a} beaver{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="9" text="The small{a} blowfish{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="The big{a} frog{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="1" text="The small{a} frog{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="2" text="The small{a} beaver{s} dives{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="3" text="The big{a} beaver{s} swims{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="4" text="The big{a} blowfish{s} swims{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="5" text="The small{a} blowfish{s} swims{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="6" text="The big{a} beaver{s} dives{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="7" text="The big{a} blowfish{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="8" text="The small{a} frog{s} swims{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="9" text="The small{a} beaver{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="10" text="The big{a} frog{s} swims{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="11" text="The small{a} frog{s} dives{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="12" text="The small{a} beaver{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="13" text="The big{a} beaver{s} swims{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="14" text="The big{a} blowfish{s} swims{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="15" text="The small{a} blowfish{s} dives{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="16" text="The big{a} beaver{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="17" text="The big{a} blowfish{s} dives{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="18" text="The small{a} frog{s} swims{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="19" text="The big{a} frog{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="20" text="The big{a} frog{s} dives{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="21" text="The small{a} frog{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="22" text="The small{a} beaver{s} dives{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="23" text="The big{a} beaver{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="24" text="The big{a} blowfish{s} swims{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="25" text="The small{a} blowfish{s} dives{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="26" text="The big{a} beaver{s} dives{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="27" text="The big{a} blowfish{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="28" text="The small{a} frog{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="29" text="The big{a} blowfish{s} dives{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="30" text="The big{a} frog{s} dives{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="31" text="The small{a} frog{s} dives{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="32" text="The small{a} beaver{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="33" text="The big{a} beaver{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="34" text="The big{a} blowfish{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="35" text="The small{a} blowfish{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="36" text="The small{a} blowfish{s} swims{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="37" text="The big{a} blowfish{s} dives{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="38" text="The small{a} frog{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="39" text="The big{a} beaver{s} dives{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="40" text="The big{a} frog{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="41" text="The small{a} beaver{s} swims{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="42" text="The small{a} beaver{s} dives{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="43" text="The big{a} beaver{s} swims{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="44" text="The big{a} blowfish{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="45" text="The small{a} blowfish{s} dives{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="46" text="The small{a} blowfish{s} swims{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="47" text="The big{a} frog{s} swims{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="48" text="The small{a} frog{s} swims{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="49" text="The small{a} blowfish{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="The small{a} beaver{s} dives{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="1" text="The small{a} frog{s} swims{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="2" text="The big{a} blowfish{s} swims{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="3" text="The big{a} beaver{s} dives{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="4" text="The small{a} blowfish{s} swims{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="5" text="The small{a} beaver{s} swims{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="6" text="The small{a} beaver{s} dives{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="7" text="The big{a} blowfish{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="8" text="The big{a} frog{s} dives{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="9" text="The big{a} blowfish{s} dives{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="10" text="The small{a} beaver{s} swims{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="11" text="The small{a} frog{s} swims{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="12" text="The big{a} blowfish{s} swims{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="13" text="The big{a} beaver{s} swims{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="14" text="The small{a} blowfish{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="15" text="The small{a} frog{s} dives{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="16" text="The small{a} beaver{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="17" text="The big{a} blowfish{s} dives{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="18" text="The big{a} frog{s} dives{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="19" text="The big{a} beaver{s} dives{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="20" text="The small{a} beaver{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="21" text="The small{a} frog{s} swims{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="22" text="The big{a} blowfish{s} swims{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="23" text="The big{a} beaver{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="24" text="The small{a} blowfish{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="25" text="The small{a} frog{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="26" text="The small{a} beaver{s} dives{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="27" text="The big{a} frog{s} swims{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="28" text="The big{a} frog{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="29" text="The small{a} blowfish{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="30" text="The small{a} beaver{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="31" text="The small{a} frog{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="32" text="The big{a} blowfish{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="33" text="The big{a} beaver{s} swims{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="34" text="The small{a} blowfish{s} swims{v} behind the stone{av} chasing the small fish{pf}"/>
+<sentence ord="35" text="The small{a} frog{s} dives{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="36" text="The small{a} beaver{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="37" text="The big{a} frog{s} swims{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="38" text="The big{a} frog{s} dives{v} through the seaweed{av} chasing the small fish{pf}"/>
+<sentence ord="39" text="The big{a} beaver{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="40" text="The small{a} beaver{s} swims{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="41" text="The small{a} frog{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="42" text="The big{a} blowfish{s} swims{v} behind the stone{av} blowing bubbles{pf}"/>
+<sentence ord="43" text="The big{a} beaver{s} swims{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="44" text="The small{a} blowfish{s} dives{v} under the boat{av} blowing bubbles{pf}"/>
+<sentence ord="45" text="The small{a} frog{s} dives{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="46" text="The small{a} beaver{s} dives{v} under the boat{av} chasing the small fish{pf}"/>
+<sentence ord="47" text="The big{a} frog{s} swims{v} through the seaweed{av} blowing bubbles{pf}"/>
+<sentence ord="48" text="The big{a} frog{s} dives{v} behind the stone{av} blowing bubbles{pf}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

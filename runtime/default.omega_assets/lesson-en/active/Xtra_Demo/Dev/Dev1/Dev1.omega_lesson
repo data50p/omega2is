@@ -11,8 +11,8 @@
 <item-entry Tid="v" ord="0" type="action">
 <item Lid="rot" action-fname="anim/ActiveAnim/Dev1_r" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="" text="Rotation" tts="" var-1="r-1" var-2="r-2" var-3="r-3" var-4="" var-5=""/>
 <item Lid="sca" action-fname="anim/ActiveAnim/Dev1_s" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="Scale" tts="" var-1="s-1" var-2="s-2" var-3="s-3" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/ActorpresB1" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/ActorPresB1" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/ActorPresB1" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>

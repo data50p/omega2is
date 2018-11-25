@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="squirrel" action-fname="" action-type="omega_anim" dummysound="audio/words-nb/dummy/kornet.wav" dummytext="Kornet" ord="0" sound="audio/words-nb/squirrel.wav" text="Ekornet" var-1="" var-2="" var-3=""/>
+<item Lid="frog" action-fname="" action-type="omega_anim" dummysound="audio/words-nb/dummy/frosten.wav" dummytext="Frosten" ord="1" sound="audio/words-nb/frog.wav" text="Frosken" var-1="" var-2="" var-3=""/>
+<item Lid="cat" action-fname="" action-type="omega_anim" dummysound="audio/words-nb/dummy/hat.wav" dummytext="Hatten" ord="2" sound="audio/words-nb/cat.wav" text="Katta" var-1="" var-2="" var-3=""/>
+<item Lid="girl" action-fname="" action-type="omega_anim" dummysound="audio/words-nb/dummy/boy.wav" dummytext="Gutten" ord="3" sound="audio/words-nb/girl.wav" text="Jenta" var-1="" var-2="" var-3=""/>
+<item Lid="boy" action-fname="" action-type="null" dummysound="audio/words-nb/girl.wav" dummytext="Jenten" ord="4" sound="audio/words-nb/boy.wav" text="Gutten" var-1="" var-2="" var-3=""/>
+<item Lid="bee" action-fname="" action-type="omega_anim" dummysound="audio/words-nb/dummy/car.wav" dummytext="Bilen" ord="5" sound="audio/words-nb/bee.wav" text="Bia" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/HidingBehindStone" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nb/hidesitself.wav" text="gjemmer seg" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/DancingAroundStone" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-nb/dances.wav" text="danser" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Swing" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-nb/swings.wav" text="husker" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/ThrowOnBarn" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-nb/throws.wav" text="kaster" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/JumpingByStone" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/words-nb/jumps.wav" text="hopper" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/DiveIntoPond" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/words-nb/dives.wav" text="dykker" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Ekornet{s} gjemmer seg{v}"/>
+<sentence ord="1" text="Ekornet{s} danser{v}"/>
+<sentence ord="2" text="Ekornet{s} husker{v}"/>
+<sentence ord="3" text="Ekornet{s} kaster{v}"/>
+<sentence ord="4" text="Ekornet{s} hopper{v}"/>
+<sentence ord="5" text="Ekornet{s} dykker{v}"/>
+<sentence ord="6" text="Frosken{s} gjemmer seg{v}"/>
+<sentence ord="7" text="Frosken{s} danser{v}"/>
+<sentence ord="8" text="Frosken{s} husker{v}"/>
+<sentence ord="9" text="Frosken{s} kaster{v}"/>
+<sentence ord="10" text="Frosken{s} hopper{v}"/>
+<sentence ord="11" text="Frosken{s} dykker{v}"/>
+<sentence ord="12" text="Katten{s} gjemmer seg{v}"/>
+<sentence ord="13" text="Katten{s} danser{v}"/>
+<sentence ord="14" text="Katten{s} husker{v}"/>
+<sentence ord="15" text="Katten{s} kaster{v}"/>
+<sentence ord="16" text="Katten{s} hopper{v}"/>
+<sentence ord="17" text="Katten{s} dykker{v}"/>
+<sentence ord="18" text="Jenten{s} gjemmer seg{v}"/>
+<sentence ord="19" text="Jenten{s} danser{v}"/>
+<sentence ord="20" text="Jenten{s} husker{v}"/>
+<sentence ord="21" text="Jenten{s} kaster{v}"/>
+<sentence ord="22" text="Jenten{s} hopper{v}"/>
+<sentence ord="23" text="Jenten{s} dykker{v}"/>
+<sentence ord="24" text="Gutten{s} gjemmer seg{v}"/>
+<sentence ord="25" text="Gutten{s} danser{v}"/>
+<sentence ord="26" text="Gutten{s} husker{v}"/>
+<sentence ord="27" text="Gutten{s} kaster{v}"/>
+<sentence ord="28" text="Gutten{s} hopper{v}"/>
+<sentence ord="29" text="Gutten{s} dykker{v}"/>
+<sentence ord="30" text="Bien{s} gjemmer seg{v}"/>
+<sentence ord="31" text="Bien{s} danser{v}"/>
+<sentence ord="32" text="Bien{s} husker{v}"/>
+<sentence ord="33" text="Bien{s} kaster{v}"/>
+<sentence ord="34" text="Bien{s} hopper{v}"/>
+<sentence ord="35" text="Bien{s} dykker{v}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Bien{s} dykker{v}"/>
+<sentence ord="1" text="Bien{s} hopper{v}"/>
+<sentence ord="2" text="Bien{s} kaster{v}"/>
+<sentence ord="3" text="Bien{s} husker{v}"/>
+<sentence ord="4" text="Bien{s} danser{v}"/>
+<sentence ord="5" text="Bien{s} gjemmer seg{v}"/>
+<sentence ord="6" text="Gutten{s} dykker{v}"/>
+<sentence ord="7" text="Gutten{s} hopper{v}"/>
+<sentence ord="8" text="Gutten{s} kaster{v}"/>
+<sentence ord="9" text="Gutten{s} husker{v}"/>
+<sentence ord="10" text="Gutten{s} danser{v}"/>
+<sentence ord="11" text="Gutten{s} gjemmer seg{v}"/>
+<sentence ord="12" text="Jenten{s} dykker{v}"/>
+<sentence ord="13" text="Jenten{s} hopper{v}"/>
+<sentence ord="14" text="Jenten{s} kaster{v}"/>
+<sentence ord="15" text="Jenten{s} husker{v}"/>
+<sentence ord="16" text="Jenten{s} danser{v}"/>
+<sentence ord="17" text="Jenten{s} gjemmer seg{v}"/>
+<sentence ord="18" text="Katten{s} dykker{v}"/>
+<sentence ord="19" text="Katten{s} hopper{v}"/>
+<sentence ord="20" text="Katten{s} kaster{v}"/>
+<sentence ord="21" text="Katten{s} husker{v}"/>
+<sentence ord="22" text="Katten{s} danser{v}"/>
+<sentence ord="23" text="Katten{s} gjemmer seg{v}"/>
+<sentence ord="24" text="Frosken{s} dykker{v}"/>
+<sentence ord="25" text="Frosken{s} hopper{v}"/>
+<sentence ord="26" text="Frosken{s} kaster{v}"/>
+<sentence ord="27" text="Frosken{s} husker{v}"/>
+<sentence ord="28" text="Frosken{s} danser{v}"/>
+<sentence ord="29" text="Frosken{s} gjemmer seg{v}"/>
+<sentence ord="30" text="Ekornet{s} dykker{v}"/>
+<sentence ord="31" text="Ekornet{s} hopper{v}"/>
+<sentence ord="32" text="Ekornet{s} kaster{v}"/>
+<sentence ord="33" text="Ekornet{s} husker{v}"/>
+<sentence ord="34" text="Ekornet{s} danser{v}"/>
+<sentence ord="35" text="Ekornet{s} gjemmer seg{v}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Ekornet{s} gjemmer seg{v}"/>
+<sentence ord="1" text="Ekornet{s} husker{v}"/>
+<sentence ord="2" text="Ekornet{s} danser{v}"/>
+<sentence ord="3" text="Ekornet{s} hopper{v}"/>
+<sentence ord="4" text="Ekornet{s} kaster{v}"/>
+<sentence ord="5" text="Frosken{s} gjemmer seg{v}"/>
+<sentence ord="6" text="Ekornet{s} dykker{v}"/>
+<sentence ord="7" text="Frosken{s} husker{v}"/>
+<sentence ord="8" text="Frosken{s} danser{v}"/>
+<sentence ord="9" text="Frosken{s} hopper{v}"/>
+<sentence ord="10" text="Frosken{s} kaster{v}"/>
+<sentence ord="11" text="Katten{s} gjemmer seg{v}"/>
+<sentence ord="12" text="Frosken{s} dykker{v}"/>
+<sentence ord="13" text="Katten{s} husker{v}"/>
+<sentence ord="14" text="Katten{s} danser{v}"/>
+<sentence ord="15" text="Katten{s} hopper{v}"/>
+<sentence ord="16" text="Katten{s} kaster{v}"/>
+<sentence ord="17" text="Jenten{s} gjemmer seg{v}"/>
+<sentence ord="18" text="Katten{s} dykker{v}"/>
+<sentence ord="19" text="Jenten{s} husker{v}"/>
+<sentence ord="20" text="Jenten{s} danser{v}"/>
+<sentence ord="21" text="Jenten{s} hopper{v}"/>
+<sentence ord="22" text="Jenten{s} kaster{v}"/>
+<sentence ord="23" text="Gutten{s} gjemmer seg{v}"/>
+<sentence ord="24" text="Jenten{s} dykker{v}"/>
+<sentence ord="25" text="Gutten{s} husker{v}"/>
+<sentence ord="26" text="Gutten{s} danser{v}"/>
+<sentence ord="27" text="Gutten{s} hopper{v}"/>
+<sentence ord="28" text="Gutten{s} kaster{v}"/>
+<sentence ord="29" text="Bien{s} gjemmer seg{v}"/>
+<sentence ord="30" text="Gutten{s} dykker{v}"/>
+<sentence ord="31" text="Bien{s} husker{v}"/>
+<sentence ord="32" text="Bien{s} danser{v}"/>
+<sentence ord="33" text="Bien{s} hopper{v}"/>
+<sentence ord="34" text="Bien{s} dykker{v}"/>
+<sentence ord="35" text="Bien{s} kaster{v}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Frosken{s} kaster{v}"/>
+<sentence ord="1" text="Frosken{s} husker{v}"/>
+<sentence ord="2" text="Frosken{s} danser{v}"/>
+<sentence ord="3" text="Frosken{s} gjemmer seg{v}"/>
+<sentence ord="4" text="Ekornet{s} dykker{v}"/>
+<sentence ord="5" text="Ekornet{s} hopper{v}"/>
+<sentence ord="6" text="Ekornet{s} kaster{v}"/>
+<sentence ord="7" text="Ekornet{s} husker{v}"/>
+<sentence ord="8" text="Ekornet{s} danser{v}"/>
+<sentence ord="9" text="Ekornet{s} gjemmer seg{v}"/>
+<sentence ord="10" text="Jenten{s} danser{v}"/>
+<sentence ord="11" text="Jenten{s} gjemmer seg{v}"/>
+<sentence ord="12" text="Katten{s} dykker{v}"/>
+<sentence ord="13" text="Katten{s} hopper{v}"/>
+<sentence ord="14" text="Katten{s} kaster{v}"/>
+<sentence ord="15" text="Katten{s} husker{v}"/>
+<sentence ord="16" text="Katten{s} danser{v}"/>
+<sentence ord="17" text="Katten{s} gjemmer seg{v}"/>
+<sentence ord="18" text="Frosken{s} dykker{v}"/>
+<sentence ord="19" text="Frosken{s} hopper{v}"/>
+<sentence ord="20" text="Gutten{s} dykker{v}"/>
+<sentence ord="21" text="Gutten{s} hopper{v}"/>
+<sentence ord="22" text="Gutten{s} kaster{v}"/>
+<sentence ord="23" text="Gutten{s} husker{v}"/>
+<sentence ord="24" text="Gutten{s} danser{v}"/>
+<sentence ord="25" text="Gutten{s} gjemmer seg{v}"/>
+<sentence ord="26" text="Jenten{s} dykker{v}"/>
+<sentence ord="27" text="Jenten{s} hopper{v}"/>
+<sentence ord="28" text="Jenten{s} kaster{v}"/>
+<sentence ord="29" text="Jenten{s} husker{v}"/>
+<sentence ord="30" text="Bien{s} dykker{v}"/>
+<sentence ord="31" text="Bien{s} hopper{v}"/>
+<sentence ord="32" text="Bien{s} kaster{v}"/>
+<sentence ord="33" text="Bien{s} husker{v}"/>
+<sentence ord="34" text="Bien{s} danser{v}"/>
+<sentence ord="35" text="Bien{s} gjemmer seg{v}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

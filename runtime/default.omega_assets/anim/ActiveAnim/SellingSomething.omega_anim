@@ -40,7 +40,7 @@
 <Actor hotspot_begin="0.423 0.96" hotspot_end="0.423 0.96" hotspot_rotate="0.5 0.5" lesson_id="man2" name="actor/DA/man/man.png" nid="7" prim_mirror="1" prim_scale="0.45" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.504 0.81" hotspot_end="0.495 0.81" hotspot_rotate="0.5 0.5" lesson_id="boy2" name="actor/DA/boy/boy.png" nid="8" prim_mirror="1" prim_scale="0.36" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.531 0.8" hotspot_end="0.531 0.81" hotspot_rotate="0.5 0.5" lesson_id="girl2" name="actor/DA/Girl3Walk/girl3.png" nid="9" prim_mirror="1" prim_scale="0.38" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_10.gif" nid="10" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.495 0.8" hotspot_end="0.504 0.8" hotspot_rotate="0.5 0.5" lesson_id="robot" name="actor/DA/Robot3Walk/robot3.png" nid="10" prim_mirror="1" prim_scale="0.4" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" lesson_id="invisible" name="actor/Invisible.png" nid="11" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 </AllActors>
 <AllWings>
@@ -66,6 +66,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -80,6 +81,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="]" when="4840">
@@ -94,6 +96,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4940">
@@ -108,6 +111,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>
@@ -124,6 +128,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -138,6 +143,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="]" when="4580">
@@ -152,6 +158,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4800">
@@ -166,6 +173,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>
@@ -182,6 +190,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -196,6 +205,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="]" when="4950">
@@ -210,6 +220,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4970">
@@ -224,6 +235,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>
@@ -240,6 +252,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -254,6 +267,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="]" when="4840">
@@ -268,6 +282,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4940">
@@ -282,6 +297,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>

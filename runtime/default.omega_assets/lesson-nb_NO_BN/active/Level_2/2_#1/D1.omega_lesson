@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#33ff00" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="actor"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="squirrel" dummysound="audio/words-nb_NO_BN/dummy/kornet.wav" dummytext="Kornet" ord="0" sound="audio/words-nb_NO_BN/squirrel.wav" text="Ekornet" var-1="n" var-2="" var-3=""/>
+<item Lid="frog" dummysound="audio/words-nb_NO_BN/dummy/frosten.wav" dummytext="Frosten" ord="1" sound="audio/words-nb_NO_BN/frog.wav" text="Frosken" var-1="n" var-2="" var-3=""/>
+<item Lid="mouse" dummysound="audio/words-nb_NO_BN/dummy/seagull.wav" dummytext="Måsen" ord="2" sound="audio/words-nb_NO_BN/mouse.wav" text="Musen" var-1="n" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/HidingBehindStone" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-nb_NO_BN/hidesitself.wav" text="gjemmer seg" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/DancingAroundStone" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-nb_NO_BN/dances.wav" text="danser" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/JumpingByStone" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-nb_NO_BN/jumps.wav" text="hopper" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Ekornet{s} gjemmer seg{v}"/>
+<sentence ord="1" text="Ekornet{s} danser{v}"/>
+<sentence ord="2" text="Ekornet{s} hopper{v}"/>
+<sentence ord="3" text="Frosken{s} gjemmer seg{v}"/>
+<sentence ord="4" text="Frosken{s} danser{v}"/>
+<sentence ord="5" text="Frosken{s} hopper{v}"/>
+<sentence ord="6" text="Musen{s} gjemmer seg{v}"/>
+<sentence ord="7" text="Musen{s} danser{v}"/>
+<sentence ord="8" text="Musen{s} hopper{v}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Musen{s} hopper{v}"/>
+<sentence ord="1" text="Musen{s} danser{v}"/>
+<sentence ord="2" text="Musen{s} gjemmer seg{v}"/>
+<sentence ord="3" text="Frosken{s} hopper{v}"/>
+<sentence ord="4" text="Frosken{s} danser{v}"/>
+<sentence ord="5" text="Frosken{s} gjemmer seg{v}"/>
+<sentence ord="6" text="Ekornet{s} hopper{v}"/>
+<sentence ord="7" text="Ekornet{s} danser{v}"/>
+<sentence ord="8" text="Ekornet{s} gjemmer seg{v}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Ekornet{s} gjemmer seg{v}"/>
+<sentence ord="1" text="Ekornet{s} hopper{v}"/>
+<sentence ord="2" text="Ekornet{s} danser{v}"/>
+<sentence ord="3" text="Frosken{s} danser{v}"/>
+<sentence ord="4" text="Frosken{s} gjemmer seg{v}"/>
+<sentence ord="5" text="Musen{s} gjemmer seg{v}"/>
+<sentence ord="6" text="Frosken{s} hopper{v}"/>
+<sentence ord="7" text="Musen{s} hopper{v}"/>
+<sentence ord="8" text="Musen{s} danser{v}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Frosken{s} danser{v}"/>
+<sentence ord="1" text="Frosken{s} gjemmer seg{v}"/>
+<sentence ord="2" text="Ekornet{s} hopper{v}"/>
+<sentence ord="3" text="Ekornet{s} danser{v}"/>
+<sentence ord="4" text="Ekornet{s} gjemmer seg{v}"/>
+<sentence ord="5" text="Musen{s} hopper{v}"/>
+<sentence ord="6" text="Musen{s} danser{v}"/>
+<sentence ord="7" text="Musen{s} gjemmer seg{v}"/>
+<sentence ord="8" text="Frosken{s} hopper{v}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

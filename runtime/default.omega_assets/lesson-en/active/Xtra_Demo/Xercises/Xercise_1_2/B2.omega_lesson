@@ -10,11 +10,11 @@
 <items>
 <item-entry Tid="v" ord="0" type="action">
 <item Lid="boy" action-fname="anim/ActiveAnim/B1" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/boy.wav" text="the boy" var-1="" var-2="" var-3=""/>
-<item Lid="bag" action-fname="anim/ActiveAnim/ActorpresB4DownOnRoundTable" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/bag.wav" text="the bag" var-1="" var-2="" var-3=""/>
-<item Lid="potato" action-fname="anim/ActiveAnim/ActorpresB4DownOnRoundTable" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-en/potato.wav" text="the potato" var-1="" var-2="" var-3=""/>
+<item Lid="bag" action-fname="anim/ActiveAnim/ActorPresB4DownOnRoundTable" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/bag.wav" text="the bag" var-1="" var-2="" var-3=""/>
+<item Lid="potato" action-fname="anim/ActiveAnim/ActorPresB4DownOnRoundTable" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-en/potato.wav" text="the potato" var-1="" var-2="" var-3=""/>
 <item Lid="girl" action-fname="anim/ActiveAnim/B1" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-en/girl.wav" text="the girl" var-1="null" var-2="null" var-3="null"/>
-<item Lid="flag" action-fname="anim/ActiveAnim/ActorpresB6DownUp" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/words-en/flag.wav" text="the flag" var-1="null" var-2="null" var-3="null"/>
-<item Lid="fish" action-fname="anim/ActiveAnim/ActorpresB5Water" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/words-en/fish.wav" text="the fish" var-1="null" var-2="null" var-3="null"/>
+<item Lid="flag" action-fname="anim/ActiveAnim/ActorPresB6DownUp" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="audio/words-en/flag.wav" text="the flag" var-1="null" var-2="null" var-3="null"/>
+<item Lid="fish" action-fname="anim/ActiveAnim/ActorPresB5Water" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="audio/words-en/fish.wav" text="the fish" var-1="null" var-2="null" var-3="null"/>
 <item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
 <item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
 </item-entry>
