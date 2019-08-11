@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A{+1}" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="man{+2}" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/pelican.mp3" dummytext="the pelican" ord="0" sign="" sound="audio/words-en/mouse.mp3" text="The man" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="girl{+2}" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/rabbitB.mp3" dummytext="the rabbit" ord="1" sign="" sound="audio/words-en/girl.mp3" text="The girl" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="robot{+2}" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/moose.wav" dummytext="the moose" ord="2" sign="" sound="audio/words-en/rabbitB.mp3" text="The robot" tts="" var-1="Robot" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="boy{+2}" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/boy.mp3" text="The boy" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="woman{+2}" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="The woman" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/ActorWalk" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/walks.mp3" text="walks" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/ActorRun" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/rolls.mp3" text="runs" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/ActorLift" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/kicks.mp3" text="lifts" tts="" var-1=",B" var-2=",box" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/InSchoolyard" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/jumps.mp3" text="jumps" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/CarryRockOnRock" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-en/carries.mp3" text="carries" tts="" var-1=",B" var-2=",stone" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/Stories/L3/L3-4beach" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-en/cycles.mp3" text="cycles" tts="" var-1="" var-2="Rides" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific>
+<value key="The man cycles" val="anim/ActiveVideo/biking/BikingMan.mp4"/>
+<value key="The robot cycles" val="anim/ActiveVideo/biking/bikingRobot.mp4"/>
+<value key="The woman cycles" val="anim/ActiveVideo/biking/BikingWoman.mp4"/>
+</action_specific>
+<sign_specific/>
+<test_entries/>
+</omega_lesson>

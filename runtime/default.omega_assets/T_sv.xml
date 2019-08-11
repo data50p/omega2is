@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<java version="1.4.2_03" class="java.beans.xmlDecoder">
+  <object class="java.util.HashMap">
+    <void method="put">
+      <string>Create</string>
+      <string>Skapa</string>
+    </void>
+    <void method="put">
+      <string>Test</string>
+      <string>Testa</string>
+    </void>
+    <void method="put">
+      <string>Student Mode</string>
+      <string>Elevläge</string>
+    </void>
+    <void method="put">
+      <string>Back</string>
+      <string>Bakåt</string>
+    </void>
+    <void method="put">
+      <string>Go to student mode</string>
+      <string>Till Elevläge</string>
+    </void>
+    <void method="put">
+      <string>Teacher Mode</string>
+      <string>Lärarläge</string>
+    </void>
+    <void method="put">
+      <string>User name</string>
+      <string>User name</string>
+    </void>
+    <void method="put">
+      <string>Results Summary</string>
+      <string>Results Summary</string>
+    </void>
+    <void method="put">
+      <string>Results List</string>
+      <string>Results List</string>
+    </void>
+    <void method="put">
+      <string>Feedback</string>
+      <string>Feedback</string>
+    </void>
+    <void method="put">
+      <string>Student Settings</string>
+      <string>Student Settings</string>
+    </void>
+    <void method="put">
+      <string>Select Tasks</string>
+      <string>Select Tasks</string>
+    </void>
+    <void method="put">
+      <string>Personalize Task</string>
+      <string>Personalize Task</string>
+    </void>
+    <void method="put">
+      <string>System Passcode</string>
+      <string>System Passcode</string>
+    </void>
+    <void method="put">
+      <string>(Prototype)</string>
+      <string>(Prototype)</string>
+    </void>
+    <void method="put">
+      <string>Mean Results overview</string>
+      <string>Mean Results overview</string>
+    </void>
+    <void method="put">
+      <string>Compare:</string>
+      <string>Compare:</string>
+    </void>
+    <void method="put">
+      <string>with</string>
+      <string>with</string>
+    </void>
+    <void method="put">
+      <string>Last session date</string>
+      <string>Last session date</string>
+    </void>
+    <void method="put">
+      <string>Last 3 session dates</string>
+      <string>Last 3 session dates</string>
+    </void>
+    <void method="put">
+      <string>Last 7 days</string>
+      <string>Last 7 days</string>
+    </void>
+    <void method="put">
+      <string>All results</string>
+      <string>All results</string>
+    </void>
+    <void method="put">
+      <string>Sentences % correct</string>
+      <string>Sentences % correct</string>
+    </void>
+    <void method="put">
+      <string>Words % correct</string>
+      <string>Words % correct</string>
+    </void>
+    <void method="put">
+      <string>Time correct sentence</string>
+      <string>Time correct sentence</string>
+    </void>
+    <void method="put">
+      <string>Date</string>
+      <string>Date</string>
+    </void>
+    <void method="put">
+      <string>Type</string>
+      <string>Type</string>
+    </void>
+    <void method="put">
+      <string>Lesson</string>
+      <string>Lesson</string>
+    </void>
+    <void method="put">
+      <string>Right_Sentences_Header</string>
+      <string>CS</string>
+    </void>
+    <void method="put">
+      <string>Wrong_Sentences_Header</string>
+      <string>IS</string>
+    </void>
+    <void method="put">
+      <string>Percent_Right_Sentences_Header</string>
+      <string>%CS</string>
+    </void>
+    <void method="put">
+      <string>Right_Words_Header</string>
+      <string>CW</string>
+    </void>
+    <void method="put">
+      <string>Wrong_Words_Header</string>
+      <string>IW</string>
+    </void>
+    <void method="put">
+      <string>Percent_Right_Words_Header</string>
+      <string>%CW</string>
+    </void>
+    <void method="put">
+      <string>Session_Length_Header</string>
+      <string>SL</string>
+    </void>
+    <void method="put">
+      <string>Number_Sentences_Header</string>
+      <string>#S</string>
+    </void>
+    <void method="put">
+      <string>Number_Words_Header</string>
+      <string>#W</string>
+    </void>
+    <void method="put">
+      <string>Sentence_Time_Header</string>
+      <string>ST</string>
+    </void>
+    <void method="put">
+      <string>Export list</string>
+      <string>Export list</string>
+    </void>
+    <void method="put">
+      <string>Show lesson details</string>
+      <string>Show lesson details</string>
+    </void>
+    <void method="put">
+      <string>minute_abbrev</string>
+      <string>m</string>
+    </void>
+    <void method="put">
+      <string>seconds_abbrev</string>
+      <string>s</string>
+    </void>
+    <void method="put">
+      <string>Default text</string>
+      <string>Default text</string>
+    </void>
+    <void method="put">
+      <string>Default speech</string>
+      <string>Default speech</string>
+    </void>
+    <void method="put">
+      <string>Default positive image</string>
+      <string>Default positive image</string>
+    </void>
+    <void method="put">
+      <string>Default negative image</string>
+      <string>Default negative image</string>
+    </void>
+    <void method="put">
+      <string>Default video</string>
+      <string>Default video</string>
+    </void>
+    <void method="put">
+      <string>Text</string>
+      <string>Text</string>
+    </void>
+    <void method="put">
+      <string>Change</string>
+      <string>Change</string>
+    </void>
+    <void method="put">
+      <string>Speech</string>
+      <string>Speech</string>
+    </void>
+    <void method="put">
+      <string>Positive image</string>
+      <string>Positive image</string>
+    </void>
+    <void method="put">
+      <string>Negative image</string>
+      <string>Negative image</string>
+    </void>
+    <void method="put">
+      <string>Video</string>
+      <string>Video</string>
+    </void>
+    <void method="put">
+      <string>Language</string>
+      <string>Language</string>
+    </void>
+    <void method="put">
+      <string>Access Method</string>
+      <string>Access Method</string>
+    </void>
+    <void method="put">
+      <string>Switch Settings</string>
+      <string>Switch Settings</string>
+    </void>
+    <void method="put">
+      <string>Iterate key</string>
+      <string>Iterate key</string>
+    </void>
+    <void method="put">
+      <string>Accept key</string>
+      <string>Accept key</string>
+    </void>
+    <void method="put">
+      <string>Presentation</string>
+      <string>Presentation</string>
+    </void>
+    <void method="put">
+      <string>Random word order</string>
+      <string>Random word order</string>
+    </void>
+    <void method="put">
+      <string>High contrast mode</string>
+      <string>High contrast mode</string>
+    </void>
+    <void method="put">
+      <string>Fitzgerald Key colored</string>
+      <string>Fitzgerald Key colored</string>
+    </void>
+    <void method="put">
+      <string>#</string>
+      <string>#</string>
+    </void>
+    <void method="put">
+      <string>Selection</string>
+      <string>Selection</string>
+    </void>
+    <void method="put">
+      <string>Created Sentence</string>
+      <string>Created Sentence</string>
+    </void>
+    <void method="put">
+      <string>Time</string>
+      <string>Time</string>
+    </void>
+    <void method="put">
+      <string>Correct Sentence</string>
+      <string>Correct Sentence</string>
+    </void>
+    <void method="put">
+      <string>&lt;&lt; Back</string>
+      <string>&lt;&lt; Back</string>
+    </void>
+    <void method="put">
+      <string>Change picture</string>
+      <string>Change picture</string>
+    </void>
+    <void method="put">
+      <string>First Name</string>
+      <string>First Name</string>
+    </void>
+    <void method="put">
+      <string>Last Name</string>
+      <string>Last Name</string>
+    </void>
+    <void method="put">
+      <string>Date of Birth</string>
+      <string>Date of Birth</string>
+    </void>
+    <void method="put">
+      <string>Set</string>
+      <string>Set</string>
+    </void>
+    <void method="put">
+      <string>Delete Student</string>
+      <string>Delete Student</string>
+    </void>
+    <void method="put">
+      <string>Save</string>
+      <string>Save</string>
+    </void>
+    <void method="put">
+      <string>Cancel</string>
+      <string>Cancel</string>
+    </void>
+    <void method="put">
+      <string>Create profile</string>
+      <string>Create profile</string>
+    </void>
+    <void method="put">
+      <string>Replay/Scene</string>
+      <string>Replay/Scene</string>
+    </void>
+    <void method="put">
+      <string>Replay/Speech</string>
+      <string>Replay/Speech</string>
+    </void>
+    <void method="put">
+      <string></string>
+      <string></string>
+    </void>
+    <void method="put">
+      <string>Select level</string>
+      <string>Välj nivå</string>
+    </void>
+    <void method="put">
+      <string>Choose task</string>
+      <string>Välj uppgift</string>
+    </void>
+    <void method="put">
+      <string>Results &amp; Tests</string>
+      <string>Resultat &amp; Test</string>
+    </void>
+    <void method="put">
+      <string>Teacher Tests</string>
+      <string>Lärartest</string>
+    </void>
+    <void method="put">
+      <string>Student settings</string>
+      <string>Student settings</string>
+    </void>
+    <void method="put">
+      <string>Feedback &amp; presentation</string>
+      <string>Feedback &amp; presentation</string>
+    </void>
+    <void method="put">
+      <string>Access</string>
+      <string>Access</string>
+    </void>
+    <void method="put">
+      <string>Audio Presentation</string>
+      <string>Audio Presentation</string>
+    </void>
+    <void method="put">
+      <string>Text-to-speech voice:</string>
+      <string>Text-to-speech voice:</string>
+    </void>
+    <void method="put">
+      <string>Speech rate</string>
+      <string>Speech rate</string>
+    </void>
+    <void method="put">
+      <string>Visual presentation</string>
+      <string>Visual presentation</string>
+    </void>
+    <void method="put">
+      <string>Random word order - Test</string>
+      <string>Random word order - Test</string>
+    </void>
+    <void method="put">
+      <string>Random word order - Create</string>
+      <string>Random word order - Create</string>
+    </void>
+    <void method="put">
+      <string>Test feedback</string>
+      <string>Test feedback</string>
+    </void>
+    <void method="put">
+      <string>Positive sound</string>
+      <string>Positive sound</string>
+    </void>
+    <void method="put">
+      <string>Teacher Test</string>
+      <string>Teacher Test</string>
+    </void>
+    <void method="put">
+      <string>POS_Header</string>
+      <string>POS</string>
+    </void>
+    <void method="put">
+      <string>to go</string>
+      <string>to go</string>
+    </void>
+    <void method="put">
+      <string>Result</string>
+      <string>Result</string>
+    </void>
+    <void method="put">
+      <string>Your score</string>
+      <string>Your score</string>
+    </void>
+    <void method="put">
+      <string> </string>
+      <string> </string>
+    </void>
+    <void method="put">
+      <string>SwitchSettings</string>
+      <string>SwitchSettings</string>
+    </void>
+    <void method="put">
+      <string>Touch Mode:</string>
+      <string>Touch Mode:</string>
+    </void>
+    <void method="put">
+      <string>Options:</string>
+      <string>Options:</string>
+    </void>
+    <void method="put">
+      <string>Hold time:</string>
+      <string>Hold time:</string>
+    </void>
+    <void method="put">
+      <string>Off</string>
+      <string>Off</string>
+    </void>
+    <void method="put">
+      <string>Fast (0.5s)</string>
+      <string>Fast (0.5s)</string>
+    </void>
+    <void method="put">
+      <string>Medium (1.0s)</string>
+      <string>Medium (1.0s)</string>
+    </void>
+    <void method="put">
+      <string>Slow (2.5s)</string>
+      <string>Slow (2.5s)</string>
+    </void>
+    <void method="put">
+      <string>Connect Multiple taps:</string>
+      <string>Connect Multiple taps:</string>
+    </void>
+    <void method="put">
+      <string>Fast (0.1s)</string>
+      <string>Fast (0.1s)</string>
+    </void>
+    <void method="put">
+      <string>Medium (0.3s)</string>
+      <string>Medium (0.3s)</string>
+    </void>
+    <void method="put">
+      <string>Slow (1.0s)</string>
+      <string>Slow (1.0s)</string>
+    </void>
+    <void method="put">
+      <string>Delay Between Selections:</string>
+      <string>Delay Between Selections:</string>
+    </void>
+    <void method="put">
+      <string>Fast (1.0s)</string>
+      <string>Fast (1.0s)</string>
+    </void>
+    <void method="put">
+      <string>Medium (2.0s)</string>
+      <string>Medium (2.0s)</string>
+    </void>
+    <void method="put">
+      <string>Slow (3.0s)</string>
+      <string>Slow (3.0s)</string>
+    </void>
+    <void method="put">
+      <string>On</string>
+      <string>On</string>
+    </void>
+    <void method="put">
+      <string>Teacher mode passcode</string>
+      <string>Teacher mode passcode</string>
+    </void>
+    <void method="put">
+      <string>Enabled</string>
+      <string>Enabled</string>
+    </void>
+  </object>
+</java>

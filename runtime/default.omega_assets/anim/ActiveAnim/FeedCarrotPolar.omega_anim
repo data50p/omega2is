@@ -4,47 +4,48 @@
 <omega class="Animation" version="0.1">
 <AnimCanvas>
 <Canvas>
-<background height="470" name="background/bgdice.gif" width="640"/>
+<background height="800" name="background/bgdice2.jpg" width="1198"/>
 </Canvas>
 <AllPath>
 <TPath nid="0">
-<q ord="0" p1="539.0,413.0" p2="527.7468872070312,413.1820068359375" pc="527.7468872070312,413.1820068359375"/>
-<info flatness="0.3333333333333333" size="2"/>
-<help len="0.0;11.254584577833379" seg="539.0,413.0;527.7468872070312,413.1820068359375"/>
+<q ord="0" p1="1007.1907958984375,627.4843139648438" p2="995.9376831054688,627.6663208007812" pc="995.9376831054688,627.6663208007812"/>
+<help len="0.0;11.254584577833379" seg="1007.1907958984375,627.4843139648438;995.9376831054688,627.6663208007812"/>
+<info flatness="1.5" size="2"/>
 </TPath>
 <TPath nid="1">
-<q ord="0" p1="474.0,336.0" p2="135.0128173828125,385.0384521484375" pc="235.5,-175.5"/>
-<mark id="0" type="^" where="667.42"/>
-<info flatness="0.3333333333333333" size="45"/>
-<help len="0.0;34.26888402150492;66.53899172521598;96.8255699180987;125.14706907250105;151.52606333624732;175.9905046884514;198.57545479419298;219.3255049188787;238.29818837087967;255.5688103300745;263.59778341068284;271.24138553732075;278.5175104489736;285.4468992754162;292.0535596121142;298.36518282800665;304.4135139988922;310.23460735018284;315.8688811431924;321.3608798743622;326.7586715033681;332.1128618619174;337.47529133366055;342.89756399387204;348.4296094819673;354.1184678280201;360.00742247201026;366.13551841079203;372.5374265942381;379.24357246664914;386.2804362605034;393.67094417017233;401.4348901894928;409.5893493338742;427.12380424460576;446.37369179311577;467.4111051450184;490.2912467254822;515.056999797821;541.7421585950398;570.3737216526206;600.973535941312;633.5594898813044;668.1463903228148" seg="474.0,336.0;459.2285281419754,305.0781625509262;444.7266125679016,276.25015020370483;430.4942532777786,249.51596295833588;416.53145027160645,224.87560081481934;402.83820354938507,202.3290637731552;389.4145131111145,181.8763518333435;376.26037895679474,163.51746499538422;363.3758010864258,147.25240325927734;350.76077950000763,133.0811666250229;338.4153141975403,121.00375509262085;332.34366515278816,115.75023373961449;326.33940517902374,111.02016866207123;320.402534276247,106.81355985999107;314.533052444458,103.13040733337402;308.7309596836567,99.97071108222008;302.9962559938431,97.33447110652924;297.32894137501717,95.2216874063015;291.72901582717896,93.63235998153687;286.19647935032845,92.56648883223534;280.73133194446564,92.02407395839691;275.33357360959053,92.00511536002159;270.0032043457031,92.50961303710938;264.7402241528034,93.53756698966026;259.5446330308914,95.08897721767426;254.41643097996712,97.16384372115135;249.35561800003052,99.76216650009155;244.36219409108162,102.88394555449486;239.43615925312042,106.52918088436127;234.57751348614693,110.69787248969078;229.78625679016113,115.3900203704834;225.06238916516304,120.60562452673912;220.40591061115265,126.34468495845795;215.81682112812996,132.60720166563988;211.29512071609497,139.3931746482849;202.4538871049881,154.5354894399643;193.88220977783203,171.7716293334961;185.58008873462677,191.1015943288803;177.54752397537231,212.52538442611694;169.78451550006866,236.042999625206;162.29106330871582,261.65443992614746;155.06716740131378,289.35970532894135;148.11282777786255,319.15879583358765;141.42804443836212,351.05171144008636;135.0128173828125,385.0384521484375"/>
+<q ord="0" p1="947.0919189453125,548.03271484375" p2="361.0,557.0" pc="353.9100036621094,-126.9000015258789"/>
+<help len="0.0;106.79855046972773;202.65577769091416;287.74787270069135;362.327362175287;395.7936023596078;426.78839620775864;455.3926169882932;481.7091865670061;505.87027945367794;528.0466446139787;548.4588988041729;567.3894365061155;585.1913066719637;602.2876247631855;619.1546870535853;636.2879201255336;654.1606297087121;673.1910266396503;693.7267139671044;716.0450716089723;740.3625531563523;766.8466411516276;795.6270183596018;826.8047266570785;896.6395723797323;976.8323976727745" seg="947.0919189453125,548.03271484375;875.288991689682,468.9740656018257;808.1756887435913,400.5312969684601;745.7520101070404,342.7044089436531;688.0179557800293,295.4934015274048;660.9095377326012,275.8688530474901;634.973525762558,258.8982747197151;610.2099198698997,244.58166654407978;586.6187200546265,232.9190285205841;564.1999263167381,223.9103606492281;542.9535386562347,217.55566293001175;522.8795570731163,213.85493536293507;503.9779815673828,212.80817794799805;486.24881213903427,214.4153906852007;469.6920487880707,218.676573574543;454.30769151449203,225.59172661602497;440.09574031829834,235.1608498096466;427.0561951994896,247.3839431554079;415.1890561580658,262.26100665330887;404.49432319402695,279.7920403033495;394.97199630737305,299.9770441055298;386.6220754981041,322.81601805984974;379.4445607662201,348.30896216630936;373.43945211172104,376.45587642490864;368.60674953460693,407.2567608356476;362.45856261253357,476.82044011354446;361.0,557.0"/>
+<info flatness="1.5" size="27"/>
+<mark id="0" type="^" where="887.92"/>
 </TPath>
 <TPath nid="2">
-<q ord="0" p1="153.20510864257812,431.871826171875" p2="143.65382385253906,429.2692565917969" pc="153.47708129882812,430.827880859375"/>
-<q ord="1" p1="143.65382385253906,429.2692565917969" p2="153.20510864257812,433.871826171875" pc="159.20510864257812,383.87176513671875"/>
-<q ord="2" p1="153.20510864257812,433.871826171875" p2="140.20510864257812,432.871826171875" pc="151.0,386.0"/>
-<mark id="0" type="^" where="-2.0"/>
-<mark id="1" type="^" where="111.98"/>
-<info flatness="0.3333333333333333" size="24"/>
-<help len="0.0;0.7430088420248194;2.605561142071485;10.043755754919433;20.522584387141407;27.97792903985117;32.45458109513202;33.64244903760104;34.328870440835836;35.1648963949942;36.612074825032565;41.66249806482466;49.705679401770325;60.77639267974385;71.2863584527201;78.87341373898057;83.60030466602912;84.97220857350707;85.86321547569464;86.76344887744443;88.15330533226039;92.9219679231066;100.55246482907393;111.10636864284908" seg="153.20510864257812,431.871826171875;152.71014308929443,431.3176860809326;150.95327377319336,430.69921112060547;143.65382385253906,429.2692565917969;147.20490622520447,419.41047048568726;150.08251094818115,412.53285789489746;152.28663802146912,408.6364188194275;153.13614743947983,407.80613934993744;153.81728744506836,407.72115325927734;154.3300580382347,408.3814605474472;154.67445921897888,409.787061214447;154.85815334320068,414.8341426849365;154.36836981773376,422.86239767074585;153.20510864257812,433.871826171875;152.51961612701416,423.38423919677734;151.56569290161133,415.8573913574219;150.34333896636963,411.2912826538086;149.6315004825592,410.1185054779053;148.85255432128906,409.6859130859375;148.0065004825592,409.9935054779053;147.09333896636963,411.0412826538086;145.06569290161133,415.3573913574219;142.76961612701416,422.63423919677734;140.20510864257812,432.871826171875"/>
+<q ord="0" p1="378.85211181640625,559.26025390625" p2="369.30084228515625,556.6576538085938" pc="379.12408447265625,558.21630859375"/>
+<q ord="1" p1="369.30084228515625,556.6576538085938" p2="378.85211181640625,561.26025390625" pc="399.0,527.0"/>
+<q ord="2" p1="378.85211181640625,561.26025390625" p2="365.85211181640625,560.26025390625" pc="376.0,529.0"/>
+<help len="0.0;9.899508923522667;25.87025232872744;32.065042783687936;37.261753630894994;52.12633466975112;64.4312116486031;69.49235598324286;74.74335289203216;87.28461906195525" seg="378.85211181640625,559.26025390625;369.30084228515625,556.6576538085938;381.0349807739258,545.8236961364746;386.5382385253906,542.9794769287109;385.8106155395508,548.1249961853027;378.85211181640625,561.26025390625;376.9700698852539,549.1001586914062;374.1760559082031,544.880126953125;370.4700698852539,548.6001586914062;365.85211181640625,560.26025390625"/>
+<info flatness="1.5" size="10"/>
+<mark id="0" type="^" where="56.64"/>
+<mark id="1" type="^" where="89.0"/>
 </TPath>
 </AllPath>
 <lesson verb="$A matar $B"/>
 <AllActors>
-<Actor hotspot_begin="0.4739622641509434 0.94" hotspot_end="0.48877358490566036 0.94" hotspot_rotate="0.5094339622641509 0.52" lesson_id="penguin" name="actor/FeedEat/Penguin.png" nid="0" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5776415094339623 1.0" hotspot_end="0.5776415094339623 1.0" hotspot_rotate="0.5094339622641509 0.52" lesson_id="penguin" name="actor/FeedEat/Penguin.png" nid="0" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="actor/FeedEat/CarrotFood.png" nid="1" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.6002500000000001 0.9" hotspot_end="0.6002500000000001 0.9" hotspot_rotate="0.4655 0.54" lesson_id="dino" name="actor/FeedEat/Dino.png" nid="2" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.5823529411764706 0.87" hotspot_end="0.5823529411764706 0.86" hotspot_rotate="0.5 0.5" lesson_id="buzzard" name="actor/FeedEat/Buzzard.png" nid="3" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.5389147286821705 0.88" hotspot_end="0.5389147286821705 0.88" hotspot_rotate="0.48992248062015503 0.5" lesson_id="lion" name="actor/FeedEat/Lion.png" nid="4" prim_mirror="0" prim_scale="0.8" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.49565217391304356 0.86" hotspot_end="0.49565217391304356 0.86" hotspot_rotate="0.5 0.5" lesson_id="tiger" name="actor/FeedEat/Tiger.png" nid="5" prim_mirror="0" prim_scale="0.8" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.5665517241379311 0.87" hotspot_end="0.5665517241379311 0.87" hotspot_rotate="0.5 0.5" lesson_id="swan" name="actor/FeedEat/Swan.png" nid="6" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.325 0.9" hotspot_end="0.325 0.9" hotspot_rotate="0.5 0.5" lesson_id="astronaut" name="actor/FeedEat/Astronaut.png" nid="7" prim_mirror="0" prim_scale="0.8" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.532 0.94" hotspot_end="0.532 0.94" hotspot_rotate="0.49270833333333336 0.5" lesson_id="ghost" name="actor/FeedEat/Ghost.png" nid="8" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.686 0.9" hotspot_end="0.686 0.9" hotspot_rotate="0.4655 0.54" lesson_id="dino" name="actor/FeedEat/Dino.png" nid="2" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.6564705882352941 0.88" hotspot_end="0.6564705882352941 0.88" hotspot_rotate="0.5 0.5" lesson_id="buzzard" name="actor/FeedEat/Buzzard.png" nid="3" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5756589147286821 0.88" hotspot_end="0.5756589147286821 0.88" hotspot_rotate="0.48992248062015503 0.5" lesson_id="lion" name="actor/FeedEat/Lion.png" nid="4" prim_mirror="0" prim_scale="0.88" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.6000000000000001 0.76" hotspot_end="0.6000000000000001 0.76" hotspot_rotate="0.5 0.5" lesson_id="tiger" name="actor/FeedEat/Tiger.png" nid="5" prim_mirror="0" prim_scale="0.8" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.6948275862068966 0.84" hotspot_end="0.6948275862068966 0.84" hotspot_rotate="0.5 0.5" lesson_id="swan" name="actor/FeedEat/Swan.png" nid="6" prim_mirror="0" prim_scale="0.8" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.4125 0.86" hotspot_end="0.4125 0.86" hotspot_rotate="0.5 0.5" lesson_id="astronaut" name="actor/FeedEat/Astronaut.png" nid="7" prim_mirror="0" prim_scale="0.9" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.52136 1.02" hotspot_end="0.52136 1.02" hotspot_rotate="0.49270833333333336 0.5" lesson_id="ghost" name="actor/FeedEat/Ghost.png" nid="8" prim_mirror="0" prim_scale="1.4" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_9.gif" nid="9" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_10.gif" nid="10" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_11.gif" nid="11" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 </AllActors>
 <AllWings>
-<Wing layer="4" mirror="0" name="Wings/BucketCarrot.png" nid="0" position="387.0 321.0" scale="1.0"/>
+<Wing layer="4" mirror="0" name="Wings/BucketCarrot.png" nid="0" position="842.0 582.0" scale="1.0"/>
+<Wing layer="3" mirror="0" name="Wings/bgdice2_wing.png" nid="1" position="186.0 391.0" scale="1.0"/>
 </AllWings>
 </AnimCanvas>
 <MTL>
@@ -55,12 +56,13 @@
 <TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="Still" cmd="ImageAttrib" isOn="true"/>
-<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="Top" cmd="SetLayer" isOn="false"/>
 <TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
 <TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
 <TriggerEvent arg="X" cmd="SetMirror" isOn="true"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -75,6 +77,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="t" when="504">
@@ -89,6 +92,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="]" when="3310">
@@ -103,6 +107,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4320">
@@ -117,6 +122,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>
@@ -127,12 +133,13 @@
 <TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
-<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="true"/>
 <TriggerEvent arg="100" cmd="SetVisibility" isOn="true"/>
 <TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -145,11 +152,12 @@
 <TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
 <TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
-<TriggerEvent arg="eaten" cmd="Dinner" isOn="true"/>
+<TriggerEvent arg="eaten" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="1615">
+<TimeMarker duration="0" type="t" when="1795">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
 <TriggerEvent arg="-60 -10" cmd="Rotate" isOn="true"/>
@@ -161,6 +169,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="eaten" cmd="Dinner" isOn="true"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="t" when="2527">
@@ -175,6 +184,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="^" when="2529"/>
@@ -190,6 +200,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="]" when="3725">
@@ -204,6 +215,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4320">
@@ -218,6 +230,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>
@@ -228,12 +241,13 @@
 <TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
-<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="Top" cmd="SetLayer" isOn="true"/>
 <TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
 <TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -248,9 +262,10 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="1547">
+<TimeMarker duration="0" type="t" when="1667">
 <T_Event>
 <TriggerEvent arg="audio/sound.wav" cmd="PlaySound" isOn="true"/>
 <TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
@@ -260,11 +275,12 @@
 <TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
 <TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
-<TriggerEvent arg="eat" cmd="Dinner" isOn="true"/>
+<TriggerEvent arg="eat" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="2518">
+<TimeMarker duration="0" type="t" when="2628">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
 <TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
@@ -276,9 +292,10 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="^" when="2529"/>
+<TimeMarker duration="0" type="^" when="2629"/>
 <TimeMarker duration="0" type="^" when="3038"/>
 <TimeMarker duration="0" type="]" when="4120">
 <T_Event>
@@ -292,6 +309,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4310">
@@ -306,6 +324,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>
