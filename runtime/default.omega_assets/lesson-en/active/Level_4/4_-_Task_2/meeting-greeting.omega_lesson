@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="" Tid="o" ord="2" type="passive"/>
+<t-item Lid="" Tid="aux" ord="3" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/girl.mp3" text="The girl" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/boy.mp3" text="The boy" tts="" var-1="s" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="The man" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="The woman" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="" text="says hello to" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="hugs" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="greets" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+<item-entry Tid="o" ord="2" type="passive">
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="" text="the woman" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="the man" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="the boy" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="the girl" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+<item-entry Tid="aux" ord="3" type="passive">
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="" text="in the park" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="in the street" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="at the bus stop" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="at the station" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific>
+<value key="The girl hugs the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugBoyPark.mp4"/>
+<value key="The girl greets the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/WomanGreetGirlStreet.mp4"/>
+<value key="The woman says hello to the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloWomanTrain.mp4"/>
+<value key="The man hugs the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHugManTrain.mp4"/>
+<value key="The boy says hello to the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/BoyHelloWomanStreet.mp4"/>
+<value key="The woman greets the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/BoyGreetWomanTrain.mp4"/>
+<value key="The boy greets the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetBoyPark.mp4"/>
+<value key="The man hugs the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHugBoyTrain.mp4"/>
+<value key="The woman greets the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/WomanGreetWomanTrain.mp4"/>
+<value key="The boy greets the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetBoyTrain.mp4"/>
+<value key="The man greets the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManGreetWomanTrain.mp4"/>
+<value key="The woman greets the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManGreetWomanTrain.mp4"/>
+<value key="The girl says hello to the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/WomanHelloGirlStreet.mp4"/>
+<value key="The girl says hello to the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHelloWomanBus_stop.mp4"/>
+<value key="The boy greets the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManGreetBoyTrain.mp4"/>
+<value key="The boy greets the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/BoyGreetBoyTrain.mp4"/>
+<value key="The woman says hello to the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManHelloWomanPark.mp4"/>
+<value key="The woman hugs the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/WomanHugWomanBus_stop.mp4"/>
+<value key="The man greets the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManGreetBoyPark.mp4"/>
+<value key="The boy says hello to the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/BoyHelloBoyPark.mp4"/>
+<value key="The girl says hello to the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloManTrain.mp4"/>
+<value key="The girl says hello to the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHelloGirlBus_stop.mp4"/>
+<value key="The boy says hello to the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManHelloBoyPark.mp4"/>
+<value key="The man greets the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetManBus_stop.mp4"/>
+<value key="The woman hugs the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/WomanHugGirlStreet.mp4"/>
+<value key="The man hugs the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHugWomanTrain.mp4"/>
+<value key="The girl greets the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetGirlTrain.mp4"/>
+<value key="The woman says hello to the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHelloWomanTrain.mp4"/>
+<value key="The boy says hello to the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlHelloBoyStreet.mp4"/>
+<value key="The boy greets the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlGreetBoyStreet.mp4"/>
+<value key="The man greets the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetManStreet.mp4"/>
+<value key="The woman says hello to the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/WomanHelloWomanPark.mp4"/>
+<value key="The woman hugs the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugWomanBus_stop.mp4"/>
+<value key="The woman says hello to the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/WomanHelloWomanBus_stop.mp4"/>
+<value key="The man hugs the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugBoyBus_stop.mp4"/>
+<value key="The boy says hello to the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/BoyHelloWomanTrain.mp4"/>
+<value key="The boy says hello to the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloBoyBus_stop.mp4"/>
+<value key="The woman hugs the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugWomanPark.mp4"/>
+<value key="The man hugs the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManHugWomanPark.mp4"/>
+<value key="The girl says hello to the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlHelloGirlStreet.mp4"/>
+<value key="The boy hugs the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugBoyBus_stop.mp4"/>
+<value key="The girl hugs the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugGirlPark.mp4"/>
+<value key="The girl says hello to the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlHelloManStreet.mp4"/>
+<value key="The man greets the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManGreetWomanPark.mp4"/>
+<value key="The girl hugs the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHugGirlTrain.mp4"/>
+<value key="The girl hugs the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHugWomanTrain.mp4"/>
+<value key="The girl greets the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetGirlStreet.mp4"/>
+<value key="The boy hugs the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/BoyHugWomanStreet.mp4"/>
+<value key="The man says hello to the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHelloWomanTrain.mp4"/>
+<value key="The man hugs the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugWomanBus_stop.mp4"/>
+<value key="The girl hugs the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugGirlBus_stop.mp4"/>
+<value key="The boy greets the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManGreetBoyPark.mp4"/>
+<value key="The girl says hello to the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloGirlBus_stop.mp4"/>
+<value key="The boy says hello to the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHelloBoyBus_stop.mp4"/>
+<value key="The boy hugs the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManHugBoyPark.mp4"/>
+<value key="The boy hugs the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugBoyPark.mp4"/>
+<value key="The boy hugs the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlHugBoyStreet.mp4"/>
+<value key="The girl greets the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetManPark.mp4"/>
+<value key="The girl greets the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlGreetBoyBus_stop.mp4"/>
+<value key="The man says hello to the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloManTrain.mp4"/>
+<value key="The man hugs the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugManBus_stop.mp4"/>
+<value key="The woman greets the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/WomanGreetGirlStreet.mp4"/>
+<value key="The girl greets the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetWomanTrain.mp4"/>
+<value key="The boy says hello to the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/BoyHelloBoyStreet.mp4"/>
+<value key="The boy says hello to the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHelloWomanBus_stop.mp4"/>
+<value key="The woman says hello to the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHelloWomanBus_stop.mp4"/>
+<value key="The girl hugs the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugWomanPark.mp4"/>
+<value key="The boy says hello to the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHelloBoyStreet.mp4"/>
+<value key="The boy hugs the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHugBoyTrain.mp4"/>
+<value key="The man hugs the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHugGirlBus_stop.mp4"/>
+<value key="The girl hugs the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHugGirlTrain.mp4"/>
+<value key="The girl greets the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetWomanPark.mp4"/>
+<value key="The woman says hello to the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/BoyHelloWomanTrain.mp4"/>
+<value key="The girl says hello to the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloGirlTrain.mp4"/>
+<value key="The man greets the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetBoyStreet.mp4"/>
+<value key="The man says hello to the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloWomanBus_stop.mp4"/>
+<value key="The man greets the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManGreetBoyTrain.mp4"/>
+<value key="The girl greets the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlGreetBoyStreet.mp4"/>
+<value key="The man says hello to the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloGirlBus_stop.mp4"/>
+<value key="The woman says hello to the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/BoyHelloWomanStreet.mp4"/>
+<value key="The boy hugs the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/BoyHugBoyPark.mp4"/>
+<value key="The girl says hello to the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloBoyTrain.mp4"/>
+<value key="The man says hello to the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloManBus_stop.mp4"/>
+<value key="The woman greets the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/WomanGreetBoyPark.mp4"/>
+<value key="The boy says hello to the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloBoyTrain.mp4"/>
+<value key="The woman greets the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/WomanGreetWomanBus_stop.mp4"/>
+<value key="The boy says hello to the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHelloBoyTrain.mp4"/>
+<value key="The woman says hello to the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloWomanPark.mp4"/>
+<value key="The man hugs the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHugBoyStreet.mp4"/>
+<value key="The woman hugs the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/WomanHugBoyPark.mp4"/>
+<value key="The woman says hello to the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/WomanHelloWomanStreet.mp4"/>
+<value key="The man hugs the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHugGirlTrain.mp4"/>
+<value key="The woman says hello to the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHelloWomanStreet.mp4"/>
+<value key="The woman greets the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetWomanPark.mp4"/>
+<value key="The boy hugs the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHugWomanBus_stop.mp4"/>
+<value key="The woman says hello to the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/WomanHelloWomanTrain.mp4"/>
+<value key="The girl hugs the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHugGirlBus_stop.mp4"/>
+<value key="The man says hello to the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHelloManStreet.mp4"/>
+<value key="The girl greets the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetBoyPark.mp4"/>
+<value key="The girl says hello to the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloBoyPark.mp4"/>
+<value key="The woman hugs the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/BoyHugWomanTrain.mp4"/>
+<value key="The girl says hello to the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloWomanPark.mp4"/>
+<value key="The man says hello to the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHelloBoyStreet.mp4"/>
+<value key="The boy greets the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetBoyBus_stop.mp4"/>
+<value key="The girl greets the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetBoyTrain.mp4"/>
+<value key="The man hugs the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHugManStreet.mp4"/>
+<value key="The girl says hello to the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHelloWomanTrain.mp4"/>
+<value key="The woman says hello to the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHelloWomanBus_stop.mp4"/>
+<value key="The boy says hello to the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHelloBoyBus_stop.mp4"/>
+<value key="The woman greets the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetWomanTrain.mp4"/>
+<value key="The boy says hello to the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloBoyPark.mp4"/>
+<value key="The woman greets the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/WomanGreetWomanPark.mp4"/>
+<value key="The man says hello to the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManHelloManPark.mp4"/>
+<value key="The girl says hello to the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloGirlPark.mp4"/>
+<value key="The man hugs the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHugWomanStreet.mp4"/>
+<value key="The woman greets the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/BoyGreetWomanStreet.mp4"/>
+<value key="The man says hello to the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManHelloWomanPark.mp4"/>
+<value key="The boy greets the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/WomanGreetBoyPark.mp4"/>
+<value key="The girl hugs the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/WomanHugGirlStreet.mp4"/>
+<value key="The girl hugs the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHugGirlStreet.mp4"/>
+<value key="The man says hello to the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHelloBoyTrain.mp4"/>
+<value key="The man says hello to the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHelloManTrain.mp4"/>
+<value key="The man greets the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetManPark.mp4"/>
+<value key="The woman hugs the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHugWomanBus_stop.mp4"/>
+<value key="The boy hugs the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/BoyHugBoyTrain.mp4"/>
+<value key="The girl greets the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetManTrain.mp4"/>
+<value key="The boy hugs the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHugBoyBus_stop.mp4"/>
+<value key="The man says hello to the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloManPark.mp4"/>
+<value key="The man greets the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetBoyBus_stop.mp4"/>
+<value key="The woman greets the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManGreetWomanPark.mp4"/>
+<value key="The girl hugs the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlHugGirlStreet.mp4"/>
+<value key="The woman hugs the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/BoyHugWomanStreet.mp4"/>
+<value key="The man greets the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetGirlStreet.mp4"/>
+<value key="The man says hello to the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManHelloBoyPark.mp4"/>
+<value key="The woman greets the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetWomanStreet.mp4"/>
+<value key="The girl says hello to the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlHelloBoyStreet.mp4"/>
+<value key="The woman greets the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetWomanBus_stop.mp4"/>
+<value key="The woman says hello to the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/WomanHelloGirlStreet.mp4"/>
+<value key="The girl greets the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlGreetGirlBus_stop.mp4"/>
+<value key="The man says hello to the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlHelloManStreet.mp4"/>
+<value key="The boy greets the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetBoyStreet.mp4"/>
+<value key="The woman hugs the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyHugWomanBus_stop.mp4"/>
+<value key="The girl greets the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlGreetGirlStreet.mp4"/>
+<value key="The woman hugs the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/WomanHugWomanPark.mp4"/>
+<value key="The woman greets the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlGreetWomanBus_stop.mp4"/>
+<value key="The man greets the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetWomanBus_stop.mp4"/>
+<value key="The woman hugs the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/WomanHugWomanStreet.mp4"/>
+<value key="The boy hugs the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHugBoyStreet.mp4"/>
+<value key="The girl says hello to the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHelloManPark.mp4"/>
+<value key="The boy greets the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/BoyGreetBoyStreet.mp4"/>
+<value key="The woman hugs the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManHugWomanPark.mp4"/>
+<value key="The man hugs the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManHugManPark.mp4"/>
+<value key="The man hugs the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugManPark.mp4"/>
+<value key="The boy hugs the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/BoyHugBoyStreet.mp4"/>
+<value key="The man greets the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlGreetManTrain.mp4"/>
+<value key="The woman hugs the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/WomanHugWomanTrain.mp4"/>
+<value key="The boy greets the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/BoyGreetWomanTrain.mp4"/>
+<value key="The girl hugs the boy in the street" val="anim/ActiveVideo/meeting-greeting/Street/GirlHugBoyStreet.mp4"/>
+<value key="The girl greets the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetGirlBus_stop.mp4"/>
+<value key="The girl hugs the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHugBoyTrain.mp4"/>
+<value key="The boy says hello to the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/WomanHelloBoyPark.mp4"/>
+<value key="The girl says hello to the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHelloBoyBus_stop.mp4"/>
+<value key="The girl greets the girl in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlGreetGirlPark.mp4"/>
+<value key="The man greets the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManGreetWomanStreet.mp4"/>
+<value key="The man hugs the girl in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHugGirlStreet.mp4"/>
+<value key="The boy hugs the woman at the station" val="anim/ActiveVideo/meeting-greeting/Train/BoyHugWomanTrain.mp4"/>
+<value key="The woman says hello to the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/WomanHelloBoyPark.mp4"/>
+<value key="The girl hugs the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHugBoyBus_stop.mp4"/>
+<value key="The man hugs the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManHugBoyPark.mp4"/>
+<value key="The man says hello to the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloBoyBus_stop.mp4"/>
+<value key="The woman says hello to the man at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManHelloWomanBus_stop.mp4"/>
+<value key="The man greets the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/ManGreetGirlBus_stop.mp4"/>
+<value key="The woman hugs the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHugWomanTrain.mp4"/>
+<value key="The boy greets the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlGreetBoyBus_stop.mp4"/>
+<value key="The boy hugs the girl at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHugBoyBus_stop.mp4"/>
+<value key="The boy greets the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/BoyGreetWomanStreet.mp4"/>
+<value key="The girl hugs the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/GirlHugManPark.mp4"/>
+<value key="The woman greets the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyGreetWomanBus_stop.mp4"/>
+<value key="The boy greets the boy in the park" val="anim/ActiveVideo/meeting-greeting/Park/BoyGreetBoyPark.mp4"/>
+<value key="The man greets the man in the park" val="anim/ActiveVideo/meeting-greeting/Park/ManGreetManPark.mp4"/>
+<value key="The woman greets the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/WomanGreetWomanStreet.mp4"/>
+<value key="The boy greets the boy at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyGreetBoyBus_stop.mp4"/>
+<value key="The girl greets the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlGreetWomanBus_stop.mp4"/>
+<value key="The woman hugs the man in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHugWomanStreet.mp4"/>
+<value key="The boy hugs the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManHugBoyTrain.mp4"/>
+<value key="The boy says hello to the boy at the station" val="anim/ActiveVideo/meeting-greeting/Train/BoyHelloBoyTrain.mp4"/>
+<value key="The girl hugs the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/GirlHugWomanBus_stop.mp4"/>
+<value key="The woman hugs the girl at the station" val="anim/ActiveVideo/meeting-greeting/Train/GirlHugWomanTrain.mp4"/>
+<value key="The boy hugs the woman in the park" val="anim/ActiveVideo/meeting-greeting/Park/WomanHugBoyPark.mp4"/>
+<value key="The boy greets the woman at the bus stop" val="anim/ActiveVideo/meeting-greeting/BusStop/BoyGreetWomanBus_stop.mp4"/>
+<value key="The man greets the man at the station" val="anim/ActiveVideo/meeting-greeting/Train/ManGreetManTrain.mp4"/>
+<value key="The man says hello to the woman in the street" val="anim/ActiveVideo/meeting-greeting/Street/ManHelloWomanStreet.mp4"/>
+</action_specific>
+<sign_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="0" text="Handen hoppar över handen"/>
+<sentence ord="1" text="Handen hoppar över koppen"/>
+<sentence ord="2" text="Koppen hoppar över blomman"/>
+<sentence ord="3" text="Blomman hoppar över koppen"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="Katten hoppar över blomman"/>
+<sentence ord="1" text="Blomman hoppar över handen"/>
+<sentence ord="2" text="Koppen hoppar över handen"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="Katten hoppar över katten"/>
+<sentence ord="1" text="Koppen hoppar över blomman"/>
+<sentence ord="2" text="Blomman hoppar över handen"/>
+<sentence ord="3" text="Koppen hoppar över koppen"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="Koppen hoppar över katten"/>
+<sentence ord="1" text="Handen hoppar över koppen"/>
+<sentence ord="2" text="Blomman hoppar över blomman"/>
+<sentence ord="3" text="Katten hoppar över koppen"/>
+</test_entry>
+</test_entries>
+</omega_lesson>

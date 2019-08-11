@@ -273,5 +273,216 @@
       <string>&lt;&lt; Back</string>
       <string>&lt;&lt; Back</string>
     </void>
+<<<<<<< HEAD
+    <void method="put">
+      <string>Change picture</string>
+      <string>Change picture</string>
+    </void>
+    <void method="put">
+      <string>First Name</string>
+      <string>First Name</string>
+    </void>
+    <void method="put">
+      <string>Last Name</string>
+      <string>Last Name</string>
+    </void>
+    <void method="put">
+      <string>Date of Birth</string>
+      <string>Date of Birth</string>
+    </void>
+    <void method="put">
+      <string>Set</string>
+      <string>Set</string>
+    </void>
+    <void method="put">
+      <string>Delete Student</string>
+      <string>Delete Student</string>
+    </void>
+    <void method="put">
+      <string>Save</string>
+      <string>Save</string>
+    </void>
+    <void method="put">
+      <string>Cancel</string>
+      <string>Cancel</string>
+    </void>
+    <void method="put">
+      <string>Create profile</string>
+      <string>Create profile</string>
+    </void>
+    <void method="put">
+      <string>Replay/Scene</string>
+      <string>Replay/Scene</string>
+    </void>
+    <void method="put">
+      <string>Replay/Speech</string>
+      <string>Replay/Speech</string>
+    </void>
+    <void method="put">
+      <string></string>
+      <string></string>
+    </void>
+    <void method="put">
+      <string>Select level</string>
+      <string>Select level</string>
+    </void>
+    <void method="put">
+      <string>Choose task</string>
+      <string>Choose task</string>
+    </void>
+    <void method="put">
+      <string>Results &amp; Tests</string>
+      <string>Results &amp; Tests</string>
+    </void>
+    <void method="put">
+      <string>Teacher Tests</string>
+      <string>Teacher Tests</string>
+    </void>
+    <void method="put">
+      <string>Student settings</string>
+      <string>Student settings</string>
+    </void>
+    <void method="put">
+      <string>Feedback &amp; presentation</string>
+      <string>Feedback &amp; presentation</string>
+    </void>
+    <void method="put">
+      <string>Access</string>
+      <string>Access</string>
+    </void>
+    <void method="put">
+      <string>Audio Presentation</string>
+      <string>Audio Presentation</string>
+    </void>
+    <void method="put">
+      <string>Text-to-speech voice:</string>
+      <string>Text-to-speech voice:</string>
+    </void>
+    <void method="put">
+      <string>Speech rate</string>
+      <string>Speech rate</string>
+    </void>
+    <void method="put">
+      <string>Visual presentation</string>
+      <string>Visual presentation</string>
+    </void>
+    <void method="put">
+      <string>Random word order - Test</string>
+      <string>Random word order - Test</string>
+    </void>
+    <void method="put">
+      <string>Random word order - Create</string>
+      <string>Random word order - Create</string>
+    </void>
+    <void method="put">
+      <string>Test feedback</string>
+      <string>Test feedback</string>
+    </void>
+    <void method="put">
+      <string>Positive sound</string>
+      <string>Positive sound</string>
+    </void>
+    <void method="put">
+      <string>Teacher Test</string>
+      <string>Teacher Test</string>
+    </void>
+    <void method="put">
+      <string>POS_Header</string>
+      <string>POS</string>
+    </void>
+    <void method="put">
+      <string>to go</string>
+      <string>to go</string>
+    </void>
+    <void method="put">
+      <string>Result</string>
+      <string>Result</string>
+    </void>
+    <void method="put">
+      <string>Your score</string>
+      <string>Your score</string>
+    </void>
+    <void method="put">
+      <string> </string>
+      <string> </string>
+    </void>
+    <void method="put">
+      <string>SwitchSettings</string>
+      <string>SwitchSettings</string>
+    </void>
+    <void method="put">
+      <string>Touch Mode:</string>
+      <string>Touch Mode:</string>
+    </void>
+    <void method="put">
+      <string>Options:</string>
+      <string>Options:</string>
+    </void>
+    <void method="put">
+      <string>Hold time:</string>
+      <string>Hold time:</string>
+    </void>
+    <void method="put">
+      <string>Off</string>
+      <string>Off</string>
+    </void>
+    <void method="put">
+      <string>Fast (0.5s)</string>
+      <string>Fast (0.5s)</string>
+    </void>
+    <void method="put">
+      <string>Medium (1.0s)</string>
+      <string>Medium (1.0s)</string>
+    </void>
+    <void method="put">
+      <string>Slow (2.5s)</string>
+      <string>Slow (2.5s)</string>
+    </void>
+    <void method="put">
+      <string>Connect Multiple taps:</string>
+      <string>Connect Multiple taps:</string>
+    </void>
+    <void method="put">
+      <string>Fast (0.1s)</string>
+      <string>Fast (0.1s)</string>
+    </void>
+    <void method="put">
+      <string>Medium (0.3s)</string>
+      <string>Medium (0.3s)</string>
+    </void>
+    <void method="put">
+      <string>Slow (1.0s)</string>
+      <string>Slow (1.0s)</string>
+    </void>
+    <void method="put">
+      <string>Delay Between Selections:</string>
+      <string>Delay Between Selections:</string>
+    </void>
+    <void method="put">
+      <string>Fast (1.0s)</string>
+      <string>Fast (1.0s)</string>
+    </void>
+    <void method="put">
+      <string>Medium (2.0s)</string>
+      <string>Medium (2.0s)</string>
+    </void>
+    <void method="put">
+      <string>Slow (3.0s)</string>
+      <string>Slow (3.0s)</string>
+    </void>
+    <void method="put">
+      <string>On</string>
+      <string>On</string>
+    </void>
+    <void method="put">
+      <string>Teacher mode passcode</string>
+      <string>Teacher mode passcode</string>
+    </void>
+    <void method="put">
+      <string>Enabled</string>
+      <string>Enabled</string>
+    </void>
+=======
+>>>>>>> 4e493fab437143796abc9bee99271c27c5cc9e3f
   </object>
 </java>
