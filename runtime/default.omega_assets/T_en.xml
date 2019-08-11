@@ -273,6 +273,7 @@
       <string>&lt;&lt; Back</string>
       <string>&lt;&lt; Back</string>
     </void>
+<<<<<<< HEAD
     <void method="put">
       <string>Change picture</string>
       <string>Change picture</string>
@@ -481,5 +482,7 @@
       <string>Enabled</string>
       <string>Enabled</string>
     </void>
+=======
+>>>>>>> 4e493fab437143796abc9bee99271c27c5cc9e3f
   </object>
 </java>

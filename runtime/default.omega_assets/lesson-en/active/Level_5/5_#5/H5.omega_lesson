@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
+<t-item Lid="" Tid="v" ord="1" type="action"/>
+<t-item Lid="" Tid="av" ord="2" type="passive"/>
+</target>
+<items>
+<item-entry Tid="s" ord="0" type="actor">
+<item Lid="boy" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/boy.wav" text="The boy" var-1="" var-2="" var-3=""/>
+<item Lid="girl" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/girl.wav" text="The girl" var-1="" var-2="" var-3=""/>
+<item Lid="ghost" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-en/ghost.wav" text="The ghost" var-1="" var-2="" var-3=""/>
+<item Lid="gorilla" action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/words-en/gorilla.wav" text="The gorilla" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="v" ord="1" type="action">
+<item action-fname="anim/ActiveAnim/OutOf{+1}" action-type="omega_anim" dummysound="audio/words-en/dummy/jumpsover.wav" dummytext="jumps over" ord="0" sound="audio/words-en/jumpsoutof.wav" text="jumps out of" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/OutBehind{+1}" action-type="omega_anim" dummysound="audio/words-en/dummy/looksunder.wav" dummytext="looks under" ord="1" sound="audio/words-en/looksoutof.wav" text="looks out of" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+<item-entry Tid="av" ord="2" type="passive">
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/thehighgrass.wav" text="the high grass" var-1="Grass" var-2="" var-3=""/>
+<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/thelongcurtain.wav" text="the long curtain" var-1="Curtain" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-en/theredbarn.wav" text="the red barn" var-1="Barn" var-2="" var-3=""/>
+<item action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/words-en/thehugebush.wav" text="the huge bush" var-1="Bush" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<test_entries>
+<test_entry ord="0" type="pre">
+<sentence ord="1" text="The gorilla{s} looks out of{v} the huge bush{av}"/>
+<sentence ord="2" text="The boy{s} jumps out of{v} the red barn{av}"/>
+<sentence ord="3" text="The boy{s} looks out of{v} the huge bush{av}"/>
+<sentence ord="4" text="The girl{s} looks out of{v} the huge bush{av}"/>
+<sentence ord="5" text="The gorilla{s} jumps out of{v} the long curtain{av}"/>
+<sentence ord="6" text="The ghost{s} looks out of{v} the high grass{av}"/>
+<sentence ord="7" text="The girl{s} looks out of{v} the high grass{av}"/>
+<sentence ord="8" text="The gorilla{s} looks out of{v} the high grass{av}"/>
+<sentence ord="9" text="The girl{s} jumps out of{v} the long curtain{av}"/>
+</test_entry>
+<test_entry ord="1" type="pre">
+<sentence ord="0" text="The gorilla{s} jumps out of{v} the high grass{av}"/>
+<sentence ord="1" text="The gorilla{s} looks out of{v} the long curtain{av}"/>
+<sentence ord="2" text="The girl{s} looks out of{v} the long curtain{av}"/>
+<sentence ord="3" text="The boy{s} jumps out of{v} the huge bush{av}"/>
+<sentence ord="4" text="The boy{s} jumps out of{v} the high grass{av}"/>
+<sentence ord="5" text="The girl{s} jumps out of{v} the huge bush{av}"/>
+<sentence ord="6" text="The ghost{s} looks out of{v} the red barn{av}"/>
+<sentence ord="7" text="The gorilla{s} jumps out of{v} the red barn{av}"/>
+<sentence ord="8" text="The girl{s} looks out of{v} the red barn{av}"/>
+<sentence ord="9" text="The ghost{s} jumps out of{v} the red barn{av}"/>
+</test_entry>
+<test_entry ord="0" type="post">
+<sentence ord="0" text="The boy{s} jumps out of{v} the high grass{av}"/>
+<sentence ord="1" text="The gorilla{s} looks out of{v} the huge bush{av}"/>
+<sentence ord="2" text="The girl{s} jumps out of{v} the huge bush{av}"/>
+<sentence ord="3" text="The boy{s} looks out of{v} the high grass{av}"/>
+<sentence ord="4" text="The gorilla{s} jumps out of{v} the huge bush{av}"/>
+<sentence ord="5" text="The boy{s} looks out of{v} the huge bush{av}"/>
+<sentence ord="6" text="The gorilla{s} jumps out of{v} the high grass{av}"/>
+<sentence ord="7" text="The girl{s} jumps out of{v} the red barn{av}"/>
+<sentence ord="8" text="The girl{s} looks out of{v} the red barn{av}"/>
+<sentence ord="9" text="The girl{s} looks out of{v} the huge bush{av}"/>
+<sentence ord="10" text="The boy{s} jumps out of{v} the long curtain{av}"/>
+<sentence ord="11" text="The gorilla{s} looks out of{v} the red barn{av}"/>
+<sentence ord="12" text="The girl{s} looks out of{v} the high grass{av}"/>
+<sentence ord="13" text="The boy{s} looks out of{v} the long curtain{av}"/>
+<sentence ord="14" text="The gorilla{s} jumps out of{v} the red barn{av}"/>
+<sentence ord="15" text="The girl{s} jumps out of{v} the high grass{av}"/>
+<sentence ord="16" text="The ghost{s} looks out of{v} the huge bush{av}"/>
+<sentence ord="17" text="The ghost{s} looks out of{v} the long curtain{av}"/>
+<sentence ord="18" text="The ghost{s} jumps out of{v} the red barn{av}"/>
+<sentence ord="19" text="The ghost{s} jumps out of{v} the long curtain{av}"/>
+<sentence ord="20" text="The boy{s} jumps out of{v} the red barn{av}"/>
+<sentence ord="21" text="The gorilla{s} looks out of{v} the long curtain{av}"/>
+<sentence ord="22" text="The girl{s} looks out of{v} the long curtain{av}"/>
+<sentence ord="23" text="The boy{s} looks out of{v} the red barn{av}"/>
+<sentence ord="24" text="The gorilla{s} jumps out of{v} the long curtain{av}"/>
+<sentence ord="25" text="The girl{s} jumps out of{v} the long curtain{av}"/>
+<sentence ord="26" text="The ghost{s} looks out of{v} the red barn{av}"/>
+<sentence ord="27" text="The ghost{s} looks out of{v} the high grass{av}"/>
+<sentence ord="28" text="The ghost{s} jumps out of{v} the high grass{av}"/>
+<sentence ord="29" text="The ghost{s} jumps out of{v} the huge bush{av}"/>
+<sentence ord="30" text="The boy{s} jumps out of{v} the huge bush{av}"/>
+<sentence ord="31" text="The gorilla{s} looks out of{v} the high grass{av}"/>
+</test_entry>
+<test_entry ord="1" type="post">
+<sentence ord="0" text="The ghost{s} looks out of{v} the huge bush{av}"/>
+<sentence ord="1" text="The boy{s} looks out of{v} the high grass{av}"/>
+<sentence ord="2" text="The boy{s} jumps out of{v} the high grass{av}"/>
+<sentence ord="3" text="The gorilla{s} looks out of{v} the huge bush{av}"/>
+<sentence ord="4" text="The girl{s} jumps out of{v} the high grass{av}"/>
+<sentence ord="5" text="The boy{s} jumps out of{v} the huge bush{av}"/>
+<sentence ord="6" text="The ghost{s} looks out of{v} the red barn{av}"/>
+<sentence ord="7" text="The girl{s} jumps out of{v} the huge bush{av}"/>
+<sentence ord="8" text="The ghost{s} jumps out of{v} the huge bush{av}"/>
+<sentence ord="9" text="The ghost{s} jumps out of{v} the high grass{av}"/>
+<sentence ord="10" text="The gorilla{s} jumps out of{v} the high grass{av}"/>
+<sentence ord="11" text="The boy{s} looks out of{v} the long curtain{av}"/>
+<sentence ord="12" text="The boy{s} jumps out of{v} the long curtain{av}"/>
+<sentence ord="13" text="The gorilla{s} looks out of{v} the red barn{av}"/>
+<sentence ord="14" text="The girl{s} jumps out of{v} the long curtain{av}"/>
+<sentence ord="15" text="The gorilla{s} looks out of{v} the high grass{av}"/>
+<sentence ord="16" text="The ghost{s} looks out of{v} the long curtain{av}"/>
+<sentence ord="17" text="The girl{s} looks out of{v} the high grass{av}"/>
+<sentence ord="18" text="The ghost{s} jumps out of{v} the red barn{av}"/>
+<sentence ord="19" text="The girl{s} looks out of{v} the huge bush{av}"/>
+<sentence ord="20" text="The gorilla{s} jumps out of{v} the long curtain{av}"/>
+<sentence ord="21" text="The boy{s} looks out of{v} the red barn{av}"/>
+<sentence ord="22" text="The boy{s} jumps out of{v} the red barn{av}"/>
+<sentence ord="23" text="The gorilla{s} looks out of{v} the long curtain{av}"/>
+<sentence ord="24" text="The girl{s} jumps out of{v} the red barn{av}"/>
+<sentence ord="25" text="The gorilla{s} jumps out of{v} the huge bush{av}"/>
+<sentence ord="26" text="The ghost{s} looks out of{v} the high grass{av}"/>
+<sentence ord="27" text="The girl{s} looks out of{v} the long curtain{av}"/>
+<sentence ord="28" text="The ghost{s} jumps out of{v} the long curtain{av}"/>
+<sentence ord="30" text="The gorilla{s} jumps out of{v} the red barn{av}"/>
+<sentence ord="31" text="The boy{s} looks out of{v} the huge bush{av}"/>
+</test_entry>
+</test_entries>
+</omega_lesson>
