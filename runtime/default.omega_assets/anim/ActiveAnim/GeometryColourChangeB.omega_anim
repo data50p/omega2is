@@ -10,26 +10,26 @@
 <TPath nid="0">
 <q ord="0" p1="408.17645263671875,242.8758544921875" p2="454.18951416015625,237.12420654296875" pc="432.62091064453125,278.82354736328125"/>
 <q ord="1" p1="454.18951416015625,237.12420654296875" p2="406.7385559082031,229.9346466064453" pc="432.62091064453125,193.98692321777344"/>
-<info flatness="0.3333333333333333" size="32"/>
-<help len="0.0;5.179313315611558;9.86688612704362;14.09280263757626;17.89811220393444;21.33895083542403;24.49098813380656;27.45211744931231;30.33971395267109;33.27997233580369;36.392688866948575;39.779408237852095;43.51942308295005;47.671836000298505;52.279908708175526;62.97642615410889;68.73830446997479;73.98078540131739;78.7277553485143;83.01139793621292;86.87549119778866;90.37957344919482;93.6031926715192;96.64795902247513;99.63379829288854;102.68758658630821;105.92822888510734;109.45578538386964;113.34825246409125;117.66388658490278;122.44550226731302;127.72458854992718" seg="408.17645263671875,242.8758544921875;411.2207760810852,247.06600737571716;414.24263191223145,250.64954280853271;417.24202013015747,253.62646079063416;420.2189407348633,255.99676132202148;423.1733937263489,257.7604444026947;426.10537910461426,258.9175100326538;429.0148968696594,259.4679582118988;431.9019470214844,259.4117889404297;434.7665295600891,258.74900221824646;437.60864448547363,257.4795980453491;440.42829179763794,255.60357642173767;443.22547149658203,253.1209373474121;446.0001835823059,250.03168082237244;448.75242805480957,246.33580684661865;454.18951416015625,237.12420654296875;451.47658812999725,232.04097193479538;448.7299609184265,227.5755889415741;445.94963252544403,223.7280575633049;443.1356029510498,220.4983777999878;440.28787219524384,217.88654965162277;437.4064402580261,215.89257311820984;434.49130713939667,214.516448199749;431.54247283935547,213.75817489624023;428.5599373579025,213.61775320768356;425.54370069503784,214.09518313407898;422.4937628507614,215.19046467542648;419.41012382507324,216.90359783172607;416.2927836179733,219.23458260297775;413.14174222946167,222.18341898918152;409.95699965953827,225.75010699033737;406.7385559082031,229.9346466064453"/>
+<help len="0.0;9.86046454495638;17.87975459922329;24.450974403151395;30.268577969359743;36.29350598557153;43.40312403104048;62.79656694246037;82.7617149361453;90.11268371106348;96.35301780926511;102.36124897923621;109.10720764600292;117.30288451145559;127.35685510219164" seg="408.17645263671875,242.8758544921875;414.24263191223145,250.64954280853271;420.2189407348633,255.99676132202148;426.10537910461426,258.9175100326538;431.9019470214844,259.4117889404297;437.60864448547363,257.4795980453491;443.22547149658203,253.1209373474121;454.18951416015625,237.12420654296875;443.1356029510498,220.4983777999878;437.4064402580261,215.89257311820984;431.54247283935547,213.75817489624023;425.54370069503784,214.09518313407898;419.41012382507324,216.90359783172607;413.14174222946167,222.18341898918152;406.7385559082031,229.9346466064453"/>
+<info flatness="1.5" size="15"/>
 </TPath>
 <TPath nid="1">
 <q ord="0" p1="266.2091369628906,424.3137512207031" p2="312.2221984863281,418.5621032714844" pc="290.653564453125,460.2614440917969"/>
 <q ord="1" p1="312.2221984863281,418.5621032714844" p2="264.771240234375,411.37255859375" pc="290.6535949707031,375.4248352050781"/>
-<info flatness="0.3333333333333333" size="32"/>
-<help len="0.0;5.179311213528869;9.866882026898601;14.092796676010902;17.898104563720437;21.338941762194548;24.49097795170732;27.452106564424014;30.339702829409323;33.27996144482413;36.39267862904456;39.77939899243709;43.519415085738075;47.67182943692455;52.27990371119408;62.976424550426465;68.73830123617884;73.98078069520916;78.72774933800987;83.01139080222602;86.87548313717492;90.37956467631042;93.60318341518911;96.64794951379665;99.63378874216278;102.68757715672439;105.9282196771224;109.45577643640394;113.34824376648321;117.6638780909315;122.44549390672208;127.72458023658268" seg="266.2091369628906,424.3137512207031;269.2534568309784,428.5039041042328;272.2753095626831,432.08743953704834;275.27469515800476,435.0643575191498;278.25161361694336,437.4346580505371;281.2060649394989,439.1983411312103;284.1380491256714,440.35540676116943;287.0475661754608,440.90585494041443;289.9346160888672,440.8496856689453;292.7991988658905,440.1868989467621;295.64131450653076,438.91749477386475;298.46096301078796,437.0414731502533;301.2581443786621,434.55883407592773;304.0328586101532,431.46957755088806;306.78510570526123,427.7737035751343;312.2221984863281,418.5621032714844;309.5092724561691,413.478870511055;306.7626452445984,409.0134892463684;303.9823168516159,405.1659594774246;301.1682872772217,401.93628120422363;298.3205565214157,399.32445442676544;295.439124584198,397.33047914505005;292.52399146556854,395.95435535907745;289.57515716552734,395.19608306884766;286.5926216840744,395.05566227436066;283.5763850212097,395.53309297561646;280.5264471769333,396.62837517261505;277.4428081512451,398.34150886535645;274.3254679441452,400.67249405384064;271.17442655563354,403.6213307380676;267.98968398571014,407.1880189180374;264.771240234375,411.37255859375"/>
+<help len="0.0;9.86046043804016;17.87974693871867;24.45096417976881;30.268566795751198;36.2934957152652;43.40311602103455;62.79656540235027;82.76170783687908;90.11267496858508;96.35300833286452;102.36123959644796;109.10719875949577;117.3028760857307;127.35684686027838" seg="266.2091369628906,424.3137512207031;272.2753095626831,432.08743953704834;278.25161361694336,437.4346580505371;284.1380491256714,440.35540676116943;289.9346160888672,440.8496856689453;295.64131450653076,438.91749477386475;301.2581443786621,434.55883407592773;312.2221984863281,418.5621032714844;301.1682872772217,401.93628120422363;295.439124584198,397.33047914505005;289.57515716552734,395.19608306884766;283.5763850212097,395.53309297561646;277.4428081512451,398.34150886535645;271.17442655563354,403.6213307380676;264.771240234375,411.37255859375"/>
+<info flatness="1.5" size="15"/>
 </TPath>
 <TPath nid="2">
 <q ord="0" p1="140.49671936035156,198.07191467285156" p2="186.50979614257812,192.3202667236328" pc="164.941162109375,234.01962280273438"/>
 <q ord="1" p1="186.50979614257812,192.3202667236328" p2="139.05882263183594,185.13072204589844" pc="164.94117736816406,149.18301391601562"/>
-<info flatness="0.3333333333333333" size="32"/>
-<help len="0.0;5.179313746240365;9.866886858638113;14.092803573723643;17.89811329545318;21.33895209877199;24.49098967139777;27.452119463343724;30.33971673909743;33.27997625244241;36.39269429000639;39.779415529438666;43.519432577869374;47.67184800604706;52.27992351003664;62.976447344947594;68.73832332316441;73.98080236780092;78.72777089035249;83.0114125245557;86.87550530579223;90.37958753503156;93.60320714535763;96.64797419563064;99.63381432268346;102.68760344666549;105.92824638267749;109.4558032056414;113.34827022737653;117.66390387342356;122.44551865234837;127.72460360115461" seg="140.49671936035156,198.07191467285156;143.54104107618332,202.26206934452057;146.56289553642273,205.84560632705688;149.5622827410698,208.8225256204605;152.5392026901245,211.19282722473145;155.49365538358688,212.9565111398697;158.4256408214569,214.11357736587524;161.3351590037346,214.6640259027481;164.22220993041992,214.60785675048828;167.0867936015129,213.94506990909576;169.92891001701355,212.67566537857056;172.74855917692184,210.79964315891266;175.5457410812378,208.31700325012207;178.3204557299614,205.2277456521988;181.07270312309265,201.53187036514282;186.50979614257812,192.3202667236328;183.79686826467514,187.23703575134277;181.0502393245697,182.77165603637695;178.2699093222618,178.92412757873535;175.45587825775146,175.69445037841797;172.60814613103867,173.0826244354248;169.7267129421234,171.08864974975586;166.8115786910057,169.71252632141113;163.86274337768555,168.95425415039062;160.88020700216293,168.81383323669434;157.86396956443787,169.29126358032227;154.81403106451035,170.3865451812744;151.73039150238037,172.09967803955078;148.61305087804794,174.43066215515137;145.46200919151306,177.37949752807617;142.27726644277573,180.9461841583252;139.05882263183594,185.13072204589844"/>
+<help len="0.0;9.860465269640926;17.87975566991417;24.4509758960971;30.26858069060125;36.29351134381553;43.403133468373596;62.796588108690216;82.76172947431304;90.11269775371541;96.35303297125327;102.36126587439284;109.10722552578098;117.30290186313147;127.35687021616097" seg="140.49671936035156,198.07191467285156;146.56289553642273,205.84560632705688;152.5392026901245,211.19282722473145;158.4256408214569,214.11357736587524;164.22220993041992,214.60785675048828;169.92891001701355,212.67566537857056;175.5457410812378,208.31700325012207;186.50979614257812,192.3202667236328;175.45587825775146,175.69445037841797;169.7267129421234,171.08864974975586;163.86274337768555,168.95425415039062;157.86396956443787,169.29126358032227;151.73039150238037,172.09967803955078;145.46200919151306,177.37949752807617;139.05882263183594,185.13072204589844"/>
+<info flatness="1.5" size="15"/>
 </TPath>
 <TPath nid="3">
 <q ord="0" p1="587.973876953125,457.058837890625" p2="633.9869384765625,451.30718994140625" pc="612.4182739257812,493.00653076171875"/>
 <q ord="1" p1="633.9869384765625,451.30718994140625" p2="586.5359497070312,444.1176452636719" pc="612.4182739257812,408.169921875"/>
-<info flatness="0.3333333333333333" size="32"/>
-<help len="0.0;5.179309111447795;9.866877926756395;14.092790714449166;17.89809692351053;21.338932688969372;24.490967769612446;27.452095679540097;30.33969170615194;33.27995055384895;36.39266839114495;39.77938974702661;43.51940708853096;47.67182287355606;52.279898714219065;62.97642294675356;68.73830305635319;73.9807859504579;78.72775801451964;83.01140284613281;86.8754984316808;90.37958300964378;93.60320444356032;96.64797273578154;99.63381351215372;102.68760275091913;105.92824538351122;109.4558016217545;113.34826790165805;117.66390074642423;122.44551473606043;127.72459895828744" seg="587.973876953125,457.058837890625;591.0181932449341,461.24899077415466;594.0400428771973,464.8325262069702;597.0394258499146,467.80944418907166;600.0163421630859,470.179744720459;602.9707918167114,471.9434278011322;605.902774810791,473.1004934310913;608.8122911453247,473.6509416103363;611.6993408203125,473.5947723388672;614.5639238357544,472.93198561668396;617.4060401916504,471.6625814437866;620.2256898880005,469.78655982017517;623.0228729248047,467.3039207458496;625.797589302063,464.21466422080994;628.5498390197754,460.51879024505615;633.9869384765625,451.30718994140625;631.2740051746368,446.22395718097687;628.5273714065552,441.7585759162903;625.7470371723175,437.9110461473465;622.9330024719238,434.6813678741455;620.0852673053741,432.0695410966873;617.2038316726685,430.0755658149719;614.2886955738068,428.69944202899933;611.3398590087891,427.94116973876953;608.3573219776154,427.80074894428253;605.3410844802856,428.27817964553833;602.2911465167999,429.3734618425369;599.2075080871582,431.0865955352783;596.0901691913605,433.4175807237625;592.9391298294067,436.3664174079895;589.754390001297,439.9331055879593;586.5359497070312,444.1176452636719"/>
+<help len="0.0;9.86045633112675;17.879739278218125;24.450953956390542;30.26855562214697;36.29348544496321;43.40310801103339;62.79656386224953;82.76172002509637;90.11269347460141;96.3530317677417;102.36126541175736;109.10722414125418;117.30289891456056;127.35686574115647" seg="587.973876953125,457.058837890625;594.0400428771973,464.8325262069702;600.0163421630859,470.179744720459;605.902774810791,473.1004934310913;611.6993408203125,473.5947723388672;617.4060401916504,471.6625814437866;623.0228729248047,467.3039207458496;633.9869384765625,451.30718994140625;622.9330024719238,434.6813678741455;617.2038316726685,430.0755658149719;611.3398590087891,427.94116973876953;605.3410844802856,428.27817964553833;599.2075080871582,431.0865955352783;592.9391298294067,436.3664174079895;586.5359497070312,444.1176452636719"/>
+<info flatness="1.5" size="15"/>
 </TPath>
 </AllPath>
 <lesson verb="jagar"/>
@@ -38,6 +38,10 @@
 <Actor hotspot_begin="0.5 0.66" hotspot_end="0.5 0.66" hotspot_rotate="0.5 0.66" lesson_id="triangle" name="actor/Things/triangle.png" nid="1" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" lesson_id="circle" name="actor/Things/circle.png" nid="2" prim_mirror="0" prim_scale="1.0" var1="red" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" lesson_id="rectangle" name="actor/Things/rectangle.png" nid="3" prim_mirror="0" prim_scale="1.0" var1="red" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_4.gif" nid="4" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_5.gif" nid="5" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_6.gif" nid="6" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_7.gif" nid="7" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_8.gif" nid="8" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_9.gif" nid="9" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_10.gif" nid="10" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
@@ -59,6 +63,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -73,11 +78,12 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="t" when="1390">
 <T_Event>
-<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="audio/drrr_psh.mp3" cmd="PlaySound" isOn="true"/>
 <TriggerEvent arg="1440.0" cmd="Rotate" isOn="true"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
@@ -87,9 +93,10 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="2020">
+<TimeMarker duration="0" type="t" when="2200">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
 <TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
@@ -101,9 +108,10 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="2300">
+<TimeMarker duration="0" type="t" when="2670">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
 <TriggerEvent arg="1440.0 0.0" cmd="Rotate" isOn="true"/>
@@ -115,6 +123,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="]" when="3810">
@@ -129,6 +138,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4840">
@@ -143,6 +153,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>
@@ -159,6 +170,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -173,11 +185,12 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="t" when="1390">
 <T_Event>
-<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="audio/drrr_psh.mp3" cmd="PlaySound" isOn="true"/>
 <TriggerEvent arg="1440.0" cmd="Rotate" isOn="true"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
@@ -187,9 +200,10 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="2020">
+<TimeMarker duration="0" type="t" when="2200">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
 <TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
@@ -201,9 +215,10 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="2300">
+<TimeMarker duration="0" type="t" when="2680">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
 <TriggerEvent arg="1440.0 0.0" cmd="Rotate" isOn="true"/>
@@ -215,6 +230,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="]" when="3810">
@@ -229,6 +245,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4840">
@@ -243,6 +260,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>
@@ -259,6 +277,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -273,11 +292,12 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="t" when="1380">
 <T_Event>
-<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="audio/drrr_psh.mp3" cmd="PlaySound" isOn="true"/>
 <TriggerEvent arg="1440.0" cmd="Rotate" isOn="true"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
@@ -287,9 +307,10 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="2010">
+<TimeMarker duration="0" type="t" when="2200">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
 <TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
@@ -301,9 +322,10 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="2290">
+<TimeMarker duration="0" type="t" when="2680">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
 <TriggerEvent arg="1440.0 0.0" cmd="Rotate" isOn="true"/>
@@ -315,6 +337,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="]" when="3810">
@@ -329,6 +352,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4840">
@@ -343,6 +367,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>
@@ -359,6 +384,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -373,11 +399,12 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="t" when="1380">
 <T_Event>
-<TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
+<TriggerEvent arg="audio/drrr_psh.mp3" cmd="PlaySound" isOn="true"/>
 <TriggerEvent arg="1440.0" cmd="Rotate" isOn="true"/>
 <TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
@@ -387,9 +414,10 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="2020">
+<TimeMarker duration="0" type="t" when="2200">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
 <TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
@@ -401,9 +429,10 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="2280">
+<TimeMarker duration="0" type="t" when="2680">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
 <TriggerEvent arg="1440.0 0.0" cmd="Rotate" isOn="true"/>
@@ -415,6 +444,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="]" when="3810">
@@ -429,6 +459,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="4840">
@@ -443,6 +474,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>

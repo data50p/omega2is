@@ -5,15 +5,15 @@
 <lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
 <lesson name="abc" ord="0">
 <target>
-<t-item Lid="A" Tid="s" ord="0" type="passive" interchangeable-with="2"/>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
 <t-item Lid="" Tid="c" ord="1" type="passive"/>
-<t-item Lid="C" Tid="s2" ord="2" type="passive" interchangeable-with="0"/>
+<t-item Lid="C" Tid="s2" ord="2" type="passive"/>
 <t-item Lid="" Tid="v" ord="3" type="action"/>
 <t-item Lid="{-1}" Tid="o" ord="4" type="passive"/>
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="woman" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/actor1.wav" text="The woman" tts="" var-1="" var-2="y" var-3="" var-4="Actor" var-5=""/>
+<item Lid="woman{++1}" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/actor1.wav" text="The woman" tts="" var-1="" var-2="y" var-3="" var-4="Actor" var-5=""/>
 <item Lid="man" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/actor1.wav" text="The man" tts="" var-1="" var-2="y" var-3="" var-4="Actor" var-5=""/>
 <item Lid="girl" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/girl.mp3" text="The girl" tts="" var-1="" var-2="y" var-3="" var-4="" var-5="Child"/>
 <item Lid="boy" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/boy.mp3" text="The boy" tts="" var-1="" var-2="y" var-3="" var-4="" var-5="Child"/>
@@ -33,8 +33,8 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="s2" ord="2" type="passive">
-<item Lid="robot{+3}" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/actor2.wav" text="the robot" tts="" var-1="" var-2="y" var-3=",something2" var-4="{--5}Actor" var-5="2"/>
-<item Lid="boy2" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/actor2.wav" text="the boy" tts="" var-1="" var-2="y" var-3=",something2" var-4="{--4}Child" var-5="{--3}"/>
+<item Lid="robot{+3}" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/actor2.wav" text="the robot" tts="" var-1="2" var-2="y" var-3=",something2" var-4="{--4}Actor" var-5="2"/>
+<item Lid="boy2" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/actor2.wav" text="the boy" tts="" var-1="" var-2="y" var-3=",something2" var-4="{--4}Child" var-5="{--3}"/>
 <item Lid="girl2" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/actor2.wav" text="the girl" tts="" var-1="" var-2="y" var-3=",something2" var-4="{--4}Child" var-5="{--3}"/>
 <item Lid="man2" action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/actor2.wav" text="the man" tts="" var-1="" var-2="y" var-3=",something2" var-4="{--5}Actor" var-5="{--3}"/>
 <item Lid="woman2" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-en/actor2.wav" text="the woman" tts="" var-1="" var-2="y" var-3=",something2" var-4="{--5}Actor" var-5="{--3}"/>

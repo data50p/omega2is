@@ -36,12 +36,12 @@
 </AllPath>
 <lesson verb="jagar"/>
 <AllActors>
-<Actor hotspot_begin="0.522 0.79" hotspot_end="0.522 0.79" hotspot_rotate="0.5 0.5" lesson_id="boy" name="actor/DA/boy/boy.png" nid="0" prim_mirror="0" prim_scale="0.7" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.522 0.79" hotspot_end="0.522 0.79" hotspot_rotate="0.5 0.5" lesson_id="boy" name="actor/DA/boy/boy.png" nid="0" prim_mirror="0" prim_scale="0.7" var1="strain-boy" var2="" var3=""/>
 <Actor hotspot_begin="0.4966197183098592 0.92" hotspot_end="0.5023943661971831 0.92" hotspot_rotate="0.5023943661971831 0.5" lesson_id="something" name="actor/Things/something2.png" nid="1" prim_mirror="0" prim_scale="0.45" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.504 0.83" hotspot_end="0.504 0.83" hotspot_rotate="0.5 0.5" lesson_id="boy2" name="actor/DA/Boy3Walk/boy3.png" nid="2" prim_mirror="1" prim_scale="0.5" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.504 0.83" hotspot_end="0.504 0.83" hotspot_rotate="0.5 0.5" lesson_id="boy2" name="actor/DA/Boy3Walk/boy3.png" nid="2" prim_mirror="1" prim_scale="0.5" var1="strain-boy2" var2="" var3=""/>
 <Actor hotspot_begin="0.4966197183098592 0.92" hotspot_end="0.5023943661971831 0.92" hotspot_rotate="0.5 0.5" lesson_id="something2" name="actor/Things/something2.png" nid="3" prim_mirror="0" prim_scale="0.4" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.477 0.96" hotspot_end="0.477 0.96" hotspot_rotate="0.5 0.5" lesson_id="girl" name="actor/DA/girl/girl.png" nid="4" prim_mirror="0" prim_scale="0.75" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.522 0.95" hotspot_end="0.522 0.95" hotspot_rotate="0.5 0.5" lesson_id="girl2" name="actor/DA/Girl2Walk/girl2.png" nid="5" prim_mirror="1" prim_scale="0.55" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.477 0.96" hotspot_end="0.477 0.96" hotspot_rotate="0.5 0.5" lesson_id="girl" name="actor/DA/girl/girl.png" nid="4" prim_mirror="0" prim_scale="0.75" var1="strain-girl" var2="" var3=""/>
+<Actor hotspot_begin="0.522 0.95" hotspot_end="0.522 0.95" hotspot_rotate="0.5 0.5" lesson_id="girl2" name="actor/DA/Girl2Walk/girl2.png" nid="5" prim_mirror="1" prim_scale="0.55" var1="strain-girl2" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" lesson_id="invisible" name="actor/Invisible.png" nid="6" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" lesson_id="invisible2" name="actor/Invisible.png" nid="7" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_8.gif" nid="8" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
@@ -99,6 +99,21 @@
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
 <TriggerEvent arg="" cmd="ResetSequence" isOn="true"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="3240">
+<T_Event>
+<TriggerEvent arg="audio/${A:1}.mp3" cmd="PlaySound" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="t" when="4570">
@@ -256,6 +271,21 @@
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
 <TriggerEvent arg="" cmd="ResetSequence" isOn="true"/>
+</T_Event>
+</TimeMarker>
+<TimeMarker duration="0" type="t" when="3420">
+<T_Event>
+<TriggerEvent arg="audio/${C:1}.mp3" cmd="PlaySound" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
+<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
+<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
+<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
+<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
+<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
+<TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="t" when="4300">

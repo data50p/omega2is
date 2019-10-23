@@ -13,7 +13,7 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="woman" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/actor1.wav" text="Kvinnan" tts="" var-1="" var-2="y" var-3="" var-4="Actor" var-5=""/>
+<item Lid="woman{++1}" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/actor1.wav" text="Kvinnan" tts="" var-1="" var-2="y" var-3="2" var-4="Actor" var-5=""/>
 <item Lid="man" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/actor1.wav" text="Mannen" tts="" var-1="" var-2="y" var-3="" var-4="Actor" var-5=""/>
 <item Lid="girl" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/girl.mp3" text="Flickan" tts="" var-1="" var-2="y" var-3="" var-4="" var-5="Child"/>
 <item Lid="boy" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/boy.mp3" text="Pojken" tts="" var-1="" var-2="y" var-3="" var-4="" var-5="Child"/>
@@ -33,7 +33,7 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="s2" ord="2" type="passive">
-<item Lid="robot{+3}" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/actor2.wav" text="roboten" tts="" var-1="" var-2="y" var-3=",something2" var-4="{--5}Actor" var-5="2"/>
+<item Lid="robot{+3}" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/actor2.wav" text="roboten" tts="" var-1="2" var-2="y" var-3=",something2" var-4="{--5}Actor" var-5="2"/>
 <item Lid="boy2" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/actor2.wav" text="pojken" tts="" var-1="" var-2="y" var-3=",something2" var-4="{--4}Child" var-5="{--3}"/>
 <item Lid="girl2" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/actor2.wav" text="flickan" tts="" var-1="" var-2="y" var-3=",something2" var-4="{--4}Child" var-5="{--3}"/>
 <item Lid="man2" action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/actor2.wav" text="mannen" tts="" var-1="" var-2="y" var-3=",something2" var-4="{--5}Actor" var-5="{--3}"/>

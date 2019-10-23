@@ -29,7 +29,7 @@
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_11.gif" nid="11" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 </AllActors>
 <AllWings>
-<Wing layer="4" mirror="0" name="Wings/road_field_trees_wing.png" nid="0" position="-1.0 582.0" scale="1.0"/>
+<Wing layer="4" mirror="0" name="Wings/road_field_trees_wing.png" nid="0" position="-1.0 538.0" scale="1.0"/>
 </AllWings>
 </AnimCanvas>
 <MTL>
