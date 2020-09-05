@@ -10,22 +10,22 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="dog" action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/hand.wav" dummytext="Handen" ord="0" sign="" sound="audio/words-sv/dog.wav" text="Hunden" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="banana" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/pineapple.wav" dummytext="Ananasen" ord="1" sign="" sound="audio/words-sv/banana.wav" text="Bananen" tts="bann-a-nen" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="mouse" action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/mouse.wav" dummytext="Måsen" ord="2" sign="" sound="audio/words-sv/mouse.wav" text="Musen" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="ball" action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/car.wav" dummytext="Bilen" ord="3" sign="" sound="audio/words-sv/ball.wav" text="Bollen" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
-<item Lid="frog" action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/dummy/crops.wav" dummytext="Grödan" ord="4" sign="" sound="audio/words-sv/frog.wav" text="Grodan" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
-<item Lid="cat" action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/hat.wav" dummytext="Hatten" ord="5" sign="" sound="audio/words-sv/cat.wav" text="Katten" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
-<item Lid="apple" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/astronomer.mp3" dummytext="Astronomen" ord="6" sign="" sound="audio/words-sv/apple.mp3" text="Äpplet" tts="äpp-lett" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="dog" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/hand.wav" dummytext="Handen" ord="0" sign="" sound="audio/words-sv/dog.wav" text="Hunden" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="banana" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/pineapple.wav" dummytext="Ananasen" ord="1" sign="" sound="audio/words-sv/banana.wav" text="Bananen" tts="bann-a-nen" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="mouse" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/mouse.wav" dummytext="Måsen" ord="2" sign="" sound="audio/words-sv/mouse.wav" text="Musen" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="ball" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/car.wav" dummytext="Bilen" ord="3" sign="" sound="audio/words-sv/ball.wav" text="Bollen" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
+<item Lid="frog" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/crops.wav" dummytext="Grödan" ord="4" sign="" sound="audio/words-sv/frog.wav" text="Grodan" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
+<item Lid="cat" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/hat.wav" dummytext="Hatten" ord="5" sign="" sound="audio/words-sv/cat.wav" text="Katten" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
+<item Lid="apple" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/astronomer.mp3" dummytext="Apelsinet" ord="6" sign="" sound="audio/words-sv/apple.mp3" text="Äpplet" tts="äpp-lett" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/RollingInMeadow" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/rolls.wav" text="rullar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/BouncingInMat" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/bounces.wav" text="studsar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/GrowingInMeadow" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/grows.wav" text="växer" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/FlyPlane" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/flies.wav" text="flyger" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/SleepingInGrassByTree" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-sv/snores.wav" text="snarkar" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/SingingInRoomByWindow" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-sv/sings.wav" text="sjunger" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/RollingInMeadow" action-type="omega_anim" dummysign="" dummysound="" dummytext="rattar" ord="0" sign="" sound="audio/words-sv/rolls.wav" text="rullar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/BouncingInMat" action-type="omega_anim" dummysign="" dummysound="" dummytext="suddar" ord="1" sign="" sound="audio/words-sv/bounces.wav" text="studsar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/GrowingInMeadow" action-type="omega_anim" dummysign="" dummysound="" dummytext="väntar" ord="2" sign="" sound="audio/words-sv/grows.wav" text="växer" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/FlyPlane" action-type="omega_anim" dummysign="" dummysound="" dummytext="smyger" ord="3" sign="" sound="audio/words-sv/flies.wav" text="flyger" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/SleepingInGrassByTree" action-type="omega_anim" dummysign="" dummysound="" dummytext="sparkar" ord="4" sign="" sound="audio/words-sv/snores.wav" text="snarkar" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/SingingInRoomByWindow" action-type="omega_anim" dummysign="" dummysound="" dummytext="gungar" ord="5" sign="" sound="audio/words-sv/sings.wav" text="sjunger" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
@@ -34,105 +34,5 @@
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="Hunden{s} rullar{v}"/>
-<sentence ord="1" text="Bananen{s} studsar{v}"/>
-<sentence ord="2" text="Musen{s} flyger{v}"/>
-<sentence ord="3" text="Bollen{s} snarkar{v}"/>
-<sentence ord="4" text="Grodan{s} växer{v}"/>
-<sentence ord="5" text="Grodan{s} sjunger{v}"/>
-<sentence ord="6" text="Katten{s} växer{v}"/>
-<sentence ord="7" text="Katten{s} snarkar{v}"/>
-<sentence ord="8" text="Bollen{s} studsar{v}"/>
-<sentence ord="9" text="Musen{s} studsar{v}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="Hunden{s} växer{v}"/>
-<sentence ord="1" text="Bananen{s} rullar{v}"/>
-<sentence ord="2" text="Bananen{s} sjunger{v}"/>
-<sentence ord="3" text="Musen{s} växer{v}"/>
-<sentence ord="4" text="Musen{s} sjunger{v}"/>
-<sentence ord="5" text="Bollen{s} studsar{v}"/>
-<sentence ord="6" text="Bollen{s} växer{v}"/>
-<sentence ord="7" text="Bollen{s} sjunger{v}"/>
-<sentence ord="8" text="Grodan{s} snarkar{v}"/>
-<sentence ord="9" text="Katten{s} flyger{v}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="Hunden{s} rullar{v}"/>
-<sentence ord="1" text="Hunden{s} snarkar{v}"/>
-<sentence ord="2" text="Bananen{s} växer{v}"/>
-<sentence ord="3" text="Musen{s} rullar{v}"/>
-<sentence ord="4" text="Musen{s} snarkar{v}"/>
-<sentence ord="5" text="Bollen{s} växer{v}"/>
-<sentence ord="6" text="Grodan{s} rullar{v}"/>
-<sentence ord="7" text="Grodan{s} flyger{v}"/>
-<sentence ord="8" text="Katten{s} rullar{v}"/>
-<sentence ord="9" text="Katten{s} flyger{v}"/>
-<sentence ord="10" text="Hunden{s} studsar{v}"/>
-<sentence ord="11" text="Hunden{s} sjunger{v}"/>
-<sentence ord="12" text="Bananen{s} flyger{v}"/>
-<sentence ord="13" text="Musen{s} studsar{v}"/>
-<sentence ord="14" text="Musen{s} sjunger{v}"/>
-<sentence ord="15" text="Bollen{s} flyger{v}"/>
-<sentence ord="16" text="Grodan{s} studsar{v}"/>
-<sentence ord="17" text="Grodan{s} snarkar{v}"/>
-<sentence ord="18" text="Katten{s} studsar{v}"/>
-<sentence ord="19" text="Katten{s} snarkar{v}"/>
-<sentence ord="20" text="Hunden{s} växer{v}"/>
-<sentence ord="21" text="Bananen{s} rullar{v}"/>
-<sentence ord="22" text="Bananen{s} snarkar{v}"/>
-<sentence ord="23" text="Musen{s} växer{v}"/>
-<sentence ord="24" text="Bollen{s} rullar{v}"/>
-<sentence ord="25" text="Bollen{s} snarkar{v}"/>
-<sentence ord="26" text="Grodan{s} växer{v}"/>
-<sentence ord="27" text="Grodan{s} sjunger{v}"/>
-<sentence ord="28" text="Katten{s} växer{v}"/>
-<sentence ord="29" text="Katten{s} sjunger{v}"/>
-<sentence ord="30" text="Hunden{s} flyger{v}"/>
-<sentence ord="31" text="Bananen{s} studsar{v}"/>
-<sentence ord="32" text="Bananen{s} sjunger{v}"/>
-<sentence ord="33" text="Musen{s} flyger{v}"/>
-<sentence ord="34" text="Bollen{s} studsar{v}"/>
-<sentence ord="35" text="Bollen{s} sjunger{v}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="Katten{s} studsar{v}"/>
-<sentence ord="1" text="Grodan{s} flyger{v}"/>
-<sentence ord="2" text="Bollen{s} sjunger{v}"/>
-<sentence ord="3" text="Bollen{s} studsar{v}"/>
-<sentence ord="4" text="Musen{s} flyger{v}"/>
-<sentence ord="5" text="Musen{s} rullar{v}"/>
-<sentence ord="6" text="Bananen{s} flyger{v}"/>
-<sentence ord="7" text="Bananen{s} rullar{v}"/>
-<sentence ord="8" text="Hunden{s} flyger{v}"/>
-<sentence ord="9" text="Hunden{s} rullar{v}"/>
-<sentence ord="10" text="Katten{s} växer{v}"/>
-<sentence ord="11" text="Grodan{s} snarkar{v}"/>
-<sentence ord="12" text="Grodan{s} rullar{v}"/>
-<sentence ord="13" text="Bollen{s} växer{v}"/>
-<sentence ord="14" text="Bollen{s} rullar{v}"/>
-<sentence ord="15" text="Musen{s} studsar{v}"/>
-<sentence ord="16" text="Bananen{s} snarkar{v}"/>
-<sentence ord="17" text="Bananen{s} studsar{v}"/>
-<sentence ord="18" text="Hunden{s} snarkar{v}"/>
-<sentence ord="19" text="Hunden{s} studsar{v}"/>
-<sentence ord="20" text="Katten{s} flyger{v}"/>
-<sentence ord="21" text="Grodan{s} sjunger{v}"/>
-<sentence ord="22" text="Grodan{s} studsar{v}"/>
-<sentence ord="23" text="Bollen{s} flyger{v}"/>
-<sentence ord="24" text="Musen{s} sjunger{v}"/>
-<sentence ord="25" text="Musen{s} växer{v}"/>
-<sentence ord="26" text="Bananen{s} sjunger{v}"/>
-<sentence ord="27" text="Bananen{s} växer{v}"/>
-<sentence ord="28" text="Hunden{s} sjunger{v}"/>
-<sentence ord="29" text="Hunden{s} växer{v}"/>
-<sentence ord="30" text="Katten{s} snarkar{v}"/>
-<sentence ord="31" text="Katten{s} rullar{v}"/>
-<sentence ord="32" text="Grodan{s} växer{v}"/>
-<sentence ord="33" text="Bollen{s} snarkar{v}"/>
-<sentence ord="34" text="Musen{s} snarkar{v}"/>
-<sentence ord="35" text="Katten{s} sjunger{v}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

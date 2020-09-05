@@ -14,8 +14,8 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="buzzard" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/bird.wav" text="fågeln" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="lemur" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/lemur.wav" text="lemuren" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="buzzard" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="Fången" ord="0" sign="" sound="audio/words-sv/bird.mp3" text="Fågeln" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="lemur" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="Kentauren" ord="1" sign="" sound="audio/words-sv/lemur.mp3" text="Lemuren" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -24,8 +24,8 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/MyAnim/ChaseChased" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/chases.wav" text="jagar," tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/MyAnim/JumpOver" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/jumpsover.wav" text="hoppar över," tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/MyAnim/ChaseChased" action-type="omega_anim" dummysign="" dummysound="" dummytext="klagar över," ord="0" sign="" sound="audio/words-sv/chases.mp3" text="jagar," tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/MyAnim/JumpOver" action-type="omega_anim" dummysign="" dummysound="" dummytext="shoppar," ord="1" sign="" sound="audio/words-sv/jumpsover.mp3" text="hoppar över," tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -34,8 +34,8 @@
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v2" ord="2" type="passive">
-<item action-fname="anim/MyAnim/JumpOver" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/jumpsover.wav" text="hoppar över" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/MyAnim/ChaseChased" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/chases.wav" text="jagar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/MyAnim/JumpOver" action-type="omega_anim" dummysign="" dummysound="" dummytext="stoppar åter" ord="0" sign="" sound="audio/words-sv/jumpsover.mp3" text="hoppar över" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/MyAnim/ChaseChased" action-type="omega_anim" dummysign="" dummysound="" dummytext="klagar" ord="1" sign="" sound="audio/words-sv/chases.mp3" text="jagar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -44,7 +44,7 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="k" ord="3" type="passive">
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/and.wav" text="och" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/and.mp3" text="och" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -54,7 +54,7 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v3" ord="4" type="passive">
-<item action-fname="anim/ActiveAnim/HidingInGrass2" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/hides.mp3" text="gömmer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/HidingInGrass2" action-type="omega_anim" dummysign="" dummysound="" dummytext="drömmer" ord="0" sign="" sound="audio/words-sv/hides.mp3" text="gömmer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -64,8 +64,8 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="5" type="passive">
-<item Lid="flower" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/flower.wav" text="blomman" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="icecream" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/icecream.wav" text="glassen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="flower" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="flamman" ord="0" sign="" sound="audio/words-sv/flower.mp3" text="blomman" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="icecream" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="stassen" ord="1" sign="" sound="audio/words-sv/icecream.mp3" text="glassen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="v" ord="0" type="action"/>
+</target>
+<items>
+<item-entry Tid="v" ord="0" type="action">
+<item Lid="dog" action-fname="anim/ActiveAnim/ActorPresB1" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/dog.mp3" text="the dog" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="bag" action-fname="anim/ActiveAnim/ActorPresB4DownOnRoundTable" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/bag.mp3" text="the bag" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="potato" action-fname="anim/ActiveAnim/ActorPresB4DownOnRoundTable" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/potato.mp3" text="the potato" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="bee" action-fname="anim/ActiveAnim/ActorPresB1" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/bee.mp3" text="the bee" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="flag" action-fname="anim/ActiveAnim/ActorPresB6DownUp" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-en/flag.mp3" text="the flag" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="fish" action-fname="anim/ActiveAnim/ActorPresB5Water" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-en/fish.mp3" text="the fish" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="car" action-fname="anim/ActiveAnim/VehicleRoad" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="audio/words-en/car.mp3" text="the car" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="bus" action-fname="anim/ActiveAnim/VehicleRoad" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="audio/words-en/bus.mp3" text="the bus" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<sign_specific/>
+<test_entries/>
+</omega_lesson>

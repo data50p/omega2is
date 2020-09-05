@@ -11,105 +11,38 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="boy" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-en/boy.wav" text="The boy" var-1="" var-2="" var-3=""/>
-<item Lid="girl" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/girl.wav" text="The girl" var-1="" var-2="" var-3=""/>
-<item Lid="cat" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-en/cat.wav" text="The cat" var-1="" var-2="" var-3=""/>
-<item Lid="dino" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-en/dino.wav" text="The dinosaur" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="boy" action-fname="" action-type="" dummysign="" dummysound="" dummytext="The buoy" ord="0" sign="" sound="audio/words-en/boy.mp3" text="The boy" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="girl" action-fname="" action-type="" dummysign="" dummysound="" dummytext="The whirl" ord="1" sign="" sound="audio/words-en/girl.mp3" text="The girl" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="cat" action-fname="" action-type="" dummysign="" dummysound="" dummytext="The rat" ord="2" sign="" sound="audio/words-en/cat.mp3" text="The cat" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="dino" action-fname="" action-type="" dummysign="" dummysound="" dummytext="The dining car" ord="3" sign="" sound="audio/words-en/dino.mp3" text="The dinosaur" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/InThrough{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/looksinthrough.wav" text="looks in through" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/ActiveAnim/OutThrough{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/looksoutof.wav" text="looks out of" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/InThrough{+1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="loops into" ord="0" sign="" sound="audio/words-en/looksinthrough.mp3" text="looks in through" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/OutThrough{+1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="loops out of" ord="1" sign="" sound="audio/words-en/looksoutof.mp3" text="looks out of" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="av" ord="2" type="passive">
-<item action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/winter.wav" dummytext="the winter" ord="0" sound="audio/words-en/window.wav" text="the window" var-1="Window" var-2="" var-3=""/>
-<item action-fname="" action-type="null" dummysound="audio/words-en/dummy/crate.wav" dummytext="the crate" ord="1" sound="audio/words-en/cave.wav" text="the cave" var-1="Cave" var-2="" var-3=""/>
-<item action-fname="" action-type="null" dummysound="audio/words-en/dummy/floor.wav" dummytext="the floor" ord="2" sound="audio/words-en/door.wav" text="the door" var-1="Door" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/winter.mp3" dummytext="the winter" ord="0" sign="" sound="audio/words-en/window.mp3" text="the window" tts="" var-1="Window" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/crate.mp3" dummytext="the case" ord="1" sign="" sound="audio/words-en/cave.mp3" text="the cave" tts="" var-1="Cave" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/floor.mp3" dummytext="the floor" ord="2" sign="" sound="audio/words-en/door.mp3" text="the door" tts="" var-1="Door" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
-<test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The dinosaur{s} looks in through{v} the door{av}"/>
-<sentence ord="1" text="The cat{s} looks in through{v} the cave{av}"/>
-<sentence ord="2" text="The boy{s} looks out of{v} the window{av}"/>
-<sentence ord="3" text="The girl{s} looks in through{v} the door{av}"/>
-<sentence ord="4" text="The dinosaur{s} looks out of{v} the door{av}"/>
-<sentence ord="5" text="The boy{s} looks in through{v} the window{av}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The dinosaur{s} looks in through{v} the cave{av}"/>
-<sentence ord="1" text="The girl{s} looks out of{v} the door{av}"/>
-<sentence ord="2" text="The girl{s} looks in through{v} the window{av}"/>
-<sentence ord="3" text="The boy{s} looks in through{v} the cave{av}"/>
-<sentence ord="4" text="The boy{s} looks out of{v} the door{av}"/>
-<sentence ord="5" text="The cat{s} looks out of{v} the window{av}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The dinosaur{s} looks out of{v} the door{av}"/>
-<sentence ord="1" text="The boy{s} looks in through{v} the window{av}"/>
-<sentence ord="2" text="The cat{s} looks in through{v} the window{av}"/>
-<sentence ord="3" text="The cat{s} looks out of{v} the door{av}"/>
-<sentence ord="4" text="The dinosaur{s} looks in through{v} the door{av}"/>
-<sentence ord="5" text="The boy{s} looks out of{v} the cave{av}"/>
-<sentence ord="6" text="The cat{s} looks out of{v} the window{av}"/>
-<sentence ord="7" text="The girl{s} looks in through{v} the window{av}"/>
-<sentence ord="8" text="The girl{s} looks in through{v} the cave{av}"/>
-<sentence ord="9" text="The girl{s} looks out of{v} the window{av}"/>
-<sentence ord="10" text="The dinosaur{s} looks out of{v} the cave{av}"/>
-<sentence ord="11" text="The boy{s} looks in through{v} the cave{av}"/>
-<sentence ord="12" text="The cat{s} looks in through{v} the cave{av}"/>
-<sentence ord="13" text="The dinosaur{s} looks in through{v} the window{av}"/>
-<sentence ord="14" text="The boy{s} looks out of{v} the window{av}"/>
-<sentence ord="15" text="The cat{s} looks out of{v} the cave{av}"/>
-<sentence ord="16" text="The boy{s} looks out of{v} the door{av}"/>
-<sentence ord="17" text="The girl{s} looks out of{v} the door{av}"/>
-<sentence ord="18" text="The girl{s} looks out of{v} the cave{av}"/>
-<sentence ord="19" text="The girl{s} looks in through{v} the door{av}"/>
-<sentence ord="20" text="The dinosaur{s} looks out of{v} the window{av}"/>
-<sentence ord="21" text="The boy{s} looks in through{v} the door{av}"/>
-<sentence ord="22" text="The cat{s} looks in through{v} the door{av}"/>
-<sentence ord="23" text="The dinosaur{s} looks in through{v} the cave{av}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The girl{s} looks out of{v} the door{av}"/>
-<sentence ord="1" text="The dinosaur{s} looks out of{v} the door{av}"/>
-<sentence ord="2" text="The cat{s} looks in through{v} the window{av}"/>
-<sentence ord="3" text="The dinosaur{s} looks in through{v} the door{av}"/>
-<sentence ord="4" text="The boy{s} looks in through{v} the window{av}"/>
-<sentence ord="5" text="The girl{s} looks in through{v} the door{av}"/>
-<sentence ord="6" text="The cat{s} looks out of{v} the window{av}"/>
-<sentence ord="7" text="The cat{s} looks out of{v} the door{av}"/>
-<sentence ord="8" text="The girl{s} looks in through{v} the window{av}"/>
-<sentence ord="9" text="The boy{s} looks out of{v} the window{av}"/>
-<sentence ord="10" text="The girl{s} looks out of{v} the cave{av}"/>
-<sentence ord="11" text="The dinosaur{s} looks out of{v} the cave{av}"/>
-<sentence ord="12" text="The cat{s} looks in through{v} the cave{av}"/>
-<sentence ord="13" text="The dinosaur{s} looks in through{v} the cave{av}"/>
-<sentence ord="14" text="The boy{s} looks in through{v} the cave{av}"/>
-<sentence ord="15" text="The girl{s} looks in through{v} the cave{av}"/>
-<sentence ord="16" text="The cat{s} looks out of{v} the cave{av}"/>
-<sentence ord="17" text="The boy{s} looks in through{v} the door{av}"/>
-<sentence ord="18" text="The boy{s} looks out of{v} the door{av}"/>
-<sentence ord="20" text="The girl{s} looks out of{v} the window{av}"/>
-<sentence ord="21" text="The dinosaur{s} looks out of{v} the window{av}"/>
-<sentence ord="22" text="The cat{s} looks in through{v} the door{av}"/>
-<sentence ord="23" text="The dinosaur{s} looks in through{v} the window{av}"/>
-</test_entry>
-</test_entries>
+<sign_specific/>
+<test_entries/>
 </omega_lesson>

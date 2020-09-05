@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="A" Tid="sv" ord="0" type="action"/>
+</target>
+<items>
+<item-entry Tid="sv" ord="0" type="action">
+<item Lid="potato" action-fname="anim/ActiveAnim/ActorPresB4DownOnRoundTable" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/potato.mp3" text="the potato" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="fish" action-fname="anim/ActiveAnim/ActorPresB5Water" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/fish.mp3" text="the fish" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="flag" action-fname="anim/ActiveAnim/ActorPresB6DownUp" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/flag.mp3" text="the flag" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="frog" action-fname="anim/ActiveAnim/ActorPresB5Water" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/frog.mp3" text="the frog" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="ghost" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-en/ghost.mp3" text="the ghost" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="lemur" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-en/lemur.mp3" text="the lemur" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="beaver" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="audio/words-en/beaver.mp3" text="the beaver" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="leopard" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="audio/words-en/leopard.mp3" text="the leopard" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+<item-entry Tid="sv" ord="1" type="action">
+<item Lid="buzzard" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/buzzard.mp3" text="the buzzard" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="mc" action-fname="anim/ActiveAnim/ActorPresB2" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/mc.mp3" text="the motorcycle" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="helicopter" action-fname="anim/ActiveAnim/AirFlight" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/helicopter.mp3" text="the helicopter" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="penguin" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/penguin.mp3" text="the penguin" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="swan" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-en/swan.mp3" text="the swan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="candle" action-fname="anim/ActiveAnim/ActorPresB4DownOnRoundTable" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-en/candle.mp3" text="the candle" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="astronaut" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="audio/words-en/astronaut.mp3" text="the astronaut" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="dino" action-fname="anim/ActiveAnim/ActorPresB3" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="audio/words-en/dino.mp3" text="the dinosaur" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific/>
+<sign_specific/>
+<test_entries/>
+</omega_lesson>

@@ -13,17 +13,17 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="dog" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/dog.wav" text="Hunden" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="mouse" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/mouse.wav" text="Musen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="gorilla" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/gorilla.wav" text="Gorillan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="panda" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/panda.wav" text="Pandan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="whale" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-sv/whale.wav" text="Valen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="cat" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-sv/cat.wav" text="Katten" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="dog" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Hinden" ord="0" sign="" sound="audio/words-sv/dog.mp3" text="Hunden" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="mouse" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Mesen" ord="1" sign="" sound="audio/words-sv/mouse.mp3" text="Musen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="gorilla" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Grillen" ord="2" sign="" sound="audio/words-sv/gorilla.mp3" text="Gorillan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="panda" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Paddan" ord="3" sign="" sound="audio/words-sv/panda.mp3" text="Pandan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="whale" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Valken" ord="4" sign="" sound="audio/words-sv/whale.mp3" text="Valen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="cat" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Kotten" ord="5" sign="" sound="audio/words-sv/cat.mp3" text="Katten" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="passive">
-<item action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/puts.wav" text="lägger" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="laggar" ord="0" sign="" sound="audio/words-sv/puts.mp3" text="lägger" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -33,19 +33,19 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="actor">
-<item Lid="pizza" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/pizza.wav" text="pizzan" tts="pizzann" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="banana" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/banana.wav" text="bananen" tts="bann-a-nen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="hat" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/hat.wav" text="hatten" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="carrot" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/carrot.wav" text="moroten" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="butterfly" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-sv/butterfly.wav" text="fjärilen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="pizza" action-fname="" action-type="" dummysign="" dummysound="" dummytext="piazzan" ord="0" sign="" sound="audio/words-sv/pizza.mp3" text="pizzan" tts="pizzann" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="banana" action-fname="" action-type="" dummysign="" dummysound="" dummytext="banan" ord="1" sign="" sound="audio/words-sv/banana.mp3" text="bananen" tts="bann-a-nen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="hat" action-fname="" action-type="" dummysign="" dummysound="" dummytext="hallen" ord="2" sign="" sound="audio/words-sv/hat.mp3" text="hatten" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="carrot" action-fname="" action-type="" dummysign="" dummysound="" dummytext="motorn" ord="3" sign="" sound="audio/words-sv/carrot.mp3" text="moroten" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="butterfly" action-fname="" action-type="" dummysign="" dummysound="" dummytext="fjärsingen" ord="4" sign="" sound="audio/words-sv/butterfly.mp3" text="fjärilen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="p" ord="3" type="action">
-<item action-fname="anim/ActiveAnim/PutOnTableRoomCW" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/behind.wav" dummytext="bakom" ord="0" sign="" sound="audio/words-sv/on.wav" text="på" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/PutUnderTableRoomCW" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/inbetween.wav" dummytext="mellan" ord="1" sign="" sound="audio/words-sv/under.wav" text="under" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/PutBesideTableRoomCW" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/infrontof.wav" dummytext="framför" ord="2" sign="" sound="audio/words-sv/beside.wav" text="bredvid" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/PutOnTableRoomCW" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/behind.mp3" dummytext="bakom" ord="0" sign="" sound="audio/words-sv/on.mp3" text="på" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/PutUnderTableRoomCW" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/inbetween.mp3" dummytext="mellan" ord="1" sign="" sound="audio/words-sv/under.mp3" text="under" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/PutBesideTableRoomCW" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/infrontof.mp3" dummytext="framför" ord="2" sign="" sound="audio/words-sv/beside.mp3" text="bredvid" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -53,9 +53,9 @@
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="av" ord="4" type="actor">
-<item Lid="panda" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/pandatable.wav" text="pandans bord" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="gorilla" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/gorillatable.wav" text="gorillans bord" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="whale" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/whalestable.wav" text="valens bord" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="panda" action-fname="" action-type="" dummysign="" dummysound="" dummytext="plankans bod" ord="0" sign="" sound="audio/words-sv/pandatable.mp3" text="pandans bord" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="gorilla" action-fname="" action-type="" dummysign="" dummysound="" dummytext="tonsillens bod" ord="1" sign="" sound="audio/words-sv/gorillatable.mp3" text="gorillans bord" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="whale" action-fname="" action-type="" dummysign="" dummysound="" dummytext="valpens bod" ord="2" sign="" sound="audio/words-sv/whalestable.mp3" text="valens bord" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -67,132 +67,5 @@
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="Hunden{s} lägger{v} pizzan{o} på{p} pandans bord{av}"/>
-<sentence ord="1" text="Hunden{s} lägger{v} bananen{o} under{p} valens bord{av}"/>
-<sentence ord="2" text="Hunden{s} lägger{v} bananen{o} bredvid{p} valens bord{av}"/>
-<sentence ord="3" text="Musen{s} lägger{v} pizzan{o} på{p} valens bord{av}"/>
-<sentence ord="4" text="Musen{s} lägger{v} fjärilen{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="5" text="Gorillan{s} lägger{v} fjärilen{o} på{p} gorillans bord{av}"/>
-<sentence ord="6" text="Pandan{s} lägger{v} fjärilen{o} under{p} gorillans bord{av}"/>
-<sentence ord="7" text="Valen{s} lägger{v} moroten{o} på{p} valens bord{av}"/>
-<sentence ord="8" text="Katten{s} lägger{v} bananen{o} på{p} valens bord{av}"/>
-<sentence ord="9" text="Katten{s} lägger{v} moroten{o} bredvid{p} gorillans bord{av}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="Katten{s} lägger{v} fjärilen{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="1" text="Katten{s} lägger{v} moroten{o} på{p} valens bord{av}"/>
-<sentence ord="2" text="Katten{s} lägger{v} hatten{o} på{p} valens bord{av}"/>
-<sentence ord="3" text="Katten{s} lägger{v} pizzan{o} på{p} valens bord{av}"/>
-<sentence ord="4" text="Valen{s} lägger{v} hatten{o} bredvid{p} pandans bord{av}"/>
-<sentence ord="5" text="Valen{s} lägger{v} pizzan{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="6" text="Pandan{s} lägger{v} moroten{o} under{p} gorillans bord{av}"/>
-<sentence ord="7" text="Pandan{s} lägger{v} bananen{o} under{p} valens bord{av}"/>
-<sentence ord="8" text="Gorillan{s} lägger{v} moroten{o} på{p} gorillans bord{av}"/>
-<sentence ord="9" text="Musen{s} lägger{v} fjärilen{o} bredvid{p} valens bord{av}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="Hunden{s} lägger{v} pizzan{o} på{p} pandans bord{av}"/>
-<sentence ord="1" text="Katten{s} lägger{v} fjärilen{o} bredvid{p} valens bord{av}"/>
-<sentence ord="2" text="Hunden{s} lägger{v} bananen{o} under{p} gorillans bord{av}"/>
-<sentence ord="3" text="Hunden{s} lägger{v} fjärilen{o} bredvid{p} valens bord{av}"/>
-<sentence ord="4" text="Musen{s} lägger{v} bananen{o} bredvid{p} pandans bord{av}"/>
-<sentence ord="5" text="Musen{s} lägger{v} moroten{o} bredvid{p} valens bord{av}"/>
-<sentence ord="6" text="Gorillan{s} lägger{v} moroten{o} bredvid{p} pandans bord{av}"/>
-<sentence ord="7" text="Valen{s} lägger{v} pizzan{o} bredvid{p} pandans bord{av}"/>
-<sentence ord="8" text="Katten{s} lägger{v} hatten{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="9" text="Pandan{s} lägger{v} fjärilen{o} under{p} pandans bord{av}"/>
-<sentence ord="10" text="Hunden{s} lägger{v} pizzan{o} på{p} gorillans bord{av}"/>
-<sentence ord="11" text="Katten{s} lägger{v} fjärilen{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="12" text="Hunden{s} lägger{v} bananen{o} under{p} valens bord{av}"/>
-<sentence ord="13" text="Musen{s} lägger{v} pizzan{o} på{p} pandans bord{av}"/>
-<sentence ord="14" text="Musen{s} lägger{v} bananen{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="15" text="Musen{s} lägger{v} fjärilen{o} under{p} gorillans bord{av}"/>
-<sentence ord="16" text="Gorillan{s} lägger{v} fjärilen{o} under{p} pandans bord{av}"/>
-<sentence ord="17" text="Valen{s} lägger{v} hatten{o} på{p} pandans bord{av}"/>
-<sentence ord="18" text="Katten{s} lägger{v} bananen{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="19" text="Pandan{s} lägger{v} hatten{o} under{p} gorillans bord{av}"/>
-<sentence ord="20" text="Hunden{s} lägger{v} pizzan{o} på{p} valens bord{av}"/>
-<sentence ord="21" text="Katten{s} lägger{v} fjärilen{o} bredvid{p} pandans bord{av}"/>
-<sentence ord="22" text="Hunden{s} lägger{v} bananen{o} bredvid{p} pandans bord{av}"/>
-<sentence ord="23" text="Musen{s} lägger{v} pizzan{o} på{p} gorillans bord{av}"/>
-<sentence ord="24" text="Musen{s} lägger{v} bananen{o} bredvid{p} valens bord{av}"/>
-<sentence ord="25" text="Gorillan{s} lägger{v} pizzan{o} på{p} pandans bord{av}"/>
-<sentence ord="26" text="Pandan{s} lägger{v} pizzan{o} under{p} pandans bord{av}"/>
-<sentence ord="27" text="Valen{s} lägger{v} moroten{o} på{p} valens bord{av}"/>
-<sentence ord="28" text="Katten{s} lägger{v} pizzan{o} under{p} gorillans bord{av}"/>
-<sentence ord="29" text="Pandan{s} lägger{v} pizzan{o} under{p} valens bord{av}"/>
-<sentence ord="30" text="Hunden{s} lägger{v} pizzan{o} under{p} pandans bord{av}"/>
-<sentence ord="31" text="Katten{s} lägger{v} fjärilen{o} under{p} valens bord{av}"/>
-<sentence ord="32" text="Hunden{s} lägger{v} bananen{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="33" text="Musen{s} lägger{v} pizzan{o} på{p} valens bord{av}"/>
-<sentence ord="34" text="Musen{s} lägger{v} hatten{o} på{p} valens bord{av}"/>
-<sentence ord="35" text="Gorillan{s} lägger{v} pizzan{o} under{p} gorillans bord{av}"/>
-<sentence ord="36" text="Pandan{s} lägger{v} hatten{o} på{p} valens bord{av}"/>
-<sentence ord="37" text="Katten{s} lägger{v} pizzan{o} på{p} pandans bord{av}"/>
-<sentence ord="38" text="Valen{s} lägger{v} moroten{o} under{p} valens bord{av}"/>
-<sentence ord="39" text="Gorillan{s} lägger{v} moroten{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="40" text="Hunden{s} lägger{v} pizzan{o} under{p} gorillans bord{av}"/>
-<sentence ord="41" text="Katten{s} lägger{v} fjärilen{o} under{p} gorillans bord{av}"/>
-<sentence ord="42" text="Hunden{s} lägger{v} bananen{o} bredvid{p} valens bord{av}"/>
-<sentence ord="43" text="Musen{s} lägger{v} pizzan{o} under{p} pandans bord{av}"/>
-<sentence ord="44" text="Musen{s} lägger{v} hatten{o} under{p} valens bord{av}"/>
-<sentence ord="45" text="Gorillan{s} lägger{v} hatten{o} på{p} gorillans bord{av}"/>
-<sentence ord="46" text="Pandan{s} lägger{v} fjärilen{o} på{p} gorillans bord{av}"/>
-<sentence ord="47" text="Katten{s} lägger{v} bananen{o} under{p} gorillans bord{av}"/>
-<sentence ord="48" text="Valen{s} lägger{v} bananen{o} på{p} gorillans bord{av}"/>
-<sentence ord="50" text="Hunden{s} lägger{v} pizzan{o} under{p} valens bord{av}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="Katten{s} lägger{v} fjärilen{o} på{p} valens bord{av}"/>
-<sentence ord="1" text="Valen{s} lägger{v} fjärilen{o} under{p} pandans bord{av}"/>
-<sentence ord="2" text="Pandan{s} lägger{v} moroten{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="3" text="Gorillan{s} lägger{v} moroten{o} under{p} pandans bord{av}"/>
-<sentence ord="4" text="Musen{s} lägger{v} moroten{o} på{p} gorillans bord{av}"/>
-<sentence ord="5" text="Pandan{s} lägger{v} pizzan{o} under{p} pandans bord{av}"/>
-<sentence ord="6" text="Valen{s} lägger{v} bananen{o} under{p} gorillans bord{av}"/>
-<sentence ord="7" text="Katten{s} lägger{v} bananen{o} på{p} gorillans bord{av}"/>
-<sentence ord="8" text="Pandan{s} lägger{v} fjärilen{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="9" text="Gorillan{s} lägger{v} bananen{o} på{p} pandans bord{av}"/>
-<sentence ord="10" text="Katten{s} lägger{v} moroten{o} bredvid{p} pandans bord{av}"/>
-<sentence ord="11" text="Valen{s} lägger{v} moroten{o} under{p} valens bord{av}"/>
-<sentence ord="12" text="Pandan{s} lägger{v} hatten{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="13" text="Gorillan{s} lägger{v} hatten{o} på{p} gorillans bord{av}"/>
-<sentence ord="14" text="Musen{s} lägger{v} fjärilen{o} under{p} valens bord{av}"/>
-<sentence ord="15" text="Pandan{s} lägger{v} bananen{o} under{p} gorillans bord{av}"/>
-<sentence ord="16" text="Valen{s} lägger{v} hatten{o} under{p} pandans bord{av}"/>
-<sentence ord="17" text="Katten{s} lägger{v} moroten{o} under{p} pandans bord{av}"/>
-<sentence ord="18" text="Pandan{s} lägger{v} moroten{o} under{p} gorillans bord{av}"/>
-<sentence ord="19" text="Musen{s} lägger{v} fjärilen{o} på{p} gorillans bord{av}"/>
-<sentence ord="20" text="Katten{s} lägger{v} hatten{o} bredvid{p} pandans bord{av}"/>
-<sentence ord="21" text="Valen{s} lägger{v} hatten{o} bredvid{p} pandans bord{av}"/>
-<sentence ord="22" text="Pandan{s} lägger{v} hatten{o} på{p} pandans bord{av}"/>
-<sentence ord="23" text="Gorillan{s} lägger{v} pizzan{o} under{p} valens bord{av}"/>
-<sentence ord="24" text="Gorillan{s} lägger{v} pizzan{o} bredvid{p} valens bord{av}"/>
-<sentence ord="25" text="Pandan{s} lägger{v} hatten{o} under{p} valens bord{av}"/>
-<sentence ord="26" text="Valen{s} lägger{v} moroten{o} under{p} pandans bord{av}"/>
-<sentence ord="27" text="Valen{s} lägger{v} moroten{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="28" text="Pandan{s} lägger{v} hatten{o} på{p} gorillans bord{av}"/>
-<sentence ord="29" text="Musen{s} lägger{v} hatten{o} bredvid{p} pandans bord{av}"/>
-<sentence ord="30" text="Katten{s} lägger{v} bananen{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="31" text="Valen{s} lägger{v} bananen{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="32" text="Pandan{s} lägger{v} bananen{o} på{p} gorillans bord{av}"/>
-<sentence ord="33" text="Musen{s} lägger{v} moroten{o} under{p} valens bord{av}"/>
-<sentence ord="34" text="Gorillan{s} lägger{v} hatten{o} på{p} pandans bord{av}"/>
-<sentence ord="35" text="Pandan{s} lägger{v} moroten{o} under{p} pandans bord{av}"/>
-<sentence ord="36" text="Valen{s} lägger{v} fjärilen{o} på{p} gorillans bord{av}"/>
-<sentence ord="37" text="Valen{s} lägger{v} hatten{o} bredvid{p} valens bord{av}"/>
-<sentence ord="38" text="Pandan{s} lägger{v} pizzan{o} under{p} gorillans bord{av}"/>
-<sentence ord="39" text="Gorillan{s} lägger{v} pizzan{o} på{p} valens bord{av}"/>
-<sentence ord="40" text="Katten{s} lägger{v} pizzan{o} under{p} valens bord{av}"/>
-<sentence ord="41" text="Valen{s} lägger{v} pizzan{o} under{p} gorillans bord{av}"/>
-<sentence ord="42" text="Gorillan{s} lägger{v} fjärilen{o} bredvid{p} gorillans bord{av}"/>
-<sentence ord="43" text="Musen{s} lägger{v} bananen{o} under{p} valens bord{av}"/>
-<sentence ord="44" text="Gorillan{s} lägger{v} moroten{o} bredvid{p} valens bord{av}"/>
-<sentence ord="45" text="Pandan{s} lägger{v} fjärilen{o} under{p} valens bord{av}"/>
-<sentence ord="46" text="Katten{s} lägger{v} pizzan{o} under{p} gorillans bord{av}"/>
-<sentence ord="47" text="Valen{s} lägger{v} bananen{o} på{p} gorillans bord{av}"/>
-<sentence ord="48" text="Gorillan{s} lägger{v} fjärilen{o} på{p} pandans bord{av}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

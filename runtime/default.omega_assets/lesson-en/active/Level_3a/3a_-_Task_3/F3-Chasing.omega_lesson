@@ -1,88 +1,39 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE omega_lesson >
 
 <omega_lesson version="0.0">
 <lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
 <lesson name="abc" ord="0">
 <target>
-<t-item Lid="A" Tid="s" ord="0" type="actor"/>
+<t-item Lid="A" Tid="s" ord="0" type="passive"/>
 <t-item Lid="" Tid="v" ord="1" type="action"/>
-<t-item Lid="B" Tid="o" ord="2" type="actor"/>
+<t-item Lid="B" Tid="o" ord="2" type="passive"/>
 </target>
 <items>
 <item-entry Tid="s,o" ord="0" type="actor">
-<item Lid="buzzard" dummysound="audio/words-en/dummy/blizzard.wav" dummytext="the blizzard" ord="0" sound="audio/words-en/bird.wav" text="the buzzard" var-1="n" var-2="" var-3=""/>
-<item Lid="carrot" dummysound="audio/words-en/dummy/chair.wav" dummytext="the chair" ord="1" sound="audio/words-en/carrot.wav" text="the carrot" var-1="n" var-2="" var-3=""/>
-<item Lid="lion" dummysound="audio/words-en/leopard.wav" dummytext="the leopard" ord="2" sound="audio/words-en/lion.wav" text="the lion" var-1="t" var-2="" var-3=""/>
-<item Lid="swan" dummysound="audio/words-en/dummy/man.wav" dummytext="the man" ord="3" sound="audio/words-en/swan.wav" text="the swan" var-1="n" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="buzzard" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/blizzard.wav" dummytext="the blizzard" ord="0" sign="" sound="audio/words-en/bird.wav" text="the buzzard" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="carrot" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/chair.wav" dummytext="the chair" ord="1" sign="" sound="audio/words-en/carrot.wav" text="the carrot" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="lion" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/leopard.wav" dummytext="the leopard" ord="2" sign="" sound="audio/words-en/lion.wav" text="the lion" tts="" var-1="t" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="swan" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/man.wav" dummytext="the man" ord="3" sign="" sound="audio/words-en/swan.wav" text="the swan" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/ChaseChased1" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/chases.wav" text="chases" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="1" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/ChaseChased1" action-type="omega_anim" dummysign="" dummysound="" dummytext="chances" ord="0" sign="" sound="audio/words-en/chases.wav" text="chases" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
+<sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The buzzard{s} chases{v} the buzzard{o}"/>
-<sentence ord="1" text="The lion{s} chases{v} the swan{o}"/>
-<sentence ord="2" text="The buzzard{s} chases{v} the lion{o}"/>
-<sentence ord="3" text="The swan{s} chases{v} the swan{o}"/>
-<sentence ord="4" text="The carrot{s} chases{v} the buzzard{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The buzzard{s} chases{v} the carrot{o}"/>
-<sentence ord="1" text="The buzzard{s} chases{v} the swan{o}"/>
-<sentence ord="2" text="The carrot{s} chases{v} the swan{o}"/>
-<sentence ord="3" text="The lion{s} chases{v} the carrot{o}"/>
-<sentence ord="4" text="The swan{s} chases{v} the carrot{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The swan{s} chases{v} the swan{o}"/>
-<sentence ord="1" text="The swan{s} chases{v} the lion{o}"/>
-<sentence ord="2" text="The swan{s} chases{v} the carrot{o}"/>
-<sentence ord="3" text="The swan{s} chases{v} the buzzard{o}"/>
-<sentence ord="4" text="The lion{s} chases{v} the swan{o}"/>
-<sentence ord="5" text="The lion{s} chases{v} the lion{o}"/>
-<sentence ord="6" text="The lion{s} chases{v} the carrot{o}"/>
-<sentence ord="7" text="The lion{s} chases{v} the buzzard{o}"/>
-<sentence ord="8" text="The carrot{s} chases{v} the swan{o}"/>
-<sentence ord="9" text="The carrot{s} chases{v} the lion{o}"/>
-<sentence ord="10" text="The carrot{s} chases{v} the carrot{o}"/>
-<sentence ord="11" text="The carrot{s} chases{v} the buzzard{o}"/>
-<sentence ord="12" text="The buzzard{s} chases{v} the swan{o}"/>
-<sentence ord="13" text="The buzzard{s} chases{v} the lion{o}"/>
-<sentence ord="14" text="The buzzard{s} chases{v} the carrot{o}"/>
-<sentence ord="15" text="The buzzard{s} chases{v} the buzzard{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The lion{s} chases{v} the buzzard{o}"/>
-<sentence ord="1" text="The carrot{s} chases{v} the swan{o}"/>
-<sentence ord="2" text="The carrot{s} chases{v} the lion{o}"/>
-<sentence ord="3" text="The carrot{s} chases{v} the carrot{o}"/>
-<sentence ord="4" text="The carrot{s} chases{v} the buzzard{o}"/>
-<sentence ord="5" text="The buzzard{s} chases{v} the swan{o}"/>
-<sentence ord="6" text="The buzzard{s} chases{v} the lion{o}"/>
-<sentence ord="7" text="The buzzard{s} chases{v} the carrot{o}"/>
-<sentence ord="8" text="The buzzard{s} chases{v} the buzzard{o}"/>
-<sentence ord="9" text="The lion{s} chases{v} the carrot{o}"/>
-<sentence ord="10" text="The lion{s} chases{v} the lion{o}"/>
-<sentence ord="11" text="The swan{s} chases{v} the lion{o}"/>
-<sentence ord="12" text="The lion{s} chases{v} the swan{o}"/>
-<sentence ord="13" text="The swan{s} chases{v} the swan{o}"/>
-<sentence ord="14" text="The swan{s} chases{v} the carrot{o}"/>
-<sentence ord="15" text="The swan{s} chases{v} the buzzard{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

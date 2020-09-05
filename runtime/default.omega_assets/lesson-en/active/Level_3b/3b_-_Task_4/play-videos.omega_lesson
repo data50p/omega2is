@@ -11,17 +11,17 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/girl.mp3" text="The girl" tts="" var-1="s" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/boy.mp3" text="The boy" tts="" var-1="s" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/girl2.mp3" text="The girls" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/boy2.mp3" text="The boys" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="The gift" ord="0" sign="" sound="audio/words-en/girl.mp3" text="The girl" tts="" var-1="s" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="The bog" ord="1" sign="" sound="audio/words-en/boy.mp3" text="The boy" tts="" var-1="s" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="The gifts" ord="2" sign="" sound="audio/words-en/girl2.mp3" text="The girls" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="The bogs" ord="3" sign="" sound="audio/words-en/boy2.mp3" text="The boys" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/acts-with.wav" text="play{-1}" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="grey{-1}" ord="0" sign="" sound="audio/words-en/acts-with.wav" text="play{-1}" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -31,9 +31,9 @@
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="passive">
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/actor2.wav" text="the violin" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/actor1.wav" text="the piano" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="soccer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="the video" ord="0" sign="" sound="audio/words-en/actor2.wav" text="the violin" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="the guano" ord="1" sign="" sound="audio/words-en/actor1.wav" text="the piano" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="supper" ord="2" sign="" sound="" text="soccer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -58,53 +58,5 @@
 </action_specific>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The girls{s} play{v} the violin{o}"/>
-<sentence ord="1" text="The girl{s} plays{v} soccer{o}"/>
-<sentence ord="2" text="The boy{s} plays{v} the piano{o}"/>
-<sentence ord="3" text="The girls{s} play{v} soccer{o}"/>
-<sentence ord="4" text="The boys{s} play{v} the piano{o}"/>
-<sentence ord="5" text="The boy{s} plays{v} soccer{o}"/>
-<sentence ord="6" text="The girl{s} plays{v} the violin{o}"/>
-<sentence ord="7" text="The girl{s} plays{v} the piano{o}"/>
-<sentence ord="8" text="The girls{s} play{v} the piano{o}"/>
-<sentence ord="9" text="The boys{s} play{v} soccer{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The boys{s} play{v} the piano{o}"/>
-<sentence ord="1" text="The girls{s} play{v} the piano{o}"/>
-<sentence ord="2" text="The boy{s} plays{v} the piano{o}"/>
-<sentence ord="3" text="The girl{s} plays{v} the piano{o}"/>
-<sentence ord="4" text="The girl{s} plays{v} the violin{o}"/>
-<sentence ord="5" text="The boy{s} plays{v} the violin{o}"/>
-<sentence ord="6" text="The girls{s} play{v} the violin{o}"/>
-<sentence ord="7" text="The boys{s} play{v} the violin{o}"/>
-<sentence ord="8" text="The girls{s} play{v} soccer{o}"/>
-<sentence ord="9" text="The girl{s} plays{v} soccer{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The girl{s} plays{v} the piano{o}"/>
-<sentence ord="1" text="The girl{s} plays{v} the violin{o}"/>
-<sentence ord="2" text="The boy{s} plays{v} the violin{o}"/>
-<sentence ord="3" text="The boys{s} play{v} the violin{o}"/>
-<sentence ord="4" text="The boys{s} play{v} soccer{o}"/>
-<sentence ord="5" text="The boys{s} play{v} the piano{o}"/>
-<sentence ord="6" text="The girls{s} play{v} the piano{o}"/>
-<sentence ord="7" text="The girls{s} play{v} the violin{o}"/>
-<sentence ord="8" text="The boy{s} plays{v} soccer{o}"/>
-<sentence ord="9" text="The girls{s} play{v} soccer{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The boys{s} play{v} soccer{o}"/>
-<sentence ord="1" text="The girls{s} play{v} the piano{o}"/>
-<sentence ord="2" text="The boy{s} plays{v} the piano{o}"/>
-<sentence ord="3" text="The girl{s} plays{v} soccer{o}"/>
-<sentence ord="4" text="The girl{s} plays{v} the piano{o}"/>
-<sentence ord="5" text="The girl{s} plays{v} the violin{o}"/>
-<sentence ord="6" text="The boy{s} plays{v} soccer{o}"/>
-<sentence ord="7" text="The girls{s} play{v} the violin{o}"/>
-<sentence ord="8" text="The girls{s} play{v} soccer{o}"/>
-<sentence ord="9" text="The boys{s} play{v} the violin{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

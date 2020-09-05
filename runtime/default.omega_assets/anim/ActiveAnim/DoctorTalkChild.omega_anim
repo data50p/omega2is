@@ -260,21 +260,6 @@
 <TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
-<TimeMarker duration="0" type="t" when="8647">
-<T_Event>
-<TriggerEvent arg="audio/heartbeat_fast.mp3" cmd="PlaySound" isOn="true"/>
-<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
-<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
-<TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
-<TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
-<TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>
-<TriggerEvent arg="0.2" cmd="SetAnimSpeed" isOn="false"/>
-<TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
-<TriggerEvent arg="" cmd="Dinner" isOn="false"/>
-<TriggerEvent arg="" cmd="Option" isOn="false"/>
-<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
-</T_Event>
-</TimeMarker>
 <TimeMarker duration="0" type="]" when="8800">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>

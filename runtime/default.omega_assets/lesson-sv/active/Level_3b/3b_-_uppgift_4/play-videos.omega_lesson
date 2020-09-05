@@ -11,93 +11,51 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/girl.mp3" text="Flickan" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/boy.mp3" text="Pojken" var-1="s" var-2="" var-3=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/girl.mp3" text="Flickorna" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/boy.mp3" text="Pojkarna" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="Klicken" ord="0" sign="" sound="audio/words-sv/girl.mp3" text="Flickan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="Polkan" ord="1" sign="" sound="audio/words-sv/boy.mp3" text="Pojken" tts="" var-1="s" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="Flikarna" ord="2" sign="" sound="audio/words-sv/girl.mp3" text="Flickorna" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="Korkarna" ord="3" sign="" sound="audio/words-sv/boy.mp3" text="Pojkarna" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/acts-with.wav" text="spelar" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="spetar" ord="0" sign="" sound="audio/words-sv/acts-with.wav" text="spelar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="passive">
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/actor2.wav" text="fiol" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/actor1.wav" text="piano" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="fotboll" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="fenol" ord="0" sign="" sound="audio/words-sv/actor2.wav" text="fiol" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="pionen" ord="1" sign="" sound="audio/words-sv/actor1.wav" text="piano" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="tokboll" ord="2" sign="" sound="" text="fotboll" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific>
-<value key="Flickan spelar fotboll" val="anim/ActiveVideo/girl_boy_activities/girl_plays_football.mp4"/>
-<value key="The boy plays soccer" val="anim/ActiveVideo/girl_boy_activities/boy_plays_football.mp4"/>
-<value key="The girls play the piano" val="anim/ActiveVideo/girl_boy_activities/girls_play_the_piano.mp4"/>
-<value key="The boys play the violin" val="anim/ActiveVideo/girl_boy_activities/boys_play_the_violin.mp4"/>
-<value key="Koppen hoppar över koppen" val="anim/ActiveVideo/CupJumpsCup.mpg"/>
-<value key="The girl plays soccer" val="anim/ActiveVideo/girl_boy_activities/girl_plays_football.mp4"/>
 <value key="Pojkarna spelar fotboll" val="anim/ActiveVideo/girl_boy_activities/boys_play_football.mp4"/>
 <value key="Flickan spelar piano" val="anim/ActiveVideo/girl_boy_activities/girl_plays_the_piano.mp4"/>
+<value key="Flickan spelar fotboll" val="anim/ActiveVideo/girl_boy_activities/girl_plays_football.mp4"/>
+<value key="Flickan spelar fiol" val="anim/ActiveVideo/girl_boy_activities/girl_plays_the_violin.mp4"/>
 <value key="Flickorna spelar fiol" val="anim/ActiveVideo/girl_boy_activities/girls_play_the_violin.mp4"/>
 <value key="Flickorna spelar fotboll" val="anim/ActiveVideo/girl_boy_activities/girls_play_football.mp4"/>
-<value key="The boy plays the piano" val="anim/ActiveVideo/girl_boy_activities/boy_plays_the_piano.mp4"/>
-<value key="Pojken spelar piano" val="anim/ActiveVideo/girl_boy_activities/boy_plays_the_piano.mp4"/>
-<value key="The boy plays the violin" val="anim/ActiveVideo/girl_boy_activities/boy_plays_the_violin.mp4"/>
-<value key="Pojkarna spelar fiol" val="anim/ActiveVideo/girl_boy_activities/boys_play_the_violin.mp4"/>
-<value key="Koppen hoppar över handen" val="anim/ActiveVideo/CupJumpsHand.mpg"/>
-<value key="The girl plays the piano" val="anim/ActiveVideo/girl_boy_activities/girl_plays_the_piano.mp4"/>
-<value key="The girls play soccer" val="anim/ActiveVideo/girl_boy_activities/girls_play_football.mp4"/>
-<value key="Handen{s} hoppar över{v} koppen{o}" val=""/>
-<value key="Koppen{s} hoppar över{v} koppen{o}" val=""/>
-<value key="The girl plays the violin" val="anim/ActiveVideo/girl_boy_activities/girl_plays_the_violin.mp4"/>
-<value key="Flickan spelar fiol" val="anim/ActiveVideo/girl_boy_activities/girl_plays_the_violin.mp4"/>
-<value key="Koppen{s} hoppar över{v} handen{o}" val=""/>
-<value key="The girls play the violin" val="anim/ActiveVideo/girl_boy_activities/girls_play_the_violin.mp4"/>
 <value key="Pojken spelar fotboll" val="anim/ActiveVideo/girl_boy_activities/boy_plays_football.mp4"/>
-<value key="Handen{s} hoppar över{v} handen{o}" val=""/>
-<value key="The boys play the piano" val="anim/ActiveVideo/girl_boy_activities/boys_play_the_piano.mp4"/>
 <value key="Flickorna spelar piano" val="anim/ActiveVideo/girl_boy_activities/girls_play_the_piano.mp4"/>
-<value key="The boys play soccer" val="anim/ActiveVideo/girl_boy_activities/boys_play_football.mp4"/>
+<value key="Pojken spelar piano" val="anim/ActiveVideo/girl_boy_activities/boy_plays_the_piano.mp4"/>
 <value key="Pojken spelar fiol" val="anim/ActiveVideo/girl_boy_activities/boy_plays_the_violin.mp4"/>
+<value key="Pojkarna spelar fiol" val="anim/ActiveVideo/girl_boy_activities/boys_play_the_violin.mp4"/>
 <value key="Pojkarna spelar piano" val="anim/ActiveVideo/girl_boy_activities/boys_play_the_piano.mp4"/>
 </action_specific>
 <sign_specific/>
-<test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="Handen hoppar över handen"/>
-<sentence ord="1" text="Handen hoppar över koppen"/>
-<sentence ord="2" text="Koppen hoppar över blomman"/>
-<sentence ord="3" text="Blomman hoppar över koppen"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="Katten hoppar över blomman"/>
-<sentence ord="1" text="Blomman hoppar över handen"/>
-<sentence ord="2" text="Koppen hoppar över handen"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="Katten hoppar över katten"/>
-<sentence ord="1" text="Koppen hoppar över blomman"/>
-<sentence ord="2" text="Blomman hoppar över handen"/>
-<sentence ord="3" text="Koppen hoppar över koppen"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="Koppen hoppar över katten"/>
-<sentence ord="1" text="Handen hoppar över koppen"/>
-<sentence ord="2" text="Blomman hoppar över blomman"/>
-<sentence ord="3" text="Katten hoppar över koppen"/>
-</test_entry>
-</test_entries>
+<test_entries/>
 </omega_lesson>

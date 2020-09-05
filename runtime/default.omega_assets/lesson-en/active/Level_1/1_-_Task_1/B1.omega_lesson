@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE omega_lesson >
 
 <omega_lesson version="0.0">
@@ -9,42 +9,19 @@
 </target>
 <items>
 <item-entry Tid="v" ord="0" type="action">
-<item Lid="girl" action-fname="anim/ActiveAnim/B1" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/girl.wav" text="the girl" var-1="" var-2="" var-3=""/>
-<item Lid="boy" action-fname="anim/ActiveAnim/B1" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/boy.wav" text="the boy" var-1="" var-2="" var-3=""/>
-<item Lid="dog" action-fname="anim/ActiveAnim/ActorPresB1" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-en/dog.wav" text="the dog" var-1="" var-2="" var-3=""/>
-<item Lid="bee" action-fname="anim/ActiveAnim/ActorPresB1" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-en/bee.wav" text="the bee" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="girl" action-fname="anim/ActiveAnim/B1" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/girl.mp3" text="the girl" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="boy" action-fname="anim/ActiveAnim/B1" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/boy.mp3" text="the boy" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="dog" action-fname="anim/ActiveAnim/ActorPresB1" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/dog.mp3" text="the dog" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="bee" action-fname="anim/ActiveAnim/ActorPresB1" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/bee.mp3" text="the bee" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
+<sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The girl{v}"/>
-<sentence ord="1" text="The boy{v}"/>
-<sentence ord="2" text="The dog{v}"/>
-<sentence ord="3" text="The bee{v}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The bee{v}"/>
-<sentence ord="1" text="The dog{v}"/>
-<sentence ord="2" text="The boy{v}"/>
-<sentence ord="3" text="The girl{v}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The bee{v}"/>
-<sentence ord="1" text="The boy{v}"/>
-<sentence ord="2" text="The girl{v}"/>
-<sentence ord="3" text="The dog{v}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The dog{v}"/>
-<sentence ord="1" text="The bee{v}"/>
-<sentence ord="2" text="The girl{v}"/>
-<sentence ord="3" text="The boy{v}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

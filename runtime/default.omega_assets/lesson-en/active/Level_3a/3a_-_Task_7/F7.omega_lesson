@@ -11,119 +11,39 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="boy" action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/toy.wav" dummytext="the toy" ord="0" sound="audio/words-en/boy.wav" text="the boy" var-1="" var-2="" var-3=""/>
-<item Lid="icecream" action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/icepick.wav" dummytext="the icepick" ord="1" sound="audio/words-en/icecream.wav" text="the ice-cream" var-1="" var-2="" var-3=""/>
-<item Lid="flower" action-fname="" action-type="null" dummysound="audio/words-en/dummy/flea.wav" dummytext="the flea" ord="2" sound="audio/words-en/flower.wav" text="the flower" var-1="" var-2="" var-3=""/>
-<item Lid="plane" action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/train.wav" dummytext="the train" ord="3" sound="audio/words-en/plane.wav" text="the plane" var-1="-plane" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="boy" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/toy.wav" dummytext="The toy" ord="0" sign="" sound="audio/words-en/boy.wav" text="The boy" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="icecream" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/icepick.wav" dummytext="The icepick" ord="1" sign="" sound="audio/words-en/icecream.wav" text="The ice-cream" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="flower" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/flea.wav" dummytext="The flea" ord="2" sign="" sound="audio/words-en/flower.wav" text="The flower" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="plane" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/train.wav" dummytext="The train" ord="3" sign="" sound="audio/words-en/plane.wav" text="The plane" tts="" var-1="-plane" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/FlyOverCity{-1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/fliesover.wav" text="flies over" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/ActiveAnim/JumpInRoom" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/jumpsover.wav" text="jumps over" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/FlyOverCity{-1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="tries ever" ord="0" sign="" sound="audio/words-en/fliesover.wav" text="flies over" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/JumpInRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="jives yonder" ord="1" sign="" sound="audio/words-en/jumpsover.wav" text="jumps over" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="actor">
-<item Lid="icecream" action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/icepick.wav" dummytext="the icepick" ord="0" sound="audio/words-en/icecream.wav" text="the ice-cream" var-1="" var-2="" var-3=""/>
-<item Lid="flower" action-fname="" action-type="null" dummysound="audio/words-en/dummy/flea.wav" dummytext="the flea" ord="1" sound="audio/words-en/flower.wav" text="the flower" var-1="" var-2="" var-3=""/>
-<item Lid="plane" action-fname="" action-type="null" dummysound="audio/words-en/dummy/train.wav" dummytext="the train" ord="2" sound="audio/words-en/plane.wav" text="the plane" var-1="" var-2="" var-3=""/>
-<item Lid="boy2" action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/toy.wav" dummytext="the toy" ord="3" sound="audio/words-en/boy.wav" text="the boy" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="icecream" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/icepick.wav" dummytext="the icepick" ord="0" sign="" sound="audio/words-en/icecream.wav" text="the ice-cream" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="flower" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/flea.wav" dummytext="the flea" ord="1" sign="" sound="audio/words-en/flower.wav" text="the flower" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="plane" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/train.wav" dummytext="the train" ord="2" sign="" sound="audio/words-en/plane.wav" text="the plane" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="boy2" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/toy.wav" dummytext="the toy" ord="3" sign="" sound="audio/words-en/boy.wav" text="the boy" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
+<sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The boy{s} flies over{v} the ice-cream{o}"/>
-<sentence ord="1" text="The ice-cream{s} jumps over{v} the ice-cream{o}"/>
-<sentence ord="2" text="The flower{s} flies over{v} the ice-cream{o}"/>
-<sentence ord="3" text="The flower{s} jumps over{v} the ice-cream{o}"/>
-<sentence ord="4" text="The plane{s} flies over{v} the ice-cream{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The flower{s} jumps over{v} the flower{o}"/>
-<sentence ord="1" text="The plane{s} jumps over{v} the boy{o}"/>
-<sentence ord="2" text="The boy{s} jumps over{v} the boy{o}"/>
-<sentence ord="3" text="The boy{s} flies over{v} the plane{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The plane{s} jumps over{v} the boy{o}"/>
-<sentence ord="1" text="The plane{s} jumps over{v} the plane{o}"/>
-<sentence ord="2" text="The plane{s} jumps over{v} the flower{o}"/>
-<sentence ord="3" text="The plane{s} jumps over{v} the ice-cream{o}"/>
-<sentence ord="4" text="The plane{s} flies over{v} the boy{o}"/>
-<sentence ord="5" text="The plane{s} flies over{v} the plane{o}"/>
-<sentence ord="6" text="The plane{s} flies over{v} the flower{o}"/>
-<sentence ord="7" text="The plane{s} flies over{v} the ice-cream{o}"/>
-<sentence ord="8" text="The flower{s} jumps over{v} the boy{o}"/>
-<sentence ord="9" text="The flower{s} jumps over{v} the plane{o}"/>
-<sentence ord="10" text="The flower{s} jumps over{v} the flower{o}"/>
-<sentence ord="11" text="The flower{s} jumps over{v} the ice-cream{o}"/>
-<sentence ord="12" text="The flower{s} flies over{v} the boy{o}"/>
-<sentence ord="13" text="The flower{s} flies over{v} the plane{o}"/>
-<sentence ord="14" text="The flower{s} flies over{v} the flower{o}"/>
-<sentence ord="15" text="The flower{s} flies over{v} the ice-cream{o}"/>
-<sentence ord="16" text="The ice-cream{s} jumps over{v} the boy{o}"/>
-<sentence ord="17" text="The ice-cream{s} jumps over{v} the plane{o}"/>
-<sentence ord="18" text="The ice-cream{s} jumps over{v} the flower{o}"/>
-<sentence ord="19" text="The ice-cream{s} jumps over{v} the ice-cream{o}"/>
-<sentence ord="20" text="The ice-cream{s} flies over{v} the boy{o}"/>
-<sentence ord="21" text="The ice-cream{s} flies over{v} the plane{o}"/>
-<sentence ord="22" text="The ice-cream{s} flies over{v} the flower{o}"/>
-<sentence ord="23" text="The ice-cream{s} flies over{v} the ice-cream{o}"/>
-<sentence ord="24" text="The boy{s} jumps over{v} the boy{o}"/>
-<sentence ord="25" text="The boy{s} jumps over{v} the plane{o}"/>
-<sentence ord="26" text="The boy{s} jumps over{v} the flower{o}"/>
-<sentence ord="27" text="The boy{s} jumps over{v} the ice-cream{o}"/>
-<sentence ord="28" text="The boy{s} flies over{v} the boy{o}"/>
-<sentence ord="29" text="The boy{s} flies over{v} the plane{o}"/>
-<sentence ord="30" text="The boy{s} flies over{v} the flower{o}"/>
-<sentence ord="31" text="The boy{s} flies over{v} the ice-cream{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The ice-cream{s} jumps over{v} the flower{o}"/>
-<sentence ord="1" text="The ice-cream{s} jumps over{v} the plane{o}"/>
-<sentence ord="2" text="The ice-cream{s} jumps over{v} the boy{o}"/>
-<sentence ord="3" text="The flower{s} flies over{v} the ice-cream{o}"/>
-<sentence ord="4" text="The flower{s} flies over{v} the flower{o}"/>
-<sentence ord="5" text="The flower{s} flies over{v} the plane{o}"/>
-<sentence ord="6" text="The flower{s} flies over{v} the boy{o}"/>
-<sentence ord="7" text="The flower{s} jumps over{v} the ice-cream{o}"/>
-<sentence ord="8" text="The flower{s} jumps over{v} the flower{o}"/>
-<sentence ord="9" text="The flower{s} jumps over{v} the plane{o}"/>
-<sentence ord="10" text="The flower{s} jumps over{v} the boy{o}"/>
-<sentence ord="11" text="The plane{s} flies over{v} the ice-cream{o}"/>
-<sentence ord="12" text="The plane{s} flies over{v} the flower{o}"/>
-<sentence ord="13" text="The plane{s} flies over{v} the plane{o}"/>
-<sentence ord="14" text="The plane{s} flies over{v} the boy{o}"/>
-<sentence ord="15" text="The plane{s} jumps over{v} the ice-cream{o}"/>
-<sentence ord="16" text="The plane{s} jumps over{v} the flower{o}"/>
-<sentence ord="17" text="The plane{s} jumps over{v} the plane{o}"/>
-<sentence ord="18" text="The plane{s} jumps over{v} the boy{o}"/>
-<sentence ord="19" text="The boy{s} flies over{v} the ice-cream{o}"/>
-<sentence ord="20" text="The boy{s} flies over{v} the flower{o}"/>
-<sentence ord="21" text="The boy{s} flies over{v} the plane{o}"/>
-<sentence ord="22" text="The boy{s} flies over{v} the boy{o}"/>
-<sentence ord="23" text="The boy{s} jumps over{v} the ice-cream{o}"/>
-<sentence ord="24" text="The boy{s} jumps over{v} the flower{o}"/>
-<sentence ord="25" text="The boy{s} jumps over{v} the plane{o}"/>
-<sentence ord="26" text="The boy{s} jumps over{v} the boy{o}"/>
-<sentence ord="27" text="The ice-cream{s} flies over{v} the ice-cream{o}"/>
-<sentence ord="28" text="The ice-cream{s} flies over{v} the flower{o}"/>
-<sentence ord="29" text="The ice-cream{s} flies over{v} the plane{o}"/>
-<sentence ord="30" text="The ice-cream{s} flies over{v} the boy{o}"/>
-<sentence ord="31" text="The ice-cream{s} jumps over{v} the ice-cream{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

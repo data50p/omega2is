@@ -12,9 +12,9 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="octopus" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/octopus.wav" text="bläckfisken" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="RedhBoy" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/TheRedheadedBoy.wav" text="den rödhårige pojken" tts="den röd-hårige pojken" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="BlondGirl" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/TheBlondGirl.wav" text="den blonda flickan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="octopus" action-fname="" action-type="" dummysign="" dummysound="" dummytext="blekfisen" ord="0" sign="" sound="audio/words-sv/octopus.mp3" text="bläckfisken" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="RedhBoy" action-fname="" action-type="" dummysign="" dummysound="" dummytext="den röktåliga hajken" ord="1" sign="" sound="audio/words-sv/TheRedheadedBoy.mp3" text="den rödhårige pojken" tts="den röd-hårige pojken" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="BlondGirl" action-fname="" action-type="" dummysign="" dummysound="" dummytext="den blanka fläcken" ord="2" sign="" sound="audio/words-sv/TheBlondGirl.mp3" text="den blonda flickan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -22,8 +22,8 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/Kick{++1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/kicks.wav" text="sparkar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/Head{++1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/heads.wav" text="nickar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/Kick{++1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="snarkar" ord="0" sign="" sound="audio/words-sv/kicks.mp3" text="sparkar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/Head{++1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="hickar" ord="1" sign="" sound="audio/words-sv/heads.mp3" text="nickar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -32,8 +32,8 @@
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="passive">
-<item Lid="balloons" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/balloons.wav" text="ballongerna" tts="ball-lång-errna" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="ball" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/SoccerBall.wav" text="fotbollen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="balloons" action-fname="" action-type="" dummysign="" dummysound="" dummytext="kalsongerna" ord="0" sign="" sound="audio/words-sv/balloons.mp3" text="ballongerna" tts="ball-lång-errna" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="ball" action-fname="" action-type="" dummysign="" dummysound="" dummytext="bollkollen" ord="1" sign="" sound="audio/words-sv/SoccerBall.mp3" text="fotbollen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -42,9 +42,9 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="av" ord="3" type="passive">
-<item action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/dummy/IntoTheHouse.wav" dummytext="in i huset" ord="0" sign="" sound="audio/words-sv/IntoTheGoal.wav" text="in i målet" tts="" var-1="IntoGoal" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="BlondGirl2" action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/dummy/ToTheDarkFish.wav" dummytext="till den mörka fisken" ord="1" sign="" sound="audio/words-sv/ToTheBlondGirl.wav" text="till den blonda flickan" tts="" var-1="ToPerson" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/OverTheGoalIntoTractor.wav" dummytext="över målet och in i traktorn" ord="2" sign="" sound="audio/words-sv/OverTheGoalAndIntoTheHelicopter.wav" text="över målet och in i helikoptern" tts="" var-1="OverGoalHeli" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/IntoTheHouse.mp3" dummytext="in i huset" ord="0" sign="" sound="audio/words-sv/IntoTheGoal.mp3" text="in i målet" tts="" var-1="IntoGoal" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="BlondGirl2" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/ToTheDarkFish.mp3" dummytext="till den mörka fisken" ord="1" sign="" sound="audio/words-sv/ToTheBlondGirl.mp3" text="till den blonda flickan" tts="" var-1="ToPerson" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/OverTheGoalIntoTractor.mp3" dummytext="över målet och in i traktorn" ord="2" sign="" sound="audio/words-sv/OverTheGoalAndIntoTheHelicopter.mp3" text="över målet och in i helikoptern" tts="" var-1="OverGoalHeli" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -56,105 +56,5 @@
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="Bläckfisken{s} sparkar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="1" text="Den blonda flickan{s} nickar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="2" text="Den rödhårige pojken{s} nickar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="3" text="Bläckfisken{s} nickar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="4" text="Den rödhårige pojken{s} sparkar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="5" text="Den blonda flickan{s} sparkar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="6" text="Bläckfisken{s} nickar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="7" text="Bläckfisken{s} sparkar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="8" text="Den rödhårige pojken{s} sparkar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="9" text="Den blonda flickan{s} nickar{v} ballongerna{o} till den blonda flickan{av}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="Den blonda flickan{s} nickar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="1" text="Bläckfisken{s} sparkar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="2" text="Bläckfisken{s} nickar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="3" text="Bläckfisken{s} nickar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="4" text="Den blonda flickan{s} sparkar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="5" text="Den blonda flickan{s} nickar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="6" text="Den rödhårige pojken{s} nickar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="7" text="Den rödhårige pojken{s} sparkar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="8" text="Bläckfisken{s} nickar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="9" text="Bläckfisken{s} sparkar{v} fotbollen{o} till den blonda flickan{av}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="Bläckfisken{s} sparkar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="1" text="Den blonda flickan{s} nickar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="2" text="Bläckfisken{s} sparkar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="3" text="Den blonda flickan{s} nickar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="4" text="Bläckfisken{s} nickar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="5" text="Den rödhårige pojken{s} sparkar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="6" text="Den rödhårige pojken{s} sparkar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="7" text="Den rödhårige pojken{s} nickar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="8" text="Den rödhårige pojken{s} nickar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="9" text="Den blonda flickan{s} sparkar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="10" text="Bläckfisken{s} sparkar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="11" text="Den blonda flickan{s} nickar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="12" text="Bläckfisken{s} sparkar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="13" text="Den blonda flickan{s} nickar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="14" text="Bläckfisken{s} nickar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="15" text="Den rödhårige pojken{s} sparkar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="16" text="Den rödhårige pojken{s} sparkar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="17" text="Den rödhårige pojken{s} nickar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="18" text="Den rödhårige pojken{s} nickar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="19" text="Den blonda flickan{s} sparkar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="20" text="Bläckfisken{s} sparkar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="21" text="Den blonda flickan{s} nickar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="22" text="Bläckfisken{s} nickar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="23" text="Den blonda flickan{s} sparkar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="24" text="Bläckfisken{s} nickar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="25" text="Den rödhårige pojken{s} sparkar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="26" text="Den rödhårige pojken{s} nickar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="27" text="Den blonda flickan{s} sparkar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="28" text="Den rödhårige pojken{s} nickar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="29" text="Den blonda flickan{s} sparkar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="30" text="Bläckfisken{s} sparkar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="31" text="Den blonda flickan{s} nickar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="32" text="Bläckfisken{s} nickar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="33" text="Den blonda flickan{s} sparkar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="34" text="Bläckfisken{s} nickar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="35" text="Den rödhårige pojken{s} sparkar{v} fotbollen{o} in i målet{av}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="Den blonda flickan{s} nickar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="1" text="Bläckfisken{s} sparkar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="2" text="Den blonda flickan{s} nickar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="3" text="Bläckfisken{s} sparkar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="4" text="Den rödhårige pojken{s} sparkar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="5" text="Bläckfisken{s} nickar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="6" text="Den blonda flickan{s} sparkar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="7" text="Den rödhårige pojken{s} sparkar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="8" text="Den rödhårige pojken{s} nickar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="9" text="Den rödhårige pojken{s} nickar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="10" text="Den blonda flickan{s} nickar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="11" text="Bläckfisken{s} sparkar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="12" text="Den blonda flickan{s} nickar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="13" text="Bläckfisken{s} sparkar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="14" text="Den rödhårige pojken{s} sparkar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="15" text="Bläckfisken{s} nickar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="16" text="Den blonda flickan{s} sparkar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="17" text="Den rödhårige pojken{s} sparkar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="18" text="Den rödhårige pojken{s} nickar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="19" text="Den rödhårige pojken{s} nickar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="20" text="Den blonda flickan{s} nickar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="21" text="Bläckfisken{s} sparkar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="22" text="Den blonda flickan{s} sparkar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-<sentence ord="23" text="Bläckfisken{s} nickar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="24" text="Den rödhårige pojken{s} sparkar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="25" text="Bläckfisken{s} nickar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="26" text="Den blonda flickan{s} sparkar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="27" text="Den rödhårige pojken{s} nickar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="28" text="Den rödhårige pojken{s} nickar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="29" text="Den blonda flickan{s} sparkar{v} ballongerna{o} in i målet{av}"/>
-<sentence ord="30" text="Den blonda flickan{s} nickar{v} ballongerna{o} över målet och in i helikoptern{av}"/>
-<sentence ord="31" text="Bläckfisken{s} sparkar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="32" text="Den blonda flickan{s} sparkar{v} fotbollen{o} till den blonda flickan{av}"/>
-<sentence ord="33" text="Bläckfisken{s} nickar{v} ballongerna{o} till den blonda flickan{av}"/>
-<sentence ord="34" text="Den rödhårige pojken{s} sparkar{v} fotbollen{o} in i målet{av}"/>
-<sentence ord="35" text="Bläckfisken{s} nickar{v} fotbollen{o} över målet och in i helikoptern{av}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

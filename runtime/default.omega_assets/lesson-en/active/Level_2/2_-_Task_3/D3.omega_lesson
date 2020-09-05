@@ -10,22 +10,22 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="dog" action-fname="" action-type="null" dummysign="" dummysound="audio/words-en/dummy/log.wav" dummytext="The log" ord="0" sign="" sound="audio/words-en/dog.wav" text="The dog" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="banana" action-fname="" action-type="null" dummysign="" dummysound="audio/words-en/dummy/bean.wav" dummytext="The bean" ord="1" sign="" sound="audio/words-en/banana.wav" text="The banana" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="mouse" action-fname="" action-type="null" dummysign="" dummysound="audio/words-en/house.wav" dummytext="The house" ord="2" sign="" sound="audio/words-en/mouse.wav" text="The mouse" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="ball" action-fname="" action-type="null" dummysign="" dummysound="audio/words-en/boy.wav" dummytext="The boy" ord="3" sign="" sound="audio/words-en/ball.wav" text="The ball" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="frog" action-fname="" action-type="null" dummysign="" dummysound="audio/words-en/dummy/fig.wav" dummytext="The fig" ord="4" sign="" sound="audio/words-en/frog.wav" text="The frog" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="cat" action-fname="" action-type="null" dummysign="" dummysound="audio/words-en/dummy/bat.wav" dummytext="The bat" ord="5" sign="" sound="audio/words-en/cat.wav" text="The cat" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="apple" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/table.mp3" dummytext="The table" ord="6" sign="" sound="audio/words-en/apple.mp3" text="The apple" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="dog" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/log.wav" dummytext="The log" ord="0" sign="" sound="audio/words-en/dog.wav" text="The dog" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="banana" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/bean.wav" dummytext="The bean" ord="1" sign="" sound="audio/words-en/banana.wav" text="The banana" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="mouse" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/house.wav" dummytext="The house" ord="2" sign="" sound="audio/words-en/mouse.wav" text="The mouse" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="ball" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/boy.wav" dummytext="The boy" ord="3" sign="" sound="audio/words-en/ball.wav" text="The ball" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="frog" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/fig.wav" dummytext="The fig" ord="4" sign="" sound="audio/words-en/frog.wav" text="The frog" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="cat" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/bat.wav" dummytext="The bat" ord="5" sign="" sound="audio/words-en/cat.wav" text="The cat" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="apple" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/table.mp3" dummytext="The table" ord="6" sign="" sound="audio/words-en/apple.mp3" text="The apple" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/RollingInMeadow" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/rolls.wav" text="rolls" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/BouncingInMat" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/bounces.wav" text="bounces" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/GrowingInMeadow" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/grows.wav" text="grows" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/FlyPlane" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-en/flies.wav" text="flies" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/SleepingInGrassByTree" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-en/snores.wav" text="snores" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/SingingInRoomByWindow" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-en/sings.wav" text="sings" tts="" var-1="null" var-2="null" var-3="null" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/RollingInMeadow" action-type="omega_anim" dummysign="" dummysound="" dummytext="calls" ord="0" sign="" sound="audio/words-en/rolls.wav" text="rolls" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/BouncingInMat" action-type="omega_anim" dummysign="" dummysound="" dummytext="dances" ord="1" sign="" sound="audio/words-en/bounces.wav" text="bounces" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/GrowingInMeadow" action-type="omega_anim" dummysign="" dummysound="" dummytext="plows" ord="2" sign="" sound="audio/words-en/grows.wav" text="grows" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/FlyPlane" action-type="omega_anim" dummysign="" dummysound="" dummytext="piles" ord="3" sign="" sound="audio/words-en/flies.wav" text="flies" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/SleepingInGrassByTree" action-type="omega_anim" dummysign="" dummysound="" dummytext="scores" ord="4" sign="" sound="audio/words-en/snores.wav" text="snores" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/SingingInRoomByWindow" action-type="omega_anim" dummysign="" dummysound="" dummytext="rings" ord="5" sign="" sound="audio/words-en/sings.wav" text="sings" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
@@ -34,96 +34,5 @@
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The dog{s} rolls{v}"/>
-<sentence ord="1" text="The banana{s} rolls{v}"/>
-<sentence ord="2" text="The banana{s} snores{v}"/>
-<sentence ord="3" text="The mouse{s} grows{v}"/>
-<sentence ord="4" text="The ball{s} flies{v}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The cat{s} sings{v}"/>
-<sentence ord="1" text="The frog{s} snores{v}"/>
-<sentence ord="2" text="The ball{s} grows{v}"/>
-<sentence ord="3" text="The mouse{s} flies{v}"/>
-<sentence ord="4" text="The banana{s} sings{v}"/>
-<sentence ord="18" text="The dog{s} rolls{v}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The cat{s} sings{v}"/>
-<sentence ord="1" text="The cat{s} snores{v}"/>
-<sentence ord="2" text="The cat{s} flies{v}"/>
-<sentence ord="3" text="The cat{s} grows{v}"/>
-<sentence ord="4" text="The cat{s} bounces{v}"/>
-<sentence ord="5" text="The cat{s} rolls{v}"/>
-<sentence ord="6" text="The frog{s} sings{v}"/>
-<sentence ord="7" text="The frog{s} snores{v}"/>
-<sentence ord="8" text="The frog{s} flies{v}"/>
-<sentence ord="9" text="The frog{s} grows{v}"/>
-<sentence ord="10" text="The frog{s} bounces{v}"/>
-<sentence ord="11" text="The frog{s} rolls{v}"/>
-<sentence ord="12" text="The ball{s} sings{v}"/>
-<sentence ord="13" text="The ball{s} snores{v}"/>
-<sentence ord="14" text="The ball{s} flies{v}"/>
-<sentence ord="15" text="The ball{s} grows{v}"/>
-<sentence ord="16" text="The ball{s} bounces{v}"/>
-<sentence ord="17" text="The ball{s} rolls{v}"/>
-<sentence ord="18" text="The mouse{s} sings{v}"/>
-<sentence ord="19" text="The mouse{s} snores{v}"/>
-<sentence ord="20" text="The mouse{s} flies{v}"/>
-<sentence ord="21" text="The mouse{s} grows{v}"/>
-<sentence ord="22" text="The mouse{s} bounces{v}"/>
-<sentence ord="23" text="The mouse{s} rolls{v}"/>
-<sentence ord="24" text="The banana{s} sings{v}"/>
-<sentence ord="25" text="The banana{s} snores{v}"/>
-<sentence ord="26" text="The banana{s} flies{v}"/>
-<sentence ord="27" text="The banana{s} grows{v}"/>
-<sentence ord="28" text="The banana{s} bounces{v}"/>
-<sentence ord="29" text="The banana{s} rolls{v}"/>
-<sentence ord="30" text="The dog{s} sings{v}"/>
-<sentence ord="31" text="The dog{s} snores{v}"/>
-<sentence ord="32" text="The dog{s} flies{v}"/>
-<sentence ord="33" text="The dog{s} grows{v}"/>
-<sentence ord="34" text="The dog{s} bounces{v}"/>
-<sentence ord="35" text="The dog{s} rolls{v}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The banana{s} snores{v}"/>
-<sentence ord="1" text="The banana{s} sings{v}"/>
-<sentence ord="2" text="The mouse{s} rolls{v}"/>
-<sentence ord="3" text="The mouse{s} bounces{v}"/>
-<sentence ord="4" text="The mouse{s} grows{v}"/>
-<sentence ord="5" text="The mouse{s} flies{v}"/>
-<sentence ord="6" text="The mouse{s} snores{v}"/>
-<sentence ord="7" text="The mouse{s} sings{v}"/>
-<sentence ord="8" text="The ball{s} rolls{v}"/>
-<sentence ord="9" text="The dog{s} rolls{v}"/>
-<sentence ord="10" text="The dog{s} bounces{v}"/>
-<sentence ord="11" text="The dog{s} grows{v}"/>
-<sentence ord="12" text="The dog{s} flies{v}"/>
-<sentence ord="13" text="The dog{s} snores{v}"/>
-<sentence ord="14" text="The dog{s} sings{v}"/>
-<sentence ord="15" text="The banana{s} rolls{v}"/>
-<sentence ord="16" text="The banana{s} bounces{v}"/>
-<sentence ord="17" text="The banana{s} grows{v}"/>
-<sentence ord="18" text="The banana{s} flies{v}"/>
-<sentence ord="19" text="The frog{s} grows{v}"/>
-<sentence ord="20" text="The frog{s} flies{v}"/>
-<sentence ord="21" text="The frog{s} snores{v}"/>
-<sentence ord="22" text="The frog{s} sings{v}"/>
-<sentence ord="23" text="The cat{s} rolls{v}"/>
-<sentence ord="24" text="The cat{s} bounces{v}"/>
-<sentence ord="25" text="The cat{s} grows{v}"/>
-<sentence ord="26" text="The cat{s} flies{v}"/>
-<sentence ord="27" text="The cat{s} snores{v}"/>
-<sentence ord="28" text="The cat{s} sings{v}"/>
-<sentence ord="29" text="The frog{s} bounces{v}"/>
-<sentence ord="30" text="The frog{s} rolls{v}"/>
-<sentence ord="31" text="The ball{s} sings{v}"/>
-<sentence ord="32" text="The ball{s} snores{v}"/>
-<sentence ord="33" text="The ball{s} flies{v}"/>
-<sentence ord="34" text="The ball{s} grows{v}"/>
-<sentence ord="35" text="The ball{s} bounces{v}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

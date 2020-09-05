@@ -11,19 +11,19 @@
 </target>
 <items>
 <item-entry Tid="s,o" ord="0" type="actor">
-<item Lid="orange" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="apoteket" ord="0" sign="" sound="" text="apelsinen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="pear" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="paketet" ord="1" sign="" sound="" text="päronet" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="banana" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/ball.wav" dummytext="bollen" ord="2" sign="" sound="audio/words-sv/banana.wav" text="bananen" tts="bann-a-nen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="apple" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/pear.wav" dummytext="päronet" ord="3" sign="" sound="audio/words-sv/apple.wav" text="äpplet" tts="äpp-let" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="orange" action-fname="" action-type="" dummysign="" dummysound="" dummytext="apoteket" ord="0" sign="" sound="" text="apelsinen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="pear" action-fname="" action-type="" dummysign="" dummysound="" dummytext="paketet" ord="1" sign="" sound="" text="päronet" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="banana" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/ball.wav" dummytext="bollen" ord="2" sign="" sound="audio/words-sv/banana.wav" text="bananen" tts="bann-a-nen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="apple" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/pear.wav" dummytext="päronet" ord="3" sign="" sound="audio/words-sv/apple.wav" text="äpplet" tts="äpp-let" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/EatEatenInPark" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/eats.wav" text="äter" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/JumpFruitRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/jumpsover.wav" text="hoppar över" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/HideFoodGrass" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/hides.wav" text="gömmer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/EatEatenInPark" action-type="omega_anim" dummysign="" dummysound="" dummytext="ekar" ord="0" sign="" sound="audio/words-sv/eats.wav" text="äter" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/JumpFruitRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="hostar över" ord="1" sign="" sound="audio/words-sv/jumpsover.wav" text="hoppar över" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/HideFoodGrass" action-type="omega_anim" dummysign="" dummysound="" dummytext="jämnar" ord="2" sign="" sound="audio/words-sv/hides.wav" text="gömmer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -35,128 +35,5 @@
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="Bävern{s} äter{v} bävern{o}"/>
-<sentence ord="1" text="Bävern{s} hoppar över{v} äpplet{o}"/>
-<sentence ord="2" text="Fågeln{s} äter{v} bananen{o}"/>
-<sentence ord="3" text="Fågeln{s} gömmer{v} bävern{o}"/>
-<sentence ord="4" text="Bananen{s} äter{v} äpplet{o}"/>
-<sentence ord="5" text="Bananen{s} gömmer{v} bävern{o}"/>
-<sentence ord="6" text="Äpplet{s} äter{v} bananen{o}"/>
-<sentence ord="7" text="Äpplet{s} hoppar över{v} äpplet{o}"/>
-<sentence ord="8" text="Äpplet{s} gömmer{v} bananen{o}"/>
-<sentence ord="9" text="Bananen{s} gömmer{v} äpplet{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="Äpplet{s} äter{v} bävern{o}"/>
-<sentence ord="1" text="Äpplet{s} gömmer{v} bananen{o}"/>
-<sentence ord="2" text="Äpplet{s} hoppar över{v} fågeln{o}"/>
-<sentence ord="3" text="Bananen{s} hoppar över{v} bananen{o}"/>
-<sentence ord="4" text="Bananen{s} hoppar över{v} bävern{o}"/>
-<sentence ord="5" text="Bananen{s} äter{v} bävern{o}"/>
-<sentence ord="6" text="Fågeln{s} hoppar över{v} bananen{o}"/>
-<sentence ord="7" text="Fågeln{s} äter{v} äpplet{o}"/>
-<sentence ord="8" text="Bävern{s} gömmer{v} bananen{o}"/>
-<sentence ord="9" text="Bävern{s} hoppar över{v} fågeln{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="Bävern{s} äter{v} bävern{o}"/>
-<sentence ord="1" text="Bävern{s} hoppar över{v} fågeln{o}"/>
-<sentence ord="2" text="Bävern{s} gömmer{v} bananen{o}"/>
-<sentence ord="3" text="Fågeln{s} äter{v} äpplet{o}"/>
-<sentence ord="4" text="Fågeln{s} gömmer{v} bävern{o}"/>
-<sentence ord="5" text="Bananen{s} äter{v} fågeln{o}"/>
-<sentence ord="6" text="Bananen{s} hoppar över{v} bananen{o}"/>
-<sentence ord="7" text="Bananen{s} gömmer{v} äpplet{o}"/>
-<sentence ord="8" text="Äpplet{s} hoppar över{v} bävern{o}"/>
-<sentence ord="9" text="Äpplet{s} gömmer{v} bävern{o}"/>
-<sentence ord="10" text="Bävern{s} äter{v} fågeln{o}"/>
-<sentence ord="11" text="Bävern{s} hoppar över{v} bananen{o}"/>
-<sentence ord="12" text="Bävern{s} gömmer{v} äpplet{o}"/>
-<sentence ord="13" text="Fågeln{s} hoppar över{v} bävern{o}"/>
-<sentence ord="14" text="Fågeln{s} gömmer{v} fågeln{o}"/>
-<sentence ord="15" text="Bananen{s} äter{v} bananen{o}"/>
-<sentence ord="16" text="Bananen{s} hoppar över{v} äpplet{o}"/>
-<sentence ord="17" text="Äpplet{s} äter{v} bävern{o}"/>
-<sentence ord="18" text="Äpplet{s} hoppar över{v} fågeln{o}"/>
-<sentence ord="19" text="Äpplet{s} gömmer{v} fågeln{o}"/>
-<sentence ord="20" text="Bävern{s} äter{v} bananen{o}"/>
-<sentence ord="21" text="Bävern{s} hoppar över{v} äpplet{o}"/>
-<sentence ord="22" text="Fågeln{s} äter{v} bävern{o}"/>
-<sentence ord="23" text="Fågeln{s} hoppar över{v} fågeln{o}"/>
-<sentence ord="24" text="Fågeln{s} gömmer{v} bananen{o}"/>
-<sentence ord="25" text="Bananen{s} äter{v} äpplet{o}"/>
-<sentence ord="26" text="Bananen{s} gömmer{v} bävern{o}"/>
-<sentence ord="27" text="Äpplet{s} äter{v} fågeln{o}"/>
-<sentence ord="28" text="Äpplet{s} hoppar över{v} bananen{o}"/>
-<sentence ord="29" text="Äpplet{s} gömmer{v} bananen{o}"/>
-<sentence ord="30" text="Bävern{s} äter{v} äpplet{o}"/>
-<sentence ord="31" text="Bävern{s} gömmer{v} bävern{o}"/>
-<sentence ord="32" text="Fågeln{s} äter{v} fågeln{o}"/>
-<sentence ord="33" text="Fågeln{s} hoppar över{v} bananen{o}"/>
-<sentence ord="34" text="Fågeln{s} gömmer{v} äpplet{o}"/>
-<sentence ord="35" text="Bananen{s} hoppar över{v} bävern{o}"/>
-<sentence ord="36" text="Bananen{s} gömmer{v} fågeln{o}"/>
-<sentence ord="37" text="Äpplet{s} äter{v} bananen{o}"/>
-<sentence ord="38" text="Äpplet{s} hoppar över{v} äpplet{o}"/>
-<sentence ord="39" text="Äpplet{s} gömmer{v} äpplet{o}"/>
-<sentence ord="40" text="Bävern{s} hoppar över{v} bävern{o}"/>
-<sentence ord="41" text="Bävern{s} gömmer{v} fågeln{o}"/>
-<sentence ord="42" text="Fågeln{s} äter{v} bananen{o}"/>
-<sentence ord="43" text="Fågeln{s} hoppar över{v} äpplet{o}"/>
-<sentence ord="44" text="Bananen{s} äter{v} bävern{o}"/>
-<sentence ord="45" text="Bananen{s} hoppar över{v} fågeln{o}"/>
-<sentence ord="46" text="Bananen{s} gömmer{v} bananen{o}"/>
-<sentence ord="47" text="Äpplet{s} äter{v} äpplet{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="Äpplet{s} gömmer{v} äpplet{o}"/>
-<sentence ord="1" text="Äpplet{s} hoppar över{v} bananen{o}"/>
-<sentence ord="2" text="Äpplet{s} äter{v} fågeln{o}"/>
-<sentence ord="3" text="Bananen{s} gömmer{v} bävern{o}"/>
-<sentence ord="4" text="Bananen{s} äter{v} äpplet{o}"/>
-<sentence ord="5" text="Fågeln{s} gömmer{v} bananen{o}"/>
-<sentence ord="6" text="Fågeln{s} hoppar över{v} fågeln{o}"/>
-<sentence ord="7" text="Fågeln{s} äter{v} bävern{o}"/>
-<sentence ord="8" text="Bävern{s} hoppar över{v} äpplet{o}"/>
-<sentence ord="9" text="Bävern{s} äter{v} äpplet{o}"/>
-<sentence ord="10" text="Äpplet{s} gömmer{v} bananen{o}"/>
-<sentence ord="11" text="Äpplet{s} hoppar över{v} fågeln{o}"/>
-<sentence ord="12" text="Äpplet{s} äter{v} bävern{o}"/>
-<sentence ord="13" text="Bananen{s} hoppar över{v} äpplet{o}"/>
-<sentence ord="14" text="Bananen{s} äter{v} bananen{o}"/>
-<sentence ord="15" text="Fågeln{s} gömmer{v} fågeln{o}"/>
-<sentence ord="16" text="Fågeln{s} hoppar över{v} bävern{o}"/>
-<sentence ord="17" text="Bävern{s} gömmer{v} äpplet{o}"/>
-<sentence ord="18" text="Bävern{s} hoppar över{v} bananen{o}"/>
-<sentence ord="19" text="Bävern{s} äter{v} bananen{o}"/>
-<sentence ord="20" text="Äpplet{s} gömmer{v} fågeln{o}"/>
-<sentence ord="21" text="Äpplet{s} hoppar över{v} bävern{o}"/>
-<sentence ord="22" text="Bananen{s} gömmer{v} äpplet{o}"/>
-<sentence ord="23" text="Bananen{s} hoppar över{v} bananen{o}"/>
-<sentence ord="24" text="Bananen{s} äter{v} fågeln{o}"/>
-<sentence ord="25" text="Fågeln{s} gömmer{v} bävern{o}"/>
-<sentence ord="26" text="Fågeln{s} äter{v} äpplet{o}"/>
-<sentence ord="27" text="Bävern{s} gömmer{v} bananen{o}"/>
-<sentence ord="28" text="Bävern{s} hoppar över{v} fågeln{o}"/>
-<sentence ord="29" text="Bävern{s} äter{v} fågeln{o}"/>
-<sentence ord="30" text="Äpplet{s} gömmer{v} bävern{o}"/>
-<sentence ord="31" text="Äpplet{s} äter{v} äpplet{o}"/>
-<sentence ord="32" text="Bananen{s} gömmer{v} bananen{o}"/>
-<sentence ord="33" text="Bananen{s} hoppar över{v} fågeln{o}"/>
-<sentence ord="34" text="Bananen{s} äter{v} bävern{o}"/>
-<sentence ord="35" text="Fågeln{s} hoppar över{v} äpplet{o}"/>
-<sentence ord="36" text="Fågeln{s} äter{v} bananen{o}"/>
-<sentence ord="37" text="Bävern{s} gömmer{v} fågeln{o}"/>
-<sentence ord="38" text="Bävern{s} hoppar över{v} bävern{o}"/>
-<sentence ord="40" text="Äpplet{s} hoppar över{v} äpplet{o}"/>
-<sentence ord="41" text="Äpplet{s} äter{v} bananen{o}"/>
-<sentence ord="42" text="Bananen{s} gömmer{v} fågeln{o}"/>
-<sentence ord="43" text="Bananen{s} hoppar över{v} bävern{o}"/>
-<sentence ord="44" text="Fågeln{s} gömmer{v} äpplet{o}"/>
-<sentence ord="45" text="Fågeln{s} hoppar över{v} bananen{o}"/>
-<sentence ord="46" text="Fågeln{s} äter{v} fågeln{o}"/>
-<sentence ord="47" text="Bävern{s} gömmer{v} bävern{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

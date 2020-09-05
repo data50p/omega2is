@@ -1,0 +1,1 @@
+java -verbose:class -cp $(echo /usr/share/openjfx/lib/*jar|tr ' ' ':') -jar omega-is-2.0.2-SNAPSHOT.jar 

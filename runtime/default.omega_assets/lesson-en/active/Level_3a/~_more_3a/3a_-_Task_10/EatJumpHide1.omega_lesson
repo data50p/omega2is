@@ -11,8 +11,8 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="beaver" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/butter.wav" dummytext="the butter" ord="0" sign="" sound="audio/words-en/dummy/beaver.wav" text="the beaver" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="buzzard" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/lizard.wav" dummytext="the lizard" ord="1" sign="" sound="audio/words-en/buzzard.wav" text="the buzzard" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="beaver" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/butter.wav" dummytext="The butter" ord="0" sign="" sound="audio/words-en/dummy/beaver.wav" text="The beaver" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="buzzard" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/lizard.wav" dummytext="The lizard" ord="1" sign="" sound="audio/words-en/buzzard.wav" text="The buzzard" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -21,9 +21,9 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/EatFruitRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/eats.wav" text="eats" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/JumpFruitRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/jumpsover.wav" text="jumps over" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/HideFoodGrass" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/hides.wav" text="hides" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/EatFruitRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="seats" ord="0" sign="" sound="audio/words-en/eats.wav" text="eats" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/JumpFruitRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="jolts ever" ord="1" sign="" sound="audio/words-en/jumpsover.wav" text="jumps over" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/HideFoodGrass" action-type="omega_anim" dummysign="" dummysound="" dummytext="hikes" ord="2" sign="" sound="audio/words-en/hides.wav" text="hides" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -31,10 +31,10 @@
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="actor">
-<item Lid="banana" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/bean.wav" dummytext="the bean" ord="0" sign="" sound="audio/words-en/banana.wav" text="the banana" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="apple" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/table.wav" dummytext="the table" ord="1" sign="" sound="audio/words-en/apple.wav" text="the apple" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="banana" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/bean.wav" dummytext="the bean" ord="0" sign="" sound="audio/words-en/banana.wav" text="the banana" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="apple" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/table.wav" dummytext="the table" ord="1" sign="" sound="audio/words-en/apple.wav" text="the apple" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item Lid="orange" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the angle" ord="2" sign="" sound="" text="the orange" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="pear" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="the pair" ord="3" sign="" sound="" text="the pear" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="pear" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the pair" ord="3" sign="" sound="" text="the pear" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -45,47 +45,5 @@
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The buzzard{s} hides{v} the apple{o}"/>
-<sentence ord="1" text="The beaver{s} eats{v} the banana{o}"/>
-<sentence ord="2" text="The buzzard{s} jumps over{v} the apple{o}"/>
-<sentence ord="3" text="The buzzard{s} jumps over{v} the banana{o}"/>
-<sentence ord="4" text="The beaver{s} jumps over{v} the apple{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The buzzard{s} eats{v} the banana{o}"/>
-<sentence ord="1" text="The beaver{s} eats{v} the apple{o}"/>
-<sentence ord="2" text="The buzzard{s} hides{v} the banana{o}"/>
-<sentence ord="3" text="The buzzard{s} eats{v} the apple{o}"/>
-<sentence ord="4" text="The beaver{s} hides{v} the banana{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The buzzard{s} eats{v} the banana{o}"/>
-<sentence ord="1" text="The buzzard{s} eats{v} the apple{o}"/>
-<sentence ord="2" text="The buzzard{s} jumps over{v} the banana{o}"/>
-<sentence ord="3" text="The buzzard{s} jumps over{v} the apple{o}"/>
-<sentence ord="4" text="The buzzard{s} hides{v} the banana{o}"/>
-<sentence ord="5" text="The buzzard{s} hides{v} the apple{o}"/>
-<sentence ord="6" text="The beaver{s} eats{v} the banana{o}"/>
-<sentence ord="7" text="The beaver{s} eats{v} the apple{o}"/>
-<sentence ord="8" text="The beaver{s} jumps over{v} the banana{o}"/>
-<sentence ord="9" text="The beaver{s} jumps over{v} the apple{o}"/>
-<sentence ord="10" text="The beaver{s} hides{v} the banana{o}"/>
-<sentence ord="11" text="The beaver{s} hides{v} the apple{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The beaver{s} hides{v} the apple{o}"/>
-<sentence ord="1" text="The beaver{s} hides{v} the banana{o}"/>
-<sentence ord="2" text="The beaver{s} jumps over{v} the apple{o}"/>
-<sentence ord="3" text="The beaver{s} jumps over{v} the banana{o}"/>
-<sentence ord="4" text="The beaver{s} eats{v} the apple{o}"/>
-<sentence ord="5" text="The beaver{s} eats{v} the banana{o}"/>
-<sentence ord="6" text="The buzzard{s} hides{v} the apple{o}"/>
-<sentence ord="7" text="The buzzard{s} hides{v} the banana{o}"/>
-<sentence ord="8" text="The buzzard{s} jumps over{v} the apple{o}"/>
-<sentence ord="9" text="The buzzard{s} jumps over{v} the banana{o}"/>
-<sentence ord="10" text="The buzzard{s} eats{v} the apple{o}"/>
-<sentence ord="11" text="The buzzard{s} eats{v} the banana{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

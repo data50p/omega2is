@@ -11,130 +11,39 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="boy" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-sv/boy.wav" text="Pojken" var-1="n" var-2="" var-3=""/>
-<item Lid="girl" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-sv/girl.wav" text="Flickan" var-1="n" var-2="" var-3=""/>
-<item Lid="ghost" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-sv/ghost.wav" text="Spöket" var-1="t" var-2="" var-3=""/>
-<item Lid="gorilla" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-sv/gorilla.wav" text="Gorillan" var-1="n" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="boy" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Påsken" ord="0" sign="" sound="audio/words-sv/boy.mp3" text="Pojken" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="girl" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Fickan" ord="1" sign="" sound="audio/words-sv/girl.mp3" text="Flickan" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="ghost" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Spöet" ord="2" sign="" sound="audio/words-sv/ghost.mp3" text="Spöket" tts="" var-1="t" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="gorilla" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Postillan" ord="3" sign="" sound="audio/words-sv/gorilla.mp3" text="Gorillan" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/OutOf{+1}" action-type="omega_anim" dummysound="audio/words-sv/jumpsover.wav" dummytext="hoppar över" ord="0" sound="audio/words-sv/jumpsoutof.wav" text="hoppar ut ur" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/ActiveAnim/OutBehind{+1}" action-type="omega_anim" dummysound="audio/words-sv/dummy/LooksUnder.wav" dummytext="tittar under" ord="1" sound="audio/words-sv/looksoutfrombehind.wav" text="tittar fram bakom" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/OutOf{+1}" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/jumpsover.mp3" dummytext="hoppar över" ord="0" sign="" sound="audio/words-sv/jumpsoutof.mp3" text="hoppar ut ur" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/OutBehind{+1}" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/LooksUnder.mp3" dummytext="tittar under" ord="1" sign="" sound="audio/words-sv/looksoutfrombehind.mp3" text="tittar fram bakom" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="av" ord="2" type="passive">
-<item action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-sv/thehighgrass.wav" text="det höga gräset" var-1="Grass" var-2="" var-3=""/>
-<item action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-sv/thelongcurtain.wav" text="den långa gardinen" var-1="Curtain" var-2="" var-3=""/>
-<item action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-sv/theredbarn.wav" text="den röda ladan" var-1="Barn" var-2="" var-3=""/>
-<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-sv/thebigbush.wav" text="den stora busken" var-1="Bush" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="det tröga fräset" ord="0" sign="" sound="audio/words-sv/thehighgrass.mp3" text="det höga gräset" tts="" var-1="Grass" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="den fångna kaninen" ord="1" sign="" sound="audio/words-sv/thelongcurtain.mp3" text="den långa gardinen" tts="" var-1="Curtain" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="den rökta lavan" ord="2" sign="" sound="audio/words-sv/theredbarn.mp3" text="den röda ladan" tts="" var-1="Barn" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="den stolta busen" ord="3" sign="" sound="audio/words-sv/thebigbush.mp3" text="den stora busken" tts="" var-1="Bush" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
+<sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="Pojken{s} hoppar ut ur{v} det höga gräset{av}"/>
-<sentence ord="1" text="Pojken{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="2" text="Flickan{s} hoppar ut ur{v} den stora busken{av}"/>
-<sentence ord="3" text="Spöket{s} tittar fram bakom{v} den långa gardinen{av}"/>
-<sentence ord="4" text="Gorillan{s} hoppar ut ur{v} det höga gräset{av}"/>
-<sentence ord="5" text="Gorillan{s} tittar fram bakom{v} den långa gardinen{av}"/>
-<sentence ord="6" text="Spöket{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="7" text="Flickan{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="8" text="Pojken{s} hoppar ut ur{v} den stora busken{av}"/>
-<sentence ord="9" text="Pojken{s} tittar fram bakom{v} den röda ladan{av}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="Gorillan{s} tittar fram bakom{v} den stora busken{av}"/>
-<sentence ord="1" text="Gorillan{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="2" text="Gorillan{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="3" text="Spöket{s} tittar fram bakom{v} den stora busken{av}"/>
-<sentence ord="4" text="Spöket{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="5" text="Spöket{s} hoppar ut ur{v} den röda ladan{av}"/>
-<sentence ord="6" text="Spöket{s} hoppar ut ur{v} det höga gräset{av}"/>
-<sentence ord="7" text="Flickan{s} tittar fram bakom{v} den röda ladan{av}"/>
-<sentence ord="8" text="Flickan{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="9" text="Flickan{s} hoppar ut ur{v} den röda ladan{av}"/>
-<sentence ord="10" text="Flickan{s} hoppar ut ur{v} det höga gräset{av}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="Gorillan{s} tittar fram bakom{v} den stora busken{av}"/>
-<sentence ord="1" text="Pojken{s} hoppar ut ur{v} det höga gräset{av}"/>
-<sentence ord="2" text="Gorillan{s} hoppar ut ur{v} den stora busken{av}"/>
-<sentence ord="3" text="Pojken{s} tittar fram bakom{v} den långa gardinen{av}"/>
-<sentence ord="4" text="Spöket{s} tittar fram bakom{v} den stora busken{av}"/>
-<sentence ord="5" text="Flickan{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="6" text="Flickan{s} tittar fram bakom{v} den långa gardinen{av}"/>
-<sentence ord="7" text="Spöket{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="8" text="Gorillan{s} hoppar ut ur{v} det höga gräset{av}"/>
-<sentence ord="9" text="Pojken{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="10" text="Gorillan{s} tittar fram bakom{v} den röda ladan{av}"/>
-<sentence ord="11" text="Pojken{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="12" text="Gorillan{s} hoppar ut ur{v} den röda ladan{av}"/>
-<sentence ord="13" text="Pojken{s} tittar fram bakom{v} den röda ladan{av}"/>
-<sentence ord="14" text="Spöket{s} tittar fram bakom{v} den röda ladan{av}"/>
-<sentence ord="15" text="Flickan{s} hoppar ut ur{v} den röda ladan{av}"/>
-<sentence ord="16" text="Flickan{s} tittar fram bakom{v} den röda ladan{av}"/>
-<sentence ord="17" text="Spöket{s} hoppar ut ur{v} den röda ladan{av}"/>
-<sentence ord="18" text="Spöket{s} hoppar ut ur{v} den stora busken{av}"/>
-<sentence ord="19" text="Spöket{s} hoppar ut ur{v} det höga gräset{av}"/>
-<sentence ord="20" text="Gorillan{s} tittar fram bakom{v} den långa gardinen{av}"/>
-<sentence ord="21" text="Pojken{s} hoppar ut ur{v} den röda ladan{av}"/>
-<sentence ord="22" text="Gorillan{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="23" text="Pojken{s} tittar fram bakom{v} den stora busken{av}"/>
-<sentence ord="24" text="Spöket{s} tittar fram bakom{v} den långa gardinen{av}"/>
-<sentence ord="25" text="Flickan{s} hoppar ut ur{v} den stora busken{av}"/>
-<sentence ord="26" text="Flickan{s} tittar fram bakom{v} den stora busken{av}"/>
-<sentence ord="27" text="Spöket{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="28" text="Flickan{s} hoppar ut ur{v} det höga gräset{av}"/>
-<sentence ord="30" text="Gorillan{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="31" text="Pojken{s} hoppar ut ur{v} den stora busken{av}"/>
-<sentence ord="35" text="Flickan{s} tittar fram bakom{v} det höga gräset{av}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="Spöket{s} hoppar ut ur{v} den stora busken{av}"/>
-<sentence ord="1" text="Flickan{s} tittar fram bakom{v} den röda ladan{av}"/>
-<sentence ord="2" text="Gorillan{s} hoppar ut ur{v} det höga gräset{av}"/>
-<sentence ord="3" text="Pojken{s} hoppar ut ur{v} den röda ladan{av}"/>
-<sentence ord="4" text="Gorillan{s} tittar fram bakom{v} den stora busken{av}"/>
-<sentence ord="5" text="Gorillan{s} hoppar ut ur{v} den stora busken{av}"/>
-<sentence ord="6" text="Flickan{s} tittar fram bakom{v} den stora busken{av}"/>
-<sentence ord="7" text="Pojken{s} hoppar ut ur{v} det höga gräset{av}"/>
-<sentence ord="8" text="Pojken{s} tittar fram bakom{v} den stora busken{av}"/>
-<sentence ord="9" text="Spöket{s} hoppar ut ur{v} den röda ladan{av}"/>
-<sentence ord="10" text="Gorillan{s} tittar fram bakom{v} den röda ladan{av}"/>
-<sentence ord="11" text="Gorillan{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="12" text="Flickan{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="13" text="Pojken{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="14" text="Pojken{s} tittar fram bakom{v} den långa gardinen{av}"/>
-<sentence ord="15" text="Flickan{s} hoppar ut ur{v} den röda ladan{av}"/>
-<sentence ord="16" text="Spöket{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="17" text="Gorillan{s} tittar fram bakom{v} den långa gardinen{av}"/>
-<sentence ord="18" text="Spöket{s} tittar fram bakom{v} den röda ladan{av}"/>
-<sentence ord="19" text="Flickan{s} tittar fram bakom{v} den långa gardinen{av}"/>
-<sentence ord="20" text="Pojken{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="21" text="Pojken{s} tittar fram bakom{v} den röda ladan{av}"/>
-<sentence ord="22" text="Spöket{s} hoppar ut ur{v} det höga gräset{av}"/>
-<sentence ord="23" text="Pojken{s} hoppar ut ur{v} den stora busken{av}"/>
-<sentence ord="24" text="Flickan{s} hoppar ut ur{v} den långa gardinen{av}"/>
-<sentence ord="25" text="Gorillan{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="26" text="Spöket{s} tittar fram bakom{v} det höga gräset{av}"/>
-<sentence ord="27" text="Flickan{s} hoppar ut ur{v} den stora busken{av}"/>
-<sentence ord="28" text="Gorillan{s} hoppar ut ur{v} den röda ladan{av}"/>
-<sentence ord="29" text="Spöket{s} tittar fram bakom{v} den långa gardinen{av}"/>
-<sentence ord="30" text="Flickan{s} hoppar ut ur{v} det höga gräset{av}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

@@ -11,74 +11,39 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="apple" action-fname="" action-type="null" dummysound="audio/words-sv/dummy/pear.wav" dummytext="päronet" ord="0" sound="audio/words-sv/apple.wav" text="äpplet" var-1="null" var-2="null" var-3="null"/>
-<item Lid="squirrel" action-fname="" action-type="null" dummysound="audio/words-sv/dummy/stag-beetle.wav" dummytext="ekoxen" ord="1" sound="audio/words-sv/squirrel.wav" text="ekorren" var-1="null" var-2="null" var-3="null"/>
-<item Lid="frog" action-fname="" action-type="null" dummysound="audio/words-sv/dummy/crops.wav" dummytext="grödan" ord="2" sound="audio/words-sv/frog.wav" text="grodan" var-1="null" var-2="null" var-3="null"/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="apple" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/pear.wav" dummytext="Päronet" ord="0" sign="" sound="audio/words-sv/apple.mp3" text="Äpplet" tts="äpp-let" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="squirrel" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/stag-beetle.mp3" dummytext="Ekoxen" ord="1" sign="" sound="audio/words-sv/squirrel.mp3" text="Ekorren" tts="e'korren" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="frog" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/crops.mp3" dummytext="Grödan" ord="2" sign="" sound="audio/words-sv/frog.mp3" text="Grodan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/HidingInGrass" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-sv/hides.wav" text="gömmer" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="1" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/HidingInGrass" action-type="omega_anim" dummysign="" dummysound="" dummytext="tömmer" ord="0" sign="" sound="audio/words-sv/hides.mp3" text="gömmer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="passive">
-<item Lid="frog" action-fname="" action-type="omega_anim" dummysound="audio/words-sv/dummy/crops.wav" dummytext="grödan" ord="0" sound="audio/words-sv/frog.wav" text="grodan" var-1="" var-2="" var-3=""/>
-<item Lid="apple" action-fname="" action-type="omega_anim" dummysound="audio/words-sv/dummy/pear.wav" dummytext="päronet" ord="1" sound="audio/words-sv/apple.wav" text="äpplet" var-1="" var-2="" var-3=""/>
-<item Lid="squirrel" action-fname="" action-type="null" dummysound="audio/words-sv/dummy/stag-beetle.wav" dummytext="ekoxen" ord="2" sound="audio/words-sv/squirrel.wav" text="ekorren" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="frog" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/crops.mp3" dummytext="grödan" ord="0" sign="" sound="audio/words-sv/frog.mp3" text="grodan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="apple" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/pear.mp3" dummytext="päronet" ord="1" sign="" sound="audio/words-sv/apple.mp3" text="äpplet" tts="äpp-let" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="squirrel" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/stag-beetle.mp3" dummytext="ekoxen" ord="2" sign="" sound="audio/words-sv/squirrel.mp3" text="ekorren" tts="e'korren" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
+<sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="Äpplet{s} gömmer{v} grodan{o}"/>
-<sentence ord="1" text="Äpplet{s} gömmer{v} ekorren{o}"/>
-<sentence ord="2" text="Ekorren{s} gömmer{v} ekorren{o}"/>
-<sentence ord="3" text="Grodan{s} gömmer{v} ekorren{o}"/>
-<sentence ord="4" text="Ekorren{s} gömmer{v} grodan{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="Ekorren{s} gömmer{v} grodan{o}"/>
-<sentence ord="1" text="Äpplet{s} gömmer{v} äpplet{o}"/>
-<sentence ord="2" text="Grodan{s} gömmer{v} grodan{o}"/>
-<sentence ord="3" text="Grodan{s} gömmer{v} äpplet{o}"/>
-<sentence ord="4" text="Ekorren{s} gömmer{v} äpplet{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="Grodan{s} gömmer{v} ekorren{o}"/>
-<sentence ord="1" text="Äpplet{s} gömmer{v} äpplet{o}"/>
-<sentence ord="2" text="Ekorren{s} gömmer{v} äpplet{o}"/>
-<sentence ord="3" text="Äpplet{s} gömmer{v} ekorren{o}"/>
-<sentence ord="4" text="Grodan{s} gömmer{v} grodan{o}"/>
-<sentence ord="5" text="Ekorren{s} gömmer{v} grodan{o}"/>
-<sentence ord="6" text="Ekorren{s} gömmer{v} ekorren{o}"/>
-<sentence ord="7" text="Grodan{s} gömmer{v} äpplet{o}"/>
-<sentence ord="8" text="Äpplet{s} gömmer{v} grodan{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="Äpplet{s} gömmer{v} grodan{o}"/>
-<sentence ord="1" text="Grodan{s} gömmer{v} ekorren{o}"/>
-<sentence ord="2" text="Grodan{s} gömmer{v} äpplet{o}"/>
-<sentence ord="3" text="Ekorren{s} gömmer{v} äpplet{o}"/>
-<sentence ord="4" text="Äpplet{s} gömmer{v} ekorren{o}"/>
-<sentence ord="5" text="Ekorren{s} gömmer{v} ekorren{o}"/>
-<sentence ord="6" text="Grodan{s} gömmer{v} grodan{o}"/>
-<sentence ord="7" text="Ekorren{s} gömmer{v} grodan{o}"/>
-<sentence ord="8" text="Äpplet{s} gömmer{v} äpplet{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

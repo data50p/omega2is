@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE omega_lesson >
+
+<omega_lesson version="0.0">
+<lesson_canvas color_bg_b="#8cdcf0" color_bg_fr="#0" color_bg_frbg="#ffff66" color_bg_m="#d2b4dc" color_bg_t="#f0dc8c" color_bg_tx="#0" color_bt_bg="#f0dc8c" color_bt_fr="#0" color_bt_fr_hi="#0" color_bt_fr_hs="#ff0000" color_bt_hi="#ffffcc" color_bt_hs="#ffff33" color_bt_tx="#0" color_bt_tx_hi="#0" color_bt_tx_hs="#0" color_sn_bg="#ffff66" color_sn_fr="#0" color_sn_hi="#ff9933" color_sn_tx="#0" show_wordbox="true"/>
+<lesson name="abc" ord="0">
+<target>
+<t-item Lid="{+-1}" Tid="sv" ord="0" type="action"/>
+</target>
+<items>
+<item-entry Tid="sv" ord="0" type="action">
+<item Lid="VacuumCleaner" action-fname="anim/ActiveAnim/ActorPresB5" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/vacuum.mp3" text="dammsugaren" tts="damm-su'ugaren" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="skateboard" action-fname="anim/ActiveAnim/ActorPresB5" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="rullbrädan" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="plane" action-fname="anim/ActiveAnim/AirFlight" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/plane.mp3" text="planet" tts="plaa-net" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="frog" action-fname="anim/ActiveAnim/ActorPresB5Water" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/frog.mp3" text="grodan" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="banana" action-fname="anim/ActiveAnim/fruit_banana" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-sv/banana.mp3" text="bananen" tts="bann-a-nen" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="squirrel" action-fname="anim/ActiveAnim/JumpInSchoolyard" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-sv/squirrel.mp3" text="ekorren" tts="e'korren" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="apple" action-fname="anim/ActiveAnim/fruit" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="audio/words-sv/apple.mp3" text="äpplet" tts="äpp-let" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="rocket2" action-fname="anim/ActiveAnim/FlyInSpace" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="audio/words-sv/rocket.mp3" text="raketen" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+<item-entry Tid="sv" ord="1" type="action">
+<item Lid="fridge_door" action-fname="anim/ActiveAnim/kitchen_closed_open" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/extra/fridge.mp3" text="kylskåpet" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="man" action-fname="anim/ActiveAnim/ActorPresentationCoast" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/dummy/man.mp3" text="mannen" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="robot" action-fname="anim/ActiveAnim/ActorPresentationCoast" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/robot.mp3" text="roboten" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="woman" action-fname="anim/ActiveAnim/ActorPresentationCoast" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/winter.mp3" text="kvinnan" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="bird" action-fname="anim/ActiveAnim/ActorPresentationCoast" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-sv/bird.mp3" text="fågeln" tts="" var-1="B" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="ball" action-fname="anim/ActiveAnim/rollingInPark" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-sv/ball.mp3" text="bollen" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="cupboard" action-fname="anim/ActiveAnim/kitchen_closed_open" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="skåpet" tts="" var-1="B" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="drawer" action-fname="anim/ActiveAnim/kitchen_closed_open" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="lådan" tts="" var-1="C" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+<item-entry Tid="sv" ord="2" type="action">
+<item Lid="ape" action-fname="anim/ActiveAnim/ActorPresB4DownOnRoundTable" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/ape.mp3" text="apan" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="tiger" action-fname="anim/ActiveAnim/four_images" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/tiger.mp3" text="tigern" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="oven" action-fname="anim/ActiveAnim/kitchen_closed_open" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/icecream.mp3" text="ugnen" tts="" var-1="D" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="flower" action-fname="anim/ActiveAnim/four_images" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/flower.mp3" text="blomman" tts="" var-1="A" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+</item-entry>
+</items>
+</lesson>
+<action_specific>
+<value key="Apan" val="anim/ActiveVideo/animalsEating/gorilla.mp4"/>
+</action_specific>
+<sign_specific/>
+<test_entries>
+</test_entries>
+</omega_lesson>

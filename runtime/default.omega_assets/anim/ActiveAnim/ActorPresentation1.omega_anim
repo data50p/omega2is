@@ -14,28 +14,30 @@
 <q ord="3" p1="409.0625305175781,431.6186218261719" p2="408.70367431640625,431.439208984375" pc="406.78887939453125,431.6781921386719"/>
 <q ord="4" p1="408.70367431640625,431.439208984375" p2="406.78887939453125,431.6781921386719" pc="407.8064880371094,432.15692138671875"/>
 <q ord="5" p1="406.78887939453125,431.6781921386719" p2="1046.923095703125,416.1538391113281" pc="593.0,479.0"/>
+<help len="0.0;27.246758924452042;56.95969531876291;124.10016668669279;201.94010364795201;290.7951697855691;390.87685578290984;502.332762164684;625.2695278788422;759.766486070079;837.0826656573852;909.0262716713255;975.6325778623617;1036.9460703444538;1093.0238329077156;1143.9405620413124;1189.7961823624798;1230.727701784883;1373.7234368094466;1479.8184917587143;1481.0451239226543;1481.928234170765;1483.8578850565152;1535.5909769324946;1595.067528730836;1662.6122736058317;1738.4463677473902;1822.7257367290601;1915.5637632336197;2017.045146857461;2127.234657278337" seg="-126.0,439.0;-99.728515625,446.224609375;-70.6640625,452.3984375;-4.15625,461.59375;73.5234375,466.5859375;162.375,467.375;262.3984375,463.9609375;373.59375,456.34375;495.9609375,444.5234375;629.5,428.5;552.4921875,435.3984375;480.71875,440.34375;414.1796875,443.3359375;352.875,444.375;296.8046875,443.4609375;245.96875,440.59375;200.3671875,435.7734375;160.0,429.0;302.9956283569336,429.1746597290039;409.0625305175781,431.6186218261719;407.8359909057617,431.60355377197266;408.70367431640625,431.439208984375;406.78887939453125,431.6781921386719;457.5246591567993,441.78726959228516;516.6264381408691,448.45359802246094;584.0942163467407,451.6771774291992;659.9279937744141,451.4580078125;744.1277704238892,447.7960891723633;836.693546295166,440.69142150878906;937.6253213882446,430.14400482177734;1046.923095703125,416.1538391113281"/>
+<info flatness="1.5" size="31"/>
 <mark id="0" type="^" where="756.82"/>
 <mark id="1" type="^" where="1232.32"/>
 <mark id="2" type="^" where="1479.08"/>
 <mark id="5" type="^" where="1482.63"/>
 <mark id="4" type="^" where="1484.77"/>
 <mark id="3" type="^" where="1486.28"/>
-<info flatness="0.3333333333333333" size="61"/>
-<help len="0.0;13.323385900963663;27.250287909932254;41.793935637653725;56.965945420406;72.77654864820957;89.23478579455555;106.34867101863372;124.12533175454553;161.69040235362428;201.9749623213036;245.01409156218148;290.83654404111456;339.46613675895287;390.92278896223206;445.2233088067354;502.38199568935215;562.4111065294637;625.321220515304;691.1215272510337;759.8200565123539;799.1520508102744;837.1371196614355;873.7789919957813;909.081822379036;943.0502567017196;975.6895106754761;1007.0054641489944;1037.004775079598;1065.6950180731626;1093.084853817683;1119.184237595028;1144.0046775058297;1167.5595562687865;1189.8645346833189;1210.9380603250142;1230.8020120021833;1306.9161701714409;1373.7989225148817;1431.4561000144624;1479.8968653094814;1481.1234974734214;1482.0066077215322;1483.024005302719;1484.027711038121;1508.9606295912029;1535.7759898711608;1564.528502357733;1595.2625341403386;1628.0144005438758;1662.8141003154726;1699.6866343136749;1738.6530138052456;1779.7310371984277;1822.9358932805594;1868.2806336617969;1915.7765459004636;1965.4334506217772;2017.2599400031477;2071.263570665078;2127.451020827194" seg="-126.0,439.0;-113.21337890625,442.74365234375;-99.728515625,446.224609375;-85.54541015625,449.44287109375;-70.6640625,452.3984375;-55.08447265625,455.09130859375;-38.806640625,457.521484375;-21.83056640625,459.68896484375;-4.15625,461.59375;33.287109375,464.615234375;73.5234375,466.5859375;116.552734375,467.505859375;162.375,467.375;210.990234375,466.193359375;262.3984375,463.9609375;316.599609375,460.677734375;373.59375,456.34375;433.380859375,450.958984375;495.9609375,444.5234375;561.333984375,437.037109375;629.5,428.5;590.341796875,432.193359375;552.4921875,435.3984375;515.951171875,438.115234375;480.71875,440.34375;446.794921875,442.083984375;414.1796875,443.3359375;382.873046875,444.099609375;352.875,444.375;324.185546875,444.162109375;296.8046875,443.4609375;270.732421875,442.271484375;245.96875,440.59375;222.513671875,438.427734375;200.3671875,435.7734375;179.529296875,432.630859375;160.0,429.0;236.11390495300293,428.80366706848145;302.9956283569336,429.1746597290039;360.645170211792,430.1129779815674;409.0625305175781,431.6186218261719;407.8359909057617,431.60355377197266;408.70367431640625,431.439208984375;407.77638244628906,431.8578109741211;406.78887939453125,431.6781921386719;431.11101937294006,437.1630744934082;457.5246591567993,441.78726959228516;486.029798746109,445.55077743530273;516.6264381408691,448.45359802246094;549.3145773410797,450.49573135375977;584.0942163467407,451.6771774291992;620.9653551578522,451.9979362487793;659.9279937744141,451.4580078125;700.9821321964264,450.0573921203613;744.1277704238892,447.7960891723633;789.3649084568024,444.67409896850586;836.693546295166,440.69142150878906;886.1136839389801,435.8480567932129;937.6253213882446,430.14400482177734;991.2284586429596,423.5792655944824;1046.923095703125,416.1538391113281"/>
 </TPath>
 </AllPath>
 <lesson verb="äter"/>
 <AllActors>
-<Actor hotspot_begin="0.5853456221198157 0.63" hotspot_end="0.5773271889400922 0.62" hotspot_rotate="0.5051612903225806 0.5" lesson_id="lemur" name="actor/ChaseRun/lemur.png" nid="0" prim_mirror="0" prim_scale="1.0"/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" lesson_id="leopard" name="actor/ChaseRun/leopard.png" nid="1" prim_mirror="0" prim_scale="1.0"/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" lesson_id="mouse" name="actor/FlyJump/mouse.png" nid="2" prim_mirror="0" prim_scale="0.8"/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_3.gif" nid="3" prim_mirror="0" prim_scale="1.0"/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_4.gif" nid="4" prim_mirror="0" prim_scale="1.0"/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_5.gif" nid="5" prim_mirror="0" prim_scale="1.0"/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_6.gif" nid="6" prim_mirror="0" prim_scale="1.0"/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_7.gif" nid="7" prim_mirror="0" prim_scale="1.0"/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_8.gif" nid="8" prim_mirror="0" prim_scale="1.0"/>
-<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_9.gif" nid="9" prim_mirror="0" prim_scale="1.0"/>
+<Actor hotspot_begin="0.5853456221198157 0.63" hotspot_end="0.5773271889400922 0.62" hotspot_rotate="0.5051612903225806 0.5" lesson_id="lemur" name="actor/ChaseRun/lemur.png" nid="0" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" lesson_id="leopard" name="actor/ChaseRun/leopard.png" nid="1" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" lesson_id="mouse" name="actor/FlyJump/mouse.png" nid="2" prim_mirror="0" prim_scale="0.8" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.48259541984732823 0.15" hotspot_end="0.48259541984732823 0.16" hotspot_rotate="0.5 0.5" lesson_id="frog" name="actor/FlyJump/frog.png" nid="3" prim_mirror="0" prim_scale="0.8" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_4.gif" nid="4" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_5.gif" nid="5" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_6.gif" nid="6" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_7.gif" nid="7" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_8.gif" nid="8" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_9.gif" nid="9" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_10.gif" nid="10" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_11.gif" nid="11" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 </AllActors>
 <AllWings/>
 </AnimCanvas>
@@ -53,6 +55,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
@@ -67,6 +70,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="t" when="990">
@@ -81,6 +85,7 @@
 <TriggerEvent arg="X" cmd="SetMirror" isOn="true"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="^" when="990"/>
@@ -96,6 +101,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="true"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="^" when="1720"/>
@@ -112,6 +118,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="t" when="3290">
@@ -126,6 +133,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="^" when="3300"/>
@@ -141,6 +149,7 @@
 <TriggerEvent arg="X" cmd="SetMirror" isOn="true"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="^" when="4110"/>
@@ -156,6 +165,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="true"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="^" when="4910"/>
@@ -171,6 +181,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 <TimeMarker duration="0" type="}" when="6370">
@@ -185,6 +196,7 @@
 <TriggerEvent arg="" cmd="SetMirror" isOn="false"/>
 <TriggerEvent arg="" cmd="Dinner" isOn="false"/>
 <TriggerEvent arg="" cmd="Option" isOn="false"/>
+<TriggerEvent arg="{" cmd="ResetSequence" isOn="false"/>
 </T_Event>
 </TimeMarker>
 </TimeLine>

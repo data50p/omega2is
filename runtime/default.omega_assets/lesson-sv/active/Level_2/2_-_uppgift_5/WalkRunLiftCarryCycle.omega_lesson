@@ -20,12 +20,12 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/ActorWalk" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/walks.mp3" text="går" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/ActorRun" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/rolls.mp3" text="springer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/ActorLift" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="lyfter" tts="" var-1=",B" var-2=",box" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/InSchoolyard" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/jumps.mp3" text="hoppar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/CarryRockOnRock" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-sv/carries.mp3" text="bär" tts="" var-1=",B" var-2=",stone" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/Stories/L3/L3-4beach" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-sv/cycles.mp3" text="cyklar" tts="" var-1="" var-2="Rides" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/ActorWalk" action-type="omega_anim" dummysign="" dummysound="" dummytext="bor" ord="0" sign="" sound="audio/words-sv/walks.mp3" text="går" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/ActorRun" action-type="omega_anim" dummysign="" dummysound="" dummytext="sjunger" ord="1" sign="" sound="audio/words-sv/rolls.mp3" text="springer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/ActorLift" action-type="omega_anim" dummysign="" dummysound="" dummytext="flyter" ord="2" sign="" sound="" text="lyfter" tts="" var-1=",B" var-2=",box" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/InSchoolyard" action-type="omega_anim" dummysign="" dummysound="" dummytext="hostar" ord="3" sign="" sound="audio/words-sv/jumps.mp3" text="hoppar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/CarryRockOnRock" action-type="omega_anim" dummysign="" dummysound="" dummytext="lär" ord="4" sign="" sound="audio/words-sv/carries.mp3" text="bär" tts="" var-1=",B" var-2=",stone" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/Stories/L3/L3-4beach" action-type="omega_anim" dummysign="" dummysound="" dummytext="suckar" ord="5" sign="" sound="audio/words-sv/cycles.mp3" text="cyklar" tts="" var-1="" var-2="Rides" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
@@ -38,42 +38,5 @@
 </action_specific>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The squirrel{s} hides{v}"/>
-<sentence ord="1" text="The squirrel{s} dances{v}"/>
-<sentence ord="2" text="The squirrel{s} jumps{v}"/>
-<sentence ord="3" text="The frog{s} hides{v}"/>
-<sentence ord="4" text="The frog{s} dances{v}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The mouse{s} jumps{v}"/>
-<sentence ord="1" text="The mouse{s} dances{v}"/>
-<sentence ord="2" text="The mouse{s} hides{v}"/>
-<sentence ord="3" text="The frog{s} jumps{v}"/>
-<sentence ord="4" text="The frog{s} dances{v}"/>
-<sentence ord="8" text="The squirrel{s} hides{v}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The squirrel{s} hides{v}"/>
-<sentence ord="1" text="The frog{s} hides{v}"/>
-<sentence ord="2" text="The squirrel{s} dances{v}"/>
-<sentence ord="3" text="The frog{s} dances{v}"/>
-<sentence ord="4" text="The squirrel{s} jumps{v}"/>
-<sentence ord="5" text="The mouse{s} hides{v}"/>
-<sentence ord="6" text="The frog{s} jumps{v}"/>
-<sentence ord="7" text="The mouse{s} dances{v}"/>
-<sentence ord="8" text="The mouse{s} jumps{v}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The mouse{s} hides{v}"/>
-<sentence ord="1" text="The frog{s} hides{v}"/>
-<sentence ord="2" text="The squirrel{s} jumps{v}"/>
-<sentence ord="3" text="The mouse{s} dances{v}"/>
-<sentence ord="4" text="The frog{s} dances{v}"/>
-<sentence ord="5" text="The frog{s} jumps{v}"/>
-<sentence ord="6" text="The mouse{s} jumps{v}"/>
-<sentence ord="7" text="The squirrel{s} hides{v}"/>
-<sentence ord="8" text="The squirrel{s} dances{v}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

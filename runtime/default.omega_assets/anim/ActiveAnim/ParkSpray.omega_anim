@@ -4,7 +4,7 @@
 <omega class="Animation" version="0.1">
 <AnimCanvas>
 <Canvas>
-<background height="493" name="background/Park_Spain.png" width="800"/>
+<background height="493" name="background/Park_Spain.jpg" width="800"/>
 </Canvas>
 <AllPath>
 <TPath nid="0">

@@ -11,19 +11,19 @@
 </target>
 <items>
 <item-entry Tid="s,o" ord="0" type="actor">
-<item Lid="orange" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="the angle" ord="0" sign="" sound="" text="the orange" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="pear" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="the pair" ord="1" sign="" sound="" text="the pear" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="banana" action-fname="" action-type="null" dummysign="" dummysound="audio/words-en/dummy/bean.wav" dummytext="the bean" ord="2" sign="" sound="audio/words-en/banana.wav" text="the banana" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="apple" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/table.wav" dummytext="the table" ord="3" sign="" sound="audio/words-en/apple.wav" text="the apple" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="orange" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the angle" ord="0" sign="" sound="" text="the orange" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="pear" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the hair" ord="1" sign="" sound="" text="the pear" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="banana" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/bean.mp3" dummytext="the bean" ord="2" sign="" sound="audio/words-en/banana.mp3" text="the banana" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="apple" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/table.mp3" dummytext="the table" ord="3" sign="" sound="audio/words-en/apple.mp3" text="the apple" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/EatEatenInPark" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/eats.wav" text="eats" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/JumpFruitRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/jumpsover.wav" text="jumps over" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/HideFoodGrass" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="hides" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/EatEatenInPark" action-type="omega_anim" dummysign="" dummysound="" dummytext="meets" ord="0" sign="" sound="audio/words-en/eats.mp3" text="eats" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/JumpFruitRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="jives yonder" ord="1" sign="" sound="audio/words-en/jumpsover.mp3" text="jumps over" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/HideFoodGrass" action-type="omega_anim" dummysign="" dummysound="" dummytext="likes" ord="2" sign="" sound="audio/words-en/hides.mp3" text="hides" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -35,128 +35,5 @@
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The beaver{s} eats{v} the beaver{o}"/>
-<sentence ord="1" text="The beaver{s} jumps over{v} the beaver{o}"/>
-<sentence ord="2" text="The beaver{s} hides{v} the buzzard{o}"/>
-<sentence ord="3" text="The buzzard{s} jumps over{v} the beaver{o}"/>
-<sentence ord="4" text="The buzzard{s} hides{v} the buzzard{o}"/>
-<sentence ord="5" text="The banana{s} eats{v} the buzzard{o}"/>
-<sentence ord="6" text="The banana{s} jumps over{v} the apple{o}"/>
-<sentence ord="7" text="The apple{s} eats{v} the buzzard{o}"/>
-<sentence ord="8" text="The apple{s} jumps over{v} the banana{o}"/>
-<sentence ord="9" text="The apple{s} hides{v} the apple{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The apple{s} hides{v} the buzzard{o}"/>
-<sentence ord="1" text="The apple{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="2" text="The apple{s} eats{v} the beaver{o}"/>
-<sentence ord="3" text="The banana{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="4" text="The banana{s} eats{v} the buzzard{o}"/>
-<sentence ord="5" text="The buzzard{s} hides{v} the banana{o}"/>
-<sentence ord="6" text="The buzzard{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="7" text="The buzzard{s} eats{v} the buzzard{o}"/>
-<sentence ord="8" text="The beaver{s} jumps over{v} the apple{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The beaver{s} hides{v} the banana{o}"/>
-<sentence ord="1" text="The beaver{s} hides{v} the apple{o}"/>
-<sentence ord="2" text="The buzzard{s} eats{v} the beaver{o}"/>
-<sentence ord="3" text="The buzzard{s} eats{v} the buzzard{o}"/>
-<sentence ord="4" text="The buzzard{s} eats{v} the banana{o}"/>
-<sentence ord="5" text="The buzzard{s} eats{v} the apple{o}"/>
-<sentence ord="6" text="The buzzard{s} jumps over{v} the beaver{o}"/>
-<sentence ord="7" text="The buzzard{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="8" text="The buzzard{s} jumps over{v} the banana{o}"/>
-<sentence ord="9" text="The beaver{s} hides{v} the buzzard{o}"/>
-<sentence ord="10" text="The beaver{s} hides{v} the beaver{o}"/>
-<sentence ord="11" text="The beaver{s} jumps over{v} the apple{o}"/>
-<sentence ord="12" text="The beaver{s} jumps over{v} the banana{o}"/>
-<sentence ord="13" text="The beaver{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="14" text="The beaver{s} jumps over{v} the beaver{o}"/>
-<sentence ord="15" text="The beaver{s} eats{v} the apple{o}"/>
-<sentence ord="16" text="The beaver{s} eats{v} the banana{o}"/>
-<sentence ord="17" text="The beaver{s} eats{v} the buzzard{o}"/>
-<sentence ord="18" text="The beaver{s} eats{v} the beaver{o}"/>
-<sentence ord="19" text="The buzzard{s} jumps over{v} the apple{o}"/>
-<sentence ord="20" text="The buzzard{s} hides{v} the beaver{o}"/>
-<sentence ord="21" text="The buzzard{s} hides{v} the buzzard{o}"/>
-<sentence ord="22" text="The buzzard{s} hides{v} the banana{o}"/>
-<sentence ord="23" text="The buzzard{s} hides{v} the apple{o}"/>
-<sentence ord="24" text="The banana{s} eats{v} the beaver{o}"/>
-<sentence ord="25" text="The banana{s} eats{v} the buzzard{o}"/>
-<sentence ord="26" text="The banana{s} eats{v} the banana{o}"/>
-<sentence ord="27" text="The banana{s} eats{v} the apple{o}"/>
-<sentence ord="28" text="The banana{s} jumps over{v} the beaver{o}"/>
-<sentence ord="29" text="The apple{s} eats{v} the banana{o}"/>
-<sentence ord="30" text="The apple{s} eats{v} the apple{o}"/>
-<sentence ord="31" text="The apple{s} jumps over{v} the beaver{o}"/>
-<sentence ord="32" text="The apple{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="33" text="The apple{s} jumps over{v} the banana{o}"/>
-<sentence ord="34" text="The apple{s} jumps over{v} the apple{o}"/>
-<sentence ord="35" text="The apple{s} hides{v} the beaver{o}"/>
-<sentence ord="36" text="The apple{s} hides{v} the buzzard{o}"/>
-<sentence ord="37" text="The apple{s} hides{v} the banana{o}"/>
-<sentence ord="38" text="The apple{s} hides{v} the apple{o}"/>
-<sentence ord="39" text="The banana{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="40" text="The banana{s} jumps over{v} the banana{o}"/>
-<sentence ord="41" text="The banana{s} jumps over{v} the apple{o}"/>
-<sentence ord="42" text="The banana{s} hides{v} the beaver{o}"/>
-<sentence ord="43" text="The banana{s} hides{v} the buzzard{o}"/>
-<sentence ord="44" text="The banana{s} hides{v} the banana{o}"/>
-<sentence ord="45" text="The banana{s} hides{v} the apple{o}"/>
-<sentence ord="46" text="The apple{s} eats{v} the beaver{o}"/>
-<sentence ord="47" text="The apple{s} eats{v} the buzzard{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The apple{s} hides{v} the apple{o}"/>
-<sentence ord="1" text="The apple{s} hides{v} the banana{o}"/>
-<sentence ord="2" text="The apple{s} hides{v} the buzzard{o}"/>
-<sentence ord="3" text="The apple{s} hides{v} the beaver{o}"/>
-<sentence ord="4" text="The apple{s} jumps over{v} the apple{o}"/>
-<sentence ord="5" text="The apple{s} jumps over{v} the banana{o}"/>
-<sentence ord="6" text="The apple{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="7" text="The apple{s} jumps over{v} the beaver{o}"/>
-<sentence ord="8" text="The apple{s} eats{v} the apple{o}"/>
-<sentence ord="9" text="The apple{s} eats{v} the banana{o}"/>
-<sentence ord="10" text="The apple{s} eats{v} the buzzard{o}"/>
-<sentence ord="11" text="The apple{s} eats{v} the beaver{o}"/>
-<sentence ord="12" text="The banana{s} hides{v} the apple{o}"/>
-<sentence ord="13" text="The banana{s} hides{v} the banana{o}"/>
-<sentence ord="14" text="The banana{s} hides{v} the buzzard{o}"/>
-<sentence ord="15" text="The banana{s} hides{v} the beaver{o}"/>
-<sentence ord="16" text="The banana{s} jumps over{v} the apple{o}"/>
-<sentence ord="17" text="The banana{s} jumps over{v} the banana{o}"/>
-<sentence ord="18" text="The banana{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="19" text="The banana{s} jumps over{v} the beaver{o}"/>
-<sentence ord="20" text="The banana{s} eats{v} the apple{o}"/>
-<sentence ord="21" text="The banana{s} eats{v} the banana{o}"/>
-<sentence ord="22" text="The banana{s} eats{v} the buzzard{o}"/>
-<sentence ord="23" text="The banana{s} eats{v} the beaver{o}"/>
-<sentence ord="24" text="The buzzard{s} hides{v} the apple{o}"/>
-<sentence ord="25" text="The buzzard{s} hides{v} the banana{o}"/>
-<sentence ord="26" text="The buzzard{s} hides{v} the buzzard{o}"/>
-<sentence ord="27" text="The buzzard{s} hides{v} the beaver{o}"/>
-<sentence ord="28" text="The buzzard{s} jumps over{v} the apple{o}"/>
-<sentence ord="29" text="The buzzard{s} jumps over{v} the banana{o}"/>
-<sentence ord="30" text="The buzzard{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="31" text="The buzzard{s} jumps over{v} the beaver{o}"/>
-<sentence ord="32" text="The buzzard{s} eats{v} the apple{o}"/>
-<sentence ord="33" text="The buzzard{s} eats{v} the banana{o}"/>
-<sentence ord="34" text="The buzzard{s} eats{v} the buzzard{o}"/>
-<sentence ord="35" text="The buzzard{s} eats{v} the beaver{o}"/>
-<sentence ord="36" text="The beaver{s} hides{v} the apple{o}"/>
-<sentence ord="37" text="The beaver{s} hides{v} the banana{o}"/>
-<sentence ord="38" text="The beaver{s} eats{v} the beaver{o}"/>
-<sentence ord="39" text="The beaver{s} eats{v} the buzzard{o}"/>
-<sentence ord="40" text="The beaver{s} eats{v} the banana{o}"/>
-<sentence ord="41" text="The beaver{s} eats{v} the apple{o}"/>
-<sentence ord="42" text="The beaver{s} jumps over{v} the beaver{o}"/>
-<sentence ord="43" text="The beaver{s} jumps over{v} the buzzard{o}"/>
-<sentence ord="44" text="The beaver{s} jumps over{v} the apple{o}"/>
-<sentence ord="45" text="The beaver{s} jumps over{v} the banana{o}"/>
-<sentence ord="46" text="The beaver{s} hides{v} the beaver{o}"/>
-<sentence ord="47" text="The beaver{s} hides{v} the buzzard{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

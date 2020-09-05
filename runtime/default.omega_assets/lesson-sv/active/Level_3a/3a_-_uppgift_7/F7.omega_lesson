@@ -11,18 +11,18 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="boy" action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/dummy/pie.wav" dummytext="pajen" ord="0" sign="" sound="audio/words-sv/boy.wav" text="pojken" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="icecream" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/glass.wav" dummytext="glaset" ord="1" sign="" sound="audio/words-sv/icecream.wav" text="glassen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="flower" action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/dummy/plum.wav" dummytext="plommonet" ord="2" sign="" sound="audio/words-sv/flower.wav" text="blomman" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="plane" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/plant.wav" dummytext="plantan" ord="3" sign="" sound="audio/words-sv/plane.wav" text="planet" tts="plaa-net" var-1="-plane" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="boy" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/pie.wav" dummytext="Pajen" ord="0" sign="" sound="audio/words-sv/boy.wav" text="Pojken" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="icecream" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/glass.wav" dummytext="Glaset" ord="1" sign="" sound="audio/words-sv/icecream.wav" text="Glassen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="flower" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/plum.wav" dummytext="Plommonet" ord="2" sign="" sound="audio/words-sv/flower.wav" text="Blomman" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="plane" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/plant.wav" dummytext="Plantan" ord="3" sign="" sound="audio/words-sv/plane.wav" text="Planet" tts="plaa-net" var-1="-plane" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/FlyOverCity{-1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/fliesover.wav" text="flyger över" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/JumpInRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/jumpsover.wav" text="hoppar över" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/FlyOverCity{-1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="fryser över" ord="0" sign="" sound="audio/words-sv/fliesover.wav" text="flyger över" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/JumpInRoom" action-type="omega_anim" dummysign="" dummysound="" dummytext="hojtar över" ord="1" sign="" sound="audio/words-sv/jumpsover.wav" text="hoppar över" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -31,10 +31,10 @@
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="actor">
-<item Lid="icecream" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/glass.wav" dummytext="glaset" ord="0" sign="" sound="audio/words-sv/icecream.wav" text="glassen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="flower" action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/dummy/plum.wav" dummytext="plommonet" ord="1" sign="" sound="audio/words-sv/flower.wav" text="blomman" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="plane" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/plant.wav" dummytext="plantan" ord="2" sign="" sound="audio/words-sv/plane.wav" text="planet" tts="plaa-net" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="boy2" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/pie.wav" dummytext="pajen" ord="3" sign="" sound="audio/words-sv/boy.wav" text="pojken" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="icecream" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/glass.wav" dummytext="glaset" ord="0" sign="" sound="audio/words-sv/icecream.wav" text="glassen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="flower" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/plum.wav" dummytext="plommonet" ord="1" sign="" sound="audio/words-sv/flower.wav" text="blomman" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="plane" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/plant.wav" dummytext="plantan" ord="2" sign="" sound="audio/words-sv/plane.wav" text="planet" tts="plaa-net" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="boy2" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/pie.wav" dummytext="pajen" ord="3" sign="" sound="audio/words-sv/boy.wav" text="pojken" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -45,97 +45,5 @@
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="Pojken{s} flyger över{v} planet{o}"/>
-<sentence ord="1" text="Glassen{s} flyger över{v} blomman{o}"/>
-<sentence ord="2" text="Blomman{s} flyger över{v} planet{o}"/>
-<sentence ord="3" text="Planet{s} flyger över{v} glassen{o}"/>
-<sentence ord="4" text="Pojken{s} flyger över{v} glassen{o}"/>
-<sentence ord="5" text="Glassen{s} hoppar över{v} blomman{o}"/>
-<sentence ord="6" text="Blomman{s} hoppar över{v} blomman{o}"/>
-<sentence ord="7" text="Planet{s} flyger över{v} pojken{o}"/>
-<sentence ord="8" text="Planet{s} hoppar över{v} planet{o}"/>
-<sentence ord="9" text="Pojken{s} hoppar över{v} planet{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="Planet{s} hoppar över{v} planet{o}"/>
-<sentence ord="1" text="Planet{s} flyger över{v} glassen{o}"/>
-<sentence ord="2" text="Planet{s} flyger över{v} pojken{o}"/>
-<sentence ord="3" text="Pojken{s} hoppar över{v} planet{o}"/>
-<sentence ord="4" text="Blomman{s} hoppar över{v} blomman{o}"/>
-<sentence ord="5" text="Blomman{s} flyger över{v} planet{o}"/>
-<sentence ord="6" text="Glassen{s} hoppar över{v} blomman{o}"/>
-<sentence ord="7" text="Glassen{s} flyger över{v} blomman{o}"/>
-<sentence ord="8" text="Pojken{s} flyger över{v} planet{o}"/>
-<sentence ord="9" text="Pojken{s} flyger över{v} glassen{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="Planet{s} hoppar över{v} pojken{o}"/>
-<sentence ord="1" text="Planet{s} flyger över{v} pojken{o}"/>
-<sentence ord="2" text="Blomman{s} hoppar över{v} pojken{o}"/>
-<sentence ord="3" text="Blomman{s} hoppar över{v} glassen{o}"/>
-<sentence ord="4" text="Blomman{s} flyger över{v} blomman{o}"/>
-<sentence ord="5" text="Glassen{s} hoppar över{v} planet{o}"/>
-<sentence ord="6" text="Glassen{s} flyger över{v} pojken{o}"/>
-<sentence ord="7" text="Glassen{s} flyger över{v} glassen{o}"/>
-<sentence ord="8" text="Pojken{s} hoppar över{v} blomman{o}"/>
-<sentence ord="9" text="Pojken{s} flyger över{v} planet{o}"/>
-<sentence ord="10" text="Planet{s} hoppar över{v} planet{o}"/>
-<sentence ord="11" text="Planet{s} flyger över{v} planet{o}"/>
-<sentence ord="12" text="Blomman{s} hoppar över{v} planet{o}"/>
-<sentence ord="13" text="Blomman{s} flyger över{v} pojken{o}"/>
-<sentence ord="14" text="Blomman{s} flyger över{v} glassen{o}"/>
-<sentence ord="15" text="Glassen{s} hoppar över{v} blomman{o}"/>
-<sentence ord="16" text="Glassen{s} flyger över{v} planet{o}"/>
-<sentence ord="17" text="Pojken{s} hoppar över{v} pojken{o}"/>
-<sentence ord="18" text="Pojken{s} hoppar över{v} glassen{o}"/>
-<sentence ord="19" text="Pojken{s} flyger över{v} blomman{o}"/>
-<sentence ord="20" text="Planet{s} hoppar över{v} blomman{o}"/>
-<sentence ord="21" text="Planet{s} flyger över{v} blomman{o}"/>
-<sentence ord="22" text="Blomman{s} hoppar över{v} blomman{o}"/>
-<sentence ord="23" text="Blomman{s} flyger över{v} planet{o}"/>
-<sentence ord="24" text="Glassen{s} hoppar över{v} pojken{o}"/>
-<sentence ord="25" text="Glassen{s} hoppar över{v} glassen{o}"/>
-<sentence ord="26" text="Glassen{s} flyger över{v} blomman{o}"/>
-<sentence ord="27" text="Pojken{s} hoppar över{v} planet{o}"/>
-<sentence ord="28" text="Pojken{s} flyger över{v} pojken{o}"/>
-<sentence ord="29" text="Pojken{s} flyger över{v} glassen{o}"/>
-<sentence ord="30" text="Planet{s} hoppar över{v} glassen{o}"/>
-<sentence ord="31" text="Planet{s} flyger över{v} glassen{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="Pojken{s} flyger över{v} glassen{o}"/>
-<sentence ord="1" text="Pojken{s} hoppar över{v} glassen{o}"/>
-<sentence ord="2" text="Glassen{s} flyger över{v} glassen{o}"/>
-<sentence ord="3" text="Glassen{s} flyger över{v} pojken{o}"/>
-<sentence ord="4" text="Glassen{s} hoppar över{v} planet{o}"/>
-<sentence ord="5" text="Blomman{s} flyger över{v} blomman{o}"/>
-<sentence ord="6" text="Blomman{s} hoppar över{v} glassen{o}"/>
-<sentence ord="7" text="Blomman{s} hoppar över{v} pojken{o}"/>
-<sentence ord="8" text="Planet{s} flyger över{v} planet{o}"/>
-<sentence ord="9" text="Planet{s} hoppar över{v} blomman{o}"/>
-<sentence ord="10" text="Pojken{s} flyger över{v} blomman{o}"/>
-<sentence ord="11" text="Pojken{s} hoppar över{v} blomman{o}"/>
-<sentence ord="12" text="Glassen{s} flyger över{v} blomman{o}"/>
-<sentence ord="13" text="Glassen{s} hoppar över{v} glassen{o}"/>
-<sentence ord="14" text="Glassen{s} hoppar över{v} pojken{o}"/>
-<sentence ord="15" text="Blomman{s} flyger över{v} planet{o}"/>
-<sentence ord="16" text="Blomman{s} hoppar över{v} blomman{o}"/>
-<sentence ord="17" text="Planet{s} flyger över{v} glassen{o}"/>
-<sentence ord="18" text="Planet{s} flyger över{v} pojken{o}"/>
-<sentence ord="19" text="Planet{s} hoppar över{v} planet{o}"/>
-<sentence ord="20" text="Pojken{s} flyger över{v} planet{o}"/>
-<sentence ord="21" text="Pojken{s} hoppar över{v} planet{o}"/>
-<sentence ord="22" text="Glassen{s} flyger över{v} planet{o}"/>
-<sentence ord="23" text="Glassen{s} hoppar över{v} blomman{o}"/>
-<sentence ord="24" text="Blomman{s} flyger över{v} glassen{o}"/>
-<sentence ord="25" text="Blomman{s} flyger över{v} pojken{o}"/>
-<sentence ord="26" text="Blomman{s} hoppar över{v} planet{o}"/>
-<sentence ord="27" text="Planet{s} flyger över{v} blomman{o}"/>
-<sentence ord="28" text="Planet{s} hoppar över{v} glassen{o}"/>
-<sentence ord="29" text="Planet{s} hoppar över{v} pojken{o}"/>
-<sentence ord="30" text="Pojken{s} flyger över{v} pojken{o}"/>
-<sentence ord="31" text="Pojken{s} hoppar över{v} pojken{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

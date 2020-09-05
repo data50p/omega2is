@@ -11,9 +11,9 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="Fairy" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/bear.wav" dummytext="the bear" ord="0" sign="" sound="audio/words-en/flag.mp3" text="Fen" tts="feen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="Ghost" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/cart.wav" dummytext="the cart" ord="1" sign="" sound="audio/words-en/ghost.mp3" text="Spöket" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="Pharao" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/frog.mp3" text="Faraon" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="Fairy" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/bear.wav" dummytext="Fenan" ord="0" sign="" sound="audio/words-en/flag.mp3" text="Fen" tts="feen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="Ghost" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/cart.wav" dummytext="Spöet" ord="1" sign="" sound="audio/words-en/ghost.mp3" text="Spöket" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="Pharao" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Kakaon" ord="2" sign="" sound="audio/words-en/frog.mp3" text="Faraon" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -21,9 +21,9 @@
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/ScareInRuin" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/finds.mp3" text="skrämmer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/EraseFromBeach" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/swims.mp3" text="suddar bort" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/LoveAndSunflowers" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="älskar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/ScareInRuin" action-type="omega_anim" dummysign="" dummysound="" dummytext="strömmar" ord="0" sign="" sound="audio/words-en/finds.mp3" text="skrämmer" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/EraseFromBeach" action-type="omega_anim" dummysign="" dummysound="" dummytext="nuddar fort" ord="1" sign="" sound="audio/words-en/swims.mp3" text="suddar bort" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/LoveAndSunflowers" action-type="omega_anim" dummysign="" dummysound="" dummytext="ältar" ord="2" sign="" sound="" text="älskar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -31,9 +31,9 @@
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="passive">
-<item Lid="Ghost2" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/cart.wav" dummytext="the cart" ord="0" sign="" sound="audio/words-en/ghost.mp3" text="spöket" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="Pharao2" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/bear.wav" dummytext="the bear" ord="1" sign="" sound="audio/words-en/frog.mp3" text="faraon" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="Fairy2" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/flag.mp3" text="fen" tts="feen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="Ghost2" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/cart.wav" dummytext="spöet" ord="0" sign="" sound="audio/words-en/ghost.mp3" text="spöket" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="Pharao2" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/bear.wav" dummytext="kakaon" ord="1" sign="" sound="audio/words-en/frog.mp3" text="faraon" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="Fairy2" action-fname="" action-type="" dummysign="" dummysound="" dummytext="fenan" ord="2" sign="" sound="audio/words-en/flag.mp3" text="fen" tts="feen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -45,29 +45,5 @@
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The buzzard{s} chases{v} the carrot{o}"/>
-<sentence ord="1" text="The buzzard{s} chases{v} the buzzard{o}"/>
-<sentence ord="2" text="The carrot{s} chases{v} the carrot{o}"/>
-<sentence ord="3" text="The carrot{s} chases{v} the buzzard{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The buzzard{s} chases{v} the buzzard{o}"/>
-<sentence ord="1" text="The carrot{s} chases{v} the buzzard{o}"/>
-<sentence ord="2" text="The buzzard{s} chases{v} the carrot{o}"/>
-<sentence ord="3" text="The carrot{s} chases{v} the carrot{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The carrot{s} chases{v} the buzzard{o}"/>
-<sentence ord="1" text="The carrot{s} chases{v} the carrot{o}"/>
-<sentence ord="2" text="The buzzard{s} chases{v} the buzzard{o}"/>
-<sentence ord="3" text="The buzzard{s} chases{v} the carrot{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The carrot{s} chases{v} the carrot{o}"/>
-<sentence ord="1" text="The buzzard{s} chases{v} the buzzard{o}"/>
-<sentence ord="2" text="The buzzard{s} chases{v} the carrot{o}"/>
-<sentence ord="3" text="The carrot{s} chases{v} the buzzard{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

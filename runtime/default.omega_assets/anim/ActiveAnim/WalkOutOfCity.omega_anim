@@ -21,7 +21,7 @@
 <lesson verb="jagar"/>
 <AllActors>
 <Actor hotspot_begin="0.5548529411764705 0.35" hotspot_end="0.7133823529411765 0.57" hotspot_rotate="0.5 0.5" lesson_id="dog" name="actor/WalkClimb/walk_dog.png" nid="0" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
-<Actor hotspot_begin="0.36112586298459903 0.19" hotspot_end="0.30164630908125334 0.19" hotspot_rotate="0.5 0.5" name="background/city_panorama.png" nid="1" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
+<Actor hotspot_begin="0.36112586298459903 0.19" hotspot_end="0.30164630908125334 0.19" hotspot_rotate="0.5 0.5" name="background/city_panorama.jpg" nid="1" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.4926530612244899 0.03" hotspot_end="0.6230612244897961 0.11" hotspot_rotate="0.5 0.5" lesson_id="mouse" name="actor/WalkClimb/MouseWalking.png" nid="2" prim_mirror="1" prim_scale="0.6" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5038659793814433 0.6" hotspot_end="0.5038659793814433 0.68" hotspot_rotate="0.5 0.5" lesson_id="girl" name="actor/WalkClimb/Girl.png" nid="3" prim_mirror="1" prim_scale="0.7" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5080645161290323 0.6" hotspot_end="0.5080645161290323 0.7" hotspot_rotate="0.5 0.5" lesson_id="boy" name="actor/WalkClimb/Boy.png" nid="4" prim_mirror="1" prim_scale="0.7" var1="" var2="" var3=""/>

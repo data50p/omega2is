@@ -11,152 +11,29 @@
 </target>
 <items>
 <item-entry Tid="s,o" ord="0" type="actor">
-<item Lid="carrot" action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/chair.wav" dummytext="the chair" ord="0" sound="audio/words-en/carrot.wav" text="the carrot" var-1="" var-2="" var-3=""/>
-<item Lid="bee" action-fname="" action-type="null" dummysound="audio/words-en/dummy/bean.wav" dummytext="the bean" ord="1" sound="audio/words-en/bee.wav" text="the bee" var-1="" var-2="" var-3=""/>
-<item Lid="dog" action-fname="" action-type="null" dummysound="audio/words-en/frog.wav" dummytext="the frog" ord="2" sound="audio/words-en/dog.wav" text="the dog" var-1="" var-2="" var-3=""/>
-<item Lid="tiger" action-fname="" action-type="null" dummysound="audio/words-en/dummy/table.wav" dummytext="the table" ord="3" sound="audio/words-en/tiger.wav" text="the tiger" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="carrot" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/chair.wav" dummytext="the chair" ord="0" sign="" sound="audio/words-en/carrot.wav" text="the carrot" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="bee" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/bean.wav" dummytext="the bean" ord="1" sign="" sound="audio/words-en/bee.wav" text="the bee" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="dog" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/frog.wav" dummytext="the frog" ord="2" sign="" sound="audio/words-en/dog.wav" text="the dog" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="tiger" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/table.wav" dummytext="the table" ord="3" sign="" sound="audio/words-en/tiger.wav" text="the tiger" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/ChaseChased1" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/chases.wav" text="chases" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/ActiveAnim/HidingInGrass" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/hides.wav" text="hides" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/ActiveAnim/FindingAmongMushrooms" action-type="omega_anim" dummysound="" dummytext="" ord="2" sound="audio/words-en/finds.wav" text="finds" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/ChaseChased1" action-type="omega_anim" dummysign="" dummysound="" dummytext="phases" ord="0" sign="" sound="audio/words-en/chases.wav" text="chases" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/HidingInGrass" action-type="omega_anim" dummysign="" dummysound="" dummytext="rides" ord="1" sign="" sound="audio/words-en/hides.wav" text="hides" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/FindingAmongMushrooms" action-type="omega_anim" dummysign="" dummysound="" dummytext="binds" ord="2" sign="" sound="audio/words-en/finds.wav" text="finds" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
+<sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The carrot{s} chases{v} the carrot{o}"/>
-<sentence ord="1" text="The carrot{s} hides{v} the tiger{o}"/>
-<sentence ord="2" text="The bee{s} chases{v} the tiger{o}"/>
-<sentence ord="3" text="The bee{s} finds{v} the dog{o}"/>
-<sentence ord="4" text="The dog{s} hides{v} the bee{o}"/>
-<sentence ord="5" text="The tiger{s} chases{v} the carrot{o}"/>
-<sentence ord="6" text="The tiger{s} hides{v} the bee{o}"/>
-<sentence ord="7" text="The tiger{s} finds{v} the tiger{o}"/>
-<sentence ord="8" text="The carrot{s} finds{v} the tiger{o}"/>
-<sentence ord="9" text="The carrot{s} chases{v} the tiger{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The carrot{s} chases{v} the dog{o}"/>
-<sentence ord="1" text="The carrot{s} hides{v} the bee{o}"/>
-<sentence ord="2" text="The carrot{s} finds{v} the bee{o}"/>
-<sentence ord="3" text="The bee{s} chases{v} the bee{o}"/>
-<sentence ord="4" text="The bee{s} hides{v} the bee{o}"/>
-<sentence ord="5" text="The bee{s} finds{v} the tiger{o}"/>
-<sentence ord="6" text="The dog{s} chases{v} the tiger{o}"/>
-<sentence ord="7" text="The dog{s} finds{v} the dog{o}"/>
-<sentence ord="8" text="The tiger{s} chases{v} the tiger{o}"/>
-<sentence ord="9" text="The tiger{s} finds{v} the tiger{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The tiger{s} chases{v} the bee{o}"/>
-<sentence ord="1" text="The tiger{s} chases{v} the carrot{o}"/>
-<sentence ord="2" text="The dog{s} finds{v} the tiger{o}"/>
-<sentence ord="3" text="The dog{s} finds{v} the dog{o}"/>
-<sentence ord="4" text="The dog{s} finds{v} the bee{o}"/>
-<sentence ord="5" text="The dog{s} finds{v} the carrot{o}"/>
-<sentence ord="6" text="The dog{s} hides{v} the tiger{o}"/>
-<sentence ord="7" text="The dog{s} hides{v} the dog{o}"/>
-<sentence ord="8" text="The dog{s} hides{v} the bee{o}"/>
-<sentence ord="9" text="The tiger{s} finds{v} the tiger{o}"/>
-<sentence ord="10" text="The tiger{s} finds{v} the dog{o}"/>
-<sentence ord="11" text="The tiger{s} finds{v} the bee{o}"/>
-<sentence ord="12" text="The tiger{s} finds{v} the carrot{o}"/>
-<sentence ord="13" text="The tiger{s} hides{v} the tiger{o}"/>
-<sentence ord="14" text="The tiger{s} hides{v} the dog{o}"/>
-<sentence ord="15" text="The tiger{s} hides{v} the bee{o}"/>
-<sentence ord="16" text="The tiger{s} hides{v} the carrot{o}"/>
-<sentence ord="17" text="The tiger{s} chases{v} the tiger{o}"/>
-<sentence ord="18" text="The tiger{s} chases{v} the dog{o}"/>
-<sentence ord="19" text="The dog{s} hides{v} the carrot{o}"/>
-<sentence ord="20" text="The dog{s} chases{v} the tiger{o}"/>
-<sentence ord="21" text="The dog{s} chases{v} the dog{o}"/>
-<sentence ord="22" text="The dog{s} chases{v} the bee{o}"/>
-<sentence ord="23" text="The dog{s} chases{v} the carrot{o}"/>
-<sentence ord="24" text="The bee{s} finds{v} the tiger{o}"/>
-<sentence ord="25" text="The bee{s} finds{v} the dog{o}"/>
-<sentence ord="26" text="The bee{s} finds{v} the bee{o}"/>
-<sentence ord="27" text="The bee{s} finds{v} the carrot{o}"/>
-<sentence ord="28" text="The bee{s} hides{v} the tiger{o}"/>
-<sentence ord="29" text="The bee{s} hides{v} the dog{o}"/>
-<sentence ord="30" text="The bee{s} hides{v} the bee{o}"/>
-<sentence ord="31" text="The bee{s} hides{v} the carrot{o}"/>
-<sentence ord="32" text="The bee{s} chases{v} the tiger{o}"/>
-<sentence ord="33" text="The bee{s} chases{v} the dog{o}"/>
-<sentence ord="34" text="The bee{s} chases{v} the bee{o}"/>
-<sentence ord="35" text="The bee{s} chases{v} the carrot{o}"/>
-<sentence ord="36" text="The carrot{s} finds{v} the tiger{o}"/>
-<sentence ord="37" text="The carrot{s} finds{v} the dog{o}"/>
-<sentence ord="38" text="The carrot{s} finds{v} the bee{o}"/>
-<sentence ord="39" text="The carrot{s} finds{v} the carrot{o}"/>
-<sentence ord="40" text="The carrot{s} hides{v} the tiger{o}"/>
-<sentence ord="41" text="The carrot{s} hides{v} the dog{o}"/>
-<sentence ord="42" text="The carrot{s} hides{v} the bee{o}"/>
-<sentence ord="43" text="The carrot{s} hides{v} the carrot{o}"/>
-<sentence ord="44" text="The carrot{s} chases{v} the tiger{o}"/>
-<sentence ord="45" text="The carrot{s} chases{v} the dog{o}"/>
-<sentence ord="46" text="The carrot{s} chases{v} the bee{o}"/>
-<sentence ord="47" text="The carrot{s} chases{v} the carrot{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The carrot{s} chases{v} the carrot{o}"/>
-<sentence ord="1" text="The carrot{s} chases{v} the bee{o}"/>
-<sentence ord="2" text="The carrot{s} chases{v} the dog{o}"/>
-<sentence ord="3" text="The carrot{s} chases{v} the tiger{o}"/>
-<sentence ord="4" text="The carrot{s} hides{v} the carrot{o}"/>
-<sentence ord="5" text="The carrot{s} hides{v} the bee{o}"/>
-<sentence ord="6" text="The carrot{s} hides{v} the dog{o}"/>
-<sentence ord="7" text="The carrot{s} hides{v} the tiger{o}"/>
-<sentence ord="8" text="The carrot{s} finds{v} the carrot{o}"/>
-<sentence ord="9" text="The carrot{s} finds{v} the bee{o}"/>
-<sentence ord="10" text="The carrot{s} finds{v} the dog{o}"/>
-<sentence ord="11" text="The carrot{s} finds{v} the tiger{o}"/>
-<sentence ord="12" text="The bee{s} chases{v} the carrot{o}"/>
-<sentence ord="13" text="The bee{s} chases{v} the bee{o}"/>
-<sentence ord="14" text="The bee{s} chases{v} the dog{o}"/>
-<sentence ord="15" text="The bee{s} chases{v} the tiger{o}"/>
-<sentence ord="16" text="The bee{s} hides{v} the carrot{o}"/>
-<sentence ord="17" text="The bee{s} hides{v} the bee{o}"/>
-<sentence ord="18" text="The bee{s} hides{v} the dog{o}"/>
-<sentence ord="19" text="The bee{s} hides{v} the tiger{o}"/>
-<sentence ord="20" text="The bee{s} finds{v} the carrot{o}"/>
-<sentence ord="21" text="The bee{s} finds{v} the bee{o}"/>
-<sentence ord="22" text="The bee{s} finds{v} the dog{o}"/>
-<sentence ord="23" text="The bee{s} finds{v} the tiger{o}"/>
-<sentence ord="24" text="The dog{s} chases{v} the carrot{o}"/>
-<sentence ord="25" text="The dog{s} chases{v} the bee{o}"/>
-<sentence ord="26" text="The dog{s} chases{v} the dog{o}"/>
-<sentence ord="27" text="The dog{s} chases{v} the tiger{o}"/>
-<sentence ord="28" text="The dog{s} hides{v} the carrot{o}"/>
-<sentence ord="29" text="The dog{s} hides{v} the bee{o}"/>
-<sentence ord="30" text="The dog{s} hides{v} the dog{o}"/>
-<sentence ord="31" text="The dog{s} hides{v} the tiger{o}"/>
-<sentence ord="32" text="The dog{s} finds{v} the carrot{o}"/>
-<sentence ord="33" text="The dog{s} finds{v} the bee{o}"/>
-<sentence ord="34" text="The dog{s} finds{v} the dog{o}"/>
-<sentence ord="35" text="The dog{s} finds{v} the tiger{o}"/>
-<sentence ord="36" text="The tiger{s} chases{v} the carrot{o}"/>
-<sentence ord="37" text="The tiger{s} chases{v} the bee{o}"/>
-<sentence ord="38" text="The tiger{s} chases{v} the dog{o}"/>
-<sentence ord="39" text="The tiger{s} chases{v} the tiger{o}"/>
-<sentence ord="40" text="The tiger{s} hides{v} the carrot{o}"/>
-<sentence ord="41" text="The tiger{s} hides{v} the bee{o}"/>
-<sentence ord="42" text="The tiger{s} hides{v} the dog{o}"/>
-<sentence ord="43" text="The tiger{s} hides{v} the tiger{o}"/>
-<sentence ord="44" text="The tiger{s} finds{v} the carrot{o}"/>
-<sentence ord="45" text="The tiger{s} finds{v} the bee{o}"/>
-<sentence ord="46" text="The tiger{s} finds{v} the dog{o}"/>
-<sentence ord="47" text="The tiger{s} finds{v} the tiger{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

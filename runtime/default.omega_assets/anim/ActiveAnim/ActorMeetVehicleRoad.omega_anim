@@ -8,8 +8,8 @@
 </Canvas>
 <AllPath>
 <TPath nid="0">
-<q ord="0" p1="-89.47074890136719,686.3509521484375" p2="1246.46240234375,697.381591796875" pc="790.5292358398438,737.8272705078125"/>
-<help len="0.0;213.68002324780826;413.98488620178307;600.9411987906973;774.581707937277;934.947318098962;1082.0900050880953;1216.0771337693275;1336.998057831735" seg="-89.47074890136719,686.3509521484375;123.90320324897766,697.7837505340576;324.02506732940674,706.3439865112305;510.89484333992004,712.031660079956;684.5125312805176,714.8467712402344;844.8781311511993,714.7893199920654;991.9916429519653,711.8593063354492;1125.8530666828156,706.0567302703857;1246.46240234375,697.381591796875"/>
+<q ord="0" p1="-89.47074890136719,686.3509521484375" p2="1246.46240234375,697.381591796875" pc="796.0,729.0"/>
+<help len="0.0;214.78096359363266;415.8858831748461;603.3315608042321;777.138759932259;937.3335473010616;1083.9492502668718;1217.0293984363036;1336.632301168861" seg="-89.47074890136719,686.3509521484375;125.09993290901184,695.8527851104736;326.07660388946533,703.0337600708008;513.4592640399933,707.893877029419;687.2479133605957,710.4331359863281;847.4425518512726,710.6515369415283;994.0431795120239,708.5490798950195;1127.0497963428497,704.1257648468018;1246.46240234375,697.381591796875"/>
 <info flatness="1.5" size="9"/>
 </TPath>
 <TPath nid="1">
@@ -20,13 +20,13 @@
 </AllPath>
 <lesson verb="äter"/>
 <AllActors>
-<Actor hotspot_begin="0.495 0.82" hotspot_end="0.495 0.82" hotspot_rotate="0.5 0.5" lesson_id="car" name="actor/Things/car_redModern.png" nid="0" prim_mirror="0" prim_scale="0.4" var1="carGravelRoad_lr" var2="rolling" var3=""/>
+<Actor hotspot_begin="0.495 0.82" hotspot_end="0.495 0.82" hotspot_rotate="0.495 0.82" lesson_id="car" name="actor/Things/car_redModern.png" nid="0" prim_mirror="0" prim_scale="0.4" var1="carGravelRoad_lr" var2="rolling" var3="carGravelRoad_rl"/>
 <Actor hotspot_begin="0.5 0.85" hotspot_end="0.5 0.84" hotspot_rotate="0.5 0.5" lesson_id="woman" name="actor/DA/Woman4Run/woman4.png" nid="1" prim_mirror="0" prim_scale="0.2" var1="run_slow" var2="run" var3=""/>
 <Actor hotspot_begin="0.477 0.86" hotspot_end="0.477 0.86" hotspot_rotate="0.5 0.5" lesson_id="girl" name="actor/DA/Girl4Run/girl4.png" nid="2" prim_mirror="0" prim_scale="0.2" var1="run_v-slow" var2="run" var3=""/>
 <Actor hotspot_begin="0.45899999999999996 0.97" hotspot_end="0.46799999999999997 0.96" hotspot_rotate="0.5 0.5" lesson_id="robot" name="actor/DA/robot/robot.png" nid="3" prim_mirror="0" prim_scale="0.28" var1="run_slow" var2="run" var3=""/>
 <Actor hotspot_begin="0.504 0.97" hotspot_end="0.504 0.97" hotspot_rotate="0.5 0.5" lesson_id="boy" name="actor/DA/Boy4Run/boy4.png" nid="4" prim_mirror="0" prim_scale="0.2" var1="run_slow" var2="run" var3=""/>
 <Actor hotspot_begin="0.495 0.95" hotspot_end="0.495 0.96" hotspot_rotate="0.5 0.5" lesson_id="man" name="actor/DA/Man4Run/man4.png" nid="5" prim_mirror="0" prim_scale="0.2" var1="run_v-slow" var2="run" var3=""/>
-<Actor hotspot_begin="0.5033333333333333 0.94224043715847" hotspot_end="0.5 0.94224043715847" hotspot_rotate="0.5 0.5" lesson_id="bus" name="actor/Things/busElectric.png" nid="6" prim_mirror="1" prim_scale="1.6" var1="busElectric_lr" var2="rolling" var3=""/>
+<Actor hotspot_begin="0.5033333333333333 0.94224043715847" hotspot_end="0.5 0.94224043715847" hotspot_rotate="0.5033333333333333 0.94224043715847" lesson_id="bus" name="actor/Things/busElectric.png" nid="6" prim_mirror="1" prim_scale="1.6" var1="busElectric_lr" var2="rolling" var3="busElectric_rl"/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_7.gif" nid="7" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_8.gif" nid="8" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
 <Actor hotspot_begin="0.5 0.5" hotspot_end="0.5 0.5" hotspot_rotate="0.5 0.5" name="default/default_actor_9.gif" nid="9" prim_mirror="0" prim_scale="1.0" var1="" var2="" var3=""/>
@@ -119,7 +119,7 @@
 <TimeMarker duration="0" type="{" when="-79">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
-<TriggerEvent arg="-360.0 2" cmd="Rotate" isOn="false"/>
+<TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
 <TriggerEvent arg="-100 0.8" cmd="Scale" isOn="true"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
 <TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
@@ -133,7 +133,7 @@
 </TimeMarker>
 <TimeMarker duration="0" type="[" when="0">
 <T_Event>
-<TriggerEvent arg="audio/${B:1}.mp3" cmd="PlaySound" isOn="true"/>
+<TriggerEvent arg="audio/${B:3}.mp3" cmd="PlaySound" isOn="true"/>
 <TriggerEvent arg="0.0" cmd="Rotate" isOn="false"/>
 <TriggerEvent arg="0.04 1.0" cmd="Scale" isOn="true"/>
 <TriggerEvent arg="${B:2}" cmd="ImageAttrib" isOn="true"/>
@@ -149,8 +149,8 @@
 <TimeMarker duration="0" type="t" when="3132">
 <T_Event>
 <TriggerEvent arg="" cmd="PlaySound" isOn="false"/>
-<TriggerEvent arg="2.0 2" cmd="Rotate" isOn="true"/>
-<TriggerEvent arg="0.05 1.2" cmd="Scale" isOn="false"/>
+<TriggerEvent arg="2.0 2.0" cmd="Rotate" isOn="true"/>
+<TriggerEvent arg="0.0" cmd="Scale" isOn="false"/>
 <TriggerEvent arg="" cmd="ImageAttrib" isOn="false"/>
 <TriggerEvent arg="Middle" cmd="SetLayer" isOn="false"/>
 <TriggerEvent arg="100" cmd="SetVisibility" isOn="false"/>

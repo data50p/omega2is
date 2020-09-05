@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE omega_lesson >
 
 <omega_lesson version="0.0">
@@ -6,143 +6,65 @@
 <lesson name="abc" ord="0">
 <target>
 <t-item Lid="" Tid="a" ord="0" type="passive"/>
-<t-item Lid="A" Tid="s" ord="1" type="actor"/>
+<t-item Lid="A" Tid="s" ord="1" type="passive"/>
 <t-item Lid="" Tid="v" ord="2" type="action"/>
 <t-item Lid="" Tid="v2" ord="3" type="passive"/>
-<t-item Lid="B" Tid="o" ord="4" type="actor"/>
+<t-item Lid="B" Tid="o" ord="4" type="passive"/>
 </target>
 <items>
 <item-entry Tid="a" ord="0" type="passive">
-<item dummysound="audio/words-en/dummy/TheSwinging.wav" dummytext="The swinging" ord="0" sound="audio/words-en/TheSinging.wav" text="The singing" var-1="singing" var-2="" var-3=""/>
-<item dummysound="audio/words-en/dummy/TheLying.wav" dummytext="The lying" ord="1" sound="audio/words-en/TheCrying.wav" text="The crying" var-1="crying" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/TheSwinging.mp3" dummytext="The swinging" ord="0" sign="" sound="audio/words-en/TheSinging.mp3" text="The singing" tts="" var-1="singing" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/TheLying.mp3" dummytext="The prying" ord="1" sign="" sound="audio/words-en/TheCrying.mp3" text="The crying" tts="" var-1="crying" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="s" ord="1" type="actor">
-<item Lid="dragon:{-1}" dummysound="" dummytext="" ord="0" sound="audio/words-en/dragonB.wav" text="dragon" var-1="" var-2="" var-3=""/>
-<item Lid="fox:{-1}" dummysound="" dummytext="" ord="1" sound="audio/words-en/foxB.wav" text="fox" var-1="" var-2="" var-3=""/>
-<item Lid="penguin:{-1}" dummysound="" dummytext="" ord="2" sound="audio/words-en/penguinB.wav" text="penguin" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="dragon:{-1}" action-fname="" action-type="" dummysign="" dummysound="" dummytext="dungeon" ord="0" sign="" sound="audio/words-en/dragonB.mp3" text="dragon" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="fox:{-1}" action-fname="" action-type="" dummysign="" dummysound="" dummytext="box" ord="1" sign="" sound="audio/words-en/foxB.mp3" text="fox" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="penguin:{-1}" action-fname="" action-type="" dummysign="" dummysound="" dummytext="pilgrim" ord="2" sign="" sound="audio/words-en/penguinB.mp3" text="penguin" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="2" type="action">
-<item action-fname="anim/ActiveAnim/Bridge{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/RunsOverTheBridge.wav" text="runs over the bridge" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/ActiveAnim/Lake{+1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/SailsAcrossTheLake.wav" text="sails across the lake" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Bridge{+1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="puns over the ridge" ord="0" sign="" sound="audio/words-en/RunsOverTheBridge.mp3" text="runs over the bridge" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/Lake{+1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="nails cross to flake" ord="1" sign="" sound="audio/words-en/SailsAcrossTheLake.mp3" text="sails across the lake" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v2" ord="3" type="passive">
-<item dummysound="" dummytext="" ord="0" sound="audio/words-en/AndHugs.wav" text="and hugs" var-1="Hug" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="1" sound="audio/words-en/AndHelps.wav" text="and helps" var-1="Help" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="and tugs" ord="0" sign="" sound="audio/words-en/AndHugs.mp3" text="and hugs" tts="" var-1="Hug" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="and pelts" ord="1" sign="" sound="audio/words-en/AndHelps.mp3" text="and helps" tts="" var-1="Help" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="4" type="passive">
-<item Lid="bear" dummysound="" dummytext="" ord="0" sound="audio/words-en/bear.wav" text="the bear" var-1="" var-2="" var-3=""/>
-<item Lid="cat" dummysound="" dummytext="" ord="1" sound="audio/words-en/cat.wav" text="the cat" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="bear" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the gear" ord="0" sign="" sound="audio/words-en/bear.mp3" text="the bear" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="cat" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the hat" ord="1" sign="" sound="audio/words-en/cat.mp3" text="the cat" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
-<test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The crying{a} dragon{s} sails across the lake{v} and helps{v2} the cat{o}"/>
-<sentence ord="1" text="The singing{a} penguin{s} runs over the bridge{v} and hugs{v2} the cat{o}"/>
-<sentence ord="2" text="The singing{a} dragon{s} runs over the bridge{v} and hugs{v2} the bear{o}"/>
-<sentence ord="3" text="The singing{a} fox{s} runs over the bridge{v} and hugs{v2} the bear{o}"/>
-<sentence ord="4" text="The crying{a} fox{s} sails across the lake{v} and helps{v2} the bear{o}"/>
-<sentence ord="5" text="The crying{a} penguin{s} sails across the lake{v} and helps{v2} the bear{o}"/>
-<sentence ord="6" text="The crying{a} fox{s} runs over the bridge{v} and helps{v2} the cat{o}"/>
-<sentence ord="7" text="The crying{a} dragon{s} runs over the bridge{v} and helps{v2} the cat{o}"/>
-<sentence ord="8" text="The singing{a} fox{s} sails across the lake{v} and hugs{v2} the bear{o}"/>
-<sentence ord="9" text="The singing{a} dragon{s} sails across the lake{v} and hugs{v2} the bear{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The singing{a} dragon{s} sails across the lake{v} and hugs{v2} the cat{o}"/>
-<sentence ord="1" text="The singing{a} fox{s} runs over the bridge{v} and helps{v2} the bear{o}"/>
-<sentence ord="2" text="The singing{a} fox{s} sails across the lake{v} and helps{v2} the bear{o}"/>
-<sentence ord="3" text="The singing{a} penguin{s} sails across the lake{v} and hugs{v2} the bear{o}"/>
-<sentence ord="4" text="The crying{a} dragon{s} runs over the bridge{v} and hugs{v2} the cat{o}"/>
-<sentence ord="5" text="The crying{a} dragon{s} sails across the lake{v} and hugs{v2} the cat{o}"/>
-<sentence ord="6" text="The crying{a} fox{s} runs over the bridge{v} and helps{v2} the bear{o}"/>
-<sentence ord="7" text="The crying{a} fox{s} sails across the lake{v} and helps{v2} the cat{o}"/>
-<sentence ord="8" text="The crying{a} penguin{s} sails across the lake{v} and helps{v2} the cat{o}"/>
-<sentence ord="9" text="The crying{a} penguin{s} runs over the bridge{v} and helps{v2} the bear{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The crying{a} penguin{s} runs over the bridge{v} and helps{v2} the cat{o}"/>
-<sentence ord="1" text="The singing{a} penguin{s} sails across the lake{v} and hugs{v2} the cat{o}"/>
-<sentence ord="10" text="The crying{a} penguin{s} sails across the lake{v} and helps{v2} the bear{o}"/>
-<sentence ord="20" text="The crying{a} penguin{s} sails across the lake{v} and hugs{v2} the bear{o}"/>
-<sentence ord="30" text="The crying{a} penguin{s} sails across the lake{v} and hugs{v2} the cat{o}"/>
-<sentence ord="40" text="The crying{a} penguin{s} sails across the lake{v} and helps{v2} the cat{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="1" text="The singing{a} penguin{s} sails across the lake{v} and hugs{v2} the cat{o}"/>
-<sentence ord="2" text="The singing{a} dragon{s} runs over the bridge{v} and hugs{v2} the cat{o}"/>
-<sentence ord="3" text="The singing{a} fox{s} runs over the bridge{v} and helps{v2} the cat{o}"/>
-<sentence ord="4" text="The crying{a} fox{s} sails across the lake{v} and hugs{v2} the cat{o}"/>
-<sentence ord="5" text="The singing{a} dragon{s} sails across the lake{v} and helps{v2} the bear{o}"/>
-<sentence ord="6" text="The crying{a} dragon{s} runs over the bridge{v} and helps{v2} the bear{o}"/>
-<sentence ord="7" text="The crying{a} fox{s} runs over the bridge{v} and hugs{v2} the bear{o}"/>
-<sentence ord="8" text="The crying{a} penguin{s} sails across the lake{v} and helps{v2} the cat{o}"/>
-<sentence ord="9" text="The singing{a} penguin{s} runs over the bridge{v} and hugs{v2} the bear{o}"/>
-<sentence ord="11" text="The singing{a} penguin{s} sails across the lake{v} and helps{v2} the bear{o}"/>
-<sentence ord="12" text="The singing{a} dragon{s} runs over the bridge{v} and helps{v2} the bear{o}"/>
-<sentence ord="13" text="The singing{a} fox{s} sails across the lake{v} and hugs{v2} the bear{o}"/>
-<sentence ord="14" text="The crying{a} fox{s} sails across the lake{v} and helps{v2} the bear{o}"/>
-<sentence ord="15" text="The singing{a} dragon{s} sails across the lake{v} and helps{v2} the cat{o}"/>
-<sentence ord="16" text="The crying{a} dragon{s} runs over the bridge{v} and helps{v2} the cat{o}"/>
-<sentence ord="17" text="The crying{a} fox{s} runs over the bridge{v} and hugs{v2} the cat{o}"/>
-<sentence ord="18" text="The crying{a} penguin{s} sails across the lake{v} and helps{v2} the bear{o}"/>
-<sentence ord="19" text="The singing{a} dragon{s} runs over the bridge{v} and hugs{v2} the bear{o}"/>
-<sentence ord="21" text="The singing{a} penguin{s} sails across the lake{v} and helps{v2} the cat{o}"/>
-<sentence ord="22" text="The singing{a} dragon{s} runs over the bridge{v} and helps{v2} the cat{o}"/>
-<sentence ord="23" text="The singing{a} fox{s} sails across the lake{v} and hugs{v2} the cat{o}"/>
-<sentence ord="24" text="The crying{a} fox{s} sails across the lake{v} and helps{v2} the cat{o}"/>
-<sentence ord="25" text="The singing{a} fox{s} runs over the bridge{v} and hugs{v2} the bear{o}"/>
-<sentence ord="26" text="The crying{a} dragon{s} sails across the lake{v} and hugs{v2} the bear{o}"/>
-<sentence ord="27" text="The crying{a} fox{s} runs over the bridge{v} and helps{v2} the bear{o}"/>
-<sentence ord="28" text="The crying{a} penguin{s} sails across the lake{v} and hugs{v2} the cat{o}"/>
-<sentence ord="29" text="The singing{a} penguin{s} runs over the bridge{v} and helps{v2} the bear{o}"/>
-<sentence ord="31" text="The crying{a} dragon{s} runs over the bridge{v} and hugs{v2} the bear{o}"/>
-<sentence ord="32" text="The singing{a} dragon{s} sails across the lake{v} and hugs{v2} the bear{o}"/>
-<sentence ord="33" text="The singing{a} fox{s} sails across the lake{v} and helps{v2} the bear{o}"/>
-<sentence ord="34" text="The crying{a} penguin{s} runs over the bridge{v} and hugs{v2} the bear{o}"/>
-<sentence ord="35" text="The singing{a} fox{s} runs over the bridge{v} and hugs{v2} the cat{o}"/>
-<sentence ord="36" text="The crying{a} dragon{s} sails across the lake{v} and hugs{v2} the cat{o}"/>
-<sentence ord="37" text="The crying{a} fox{s} runs over the bridge{v} and helps{v2} the cat{o}"/>
-<sentence ord="38" text="The crying{a} penguin{s} sails across the lake{v} and hugs{v2} the bear{o}"/>
-<sentence ord="39" text="The crying{a} penguin{s} runs over the bridge{v} and helps{v2} the bear{o}"/>
-<sentence ord="41" text="The crying{a} dragon{s} runs over the bridge{v} and hugs{v2} the cat{o}"/>
-<sentence ord="42" text="The singing{a} dragon{s} sails across the lake{v} and hugs{v2} the cat{o}"/>
-<sentence ord="43" text="The singing{a} fox{s} sails across the lake{v} and helps{v2} the cat{o}"/>
-<sentence ord="44" text="The crying{a} penguin{s} runs over the bridge{v} and hugs{v2} the cat{o}"/>
-<sentence ord="45" text="The singing{a} fox{s} runs over the bridge{v} and helps{v2} the bear{o}"/>
-<sentence ord="46" text="The crying{a} dragon{s} sails across the lake{v} and helps{v2} the bear{o}"/>
-<sentence ord="47" text="The crying{a} fox{s} sails across the lake{v} and hugs{v2} the bear{o}"/>
-<sentence ord="48" text="The crying{a} penguin{s} runs over the bridge{v} and helps{v2} the cat{o}"/>
-</test_entry>
-</test_entries>
+<sign_specific/>
+<test_entries/>
 </omega_lesson>

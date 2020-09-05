@@ -11,18 +11,18 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="boy" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/boy.wav" text="Pojken" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="girl" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/girl.wav" text="Flickan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="cat" action-fname="" action-type="null" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/cat.wav" text="Katten" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="dino" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/dino.wav" text="Dinosaurien" tts="dino-sa-ur-ien" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="boy" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Polkan" ord="0" sign="" sound="audio/words-sv/boy.mp3" text="Pojken" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="girl" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Flotten" ord="1" sign="" sound="audio/words-sv/girl.mp3" text="Flickan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="cat" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Kartan" ord="2" sign="" sound="audio/words-sv/cat.mp3" text="Katten" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="dino" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Binotarien" ord="3" sign="" sound="audio/words-sv/dino.mp3" text="Dinosaurien" tts="dino-sau´rien" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/InThrough{+1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/looksinthrough.wav" text="tittar in genom" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/OutThrough{+1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/looksoutfrom.wav" text="tittar ut från" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/InThrough{+1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="trillar in genom" ord="0" sign="" sound="audio/words-sv/looksinthrough.mp3" text="tittar in genom" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/OutThrough{+1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="trillar ut från" ord="1" sign="" sound="audio/words-sv/looksoutfrom.mp3" text="tittar ut från" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -31,9 +31,9 @@
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="av" ord="2" type="passive">
-<item action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/window.wav" dummytext="flaskan" ord="0" sign="" sound="audio/words-sv/window.wav" text="fönstret" tts="" var-1="Window" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="null" dummysign="" dummysound="audio/words-sv/dummy/porridge.wav" dummytext="gröten" ord="1" sign="" sound="audio/words-sv/cave.wav" text="grottan" tts="" var-1="Cave" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-sv/dummy/ditch.wav" dummytext="diket" ord="2" sign="" sound="audio/words-sv/door.wav" text="dörren" tts="" var-1="Door" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/window.mp3" dummytext="flaskan" ord="0" sign="" sound="audio/words-sv/window.mp3" text="fönstret" tts="" var-1="Window" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/porridge.mp3" dummytext="gröten" ord="1" sign="" sound="audio/words-sv/cave.mp3" text="grottan" tts="" var-1="Cave" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/ditch.mp3" dummytext="diket" ord="2" sign="" sound="audio/words-sv/door.mp3" text="dörren" tts="" var-1="Door" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -45,80 +45,5 @@
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="Pojken{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="1" text="Katten{s} tittar ut från{v} fönstret{av}"/>
-<sentence ord="2" text="Dinosaurien{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="3" text="Flickan{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="4" text="Pojken{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="5" text="Katten{s} tittar in genom{v} fönstret{av}"/>
-<sentence ord="6" text="Dinosaurien{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="7" text="Dinosaurien{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="8" text="Flickan{s} tittar in genom{v} fönstret{av}"/>
-<sentence ord="9" text="Flickan{s} tittar in genom{v} dörren{av}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="Dinosaurien{s} tittar ut från{v} fönstret{av}"/>
-<sentence ord="1" text="Katten{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="2" text="Katten{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="3" text="Pojken{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="4" text="Pojken{s} tittar in genom{v} dörren{av}"/>
-<sentence ord="5" text="Flickan{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="6" text="Flickan{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="7" text="Katten{s} tittar in genom{v} dörren{av}"/>
-<sentence ord="8" text="Katten{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="9" text="Dinosaurien{s} tittar in genom{v} dörren{av}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="Dinosaurien{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="1" text="Pojken{s} tittar in genom{v} fönstret{av}"/>
-<sentence ord="2" text="Flickan{s} tittar ut från{v} fönstret{av}"/>
-<sentence ord="3" text="Katten{s} tittar ut från{v} fönstret{av}"/>
-<sentence ord="4" text="Dinosaurien{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="5" text="Pojken{s} tittar ut från{v} fönstret{av}"/>
-<sentence ord="6" text="Dinosaurien{s} tittar in genom{v} fönstret{av}"/>
-<sentence ord="7" text="Katten{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="8" text="Dinosaurien{s} tittar ut från{v} fönstret{av}"/>
-<sentence ord="9" text="Flickan{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="10" text="Katten{s} tittar in genom{v} fönstret{av}"/>
-<sentence ord="11" text="Flickan{s} tittar in genom{v} fönstret{av}"/>
-<sentence ord="12" text="Pojken{s} tittar in genom{v} dörren{av}"/>
-<sentence ord="13" text="Pojken{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="14" text="Flickan{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="15" text="Katten{s} tittar in genom{v} dörren{av}"/>
-<sentence ord="16" text="Katten{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="17" text="Pojken{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="18" text="Katten{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="19" text="Flickan{s} tittar in genom{v} dörren{av}"/>
-<sentence ord="20" text="Flickan{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="21" text="Pojken{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="22" text="Dinosaurien{s} tittar in genom{v} dörren{av}"/>
-<sentence ord="23" text="Dinosaurien{s} tittar ut från{v} grottan{av}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="Pojken{s} tittar in genom{v} fönstret{av}"/>
-<sentence ord="1" text="Pojken{s} tittar in genom{v} dörren{av}"/>
-<sentence ord="2" text="Pojken{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="3" text="Dinosaurien{s} tittar in genom{v} fönstret{av}"/>
-<sentence ord="4" text="Flickan{s} tittar in genom{v} dörren{av}"/>
-<sentence ord="5" text="Flickan{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="6" text="Flickan{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="7" text="Katten{s} tittar in genom{v} fönstret{av}"/>
-<sentence ord="8" text="Dinosaurien{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="9" text="Katten{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="10" text="Dinosaurien{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="11" text="Katten{s} tittar ut från{v} fönstret{av}"/>
-<sentence ord="12" text="Flickan{s} tittar in genom{v} fönstret{av}"/>
-<sentence ord="13" text="Dinosaurien{s} tittar in genom{v} dörren{av}"/>
-<sentence ord="14" text="Katten{s} tittar in genom{v} dörren{av}"/>
-<sentence ord="15" text="Dinosaurien{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="16" text="Dinosaurien{s} tittar ut från{v} fönstret{av}"/>
-<sentence ord="17" text="Katten{s} tittar ut från{v} grottan{av}"/>
-<sentence ord="19" text="Flickan{s} tittar ut från{v} fönstret{av}"/>
-<sentence ord="20" text="Flickan{s} tittar in genom{v} grottan{av}"/>
-<sentence ord="21" text="Pojken{s} tittar ut från{v} dörren{av}"/>
-<sentence ord="22" text="Pojken{s} tittar ut från{v} fönstret{av}"/>
-<sentence ord="23" text="Pojken{s} tittar in genom{v} grottan{av}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

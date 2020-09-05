@@ -13,185 +13,59 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="dog" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-en/dog.wav" text="The dog" var-1="" var-2="" var-3=""/>
-<item Lid="mouse" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/mouse.wav" text="The mouse" var-1="" var-2="" var-3=""/>
-<item Lid="gorilla" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-en/gorilla.wav" text="The gorilla" var-1="" var-2="" var-3=""/>
-<item Lid="panda" action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/words-en/panda.wav" text="The panda" var-1="" var-2="" var-3=""/>
-<item Lid="whale" action-fname="" action-type="null" dummysound="" dummytext="" ord="4" sound="audio/words-en/whale.wav" text="The whale" var-1="" var-2="" var-3=""/>
-<item Lid="cat" action-fname="" action-type="null" dummysound="" dummytext="" ord="5" sound="audio/words-en/cat.wav" text="The cat" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="dog" action-fname="" action-type="" dummysign="" dummysound="" dummytext="The fog" ord="0" sign="" sound="audio/words-en/dog.mp3" text="The dog" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="mouse" action-fname="" action-type="" dummysign="" dummysound="" dummytext="The nose" ord="1" sign="" sound="audio/words-en/mouse.mp3" text="The mouse" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="gorilla" action-fname="" action-type="" dummysign="" dummysound="" dummytext="The grill" ord="2" sign="" sound="audio/words-en/gorilla.mp3" text="The gorilla" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="panda" action-fname="" action-type="" dummysign="" dummysound="" dummytext="The pond" ord="3" sign="" sound="audio/words-en/panda.mp3" text="The panda" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="whale" action-fname="" action-type="" dummysign="" dummysound="" dummytext="The veil" ord="4" sign="" sound="audio/words-en/whale.mp3" text="The whale" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="cat" action-fname="" action-type="" dummysign="" dummysound="" dummytext="The cab" ord="5" sign="" sound="audio/words-en/cat.mp3" text="The cat" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="passive">
-<item action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-en/puts.wav" text="puts" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="1" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/puts.mp3" text="puts" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="actor">
-<item Lid="pizza" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-en/pizza.wav" text="the pizza" var-1="" var-2="" var-3=""/>
-<item Lid="banana" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/banana.wav" text="the banana" var-1="" var-2="" var-3=""/>
-<item Lid="hat" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-en/hat.wav" text="the hat" var-1="" var-2="" var-3=""/>
-<item Lid="carrot" action-fname="" action-type="null" dummysound="" dummytext="" ord="3" sound="audio/words-en/carrot.wav" text="the carrot" var-1="" var-2="" var-3=""/>
-<item Lid="butterfly" action-fname="" action-type="null" dummysound="" dummytext="" ord="4" sound="audio/words-en/dummy/butterfly.wav" text="the butterfly" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="pizza" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the pasta" ord="0" sign="" sound="audio/words-en/pizza.mp3" text="the pizza" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="banana" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the bonanza" ord="1" sign="" sound="audio/words-en/banana.mp3" text="the banana" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="hat" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the bat" ord="2" sign="" sound="audio/words-en/hat.mp3" text="the hat" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="carrot" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the parrot" ord="3" sign="" sound="audio/words-en/carrot.mp3" text="the carrot" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="butterfly" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the buttercup" ord="4" sign="" sound="audio/words-en/dummy/butterfly.mp3" text="the butterfly" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="p" ord="3" type="action">
-<item action-fname="anim/ActiveAnim/PutOnTableRoomCW" action-type="omega_anim" dummysound="audio/words-en/dummy/behind.wav" dummytext="behind" ord="0" sound="audio/words-en/on.wav" text="on" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/ActiveAnim/PutUnderTableRoomCW" action-type="omega_anim" dummysound="audio/words-en/dummy/between.wav" dummytext="between" ord="1" sound="audio/words-en/under.wav" text="under" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/ActiveAnim/PutBesideTableRoomCW" action-type="omega_anim" dummysound="audio/words-en/dummy/infrontof.wav" dummytext="in front of" ord="2" sound="audio/words-en/beside.wav" text="beside" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/PutOnTableRoomCW" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/behind.mp3" dummytext="behind" ord="0" sign="" sound="audio/words-en/on.mp3" text="on" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/PutUnderTableRoomCW" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/between.mp3" dummytext="between" ord="1" sign="" sound="audio/words-en/under.mp3" text="under" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/PutBesideTableRoomCW" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/infrontof.mp3" dummytext="in front of" ord="2" sign="" sound="audio/words-en/beside.mp3" text="beside" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="av" ord="4" type="actor">
-<item Lid="panda" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/pandatable.wav" text="the panda´s table" var-1="" var-2="" var-3=""/>
-<item Lid="gorilla" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/gorillatable.wav" text="the gorilla´s table" var-1="" var-2="" var-3=""/>
-<item Lid="whale" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-en/whalestable.wav" text="the whale´s table" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="panda" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the pond's stable" ord="0" sign="" sound="audio/words-en/pandatable.mp3" text="the panda's table" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="gorilla" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the grill's stable" ord="1" sign="" sound="audio/words-en/gorillatable.mp3" text="the gorilla's table" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="whale" action-fname="" action-type="" dummysign="" dummysound="" dummytext="the veil's stable" ord="2" sign="" sound="audio/words-en/whalestable.mp3" text="the whale's table" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
+<sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The dog{s} puts{v} the pizza{o} on{p} the panda´s table{av}"/>
-<sentence ord="1" text="The mouse{s} puts{v} the pizza{o} beside{p} the whale´s table{av}"/>
-<sentence ord="2" text="The gorilla{s} puts{v} the banana{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="3" text="The gorilla{s} puts{v} the butterfly{o} under{p} the panda´s table{av}"/>
-<sentence ord="4" text="The panda{s} puts{v} the carrot{o} beside{p} the panda´s table{av}"/>
-<sentence ord="5" text="The panda{s} puts{v} the butterfly{o} beside{p} the whale´s table{av}"/>
-<sentence ord="6" text="The whale{s} puts{v} the banana{o} beside{p} the whale´s table{av}"/>
-<sentence ord="7" text="The whale{s} puts{v} the carrot{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="8" text="The whale{s} puts{v} the butterfly{o} under{p} the panda´s table{av}"/>
-<sentence ord="9" text="The cat{s} puts{v} the pizza{o} under{p} the whale´s table{av}"/>
-<sentence ord="10" text="The cat{s} puts{v} the hat{o} under{p} the panda´s table{av}"/>
-<sentence ord="11" text="The cat{s} puts{v} the butterfly{o} under{p} the gorilla´s table{av}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The dog{s} puts{v} the pizza{o} under{p} the panda´s table{av}"/>
-<sentence ord="1" text="The dog{s} puts{v} the banana{o} on{p} the panda´s table{av}"/>
-<sentence ord="2" text="The mouse{s} puts{v} the pizza{o} under{p} the panda´s table{av}"/>
-<sentence ord="3" text="The mouse{s} puts{v} the carrot{o} beside{p} the panda´s table{av}"/>
-<sentence ord="4" text="The gorilla{s} puts{v} the carrot{o} on{p} the panda´s table{av}"/>
-<sentence ord="5" text="The panda{s} puts{v} the banana{o} on{p} the whale´s table{av}"/>
-<sentence ord="6" text="The panda{s} puts{v} the butterfly{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="7" text="The whale{s} puts{v} the pizza{o} under{p} the whale´s table{av}"/>
-<sentence ord="8" text="The whale{s} puts{v} the banana{o} beside{p} the panda´s table{av}"/>
-<sentence ord="9" text="The whale{s} puts{v} the carrot{o} under{p} the whale´s table{av}"/>
-<sentence ord="10" text="The whale{s} puts{v} the butterfly{o} beside{p} the panda´s table{av}"/>
-<sentence ord="11" text="The cat{s} puts{v} the banana{o} beside{p} the whale´s table{av}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The dog{s} puts{v} the pizza{o} on{p} the whale´s table{av}"/>
-<sentence ord="1" text="The mouse{s} puts{v} the pizza{o} on{p} the panda´s table{av}"/>
-<sentence ord="2" text="The mouse{s} puts{v} the pizza{o} beside{p} the gorilla´s table{av}"/>
-<sentence ord="3" text="The panda{s} puts{v} the pizza{o} under{p} the whale´s table{av}"/>
-<sentence ord="4" text="The cat{s} puts{v} the butterfly{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="5" text="The panda{s} puts{v} the banana{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="6" text="The dog{s} puts{v} the banana{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="7" text="The cat{s} puts{v} the butterfly{o} beside{p} the panda´s table{av}"/>
-<sentence ord="8" text="The dog{s} puts{v} the hat{o} beside{p} the whale´s table{av}"/>
-<sentence ord="10" text="The dog{s} puts{v} the pizza{o} beside{p} the panda´s table{av}"/>
-<sentence ord="11" text="The mouse{s} puts{v} the banana{o} under{p} the whale´s table{av}"/>
-<sentence ord="12" text="The mouse{s} puts{v} the hat{o} beside{p} the whale´s table{av}"/>
-<sentence ord="13" text="The panda{s} puts{v} the hat{o} beside{p} the whale´s table{av}"/>
-<sentence ord="14" text="The whale{s} puts{v} the butterfly{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="15" text="The gorilla{s} puts{v} the carrot{o} on{p} the whale´s table{av}"/>
-<sentence ord="16" text="The dog{s} puts{v} the butterfly{o} beside{p} the whale´s table{av}"/>
-<sentence ord="17" text="The whale{s} puts{v} the carrot{o} beside{p} the whale´s table{av}"/>
-<sentence ord="18" text="The mouse{s} puts{v} the banana{o} on{p} the whale´s table{av}"/>
-<sentence ord="20" text="The dog{s} puts{v} the banana{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="21" text="The mouse{s} puts{v} the butterfly{o} on{p} the panda´s table{av}"/>
-<sentence ord="22" text="The gorilla{s} puts{v} the banana{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="23" text="The whale{s} puts{v} the pizza{o} under{p} the panda´s table{av}"/>
-<sentence ord="24" text="The panda{s} puts{v} the butterfly{o} beside{p} the whale´s table{av}"/>
-<sentence ord="25" text="The gorilla{s} puts{v} the pizza{o} under{p} the whale´s table{av}"/>
-<sentence ord="26" text="The mouse{s} puts{v} the hat{o} under{p} the whale´s table{av}"/>
-<sentence ord="27" text="The panda{s} puts{v} the butterfly{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="28" text="The mouse{s} puts{v} the butterfly{o} under{p} the panda´s table{av}"/>
-<sentence ord="30" text="The dog{s} puts{v} the hat{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="31" text="The gorilla{s} puts{v} the pizza{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="32" text="The gorilla{s} puts{v} the hat{o} beside{p} the whale´s table{av}"/>
-<sentence ord="33" text="The whale{s} puts{v} the butterfly{o} beside{p} the whale´s table{av}"/>
-<sentence ord="34" text="The panda{s} puts{v} the hat{o} on{p} the panda´s table{av}"/>
-<sentence ord="35" text="The mouse{s} puts{v} the hat{o} on{p} the whale´s table{av}"/>
-<sentence ord="36" text="The mouse{s} puts{v} the butterfly{o} beside{p} the panda´s table{av}"/>
-<sentence ord="37" text="The panda{s} puts{v} the banana{o} under{p} the panda´s table{av}"/>
-<sentence ord="38" text="The gorilla{s} puts{v} the hat{o} under{p} the panda´s table{av}"/>
-<sentence ord="40" text="The dog{s} puts{v} the carrot{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="41" text="The gorilla{s} puts{v} the banana{o} beside{p} the panda´s table{av}"/>
-<sentence ord="42" text="The panda{s} puts{v} the pizza{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="43" text="The cat{s} puts{v} the butterfly{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="44" text="The gorilla{s} puts{v} the butterfly{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="45" text="The mouse{s} puts{v} the pizza{o} under{p} the panda´s table{av}"/>
-<sentence ord="46" text="The panda{s} puts{v} the pizza{o} beside{p} the whale´s table{av}"/>
-<sentence ord="47" text="The mouse{s} puts{v} the carrot{o} on{p} the whale´s table{av}"/>
-<sentence ord="49" text="The dog{s} puts{v} the butterfly{o} on{p} the whale´s table{av}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The gorilla{s} puts{v} the pizza{o} beside{p} the whale´s table{av}"/>
-<sentence ord="1" text="The cat{s} puts{v} the butterfly{o} beside{p} the whale´s table{av}"/>
-<sentence ord="2" text="The dog{s} puts{v} the pizza{o} on{p} the panda´s table{av}"/>
-<sentence ord="3" text="The mouse{s} puts{v} the carrot{o} under{p} the panda´s table{av}"/>
-<sentence ord="4" text="The gorilla{s} puts{v} the butterfly{o} beside{p} the gorilla´s table{av}"/>
-<sentence ord="5" text="The whale{s} puts{v} the pizza{o} on{p} the panda´s table{av}"/>
-<sentence ord="6" text="The cat{s} puts{v} the pizza{o} on{p} the panda´s table{av}"/>
-<sentence ord="7" text="The whale{s} puts{v} the banana{o} beside{p} the gorilla´s table{av}"/>
-<sentence ord="8" text="The dog{s} puts{v} the hat{o} under{p} the panda´s table{av}"/>
-<sentence ord="9" text="The mouse{s} puts{v} the butterfly{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="10" text="The gorilla{s} puts{v} the pizza{o} beside{p} the gorilla´s table{av}"/>
-<sentence ord="11" text="The cat{s} puts{v} the butterfly{o} beside{p} the gorilla´s table{av}"/>
-<sentence ord="12" text="The dog{s} puts{v} the pizza{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="13" text="The mouse{s} puts{v} the carrot{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="14" text="The gorilla{s} puts{v} the butterfly{o} beside{p} the whale´s table{av}"/>
-<sentence ord="15" text="The whale{s} puts{v} the pizza{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="16" text="The cat{s} puts{v} the pizza{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="17" text="The whale{s} puts{v} the banana{o} beside{p} the whale´s table{av}"/>
-<sentence ord="18" text="The dog{s} puts{v} the hat{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="19" text="The panda{s} puts{v} the butterfly{o} under{p} the panda´s table{av}"/>
-<sentence ord="20" text="The gorilla{s} puts{v} the pizza{o} beside{p} the panda´s table{av}"/>
-<sentence ord="21" text="The cat{s} puts{v} the butterfly{o} beside{p} the panda´s table{av}"/>
-<sentence ord="22" text="The dog{s} puts{v} the pizza{o} on{p} the whale´s table{av}"/>
-<sentence ord="23" text="The mouse{s} puts{v} the carrot{o} under{p} the whale´s table{av}"/>
-<sentence ord="24" text="The panda{s} puts{v} the pizza{o} on{p} the panda´s table{av}"/>
-<sentence ord="25" text="The whale{s} puts{v} the pizza{o} on{p} the whale´s table{av}"/>
-<sentence ord="26" text="The cat{s} puts{v} the pizza{o} on{p} the whale´s table{av}"/>
-<sentence ord="27" text="The whale{s} puts{v} the hat{o} on{p} the panda´s table{av}"/>
-<sentence ord="28" text="The dog{s} puts{v} the hat{o} under{p} the whale´s table{av}"/>
-<sentence ord="29" text="The whale{s} puts{v} the carrot{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="30" text="The gorilla{s} puts{v} the pizza{o} under{p} the whale´s table{av}"/>
-<sentence ord="31" text="The cat{s} puts{v} the butterfly{o} under{p} the whale´s table{av}"/>
-<sentence ord="32" text="The dog{s} puts{v} the pizza{o} under{p} the panda´s table{av}"/>
-<sentence ord="33" text="The mouse{s} puts{v} the carrot{o} beside{p} the panda´s table{av}"/>
-<sentence ord="34" text="The panda{s} puts{v} the pizza{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="35" text="The whale{s} puts{v} the pizza{o} under{p} the panda´s table{av}"/>
-<sentence ord="36" text="The cat{s} puts{v} the pizza{o} under{p} the panda´s table{av}"/>
-<sentence ord="37" text="The whale{s} puts{v} the hat{o} on{p} the gorilla´s table{av}"/>
-<sentence ord="38" text="The dog{s} puts{v} the hat{o} beside{p} the panda´s table{av}"/>
-<sentence ord="39" text="The cat{s} puts{v} the carrot{o} beside{p} the panda´s table{av}"/>
-<sentence ord="40" text="The gorilla{s} puts{v} the pizza{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="41" text="The cat{s} puts{v} the butterfly{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="42" text="The dog{s} puts{v} the pizza{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="43" text="The mouse{s} puts{v} the carrot{o} beside{p} the gorilla´s table{av}"/>
-<sentence ord="44" text="The panda{s} puts{v} the pizza{o} on{p} the whale´s table{av}"/>
-<sentence ord="45" text="The whale{s} puts{v} the pizza{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="46" text="The cat{s} puts{v} the pizza{o} under{p} the gorilla´s table{av}"/>
-<sentence ord="47" text="The whale{s} puts{v} the hat{o} on{p} the whale´s table{av}"/>
-<sentence ord="48" text="The dog{s} puts{v} the hat{o} beside{p} the gorilla´s table{av}"/>
-<sentence ord="50" text="The gorilla{s} puts{v} the pizza{o} under{p} the panda´s table{av}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

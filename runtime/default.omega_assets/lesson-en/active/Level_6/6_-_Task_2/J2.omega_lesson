@@ -14,190 +14,68 @@
 </target>
 <items>
 <item-entry Tid="a" ord="0" type="passive">
-<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/TheQuick.wav" text="The fast" var-1="Fast" var-2="" var-3=""/>
-<item action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/TheSlow.wav" text="The slow" var-1="Slow" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="The first" ord="0" sign="" sound="audio/words-en/TheQuick.mp3" text="The fast" tts="" var-1="Fast" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="The sown" ord="1" sign="" sound="audio/words-en/TheSlow.mp3" text="The slow" tts="" var-1="Slow" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="s" ord="1" type="actor">
-<item Lid="lemur" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/lemurB.wav" text="lemur" var-1="" var-2="" var-3=""/>
-<item Lid="leopard" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/leopardB.wav" text="leopard" var-1="" var-2="" var-3=""/>
-<item Lid="tiger" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-en/tigerB.wav" text="tiger" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="lemur" action-fname="" action-type="" dummysign="" dummysound="" dummytext="tenor" ord="0" sign="" sound="audio/words-en/lemurB.mp3" text="lemur" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="leopard" action-fname="" action-type="" dummysign="" dummysound="" dummytext="landlord" ord="1" sign="" sound="audio/words-en/leopardB.mp3" text="leopard" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="tiger" action-fname="" action-type="" dummysign="" dummysound="" dummytext="timer" ord="2" sign="" sound="audio/words-en/tigerB.mp3" text="tiger" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="2" type="action">
-<item action-fname="anim/ActiveAnim/Chase{--1}{+++1}" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/chases.wav" text="chases" var-1="" var-2="" var-3=""/>
-<item action-fname="anim/ActiveAnim/Carry{--1}{+++1}" action-type="omega_anim" dummysound="" dummytext="" ord="1" sound="audio/words-en/carries.wav" text="carries" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/Chase{--1}{+++1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="cashes" ord="0" sign="" sound="audio/words-en/chases.mp3" text="chases" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/Carry{--1}{+++1}" action-type="omega_anim" dummysign="" dummysound="" dummytext="ferries" ord="1" sign="" sound="audio/words-en/carries.mp3" text="carries" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="a1" ord="3" type="passive">
-<item action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-en/TheScared.wav" text="the scared" var-1="scared" var-2="" var-3=""/>
-<item action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/TheHappy.wav" text="the happy" var-1="glad" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="the shared" ord="0" sign="" sound="audio/words-en/TheScared.mp3" text="the scared" tts="" var-1="scared" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="the snappy" ord="1" sign="" sound="audio/words-en/TheHappy.mp3" text="the happy" tts="" var-1="glad" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="4" type="passive">
-<item Lid="mouse:{-1}" action-fname="" action-type="null" dummysound="" dummytext="" ord="0" sound="audio/words-en/mouseB.wav" text="mouse" var-1="" var-2="" var-3=""/>
-<item Lid="cat:{-1}" action-fname="" action-type="null" dummysound="" dummytext="" ord="1" sound="audio/words-en/catB.wav" text="cat" var-1="" var-2="" var-3=""/>
-<item Lid="rabbit:{-1}" action-fname="" action-type="null" dummysound="" dummytext="" ord="2" sound="audio/words-en/rabbitB.wav" text="rabbit" var-1="" var-2="" var-3=""/>
-<item Lid="lion:{-1}" action-fname="" action-type="omega_anim" dummysound="" dummytext="" ord="3" sound="audio/words-en/lion2.wav" text="lion" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="mouse:{-1}" action-fname="" action-type="" dummysign="" dummysound="" dummytext="moss" ord="0" sign="" sound="audio/words-en/mouseB.mp3" text="mouse" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="cat:{-1}" action-fname="" action-type="" dummysign="" dummysound="" dummytext="bat" ord="1" sign="" sound="audio/words-en/catB.mp3" text="cat" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="rabbit:{-1}" action-fname="" action-type="" dummysign="" dummysound="" dummytext="hobbit" ord="2" sign="" sound="audio/words-en/rabbitB.mp3" text="rabbit" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="lion:{-1}" action-fname="" action-type="" dummysign="" dummysound="" dummytext="loon" ord="3" sign="" sound="audio/words-en/lion2.mp3" text="lion" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="av" ord="5" type="passive">
-<item action-fname="" action-type="omega_anim" dummysound="audio/words-en/OverTheSchoolyard.wav" dummytext="ove the schoolyard" ord="0" sound="audio/words-en/AcrossTheMeadow.wav" text="across the meadow" var-1="OverMeadow" var-2="" var-3=""/>
-<item action-fname="" action-type="null" dummysound="audio/words-en/OnTheRadio.wav" dummytext="on the radio" ord="1" sound="audio/words-en/InTheStreet.wav" text="in the street." var-1="InStreet" var-2="" var-3=""/>
-<item action-fname="" action-type="null" dummysound="audio/words-en/dummy/InTheFrost.wav" dummytext="in the frost" ord="2" sound="audio/words-en/InTheForest.wav" text="in the forest." var-1="InWood" var-2="" var-3=""/>
-<item action-fname="" action-type="omega_anim" dummysound="audio/words-en/dummy/AcrossTheBarnyard.wav" dummytext="across the barnyard" ord="3" sound="audio/words-en/AcrossTheSchoolyard.wav" text="across the schoolyard" var-1="OverSchoolyard" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-en/OverTheSchoolyard.mp3" dummytext="along the shadow" ord="0" sign="" sound="audio/words-en/AcrossTheMeadow.mp3" text="across the meadow" tts="" var-1="OverMeadow" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-en/OnTheRadio.mp3" dummytext="on the radio" ord="1" sign="" sound="audio/words-en/InTheStreet.mp3" text="in the street" tts="" var-1="InStreet" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/InTheFrost.mp3" dummytext="in the frost" ord="2" sign="" sound="audio/words-en/InTheForest.mp3" text="in the forest" tts="" var-1="InWood" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/AcrossTheBarnyard.mp3" dummytext="across the barnyard" ord="3" sign="" sound="audio/words-en/AcrossTheSchoolyard.mp3" text="across the schoolyard" tts="" var-1="OverSchoolyard" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
-<test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The slow{a} leopard{s} chases{v} the scared{a1} mouse{o} across the playground{av}"/>
-<sentence ord="1" text="The slow{a} lemur{s} carries{v} the happy{a1} mouse{o} on the road{av}"/>
-<sentence ord="2" text="The slow{a} leopard{s} chases{v} the happy{a1} rabbit{o} in the forrest{av}"/>
-<sentence ord="3" text="The slow{a} leopard{s} carries{v} the scared{a1} rabbit{o} across the playground{av}"/>
-<sentence ord="4" text="The slow{a} leopard{s} carries{v} the scared{a1} cat{o} in the forrest{av}"/>
-<sentence ord="5" text="The fast{a} tiger{s} carries{v} the scared{a1} mouse{o} over the meadow{av}"/>
-<sentence ord="6" text="The fast{a} lemur{s} chases{v} the happy{a1} rabbit{o} over the meadow{av}"/>
-<sentence ord="7" text="The slow{a} tiger{s} carries{v} the happy{a1} lion{o} across the playground{av}"/>
-<sentence ord="8" text="The slow{a} tiger{s} carries{v} the happy{a1} mouse{o} across the playground{av}"/>
-<sentence ord="9" text="The fast{a} leopard{s} carries{v} the happy{a1} mouse{o} across the playground{av}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The fast{a} lemur{s} carries{v} the scared{a1} mouse{o} across the playground{av}"/>
-<sentence ord="1" text="The slow{a} leopard{s} carries{v} the scared{a1} lion{o} over the meadow{av}"/>
-<sentence ord="2" text="The slow{a} tiger{s} carries{v} the happy{a1} lion{o} across the playground{av}"/>
-<sentence ord="3" text="The fast{a} lemur{s} carries{v} the happy{a1} mouse{o} on the road{av}"/>
-<sentence ord="4" text="The fast{a} lemur{s} chases{v} the scared{a1} mouse{o} over the meadow{av}"/>
-<sentence ord="5" text="The slow{a} leopard{s} chases{v} the scared{a1} cat{o} over the meadow{av}"/>
-<sentence ord="6" text="The slow{a} tiger{s} carries{v} the scared{a1} cat{o} across the playground{av}"/>
-<sentence ord="7" text="The slow{a} lemur{s} carries{v} the happy{a1} cat{o} in the forrest{av}"/>
-<sentence ord="8" text="The fast{a} tiger{s} carries{v} the happy{a1} cat{o} in the forrest{av}"/>
-<sentence ord="9" text="The fast{a} leopard{s} carries{v} the scared{a1} mouse{o} across the playground{av}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The slow{a} tiger{s} carries{v} the scared{a1} lion{o} on the road{av}"/>
-<sentence ord="1" text="The fast{a} lemur{s} carries{v} the scared{a1} cat{o} in the forrest{av}"/>
-<sentence ord="2" text="The fast{a} leopard{s} carries{v} the happy{a1} rabbit{o} over the meadow{av}"/>
-<sentence ord="3" text="The slow{a} leopard{s} chases{v} the scared{a1} mouse{o} on the road{av}"/>
-<sentence ord="4" text="The slow{a} tiger{s} chases{v} the happy{a1} mouse{o} on the road{av}"/>
-<sentence ord="5" text="The fast{a} tiger{s} carries{v} the scared{a1} cat{o} across the playground{av}"/>
-<sentence ord="6" text="The fast{a} leopard{s} chases{v} the scared{a1} rabbit{o} over the meadow{av}"/>
-<sentence ord="7" text="The fast{a} lemur{s} chases{v} the scared{a1} rabbit{o} in the forrest{av}"/>
-<sentence ord="8" text="The slow{a} lemur{s} chases{v} the scared{a1} mouse{o} across the playground{av}"/>
-<sentence ord="9" text="The slow{a} tiger{s} chases{v} the scared{a1} lion{o} on the road{av}"/>
-<sentence ord="10" text="The slow{a} tiger{s} carries{v} the scared{a1} lion{o} over the meadow{av}"/>
-<sentence ord="11" text="The fast{a} lemur{s} carries{v} the scared{a1} cat{o} across the playground{av}"/>
-<sentence ord="12" text="The fast{a} leopard{s} carries{v} the happy{a1} rabbit{o} on the road{av}"/>
-<sentence ord="13" text="The slow{a} leopard{s} chases{v} the scared{a1} mouse{o} in the forrest{av}"/>
-<sentence ord="14" text="The slow{a} tiger{s} chases{v} the happy{a1} mouse{o} in the forrest{av}"/>
-<sentence ord="15" text="The fast{a} tiger{s} carries{v} the scared{a1} rabbit{o} over the meadow{av}"/>
-<sentence ord="16" text="The fast{a} leopard{s} chases{v} the scared{a1} rabbit{o} on the road{av}"/>
-<sentence ord="17" text="The fast{a} lemur{s} chases{v} the scared{a1} rabbit{o} across the playground{av}"/>
-<sentence ord="18" text="The slow{a} lemur{s} chases{v} the scared{a1} cat{o} over the meadow{av}"/>
-<sentence ord="19" text="The slow{a} leopard{s} chases{v} the happy{a1} rabbit{o} across the playground{av}"/>
-<sentence ord="20" text="The slow{a} tiger{s} carries{v} the scared{a1} rabbit{o} across the playground{av}"/>
-<sentence ord="21" text="The fast{a} lemur{s} carries{v} the scared{a1} rabbit{o} over the meadow{av}"/>
-<sentence ord="22" text="The fast{a} leopard{s} carries{v} the happy{a1} rabbit{o} in the forrest{av}"/>
-<sentence ord="23" text="The slow{a} leopard{s} chases{v} the scared{a1} mouse{o} across the playground{av}"/>
-<sentence ord="24" text="The slow{a} tiger{s} chases{v} the happy{a1} mouse{o} across the playground{av}"/>
-<sentence ord="25" text="The fast{a} tiger{s} carries{v} the scared{a1} rabbit{o} on the road{av}"/>
-<sentence ord="26" text="The fast{a} leopard{s} chases{v} the scared{a1} rabbit{o} in the forrest{av}"/>
-<sentence ord="27" text="The fast{a} lemur{s} chases{v} the scared{a1} lion{o} over the meadow{av}"/>
-<sentence ord="28" text="The slow{a} lemur{s} chases{v} the scared{a1} cat{o} on the road{av}"/>
-<sentence ord="29" text="The slow{a} lemur{s} chases{v} the happy{a1} mouse{o} over the meadow{av}"/>
-<sentence ord="30" text="The slow{a} tiger{s} carries{v} the scared{a1} rabbit{o} in the forrest{av}"/>
-<sentence ord="31" text="The fast{a} lemur{s} carries{v} the scared{a1} rabbit{o} on the road{av}"/>
-<sentence ord="32" text="The fast{a} leopard{s} carries{v} the happy{a1} rabbit{o} across the playground{av}"/>
-<sentence ord="33" text="The slow{a} leopard{s} chases{v} the scared{a1} cat{o} over the meadow{av}"/>
-<sentence ord="34" text="The slow{a} tiger{s} chases{v} the happy{a1} cat{o} over the meadow{av}"/>
-<sentence ord="35" text="The fast{a} tiger{s} carries{v} the scared{a1} rabbit{o} in the forrest{av}"/>
-<sentence ord="36" text="The fast{a} leopard{s} chases{v} the scared{a1} rabbit{o} across the playground{av}"/>
-<sentence ord="37" text="The fast{a} lemur{s} chases{v} the scared{a1} lion{o} on the road{av}"/>
-<sentence ord="38" text="The slow{a} lemur{s} chases{v} the scared{a1} cat{o} in the forrest{av}"/>
-<sentence ord="39" text="The fast{a} tiger{s} carries{v} the happy{a1} cat{o} on the road{av}"/>
-<sentence ord="40" text="The slow{a} tiger{s} carries{v} the scared{a1} rabbit{o} on the road{av}"/>
-<sentence ord="41" text="The fast{a} lemur{s} carries{v} the scared{a1} rabbit{o} in the forrest{av}"/>
-<sentence ord="42" text="The fast{a} leopard{s} carries{v} the happy{a1} lion{o} over the meadow{av}"/>
-<sentence ord="43" text="The slow{a} leopard{s} chases{v} the scared{a1} cat{o} on the road{av}"/>
-<sentence ord="44" text="The slow{a} tiger{s} chases{v} the happy{a1} cat{o} on the road{av}"/>
-<sentence ord="45" text="The fast{a} tiger{s} carries{v} the scared{a1} rabbit{o} across the playground{av}"/>
-<sentence ord="46" text="The fast{a} leopard{s} chases{v} the scared{a1} lion{o} over the meadow{av}"/>
-<sentence ord="47" text="The fast{a} lemur{s} chases{v} the scared{a1} lion{o} in the forrest{av}"/>
-<sentence ord="48" text="The slow{a} lemur{s} chases{v} the scared{a1} cat{o} across the playground{av}"/>
-<sentence ord="49" text="The fast{a} leopard{s} carries{v} the scared{a1} lion{o} over the meadow{av}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The fast{a} leopard{s} chases{v} the scared{a1} lion{o} across the playground{av}"/>
-<sentence ord="1" text="The slow{a} lemur{s} chases{v} the scared{a1} lion{o} over the meadow{av}"/>
-<sentence ord="2" text="The slow{a} tiger{s} chases{v} the scared{a1} cat{o} across the playground{av}"/>
-<sentence ord="4" text="The slow{a} tiger{s} carries{v} the happy{a1} cat{o} across the playground{av}"/>
-<sentence ord="5" text="The fast{a} lemur{s} chases{v} the happy{a1} lion{o} over the meadow{av}"/>
-<sentence ord="6" text="The fast{a} leopard{s} carries{v} the scared{a1} cat{o} across the playground{av}"/>
-<sentence ord="7" text="The slow{a} lemur{s} carries{v} the scared{a1} mouse{o} in the forrest{av}"/>
-<sentence ord="8" text="The slow{a} lemur{s} chases{v} the scared{a1} mouse{o} over the meadow{av}"/>
-<sentence ord="9" text="The fast{a} lemur{s} carries{v} the scared{a1} lion{o} over the meadow{av}"/>
-<sentence ord="10" text="The fast{a} leopard{s} chases{v} the happy{a1} mouse{o} over the meadow{av}"/>
-<sentence ord="11" text="The slow{a} lemur{s} chases{v} the scared{a1} lion{o} on the road{av}"/>
-<sentence ord="12" text="The slow{a} tiger{s} chases{v} the scared{a1} cat{o} in the forrest{av}"/>
-<sentence ord="14" text="The slow{a} tiger{s} carries{v} the happy{a1} cat{o} in the forrest{av}"/>
-<sentence ord="15" text="The fast{a} lemur{s} chases{v} the happy{a1} lion{o} on the road{av}"/>
-<sentence ord="16" text="The fast{a} leopard{s} carries{v} the scared{a1} rabbit{o} over the meadow{av}"/>
-<sentence ord="17" text="The slow{a} lemur{s} carries{v} the scared{a1} mouse{o} across the playground{av}"/>
-<sentence ord="18" text="The fast{a} tiger{s} carries{v} the happy{a1} lion{o} across the playground{av}"/>
-<sentence ord="19" text="The fast{a} lemur{s} carries{v} the happy{a1} cat{o} across the playground{av}"/>
-<sentence ord="20" text="The fast{a} leopard{s} chases{v} the happy{a1} mouse{o} on the road{av}"/>
-<sentence ord="21" text="The slow{a} lemur{s} chases{v} the scared{a1} lion{o} in the forrest{av}"/>
-<sentence ord="22" text="The slow{a} tiger{s} chases{v} the scared{a1} cat{o} on the road{av}"/>
-<sentence ord="24" text="The slow{a} tiger{s} carries{v} the happy{a1} cat{o} on the road{av}"/>
-<sentence ord="25" text="The fast{a} lemur{s} chases{v} the happy{a1} lion{o} in the forrest{av}"/>
-<sentence ord="26" text="The fast{a} leopard{s} carries{v} the scared{a1} rabbit{o} on the road{av}"/>
-<sentence ord="27" text="The slow{a} lemur{s} carries{v} the scared{a1} cat{o} over the meadow{av}"/>
-<sentence ord="28" text="The fast{a} tiger{s} carries{v} the happy{a1} lion{o} in the forrest{av}"/>
-<sentence ord="29" text="The fast{a} leopard{s} chases{v} the scared{a1} cat{o} over the meadow{av}"/>
-<sentence ord="30" text="The fast{a} leopard{s} chases{v} the happy{a1} mouse{o} in the forrest{av}"/>
-<sentence ord="31" text="The slow{a} lemur{s} chases{v} the scared{a1} lion{o} across the playground{av}"/>
-<sentence ord="32" text="The slow{a} tiger{s} chases{v} the scared{a1} cat{o} over the meadow{av}"/>
-<sentence ord="34" text="The slow{a} tiger{s} carries{v} the happy{a1} cat{o} over the meadow{av}"/>
-<sentence ord="35" text="The fast{a} lemur{s} chases{v} the happy{a1} lion{o} across the playground{av}"/>
-<sentence ord="36" text="The fast{a} leopard{s} carries{v} the scared{a1} rabbit{o} in the forrest{av}"/>
-<sentence ord="37" text="The slow{a} lemur{s} carries{v} the scared{a1} cat{o} on the road{av}"/>
-<sentence ord="38" text="The fast{a} tiger{s} carries{v} the happy{a1} lion{o} on the road{av}"/>
-<sentence ord="39" text="The fast{a} leopard{s} carries{v} the scared{a1} mouse{o} on the road{av}"/>
-<sentence ord="40" text="The fast{a} leopard{s} chases{v} the happy{a1} mouse{o} across the playground{av}"/>
-<sentence ord="41" text="The slow{a} lemur{s} chases{v} the happy{a1} mouse{o} over the meadow{av}"/>
-<sentence ord="42" text="The slow{a} tiger{s} chases{v} the scared{a1} mouse{o} across the playground{av}"/>
-<sentence ord="44" text="The slow{a} tiger{s} carries{v} the happy{a1} mouse{o} across the playground{av}"/>
-<sentence ord="45" text="The fast{a} lemur{s} carries{v} the scared{a1} mouse{o} over the meadow{av}"/>
-<sentence ord="46" text="The fast{a} leopard{s} carries{v} the scared{a1} rabbit{o} across the playground{av}"/>
-<sentence ord="47" text="The slow{a} lemur{s} carries{v} the scared{a1} cat{o} in the forrest{av}"/>
-<sentence ord="48" text="The fast{a} tiger{s} carries{v} the happy{a1} lion{o} over the meadow{av}"/>
-</test_entry>
-</test_entries>
+<sign_specific/>
+<test_entries/>
 </omega_lesson>

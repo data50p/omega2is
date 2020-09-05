@@ -11,63 +11,39 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="computerDo{+1}" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/bear.wav" dummytext="the bear" ord="0" sign="" sound="audio/words-en/dummy/crater.mp3" text="Datorn" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="penDo{+1}" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/cart.wav" dummytext="the cart" ord="1" sign="" sound="audio/words-en/penguin.mp3" text="Pennan" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="potatoDo{+1}" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/potato.mp3" text="Potatisen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="computerDo{+1}" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/bear.wav" dummytext="Datten" ord="0" sign="" sound="audio/words-en/dummy/crater.mp3" text="Datorn" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="penDo{+1}" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/cart.wav" dummytext="Pannan" ord="1" sign="" sound="audio/words-en/penguin.mp3" text="Pennan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="potatoDo{+1}" action-fname="" action-type="" dummysign="" dummysound="" dummytext="Polisen" ord="2" sign="" sound="audio/words-en/potato.mp3" text="Potatisen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/Swim_hall_dry" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-en/drives.mp3" text="torkar" var-1="Dry" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/Bath_soap" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-en/swims.mp3" text="tvålar in" var-1="Soap" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/ActiveAnim/ParkSpray" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="sprutar på" var-1="Spray" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/Swim_hall_dry" action-type="omega_anim" dummysign="" dummysound="" dummytext="tankar" ord="0" sign="" sound="audio/words-en/drives.mp3" text="torkar" tts="" var-1="Dry" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/Bath_soap" action-type="omega_anim" dummysign="" dummysound="" dummytext="tvivlar på" ord="1" sign="" sound="audio/words-en/swims.mp3" text="tvålar in" tts="" var-1="Soap" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/ActiveAnim/ParkSpray" action-type="omega_anim" dummysign="" dummysound="" dummytext="spurtar på" ord="2" sign="" sound="" text="sprutar på" tts="" var-1="Spray" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="o" ord="2" type="passive">
-<item Lid="potato" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/cart.wav" dummytext="the cart" ord="0" sign="" sound="audio/words-en/potato.mp3" text="potatisen" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="computer" action-fname="" action-type="omega_anim" dummysign="" dummysound="audio/words-en/dummy/bear.wav" dummytext="the bear" ord="1" sign="" sound="audio/words-en/dummy/crater.mp3" text="datorn" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="pen" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-en/penguin.mp3" text="pennan" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="potato" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/cart.wav" dummytext="polisen" ord="0" sign="" sound="audio/words-en/potato.mp3" text="potatisen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="computer" action-fname="" action-type="" dummysign="" dummysound="audio/words-en/dummy/bear.wav" dummytext="datten" ord="1" sign="" sound="audio/words-en/dummy/crater.mp3" text="datorn" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="pen" action-fname="" action-type="" dummysign="" dummysound="" dummytext="pannan" ord="2" sign="" sound="audio/words-en/penguin.mp3" text="pennan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
 <sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="The buzzard{s} chases{v} the carrot{o}"/>
-<sentence ord="1" text="The buzzard{s} chases{v} the buzzard{o}"/>
-<sentence ord="2" text="The carrot{s} chases{v} the carrot{o}"/>
-<sentence ord="3" text="The carrot{s} chases{v} the buzzard{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="The buzzard{s} chases{v} the buzzard{o}"/>
-<sentence ord="1" text="The carrot{s} chases{v} the buzzard{o}"/>
-<sentence ord="2" text="The buzzard{s} chases{v} the carrot{o}"/>
-<sentence ord="3" text="The carrot{s} chases{v} the carrot{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="The carrot{s} chases{v} the buzzard{o}"/>
-<sentence ord="1" text="The carrot{s} chases{v} the carrot{o}"/>
-<sentence ord="2" text="The buzzard{s} chases{v} the buzzard{o}"/>
-<sentence ord="3" text="The buzzard{s} chases{v} the carrot{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="The carrot{s} chases{v} the carrot{o}"/>
-<sentence ord="1" text="The buzzard{s} chases{v} the buzzard{o}"/>
-<sentence ord="2" text="The buzzard{s} chases{v} the carrot{o}"/>
-<sentence ord="3" text="The carrot{s} chases{v} the buzzard{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

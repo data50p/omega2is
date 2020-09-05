@@ -11,78 +11,29 @@
 </target>
 <items>
 <item-entry Tid="s,o" ord="0" type="actor">
-<item Lid="buzzard" action-fname="" action-type="null" dummysound="audio/words-sv/fish.wav" dummytext="fisken" ord="0" sound="audio/words-sv/bird.wav" text="fågeln" var-1="n" var-2="" var-3=""/>
-<item Lid="carrot" action-fname="" action-type="null" dummysound="audio/words-sv/dummy/engine.wav" dummytext="motorn" ord="1" sound="audio/words-sv/carrot.wav" text="moroten" var-1="n" var-2="" var-3=""/>
-<item Lid="lion" action-fname="" action-type="null" dummysound="audio/words-sv/lemur.wav" dummytext="lemuren" ord="2" sound="audio/words-sv/lion.wav" text="lejonet" var-1="t" var-2="" var-3=""/>
-<item Lid="swan" action-fname="" action-type="omega_anim" dummysound="audio/words-sv/dummy/tail.wav" dummytext="svansen" ord="3" sound="audio/words-sv/swan.wav" text="svanen" var-1="n" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item Lid="buzzard" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/fish.wav" dummytext="fisken" ord="0" sign="" sound="audio/words-sv/bird.wav" text="fågeln" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="carrot" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/engine.wav" dummytext="motorn" ord="1" sign="" sound="audio/words-sv/carrot.wav" text="moroten" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="lion" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/lemur.wav" dummytext="lemuren" ord="2" sign="" sound="audio/words-sv/lion.wav" text="lejonet" tts="" var-1="t" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="swan" action-fname="" action-type="" dummysign="" dummysound="audio/words-sv/dummy/tail.wav" dummytext="svansen" ord="3" sign="" sound="audio/words-sv/swan.wav" text="svanen" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="" action-type="" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/ActiveAnim/ChaseChased1" action-type="omega_anim" dummysound="" dummytext="" ord="0" sound="audio/words-sv/chases.wav" text="jagar" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="1" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="2" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="3" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="4" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="5" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="6" sound="" text="" var-1="" var-2="" var-3=""/>
-<item action-fname="" action-type="" dummysound="" dummytext="" ord="7" sound="" text="" var-1="" var-2="" var-3=""/>
+<item action-fname="anim/ActiveAnim/ChaseChased1" action-type="omega_anim" dummysign="" dummysound="" dummytext="lagar" ord="0" sign="" sound="audio/words-sv/chases.wav" text="jagar" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 </items>
 </lesson>
 <action_specific/>
+<sign_specific/>
 <test_entries>
-<test_entry ord="0" type="pre">
-<sentence ord="0" text="Fågeln{s} jagar{v} fågeln{o}"/>
-<sentence ord="1" text="Moroten{s} jagar{v} fågeln{o}"/>
-<sentence ord="2" text="Lejonet{s} jagar{v} moroten{o}"/>
-<sentence ord="3" text="Svanen{s} jagar{v} fågeln{o}"/>
-<sentence ord="4" text="Svanen{s} jagar{v} lejonet{o}"/>
-</test_entry>
-<test_entry ord="1" type="pre">
-<sentence ord="0" text="Fågeln{s} jagar{v} lejonet{o}"/>
-<sentence ord="1" text="Moroten{s} jagar{v} lejonet{o}"/>
-<sentence ord="2" text="Lejonet{s} jagar{v} lejonet{o}"/>
-<sentence ord="3" text="Lejonet{s} jagar{v} svanen{o}"/>
-<sentence ord="4" text="Svanen{s} jagar{v} moroten{o}"/>
-</test_entry>
-<test_entry ord="0" type="post">
-<sentence ord="0" text="Svanen{s} jagar{v} svanen{o}"/>
-<sentence ord="1" text="Svanen{s} jagar{v} lejonet{o}"/>
-<sentence ord="2" text="Svanen{s} jagar{v} moroten{o}"/>
-<sentence ord="3" text="Svanen{s} jagar{v} fågeln{o}"/>
-<sentence ord="4" text="Lejonet{s} jagar{v} svanen{o}"/>
-<sentence ord="5" text="Lejonet{s} jagar{v} lejonet{o}"/>
-<sentence ord="6" text="Lejonet{s} jagar{v} moroten{o}"/>
-<sentence ord="7" text="Lejonet{s} jagar{v} fågeln{o}"/>
-<sentence ord="8" text="Moroten{s} jagar{v} svanen{o}"/>
-<sentence ord="9" text="Moroten{s} jagar{v} lejonet{o}"/>
-<sentence ord="10" text="Moroten{s} jagar{v} moroten{o}"/>
-<sentence ord="11" text="Moroten{s} jagar{v} fågeln{o}"/>
-<sentence ord="12" text="Fågeln{s} jagar{v} svanen{o}"/>
-<sentence ord="13" text="Fågeln{s} jagar{v} lejonet{o}"/>
-<sentence ord="14" text="Fågeln{s} jagar{v} moroten{o}"/>
-<sentence ord="15" text="Fågeln{s} jagar{v} fågeln{o}"/>
-</test_entry>
-<test_entry ord="1" type="post">
-<sentence ord="0" text="Svanen{s} jagar{v} svanen{o}"/>
-<sentence ord="2" text="Moroten{s} jagar{v} fågeln{o}"/>
-<sentence ord="3" text="Moroten{s} jagar{v} lejonet{o}"/>
-<sentence ord="4" text="Fågeln{s} jagar{v} moroten{o}"/>
-<sentence ord="5" text="Moroten{s} jagar{v} svanen{o}"/>
-<sentence ord="6" text="Fågeln{s} jagar{v} svanen{o}"/>
-<sentence ord="6" text="Svanen{s} jagar{v} lejonet{o}"/>
-<sentence ord="7" text="Lejonet{s} jagar{v} fågeln{o}"/>
-<sentence ord="8" text="Lejonet{s} jagar{v} moroten{o}"/>
-<sentence ord="9" text="Moroten{s} jagar{v} moroten{o}"/>
-<sentence ord="10" text="Svanen{s} jagar{v} fågeln{o}"/>
-<sentence ord="11" text="Lejonet{s} jagar{v} lejonet{o}"/>
-<sentence ord="12" text="Fågeln{s} jagar{v} fågeln{o}"/>
-<sentence ord="13" text="Fågeln{s} jagar{v} lejonet{o}"/>
-<sentence ord="14" text="Svanen{s} jagar{v} moroten{o}"/>
-<sentence ord="15" text="Lejonet{s} jagar{v} svanen{o}"/>
-</test_entry>
 </test_entries>
 </omega_lesson>

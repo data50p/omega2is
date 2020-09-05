@@ -10,17 +10,17 @@
 </target>
 <items>
 <item-entry Tid="s" ord="0" type="actor">
-<item Lid="actor1" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/bird.mp3" text="Fågeln" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="actor2" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="audio/words-sv/actor2.wav" text="Kameleonten" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="actor3" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="audio/words-sv/actor3.wav" text="Geten" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
-<item Lid="actor 4" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="audio/words-sv/actor4.mp3" text="Larven" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="4" sign="" sound="audio/words-sv/mouse.mp3" text="Musen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="5" sign="" sound="audio/words-sv/squirrel.mp3" text="Ekorren" tts="eck-orrän" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="6" sign="" sound="audio/words-sv/bird.mp3" text="Apan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
-<item action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="7" sign="" sound="audio/words-sv/girl.mp3" text="Flickan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="Påsen" ord="0" sign="" sound="audio/words-sv/bird.mp3" text="Fågeln" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="Kamelen" ord="1" sign="" sound="audio/words-sv/actor2.wav" text="Kameleonten" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="Jästen" ord="2" sign="" sound="audio/words-sv/actor3.wav" text="Geten" tts="" var-1="n" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="Lavan" ord="3" sign="" sound="audio/words-sv/actor4.mp3" text="Larven" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="Näsan" ord="4" sign="" sound="audio/words-sv/mouse.mp3" text="Musen" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="Ekoxen" ord="5" sign="" sound="audio/words-sv/squirrel.mp3" text="Ekorren" tts="e'korren" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="Aspen" ord="6" sign="" sound="audio/words-sv/bird.mp3" text="Apan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item Lid="" action-fname="" action-type="omega_anim" dummysign="" dummysound="" dummytext="Fläcken" ord="7" sign="" sound="audio/words-sv/girl.mp3" text="Flickan" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 </item-entry>
 <item-entry Tid="v" ord="1" type="action">
-<item action-fname="anim/AnimTemplates/ActorAction" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="0" sign="" sound="audio/words-sv/eats.mp3" text="äter" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
+<item action-fname="anim/AnimTemplates/ActorAction" action-type="omega_anim" dummysign="" dummysound="" dummytext="ökar" ord="0" sign="" sound="audio/words-sv/eats.mp3" text="äter" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="1" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="2" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
 <item action-fname="anim/AnimTemplates/ActorActsWith" action-type="omega_anim" dummysign="" dummysound="" dummytext="" ord="3" sign="" sound="" text="" tts="" var-1="" var-2="" var-3="" var-4="" var-5=""/>
@@ -32,10 +32,9 @@
 </items>
 </lesson>
 <action_specific>
-<value key="Domherren äter" val="anim/ActiveVideo/animalsEating/bullfinchEating.mp4"/>
+<value key="Fågeln äter" val="anim/ActiveVideo/animalsEating/bullfinchEating.mp4"/>
 <value key="Apan äter" val="anim/ActiveVideo/animalsEating/apeEating.mp4"/>
 <value key="Musen äter" val="anim/ActiveVideo/animalsEating/mouseEating.mp4"/>
-<value key="Fågeln äter" val="anim/ActiveVideo/animalsEating/bullfinchEating.mp4"/>
 <value key="Geten äter" val="anim/ActiveVideo/animalsEating/goatEating.mp4"/>
 <value key="Flickan äter" val="anim/ActiveVideo/animalsEating/girlEating.mp4"/>
 <value key="Larven äter" val="anim/ActiveVideo/animalsEating/larvaEating.mp4"/>
